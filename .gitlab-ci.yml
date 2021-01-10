@@ -1,0 +1,11 @@
+image: docker:stable
+
+stages:
+    - build
+
+build_blog:
+    stage: build
+    before_script:
+        - apk add --update --no-cache make
+    script:
+        - make build
