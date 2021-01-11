@@ -11,5 +11,14 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+title = "Williamdes's blog"
+
+taxonomies = [
+    {name = "tags", rss = true, paginate_by = 5},
+    {name = "phpMyAdmin", rss = true, paginate_by = 5},
+]
+
 [extra]
 # Put all your custom variables here
+links = [
+]

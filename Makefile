@@ -5,4 +5,4 @@ build:
 	docker run --name blog.williamdes.eu --rm --user $(id -u):$(id -g) -v ${PWD}:/app --workdir /app/blog.williamdes.eu balthek/zola build
 
 serve:
-	docker run --name blog.williamdes.eu --rm --user $(id -u):$(id -g) -v ${PWD}:/app --workdir /app/blog.williamdes.eu -p 8111:80 balthek/zola serve --interface 0.0.0.0 --port 80
+	docker run --name blog.williamdes.eu --rm --user $(id -u):$(id -g) -v ${PWD}:/app --workdir /app/blog.williamdes.eu -p 8111:8111 balthek/zola serve --interface 0.0.0.0 --port 8111 --base-url localhost
