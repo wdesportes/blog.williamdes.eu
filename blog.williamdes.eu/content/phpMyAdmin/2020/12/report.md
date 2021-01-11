@@ -10,7 +10,7 @@ author = "William Desportes"
 tags = ["phpMyAdmin", "OSS-report"]
 +++
 
-phpMyAdmin report for December 2020.
+Here is my phpMyAdmin report for December 2020.
 
 <!-- more -->
 
