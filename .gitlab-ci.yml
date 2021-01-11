@@ -2,6 +2,7 @@ image: docker:stable
 
 stages:
     - build
+    - deploy
 
 services:
     - docker:dind
@@ -16,3 +17,17 @@ build_blog:
         - apk add --update --no-cache make
     script:
         - make build
+    artifacts:
+        untracked: true
+
+deploy_blog:
+    stage: deploy
+    dependencies:
+        - build_blog
+    script:
+        - cp -rp blog.williamdes.eu/public public
+    artifacts:
+        paths:
+            - public
+    only:
+        - main
