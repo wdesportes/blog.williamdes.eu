@@ -1,0 +1,35 @@
+name: Publish to GitHub pages
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    sign-commit:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Import GPG key
+              uses: crazy-max/ghaction-import-gpg@c8906e451f398a510633c8bf0d6150b2fb2cb7c9
+              with:
+                  gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.GPG_PASSPHRASE }}
+                  git-user-signingkey: true
+                  git-commit-gpgsign: true
+                  git-push-gpgsign: true
+            - name: Build and push
+              run: |
+                  make build
+                  cp -rp blog.williamdes.eu/public public
+                  tree public
+                  git stash
+                  git checkout gh-pages
+                  rm -rf ./*
+                  git stash pop
+                  mv public/* ./
+                  rmdir public
+                  git add -A
+                  git commit -m "Content update ($(date --utc)"
+                  git push
