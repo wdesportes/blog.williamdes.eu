@@ -6,7 +6,10 @@ on:
             - main
 
 jobs:
-    sign-commit:
+    publish-pages:
+        environment:
+            name: main
+            url: https://blog.williamdes.eu
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
