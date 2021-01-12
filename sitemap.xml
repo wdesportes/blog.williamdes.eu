@@ -1,72 +1,44 @@
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-        <url>
-            <loc>https://blog.williamdes.eu/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/page/1/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</loc>
-            
-                <lastmod>2020-12-31</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/oss-report/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/oss-report/page/1/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/other/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/other/page/1/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/phpmyadmin/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/1/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/story/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/tags/story/page/1/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://blog.williamdes.eu/welcome-to-my-blog/</loc>
-            
-                <lastmod>2021-01-01</lastmod>
-            
-        </url>
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.williamdes.eu/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</loc>
+        <lastmod>2020-12-31</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-report/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-report/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/other/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/other/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/phpmyadmin/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/story/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/story/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/welcome-to-my-blog/</loc>
+        <lastmod>2021-01-01</lastmod>
+    </url>
 </urlset>
