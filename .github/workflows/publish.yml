@@ -26,7 +26,6 @@ jobs:
               run: |
                   make build
                   cp -rp blog.williamdes.eu/public public
-                  tree public
                   git stash
                   git checkout gh-pages
                   rm -rf ./*
