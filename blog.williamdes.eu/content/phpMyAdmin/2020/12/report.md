@@ -14,6 +14,8 @@ Here is my phpMyAdmin report for December 2020.
 
 <!-- more -->
 
+(this was re-build from what I could find)
+
 ## First week
 
 ## Second week
