@@ -27,27 +27,24 @@
         <!-- Feeds -->
         
 
-        <!-- Google Analytics -->
-        
-
         <script>
             function setTheme() {
                 const time = new Date();
-      
+
                 const prev = localStorage.getItem('date');
                 const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
-      
+
                 const now = time.getTime();
                 let sunrise;
                 let sunset;
-      
+
                 function setBodyClass() {
                     if (now > sunrise && now < sunset) return;
                     document.body.classList.add('dark');
                 }
-      
+
                 if (date !== prev) {
-                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
                         .then(res => res.json())
                         .then(data => {
                             sunrise = data.sunrise.split(':').map(Number);
@@ -73,9 +70,9 @@
             }
         </script>
     </head>
-    
+
     <body class="list">
-    
+
     <!-- Apply theme -->
     <script>
       setTheme();
