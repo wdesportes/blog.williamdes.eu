@@ -13,6 +13,8 @@ build_search_index = false
 
 title = "Williamdes's blog"
 
+generate_feed = true
+
 taxonomies = [
     {name = "tags", rss = true, paginate_by = 5},
     {name = "phpMyAdmin", rss = true, paginate_by = 5},
