@@ -36,6 +36,7 @@ jobs:
                   git stash pop
                   mv public/* ./
                   rmdir public
+                  echo 'blog.williamdes.eu' > CNAME
                   git add -A
-                  git commit -m "Content update ($(date --utc)"
+                  git commit -m "Content update ($(date --utc))"
                   git push
