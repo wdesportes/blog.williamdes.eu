@@ -25,8 +25,32 @@ This blog will contain phpMyAdmin work reports and technical blog posts.&lt;&#x2
 		<link href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;(this was re-build from what I could find)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;first-week&quot;&gt;First week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;second-week&quot;&gt;Second week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;third-week&quot;&gt;Third week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;fourth-week&quot;&gt;Fourth week&lt;&#x2F;h2&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Report for January 2021</title>
+		<published>2020-12-31T00:00:00+00:00</published>
+		<updated>2020-12-31T00:00:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for January 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week&quot;&gt;First week&lt;&#x2F;h2&gt;
 &lt;h2 id=&quot;second-week&quot;&gt;Second week&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
+&lt;p&gt;I migrated sql-parser to GitHub actions. And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d&#x2F;copyright file and document them. Most of the source files that where excluded are now back.
+I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the &lt;code&gt;.min.js&lt;&#x2F;code&gt; files had to be &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216&quot;&gt;re-built from source&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;abac8a5cf05e2955a2c5bd14dc52c0ab75405659&quot;&gt;I added the missing source files&lt;&#x2F;a&gt; to the &lt;code&gt;debian&#x2F;missing-sources&lt;&#x2F;code&gt; directory. The Debian version no more has &lt;code&gt;zxcvbn&lt;&#x2F;code&gt; until the from source issue can be solved. For now &lt;code&gt;?&lt;&#x2F;code&gt; force is displayed when you type passwords.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;phpmyadmin&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
+&lt;p&gt;All the work from yesterday landed into &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;9206cece4599be77d436057fe51f7b106e9b8de2&quot;&gt;a merge&lt;&#x2F;a&gt; and David did upload the changes to unstable.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other&quot;&gt;Other&lt;&#x2F;h4&gt;
+&lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
+Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;third-week&quot;&gt;Third week&lt;&#x2F;h2&gt;
 &lt;h2 id=&quot;fourth-week&quot;&gt;Fourth week&lt;&#x2F;h2&gt;
 </content>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Report for December 2020</title>
+        <title>Williamdes&#x27;s blog - Report for January 2021</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,14 +12,14 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Here is my phpMyAdmin report for December 2020.">
+        <meta name="description" content="Here is my phpMyAdmin report for January 2021.">
 
         <!-- Open Graph Tags -->
         <meta property="og:site_name" content="Williamdes&#x27;s blog">
         
-        <meta property="og:title" content="Report for December 2020">
-        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpMyAdmin&#x2F;2020&#x2F;12&#x2F;report">
-        <meta property="og:description" content="Here is my phpMyAdmin report for December 2020.">
+        <meta property="og:title" content="Report for January 2021">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpMyAdmin&#x2F;2021&#x2F;01&#x2F;report">
+        <meta property="og:description" content="Here is my phpMyAdmin report for January 2021.">
         
         <meta property="og:type" content="article">
         <meta property="article:published_time" content="2020-12-31">
@@ -101,7 +101,7 @@
             
 <article class="post-single">
     <header class="post-header">
-        <h1 class="post-title">Report for December 2020</h1>
+        <h1 class="post-title">Report for January 2021</h1>
         <div class="post-meta">
             <span class="post-author">
                 Author: William Desportes
@@ -109,14 +109,21 @@
             <br/>
             <span class="post-date">Published: <time>December 31, 2020</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">1 min read</span>
+            <span class="post-reading-time">2 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>Here is my phpMyAdmin report for December 2020.</p>
-<span id="continue-reading"></span>
-<p>(this was re-build from what I could find)</p>
-<h2 id="first-week">First week</h2>
+    <div class="post-content"><p>Here is my phpMyAdmin report for January 2021.</p>
+<span id="continue-reading"></span><h2 id="first-week">First week</h2>
 <h2 id="second-week">Second week</h2>
+<h3 id="monday">Monday</h3>
+<p>I migrated sql-parser to GitHub actions. And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d/copyright file and document them. Most of the source files that where excluded are now back.
+I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the <code>.min.js</code> files had to be <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216">re-built from source</a>, <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/abac8a5cf05e2955a2c5bd14dc52c0ab75405659">I added the missing source files</a> to the <code>debian/missing-sources</code> directory. The Debian version no more has <code>zxcvbn</code> until the from source issue can be solved. For now <code>?</code> force is displayed when you type passwords.</p>
+<h3 id="tuesday">Tuesday</h3>
+<h4 id="phpmyadmin">phpMyadmin</h4>
+<p>All the work from yesterday landed into <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/9206cece4599be77d436057fe51f7b106e9b8de2">a merge</a> and David did upload the changes to unstable.</p>
+<h4 id="other">Other</h4>
+<p>I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
+Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.</p>
 <h2 id="third-week">Third week</h2>
 <h2 id="fourth-week">Fourth week</h2>
 </div>
