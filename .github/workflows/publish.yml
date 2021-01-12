@@ -14,6 +14,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - name: Import GPG key
               uses: crazy-max/ghaction-import-gpg@c8906e451f398a510633c8bf0d6150b2fb2cb7c9
               with:
@@ -27,7 +29,6 @@ jobs:
                   set -o xtrace
                   make build
                   cp -rp blog.williamdes.eu/public public
-                  ls -lahR
                   git stash
                   git checkout gh-pages
                   rm -rf ./*
