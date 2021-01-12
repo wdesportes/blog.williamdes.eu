@@ -16,6 +16,7 @@ jobs:
               uses: actions/checkout@v2
               with:
                   fetch-depth: 0
+                  ssh-key: ${{ secrets.SSH_KEY_DEPLOY }}
             - name: Import GPG key
               uses: crazy-max/ghaction-import-gpg@c8906e451f398a510633c8bf0d6150b2fb2cb7c9
               with:
