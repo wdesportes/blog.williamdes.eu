@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Williamdes&#x27;s blog</title>
+        <link>https://blog.williamdes.eu</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://blog.williamdes.eu/tags/oss-report/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Report for December 2020</title>
+                <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+                <link>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</link>
+                <guid>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</guid>
+                <description>&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2f;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

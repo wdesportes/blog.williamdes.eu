@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://blog.williamdes.eu/sitemap.xml
