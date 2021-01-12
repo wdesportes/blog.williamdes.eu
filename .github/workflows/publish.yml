@@ -23,7 +23,6 @@ jobs:
                   passphrase: ${{ secrets.GPG_PASSPHRASE }}
                   git-user-signingkey: true
                   git-commit-gpgsign: true
-                  git-push-gpgsign: true
             - name: Build and push
               run: |
                   set -o xtrace
