@@ -16,8 +16,8 @@ title = "Williamdes's blog"
 generate_feed = true
 
 taxonomies = [
-    {name = "tags", rss = true, paginate_by = 5},
-    {name = "phpMyAdmin", rss = true, paginate_by = 5},
+    {name = "tags", feed = true, paginate_by = 5},
+    {name = "phpMyAdmin", feed = true, paginate_by = 5},
 ]
 
 [extra]
