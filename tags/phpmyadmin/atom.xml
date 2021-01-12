@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Williamdes&#x27;s blog - phpMyAdmin</title>
+	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.williamdes.eu"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2020-12-31T00:00:00+00:00</updated>
+	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for December 2020</title>
+		<published>2020-12-31T00:00:00+00:00</published>
+		<updated>2020-12-31T00:00:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week&quot;&gt;First week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;second-week&quot;&gt;Second week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;third-week&quot;&gt;Third week&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;fourth-week&quot;&gt;Fourth week&lt;&#x2F;h2&gt;
+</content>
+	</entry>
+</feed>
