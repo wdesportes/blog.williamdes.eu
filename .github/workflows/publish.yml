@@ -24,8 +24,10 @@ jobs:
                   git-push-gpgsign: true
             - name: Build and push
               run: |
+                  set -o xtrace
                   make build
                   cp -rp blog.williamdes.eu/public public
+                  ls -lahR
                   git stash
                   git checkout gh-pages
                   rm -rf ./*
