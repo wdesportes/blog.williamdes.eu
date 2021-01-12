@@ -16,3 +16,5 @@ This is my first blog post ever, I hope you will be interested by what I post.
 
 I was thinking about writing a blog from some time, but here we are.
 This blog will contain phpMyAdmin work reports and technical blog posts.
+
+(This blog post was not written the 1st but who cares apart my favorite reader ;p )
