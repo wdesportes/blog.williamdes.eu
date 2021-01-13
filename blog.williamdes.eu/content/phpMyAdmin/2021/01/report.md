@@ -102,6 +102,20 @@ All the work from yesterday landed into [a merge](https://salsa.debian.org/phpmy
 I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
 Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.
 
+### Wednesday
+
+#### phpMyadmin
+
+I handled some issue triage and pull-request reviews.
+
+#### Other
+
+### Friday
+
+### Saturday
+
+### Sunday
+
 ## Third week
 
 ## Fourth week
