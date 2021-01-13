@@ -1,6 +1,7 @@
 +++
 title = "Welcome to my blog !"
-date = 2021-01-01
+date = 2021-01-01T12:00:00Z
+updated = 2021-01-13T23:00:00Z
 category = "Story"
 
 [extra]
