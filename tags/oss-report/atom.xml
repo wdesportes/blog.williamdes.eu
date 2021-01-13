@@ -140,6 +140,13 @@ I spent some time configuring GitLab and GitLab pages for this blog, but it just
 &lt;h4 id=&quot;other-4&quot;&gt;Other&lt;&#x2F;h4&gt;
 &lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
 Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;phpmyadmin-9&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
+&lt;p&gt;I handled some issue triage and pull-request reviews.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other-5&quot;&gt;Other&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;h2 id=&quot;third-week&quot;&gt;Third week&lt;&#x2F;h2&gt;
 &lt;h2 id=&quot;fourth-week&quot;&gt;Fourth week&lt;&#x2F;h2&gt;
 </content>
