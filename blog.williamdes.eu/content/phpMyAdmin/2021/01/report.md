@@ -1,7 +1,7 @@
 +++
 title = "Report for January 2021"
 date = 2021-01-01T12:00:00Z
-update = 2021-01-13T17:51:00Z
+updated = 2021-01-13T17:51:00Z
 category = "phpMyAdmin - reports"
 draft = true
 
@@ -16,7 +16,7 @@ Here is my phpMyAdmin report for January 2021.
 
 <!-- more -->
 
-## First week
+## First week (01)
 
 This week was a quite busy one and I could not dev as much as I expected. Real life is important too ;p
 
@@ -79,7 +79,7 @@ And cleaned up some recent useless files that had and could enter the phar file.
 
 I created the [sudo-bot/action-scrutinizer](https://github.com/sudo-bot/action-scrutinizer) to move out some script lines on the phpMyAdmin sql-parser GitHub actions migration.
 
-## Second week
+## Second week (02)
 
 ### Monday
 
@@ -118,6 +118,6 @@ I handled some issue triage and pull-request reviews.
 
 ### Sunday
 
-## Third week
+## Third week (03)
 
-## Fourth week
+## Fourth week (04)
