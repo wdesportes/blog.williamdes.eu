@@ -18,4 +18,6 @@ After a lot of yours contributing to phpMyAdmin I received an unexpected invitat
 That day was on the 27/08/2018, a very happy day !
 Since then I am a [phpMyAdmin team member](https://phpmyadmin.net/team).
 
-I work for phpMyAdmin starting on the 01/12/2020. You can find my reports: [here](https://blog.williamdes.eu/tags/phpmyadmin/)
+I work for phpMyAdmin starting on the 01/12/2020.
+
+You can find my reports: [here](https://blog.williamdes.eu/tags/phpmyadmin/)
