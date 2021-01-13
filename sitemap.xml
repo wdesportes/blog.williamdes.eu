@@ -8,15 +8,11 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</loc>
-        <lastmod>2020-12-31</lastmod>
-    </url>
-    <url>
-        <loc>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</loc>
-        <lastmod>2021-01-01</lastmod>
+        <lastmod>2020-12-31T12:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
-        <lastmod>2021-01-13</lastmod>
+        <lastmod>2021-01-13T12:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/</loc>
@@ -47,6 +43,6 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/welcome-to-my-blog/</loc>
-        <lastmod>2021-01-01</lastmod>
+        <lastmod>2021-01-13T23:00:00Z</lastmod>
     </url>
 </urlset>

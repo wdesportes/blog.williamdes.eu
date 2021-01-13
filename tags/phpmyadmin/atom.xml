@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-13T00:00:00+00:00</updated>
+	<updated>2021-01-13T12:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Follow my phpMyAdmin adventure</title>
-		<published>2021-01-13T00:00:00+00:00</published>
-		<updated>2021-01-13T00:00:00+00:00</updated>
+		<published>2021-01-13T12:00:00+00:00</published>
+		<updated>2021-01-13T12:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
 		<content type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
@@ -22,73 +22,9 @@ Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&qu
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Report for January 2021</title>
-		<published>2021-01-01T00:00:00+00:00</published>
-		<updated>2021-01-01T00:00:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for January 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week&quot;&gt;First week&lt;&#x2F;h2&gt;
-&lt;p&gt;This week was a quite busy one and I could not dev as much as I expected. Real life is important too ;p&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;p&gt;I also worked at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; to finish fixing my LDAP search configuration and the test suite.&lt;&#x2F;p&gt;
-&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;docker-mailserver&quot;&gt;Docker Mailserver&lt;&#x2F;a&gt; invited me to join their GitHub organization. Thanks guys !&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-1&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;phpmyadmin-2&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-3&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-4&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other-1&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;p&gt;At Doctum I decided to drop PHP 7.1 series in favor of supporting PHP 8.0 on the phar. A &lt;code&gt;QA_5_3&lt;&#x2F;code&gt; branch was created but for now I have no idea if I will use it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-5&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;The Debian version &lt;code&gt;5.0.4+dfsg1-1&lt;&#x2F;code&gt; landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;merge_requests&#x2F;30&quot;&gt;pull-request&lt;&#x2F;a&gt; was &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1&quot;&gt;merged&lt;&#x2F;a&gt; after 3 months open lacking reviews and me pushing more and more commits.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-6&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;I migrated sql-parser to GitHub actions. Still working on the Debian&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other-2&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;p&gt;At Doctum I merged &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;pull&#x2F;24&quot;&gt;a pull-request&lt;&#x2F;a&gt; after a rebase to fix types resolving.
-And cleaned up some recent useless files that had and could enter the phar file. Also I did enable &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;discussions&#x2F;25&quot;&gt;GitHub discussions&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I created the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sudo-bot&#x2F;action-scrutinizer&quot;&gt;sudo-bot&#x2F;action-scrutinizer&lt;&#x2F;a&gt; to move out some script lines on the phpMyAdmin sql-parser GitHub actions migration.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week&quot;&gt;Second week&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-7&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d&#x2F;copyright file and document them. Most of the source files that where excluded are now back.
-I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the &lt;code&gt;.min.js&lt;&#x2F;code&gt; files had to be &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216&quot;&gt;re-built from source&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;abac8a5cf05e2955a2c5bd14dc52c0ab75405659&quot;&gt;I added the missing source files&lt;&#x2F;a&gt; to the &lt;code&gt;debian&#x2F;missing-sources&lt;&#x2F;code&gt; directory. The Debian version no more has &lt;code&gt;zxcvbn&lt;&#x2F;code&gt; until the from source issue can be solved. For now &lt;code&gt;?&lt;&#x2F;code&gt; force is displayed when you type passwords.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other-3&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;p&gt;At Doctum I fixed my vendor cleaning script after I did find out that I had did a mistake in the path I configured.
-I spent some time configuring GitLab and GitLab pages for this blog, but it just did not work for some (still) unknown reason.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-8&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;All the work from yesterday landed into &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;9206cece4599be77d436057fe51f7b106e9b8de2&quot;&gt;a merge&lt;&#x2F;a&gt; and David did upload the changes to unstable.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other-4&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
-Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;phpmyadmin-9&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;I handled some issue triage and pull-request reviews.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;other-5&quot;&gt;Other&lt;&#x2F;h4&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;h2 id=&quot;third-week&quot;&gt;Third week&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;fourth-week&quot;&gt;Fourth week&lt;&#x2F;h2&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Report for December 2020</title>
-		<published>2020-12-31T00:00:00+00:00</published>
-		<updated>2020-12-31T00:00:00+00:00</updated>
+		<published>2020-12-31T12:00:00+00:00</published>
+		<updated>2020-12-31T12:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;

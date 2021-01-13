@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/other/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-01T00:00:00+00:00</updated>
+	<updated>2021-01-13T23:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/other/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Welcome to my blog !</title>
-		<published>2021-01-01T00:00:00+00:00</published>
-		<updated>2021-01-01T00:00:00+00:00</updated>
+		<published>2021-01-01T12:00:00+00:00</published>
+		<updated>2021-01-13T23:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/welcome-to-my-blog/" type="text/html"/>
 		<id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
 		<content type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;

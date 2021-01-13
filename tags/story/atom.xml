@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/story/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-13T00:00:00+00:00</updated>
+	<updated>2021-01-13T23:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/story/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Follow my phpMyAdmin adventure</title>
-		<published>2021-01-13T00:00:00+00:00</published>
-		<updated>2021-01-13T00:00:00+00:00</updated>
+		<published>2021-01-13T12:00:00+00:00</published>
+		<updated>2021-01-13T12:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
 		<content type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
@@ -23,8 +23,8 @@ Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&qu
 	</entry>
 	<entry xml:lang="en">
 		<title>Welcome to my blog !</title>
-		<published>2021-01-01T00:00:00+00:00</published>
-		<updated>2021-01-01T00:00:00+00:00</updated>
+		<published>2021-01-01T12:00:00+00:00</published>
+		<updated>2021-01-13T23:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/welcome-to-my-blog/" type="text/html"/>
 		<id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
 		<content type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;
