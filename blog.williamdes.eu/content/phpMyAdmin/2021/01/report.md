@@ -110,7 +110,16 @@ Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits
 
 I handled some issue triage and pull-request reviews.
 
-#### Other
+### Thursday
+
+#### phpMyadmin
+
+I did merge some pull-requests and upgraded psalm to `4.4.0`.
+On `twig-i18n-extension` I moved to GitHub actions and did setup phpstan.
+Also `phpmyadmin/coding-standard` has a quick move to GitHub actions and I found out [a licensing issue](https://github.com/phpmyadmin/coding-standard/pull/9).
+
+On the Debian packaging side I made sure `buster-backports` was ready and prepared the backport of `twig`.
+And updated the Ubuntu PPA Bionic to `5.0.4`.
 
 ### Friday
 
