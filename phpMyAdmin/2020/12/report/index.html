@@ -110,7 +110,7 @@
             <span class="post-date">Published: <time datetime="2020-12-31T12:00:00+0000">December 31, 2020 12:00</time></span>
             <span class="post-date"> and updated: <time datetime="2021-01-13T20:11:45+0000">January 13, 2021 20:11</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">5 min read</span>
+            <span class="post-reading-time">4 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Here is my phpMyAdmin report for December 2020.</p>
@@ -119,99 +119,61 @@
 (this means some entries could be missing, for ever)</p>
 <h2 id="first-week-50">First week (50)</h2>
 <h3 id="monday">Monday</h3>
-<h4 id="phpmyadmin">phpMyadmin</h4>
 <p>I did some <a href="https://github.com/phpmyadmin/phpmyadmin/commit/0ae5216e283ba80704a34d850ce29a4f690160a1">code improvement</a>, some bug fixing and <a href="https://github.com/phpmyadmin/phpmyadmin/commit/66f38555d4637362082dbe54925261687a5f0fa7">transformed some inline PHP/HTML to twig</a>.
 I removed <a href="https://github.com/phpmyadmin/phpmyadmin/commit/f78aa880e7ce614737cba050422ed5f13366b76b">a broken link</a> in out documentation and <a href="https://github.com/phpmyadmin/phpmyadmin/commit/1d154724a5192addf6015a316b7d7382c77de361">added PHP typehints</a>.
 And some pull-request merging.</p>
 <h3 id="tuesday-wednesday">Tuesday -&gt; Wednesday</h3>
 <p><strong>Nothing to report</strong></p>
 <h3 id="thursday">Thursday</h3>
-<h4 id="phpmyadmin-1">phpMyadmin</h4>
 <p>I did <a href="https://github.com/phpmyadmin/phpmyadmin/commit/a5dc78edac859199b9b9113c02fee810eaca5fe6">sync jqplot plugins from updated-jqplot node package</a> and fix out PHP 8.0 testsuite <a href="https://github.com/phpmyadmin/phpmyadmin/commit/4d3ecbe4e71396edc80138202cbfcfa8e5907ef8">failing on string vs numbers beeing compared</a>.</p>
 <h3 id="friday">Friday</h3>
-<h4 id="phpmyadmin-2">phpMyadmin</h4>
 <p>I did <a href="https://github.com/phpmyadmin/phpmyadmin/commit/afdf57aed25ac54cb48c8d781bd6c512def68bbc">re-build all jqplot files from the updated-jqplot npm package</a>, this is very important to have reproductible builds from source. That will help a lot on Debian when we have to re-build files from source to be dfsg compatible. I did some related work on the JS modules management.</p>
 <h3 id="saturday">Saturday</h3>
-<h4 id="phpmyadmin-3">phpMyadmin</h4>
 <p>I did fix some PHP 8.0 issues and backports some of my PHP 8.0 fixes. And also made the TravisCI CI go back to green.</p>
 <h3 id="sunday">Sunday</h3>
-<h4 id="phpmyadmin-4">phpMyadmin</h4>
 <p>I did merge two very good pull-requests that fixed some previously merged code.</p>
 <h2 id="second-week-51">Second week (51)</h2>
-<h3 id="monday-1">Monday</h3>
-<h4 id="other">Other</h4>
-<p>The <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> project was exported as an open-source project.</p>
-<h3 id="tuesday-thursday">Tuesday -&gt; Thursday</h3>
+<h3 id="monday-thursday">Monday -&gt; Thursday</h3>
 <p><strong>Nothing to report</strong></p>
 <h3 id="friday-1">Friday</h3>
-<h4 id="phpmyadmin-5">phpMyadmin</h4>
 <p>I made some <a href="https://github.com/phpmyadmin/phpmyadmin/commit/fb5d6159af9fd9f7b6859b42d6b31528d89f7514">phpdoc changes</a> after running Doctum. And also did fix some <a href="https://github.com/phpmyadmin/phpmyadmin/commit/b4f1e14e8025def8bb047bdc6797aeeb581e1b0f">phpstan errors</a>.</p>
-<h4 id="other-1">Other</h4>
-<p>This is my last day (18/12/2020) at my job, horray !</p>
 <h3 id="saturday-1">Saturday</h3>
-<h4 id="phpmyadmin-6">phpMyadmin</h4>
 <p>I did some changes on the new <code>QA_5_1</code> branch to prepare it as a QA branch and opened an issue at Weblate to warn about some docker issues.</p>
-<h4 id="other-2">Other</h4>
-<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I adjusted some things.</p>
 <h3 id="sunday-1">Sunday</h3>
-<h4 id="phpmyadmin-7">phpMyadmin</h4>
 <p>I did merge <a href="https://github.com/phpmyadmin/phpmyadmin/commit/ac7abd86129552dce96c46f9941e1ec86b05d757">a pull-request</a> to fix the CI after my changes to make 5.2.0-dev the new dev version.</p>
 <h2 id="third-week-52">Third week (52)</h2>
-<h3 id="monday-2">Monday</h3>
-<h4 id="phpmyadmin-8">phpMyadmin</h4>
+<h3 id="monday-1">Monday</h3>
 <p>At <code>phpmyadmin/phpmyadmin</code> I did update CodeMirror to 5.59.0, merge some pull-requests and update some JS dependencies.
 Also I upgraded the Doctum version and removed some old tricks in the configuration now that Doctum has fixed that.</p>
 <h3 id="tuesday-friday">Tuesday -&gt; Friday</h3>
 <p><strong>Nothing to report</strong></p>
 <h3 id="saturday-2">Saturday</h3>
-<h4 id="phpmyadmin-9">phpMyadmin</h4>
 <p>At <code>phpmyadmin/docker</code> I did merge all the pull-requests that where open and made some documentation improvements.
 Now we are near to only use GitHub actions on this repository.</p>
 <h3 id="sunday-2">Sunday</h3>
-<h4 id="other-3">Other</h4>
-<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I added some fancy things and made the project usable and testable for anyone.</p>
+<p><strong>Nothing to report</strong></p>
 <h2 id="fourth-week-53">Fourth week (53)</h2>
-<h3 id="monday-3">Monday</h3>
-<h4 id="other-4">Other</h4>
-<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I made sending and receiving work fine.</p>
+<h3 id="monday-2">Monday</h3>
+<p><strong>Nothing to report</strong></p>
 <h3 id="tuesday">Tuesday</h3>
-<h4 id="other-5">Other</h4>
-<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I added a phpunit test suite for the mailserver.</p>
+<p><strong>Nothing to report</strong></p>
 <h3 id="wednesday">Wednesday</h3>
-<h4 id="phpmyadmin-10">phpMyadmin</h4>
 <p>I worked on the Debian package <code>google-recaptcha</code> to make it clean and follow the Debian rules.
 On <code>phpmyadmin/twig-i18n-extension</code> I did <a href="https://github.com/phpmyadmin/twig-i18n-extension/commit/aec9e489c66930be87a67a7b511a01b3e61d1a57">edit the PHP 8.0 constraint</a>.</p>
 <p>On <code>phpmyadmin/phpmyadmin</code> I did merge a <a href="https://github.com/phpmyadmin/phpmyadmin/commit/0747f8aca155acf71c693671fddee34e61082292">pull-request</a> that removes some old UI tricks to make gradients and I am very happy about that.
 I also <a href="https://github.com/phpmyadmin/phpmyadmin/commit/64efdebbd3f0791a79730b92aaf5754c87b431d8">updated the psalm baseline</a>.</p>
 <h3 id="thursday-1">Thursday</h3>
-<h4 id="phpmyadmin-11">phpMyadmin</h4>
 <p>I worked on the Debian package <code>google-recaptcha</code> to make it clean and follow the Debian rules.
 I did the same on the <code>mariadb-mysql-kbs</code> package.</p>
-<h4 id="other-6">Other</h4>
-<p>I made a <a href="https://github.com/phar-io/phar.io/pull/99">pull-request</a> to fix things at phar.io.
-And also made a <a href="https://github.com/phar-io/phar.io/pull/100">pull-request</a> at phar.io to add Doctum and bump copyright years.
-At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I made <a href="https://github.com/desportes/infrastructure/commit/81d3f6fe571919a1d23a7283a117a3f4ab5f0b91">user passwords more secure</a> by understanding that the sasl plugin does not support more algorithms than <code>MD5, SMD5, SHA, SSHA, CRYPT</code>.</p>
 <h3 id="friday-01-01-2021">Friday (01/01/2021)</h3>
-<h4 id="phpmyadmin-12">phpMyadmin</h4>
 <p>I worked on the Debian package <code>google-recaptcha</code> and <code>1.2.4-2</code> was released.</p>
-<h4 id="other-7">Other</h4>
-<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I implemented dynamic domain names.</p>
 <h3 id="saturday-3">Saturday</h3>
-<h4 id="phpmyadmin-13">phpMyadmin</h4>
 <p>I worked on the Debian package <code>google-recaptcha</code> and <code>1.2.4-3</code> was released.
 Started some cleaning on <code>jquery-timepicker</code> to prepare it for an upload.
 Some more cleaning and fixing on <code>mariadb-mysql-kbs</code> package and <code>1.2.11-2</code> was released.</p>
-<h4 id="other-8">Other</h4>
-<p>Upstream <code>mariadb-mysql-kbs</code> I released a new version after some fixes where done.
-I created a pull-request at <a href="https://github.com/tomav/docker-mailserver/pull/1737">docker-mailserver</a> to fix shebangs and it got merged.
-And another <a href="https://github.com/tomav/docker-mailserver/pull/1736">pull-request</a> to implement manual DKIM domain lists in the config script.
-I also worked at <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> to make my external domain sending and receiving work.</p>
 <h3 id="sunday-3">Sunday</h3>
-<h4 id="phpmyadmin-14">phpMyadmin</h4>
 <p>I finished cleaning and adjusting <code>jquery-timepicker</code> and <code>1.6.3-1</code> was released.
 At <code>mariadb-mysql-kbs</code> for Debian, I prepared the next release.</p>
-<h4 id="other-9">Other</h4>
-<p>I worked at <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> and got everything working after I understood the <a href="https://github.com/tomav/docker-mailserver/issues/1694">issue</a> about my config for postfix <code>virtual_alias_domains</code>.</p>
 </div>
     <footer class="post-footer">
         

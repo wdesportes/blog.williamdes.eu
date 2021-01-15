@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Report for December 2020</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Here is my OpenSource report for December 2020.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Report for December 2020">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;2020&#x2F;12&#x2F;report">
+        <meta property="og:description" content="Here is my OpenSource report for December 2020.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2020-12-31">
+        <meta property="article:modified_time" content="2021-01-15">
+        
+        <meta property="article:tags" content="OSS-report">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Report for December 2020</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2020-12-31T12:00:00+0000">December 31, 2020 12:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-01-15T18:52:00+0000">January 15, 2021 18:52</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">2 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Here is my OpenSource report for December 2020.</p>
+<span id="continue-reading"></span><h2 id="first-week-50">First week (50)</h2>
+<h3 id="monday-sunday">Monday -&gt; Sunday</h3>
+<p><strong>Nothing to report</strong></p>
+<h4 id="phpmyadmin">phpMyadmin</h4>
+<p>I did merge two very good pull-requests that fixed some previously merged code.</p>
+<h2 id="second-week-51">Second week (51)</h2>
+<h3 id="monday">Monday</h3>
+<p>The <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> project was exported as an open-source project.</p>
+<h3 id="tuesday-thursday">Tuesday -&gt; Thursday</h3>
+<p><strong>Nothing to report</strong></p>
+<h3 id="friday">Friday</h3>
+<p>This is my last day (18/12/2020) at my job, horray !</p>
+<h3 id="saturday">Saturday</h3>
+<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I adjusted some things.</p>
+<h3 id="sunday">Sunday</h3>
+<p><strong>Nothing to report</strong></p>
+<h2 id="third-week-52">Third week (52)</h2>
+<h3 id="monday-saturday">Monday -&gt; Saturday</h3>
+<p><strong>Nothing to report</strong></p>
+<h3 id="sunday-1">Sunday</h3>
+<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I added some fancy things and made the project usable and testable for anyone.</p>
+<h2 id="fourth-week-53">Fourth week (53)</h2>
+<h3 id="monday-1">Monday</h3>
+<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I made sending and receiving work fine.</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I added a phpunit test suite for the mailserver.</p>
+<h3 id="wednesday">Wednesday</h3>
+<p><strong>Nothing to report</strong></p>
+<h3 id="thursday">Thursday</h3>
+<p>I made a <a href="https://github.com/phar-io/phar.io/pull/99">pull-request</a> to fix things at phar.io.
+And also made a <a href="https://github.com/phar-io/phar.io/pull/100">pull-request</a> at phar.io to add Doctum and bump copyright years.
+At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I made <a href="https://github.com/desportes/infrastructure/commit/81d3f6fe571919a1d23a7283a117a3f4ab5f0b91">user passwords more secure</a> by understanding that the sasl plugin does not support more algorithms than <code>MD5, SMD5, SHA, SSHA, CRYPT</code>.</p>
+<h3 id="friday-01-01-2021">Friday (01/01/2021)</h3>
+<p>At <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> I implemented dynamic domain names.</p>
+<h3 id="saturday-1">Saturday</h3>
+<p>Upstream <code>mariadb-mysql-kbs</code> I released a new version after some fixes where done.
+I created a pull-request at <a href="https://github.com/tomav/docker-mailserver/pull/1737">docker-mailserver</a> to fix shebangs and it got merged.
+And another <a href="https://github.com/tomav/docker-mailserver/pull/1736">pull-request</a> to implement manual DKIM domain lists in the config script.
+I also worked at <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> to make my external domain sending and receiving work.</p>
+<h3 id="sunday-2">Sunday</h3>
+<p>I worked at <a href="https://github.com/desportes/infrastructure">desportes infrastructure</a> and got everything working after I understood the <a href="https://github.com/tomav/docker-mailserver/issues/1694">issue</a> about my config for postfix <code>virtual_alias_domains</code>.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/oss-report/">OSS-report</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
