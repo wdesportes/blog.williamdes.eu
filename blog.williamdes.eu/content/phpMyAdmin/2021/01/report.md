@@ -76,8 +76,23 @@ I did some quick changes on the Ubuntu PPA.
 
 ### Saturday
 
+I did some fixes on the Ubuntu PPA.
+
 ### Sunday
 
+I did some fixes on the Ubuntu PPA to end the nighmare I accidentally created yesterday with the polyfill package.
+
+At Debian I did open bugs to remove the abandonned twig-extensions package.
+
 ## Third week (03)
+
+### Monday
+
+I handled some issues about Debian and Ubuntu packaging.
+
+### Tuesday
+
+I build the focal version for phpMyAdmin PPA.
+At `phpmyadmin/phpmyadmin` I did finish my work on [the license violation](https://github.com/phpmyadmin/phpmyadmin/pull/16547). And [migrated the repository to GitHub actions](https://github.com/phpmyadmin/phpmyadmin/pull/16583).
 
 ## Fourth week (04)
