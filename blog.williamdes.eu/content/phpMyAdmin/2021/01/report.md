@@ -95,4 +95,27 @@ I handled some issues about Debian and Ubuntu packaging.
 I build the focal version for phpMyAdmin PPA.
 At `phpmyadmin/phpmyadmin` I did finish my work on [the license violation](https://github.com/phpmyadmin/phpmyadmin/pull/16547). And [migrated the repository to GitHub actions](https://github.com/phpmyadmin/phpmyadmin/pull/16583).
 
+### Wednesday
+
+I did work on re-working the version handling and re-working the release script
+
+### Thursday
+
+I merged some work and did send sql-parser 5 to the phpMyAdmin PPA.
+Also applied some Debian guidelines for the sql-parser packaging.
+And updated my [open-source phpMyAdmin dev setup](https://github.com/wdesportes/phpmyadmin-local-setup).
+Also added support for `[ci skip]` on GitHub actions and did try to fix the TravisCI builds.
+Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the `<br>` to `[br]` transition and some older ones from the `<br/>`/`<br />` to `<br>`.
+
+# Friday
+
+Some more cleaning on Weblate and some PR updates.
+I imported [the security fix](https://security-tracker.debian.org/tracker/CVE-2021-21252) into Debian and imported my font removal also.
+Also tested the [transformation to image PR](https://github.com/phpmyadmin/phpmyadmin/pull/16586) and made a fix ontop if it.
+And to finish the day like a night own I did finally [find a way to make jest edit files on the fly](https://github.com/phpmyadmin/phpmyadmin/pull/16409) to test them.
+
+# Saturday
+
+# Sunday
+
 ## Fourth week (04)
