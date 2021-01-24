@@ -31,6 +31,7 @@ jobs:
                   cp -rp blog.williamdes.eu/public public
                   git add public/*
                   git stash
+                  git reset --hard
                   git checkout gh-pages
                   rm -rf ./*
                   git stash pop
