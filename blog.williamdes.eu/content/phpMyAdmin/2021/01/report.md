@@ -116,6 +116,9 @@ And to finish the day like a night own I did finally [find a way to make jest ed
 
 # Saturday
 
+I did some changes on the Debian side and imported a patch that was on the Debian side.
+On the main repository I did merge some pull-requests and finished the [first Jest unit testing integration](https://github.com/phpmyadmin/phpmyadmin/pull/16409).
+
 # Sunday
 
 ## Fourth week (04)

@@ -68,4 +68,20 @@ Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits
 
 ## Third week (03)
 
+### Monday
+
+### Tuesday
+
+### Wednesday
+
+### Thursday
+
+### Friday
+
+### Saturday
+
+I created and [RSS feed for Doctum](https://doctum.long-term.support/releases.rss).
+
+### Sunday
+
 ## Fourth week (04)
