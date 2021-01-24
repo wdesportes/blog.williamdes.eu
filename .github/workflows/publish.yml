@@ -28,17 +28,12 @@ jobs:
               run: |
                   set -o xtrace
                   make build
-                  cp -rp blog.williamdes.eu/public public
-                  git add public/*
-                  git stash
-                  git reset --hard
+                  TEMP_DIR="$(mktemp -d --suffix=_blog)"
+                  cp -rp blog.williamdes.eu/public "${TEMP_DIR}"
                   git checkout gh-pages
                   rm -rf ./*
-                  git reset --hard
-                  git clean -fd
-                  git stash pop
-                  mv public/* ./
-                  rmdir public
+                  mv "${TEMP_DIR}"/public/* ./
+                  rm -rf "${TEMP_DIR}"
                   echo 'blog.williamdes.eu' > CNAME
                   git add -A
                   git commit -m "Content update ($(date --utc))"
