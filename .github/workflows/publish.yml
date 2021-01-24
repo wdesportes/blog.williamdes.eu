@@ -34,7 +34,7 @@ jobs:
                   git reset --hard
                   git checkout gh-pages
                   rm -rf ./*
-                  git restore --staged public/*
+                  git restore --staged *
                   git reset --hard
                   git stash pop
                   mv public/* ./
