@@ -36,5 +36,5 @@ jobs:
                   rm -rf "${TEMP_DIR}"
                   echo 'blog.williamdes.eu' > CNAME
                   git add -A
-                  git commit -m "Content update ($(date --utc))"
+                  git commit --allow-empty -m "Content update ($(date --utc))"
                   git push
