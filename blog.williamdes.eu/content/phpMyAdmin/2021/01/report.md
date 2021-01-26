@@ -121,4 +121,28 @@ On the main repository I did merge some pull-requests and finished the [first Je
 
 # Sunday
 
+I did some PR and issue management and also some documentation management.
+And also did work on some slowness issues and made two PRs ([1](https://github.com/phpmyadmin/phpmyadmin/pull/16590), [2](https://github.com/phpmyadmin/phpmyadmin/pull/16591)). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.
+
 ## Fourth week (04)
+
+### Monday
+
+I worked on tracking down slowness in our code base and merged my work on the async console setup.
+Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu PPA.
+
+### Tuesday
+
+Not much to say, /afk part of the day, some issue and PR management.
+
+### Wednesday
+
+### Thursday
+
+# Friday
+
+
+# Saturday
+
+
+# Sunday
