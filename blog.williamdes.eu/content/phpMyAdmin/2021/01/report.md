@@ -20,7 +20,7 @@ Here is my phpMyAdmin report for January 2021.
 
 This week was a quite busy one and I could not dev as much as I expected. Real life is important too ;p
 
-### Monday
+### Monday (04/01/2021)
 
 More work on the Debian 5.0 version.
 
@@ -48,7 +48,7 @@ I migrated sql-parser to GitHub actions. Still working on the Debian
 
 ## Second week (02)
 
-### Monday
+### Monday (11/01/2021)
 
 And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d/copyright file and document them. Most of the source files that where excluded are now back.
 I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the `.min.js` files had to be [re-built from source](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216), [I added the missing source files](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/abac8a5cf05e2955a2c5bd14dc52c0ab75405659) to the `debian/missing-sources` directory. The Debian version no more has `zxcvbn` until the from source issue can be solved. For now `?` force is displayed when you type passwords.
@@ -86,7 +86,7 @@ At Debian I did open bugs to remove the abandonned twig-extensions package.
 
 ## Third week (03)
 
-### Monday
+### Monday (18/01/2021)
 
 I handled some issues about Debian and Ubuntu packaging.
 
@@ -126,7 +126,7 @@ And also did work on some slowness issues and made two PRs ([1](https://github.c
 
 ## Fourth week (04)
 
-### Monday
+### Monday (25/01/2021)
 
 I worked on tracking down slowness in our code base and merged my work on the async console setup.
 Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu PPA.
@@ -137,12 +137,24 @@ Not much to say, /afk part of the day, some issue and PR management.
 
 ### Wednesday
 
+Some PR testing and a TCPDF PHP 8.0 fix.
+
 ### Thursday
+
+I spent some time fixing the theme generator and merging the fixes I made.
+Also did some issue triage and worked on 2 PRs open at the `docker` repository (added more tests, and fixed mistakes).
 
 # Friday
 
+I worked on a complete [re-work of the `docker` repository testsuite](https://github.com/phpmyadmin/docker/pull/323).
+This will make us move to GitHub actions completely.
 
 # Saturday
 
+I merged a fix on the Docker repository and did some issue triage and reproduction.
+Also fixed a 5.1.0-rc1 bug on multi server setup.
+I did write tests to reproduce an [issue](https://github.com/phpmyadmin/phpmyadmin/issues/16595) and cover more of our codebase.
 
 # Sunday
+
+I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.
