@@ -26,6 +26,7 @@
 &lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
 &lt;p&gt;The Debian version &lt;code&gt;5.0.4+dfsg1-1&lt;&#x2F;code&gt; landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;merge_requests&#x2F;30&quot;&gt;pull-request&lt;&#x2F;a&gt; was &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1&quot;&gt;merged&lt;&#x2F;a&gt; after 3 months open lacking reviews and me pushing more and more commits.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I migrated sql-parser to GitHub actions. Still working on the Debian package.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;second-week-02&quot;&gt;Second week (02)&lt;&#x2F;h2&gt;
@@ -63,15 +64,15 @@ Also applied some Debian guidelines for the sql-parser packaging.
 And updated my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdesportes&#x2F;phpmyadmin-local-setup&quot;&gt;open-source phpMyAdmin dev setup&lt;&#x2F;a&gt;.
 Also added support for &lt;code&gt;[ci skip]&lt;&#x2F;code&gt; on GitHub actions and did try to fix the TravisCI builds.
 Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;[br]&lt;&#x2F;code&gt; transition and some older ones from the &lt;code&gt;&amp;lt;br&#x2F;&amp;gt;&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;&amp;lt;br &#x2F;&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
 &lt;p&gt;Some more cleaning on Weblate and some PR updates.
 I imported &lt;a href=&quot;https:&#x2F;&#x2F;security-tracker.debian.org&#x2F;tracker&#x2F;CVE-2021-21252&quot;&gt;the security fix&lt;&#x2F;a&gt; into Debian and imported my font removal also.
 Also tested the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16586&quot;&gt;transformation to image PR&lt;&#x2F;a&gt; and made a fix ontop if it.
 And to finish the day like a night own I did finally &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;find a way to make jest edit files on the fly&lt;&#x2F;a&gt; to test them.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some changes on the Debian side and imported a patch that was on the Debian side.
 On the main repository I did merge some pull-requests and finished the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;first Jest unit testing integration&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some PR and issue management and also some documentation management.
 And also did work on some slowness issues and made two PRs (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16590&quot;&gt;1&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16591&quot;&gt;2&lt;&#x2F;a&gt;). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
@@ -85,14 +86,14 @@ Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu 
 &lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I spent some time fixing the theme generator and merging the fixes I made.
 Also did some issue triage and worked on 2 PRs open at the &lt;code&gt;docker&lt;&#x2F;code&gt; repository (added more tests, and fixed mistakes).&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on a complete &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;docker&#x2F;pull&#x2F;323&quot;&gt;re-work of the &lt;code&gt;docker&lt;&#x2F;code&gt; repository testsuite&lt;&#x2F;a&gt;.
 This will make us move to GitHub actions completely.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I merged a fix on the Docker repository and did some issue triage and reproduction.
 Also fixed a 5.1.0-rc1 bug on multi server setup.
 I did write tests to reproduce an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16595&quot;&gt;issue&lt;&#x2F;a&gt; and cover more of our codebase.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.&lt;&#x2F;p&gt;
 </content>
 	</entry>
