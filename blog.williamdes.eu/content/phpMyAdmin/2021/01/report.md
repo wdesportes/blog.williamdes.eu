@@ -43,7 +43,7 @@ The Debian version `5.0.4+dfsg1-1` landed after a lot lot lot of time fixing and
 
 ### Sunday
 
-I migrated sql-parser to GitHub actions. Still working on the Debian
+I migrated sql-parser to GitHub actions. Still working on the Debian package.
 
 ## Second week (02)
 
