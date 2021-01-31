@@ -1,9 +1,8 @@
 +++
 title = "Report for January 2021"
 date = 2021-01-01T12:00:00Z
-updated = 2021-01-15T18:52:00Z
+updated = 2021-01-31T23:59:00Z
 category = "OpenSource - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -25,17 +24,9 @@ I worked at [desportes infrastructure](https://github.com/desportes/infrastructu
 
 The [Docker Mailserver](https://github.com/docker-mailserver) invited me to join their GitHub organization. Thanks guys !
 
-### Tuesday
-
-### Wednesday
-
 ### Thursday
 
 At Doctum I decided to drop PHP 7.1 series in favor of supporting PHP 8.0 on the phar. A `QA_5_3` branch was created but for now I have no idea if I will use it.
-
-### Friday
-
-### Saturday
 
 ### Sunday
 
@@ -56,32 +47,8 @@ I spent some time configuring GitLab and GitLab pages for this blog, but it just
 I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
 Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.
 
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-### Sunday
-
 ## Third week (03)
 
-### Monday
-
-### Tuesday
-
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-I created and [RSS feed for Doctum](https://doctum.long-term.support/releases.rss).
-
-### Sunday
+I created an [RSS feed for Doctum](https://doctum.long-term.support/releases.rss).
 
 ## Fourth week (04)
