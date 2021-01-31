@@ -31,7 +31,8 @@ jobs:
                   TEMP_DIR="$(mktemp -d --suffix=_blog)"
                   cp -rp blog.williamdes.eu/public "${TEMP_DIR}"
                   git checkout gh-pages
-                  rm -rf ./*
+                  git ls-files | xargs -n 1 rm
+                  rm -rfd ./*
                   mv "${TEMP_DIR}"/public/* ./
                   rm -rf "${TEMP_DIR}"
                   echo 'blog.williamdes.eu' > CNAME
