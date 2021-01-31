@@ -4,7 +4,7 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-31T23:41:00+00:00</updated>
+	<updated>2021-01-31T23:59:00+00:00</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Follow my phpMyAdmin adventure</title>
@@ -19,6 +19,35 @@ That day was on the 27&#x2F;08&#x2F;2018, a very happy day !
 Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&quot;&gt;phpMyAdmin team member&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;I work for phpMyAdmin starting on the 01&#x2F;12&#x2F;2020.&lt;&#x2F;p&gt;
 &lt;p&gt;You can find my reports: &lt;a href=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;tags&#x2F;phpmyadmin&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Report for January 2021</title>
+		<published>2021-01-01T12:00:00+00:00</published>
+		<updated>2021-01-31T23:59:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/OpenSource/2021/01/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/OpenSource/2021/01/report/</id>
+		<content type="html">&lt;p&gt;Here is my OpenSource report for January 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-01&quot;&gt;First week (01)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; to finish fixing my LDAP search configuration and the test suite.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;docker-mailserver&quot;&gt;Docker Mailserver&lt;&#x2F;a&gt; invited me to join their GitHub organization. Thanks guys !&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;At Doctum I decided to drop PHP 7.1 series in favor of supporting PHP 8.0 on the phar. A &lt;code&gt;QA_5_3&lt;&#x2F;code&gt; branch was created but for now I have no idea if I will use it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;At Doctum I merged &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;pull&#x2F;24&quot;&gt;a pull-request&lt;&#x2F;a&gt; after a rebase to fix types resolving.
+And cleaned up some recent useless files that had and could enter the phar file. Also I did enable &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;discussions&#x2F;25&quot;&gt;GitHub discussions&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I created the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sudo-bot&#x2F;action-scrutinizer&quot;&gt;sudo-bot&#x2F;action-scrutinizer&lt;&#x2F;a&gt; to move out some script lines on the phpMyAdmin sql-parser GitHub actions migration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-02&quot;&gt;Second week (02)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
+&lt;p&gt;At Doctum I fixed my vendor cleaning script after I did find out that I had did a mistake in the path I configured.
+I spent some time configuring GitLab and GitLab pages for this blog, but it just did not work for some (still) unknown reason.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
+Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-03&quot;&gt;Third week (03)&lt;&#x2F;h2&gt;
+&lt;p&gt;I created an &lt;a href=&quot;https:&#x2F;&#x2F;doctum.long-term.support&#x2F;releases.rss&quot;&gt;RSS feed for Doctum&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
