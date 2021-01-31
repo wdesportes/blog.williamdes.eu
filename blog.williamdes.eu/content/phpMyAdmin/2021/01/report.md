@@ -41,6 +41,8 @@ The Debian version `5.0.4+dfsg1-1` landed after a lot lot lot of time fixing and
 
 ### Saturday
 
+__Nothing to report__
+
 ### Sunday
 
 I migrated sql-parser to GitHub actions. Still working on the Debian package.
@@ -106,19 +108,19 @@ And updated my [open-source phpMyAdmin dev setup](https://github.com/wdesportes/
 Also added support for `[ci skip]` on GitHub actions and did try to fix the TravisCI builds.
 Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the `<br>` to `[br]` transition and some older ones from the `<br/>`/`<br />` to `<br>`.
 
-# Friday
+### Friday
 
 Some more cleaning on Weblate and some PR updates.
 I imported [the security fix](https://security-tracker.debian.org/tracker/CVE-2021-21252) into Debian and imported my font removal also.
 Also tested the [transformation to image PR](https://github.com/phpmyadmin/phpmyadmin/pull/16586) and made a fix ontop if it.
 And to finish the day like a night own I did finally [find a way to make jest edit files on the fly](https://github.com/phpmyadmin/phpmyadmin/pull/16409) to test them.
 
-# Saturday
+### Saturday
 
 I did some changes on the Debian side and imported a patch that was on the Debian side.
 On the main repository I did merge some pull-requests and finished the [first Jest unit testing integration](https://github.com/phpmyadmin/phpmyadmin/pull/16409).
 
-# Sunday
+### Sunday
 
 I did some PR and issue management and also some documentation management.
 And also did work on some slowness issues and made two PRs ([1](https://github.com/phpmyadmin/phpmyadmin/pull/16590), [2](https://github.com/phpmyadmin/phpmyadmin/pull/16591)). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.
@@ -143,17 +145,17 @@ Some PR testing and a TCPDF PHP 8.0 fix.
 I spent some time fixing the theme generator and merging the fixes I made.
 Also did some issue triage and worked on 2 PRs open at the `docker` repository (added more tests, and fixed mistakes).
 
-# Friday
+### Friday
 
 I worked on a complete [re-work of the `docker` repository testsuite](https://github.com/phpmyadmin/docker/pull/323).
 This will make us move to GitHub actions completely.
 
-# Saturday
+### Saturday
 
 I merged a fix on the Docker repository and did some issue triage and reproduction.
 Also fixed a 5.1.0-rc1 bug on multi server setup.
 I did write tests to reproduce an [issue](https://github.com/phpmyadmin/phpmyadmin/issues/16595) and cover more of our codebase.
 
-# Sunday
+### Sunday
 
 I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.
