@@ -4,8 +4,51 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-31T23:59:00+00:00</updated>
+	<updated>2021-02-03T17:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
+	<entry xml:lang="en">
+		<title>A new uptime service for my infrastructure (upptime)</title>
+		<published>2021-02-03T15:00:00+00:00</published>
+		<updated>2021-02-03T17:00:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/" type="text/html"/>
+		<id>https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/</id>
+		<content type="html">&lt;p&gt;Here is the story of why I did move from my custom made Heroku&#x2F;Node&#x2F;Typescript stats service to &lt;a href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;some-story&quot;&gt;Some story&lt;&#x2F;h2&gt;
+&lt;p&gt;Since 2018 I have been using and maintaining my service to monitor my different websites.
+My first deploy was on July 2018 and the last one in February 2021, since 2018 I have been maintaining and improving the service.
+I flushed the data once and since 2019-02-01 it has been collecting status codes and response times.
+Actually 1571311 * 2 rows of data, no downtime. Thank you Heroku !&lt;&#x2F;p&gt;
+&lt;p&gt;Conclusion: this service I built worked quite well and was ugly. I did receive sms notifications when things got up or down.
+I am moving to &lt;a href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; because it is free, open-source and maintained. And has a very cool UI !&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;technical-side&quot;&gt;Technical side&lt;&#x2F;h2&gt;
+&lt;p&gt;I used TypeScript over NodeJS with &lt;a href=&quot;https:&#x2F;&#x2F;sequelize.org&#x2F;&quot;&gt;Sequelize&lt;&#x2F;a&gt; as an ORM and migration system.
+Also used &lt;a href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;node-cron&quot;&gt;node-cron&lt;&#x2F;a&gt; to make my scheduling work and &lt;a href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;twig&quot;&gt;twig&lt;&#x2F;a&gt; for my templates. And for API docs I used the &lt;a href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;apidoc&quot;&gt;apidoc&lt;&#x2F;a&gt; package that works great.&lt;&#x2F;p&gt;
+&lt;p&gt;I was quite pleased about this project and the modules I used, very rarely had bugs.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hacky-side&quot;&gt;Hacky side&lt;&#x2F;h2&gt;
+&lt;p&gt;I had to prevent the Dyno from sleeping by feeding it requests every 5 minutes using &lt;a href=&quot;https:&#x2F;&#x2F;uptimerobot.com&#x2F;&quot;&gt;Uptime Robot&lt;&#x2F;a&gt;.
+It is a great tool and I recommend it but having paid features was not for me, so I only kept one for the dyno and built the wdes-stats service.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;costs-side&quot;&gt;Costs side&lt;&#x2F;h2&gt;
+&lt;p&gt;Total project costs: 0$, 31 months of free Dyno time. Databases for free too.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;backups&quot;&gt;Backups&lt;&#x2F;h2&gt;
+&lt;p&gt;What are you talking about ?? ^^. More seriously I designed a backup button but I never could work because pulling all the data (1.5M rows)was complex on a Dyno and the buffer was quite large and could not handle to keep the data in memory to send it to be my email.
+Conclusion: it works on my workstation, not in production.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;screenshots-of-the-old-service&quot;&gt;Screenshots of the old service&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;the-homepage&quot;&gt;The homepage&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Accueil__wdes-stats___210203_004.jpg&quot; alt=&quot;The wdes-stats homepage&quot; title=&quot;The wdes-stats homepage&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-admin-welcome&quot;&gt;The admin welcome&lt;&#x2F;h3&gt;
+&lt;p&gt;(After a GitHub login)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Administration___wdes-stats___210203_002.jpg&quot; alt=&quot;The wdes-stats admin welcome&quot; title=&quot;The wdes-stats admin welcome&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-servers-list&quot;&gt;The servers list&lt;&#x2F;h3&gt;
+&lt;p&gt;(with a enable&#x2F;disable button)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Administration___Serveurs___wdes-stats___210203_003.jpg&quot; alt=&quot;The wdes-stats servers list&quot; title=&quot;The wdes-stats servers list&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;a-time-stats-page&quot;&gt;A time stats page&lt;&#x2F;h3&gt;
+&lt;p&gt;(with a pie chart of the status codes)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg&quot; alt=&quot;The wdes-stats time stats page&quot; title=&quot;The wdes-stats time stats page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mirating-to-the-new-service&quot;&gt;Mirating to the new service&lt;&#x2F;h2&gt;
+&lt;p&gt;I did follow the &lt;a href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;docs&#x2F;get-started&quot;&gt;manual&lt;&#x2F;a&gt; and that was it !
+Here it is: &lt;a href=&quot;https:&#x2F;&#x2F;status.datacenters.network&#x2F;&quot;&gt;https:&#x2F;&#x2F;status.datacenters.network&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Follow my phpMyAdmin adventure</title>
 		<published>2021-01-13T12:00:00+00:00</published>

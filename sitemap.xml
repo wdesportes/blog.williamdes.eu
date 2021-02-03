@@ -4,23 +4,60 @@
         <loc>https://blog.williamdes.eu/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/OpenSource/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/OpenSource/2020/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/OpenSource/2020/12/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/OpenSource/2020/12/report/</loc>
         <lastmod>2021-01-15T18:52:00Z</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/OpenSource/2021/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/OpenSource/2021/01/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/OpenSource/2021/01/report/</loc>
         <lastmod>2021-01-31T23:59:00Z</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/OpenSource/stories/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/</loc>
+        <lastmod>2021-02-03T17:00:00Z</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2020/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2020/12/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</loc>
         <lastmod>2021-01-13T20:11:45Z</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2021/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2021/01/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</loc>
         <lastmod>2021-01-31T23:41:00Z</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2021/02/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
@@ -34,6 +71,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-report/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-story/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-story/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/other/</loc>
