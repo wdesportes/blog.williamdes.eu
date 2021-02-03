@@ -1,7 +1,7 @@
 +++
 title = "A new uptime service for my infrastructure (upptime)"
 date = 2021-02-03T15:00:00Z
-updated = 2021-02-03T17:00:00Z
+updated = 2021-02-03T17:45:00Z
 category = "OpenSource - stories"
 
 [extra]
@@ -11,7 +11,7 @@ author = "William Desportes"
 tags = ["OSS-story"]
 +++
 
-Here is the story of why I did move from my custom made Heroku/Node/Typescript stats service to [upptime](https://upptime.js.org/).
+Here is the story of why I did move from my [custom made](https://github.com/wdes/stats) [Heroku](https://heroku.com)/Node/[TypeScript](https://www.typescriptlang.org/) stats service to [upptime](https://upptime.js.org/).
 
 <!-- more -->
 
@@ -20,14 +20,16 @@ Here is the story of why I did move from my custom made Heroku/Node/Typescript s
 Since 2018 I have been using and maintaining my service to monitor my different websites.
 My first deploy was on July 2018 and the last one in February 2021, since 2018 I have been maintaining and improving the service.
 I flushed the data once and since 2019-02-01 it has been collecting status codes and response times.
-Actually 1571311 * 2 rows of data, no downtime. Thank you Heroku !
+Actually 1571311 * 2 rows of data, no downtime. Thank you [Heroku](https://heroku.com) !
 
 Conclusion: this service I built worked quite well and was ugly. I did receive sms notifications when things got up or down.
 I am moving to [upptime](https://upptime.js.org/) because it is free, open-source and maintained. And has a very cool UI !
 
 ## Technical side
 
-I used TypeScript over NodeJS with [Sequelize](https://sequelize.org/) as an ORM and migration system.
+You can find the source code: [here](https://github.com/wdes/stats)
+
+I used [TypeScript](https://www.typescriptlang.org/) over NodeJS with [Sequelize](https://sequelize.org/) as an ORM and migration system.
 Also used [node-cron](https://www.npmjs.com/package/node-cron) to make my scheduling work and [twig](https://www.npmjs.com/package/twig) for my templates. And for API docs I used the [apidoc](https://www.npmjs.com/package/apidoc) package that works great.
 
 I was quite pleased about this project and the modules I used, very rarely had bugs.
@@ -75,3 +77,17 @@ Conclusion: it works on my workstation, not in production.
 
 I did follow the [manual](https://upptime.js.org/docs/get-started) and that was it !
 Here it is: [https://status.datacenters.network/](https://status.datacenters.network/)
+
+(did I choose to keep the watermarks, absolutely !)
+
+## Screenshots
+
+## The homepage
+
+![The status upptime homepage](../screenshots/Home_status_Datacenters_network_210203_007.jpg "The upptime homepage")
+
+### A time stats page
+
+(yes, it says it is down and I do not know why for now)
+
+![The upptime time stats page](../screenshots/Server_stats_status_Datacenters_network_210203_008.jpg "The upptime time stats page")
