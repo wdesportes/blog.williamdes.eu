@@ -82,7 +82,7 @@ Here it is: [https://status.datacenters.network/](https://status.datacenters.net
 
 ## Screenshots
 
-## The homepage
+### The homepage
 
 ![The status upptime homepage](../screenshots/Home_status_Datacenters_network_210203_007.jpg "The upptime homepage")
 
