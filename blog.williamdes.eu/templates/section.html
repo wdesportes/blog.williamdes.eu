@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="posts">
+    {% for page in section.pages %}
+    {{ post_macros::page_in_list(page=page)}}
+    </article>{% endfor %}
+</div>
+{% endblock content %}
