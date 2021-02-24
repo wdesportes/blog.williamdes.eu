@@ -1,7 +1,7 @@
 +++
 title = "A new uptime service for my infrastructure (upptime)"
 date = 2021-02-03T15:00:00Z
-updated = 2021-02-03T17:45:00Z
+updated = 2021-02-24T17:10:00Z
 category = "OpenSource - stories"
 
 [extra]
@@ -72,7 +72,6 @@ Conclusion: it works on my workstation, not in production.
 
 ![The wdes-stats time stats page](../screenshots/Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg "The wdes-stats time stats page")
 
-
 ## Mirating to the new service
 
 I did follow the [manual](https://upptime.js.org/docs/get-started) and that was it !
@@ -88,6 +87,6 @@ Here it is: [https://status.datacenters.network/](https://status.datacenters.net
 
 ### A time stats page
 
-(yes, it says it is down and I do not know why for now)
+(yes, it says it is down and ~~I do not know why for now~~ this is because if you use a custom commit template you can break the parsing, see the issue for that: [here](https://github.com/upptime/upptime/issues/268))
 
 ![The upptime time stats page](../screenshots/Server_stats_status_Datacenters_network_210203_008.jpg "The upptime time stats page")
