@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Here is a story bout how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Moving from LastPass to Bitwarden self-hosted (Rust back-end)">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass">
+        <meta property="og:description" content="Here is a story bout how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-02-21">
+        <meta property="article:modified_time" content="2021-02-24">
+        
+        <meta property="article:tags" content="OSS-story"><meta property="article:tags" content="security">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Moving from LastPass to Bitwarden self-hosted (Rust back-end)</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-02-21T00:00:00+0000">February 21, 2021 00:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-02-24T17:30:00+0000">February 24, 2021 17:30</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">3 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Here is a story bout how I moved out from <a href="https://www.lastpass.com/">LastPass</a> to <a href="https://bitwarden.com/">Bitwarden</a> after 7 years using LastPass.</p>
+<span id="continue-reading"></span><h3 id="the-story">The story</h3>
+<p>I was using <a href="https://www.lastpass.com/">LastPass</a> since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using <a href="https://bitwarden.com/">Bitwarden</a> since a couple of months I am convinced it is a good tool and started searching for self hosted options.
+Bitwarden is open-source, not like LastPass. You can browse the code <a href="https://github.com/bitwarden">on their GitHub</a>.
+I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that <a href="https://github.com/dani-garcia">someone</a> had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes <a href="https://github.com/dani-garcia/bitwarden_rs/wiki/Proxy-examples">configuring my haproxy</a> I got my deployed container working and could start my migration.
+Wait, you are asking If I had deployment issues ? hahaha, no. I used the <a href="https://hub.docker.com/r/bitwardenrs/server">docker image</a> <a href="https://github.com/dani-garcia/bitwarden_rs/wiki/Using-Docker-Compose">with docker compose</a> and it just works.</p>
+<p>You can configure the domains allowed to register to your Bitwarden instance, very nice feature !
+And more cool things, just have a look to the <a href="https://github.com/dani-garcia/bitwarden_rs/blob/1.19.0/.env.template">.env template</a></p>
+<p>I had a look to a <a href="https://www.youtube.com/watch?v=lfHDqxCJA90">French video</a> to install the official server using Docker, I could see a lot of &quot;overkill&quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.</p>
+<p>After setting up my instance I Exported all my Bitwarden accounts and my LastPass account and imported the data.
+Logged in with my phone and browser extension after defining the URL of my instance and that was it.</p>
+<p>What about you, just have a try ;)</p>
+<h3 id="some-details-about-how-it-works">Some details about how it works</h3>
+<p>It works great, anyway nothing surprising with a Rust back-end.
+It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in case.</p>
+<h3 id="some-screenshots">Some screenshots</h3>
+<p>(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)</p>
+<h4 id="configure-the-domain">Configure the domain</h4>
+<p>Use the bolt icon on the login modal.</p>
+<p><img src="../screenshots/Bitwarden_configure_url_2021.jpg" alt="Configure the instance URL modal" title="Configure the instance URL modal" /></p>
+<h4 id="your-vault-s-view-from-the-chrome-extension">Your vault's view from the Chrome extension</h4>
+<p><img src="../screenshots/Bitwarden_modal_2021.jpg" alt="Your vault modal from the Chrome extension" title="Your vault modal from the Chrome extension" /></p>
+<h4 id="your-vault-s-view-from-the-web-ui">Your vault's view from the web UI</h4>
+<p><img src="../screenshots/Bitwarden_working_2021.jpg" alt="Your vault from the web UI" title="Your vault from the web UI" /></p>
+<h3 id="docker-compose">Docker compose</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-yml" data-lang="yml"><span style="color:#bf616a;">bitwarden</span><span style="color:#c0c5ce;">:
+    </span><span style="color:#bf616a;">image</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">bitwardenrs/server
+    restart</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">always
+    dns_search</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">host.tld
+    hostname</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">bitwarden.host.tld
+    domainname</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">host.tld
+    container_name</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">bitwarden.host.tld
+    networks</span><span style="color:#c0c5ce;">:
+        </span><span style="color:#bf616a;">my_network</span><span style="color:#c0c5ce;">:
+            </span><span style="color:#bf616a;">aliases</span><span style="color:#c0c5ce;">:
+                - </span><span style="color:#bf616a;">bitwarden.host.tld
+    mem_limit</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">200m
+    mem_reservation</span><span style="color:#c0c5ce;">: </span><span style="color:#bf616a;">100m
+    volumes</span><span style="color:#c0c5ce;">:
+        - </span><span style="color:#bf616a;">${BITWARDEN_VOLUME}:/data
+    environment</span><span style="color:#c0c5ce;">:
+        </span><span style="color:#bf616a;">WEBSOCKET_ENABLED</span><span style="color:#c0c5ce;">: &#39;</span><span style="color:#a3be8c;">true</span><span style="color:#c0c5ce;">&#39;
+        </span><span style="color:#bf616a;">SIGNUPS_ALLOWED</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_ENABLE_SIGNUPS}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SIGNUPS_DOMAINS_WHITELIST</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SIGNUPS_DOMAINS_WHITELIST}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">ADMIN_TOKEN</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_ADMIN_TOKEN}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">INVITATION_ORG_NAME</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_INVITATION_ORG_NAME}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">DOMAIN</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_URL}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_HOST</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_HOST}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_FROM</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_FROM}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_FROM_NAME</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_FROM_NAME}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_PORT</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_PORT}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_SSL</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_SSL}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_EXPLICIT_TLS</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_EXPLICIT_TLS}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_USERNAME</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_USERNAME}</span><span style="color:#c0c5ce;">&quot;
+        </span><span style="color:#bf616a;">SMTP_PASSWORD</span><span style="color:#c0c5ce;">: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_PASSWORD}</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre></div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/oss-story/">OSS-story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/security/">security</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
