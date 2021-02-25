@@ -4,15 +4,15 @@
 	<link href="https://blog.williamdes.eu/tags/security/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-02-24T17:30:00+00:00</updated>
+	<updated>2021-02-25T01:50:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/security/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
 		<published>2021-02-21T00:00:00+00:00</published>
-		<updated>2021-02-24T17:30:00+00:00</updated>
+		<updated>2021-02-25T01:50:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
 		<id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
-		<content type="html">&lt;p&gt;Here is a story bout how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-story&quot;&gt;The story&lt;&#x2F;h3&gt;
 &lt;p&gt;I was using &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; since a couple of months I am convinced it is a good tool and started searching for self hosted options.
 Bitwarden is open-source, not like LastPass. You can browse the code &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitwarden&quot;&gt;on their GitHub&lt;&#x2F;a&gt;.
