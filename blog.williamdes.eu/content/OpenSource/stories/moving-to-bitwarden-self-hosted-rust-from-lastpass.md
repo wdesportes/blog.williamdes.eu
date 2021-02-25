@@ -1,7 +1,7 @@
 +++
 title = "Moving from LastPass to Bitwarden self-hosted (Rust back-end)"
 date = 2021-02-21T00:00:00Z
-updated = 2021-02-24T17:30:00Z
+updated = 2021-02-25T01:50:00Z
 category = "OpenSource - stories"
 
 [extra]
@@ -11,7 +11,7 @@ author = "William Desportes"
 tags = ["OSS-story", "security"]
 +++
 
-Here is a story bout how I moved out from [LastPass](https://www.lastpass.com/) to [Bitwarden](https://bitwarden.com/) after 7 years using LastPass.
+Here is a story about how I moved out from [LastPass](https://www.lastpass.com/) to [Bitwarden](https://bitwarden.com/) after 7 years using LastPass.
 
 <!-- more -->
 
