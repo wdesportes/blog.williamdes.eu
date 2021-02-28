@@ -1,9 +1,8 @@
 +++
 title = "Report for February 2021"
-date = 2021-01-01T12:00:00Z
-updated = 2021-01-31T23:41:00Z
+date = 2021-02-01T12:00:00Z
+updated = 2021-02-28T17:22:00Z
 category = "phpMyAdmin - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -120,7 +119,7 @@ Not much, some issue tracking and PR merging.
 
 ### Saturday
 
-A day off.
+_A day off._
 
 ### Sunday
 
@@ -132,14 +131,34 @@ And did refactor the route cache handling, now there is two flags. One to define
 
 ### Monday (22/02/2021)
 
+Working on performance improvement to check that my PR does not add some slowness. I found out that calling getters on PHP costs a lot.
+I am comparing xhprof results to adjust my code. Also found out where all the performance is eaten on SQL exports.
+
 ### Tuesday
+
+Some more work on my refactoring and merging PRs. Getting ready for the 5.1.0 release.
+And did research to find out how to cover the last un-covered lines of our i18n extension. 100% coverage, satisfying.
+Will do performance benchmarks to find out where I can improve the code before releasing the major version 4.
+I removed all the custom code on our main repository and [created a PR](https://github.com/phpmyadmin/phpmyadmin/pull/16675).
 
 ### Wednesday
 
+I made some updates to our website after the 5.1 release. Worked on testing in depth the `TODO`s that I have added while doing my refactoring. Had to dig to find why things where added 10 years ago ^^.
+Also wrote more tests for our i18n extension and made performance improvements. I released [v4.0.0](https://github.com/phpmyadmin/twig-i18n-extension/releases/tag/v4.0.0) and [updated it upstream](https://github.com/phpmyadmin/phpmyadmin/pull/16675).
+
 ### Thursday
+
+I fixed some infrastructure scripts. Did some PR testing and found a very old and not reported bug.
+Also did search for bugs that could be solved in the issue base.
 
 ### Friday
 
+Started working on packaging phpMyAdmin 5.1 into Debian.
+
 ### Saturday
 
+I made some PR reviews.
+
 ### Sunday
+
+_A day off._
