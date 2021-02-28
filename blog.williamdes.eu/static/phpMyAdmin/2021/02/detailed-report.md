@@ -25,15 +25,15 @@ our code base and checking the before and after results to see if I did break or
 I continued to work on my field flags refactoring. Did some issue and pull-request triage.
 Some i18n extension fixes after review, merged some PRs and wrote tests. Worked on fixes and issue reproducing.
 Did a lot of work on the release script and did refactor the route cache handling.
-Also improved the release script to make the testsuite be run on the packaged version.
+Also improved the release script to make the test-suite be run on the packaged version.
 And did write a script to clean our release versions to remove the useless vendor files that could be distributed.
 
 ### Fourth week (week number 08)
 
-Some final work on the field flags refactoring and found out a problematic code piece to be fixed in the SQL export.
+To start the week, some final work on the field flags refactoring and I did some research about a problematic code piece in the SQL export that eats performance since the 4.6.6 version.
 Did some backports to the i18n extension and performance testing and improvements. Version 4 of the i18n extension was released and upgraded into phpMyAdmin. Also merged my versioning improvement and 5.1.0 got released.
 I imported it into Debian and made some updates to our website and scripts after the release was done.
-And as I do every day, some issue and PR management.
+Pull-request management and issue triage.
 
 ## Handled issues
 
