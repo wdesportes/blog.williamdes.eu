@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Report for February 2021</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Here is my phpMyAdmin report for February 2021.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Report for February 2021">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpMyAdmin&#x2F;2021&#x2F;02&#x2F;report">
+        <meta property="og:description" content="Here is my phpMyAdmin report for February 2021.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-02-01">
+        <meta property="article:modified_time" content="2021-02-28">
+        
+        <meta property="article:tags" content="phpMyAdmin"><meta property="article:tags" content="OSS-report">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Report for February 2021</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-02-01T12:00:00+0000">February  1, 2021 12:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-02-28T17:22:00+0000">February 28, 2021 17:22</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">6 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Here is my phpMyAdmin report for February 2021.</p>
+<span id="continue-reading"></span><h2 id="first-week-05">First week (05)</h2>
+<h3 id="monday-01-02-2021">Monday (01/02/2021)</h3>
+<p>Handled some issues and did some fixes on the Docker repository.</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>I did handle a fix that was a left over of the stickfill migration.
+And worked on performance improvements.</p>
+<h3 id="wednesday">Wednesday</h3>
+<p><em>Nothing to report, I worked on my infrastructure</em></p>
+<h3 id="thursday">Thursday</h3>
+<p>I did review some pull-requests and hunt for typos in most of our files. I found some and even found a potential bug on a HTML tag that had a typo in it. Also did triage some issues.
+And I migrated the website Python CI to GitHub actions with some sed commands to hack a backport Django did not do.</p>
+<h3 id="friday">Friday</h3>
+<p>I moved the themes, motranslator, shapefile repositories to GitHub actions. Did the milestone process for sql-parser after the release.
+Also did fix a bunch of Documentation translations and migrated the repository to GitHub actions.
+Did some pull-request review and prepared 2 PRs for the 2 releases done this day of shapefile and motranslator.
+On Debian I imported the latest motranslator version and applied some guidelines.</p>
+<h3 id="saturday">Saturday</h3>
+<p>A little bit of infrastructure work for phpMyAdmin and issue triage.</p>
+<h3 id="sunday">Sunday</h3>
+<p>I updated shapefile at Debian and copied all the fixes made earlier on motranslator.
+Also merged my shapefile 3 upgrade into 5.2.0-dev and worked on writing tests for the <a href="https://github.com/phpmyadmin/twig-i18n-extension/pull/5">new feature</a> proposed on the Twig i18n extension.
+I continued to work on the extension to bring all changes made at phpMyAdmin into it (translation context functions support).</p>
+<h2 id="second-week-06">Second week (06)</h2>
+<h3 id="monday-08-02-2021">Monday (08/02/2021)</h3>
+<p>I did migrate our Selenium test suite to GitHub actions and did some debug improvements for it (screenshots, source code).
+And did re-work some selenium scripts and work on making coverage work for E2E tests.
+Also did manage some issues.</p>
+<h3 id="tuesday-1">Tuesday</h3>
+<p>I merged a batch of fixes and rebased some PRs, also merged my Selenium PR.
+For now pcov coverage will not work for the selenium test suite because it is too slow.
+Also tried to reproduce some bugs.</p>
+<h3 id="wednesday-1">Wednesday</h3>
+<p>I worked on performance issues and tracking bugs reported for the Import feature.</p>
+<h3 id="thursday-1">Thursday</h3>
+<p>Not much to report, a little bit of issue and PR review.</p>
+<h3 id="friday-1">Friday</h3>
+<p>I worked on my bot to deploy phpMyAdmin PRs.</p>
+<h3 id="saturday-1">Saturday</h3>
+<p>I worked on merging work done of the twig i18n extension. Made some bug fixes and reviewed pull-requests.
+Also did work on trying to reproduce bugs. Uploaded motranslator Update to the PPA and to buster-backports.
+Worked on Selenium tests to fix the errors.</p>
+<h3 id="sunday-1">Sunday</h3>
+<p>Sent shapefile to buster-backports and to our Ubuntu PPA. Made some stale issue triage and pull-request merging.</p>
+<p>Working on a big refactoring of the field flags handling. The code is currently like 2 people using a translator for languages they already know. The code fetches flags, builds a string with an array and all the codebase performs strpos onto the string. Very &quot;stupid&quot;, but maybe made sense sometime ago. Anyway it is eating performance and needs to be thrown out. Now only relying on a full typed object. This will bring safety and performance everywhere where field flags did leak.</p>
+<h2 id="third-week-07">Third week (07)</h2>
+<h3 id="monday-15-02-2021">Monday (15/02/2021)</h3>
+<p>Worked on finishing my field flags refactoring. Pull-request testing and issue triage as I do everyday ^^
+Also did update my PR on the twig i18n extension.</p>
+<h3 id="tuesday-2">Tuesday</h3>
+<p>Merged and reviewed some PRs. Wrote some tests for a PR.
+And continued working on my refactoring. Also fixed a Selenium test and a bug found by the test suite.</p>
+<h3 id="wednesday-2">Wednesday</h3>
+<p>Worked on bug fixes, and fixed the Selenium test suite errors. Quite some bugs fixed !
+Also had a look to the error reporting server to find bugs to fix.
+And finished a JS doc linting PR.</p>
+<h3 id="thursday-2">Thursday</h3>
+<p>Some issue triage. And worked on reproducing some issues.
+Also worked on the INT validation form fixes.</p>
+<h3 id="friday-2">Friday</h3>
+<p>Not much, some issue tracking and PR merging.</p>
+<h3 id="saturday-2">Saturday</h3>
+<p><em>A day off.</em></p>
+<h3 id="sunday-2">Sunday</h3>
+<p>I made the release script way better by running tests on the &quot;built package&quot; rather than on a vendor folder that was not the one shipped to users. Also wrote a script to find and help remove useless vendor files from release tarballs.
+Also did some digging on the new errors found by phpstan. One seems to be true but I could not confirm any PHP warning, I am keeping my fix for later.
+And did refactor the route cache handling, now there is two flags. One to define if the routing cache should be skipped and another one to know if the cache can be written.</p>
+<h2 id="fourth-week-08">Fourth week (08)</h2>
+<h3 id="monday-22-02-2021">Monday (22/02/2021)</h3>
+<p>Working on performance improvement to check that my PR does not add some slowness. I found out that calling getters on PHP costs a lot.
+I am comparing xhprof results to adjust my code. Also found out where all the performance is eaten on SQL exports.</p>
+<h3 id="tuesday-3">Tuesday</h3>
+<p>Some more work on my refactoring and merging PRs. Getting ready for the 5.1.0 release.
+And did research to find out how to cover the last un-covered lines of our i18n extension. 100% coverage, satisfying.
+Will do performance benchmarks to find out where I can improve the code before releasing the major version 4.
+I removed all the custom code on our main repository and <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16675">created a PR</a>.</p>
+<h3 id="wednesday-3">Wednesday</h3>
+<p>I made some updates to our website after the 5.1 release. Worked on testing in depth the <code>TODO</code>s that I have added while doing my refactoring. Had to dig to find why things where added 10 years ago ^^.
+Also wrote more tests for our i18n extension and made performance improvements. I released <a href="https://github.com/phpmyadmin/twig-i18n-extension/releases/tag/v4.0.0">v4.0.0</a> and <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16675">updated it upstream</a>.</p>
+<h3 id="thursday-3">Thursday</h3>
+<p>I fixed some infrastructure scripts. Did some PR testing and found a very old and not reported bug.
+Also did search for bugs that could be solved in the issue base.</p>
+<h3 id="friday-3">Friday</h3>
+<p>Started working on packaging phpMyAdmin 5.1 into Debian.</p>
+<h3 id="saturday-3">Saturday</h3>
+<p>I made some PR reviews.</p>
+<h3 id="sunday-3">Sunday</h3>
+<p><em>A day off.</em></p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/phpmyadmin/">phpMyAdmin</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/oss-report/">OSS-report</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

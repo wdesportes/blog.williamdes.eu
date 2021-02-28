@@ -4,8 +4,104 @@
 	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-01-31T23:41:00+00:00</updated>
+	<updated>2021-02-28T17:22:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for February 2021</title>
+		<published>2021-02-01T12:00:00+00:00</published>
+		<updated>2021-02-28T17:22:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/02/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/02/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for February 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-05&quot;&gt;First week (05)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-01-02-2021&quot;&gt;Monday (01&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Handled some issues and did some fixes on the Docker repository.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did handle a fix that was a left over of the stickfill migration.
+And worked on performance improvements.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Nothing to report, I worked on my infrastructure&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did review some pull-requests and hunt for typos in most of our files. I found some and even found a potential bug on a HTML tag that had a typo in it. Also did triage some issues.
+And I migrated the website Python CI to GitHub actions with some sed commands to hack a backport Django did not do.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I moved the themes, motranslator, shapefile repositories to GitHub actions. Did the milestone process for sql-parser after the release.
+Also did fix a bunch of Documentation translations and migrated the repository to GitHub actions.
+Did some pull-request review and prepared 2 PRs for the 2 releases done this day of shapefile and motranslator.
+On Debian I imported the latest motranslator version and applied some guidelines.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;A little bit of infrastructure work for phpMyAdmin and issue triage.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;I updated shapefile at Debian and copied all the fixes made earlier on motranslator.
+Also merged my shapefile 3 upgrade into 5.2.0-dev and worked on writing tests for the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;pull&#x2F;5&quot;&gt;new feature&lt;&#x2F;a&gt; proposed on the Twig i18n extension.
+I continued to work on the extension to bring all changes made at phpMyAdmin into it (translation context functions support).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-06&quot;&gt;Second week (06)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-08-02-2021&quot;&gt;Monday (08&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I did migrate our Selenium test suite to GitHub actions and did some debug improvements for it (screenshots, source code).
+And did re-work some selenium scripts and work on making coverage work for E2E tests.
+Also did manage some issues.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I merged a batch of fixes and rebased some PRs, also merged my Selenium PR.
+For now pcov coverage will not work for the selenium test suite because it is too slow.
+Also tried to reproduce some bugs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on performance issues and tracking bugs reported for the Import feature.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;Not much to report, a little bit of issue and PR review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on my bot to deploy phpMyAdmin PRs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on merging work done of the twig i18n extension. Made some bug fixes and reviewed pull-requests.
+Also did work on trying to reproduce bugs. Uploaded motranslator Update to the PPA and to buster-backports.
+Worked on Selenium tests to fix the errors.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Sent shapefile to buster-backports and to our Ubuntu PPA. Made some stale issue triage and pull-request merging.&lt;&#x2F;p&gt;
+&lt;p&gt;Working on a big refactoring of the field flags handling. The code is currently like 2 people using a translator for languages they already know. The code fetches flags, builds a string with an array and all the codebase performs strpos onto the string. Very &amp;quot;stupid&amp;quot;, but maybe made sense sometime ago. Anyway it is eating performance and needs to be thrown out. Now only relying on a full typed object. This will bring safety and performance everywhere where field flags did leak.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-07&quot;&gt;Third week (07)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-15-02-2021&quot;&gt;Monday (15&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Worked on finishing my field flags refactoring. Pull-request testing and issue triage as I do everyday ^^
+Also did update my PR on the twig i18n extension.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Merged and reviewed some PRs. Wrote some tests for a PR.
+And continued working on my refactoring. Also fixed a Selenium test and a bug found by the test suite.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Worked on bug fixes, and fixed the Selenium test suite errors. Quite some bugs fixed !
+Also had a look to the error reporting server to find bugs to fix.
+And finished a JS doc linting PR.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;Some issue triage. And worked on reproducing some issues.
+Also worked on the INT validation form fixes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Not much, some issue tracking and PR merging.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;A day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made the release script way better by running tests on the &amp;quot;built package&amp;quot; rather than on a vendor folder that was not the one shipped to users. Also wrote a script to find and help remove useless vendor files from release tarballs.
+Also did some digging on the new errors found by phpstan. One seems to be true but I could not confirm any PHP warning, I am keeping my fix for later.
+And did refactor the route cache handling, now there is two flags. One to define if the routing cache should be skipped and another one to know if the cache can be written.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-08&quot;&gt;Fourth week (08)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-22-02-2021&quot;&gt;Monday (22&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Working on performance improvement to check that my PR does not add some slowness. I found out that calling getters on PHP costs a lot.
+I am comparing xhprof results to adjust my code. Also found out where all the performance is eaten on SQL exports.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Some more work on my refactoring and merging PRs. Getting ready for the 5.1.0 release.
+And did research to find out how to cover the last un-covered lines of our i18n extension. 100% coverage, satisfying.
+Will do performance benchmarks to find out where I can improve the code before releasing the major version 4.
+I removed all the custom code on our main repository and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;created a PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made some updates to our website after the 5.1 release. Worked on testing in depth the &lt;code&gt;TODO&lt;&#x2F;code&gt;s that I have added while doing my refactoring. Had to dig to find why things where added 10 years ago ^^.
+Also wrote more tests for our i18n extension and made performance improvements. I released &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;releases&#x2F;tag&#x2F;v4.0.0&quot;&gt;v4.0.0&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;updated it upstream&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I fixed some infrastructure scripts. Did some PR testing and found a very old and not reported bug.
+Also did search for bugs that could be solved in the issue base.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Started working on packaging phpMyAdmin 5.1 into Debian.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made some PR reviews.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;A day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Follow my phpMyAdmin adventure</title>
 		<published>2021-01-13T12:00:00+00:00</published>
