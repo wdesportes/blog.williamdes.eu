@@ -28,7 +28,7 @@ And worked on performance improvements.
 
 ### Wednesday
 
-_Nothing to report, I worked on my infrastructure_
+_A day off._
 
 ### Thursday
 

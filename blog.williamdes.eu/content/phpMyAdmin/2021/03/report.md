@@ -20,6 +20,8 @@ Here is my phpMyAdmin report for March 2021.
 
 ### Monday (01/03/2021)
 
+I worked on writing tests and finding out about a very old bug (phpMyAdmin 3.5.1+).
+
 ### Tuesday
 
 ### Wednesday
