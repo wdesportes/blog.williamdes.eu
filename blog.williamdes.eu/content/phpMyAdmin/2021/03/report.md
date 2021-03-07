@@ -24,15 +24,32 @@ I worked on writing tests and finding out about a very old bug (phpMyAdmin 3.5.1
 
 ### Tuesday
 
+I removed the last TravisCI config, and worked on migrating the error report server to a newer cake PHP version.
+
 ### Wednesday
+
+More work on migrating to cake PHP 4.
 
 ### Thursday
 
+A lot of issue triage and test writing.
+Also replaced some deprecated code from the test-suite. And worked on more testing code improvements.
+
 ### Friday
+
+I did review/fix and test pull-requests.
+Write tests for pull-requests and remove some phpunit deprecations.
+Removed and improved some code that related to constants.
+I moved out some code and wrote tests for it.
 
 ### Saturday
 
+I made bug fixes and test writing to cover the fixes.
+Also added a bunch of testing methods to create better tests and all the work ended up into a 3% coverage bump.
+
 ### Sunday
+
+_Day off_
 
 ## Second week (10)
 
