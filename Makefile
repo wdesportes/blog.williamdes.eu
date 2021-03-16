@@ -10,7 +10,7 @@ version:
 	docker run --name ${CONTAINER_NAME} --rm -it ${IMAGE} --version
 
 init:
-	docker run --name ${CONTAINER_NAME} --rm -it --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app -p 80:80 ${IMAGE} init ${PROJECT_NAME}
+	docker run --name ${CONTAINER_NAME} --rm -it --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app ${IMAGE} init ${PROJECT_NAME}
 
 build:
 	docker run --name ${CONTAINER_NAME} --rm --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app/${PROJECT_NAME} ${IMAGE} build
