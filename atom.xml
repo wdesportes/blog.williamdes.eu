@@ -4,8 +4,107 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-02-28T17:22:00+00:00</updated>
+	<updated>2021-03-30T03:10:00+00:00</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for March 2021</title>
+		<published>2021-03-01T12:00:00+00:00</published>
+		<updated>2021-03-30T03:10:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/03/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/03/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for March 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-09&quot;&gt;First week (09)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-01-03-2021&quot;&gt;Monday (01&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on writing tests and finding out about a very old bug (phpMyAdmin 3.5.1+).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I removed the last TravisCI config, and worked on migrating the error report server to a newer cake PHP version.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;More work on migrating to cake PHP 4.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;A lot of issue triage and test writing.
+Also replaced some deprecated code from the test-suite. And worked on more testing code improvements.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did review&#x2F;fix and test pull-requests.
+Write tests for pull-requests and remove some phpunit deprecations.
+Removed and improved some code that related to constants.
+I moved out some code and wrote tests for it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made bug fixes and test writing to cover the fixes.
+Also added a bunch of testing methods to create better tests and all the work ended up into a 3% coverage bump.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-10&quot;&gt;Second week (10)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-08-03-2021&quot;&gt;Monday (08&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I finished my migration to Cake PHP.
+Everything is working fine and I fixed a bunch of bugs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did merge all Twig init code in one place and improve the Twig cache warmup.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on the error reporting server to fix some more bugs.
+Also did some Twig code fixes on-top of my work of Wednesday.
+I wrote some unit tests for cover more code.
+Also worked on removing an exit from our code base and wrote a test for the new function.
+And to finish the day I got most of the code of &lt;code&gt;CreateAddField&lt;&#x2F;code&gt; class &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;58d760b213b496ba1b22e27ccd8d0e4ae4ca2fc0&quot;&gt;covered&lt;&#x2F;a&gt; and discovered &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16728&quot;&gt;a bug&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some bug fixing and investigation.
+Also searched for files to remove from the final release bundle.
+I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;c62e27d6505ce22a36b635548e97f644198d6c11&quot;&gt;a fix&lt;&#x2F;a&gt; that removed some bad code that was parsing URLs in a very bad way and modifying them. Now the feature to add and remove order by clauses works fine !&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;Did a fix for the tcpdf cleaning I had did, could not find any coorect solution because the composer lock has saved the autoload list.
+Had to revert my fix at the end of the day.
+Also worked on bug fixes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Closed a bunch of issues and merged some PRs. And issue base cleaning.
+And did create bug fixes for some old bugs.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-11&quot;&gt;Third week (11)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-15-03-2021&quot;&gt;Monday (15&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on the error reporting JS code and modal handling that is broken in some corner cases and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16736&quot;&gt;made a PR&lt;&#x2F;a&gt; for some of the changes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I fixed a security bug I had found on the error reporting server and continued making bug fixes and searching for issues to close.
+Also merged my work from yesterday and made fixes on the error reporting server.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I fixed the JS reflow issue and removed the last JS sync call of the JS codebase.
+Also figured out about how the infrastructure server works and found why the snapshots are not okay.
+And I added the short Git sha and build date to the snapshot version using &lt;code&gt;VERSION_SUFFIX&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some testing of the features and searched for issues to fix on the error reporting server.
+And made more bug fixes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I did some bug fixing and some research for generating fonts with our icons.
+Also did review some pull-requests.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-12&quot;&gt;Fourth week (12)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-22-03-2021&quot;&gt;Monday (22&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;This day was a bug fixing and PR merge day.
+I also found some UI bugs and a non translated text.
+Project status today: 475 open issues, 23 PRs open.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Some issue management and PR reviews.
+Also worked on build reproducibility and on updating FAQ 1.44.
+And did some PR testing and merging. To finish the day I upgraded our JS dependencies.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I upgraded jquery, openlayers and removed md5.js lib.
+And worked on a CLI command to generate the git information file for Demo servers. Actually the file is written by a script. The process is documented nowhere.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I finished working on my CLI class and got my PR approved and merged. Also updated the demo server script.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on reproducing issues on the composer version and also UI issues reported.
+And made a fix for tabs mode not respected, and for a bug that was local dependent due to an attempt to split on &#x27;:&#x27;.
+Also made a fix on the error reporting server.
+And finished with writing test cases and fixing the version parsing on the error reporting server.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Most of the day was off.&lt;&#x2F;em&gt;
+Today I pushed a fix after tcpdf did release the fixes for PHP 8.
+Did some issue triage and improved some scripts installing Yarn modules in our scripts.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
 		<published>2021-02-21T00:00:00+00:00</published>

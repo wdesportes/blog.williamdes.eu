@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Report for March 2021</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Here is my phpMyAdmin report for March 2021.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Report for March 2021">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpMyAdmin&#x2F;2021&#x2F;03&#x2F;report">
+        <meta property="og:description" content="Here is my phpMyAdmin report for March 2021.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-03-01">
+        <meta property="article:modified_time" content="2021-03-30">
+        
+        <meta property="article:tags" content="phpMyAdmin"><meta property="article:tags" content="OSS-report">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Report for March 2021</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-03-01T12:00:00+0000">March  1, 2021 12:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-03-30T03:10:00+0000">March 30, 2021 03:10</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">5 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Here is my phpMyAdmin report for March 2021.</p>
+<span id="continue-reading"></span><h2 id="first-week-09">First week (09)</h2>
+<h3 id="monday-01-03-2021">Monday (01/03/2021)</h3>
+<p>I worked on writing tests and finding out about a very old bug (phpMyAdmin 3.5.1+).</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>I removed the last TravisCI config, and worked on migrating the error report server to a newer cake PHP version.</p>
+<h3 id="wednesday">Wednesday</h3>
+<p>More work on migrating to cake PHP 4.</p>
+<h3 id="thursday">Thursday</h3>
+<p>A lot of issue triage and test writing.
+Also replaced some deprecated code from the test-suite. And worked on more testing code improvements.</p>
+<h3 id="friday">Friday</h3>
+<p>I did review/fix and test pull-requests.
+Write tests for pull-requests and remove some phpunit deprecations.
+Removed and improved some code that related to constants.
+I moved out some code and wrote tests for it.</p>
+<h3 id="saturday">Saturday</h3>
+<p>I made bug fixes and test writing to cover the fixes.
+Also added a bunch of testing methods to create better tests and all the work ended up into a 3% coverage bump.</p>
+<h3 id="sunday">Sunday</h3>
+<p><em>Day off</em></p>
+<h2 id="second-week-10">Second week (10)</h2>
+<h3 id="monday-08-03-2021">Monday (08/03/2021)</h3>
+<p>I finished my migration to Cake PHP.
+Everything is working fine and I fixed a bunch of bugs.</p>
+<h3 id="tuesday-1">Tuesday</h3>
+<p><em>Day off</em></p>
+<h3 id="wednesday-1">Wednesday</h3>
+<p>I did merge all Twig init code in one place and improve the Twig cache warmup.</p>
+<h3 id="thursday-1">Thursday</h3>
+<p>I worked on the error reporting server to fix some more bugs.
+Also did some Twig code fixes on-top of my work of Wednesday.
+I wrote some unit tests for cover more code.
+Also worked on removing an exit from our code base and wrote a test for the new function.
+And to finish the day I got most of the code of <code>CreateAddField</code> class <a href="https://github.com/phpmyadmin/phpmyadmin/commit/58d760b213b496ba1b22e27ccd8d0e4ae4ca2fc0">covered</a> and discovered <a href="https://github.com/phpmyadmin/phpmyadmin/issues/16728">a bug</a>.</p>
+<h3 id="friday-1">Friday</h3>
+<p>I did some bug fixing and investigation.
+Also searched for files to remove from the final release bundle.
+I made <a href="https://github.com/phpmyadmin/phpmyadmin/commit/c62e27d6505ce22a36b635548e97f644198d6c11">a fix</a> that removed some bad code that was parsing URLs in a very bad way and modifying them. Now the feature to add and remove order by clauses works fine !</p>
+<h3 id="saturday-1">Saturday</h3>
+<p>Did a fix for the tcpdf cleaning I had did, could not find any coorect solution because the composer lock has saved the autoload list.
+Had to revert my fix at the end of the day.
+Also worked on bug fixes.</p>
+<h3 id="sunday-1">Sunday</h3>
+<p>Closed a bunch of issues and merged some PRs. And issue base cleaning.
+And did create bug fixes for some old bugs.</p>
+<h2 id="third-week-11">Third week (11)</h2>
+<h3 id="monday-15-03-2021">Monday (15/03/2021)</h3>
+<p>I worked on the error reporting JS code and modal handling that is broken in some corner cases and <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16736">made a PR</a> for some of the changes.</p>
+<h3 id="tuesday-2">Tuesday</h3>
+<p>I fixed a security bug I had found on the error reporting server and continued making bug fixes and searching for issues to close.
+Also merged my work from yesterday and made fixes on the error reporting server.</p>
+<h3 id="wednesday-2">Wednesday</h3>
+<p><em>Day off</em></p>
+<h3 id="thursday-2">Thursday</h3>
+<p><em>Day off</em></p>
+<h3 id="friday-2">Friday</h3>
+<p>I fixed the JS reflow issue and removed the last JS sync call of the JS codebase.
+Also figured out about how the infrastructure server works and found why the snapshots are not okay.
+And I added the short Git sha and build date to the snapshot version using <code>VERSION_SUFFIX</code>.</p>
+<h3 id="saturday-2">Saturday</h3>
+<p>I did some testing of the features and searched for issues to fix on the error reporting server.
+And made more bug fixes.</p>
+<h3 id="sunday-2">Sunday</h3>
+<p>Today I did some bug fixing and some research for generating fonts with our icons.
+Also did review some pull-requests.</p>
+<h2 id="fourth-week-12">Fourth week (12)</h2>
+<h3 id="monday-22-03-2021">Monday (22/03/2021)</h3>
+<p>This day was a bug fixing and PR merge day.
+I also found some UI bugs and a non translated text.
+Project status today: 475 open issues, 23 PRs open.</p>
+<h3 id="tuesday-3">Tuesday</h3>
+<p>Some issue management and PR reviews.
+Also worked on build reproducibility and on updating FAQ 1.44.
+And did some PR testing and merging. To finish the day I upgraded our JS dependencies.</p>
+<h3 id="wednesday-3">Wednesday</h3>
+<p>I upgraded jquery, openlayers and removed md5.js lib.
+And worked on a CLI command to generate the git information file for Demo servers. Actually the file is written by a script. The process is documented nowhere.</p>
+<h3 id="thursday-3">Thursday</h3>
+<p>I finished working on my CLI class and got my PR approved and merged. Also updated the demo server script.</p>
+<h3 id="friday-3">Friday</h3>
+<p>I worked on reproducing issues on the composer version and also UI issues reported.
+And made a fix for tabs mode not respected, and for a bug that was local dependent due to an attempt to split on ':'.
+Also made a fix on the error reporting server.
+And finished with writing test cases and fixing the version parsing on the error reporting server.</p>
+<h3 id="saturday-3">Saturday</h3>
+<p><em>Most of the day was off.</em>
+Today I pushed a fix after tcpdf did release the fixes for PHP 8.
+Did some issue triage and improved some scripts installing Yarn modules in our scripts.</p>
+<h3 id="sunday-3">Sunday</h3>
+<p><em>Day off.</em></p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/phpmyadmin/">phpMyAdmin</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/oss-report/">OSS-report</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
