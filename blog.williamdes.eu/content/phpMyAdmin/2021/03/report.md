@@ -1,9 +1,8 @@
 +++
 title = "Report for March 2021"
 date = 2021-03-01T12:00:00Z
-updated = 2021-03-01T21:22:00Z
+updated = 2021-03-30T03:10:00Z
 category = "phpMyAdmin - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -104,26 +103,64 @@ Also merged my work from yesterday and made fixes on the error reporting server.
 
 ### Wednesday
 
+_Day off_
+
 ### Thursday
+
+_Day off_
 
 ### Friday
 
+I fixed the JS reflow issue and removed the last JS sync call of the JS codebase.
+Also figured out about how the infrastructure server works and found why the snapshots are not okay.
+And I added the short Git sha and build date to the snapshot version using `VERSION_SUFFIX`.
+
 ### Saturday
 
+I did some testing of the features and searched for issues to fix on the error reporting server.
+And made more bug fixes.
+
 ### Sunday
+
+Today I did some bug fixing and some research for generating fonts with our icons.
+Also did review some pull-requests.
 
 ## Fourth week (12)
 
 ### Monday (22/03/2021)
 
+This day was a bug fixing and PR merge day.
+I also found some UI bugs and a non translated text.
+Project status today: 475 open issues, 23 PRs open.
+
 ### Tuesday
+
+Some issue management and PR reviews.
+Also worked on build reproducibility and on updating FAQ 1.44.
+And did some PR testing and merging. To finish the day I upgraded our JS dependencies.
 
 ### Wednesday
 
+I upgraded jquery, openlayers and removed md5.js lib.
+And worked on a CLI command to generate the git information file for Demo servers. Actually the file is written by a script. The process is documented nowhere.
+
 ### Thursday
+
+I finished working on my CLI class and got my PR approved and merged. Also updated the demo server script.
 
 ### Friday
 
+I worked on reproducing issues on the composer version and also UI issues reported.
+And made a fix for tabs mode not respected, and for a bug that was local dependent due to an attempt to split on ':'.
+Also made a fix on the error reporting server.
+And finished with writing test cases and fixing the version parsing on the error reporting server.
+
 ### Saturday
 
+_Most of the day was off._
+Today I pushed a fix after tcpdf did release the fixes for PHP 8.
+Did some issue triage and improved some scripts installing Yarn modules in our scripts.
+
 ### Sunday
+
+_Day off._
