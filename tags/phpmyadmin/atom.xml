@@ -4,8 +4,120 @@
 	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-03-30T03:10:00+00:00</updated>
+	<updated>2021-04-01T12:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for April 2021</title>
+		<published>2021-04-01T12:00:00+00:00</published>
+		<updated>2021-04-01T00:00:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/04/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for April 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-13&quot;&gt;First week (13)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-29-03-2021&quot;&gt;Monday (29&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on bug fixing and reproducing issues.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made fixes for reported issues and searched for errors to fix on the error reporting server.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I continued to work on bug fixes.
+And pull-request review and merging.
+Today: 477 issues, 141 bugs (133 not waiting on upstream).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I tested all the interface and found some bugs I fixed.
+Some of them where UI bugs.
+I also worked on a content security policy bug and update the documentation.
+And wrote some tests to cover the Sanitize check link function.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on bug fixes and issue management.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-14&quot;&gt;Second week (14)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-15&quot;&gt;Third week (15)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-12-04-2021&quot;&gt;Monday (12&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on merging pull-requests, writing tests and searching into Git history to understand a fix.
+Also removed dead code (but kept alive by tests). And worked on a PR for tomorrow about URL encoded &amp;amp; chars.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;More work on merging contributions and I finished working on my URL generation fix.
+Made more bug fixes and updated translations.
+Also did write some test cases and help users on issues.
+I also did install &lt;code&gt;phpbench&lt;&#x2F;code&gt; and started writing a benchmarks.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I continued reviewing PRs and made some bug fixes after researching on the error reporting server for forgot reports.
+I also upgraded the JS lib for datatables on the error reporting server to add new values to the number of reports diplayed.
+And continued searching for reproductible issues using the error reporting server.
+Also wrote some phpbench code for the import from file but did not see anything alarming.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some pair coding with our contractor to fix an issue and continued cleaning up the error reports we receive.
+Also made a fix for the search feature and tried to reproduce issues.
+I found some interesting issues and reported to upstream CodeMirror.
+And made a fix on the error reporting server.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I did some issue triage and error report triage. Then I merged the pull-request to remove a redundant lib.
+And made a bunch of fixes on the GIS feature. Also did check all the occurrences where there was dragging in the UI and found some dead code. Finally I merged my PR to fix URLs after investigating in the GIT history.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;Some light issue triage.
+&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-16&quot;&gt;Fourth week (16)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-19-04-2021&quot;&gt;Monday (19&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I reviewed and merged pull-requests and did some research about error reports found on the server.
+Also did a fix and coding standard upgrade on the error reporting server.
+And wrote test cases for reported issues.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I merged some contributions and made fixes.
+Made some code improvements and optimizations.
+And wrote some tests after reverting old commits for older php versions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on the infrastructure to fix the demo server build failures.
+Also did issue triage and pull-request merging. I found two non translated buttons.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I started with some bash scripting to improve the demo server update script.
+And did bug fixes. And fixed the export in PHP format. And the JSON export for binary contents.
+I fixed the planet website CSS link and HTTP links. Also fixed the burger menu on planet and website.
+Also merged and reviewed pull-requests. And closed issues. Finally I started working on my Sentry migration.
+And wrote some test cases.
+Open issues: 481, PRs: 18.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on a memory crash issue introduced by a recent fix.
+And did testing on Windows using IIS and PHP 8.0.
+I wrote some tests for the issue and improved the actual SQL logging.
+And finally I reviewed and merged a contribution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on some issue triage and merged some contributions.
+Also did bug fixes on the monitor page.
+And did some haproxy configuration to answer a question on the Docker repository.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sixth-week-16&quot;&gt;Sixth week (16)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-26-04-2021&quot;&gt;Monday (26&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I did review some pull-requests and improved the demo server update script.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I worked on MySQL replication and fixed the setup errors.
+Also did pull-request review and code improvement.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some research on Docker signing and found made it work.
+Also worked on upload progress classes and trying to make &lt;code&gt;apcu&lt;&#x2F;code&gt; work, and made a PR to remove the old code upstream PHP confirmed not working. And cleaned some legacy PHP checks from the code-base.
+Did some JS dependencies upgrading. And finally worked on code improvement.
+And finally did some else branch removing in the code base.
+With some documentation updates.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I fixed bugs on the normalisation process and wrote tests to cover them.
+And fixed missing CSS classes on the normalization process buttons.
+I also improved the testing code for controllers.
+Also did issue triage and pull-request merging and review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on some security research in the code base.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Worked on some bug fixing.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for March 2021</title>
 		<published>2021-03-01T12:00:00+00:00</published>
