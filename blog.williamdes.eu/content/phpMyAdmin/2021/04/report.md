@@ -3,7 +3,6 @@ title = "Report for April 2021"
 date = 2021-04-01T12:00:00Z
 updated = 2021-04-01T00:00:00Z
 category = "phpMyAdmin - reports"
-draft=true
 
 [extra]
 author = "William Desportes"
@@ -170,6 +169,14 @@ Also did issue triage and pull-request merging and review.
 
 ### Friday
 
+I worked on some security research in the code base.
+
 ### Saturday
 
+_Day off_
+
 ### Sunday
+
+Worked on some bug fixing.
+
+_Day off_
