@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-04-01T12:00:00+00:00</updated>
+	<updated>2021-05-05T01:00:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Report for April 2021</title>
 		<published>2021-04-01T12:00:00+00:00</published>
-		<updated>2021-04-01T00:00:00+00:00</updated>
+		<updated>2021-05-05T01:00:00+00:00</updated>
 		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/04/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for April 2021.&lt;&#x2F;p&gt;
@@ -92,7 +92,7 @@ And finally I reviewed and merged a contribution.&lt;&#x2F;p&gt;
 &lt;p&gt;I worked on some issue triage and merged some contributions.
 Also did bug fixes on the monitor page.
 And did some haproxy configuration to answer a question on the Docker repository.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;sixth-week-16&quot;&gt;Sixth week (16)&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;sixth-week-17&quot;&gt;Sixth week (17)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-26-04-2021&quot;&gt;Monday (26&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;I did review some pull-requests and improved the demo server update script.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
