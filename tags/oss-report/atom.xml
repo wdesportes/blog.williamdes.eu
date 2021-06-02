@@ -4,8 +4,33 @@
 	<link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-05-06T00:50:00+00:00</updated>
+	<updated>2021-06-01T11:50:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for May 2021</title>
+		<published>2021-05-01T12:00:00+00:00</published>
+		<updated>2021-06-01T11:50:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/05/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/05/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for May 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-18&quot;&gt;First week (18)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-19&quot;&gt;Second week (19)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-20&quot;&gt;Third week (20)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-21&quot;&gt;Fourth week (21)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;On the week-end I did the setup of Sentry to manage our error reports.
+And finished the code I had prepared on the error reporting server to forward the reports to Sentry.
+Also fixed a security issue on the error reporting server that was of no severity since the code was yet not used.
+Now it is fixed and used. I built a secure unique ID to identify anonymously our users reports (just to make a near to true counter that says how many users are affected by a bug).
+(it&#x27;s not possible to get back the user IP without the secret that is on our server, and if you had access to the secret stealing it would require more time to get back to the original value, this would just not be worth it for an IP).&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for April 2021</title>
 		<published>2021-04-01T12:00:00+00:00</published>
