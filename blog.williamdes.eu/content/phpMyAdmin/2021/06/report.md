@@ -1,9 +1,8 @@
 +++
 title = "Report for June 2021"
 date = 2021-06-01T12:00:00Z
-updated = 2021-06-02T12:05:00Z
+updated = 2021-07-04T22:25:00Z
 category = "phpMyAdmin - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -124,6 +123,7 @@ Also did some research to use another DI system.
 
 I worked on improving the quality of release bundles by writing a better check script and removing non needed files.
 Also updated the CI of shapefile to add PHP 8.1 and removed non needed files from the vendor bundle.
+Finally I did some issue triage and a issue report about an error reported to our back-ends.
 
 ### Sunday
 
@@ -133,14 +133,34 @@ __off__
 
 ### Monday (21/06/2021)
 
+Today I made pull-request review/merge and bug fixing.
+Part of the day I was not on the project.
+
 ### Tuesday
+
+__off__
 
 ### Wednesday
 
+I wrote tests for an issue and fixed it.
+Also made some pull-request review.
+
 ### Thursday
+
+__off, I deployed my first physical server in a datacenter__
 
 ### Friday
 
+__off__
+
 ### Saturday
 
+__off__
+
 ### Sunday
+
+Today I triaged error reports on the Sentry instance
+And wrote tests and fixes for some warnings and errors.
+Also did issue reporting and triage.
+Merged a pull-request and fixed jsdoc blocks.
+Finally I worked on the Mroonga support PR.
