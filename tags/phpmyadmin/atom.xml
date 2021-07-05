@@ -4,8 +4,109 @@
 	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-06-01T11:50:00+00:00</updated>
+	<updated>2021-07-04T22:25:00+00:00</updated>
 	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for June 2021</title>
+		<published>2021-06-01T12:00:00+00:00</published>
+		<updated>2021-07-04T22:25:00+00:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/06/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/06/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for June 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-22&quot;&gt;First week (22)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-01-06-2021&quot;&gt;Monday (01&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I added more tags and did some fixes on our Sentry error report forwarder.
+Found out on internet someone did a fix without reporting back to us the solution for &amp;quot;Undefined index: utf8mb3 on MySQL 8.0.11+&amp;quot;. I wrote tests for this issue and improved our test suite for Database fake query tests.
+I also removed mocks for &lt;code&gt;DatabaseInterfaceTest&lt;&#x2F;code&gt; and fixed our selenium test suite.
+And did some issue and pull-request triage.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on reproducing and fixing the Google Cloud Engine configuration for one of our users.
+This led to some interesting conclusions and findings.
+I found out we need to implement &lt;code&gt;HTTP_X_APPENGINE_HTTPS&lt;&#x2F;code&gt; and also probably &lt;code&gt;HTTP_X_APPENGINE_USER_IP&lt;&#x2F;code&gt;.
+On the phpMyAdmin test suite I improved the &lt;code&gt;RecentFavoriteTable&lt;&#x2F;code&gt; class code, fixed our multi arch test suite on master branch.
+And fixed &lt;code&gt;testSearchRecords&lt;&#x2F;code&gt; selenium test. Finally I also did issue and pull-request triage.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did infrastructure fixing for the new Sentry server. Backups of the error reporting server data and our CDN contents.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;Another infrastructure day, I managed to reclaim most of the space used by the database server.
+I also did publish the sources for my extract program written in Rust and adjusted it.
+That allowed me to extract and compress all the new error reports from the error reporting server.
+Also moved some bootstrap tests code into our abstract test case class.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;phpMyAdmin 5.1.1 was released over night.
+I packaged phpMyAdmin 5.1.1 on Debian, fixed some tests that where failing and tested the version.
+Also fixed our daily composer script.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-sunday&quot;&gt;Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-23&quot;&gt;Second week (23)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-07-06-2021&quot;&gt;Monday (07&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some fixes on the release script after that composer released 2.1.2.
+Also did pull-request review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did fix the 5.2 autoload on the phpunit test suite and made pull-request reviews.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on merging pull-requests and on my pull-request to fix and improve the Designer.
+Also made some jsdoc improvements to the javascript designer code using my PR as source.
+And finally did a bug fix found while testing the Designer interface.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I made fixes because our code relies on &lt;code&gt;cwd&lt;&#x2F;code&gt; to work.
+Also did issue and error reporting triage and some code search about error reports from Sentry.
+Finally I worked on the openlayers PR, added a LICENSE header and improved the sync script.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on Debian packaging to fix the openlayers build, Debian needs to have JS bundles built from source.
+I added patches and dependencies in the missing sources folder and re-built openlayers like in the PR.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-24&quot;&gt;Third week (24)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-14-06-2021&quot;&gt;Monday (14&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I worked on a configuration issue reported by a user. I also improved the documentation configuration.
+Also sent to Debian experimental my changes from yesterday and packaged for Ubuntu focal the 5.1.1 version.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I fixed the package build to Ubuntu bionic (making webpack config work on v3 and make the testsuite phpunit 6 compatible).
+Also worked on porting some code out of my Designer PR and improving some code.
+I merged my Theme path fix PR and started fixing tests that used a static variable.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I fixed a bug on a code refactoring and make some issue triage.
+Also worked on trying to find a better process for the &lt;code&gt;daily-composer&lt;&#x2F;code&gt; script.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I made a working security reset for source files that changed in the composer version.
+Also implemented a Cache class and wrote tests for it. And fixed failing unit tests.
+And made translation fixes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I worked on the Debian packaging to allow symfony v5 to be installed with our package.
+And made a PR to remove 2 near to useless symfony dev deps.
+Also did some research to use another DI system.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on improving the quality of release bundles by writing a better check script and removing non needed files.
+Also updated the CI of shapefile to add PHP 8.1 and removed non needed files from the vendor bundle.
+Finally I did some issue triage and a issue report about an error reported to our back-ends.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-25&quot;&gt;Fourth week (25)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-21-06-2021&quot;&gt;Monday (21&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I made pull-request review&#x2F;merge and bug fixing.
+Part of the day I was not on the project.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I wrote tests for an issue and fixed it.
+Also made some pull-request review.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off, I deployed my first physical server in a datacenter&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I did triage error reports on the Sentry instance
+And wrote tests and fixes for some warnings and errors.
+Also did issue reporting and triage.
+Merged a pull-request and fixed jsdoc blocks.
+Finally I worked on the Mroonga support PR.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for May 2021</title>
 		<published>2021-05-01T12:00:00+00:00</published>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Report for June 2021</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Here is my phpMyAdmin report for June 2021.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Report for June 2021">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpMyAdmin&#x2F;2021&#x2F;06&#x2F;report">
+        <meta property="og:description" content="Here is my phpMyAdmin report for June 2021.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-06-01">
+        <meta property="article:modified_time" content="2021-07-04">
+        
+        <meta property="article:tags" content="phpMyAdmin"><meta property="article:tags" content="OSS-report">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Report for June 2021</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-06-01T12:00:00+0000">June  1, 2021 12:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-07-04T22:25:00+0000">July  4, 2021 22:25</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">5 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Here is my phpMyAdmin report for June 2021.</p>
+<span id="continue-reading"></span><h2 id="first-week-22">First week (22)</h2>
+<h3 id="monday-01-06-2021">Monday (01/06/2021)</h3>
+<p>I added more tags and did some fixes on our Sentry error report forwarder.
+Found out on internet someone did a fix without reporting back to us the solution for &quot;Undefined index: utf8mb3 on MySQL 8.0.11+&quot;. I wrote tests for this issue and improved our test suite for Database fake query tests.
+I also removed mocks for <code>DatabaseInterfaceTest</code> and fixed our selenium test suite.
+And did some issue and pull-request triage.</p>
+<h3 id="tuesday">Tuesday</h3>
+<p>I worked on reproducing and fixing the Google Cloud Engine configuration for one of our users.
+This led to some interesting conclusions and findings.
+I found out we need to implement <code>HTTP_X_APPENGINE_HTTPS</code> and also probably <code>HTTP_X_APPENGINE_USER_IP</code>.
+On the phpMyAdmin test suite I improved the <code>RecentFavoriteTable</code> class code, fixed our multi arch test suite on master branch.
+And fixed <code>testSearchRecords</code> selenium test. Finally I also did issue and pull-request triage.</p>
+<h3 id="wednesday">Wednesday</h3>
+<p>I did infrastructure fixing for the new Sentry server. Backups of the error reporting server data and our CDN contents.</p>
+<h3 id="thursday">Thursday</h3>
+<p>Another infrastructure day, I managed to reclaim most of the space used by the database server.
+I also did publish the sources for my extract program written in Rust and adjusted it.
+That allowed me to extract and compress all the new error reports from the error reporting server.
+Also moved some bootstrap tests code into our abstract test case class.</p>
+<h3 id="friday">Friday</h3>
+<p>phpMyAdmin 5.1.1 was released over night.
+I packaged phpMyAdmin 5.1.1 on Debian, fixed some tests that where failing and tested the version.
+Also fixed our daily composer script.</p>
+<h3 id="saturday-sunday">Saturday &amp; Sunday</h3>
+<p><strong>Week end</strong></p>
+<h2 id="second-week-23">Second week (23)</h2>
+<h3 id="monday-07-06-2021">Monday (07/06/2021)</h3>
+<p>I did some fixes on the release script after that composer released 2.1.2.
+Also did pull-request review.</p>
+<h3 id="tuesday-1">Tuesday</h3>
+<p><strong>off</strong></p>
+<h3 id="wednesday-1">Wednesday</h3>
+<p>I did fix the 5.2 autoload on the phpunit test suite and made pull-request reviews.</p>
+<h3 id="thursday-1">Thursday</h3>
+<p><strong>off</strong></p>
+<h3 id="friday-1">Friday</h3>
+<p>I worked on merging pull-requests and on my pull-request to fix and improve the Designer.
+Also made some jsdoc improvements to the javascript designer code using my PR as source.
+And finally did a bug fix found while testing the Designer interface.</p>
+<h3 id="saturday">Saturday</h3>
+<p>Today I made fixes because our code relies on <code>cwd</code> to work.
+Also did issue and error reporting triage and some code search about error reports from Sentry.
+Finally I worked on the openlayers PR, added a LICENSE header and improved the sync script.</p>
+<h3 id="sunday">Sunday</h3>
+<p>I worked on Debian packaging to fix the openlayers build, Debian needs to have JS bundles built from source.
+I added patches and dependencies in the missing sources folder and re-built openlayers like in the PR.</p>
+<h2 id="third-week-24">Third week (24)</h2>
+<h3 id="monday-14-06-2021">Monday (14/06/2021)</h3>
+<p>Today I worked on a configuration issue reported by a user. I also improved the documentation configuration.
+Also sent to Debian experimental my changes from yesterday and packaged for Ubuntu focal the 5.1.1 version.</p>
+<h3 id="tuesday-2">Tuesday</h3>
+<p>Today I fixed the package build to Ubuntu bionic (making webpack config work on v3 and make the testsuite phpunit 6 compatible).
+Also worked on porting some code out of my Designer PR and improving some code.
+I merged my Theme path fix PR and started fixing tests that used a static variable.</p>
+<h3 id="wednesday-2">Wednesday</h3>
+<p>I fixed a bug on a code refactoring and make some issue triage.
+Also worked on trying to find a better process for the <code>daily-composer</code> script.</p>
+<h3 id="thursday-2">Thursday</h3>
+<p>I made a working security reset for source files that changed in the composer version.
+Also implemented a Cache class and wrote tests for it. And fixed failing unit tests.
+And made translation fixes.</p>
+<h3 id="friday-2">Friday</h3>
+<p>Today I worked on the Debian packaging to allow symfony v5 to be installed with our package.
+And made a PR to remove 2 near to useless symfony dev deps.
+Also did some research to use another DI system.</p>
+<h3 id="saturday-1">Saturday</h3>
+<p>I worked on improving the quality of release bundles by writing a better check script and removing non needed files.
+Also updated the CI of shapefile to add PHP 8.1 and removed non needed files from the vendor bundle.
+Finally I did some issue triage and a issue report about an error reported to our back-ends.</p>
+<h3 id="sunday-1">Sunday</h3>
+<p><strong>off</strong></p>
+<h2 id="fourth-week-25">Fourth week (25)</h2>
+<h3 id="monday-21-06-2021">Monday (21/06/2021)</h3>
+<p>Today I made pull-request review/merge and bug fixing.
+Part of the day I was not on the project.</p>
+<h3 id="tuesday-3">Tuesday</h3>
+<p><strong>off</strong></p>
+<h3 id="wednesday-3">Wednesday</h3>
+<p>I wrote tests for an issue and fixed it.
+Also made some pull-request review.</p>
+<h3 id="thursday-3">Thursday</h3>
+<p><strong>off, I deployed my first physical server in a datacenter</strong></p>
+<h3 id="friday-3">Friday</h3>
+<p><strong>off</strong></p>
+<h3 id="saturday-2">Saturday</h3>
+<p><strong>off</strong></p>
+<h3 id="sunday-2">Sunday</h3>
+<p>Today I did triage error reports on the Sentry instance
+And wrote tests and fixes for some warnings and errors.
+Also did issue reporting and triage.
+Merged a pull-request and fixed jsdoc blocks.
+Finally I worked on the Mroonga support PR.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/phpmyadmin/">phpMyAdmin</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/oss-report/">OSS-report</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
