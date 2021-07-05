@@ -39,7 +39,7 @@ I did infrastructure fixing for the new Sentry server. Backups of the error repo
 ### Thursday
 
 Another infrastructure day, I managed to reclaim most of the space used by the database server.
-I also did publish the sources for my extract program writte in Rust and adjusted it.
+I also did publish the sources for my extract program written in Rust and adjusted it.
 That allowed me to extract and compress all the new error reports from the error reporting server.
 Also moved some bootstrap tests code into our abstract test case class.
 
@@ -159,7 +159,7 @@ __off__
 
 ### Sunday
 
-Today I triaged error reports on the Sentry instance
+Today I did triage error reports on the Sentry instance
 And wrote tests and fixes for some warnings and errors.
 Also did issue reporting and triage.
 Merged a pull-request and fixed jsdoc blocks.
