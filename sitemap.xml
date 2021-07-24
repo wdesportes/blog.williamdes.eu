@@ -4,6 +4,16 @@
         <loc>https://blog.williamdes.eu/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/stories/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</loc>
+        <lastmod>2021-07-24T17:00:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/OpenSource/</loc>
     </url>
     <url>
@@ -99,11 +109,26 @@
         <lastmod>2021-07-04T22:25:00Z</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2021/07/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
         <lastmod>2021-01-13T12:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/dell/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/dell/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/infra-story/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/infra-story/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-report/</loc>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Migrating to a new server housed at Dyjix</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="This is the story on how I migrated from a VPS to a Dell PowerEdge R630.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Migrating to a new server housed at Dyjix">
+        <meta property="og:url" content="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix">
+        <meta property="og:description" content="This is the story on how I migrated from a VPS to a Dell PowerEdge R630.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-07-02">
+        <meta property="article:modified_time" content="2021-07-24">
+        
+        <meta property="article:tags" content="infra-story"><meta property="article:tags" content="DELL">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Migrating to a new server housed at Dyjix</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-07-02T20:20:00+0002">July  2, 2021 20:20</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-07-24T17:00:00+0002">July 24, 2021 17:00</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">5 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>This is the story on how I migrated from a VPS to a Dell PowerEdge R630.</p>
+<span id="continue-reading"></span><h4 id="migration">Migration</h4>
+<p><a href="https://dyjix.eu/panel/aff.php?aff=377">Dyjix</a> has been my hosting provider since <a href="https://twitter.com/wdesportes/status/1330493510131265541">I switched off Scaleway in november 2020</a>.
+Scaleway was great, but I needed more power for my money. Dyjix has pretty good solutions/pricings and you will get a big bunch of RAM and CPU for a decent amount of money per month.</p>
+<h4 id="buying">Buying</h4>
+<p>I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company <a href="https://www.bargainhardware.co.uk/">BargainHardware</a> and could very quickly configure <a href="https://www.bargainhardware.co.uk/dell-poweredge-r630-8-sff-configure-to-order">my server</a>, buy it and had it delivered to France.
+A bunch of days later it was there (and I had to pay UPS the importation tax ^^).</p>
+<h4 id="installing-story">Installing &amp; story</h4>
+<p>Now was configuration time, I installed <a href="https://proxmox.com/">Proxmox</a> without any issues and ran my first VM.
+I had it installed in another datacenter that Dyjix but it turned out that was a very very bad choice for technical reasons and for human related reasons. I just felt like a number and not as a customer the company was caring about, it was terrible.
+Hopefully the network configuration I had made was perfect and on first start the service was available and running.</p>
+<p>Luckily Dyjix has <a href="https://dyjix.eu/housing.php">housing services</a> and I could reach out to them and they provided a custom better fitting solution for my server.
+I really do not know why I did not reach out to Dyjix first, anyway story is made and I am very happy of the service I have at Dyjix. They are a great team and really care about the service they provide !</p>
+<h3 id="specs">Specs</h3>
+<p>It has a <code>24 x Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz (1 Socket)</code> and 128G of RAM in 4 x 32G sticks.
+With 2 x 1To SSDs.</p>
+<h3 id="technical-stories">Technical stories</h3>
+<h4 id="microtik-opnsense-pfsense">Microtik -&gt; OPNsense -&gt; pfSense</h4>
+<p>I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb/s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried <a href="https://opnsense.org/">OPNsense</a> but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.</p>
+<h4 id="vpn-access">VPN access</h4>
+<p>The other company did not even offer a VPN to access my server, this seems maybe not a big deal but it is !
+Having access to your server without using the &quot;Internet&quot; IP is really something important.
+Dyjix has a VPN system that will allow you to access private IPs assigned to your server or your iDRAC port for example.
+This allows me to securely access my server and iDRAC (the DELL UI to access the embedded server controller system).</p>
+<p>Now I can sleep knowing that if my server freezes or crashes I will still have access to restarting it or a console using the iDRAC web GUI !</p>
+<p>From a security point of view it is better not to expose (what I had to do before..) the administrative UIs to the Internet.
+Someone could attack them and gain access to everything.</p>
+<h4 id="peering-and-network-speed">Peering and network speed</h4>
+<p><a href="https://www.peeringdb.com/net/24179">Dyjix</a> is in peering with <a href="https://www.peeringdb.com/ix/359">France-IX</a> and France-IX peering point has <a href="https://www.peeringdb.com/net/4224">CloudFlare</a> as a peering. This is mind blowing and does make access times to my websites incredibly fast !
+My ping to CloudFlare is about 1-2 ms.
+Dyjix has a network speed of 100G/s, this is also awesome !</p>
+<h4 id="power-consumption">Power consumption</h4>
+<p>At &quot;idle&quot; the power consumption is around 65-70 Watts now, more load is expected to make this number vary.
+With a more intense load it should be around 140 Watts and the power supply can handle 750 Watts.
+I will create another blog post to talk about how I monitor this with the tool <a href="https://www.zabbix.com/">Zabbix</a>.</p>
+<h4 id="conclusion">Conclusion</h4>
+<p>Now the server is running fine and all services migrated from the <a href="https://dyjix.eu/vps.php">HDD-32</a> VM.
+The route to the IPV6 block will be deployed soon to Internet !
+This server is now owned by my company: <a href="https://wdes.fr/en/">Wdes SAS</a> and I am very satisfied with the machine, it works great and has all the performance needed.</p>
+<h3 id="some-pictures">Some pictures</h3>
+<h4 id="housing-at-dyjix">Housing at Dyjix</h4>
+<p><img src="../DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg" alt="The server installed at Dyjix" title="The server installed at Dyjix" /></p>
+<h4 id="un-boxing">Un-boxing</h4>
+<p><img src="../DELL_PowerEdge_R630_Wdes_SAS_In_A_Box.jpg" alt="The server in a box" title="The server in a box" />
+<img src="../DELL_PowerEdge_R630_Wdes_SAS_Closed.jpg" alt="The server closed" title="The server closed" />
+<img src="../DELL_PowerEdge_R630_Wdes_SAS_Open.jpg" alt="The server open" title="The server open" /></p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-story/">infra-story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/dell/">DELL</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
