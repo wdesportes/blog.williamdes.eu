@@ -1,9 +1,8 @@
 +++
 title = "Report for July 2021"
 date = 2021-07-01T12:00:00Z
-updated = 2021-07-24T22:25:00Z
+updated = 2021-08-03T22:25:00Z
 category = "phpMyAdmin - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -109,26 +108,42 @@ Also wrote tests and improved code and types.
 
 Today I patched a bunch of issues and merged a pull-request.
 
-### Friday
+### Friday, Saturday & Sunday
 
 __off__
-
-### Saturday & Sunday
-
-__Week end__
 
 ## Fifth week (30)
 
 ### Monday (26/07/2021)
 
+Today I worked on bug fixes and found a security issue.
+Also reported 2 normal issues due to my research.
+And made pull-request review. Found a non security bug SQL injection.
+I did some sorting out on the "bug"s we have in our issue board.
+Wrote tests for one and fixed it.
+
+493 issues open and 22 PRs
+
 ### Tuesday
+
+Today I started by working on some UI migration to Bootstrap.
+I migrated the Theme dropdown and the database filter box.
+Also reviewed pull-requests and fixed bugs.
+Closed an old project board and did some sorting out and issue closing.
+
+482 issues open and 23 PRs
 
 ### Wednesday
 
+Today I merged pull-requests and fixed issues.
+Also did some issue management.
+
+479 issues open and 20 PRs
+
 ### Thursday
 
-### Friday
+Today I merged pull-requests and did some issue management.
 
-### Saturday & Sunday
+### Friday, Saturday & Sunday
 
-__Week end__
+__off__
