@@ -14,15 +14,10 @@
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/07/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for July 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-26&quot;&gt;First week (26)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-28-06-2021&quot;&gt;Monday (28&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I did some issue and pull-request triage.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;second-week-27&quot;&gt;Second week (27)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-05-07-2021&quot;&gt;Monday (05&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;monday-tuesday-wednesday-05-07-2021&quot;&gt;Monday, Tuesday, Wednesday (05&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I fixed bugs found after search in the code-base and reviewed&#x2F;merged pull-requests.&lt;&#x2F;p&gt;
@@ -38,10 +33,10 @@ And did un-mock a test.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;third-week-28&quot;&gt;Third week (28)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-12-07-2021&quot;&gt;Monday (12&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some issue triage and worked on merging pull-requests.
 I had to rebase most of them and edited the code for some of them.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I fixed CSS bugs, did triage issues and pull-requests.
 Also worked on improving code by removing the test suite hack and also removed dead code.
 Also wrote a test and search before removed very old un-used code.&lt;&#x2F;p&gt;
@@ -57,10 +52,10 @@ Finally I reviewed all alters done by Psalm on UnusedVariable.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;monday-19-07-2021&quot;&gt;Monday (19&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on fixing bugs and writing tests for the DatabaseTree.
 Also did triage issues and pull-requests. Finally I also sorted out some Sentry reports.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;Today I made PR reviews and bug fixes.
 I also finished writing tests and merging my changes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on bug fixing and pull-request merging.
 Also wrote tests and improved code and types.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
@@ -75,13 +70,13 @@ And made pull-request review. Found a non security bug SQL injection.
 I did some sorting out on the &amp;quot;bug&amp;quot;s we have in our issue board.
 Wrote tests for one and fixed it.&lt;&#x2F;p&gt;
 &lt;p&gt;493 issues open and 22 PRs&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;Today I started by working on some UI migration to Bootstrap.
 I migrated the Theme dropdown and the database filter box.
 Also reviewed pull-requests and fixed bugs.
 Closed an old project board and did some sorting out and issue closing.&lt;&#x2F;p&gt;
 &lt;p&gt;482 issues open and 23 PRs&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;Today I merged pull-requests and fixed issues.
 Also did some issue management.&lt;&#x2F;p&gt;
 &lt;p&gt;479 issues open and 20 PRs&lt;&#x2F;p&gt;
