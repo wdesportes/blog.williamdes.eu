@@ -17,23 +17,13 @@ Here is my phpMyAdmin report for July 2021.
 
 ## First week (26)
 
-### Monday (28/06/2021)
-
 __Not working on the project__
 
 I did some issue and pull-request triage.
 
 ## Second week (27)
 
-### Monday (05/07/2021)
-
-__off__
-
-### Tuesday
-
-__off__
-
-### Wednesday
+### Monday, Tuesday, Wednesday (05/07/2021)
 
 __off__
 
