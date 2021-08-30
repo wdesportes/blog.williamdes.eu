@@ -74,7 +74,7 @@ Here is the graph of before and after, you can clearly see a 2° difference !
 
 The spike on the graph is the moment between having old fan and having no fan at all, just the cooler.
 
-(The graph is done with Zabbix, more on that in another blog post)
+(The graph is done with [Zabbix](https://www.zabbix.com/) (a free tool), more on that in another blog post)
 (You can click the image to see it bigger)
 
 [![with the old fan and with the new fan](../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg "with the old fan and with the new fan")](../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg)
