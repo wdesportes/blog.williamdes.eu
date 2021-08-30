@@ -12,14 +12,14 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Here is a story about how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
+        <meta name="description" content="Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
 
         <!-- Open Graph Tags -->
         <meta property="og:site_name" content="Williamdes&#x27;s blog">
         
         <meta property="og:title" content="Moving from LastPass to Bitwarden self-hosted (Rust back-end)">
         <meta property="og:url" content="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass">
-        <meta property="og:description" content="Here is a story about how I moved out from &lt;a href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
+        <meta property="og:description" content="Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.">
         
         <meta property="og:type" content="article">
         <meta property="article:published_time" content="2021-02-21">
@@ -129,15 +129,15 @@
             <span class="post-reading-time">3 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>Here is a story about how I moved out from <a href="https://www.lastpass.com/">LastPass</a> to <a href="https://bitwarden.com/">Bitwarden</a> after 7 years using LastPass.</p>
+    <div class="post-content"><p>Here is a story about how I moved out from <a rel="noopener" target="_blank" href="https://www.lastpass.com/">LastPass</a> to <a rel="noopener" target="_blank" href="https://bitwarden.com/">Bitwarden</a> after 7 years using LastPass.</p>
 <span id="continue-reading"></span><h3 id="the-story">The story</h3>
-<p>I was using <a href="https://www.lastpass.com/">LastPass</a> since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using <a href="https://bitwarden.com/">Bitwarden</a> since a couple of months I am convinced it is a good tool and started searching for self hosted options.
-Bitwarden is open-source, not like LastPass. You can browse the code <a href="https://github.com/bitwarden">on their GitHub</a>.
-I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that <a href="https://github.com/dani-garcia">someone</a> had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes <a href="https://github.com/dani-garcia/bitwarden_rs/wiki/Proxy-examples">configuring my haproxy</a> I got my deployed container working and could start my migration.
-Wait, you are asking If I had deployment issues ? hahaha, no. I used the <a href="https://hub.docker.com/r/bitwardenrs/server">docker image</a> <a href="https://github.com/dani-garcia/bitwarden_rs/wiki/Using-Docker-Compose">with docker compose</a> and it just works.</p>
+<p>I was using <a rel="noopener" target="_blank" href="https://www.lastpass.com/">LastPass</a> since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using <a rel="noopener" target="_blank" href="https://bitwarden.com/">Bitwarden</a> since a couple of months I am convinced it is a good tool and started searching for self hosted options.
+Bitwarden is open-source, not like LastPass. You can browse the code <a rel="noopener" target="_blank" href="https://github.com/bitwarden">on their GitHub</a>.
+I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that <a rel="noopener" target="_blank" href="https://github.com/dani-garcia">someone</a> had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/wiki/Proxy-examples">configuring my haproxy</a> I got my deployed container working and could start my migration.
+Wait, you are asking If I had deployment issues ? hahaha, no. I used the <a rel="noopener" target="_blank" href="https://hub.docker.com/r/bitwardenrs/server">docker image</a> <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/wiki/Using-Docker-Compose">with docker compose</a> and it just works.</p>
 <p>You can configure the domains allowed to register to your Bitwarden instance, very nice feature !
-And more cool things, just have a look to the <a href="https://github.com/dani-garcia/bitwarden_rs/blob/1.19.0/.env.template">.env template</a></p>
-<p>I had a look to a <a href="https://www.youtube.com/watch?v=lfHDqxCJA90">French video</a> to install the official server using Docker, I could see a lot of &quot;overkill&quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.</p>
+And more cool things, just have a look to the <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/blob/1.19.0/.env.template">.env template</a></p>
+<p>I had a look to a <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=lfHDqxCJA90">French video</a> to install the official server using Docker, I could see a lot of &quot;overkill&quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.</p>
 <p>After setting up my instance I Exported all my Bitwarden accounts and my LastPass account and imported the data.
 Logged in with my phone and browser extension after defining the URL of my instance and that was it.</p>
 <p>What about you, just have a try ;)</p>

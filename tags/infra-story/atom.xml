@@ -12,20 +12,20 @@
 		<updated>2021-08-30T14:40:00+00:02</updated>
 		<link href="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/</id>
-		<content type="html">&lt;p&gt;I changed my Raspberry Pi fan for a &lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.&lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;I changed my Raspberry Pi fan for a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-items&quot;&gt;The items&lt;&#x2F;h3&gt;
 &lt;p&gt;When I bought my Raspberry Pi 4 in april 2021 here where the items that my setup was made of:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B07TZ89BT7&quot;&gt;a Raspberry Pi transformer, USB-C 5.1V 3A (1873421)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B07FCMBLV6&quot;&gt;a SanDisk Extreme 64 Go microSD XC, class 10, UHS-I, U3, V30&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B00DQGBYDC&quot;&gt;a SanDisk Ultra 64 Go USB 3.0 key, theoretical read speed of 130 Mo&#x2F;s&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B0899VXM8F&#x2F;&quot;&gt;a Raspberry Pi 4 B 8 Go 4x1,5 GHz, ARM Cortex-A72&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B086JY553B&quot;&gt;a GeeekPi Metal Case for Raspberry pi 4B low-profile ICE Tower cooler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B07TZ89BT7&quot;&gt;a Raspberry Pi transformer, USB-C 5.1V 3A (1873421)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B07FCMBLV6&quot;&gt;a SanDisk Extreme 64 Go microSD XC, class 10, UHS-I, U3, V30&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B00DQGBYDC&quot;&gt;a SanDisk Ultra 64 Go USB 3.0 key, theoretical read speed of 130 Mo&#x2F;s&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B0899VXM8F&#x2F;&quot;&gt;a Raspberry Pi 4 B 8 Go 4x1,5 GHz, ARM Cortex-A72&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.amazon.fr&#x2F;gp&#x2F;product&#x2F;B086JY553B&quot;&gt;a GeeekPi Metal Case for Raspberry pi 4B low-profile ICE Tower cooler&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;a-bit-of-story&quot;&gt;A bit of story&lt;&#x2F;h3&gt;
 &lt;p&gt;Everything worked well for months but the two fans they provided with the case (one with fancy lighting) where making a terrible noise like they would crash anytime. Most probably because they where crappy quality fans.&lt;&#x2F;p&gt;
 &lt;p&gt;I decided to buy a good (very good) fan and I found out that Noctua fans where the best fit.&lt;&#x2F;p&gt;
-&lt;p&gt;So I ordered from &lt;a href=&quot;https:&#x2F;&#x2F;www.ldlc.com&#x2F;fiche&#x2F;PB00396294.html&quot;&gt;LDLC&lt;&#x2F;a&gt; a fan, the &lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt;.
+&lt;p&gt;So I ordered from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.ldlc.com&#x2F;fiche&#x2F;PB00396294.html&quot;&gt;LDLC&lt;&#x2F;a&gt; a fan, the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt;.
 Was PWM needed, the answer is no. But it is a nice to have to make a fun project in the future.&lt;&#x2F;p&gt;
 &lt;p&gt;It did come with some very cool packaging, very premium feeling and a lot of connectors.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;the-hacking-part&quot;&gt;The hacking part&lt;&#x2F;h3&gt;
@@ -48,16 +48,16 @@ I used heat shrink tubes to make a nice and secure finish (the two red tubes you
 It&#x27;s cooler and more silent.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the graph of before and after, you can clearly see a 2° difference !&lt;&#x2F;p&gt;
 &lt;p&gt;The spike on the graph is the moment between having old fan and having no fan at all, just the cooler.&lt;&#x2F;p&gt;
-&lt;p&gt;(The graph is done with &lt;a href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt; (a free tool), more on that in another blog post)
+&lt;p&gt;(The graph is done with &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt; (a free tool), more on that in another blog post)
 (You can click the image to see it bigger)&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg&quot;&gt;&lt;img src=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg&quot; alt=&quot;with the old fan and with the new fan&quot; title=&quot;with the old fan and with the new fan&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;zoomed-in&quot;&gt;Zoomed in&lt;&#x2F;h4&gt;
 &lt;p&gt;(You can click the image to see it bigger)&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg&quot;&gt;&lt;img src=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg&quot; alt=&quot;with the old fan and with the new fan (zoomed in)&quot; title=&quot;with the old fan and with the new fan (zoomed in)&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;fan&quot;&gt;Noctua&lt;&#x2F;a&gt; fans are great, the perform very well and are silent.
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;fan&quot;&gt;Noctua&lt;&#x2F;a&gt; fans are great, the perform very well and are silent.
 I can only recommend to buy them. They provide cool wiring stuff, you will have left overs for other projects.&lt;&#x2F;p&gt;
-&lt;p&gt;By the way they also do very good &lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;thermal-grease&quot;&gt;thermal paste&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;By the way they also do very good &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;thermal-grease&quot;&gt;thermal paste&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -68,23 +68,23 @@ I can only recommend to buy them. They provide cool wiring stuff, you will have 
 		<id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
 		<content type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h4 id=&quot;migration&quot;&gt;Migration&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;panel&#x2F;aff.php?aff=377&quot;&gt;Dyjix&lt;&#x2F;a&gt; has been my hosting provider since &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;wdesportes&#x2F;status&#x2F;1330493510131265541&quot;&gt;I switched off Scaleway in november 2020&lt;&#x2F;a&gt;.
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;panel&#x2F;aff.php?aff=377&quot;&gt;Dyjix&lt;&#x2F;a&gt; has been my hosting provider since &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;wdesportes&#x2F;status&#x2F;1330493510131265541&quot;&gt;I switched off Scaleway in november 2020&lt;&#x2F;a&gt;.
 Scaleway was great, but I needed more power for my money. Dyjix has pretty good solutions&#x2F;pricings and you will get a big bunch of RAM and CPU for a decent amount of money per month.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;buying&quot;&gt;Buying&lt;&#x2F;h4&gt;
-&lt;p&gt;I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company &lt;a href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;&quot;&gt;BargainHardware&lt;&#x2F;a&gt; and could very quickly configure &lt;a href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-poweredge-r630-8-sff-configure-to-order&quot;&gt;my server&lt;&#x2F;a&gt;, buy it and had it delivered to France.
+&lt;p&gt;I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;&quot;&gt;BargainHardware&lt;&#x2F;a&gt; and could very quickly configure &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-poweredge-r630-8-sff-configure-to-order&quot;&gt;my server&lt;&#x2F;a&gt;, buy it and had it delivered to France.
 A bunch of days later it was there (and I had to pay UPS the importation tax ^^).&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;installing-story&quot;&gt;Installing &amp;amp; story&lt;&#x2F;h4&gt;
-&lt;p&gt;Now was configuration time, I installed &lt;a href=&quot;https:&#x2F;&#x2F;proxmox.com&#x2F;&quot;&gt;Proxmox&lt;&#x2F;a&gt; without any issues and ran my first VM.
+&lt;p&gt;Now was configuration time, I installed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;proxmox.com&#x2F;&quot;&gt;Proxmox&lt;&#x2F;a&gt; without any issues and ran my first VM.
 I had it installed in another datacenter that Dyjix but it turned out that was a very very bad choice for technical reasons and for human related reasons. I just felt like a number and not as a customer the company was caring about, it was terrible.
 Hopefully the network configuration I had made was perfect and on first start the service was available and running.&lt;&#x2F;p&gt;
-&lt;p&gt;Luckily Dyjix has &lt;a href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;housing.php&quot;&gt;housing services&lt;&#x2F;a&gt; and I could reach out to them and they provided a custom better fitting solution for my server.
+&lt;p&gt;Luckily Dyjix has &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;housing.php&quot;&gt;housing services&lt;&#x2F;a&gt; and I could reach out to them and they provided a custom better fitting solution for my server.
 I really do not know why I did not reach out to Dyjix first, anyway story is made and I am very happy of the service I have at Dyjix. They are a great team and really care about the service they provide !&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;specs&quot;&gt;Specs&lt;&#x2F;h3&gt;
 &lt;p&gt;It has a &lt;code&gt;24 x Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz (1 Socket)&lt;&#x2F;code&gt; and 128G of RAM in 4 x 32G sticks.
 With 2 x 1To SSDs.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;technical-stories&quot;&gt;Technical stories&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;microtik-opnsense-pfsense&quot;&gt;Microtik -&amp;gt; OPNsense -&amp;gt; pfSense&lt;&#x2F;h4&gt;
-&lt;p&gt;I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb&#x2F;s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried &lt;a href=&quot;https:&#x2F;&#x2F;opnsense.org&#x2F;&quot;&gt;OPNsense&lt;&#x2F;a&gt; but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.&lt;&#x2F;p&gt;
+&lt;p&gt;I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb&#x2F;s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opnsense.org&#x2F;&quot;&gt;OPNsense&lt;&#x2F;a&gt; but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;vpn-access&quot;&gt;VPN access&lt;&#x2F;h4&gt;
 &lt;p&gt;The other company did not even offer a VPN to access my server, this seems maybe not a big deal but it is !
 Having access to your server without using the &amp;quot;Internet&amp;quot; IP is really something important.
@@ -94,17 +94,17 @@ This allows me to securely access my server and iDRAC (the DELL UI to access the
 &lt;p&gt;From a security point of view it is better not to expose (what I had to do before..) the administrative UIs to the Internet.
 Someone could attack them and gain access to everything.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;peering-and-network-speed&quot;&gt;Peering and network speed&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;24179&quot;&gt;Dyjix&lt;&#x2F;a&gt; is in peering with &lt;a href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;ix&#x2F;359&quot;&gt;France-IX&lt;&#x2F;a&gt; and France-IX peering point has &lt;a href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;4224&quot;&gt;CloudFlare&lt;&#x2F;a&gt; as a peering. This is mind blowing and does make access times to my websites incredibly fast !
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;24179&quot;&gt;Dyjix&lt;&#x2F;a&gt; is in peering with &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;ix&#x2F;359&quot;&gt;France-IX&lt;&#x2F;a&gt; and France-IX peering point has &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;4224&quot;&gt;CloudFlare&lt;&#x2F;a&gt; as a peering. This is mind blowing and does make access times to my websites incredibly fast !
 My ping to CloudFlare is about 1-2 ms.
 Dyjix has a network speed of 100G&#x2F;s, this is also awesome !&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;power-consumption&quot;&gt;Power consumption&lt;&#x2F;h4&gt;
 &lt;p&gt;At &amp;quot;idle&amp;quot; the power consumption is around 65-70 Watts now, more load is expected to make this number vary.
 With a more intense load it should be around 140 Watts and the power supply can handle 750 Watts.
-I will create another blog post to talk about how I monitor this with the tool &lt;a href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+I will create another blog post to talk about how I monitor this with the tool &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h4&gt;
-&lt;p&gt;Now the server is running fine and all services migrated from the &lt;a href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;vps.php&quot;&gt;HDD-32&lt;&#x2F;a&gt; VM.
+&lt;p&gt;Now the server is running fine and all services migrated from the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;vps.php&quot;&gt;HDD-32&lt;&#x2F;a&gt; VM.
 The route to the IPV6 block will be deployed soon to Internet !
-This server is now owned by my company: &lt;a href=&quot;https:&#x2F;&#x2F;wdes.fr&#x2F;en&#x2F;&quot;&gt;Wdes SAS&lt;&#x2F;a&gt; and I am very satisfied with the machine, it works great and has all the performance needed.&lt;&#x2F;p&gt;
+This server is now owned by my company: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wdes.fr&#x2F;en&#x2F;&quot;&gt;Wdes SAS&lt;&#x2F;a&gt; and I am very satisfied with the machine, it works great and has all the performance needed.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;some-pictures&quot;&gt;Some pictures&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;housing-at-dyjix&quot;&gt;Housing at Dyjix&lt;&#x2F;h4&gt;
 &lt;p&gt;&lt;img src=&quot;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg&quot; alt=&quot;The server installed at Dyjix&quot; title=&quot;The server installed at Dyjix&quot; &#x2F;&gt;&lt;&#x2F;p&gt;

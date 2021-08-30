@@ -141,7 +141,7 @@
 <h3 id="thursday">Thursday</h3>
 <p>More work on the Debian 5.0 version.</p>
 <h3 id="friday">Friday</h3>
-<p>The Debian version <code>5.0.4+dfsg1-1</code> landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/merge_requests/30">pull-request</a> was <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1">merged</a> after 3 months open lacking reviews and me pushing more and more commits.</p>
+<p>The Debian version <code>5.0.4+dfsg1-1</code> landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The <a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/merge_requests/30">pull-request</a> was <a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1">merged</a> after 3 months open lacking reviews and me pushing more and more commits.</p>
 <h3 id="saturday">Saturday</h3>
 <p><strong>Nothing to report</strong></p>
 <h3 id="sunday">Sunday</h3>
@@ -149,15 +149,15 @@
 <h2 id="second-week-02">Second week (02)</h2>
 <h3 id="monday-11-01-2021">Monday (11/01/2021)</h3>
 <p>And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d/copyright file and document them. Most of the source files that where excluded are now back.
-I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the <code>.min.js</code> files had to be <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216">re-built from source</a>, <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/abac8a5cf05e2955a2c5bd14dc52c0ab75405659">I added the missing source files</a> to the <code>debian/missing-sources</code> directory. The Debian version no more has <code>zxcvbn</code> until the from source issue can be solved. For now <code>?</code> force is displayed when you type passwords.</p>
+I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the <code>.min.js</code> files had to be <a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216">re-built from source</a>, <a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/abac8a5cf05e2955a2c5bd14dc52c0ab75405659">I added the missing source files</a> to the <code>debian/missing-sources</code> directory. The Debian version no more has <code>zxcvbn</code> until the from source issue can be solved. For now <code>?</code> force is displayed when you type passwords.</p>
 <h3 id="tuesday-1">Tuesday</h3>
-<p>All the work from yesterday landed into <a href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/9206cece4599be77d436057fe51f7b106e9b8de2">a merge</a> and David did upload the changes to unstable.</p>
+<p>All the work from yesterday landed into <a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/9206cece4599be77d436057fe51f7b106e9b8de2">a merge</a> and David did upload the changes to unstable.</p>
 <h3 id="wednesday-1">Wednesday</h3>
 <p>I handled some issue triage and pull-request reviews.</p>
 <h3 id="thursday-1">Thursday</h3>
 <p>I did merge some pull-requests and upgraded psalm to <code>4.4.0</code>.
 On <code>twig-i18n-extension</code> I moved to GitHub actions and did setup phpstan.
-Also <code>phpmyadmin/coding-standard</code> has a quick move to GitHub actions and I found out <a href="https://github.com/phpmyadmin/coding-standard/pull/9">a licensing issue</a>.</p>
+Also <code>phpmyadmin/coding-standard</code> has a quick move to GitHub actions and I found out <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/coding-standard/pull/9">a licensing issue</a>.</p>
 <p>On the Debian packaging side I made sure <code>buster-backports</code> was ready and prepared the backport of <code>twig</code>.
 And updated the Ubuntu PPA Bionic to <code>5.0.4</code>.</p>
 <h3 id="friday-1">Friday</h3>
@@ -172,26 +172,26 @@ And updated the Ubuntu PPA Bionic to <code>5.0.4</code>.</p>
 <p>I handled some issues about Debian and Ubuntu packaging.</p>
 <h3 id="tuesday-2">Tuesday</h3>
 <p>I build the focal version for phpMyAdmin PPA.
-At <code>phpmyadmin/phpmyadmin</code> I did finish my work on <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16547">the license violation</a>. And <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16583">migrated the repository to GitHub actions</a>.</p>
+At <code>phpmyadmin/phpmyadmin</code> I did finish my work on <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16547">the license violation</a>. And <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16583">migrated the repository to GitHub actions</a>.</p>
 <h3 id="wednesday-2">Wednesday</h3>
 <p>I did work on re-working the version handling and re-working the release script</p>
 <h3 id="thursday-2">Thursday</h3>
 <p>I merged some work and did send sql-parser 5 to the phpMyAdmin PPA.
 Also applied some Debian guidelines for the sql-parser packaging.
-And updated my <a href="https://github.com/wdesportes/phpmyadmin-local-setup">open-source phpMyAdmin dev setup</a>.
+And updated my <a rel="noopener" target="_blank" href="https://github.com/wdesportes/phpmyadmin-local-setup">open-source phpMyAdmin dev setup</a>.
 Also added support for <code>[ci skip]</code> on GitHub actions and did try to fix the TravisCI builds.
 Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the <code>&lt;br&gt;</code> to <code>[br]</code> transition and some older ones from the <code>&lt;br/&gt;</code>/<code>&lt;br /&gt;</code> to <code>&lt;br&gt;</code>.</p>
 <h3 id="friday-2">Friday</h3>
 <p>Some more cleaning on Weblate and some PR updates.
-I imported <a href="https://security-tracker.debian.org/tracker/CVE-2021-21252">the security fix</a> into Debian and imported my font removal also.
-Also tested the <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16586">transformation to image PR</a> and made a fix ontop if it.
-And to finish the day like a night own I did finally <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16409">find a way to make jest edit files on the fly</a> to test them.</p>
+I imported <a rel="noopener" target="_blank" href="https://security-tracker.debian.org/tracker/CVE-2021-21252">the security fix</a> into Debian and imported my font removal also.
+Also tested the <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16586">transformation to image PR</a> and made a fix ontop if it.
+And to finish the day like a night own I did finally <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16409">find a way to make jest edit files on the fly</a> to test them.</p>
 <h3 id="saturday-2">Saturday</h3>
 <p>I did some changes on the Debian side and imported a patch that was on the Debian side.
-On the main repository I did merge some pull-requests and finished the <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16409">first Jest unit testing integration</a>.</p>
+On the main repository I did merge some pull-requests and finished the <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16409">first Jest unit testing integration</a>.</p>
 <h3 id="sunday-2">Sunday</h3>
 <p>I did some PR and issue management and also some documentation management.
-And also did work on some slowness issues and made two PRs (<a href="https://github.com/phpmyadmin/phpmyadmin/pull/16590">1</a>, <a href="https://github.com/phpmyadmin/phpmyadmin/pull/16591">2</a>). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.</p>
+And also did work on some slowness issues and made two PRs (<a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16590">1</a>, <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16591">2</a>). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.</p>
 <h2 id="fourth-week-04">Fourth week (04)</h2>
 <h3 id="monday-25-01-2021">Monday (25/01/2021)</h3>
 <p>I worked on tracking down slowness in our code base and merged my work on the async console setup.
@@ -204,12 +204,12 @@ Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu 
 <p>I spent some time fixing the theme generator and merging the fixes I made.
 Also did some issue triage and worked on 2 PRs open at the <code>docker</code> repository (added more tests, and fixed mistakes).</p>
 <h3 id="friday-3">Friday</h3>
-<p>I worked on a complete <a href="https://github.com/phpmyadmin/docker/pull/323">re-work of the <code>docker</code> repository testsuite</a>.
+<p>I worked on a complete <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/docker/pull/323">re-work of the <code>docker</code> repository testsuite</a>.
 This will make us move to GitHub actions completely.</p>
 <h3 id="saturday-3">Saturday</h3>
 <p>I merged a fix on the Docker repository and did some issue triage and reproduction.
 Also fixed a 5.1.0-rc1 bug on multi server setup.
-I did write tests to reproduce an <a href="https://github.com/phpmyadmin/phpmyadmin/issues/16595">issue</a> and cover more of our codebase.</p>
+I did write tests to reproduce an <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/issues/16595">issue</a> and cover more of our codebase.</p>
 <h3 id="sunday-3">Sunday</h3>
 <p>I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.</p>
 </div>

@@ -131,23 +131,23 @@
     </header>
     <div class="post-content"><p>This is the story on how I migrated from a VPS to a Dell PowerEdge R630.</p>
 <span id="continue-reading"></span><h4 id="migration">Migration</h4>
-<p><a href="https://dyjix.eu/panel/aff.php?aff=377">Dyjix</a> has been my hosting provider since <a href="https://twitter.com/wdesportes/status/1330493510131265541">I switched off Scaleway in november 2020</a>.
+<p><a rel="noopener" target="_blank" href="https://dyjix.eu/panel/aff.php?aff=377">Dyjix</a> has been my hosting provider since <a rel="noopener" target="_blank" href="https://twitter.com/wdesportes/status/1330493510131265541">I switched off Scaleway in november 2020</a>.
 Scaleway was great, but I needed more power for my money. Dyjix has pretty good solutions/pricings and you will get a big bunch of RAM and CPU for a decent amount of money per month.</p>
 <h4 id="buying">Buying</h4>
-<p>I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company <a href="https://www.bargainhardware.co.uk/">BargainHardware</a> and could very quickly configure <a href="https://www.bargainhardware.co.uk/dell-poweredge-r630-8-sff-configure-to-order">my server</a>, buy it and had it delivered to France.
+<p>I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/">BargainHardware</a> and could very quickly configure <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-poweredge-r630-8-sff-configure-to-order">my server</a>, buy it and had it delivered to France.
 A bunch of days later it was there (and I had to pay UPS the importation tax ^^).</p>
 <h4 id="installing-story">Installing &amp; story</h4>
-<p>Now was configuration time, I installed <a href="https://proxmox.com/">Proxmox</a> without any issues and ran my first VM.
+<p>Now was configuration time, I installed <a rel="noopener" target="_blank" href="https://proxmox.com/">Proxmox</a> without any issues and ran my first VM.
 I had it installed in another datacenter that Dyjix but it turned out that was a very very bad choice for technical reasons and for human related reasons. I just felt like a number and not as a customer the company was caring about, it was terrible.
 Hopefully the network configuration I had made was perfect and on first start the service was available and running.</p>
-<p>Luckily Dyjix has <a href="https://dyjix.eu/housing.php">housing services</a> and I could reach out to them and they provided a custom better fitting solution for my server.
+<p>Luckily Dyjix has <a rel="noopener" target="_blank" href="https://dyjix.eu/housing.php">housing services</a> and I could reach out to them and they provided a custom better fitting solution for my server.
 I really do not know why I did not reach out to Dyjix first, anyway story is made and I am very happy of the service I have at Dyjix. They are a great team and really care about the service they provide !</p>
 <h3 id="specs">Specs</h3>
 <p>It has a <code>24 x Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz (1 Socket)</code> and 128G of RAM in 4 x 32G sticks.
 With 2 x 1To SSDs.</p>
 <h3 id="technical-stories">Technical stories</h3>
 <h4 id="microtik-opnsense-pfsense">Microtik -&gt; OPNsense -&gt; pfSense</h4>
-<p>I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb/s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried <a href="https://opnsense.org/">OPNsense</a> but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.</p>
+<p>I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb/s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried <a rel="noopener" target="_blank" href="https://opnsense.org/">OPNsense</a> but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.</p>
 <h4 id="vpn-access">VPN access</h4>
 <p>The other company did not even offer a VPN to access my server, this seems maybe not a big deal but it is !
 Having access to your server without using the &quot;Internet&quot; IP is really something important.
@@ -157,17 +157,17 @@ This allows me to securely access my server and iDRAC (the DELL UI to access the
 <p>From a security point of view it is better not to expose (what I had to do before..) the administrative UIs to the Internet.
 Someone could attack them and gain access to everything.</p>
 <h4 id="peering-and-network-speed">Peering and network speed</h4>
-<p><a href="https://www.peeringdb.com/net/24179">Dyjix</a> is in peering with <a href="https://www.peeringdb.com/ix/359">France-IX</a> and France-IX peering point has <a href="https://www.peeringdb.com/net/4224">CloudFlare</a> as a peering. This is mind blowing and does make access times to my websites incredibly fast !
+<p><a rel="noopener" target="_blank" href="https://www.peeringdb.com/net/24179">Dyjix</a> is in peering with <a rel="noopener" target="_blank" href="https://www.peeringdb.com/ix/359">France-IX</a> and France-IX peering point has <a rel="noopener" target="_blank" href="https://www.peeringdb.com/net/4224">CloudFlare</a> as a peering. This is mind blowing and does make access times to my websites incredibly fast !
 My ping to CloudFlare is about 1-2 ms.
 Dyjix has a network speed of 100G/s, this is also awesome !</p>
 <h4 id="power-consumption">Power consumption</h4>
 <p>At &quot;idle&quot; the power consumption is around 65-70 Watts now, more load is expected to make this number vary.
 With a more intense load it should be around 140 Watts and the power supply can handle 750 Watts.
-I will create another blog post to talk about how I monitor this with the tool <a href="https://www.zabbix.com/">Zabbix</a>.</p>
+I will create another blog post to talk about how I monitor this with the tool <a rel="noopener" target="_blank" href="https://www.zabbix.com/">Zabbix</a>.</p>
 <h4 id="conclusion">Conclusion</h4>
-<p>Now the server is running fine and all services migrated from the <a href="https://dyjix.eu/vps.php">HDD-32</a> VM.
+<p>Now the server is running fine and all services migrated from the <a rel="noopener" target="_blank" href="https://dyjix.eu/vps.php">HDD-32</a> VM.
 The route to the IPV6 block will be deployed soon to Internet !
-This server is now owned by my company: <a href="https://wdes.fr/en/">Wdes SAS</a> and I am very satisfied with the machine, it works great and has all the performance needed.</p>
+This server is now owned by my company: <a rel="noopener" target="_blank" href="https://wdes.fr/en/">Wdes SAS</a> and I am very satisfied with the machine, it works great and has all the performance needed.</p>
 <h3 id="some-pictures">Some pictures</h3>
 <h4 id="housing-at-dyjix">Housing at Dyjix</h4>
 <p><img src="../DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg" alt="The server installed at Dyjix" title="The server installed at Dyjix" /></p>

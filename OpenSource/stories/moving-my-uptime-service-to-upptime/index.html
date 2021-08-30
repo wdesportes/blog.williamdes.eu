@@ -12,14 +12,14 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Here is the story of why I did move from my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.">
+        <meta name="description" content="Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.">
 
         <!-- Open Graph Tags -->
         <meta property="og:site_name" content="Williamdes&#x27;s blog">
         
         <meta property="og:title" content="A new uptime service for my infrastructure (upptime)">
         <meta property="og:url" content="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime">
-        <meta property="og:description" content="Here is the story of why I did move from my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.">
+        <meta property="og:description" content="Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.">
         
         <meta property="og:type" content="article">
         <meta property="article:published_time" content="2021-02-03">
@@ -129,21 +129,21 @@
             <span class="post-reading-time">3 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>Here is the story of why I did move from my <a href="https://github.com/wdes/stats">custom made</a> <a href="https://heroku.com">Heroku</a>/Node/<a href="https://www.typescriptlang.org/">TypeScript</a> stats service to <a href="https://upptime.js.org/">upptime</a>.</p>
+    <div class="post-content"><p>Here is the story of why I did move from my <a rel="noopener" target="_blank" href="https://github.com/wdes/stats">custom made</a> <a rel="noopener" target="_blank" href="https://heroku.com">Heroku</a>/Node/<a rel="noopener" target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> stats service to <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a>.</p>
 <span id="continue-reading"></span><h2 id="some-story">Some story</h2>
 <p>Since 2018 I have been using and maintaining my service to monitor my different websites.
 My first deploy was on July 2018 and the last one in February 2021, since 2018 I have been maintaining and improving the service.
 I flushed the data once and since 2019-02-01 it has been collecting status codes and response times.
-Actually 1571311 * 2 rows of data, no downtime. Thank you <a href="https://heroku.com">Heroku</a> !</p>
+Actually 1571311 * 2 rows of data, no downtime. Thank you <a rel="noopener" target="_blank" href="https://heroku.com">Heroku</a> !</p>
 <p>Conclusion: this service I built worked quite well and was ugly. I did receive sms notifications when things got up or down.
-I am moving to <a href="https://upptime.js.org/">upptime</a> because it is free, open-source and maintained. And has a very cool UI !</p>
+I am moving to <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a> because it is free, open-source and maintained. And has a very cool UI !</p>
 <h2 id="technical-side">Technical side</h2>
-<p>You can find the source code: <a href="https://github.com/wdes/stats">here</a></p>
-<p>I used <a href="https://www.typescriptlang.org/">TypeScript</a> over NodeJS with <a href="https://sequelize.org/">Sequelize</a> as an ORM and migration system.
-Also used <a href="https://www.npmjs.com/package/node-cron">node-cron</a> to make my scheduling work and <a href="https://www.npmjs.com/package/twig">twig</a> for my templates. And for API docs I used the <a href="https://www.npmjs.com/package/apidoc">apidoc</a> package that works great.</p>
+<p>You can find the source code: <a rel="noopener" target="_blank" href="https://github.com/wdes/stats">here</a></p>
+<p>I used <a rel="noopener" target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> over NodeJS with <a rel="noopener" target="_blank" href="https://sequelize.org/">Sequelize</a> as an ORM and migration system.
+Also used <a rel="noopener" target="_blank" href="https://www.npmjs.com/package/node-cron">node-cron</a> to make my scheduling work and <a rel="noopener" target="_blank" href="https://www.npmjs.com/package/twig">twig</a> for my templates. And for API docs I used the <a rel="noopener" target="_blank" href="https://www.npmjs.com/package/apidoc">apidoc</a> package that works great.</p>
 <p>I was quite pleased about this project and the modules I used, very rarely had bugs.</p>
 <h2 id="hacky-side">Hacky side</h2>
-<p>I had to prevent the Dyno from sleeping by feeding it requests every 5 minutes using <a href="https://uptimerobot.com/">Uptime Robot</a>.
+<p>I had to prevent the Dyno from sleeping by feeding it requests every 5 minutes using <a rel="noopener" target="_blank" href="https://uptimerobot.com/">Uptime Robot</a>.
 It is a great tool and I recommend it but having paid features was not for me, so I only kept one for the dyno and built the wdes-stats service.</p>
 <h2 id="costs-side">Costs side</h2>
 <p>Total project costs: 0$, 31 months of free Dyno time. Databases for free too.</p>
@@ -163,14 +163,14 @@ Conclusion: it works on my workstation, not in production.</p>
 <p>(with a pie chart of the status codes)</p>
 <p><img src="../screenshots/Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg" alt="The wdes-stats time stats page" title="The wdes-stats time stats page" /></p>
 <h2 id="mirating-to-the-new-service">Mirating to the new service</h2>
-<p>I did follow the <a href="https://upptime.js.org/docs/get-started">manual</a> and that was it !
-Here it is: <a href="https://status.datacenters.network/">https://status.datacenters.network/</a></p>
+<p>I did follow the <a rel="noopener" target="_blank" href="https://upptime.js.org/docs/get-started">manual</a> and that was it !
+Here it is: <a rel="noopener" target="_blank" href="https://status.datacenters.network/">https://status.datacenters.network/</a></p>
 <p>(did I choose to keep the watermarks, absolutely !)</p>
 <h2 id="screenshots">Screenshots</h2>
 <h3 id="the-homepage-1">The homepage</h3>
 <p><img src="../screenshots/Home_status_Datacenters_network_210203_007.jpg" alt="The status upptime homepage" title="The upptime homepage" /></p>
 <h3 id="a-time-stats-page-1">A time stats page</h3>
-<p>(yes, it says it is down and <del>I do not know why for now</del> this is because if you use a custom commit template you can break the parsing, see the issue for that: <a href="https://github.com/upptime/upptime/issues/268">here</a>)</p>
+<p>(yes, it says it is down and <del>I do not know why for now</del> this is because if you use a custom commit template you can break the parsing, see the issue for that: <a rel="noopener" target="_blank" href="https://github.com/upptime/upptime/issues/268">here</a>)</p>
 <p><img src="../screenshots/Server_stats_status_Datacenters_network_210203_008.jpg" alt="The upptime time stats page" title="The upptime time stats page" /></p>
 </div>
     <footer class="post-footer">

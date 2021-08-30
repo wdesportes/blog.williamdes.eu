@@ -452,11 +452,11 @@ Everything is working fine and I fixed a bunch of bugs.&lt;&#x2F;p&gt;
 Also did some Twig code fixes on-top of my work of Wednesday.
 I wrote some unit tests for cover more code.
 Also worked on removing an exit from our code base and wrote a test for the new function.
-And to finish the day I got most of the code of &lt;code&gt;CreateAddField&lt;&#x2F;code&gt; class &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;58d760b213b496ba1b22e27ccd8d0e4ae4ca2fc0&quot;&gt;covered&lt;&#x2F;a&gt; and discovered &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16728&quot;&gt;a bug&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+And to finish the day I got most of the code of &lt;code&gt;CreateAddField&lt;&#x2F;code&gt; class &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;58d760b213b496ba1b22e27ccd8d0e4ae4ca2fc0&quot;&gt;covered&lt;&#x2F;a&gt; and discovered &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16728&quot;&gt;a bug&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some bug fixing and investigation.
 Also searched for files to remove from the final release bundle.
-I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;c62e27d6505ce22a36b635548e97f644198d6c11&quot;&gt;a fix&lt;&#x2F;a&gt; that removed some bad code that was parsing URLs in a very bad way and modifying them. Now the feature to add and remove order by clauses works fine !&lt;&#x2F;p&gt;
+I made &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;c62e27d6505ce22a36b635548e97f644198d6c11&quot;&gt;a fix&lt;&#x2F;a&gt; that removed some bad code that was parsing URLs in a very bad way and modifying them. Now the feature to add and remove order by clauses works fine !&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;Did a fix for the tcpdf cleaning I had did, could not find any coorect solution because the composer lock has saved the autoload list.
 Had to revert my fix at the end of the day.
@@ -466,7 +466,7 @@ Also worked on bug fixes.&lt;&#x2F;p&gt;
 And did create bug fixes for some old bugs.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;third-week-11&quot;&gt;Third week (11)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-15-03-2021&quot;&gt;Monday (15&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the error reporting JS code and modal handling that is broken in some corner cases and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16736&quot;&gt;made a PR&lt;&#x2F;a&gt; for some of the changes.&lt;&#x2F;p&gt;
+&lt;p&gt;I worked on the error reporting JS code and modal handling that is broken in some corner cases and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16736&quot;&gt;made a PR&lt;&#x2F;a&gt; for some of the changes.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I fixed a security bug I had found on the error reporting server and continued making bug fixes and searching for issues to close.
 Also merged my work from yesterday and made fixes on the error reporting server.&lt;&#x2F;p&gt;
@@ -538,7 +538,7 @@ On Debian I imported the latest motranslator version and applied some guidelines
 &lt;p&gt;A little bit of infrastructure work for phpMyAdmin and issue triage.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I updated shapefile at Debian and copied all the fixes made earlier on motranslator.
-Also merged my shapefile 3 upgrade into 5.2.0-dev and worked on writing tests for the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;pull&#x2F;5&quot;&gt;new feature&lt;&#x2F;a&gt; proposed on the Twig i18n extension.
+Also merged my shapefile 3 upgrade into 5.2.0-dev and worked on writing tests for the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;pull&#x2F;5&quot;&gt;new feature&lt;&#x2F;a&gt; proposed on the Twig i18n extension.
 I continued to work on the extension to bring all changes made at phpMyAdmin into it (translation context functions support).&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;second-week-06&quot;&gt;Second week (06)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-08-02-2021&quot;&gt;Monday (08&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
@@ -592,10 +592,10 @@ I am comparing xhprof results to adjust my code. Also found out where all the pe
 &lt;p&gt;Some more work on my refactoring and merging PRs. Getting ready for the 5.1.0 release.
 And did research to find out how to cover the last un-covered lines of our i18n extension. 100% coverage, satisfying.
 Will do performance benchmarks to find out where I can improve the code before releasing the major version 4.
-I removed all the custom code on our main repository and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;created a PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+I removed all the custom code on our main repository and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;created a PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I made some updates to our website after the 5.1 release. Worked on testing in depth the &lt;code&gt;TODO&lt;&#x2F;code&gt;s that I have added while doing my refactoring. Had to dig to find why things where added 10 years ago ^^.
-Also wrote more tests for our i18n extension and made performance improvements. I released &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;releases&#x2F;tag&#x2F;v4.0.0&quot;&gt;v4.0.0&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;updated it upstream&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+Also wrote more tests for our i18n extension and made performance improvements. I released &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;releases&#x2F;tag&#x2F;v4.0.0&quot;&gt;v4.0.0&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;updated it upstream&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I fixed some infrastructure scripts. Did some PR testing and found a very old and not reported bug.
 Also did search for bugs that could be solved in the issue base.&lt;&#x2F;p&gt;
@@ -617,9 +617,9 @@ Also did search for bugs that could be solved in the issue base.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;After a lot of yours contributing to phpMyAdmin I received an unexpected invitation to join the team.
 That day was on the 27&#x2F;08&#x2F;2018, a very happy day !
-Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&quot;&gt;phpMyAdmin team member&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+Since then I am a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&quot;&gt;phpMyAdmin team member&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;I work for phpMyAdmin starting on the 01&#x2F;12&#x2F;2020.&lt;&#x2F;p&gt;
-&lt;p&gt;You can find my reports: &lt;a href=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;tags&#x2F;phpmyadmin&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can find my reports: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;tags&#x2F;phpmyadmin&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -640,7 +640,7 @@ Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&qu
 &lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;The Debian version &lt;code&gt;5.0.4+dfsg1-1&lt;&#x2F;code&gt; landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;merge_requests&#x2F;30&quot;&gt;pull-request&lt;&#x2F;a&gt; was &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1&quot;&gt;merged&lt;&#x2F;a&gt; after 3 months open lacking reviews and me pushing more and more commits.&lt;&#x2F;p&gt;
+&lt;p&gt;The Debian version &lt;code&gt;5.0.4+dfsg1-1&lt;&#x2F;code&gt; landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;merge_requests&#x2F;30&quot;&gt;pull-request&lt;&#x2F;a&gt; was &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1&quot;&gt;merged&lt;&#x2F;a&gt; after 3 months open lacking reviews and me pushing more and more commits.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
@@ -648,15 +648,15 @@ Since then I am a &lt;a href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&qu
 &lt;h2 id=&quot;second-week-02&quot;&gt;Second week (02)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-11-01-2021&quot;&gt;Monday (11&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d&#x2F;copyright file and document them. Most of the source files that where excluded are now back.
-I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the &lt;code&gt;.min.js&lt;&#x2F;code&gt; files had to be &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216&quot;&gt;re-built from source&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;abac8a5cf05e2955a2c5bd14dc52c0ab75405659&quot;&gt;I added the missing source files&lt;&#x2F;a&gt; to the &lt;code&gt;debian&#x2F;missing-sources&lt;&#x2F;code&gt; directory. The Debian version no more has &lt;code&gt;zxcvbn&lt;&#x2F;code&gt; until the from source issue can be solved. For now &lt;code&gt;?&lt;&#x2F;code&gt; force is displayed when you type passwords.&lt;&#x2F;p&gt;
+I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the &lt;code&gt;.min.js&lt;&#x2F;code&gt; files had to be &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216&quot;&gt;re-built from source&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;abac8a5cf05e2955a2c5bd14dc52c0ab75405659&quot;&gt;I added the missing source files&lt;&#x2F;a&gt; to the &lt;code&gt;debian&#x2F;missing-sources&lt;&#x2F;code&gt; directory. The Debian version no more has &lt;code&gt;zxcvbn&lt;&#x2F;code&gt; until the from source issue can be solved. For now &lt;code&gt;?&lt;&#x2F;code&gt; force is displayed when you type passwords.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;All the work from yesterday landed into &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;9206cece4599be77d436057fe51f7b106e9b8de2&quot;&gt;a merge&lt;&#x2F;a&gt; and David did upload the changes to unstable.&lt;&#x2F;p&gt;
+&lt;p&gt;All the work from yesterday landed into &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;9206cece4599be77d436057fe51f7b106e9b8de2&quot;&gt;a merge&lt;&#x2F;a&gt; and David did upload the changes to unstable.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I handled some issue triage and pull-request reviews.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did merge some pull-requests and upgraded psalm to &lt;code&gt;4.4.0&lt;&#x2F;code&gt;.
 On &lt;code&gt;twig-i18n-extension&lt;&#x2F;code&gt; I moved to GitHub actions and did setup phpstan.
-Also &lt;code&gt;phpmyadmin&#x2F;coding-standard&lt;&#x2F;code&gt; has a quick move to GitHub actions and I found out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;coding-standard&#x2F;pull&#x2F;9&quot;&gt;a licensing issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+Also &lt;code&gt;phpmyadmin&#x2F;coding-standard&lt;&#x2F;code&gt; has a quick move to GitHub actions and I found out &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;coding-standard&#x2F;pull&#x2F;9&quot;&gt;a licensing issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;On the Debian packaging side I made sure &lt;code&gt;buster-backports&lt;&#x2F;code&gt; was ready and prepared the backport of &lt;code&gt;twig&lt;&#x2F;code&gt;.
 And updated the Ubuntu PPA Bionic to &lt;code&gt;5.0.4&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
@@ -671,26 +671,26 @@ And updated the Ubuntu PPA Bionic to &lt;code&gt;5.0.4&lt;&#x2F;code&gt;.&lt;&#x
 &lt;p&gt;I handled some issues about Debian and Ubuntu packaging.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I build the focal version for phpMyAdmin PPA.
-At &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did finish my work on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16547&quot;&gt;the license violation&lt;&#x2F;a&gt;. And &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16583&quot;&gt;migrated the repository to GitHub actions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+At &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did finish my work on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16547&quot;&gt;the license violation&lt;&#x2F;a&gt;. And &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16583&quot;&gt;migrated the repository to GitHub actions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did work on re-working the version handling and re-working the release script&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I merged some work and did send sql-parser 5 to the phpMyAdmin PPA.
 Also applied some Debian guidelines for the sql-parser packaging.
-And updated my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdesportes&#x2F;phpmyadmin-local-setup&quot;&gt;open-source phpMyAdmin dev setup&lt;&#x2F;a&gt;.
+And updated my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdesportes&#x2F;phpmyadmin-local-setup&quot;&gt;open-source phpMyAdmin dev setup&lt;&#x2F;a&gt;.
 Also added support for &lt;code&gt;[ci skip]&lt;&#x2F;code&gt; on GitHub actions and did try to fix the TravisCI builds.
 Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;[br]&lt;&#x2F;code&gt; transition and some older ones from the &lt;code&gt;&amp;lt;br&#x2F;&amp;gt;&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;&amp;lt;br &#x2F;&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
 &lt;p&gt;Some more cleaning on Weblate and some PR updates.
-I imported &lt;a href=&quot;https:&#x2F;&#x2F;security-tracker.debian.org&#x2F;tracker&#x2F;CVE-2021-21252&quot;&gt;the security fix&lt;&#x2F;a&gt; into Debian and imported my font removal also.
-Also tested the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16586&quot;&gt;transformation to image PR&lt;&#x2F;a&gt; and made a fix ontop if it.
-And to finish the day like a night own I did finally &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;find a way to make jest edit files on the fly&lt;&#x2F;a&gt; to test them.&lt;&#x2F;p&gt;
+I imported &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;security-tracker.debian.org&#x2F;tracker&#x2F;CVE-2021-21252&quot;&gt;the security fix&lt;&#x2F;a&gt; into Debian and imported my font removal also.
+Also tested the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16586&quot;&gt;transformation to image PR&lt;&#x2F;a&gt; and made a fix ontop if it.
+And to finish the day like a night own I did finally &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;find a way to make jest edit files on the fly&lt;&#x2F;a&gt; to test them.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some changes on the Debian side and imported a patch that was on the Debian side.
-On the main repository I did merge some pull-requests and finished the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;first Jest unit testing integration&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+On the main repository I did merge some pull-requests and finished the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;first Jest unit testing integration&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some PR and issue management and also some documentation management.
-And also did work on some slowness issues and made two PRs (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16590&quot;&gt;1&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16591&quot;&gt;2&lt;&#x2F;a&gt;). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.&lt;&#x2F;p&gt;
+And also did work on some slowness issues and made two PRs (&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16590&quot;&gt;1&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16591&quot;&gt;2&lt;&#x2F;a&gt;). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-25-01-2021&quot;&gt;Monday (25&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on tracking down slowness in our code base and merged my work on the async console setup.
@@ -703,12 +703,12 @@ Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu 
 &lt;p&gt;I spent some time fixing the theme generator and merging the fixes I made.
 Also did some issue triage and worked on 2 PRs open at the &lt;code&gt;docker&lt;&#x2F;code&gt; repository (added more tests, and fixed mistakes).&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on a complete &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;docker&#x2F;pull&#x2F;323&quot;&gt;re-work of the &lt;code&gt;docker&lt;&#x2F;code&gt; repository testsuite&lt;&#x2F;a&gt;.
+&lt;p&gt;I worked on a complete &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;docker&#x2F;pull&#x2F;323&quot;&gt;re-work of the &lt;code&gt;docker&lt;&#x2F;code&gt; repository testsuite&lt;&#x2F;a&gt;.
 This will make us move to GitHub actions completely.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I merged a fix on the Docker repository and did some issue triage and reproduction.
 Also fixed a 5.1.0-rc1 bug on multi server setup.
-I did write tests to reproduce an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16595&quot;&gt;issue&lt;&#x2F;a&gt; and cover more of our codebase.&lt;&#x2F;p&gt;
+I did write tests to reproduce an &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16595&quot;&gt;issue&lt;&#x2F;a&gt; and cover more of our codebase.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.&lt;&#x2F;p&gt;
 </content>
@@ -725,15 +725,15 @@ I did write tests to reproduce an &lt;a href=&quot;https:&#x2F;&#x2F;github.com&
 (this means some entries could be missing, for ever)&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;first-week-50&quot;&gt;First week (50)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0ae5216e283ba80704a34d850ce29a4f690160a1&quot;&gt;code improvement&lt;&#x2F;a&gt;, some bug fixing and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;66f38555d4637362082dbe54925261687a5f0fa7&quot;&gt;transformed some inline PHP&#x2F;HTML to twig&lt;&#x2F;a&gt;.
-I removed &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;f78aa880e7ce614737cba050422ed5f13366b76b&quot;&gt;a broken link&lt;&#x2F;a&gt; in out documentation and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;1d154724a5192addf6015a316b7d7382c77de361&quot;&gt;added PHP typehints&lt;&#x2F;a&gt;.
+&lt;p&gt;I did some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0ae5216e283ba80704a34d850ce29a4f690160a1&quot;&gt;code improvement&lt;&#x2F;a&gt;, some bug fixing and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;66f38555d4637362082dbe54925261687a5f0fa7&quot;&gt;transformed some inline PHP&#x2F;HTML to twig&lt;&#x2F;a&gt;.
+I removed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;f78aa880e7ce614737cba050422ed5f13366b76b&quot;&gt;a broken link&lt;&#x2F;a&gt; in out documentation and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;1d154724a5192addf6015a316b7d7382c77de361&quot;&gt;added PHP typehints&lt;&#x2F;a&gt;.
 And some pull-request merging.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday-wednesday&quot;&gt;Tuesday -&amp;gt; Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;a5dc78edac859199b9b9113c02fee810eaca5fe6&quot;&gt;sync jqplot plugins from updated-jqplot node package&lt;&#x2F;a&gt; and fix out PHP 8.0 testsuite &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;4d3ecbe4e71396edc80138202cbfcfa8e5907ef8&quot;&gt;failing on string vs numbers beeing compared&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;a5dc78edac859199b9b9113c02fee810eaca5fe6&quot;&gt;sync jqplot plugins from updated-jqplot node package&lt;&#x2F;a&gt; and fix out PHP 8.0 testsuite &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;4d3ecbe4e71396edc80138202cbfcfa8e5907ef8&quot;&gt;failing on string vs numbers beeing compared&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;afdf57aed25ac54cb48c8d781bd6c512def68bbc&quot;&gt;re-build all jqplot files from the updated-jqplot npm package&lt;&#x2F;a&gt;, this is very important to have reproductible builds from source. That will help a lot on Debian when we have to re-build files from source to be dfsg compatible. I did some related work on the JS modules management.&lt;&#x2F;p&gt;
+&lt;p&gt;I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;afdf57aed25ac54cb48c8d781bd6c512def68bbc&quot;&gt;re-build all jqplot files from the updated-jqplot npm package&lt;&#x2F;a&gt;, this is very important to have reproductible builds from source. That will help a lot on Debian when we have to re-build files from source to be dfsg compatible. I did some related work on the JS modules management.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did fix some PHP 8.0 issues and backports some of my PHP 8.0 fixes. And also made the TravisCI CI go back to green.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
@@ -742,11 +742,11 @@ And some pull-request merging.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;monday-thursday&quot;&gt;Monday -&amp;gt; Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;fb5d6159af9fd9f7b6859b42d6b31528d89f7514&quot;&gt;phpdoc changes&lt;&#x2F;a&gt; after running Doctum. And also did fix some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;b4f1e14e8025def8bb047bdc6797aeeb581e1b0f&quot;&gt;phpstan errors&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I made some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;fb5d6159af9fd9f7b6859b42d6b31528d89f7514&quot;&gt;phpdoc changes&lt;&#x2F;a&gt; after running Doctum. And also did fix some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;b4f1e14e8025def8bb047bdc6797aeeb581e1b0f&quot;&gt;phpstan errors&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
 &lt;p&gt;I did some changes on the new &lt;code&gt;QA_5_1&lt;&#x2F;code&gt; branch to prepare it as a QA branch and opened an issue at Weblate to warn about some docker issues.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did merge &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;ac7abd86129552dce96c46f9941e1ec86b05d757&quot;&gt;a pull-request&lt;&#x2F;a&gt; to fix the CI after my changes to make 5.2.0-dev the new dev version.&lt;&#x2F;p&gt;
+&lt;p&gt;I did merge &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;ac7abd86129552dce96c46f9941e1ec86b05d757&quot;&gt;a pull-request&lt;&#x2F;a&gt; to fix the CI after my changes to make 5.2.0-dev the new dev version.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;third-week-52&quot;&gt;Third week (52)&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
 &lt;p&gt;At &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did update CodeMirror to 5.59.0, merge some pull-requests and update some JS dependencies.
@@ -765,9 +765,9 @@ Now we are near to only use GitHub actions on this repository.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; to make it clean and follow the Debian rules.
-On &lt;code&gt;phpmyadmin&#x2F;twig-i18n-extension&lt;&#x2F;code&gt; I did &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;commit&#x2F;aec9e489c66930be87a67a7b511a01b3e61d1a57&quot;&gt;edit the PHP 8.0 constraint&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;On &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did merge a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0747f8aca155acf71c693671fddee34e61082292&quot;&gt;pull-request&lt;&#x2F;a&gt; that removes some old UI tricks to make gradients and I am very happy about that.
-I also &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;64efdebbd3f0791a79730b92aaf5754c87b431d8&quot;&gt;updated the psalm baseline&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+On &lt;code&gt;phpmyadmin&#x2F;twig-i18n-extension&lt;&#x2F;code&gt; I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;commit&#x2F;aec9e489c66930be87a67a7b511a01b3e61d1a57&quot;&gt;edit the PHP 8.0 constraint&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;On &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did merge a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0747f8aca155acf71c693671fddee34e61082292&quot;&gt;pull-request&lt;&#x2F;a&gt; that removes some old UI tricks to make gradients and I am very happy about that.
+I also &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;64efdebbd3f0791a79730b92aaf5754c87b431d8&quot;&gt;updated the psalm baseline&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
 &lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; to make it clean and follow the Debian rules.
 I did the same on the &lt;code&gt;mariadb-mysql-kbs&lt;&#x2F;code&gt; package.&lt;&#x2F;p&gt;
