@@ -48,7 +48,7 @@ I used heat shrink tubes to make a nice and secure finish (the two red tubes you
 It&#x27;s cooler and more silent.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the graph of before and after, you can clearly see a 2° difference !&lt;&#x2F;p&gt;
 &lt;p&gt;The spike on the graph is the moment between having old fan and having no fan at all, just the cooler.&lt;&#x2F;p&gt;
-&lt;p&gt;(The graph is done with Zabbix, more on that in another blog post)
+&lt;p&gt;(The graph is done with &lt;a href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt; (a free tool), more on that in another blog post)
 (You can click the image to see it bigger)&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg&quot;&gt;&lt;img src=&quot;..&#x2F;Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg&quot; alt=&quot;with the old fan and with the new fan&quot; title=&quot;with the old fan and with the new fan&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;zoomed-in&quot;&gt;Zoomed in&lt;&#x2F;h4&gt;
