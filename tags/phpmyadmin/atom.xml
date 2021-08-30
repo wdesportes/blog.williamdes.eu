@@ -4,8 +4,96 @@
 	<link href="https://blog.williamdes.eu/tags/phpmyadmin/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-08-03T22:25:00+00:00</updated>
+	<updated>2021-08-30T13:28:00+02:00</updated>
 	<id>https://blog.williamdes.eu/tags/phpmyadmin/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for August 2021</title>
+		<published>2021-08-01T12:00:00+00:00</published>
+		<updated>2021-08-30T13:28:00+02:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/08/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/08/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-31&quot;&gt;First week (31)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I did some issue and pull-request triage.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-32&quot;&gt;Second week (32)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-09-07-2021&quot;&gt;Monday (09&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on merging pull-requests and closing issues.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;I merged pull-requests and worked on fixing issues.
+I tried to find the root cause of infinite loop bug on import but I did not find.
+Also wrote tests and made a fix for 2FA. Finally I did un-mock the TwoFactor tests class.&lt;&#x2F;p&gt;
+&lt;p&gt;478 issues, 21 PRs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I made some issue and pull-request management.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I searched for new bugs in our Sentry instance by filtering on PHP issues for the 5.1.1 release.
+I also merged a PR on the docker repo.
+And worked on finding out about the unit issue on the Import page. I wrote test cases.
+Finally wrote and improved some documentation on the README of the Docker repository.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I merged a sql-parser PR. And started to work on the issue #335&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I made a tutorial on how to run phpMyAdmin with a local database using a Unix socket.
+I ported fixes from a PR to master and QA. Also reviewed pull-requests.
+I also tried to reproduce a navigation tree issue.
+Finally I wrote test cases on sql-parser and merged a PR.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I researched more about &lt;code&gt;CREATE VIEW&lt;&#x2F;code&gt; syntaxes and added more test cases to the sql-parser library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-33&quot;&gt;Third week (33)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-16-07-2021&quot;&gt;Monday (16&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I merged a pull-request into sql-parser and added new MariaDB contexts.
+Also improved the phpdoc blocks of generated context files.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I worked on sql-parser on adding more test cases and fixing issues.
+Also merged and test pull-requests on the main repository and wrote a fix.
+Finally I also improved documentation for the config &amp;quot;DefaultFunctions&amp;quot;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;I did some Debian packaging, to send 5.1.1 into unstable since Debian is not anymore in freeze mode.
+Also reviewed pull-requests. Wrote tests and commented some code.
+Finally did some testing of the PR I wrote tests for.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I merged a sql-parser PR and wrote a test for a new issue.
+Also started working on a fix for it.
+Finally did some sorting out on the sql-parser issues board.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
+&lt;p&gt;I worked on sql-parser, wrote tests to fix issues.
+I added support for KEY order and added missing KEY options.
+Also did some issue triage.
+Finally I merged a pull-request into the main repository QA branch.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I improved the release script to lock it for a particular series and also removed some old compat lines.
+I added one more file to exclude and added a security checkup step to the release script.
+On the release and check script I did some adjustments to exclude missed &lt;code&gt;Test&lt;&#x2F;code&gt; folders.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-34&quot;&gt;Fourth week (34)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-23-07-2021&quot;&gt;Monday (23&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I fixed file exclusions from the Dockerfiles of the docker repository. Upgraded the images to PHP 8.
+Fixed LOCAL DATA issues.
+I modified our test suite to properly check database selects.
+And removed a static property from the Tracking class.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I send into bullseye-backports the phpMyAdmin package.
+Sorted out issues and pull-requests.
+I worked on reproducibility between bundled releases.
+Finally I fixed a public security issue with signon auth.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I sorted out more issues, fixed a reported security issue.
+Also worked on supporting expressions in the GUI of phpMyAdmin.
+Did some bug fixing and finally I worked on sql-parser to support multiple expressions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I worked on adding support for multiple expressions on KEY statements.
+I wrote tests and adjusted support for Expressions in the phpMyAdmin GUI.
+Finally I wrote tests for the Relation class.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I started by writing more tests for the Relation class.
+And worked all day on making relation setup work correctly on each different scenario.&lt;&#x2F;p&gt;
+&lt;p&gt;460 issues, 27 PRs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;saturday-sunday&quot;&gt;Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for July 2021</title>
 		<published>2021-07-01T12:00:00+00:00</published>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="I changed my Raspberry Pi fan for a &lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan">
+        <meta property="og:description" content="I changed my Raspberry Pi fan for a &lt;a href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-08-30">
+        <meta property="article:modified_time" content="2021-08-30">
+        
+        <meta property="article:tags" content="infra-story"><meta property="article:tags" content="RaspberryPi">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan</h1>
+        <div class="post-meta">
+            <span class="post-author">
+                Author: William Desportes
+            </span>
+            <br/>
+            <span class="post-date">Published: <time datetime="2021-08-30T13:30:00+0002">August 30, 2021 13:30</time></span>
+            <span class="post-date"> and updated: <time datetime="2021-08-30T14:40:00+0002">August 30, 2021 14:40</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">4 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>I changed my Raspberry Pi fan for a <a href="https://noctua.at/en/nf-a4x10-5v-pwm">Noctua NF-A4x10 5V PWM</a> and had a 2° temperature drop compared to the GeeekPi case fan.</p>
+<span id="continue-reading"></span><h3 id="the-items">The items</h3>
+<p>When I bought my Raspberry Pi 4 in april 2021 here where the items that my setup was made of:</p>
+<ul>
+<li><a href="https://www.amazon.fr/gp/product/B07TZ89BT7">a Raspberry Pi transformer, USB-C 5.1V 3A (1873421)</a></li>
+<li><a href="https://www.amazon.fr/gp/product/B07FCMBLV6">a SanDisk Extreme 64 Go microSD XC, class 10, UHS-I, U3, V30</a></li>
+<li><a href="https://www.amazon.fr/gp/product/B00DQGBYDC">a SanDisk Ultra 64 Go USB 3.0 key, theoretical read speed of 130 Mo/s</a></li>
+<li><a href="https://www.amazon.fr/gp/product/B0899VXM8F/">a Raspberry Pi 4 B 8 Go 4x1,5 GHz, ARM Cortex-A72</a></li>
+<li><a href="https://www.amazon.fr/gp/product/B086JY553B">a GeeekPi Metal Case for Raspberry pi 4B low-profile ICE Tower cooler</a></li>
+</ul>
+<h3 id="a-bit-of-story">A bit of story</h3>
+<p>Everything worked well for months but the two fans they provided with the case (one with fancy lighting) where making a terrible noise like they would crash anytime. Most probably because they where crappy quality fans.</p>
+<p>I decided to buy a good (very good) fan and I found out that Noctua fans where the best fit.</p>
+<p>So I ordered from <a href="https://www.ldlc.com/fiche/PB00396294.html">LDLC</a> a fan, the <a href="https://noctua.at/en/nf-a4x10-5v-pwm">Noctua NF-A4x10 5V PWM</a>.
+Was PWM needed, the answer is no. But it is a nice to have to make a fun project in the future.</p>
+<p>It did come with some very cool packaging, very premium feeling and a lot of connectors.</p>
+<h3 id="the-hacking-part">The hacking part</h3>
+<h4 id="the-kit">The kit</h4>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit.jpeg" alt="Noctua NF-A4x10 5V PWM kit" title="Noctua NF-A4x10 5V PWM kit" /></p>
+<h4 id="soldering-time">Soldering time</h4>
+<p>Noctua did provide a nice adapter so I only had to cut out the old fan wires and solder them to the adapter.
+I used heat shrink tubes to make a nice and secure finish (the two red tubes you can see on the picture).</p>
+<p>(The crapy background is my soldering board)</p>
+<p><img src="../RaspberryPi_4_cutting_and_soldering_for_the_fan.jpeg" alt="cutting old fan connector and soldering then to the adapter" title="cutting old fan connector and soldering then to the adapter" /></p>
+<h4 id="plug-the-cable">Plug the cable</h4>
+<p>I did plug the fan cable into the adapter and then plugged all this into the two GPIO pins as you can see.</p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_GPIO_pins.jpg" alt="plugging into the GPIO pins" title="plugging into the GPIO pins" /></p>
+<h4 id="overview">Overview</h4>
+<p>The metal mounts for the fan where included in the setup of the GeeekPi case.</p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview.jpg" alt="an overview" title="an overview" /></p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.jpg" alt="an overview from the side" title="an overview from the side" /></p>
+<h3 id="some-temperature-numbers">Some temperature numbers</h3>
+<p>Was this change worth it: yes !
+It's cooler and more silent.</p>
+<p>Here is the graph of before and after, you can clearly see a 2° difference !</p>
+<p>The spike on the graph is the moment between having old fan and having no fan at all, just the cooler.</p>
+<p>(The graph is done with Zabbix, more on that in another blog post)
+(You can click the image to see it bigger)</p>
+<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg"><img src="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg" alt="with the old fan and with the new fan" title="with the old fan and with the new fan" /></a></p>
+<h4 id="zoomed-in">Zoomed in</h4>
+<p>(You can click the image to see it bigger)</p>
+<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg"><img src="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg" alt="with the old fan and with the new fan (zoomed in)" title="with the old fan and with the new fan (zoomed in)" /></a></p>
+<h3 id="conclusion">Conclusion</h3>
+<p><a href="https://noctua.at/en/products/fan">Noctua</a> fans are great, the perform very well and are silent.
+I can only recommend to buy them. They provide cool wiring stuff, you will have left overs for other projects.</p>
+<p>By the way they also do very good <a href="https://noctua.at/en/products/thermal-grease">thermal paste</a>.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-story/">infra-story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/raspberrypi/">RaspberryPi</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
