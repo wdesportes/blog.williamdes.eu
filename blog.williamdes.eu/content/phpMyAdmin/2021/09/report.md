@@ -1,9 +1,8 @@
 +++
 title = "Report for September 2021"
 date = 2021-08-30T12:00:00Z
-updated = 2021-08-31T00:50:00+02:00
+updated = 2021-09-23T23:50:00+02:00
 category = "phpMyAdmin - reports"
-draft = true
 
 [extra]
 author = "William Desportes"
@@ -34,64 +33,16 @@ __off__
 
 ## Second week (36)
 
-### Monday (06/09/2021)
-
-### Tuesday
-
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-### Sunday
+__not working on the project__
 
 ## Third week (37)
 
-### Monday (13/09/2021)
-
-### Tuesday
-
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-### Sunday
+__not working on the project__
 
 ## Fourth week (38)
 
-### Monday (20/09/2021)
-
-### Tuesday
-
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-### Sunday
+__not working on the project__
 
 ## Fifth week (39)
 
-### Monday (27/09/2021)
-
-### Tuesday
-
-### Wednesday
-
-### Thursday
-
-### Friday
-
-### Saturday
-
-### Sunday
+__not working on the project__
