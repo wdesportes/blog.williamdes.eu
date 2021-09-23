@@ -4,7 +4,7 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-08-30T14:40:00+00:02</updated>
+	<updated>2021-09-23T23:50:00+02:00</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan</title>
@@ -58,6 +58,32 @@ It&#x27;s cooler and more silent.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;fan&quot;&gt;Noctua&lt;&#x2F;a&gt; fans are great, the perform very well and are silent.
 I can only recommend to buy them. They provide cool wiring stuff, you will have left overs for other projects.&lt;&#x2F;p&gt;
 &lt;p&gt;By the way they also do very good &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;products&#x2F;thermal-grease&quot;&gt;thermal paste&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Report for September 2021</title>
+		<published>2021-08-30T12:00:00+00:00</published>
+		<updated>2021-09-23T23:50:00+02:00</updated>
+		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/09/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2021/09/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2021.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-35&quot;&gt;First week (35)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monday-30-08-2021&quot;&gt;Monday (30&#x2F;08&#x2F;2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I finished working on the pmadb bug fixing. Wrote 7 changelog entries for it !
+I also did merge a pull-request.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
+&lt;p&gt;Today I sorted out a lof of old issues.
+And finished a merge of QA into master, updating the proper baselines.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wednesday-thursday-friday-saturday-sunday&quot;&gt;Wednesday, Thursday, Friday, Saturday, Sunday&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-36&quot;&gt;Second week (36)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-37&quot;&gt;Third week (37)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-38&quot;&gt;Fourth week (38)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fifth-week-39&quot;&gt;Fifth week (39)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
