@@ -14,7 +14,7 @@ You can follow my phpMyAdmin adventure on this blog post.
 
 <!-- more -->
 
-After a lot of yours contributing to phpMyAdmin I received an unexpected invitation to join the team.
+After a lot of hours contributing to phpMyAdmin I received an unexpected invitation to join the team.
 That day was on the 27/08/2018, a very happy day !
 Since then I am a [phpMyAdmin team member](https://phpmyadmin.net/team).
 
