@@ -8,7 +8,7 @@ category = "Story"
 author = "William Desportes"
 
 [taxonomies]
-tags = ["infra-story", "DELL"]
+tags = ["infra-story", "DELL", "DELL-R630"]
 +++
 
 This is the story on how I migrated from a VPS to a Dell PowerEdge R630.
