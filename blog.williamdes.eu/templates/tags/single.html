@@ -1,5 +1,30 @@
 {% extends "index.html" %}
 
+{% block jsonld %}
+{{ jsonld_macros::breadcrumb(path=["/tags", term.path], titles=["Tags", term.name]) }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {%- for page in paginator.pages %}
+        {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "item": {
+                "@id": "{{ page.permalink | safe }}",
+                "name": "{{ page.title }}",
+                "url": "{{ page.permalink | safe }}"
+            }
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+    ],
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "name": "Tag: {{ term.name }}"
+}
+</script>
+{% endblock jsonld %}
+
 {% block content %}
     <div class="posts">
         <h2>Tag: {{ term.name }}</h2>

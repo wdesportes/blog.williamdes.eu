@@ -1,0 +1,30 @@
+{% macro breadcrumb(path, titles) %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "{{ get_url(path="", trailing_slash=false) }}",
+                    "name": "{{ config.title | safe }}"
+                }
+            }{% if path | length > 0 %},{% endif %}
+            {%- for crumb in path %}
+            {
+                "@type": "ListItem",
+                "position": {{ loop.index + 1 }},
+                "item": {
+                    "@id": "{{ get_url(path=crumb, trailing_slash=false) }}",
+                    "name": "{{ titles[loop.index0] | safe }}"
+                }
+            }{% if not loop.last %},{% endif %}
+            {%- endfor %}
+        ]
+    }
+</script>
+
+{%- endmacro %}
