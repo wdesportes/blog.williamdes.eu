@@ -27,7 +27,68 @@
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
 
-        <script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags",
+                    "name": "Tags"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags/infra-story",
+                    "name": "infra-story"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/",
+                "name": "Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan",
+                "url": "https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/",
+                "name": "Migrating to a new server housed at Dyjix",
+                "url": "https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/"
+            }
+        }
+    ],
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "name": "Tag: infra-story"
+}
+</script>
+<script>
             function setTheme() {
                 const time = new Date();
 

@@ -27,7 +27,132 @@
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
 
-        <script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags",
+                    "name": "Tags"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/story/",
+                "name": "story",
+                "url": "https://blog.williamdes.eu/tags/story/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/security/",
+                "name": "security",
+                "url": "https://blog.williamdes.eu/tags/security/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/raspberrypi/",
+                "name": "RaspberryPi",
+                "url": "https://blog.williamdes.eu/tags/raspberrypi/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/phpmyadmin/",
+                "name": "phpMyAdmin",
+                "url": "https://blog.williamdes.eu/tags/phpmyadmin/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/other/",
+                "name": "other",
+                "url": "https://blog.williamdes.eu/tags/other/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/oss-story/",
+                "name": "OSS-story",
+                "url": "https://blog.williamdes.eu/tags/oss-story/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/oss-report/",
+                "name": "OSS-report",
+                "url": "https://blog.williamdes.eu/tags/oss-report/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/infra-story/",
+                "name": "infra-story",
+                "url": "https://blog.williamdes.eu/tags/infra-story/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/dell-r630/",
+                "name": "DELL-R630",
+                "url": "https://blog.williamdes.eu/tags/dell-r630/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+                "@id": "https://blog.williamdes.eu/tags/dell/",
+                "name": "DELL",
+                "url": "https://blog.williamdes.eu/tags/dell/"
+            }
+        }
+    ],
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "name": "Tags"
+}
+</script>
+<script>
             function setTheme() {
                 const time = new Date();
 
@@ -128,6 +253,8 @@
                 <li><a href="https://blog.williamdes.eu/tags/oss-report/">OSS-report (12)</a></li>
             
                 <li><a href="https://blog.williamdes.eu/tags/infra-story/">infra-story (2)</a></li>
+            
+                <li><a href="https://blog.williamdes.eu/tags/dell-r630/">DELL-R630 (1)</a></li>
             
                 <li><a href="https://blog.williamdes.eu/tags/dell/">DELL (1)</a></li>
             

@@ -27,7 +27,95 @@
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
 
-        <script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags",
+                    "name": "Tags"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags/phpmyadmin",
+                    "name": "phpMyAdmin"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://blog.williamdes.eu/phpMyAdmin/2021/09/report/",
+                "name": "Report for September 2021",
+                "url": "https://blog.williamdes.eu/phpMyAdmin/2021/09/report/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://blog.williamdes.eu/phpMyAdmin/2021/08/report/",
+                "name": "Report for August 2021",
+                "url": "https://blog.williamdes.eu/phpMyAdmin/2021/08/report/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://blog.williamdes.eu/phpMyAdmin/2021/07/report/",
+                "name": "Report for July 2021",
+                "url": "https://blog.williamdes.eu/phpMyAdmin/2021/07/report/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+                "@id": "https://blog.williamdes.eu/phpMyAdmin/2021/06/report/",
+                "name": "Report for June 2021",
+                "url": "https://blog.williamdes.eu/phpMyAdmin/2021/06/report/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+                "@id": "https://blog.williamdes.eu/phpMyAdmin/2021/05/report/",
+                "name": "Report for May 2021",
+                "url": "https://blog.williamdes.eu/phpMyAdmin/2021/05/report/"
+            }
+        }
+    ],
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "name": "Tag: phpMyAdmin"
+}
+</script>
+<script>
             function setTheme() {
                 const time = new Date();
 
