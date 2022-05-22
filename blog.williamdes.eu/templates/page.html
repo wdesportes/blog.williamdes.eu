@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 
 {% block jsonld %}
+{{ jsonld_macros::breadcrumb_page(path=page.components, titles=page.components | slice(end=-1) | concat(with=page.title)) }}
 {% endblock jsonld %}
 
 {% block content %}

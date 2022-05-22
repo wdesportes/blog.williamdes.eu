@@ -28,3 +28,12 @@
 </script>
 
 {%- endmacro %}
+{% macro breadcrumb_page(path, titles) %}
+{% set cur = "/" %}
+{% set path_bc = [] %}
+{% for elt in path %}
+    {% set_global cur = cur ~ elt ~ "/" %}
+    {% set_global path_bc = path_bc | concat(with=cur) %}
+{% endfor %}
+{{- jsonld_macros::breadcrumb(path=path_bc, titles=titles) -}}
+{%- endmacro %}
