@@ -2,10 +2,19 @@
 title = "Migrating to a new server housed at Dyjix"
 date = 2021-07-02T20:20:00+00:02
 updated = 2021-07-24T17:00:00+00:02
-category = "Story"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+headline = "This is the story on how I migrated from a VPS to a Dell PowerEdge R630."
+keywords = ["housing", "dyjix"]
+category = "Story"
+images = [
+    "Infrastructure/stories/DELL_PowerEdge_R630_Wdes_SAS_Closed.jpg",
+    "Infrastructure/stories/DELL_PowerEdge_R630_Wdes_SAS_In_A_Box.jpg",
+    "Infrastructure/stories/DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg",
+    "Infrastructure/stories/DELL_PowerEdge_R630_Wdes_SAS_Open.jpg",
+]
 
 [taxonomies]
 tags = ["infra-story", "DELL", "DELL-R630"]

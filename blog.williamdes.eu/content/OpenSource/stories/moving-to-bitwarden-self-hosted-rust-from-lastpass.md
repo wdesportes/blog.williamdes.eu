@@ -2,10 +2,18 @@
 title = "Moving from LastPass to Bitwarden self-hosted (Rust back-end)"
 date = 2021-02-21T00:00:00Z
 updated = 2021-02-25T01:50:00Z
-category = "OpenSource - stories"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+category = "OpenSource - stories"
+headline = "Here is a story about how I moved out from LastPass to Bitwarden after 7 years using LastPass."
+keywords = ["Bitwarden", "LastPass"]
+images = [
+    "OpenSource/stories/screenshots/Bitwarden_configure_url_2021.jpg",
+    "OpenSource/stories/screenshots/Bitwarden_modal_2021.jpg",
+    "OpenSource/stories/screenshots/Bitwarden_working_2021.jpg",
+]
 
 [taxonomies]
 tags = ["OSS-story", "security"]

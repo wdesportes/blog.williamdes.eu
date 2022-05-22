@@ -1,10 +1,13 @@
 +++
 title = "Follow my phpMyAdmin adventure"
 date = 2021-01-13T12:00:00Z
-category = "Story"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+headline = "You can follow my phpMyAdmin adventure on this blog post."
+category = "Story"
+images = []
 
 [taxonomies]
 tags = ["story", "phpMyAdmin"]

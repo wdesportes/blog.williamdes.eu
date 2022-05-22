@@ -2,10 +2,21 @@
 title = "A new uptime service for my infrastructure (upptime)"
 date = 2021-02-03T15:00:00Z
 updated = 2021-02-24T17:10:00Z
-category = "OpenSource - stories"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+category = "OpenSource - stories"
+headline = "Here is the story of why I did move from my custom made Heroku/Node/TypeScript stats service to upptime."
+keywords = ["upptime", "monitoring"]
+images = [
+    "OpenSource/stories/screenshots/Accueil__wdes-stats___210203_004.jpg",
+    "OpenSource/stories/screenshots/Administration___wdes-stats___210203_002.jpg",
+    "OpenSource/stories/screenshots/Administration___Serveurs___wdes-stats___210203_003.jpg",
+    "OpenSource/stories/screenshots/Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg",
+    "OpenSource/stories/screenshots/Home_status_Datacenters_network_210203_007.jpg",
+    "OpenSource/stories/screenshots/Server_stats_status_Datacenters_network_210203_008.jpg",
+]
 
 [taxonomies]
 tags = ["OSS-story"]

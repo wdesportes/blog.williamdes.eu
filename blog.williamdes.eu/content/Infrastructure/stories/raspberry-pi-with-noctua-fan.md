@@ -2,10 +2,22 @@
 title = "Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan"
 date = 2021-08-30T13:30:00+00:02
 updated = 2021-08-30T14:40:00+00:02
-category = "Story"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+headline = "I changed my Raspberry Pi fan for a Noctua NF-A4x10 5V PWM and had a 2° temperature drop compared to the GeeekPi case fan."
+keywords = ["RaspberryPi", "GeeekPi", "Noctua", "NF-A4x10"]
+category = "Story"
+images = [
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_kit.jpeg",
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview.jpg",
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.jpg",
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_GPIO_pins.jpg",
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg",
+    "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg",
+    "Infrastructure/stories/RaspberryPi_4_cutting_and_soldering_for_the_fan.jpeg",
+]
 
 [taxonomies]
 tags = ["infra-story", "RaspberryPi"]

@@ -2,10 +2,12 @@
 title = "Welcome to my blog !"
 date = 2021-01-01T12:00:00Z
 updated = 2021-01-13T23:00:00Z
-category = "Story"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
+headline = "This is my first blog post ever, I hope you will be interested by what I post."
+category = "Story"
 
 [taxonomies]
 tags = ["story", "other"]
