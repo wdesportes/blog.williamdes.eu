@@ -24,9 +24,8 @@
     {% if page.extra.author and page.extra.author_url -%}
     "author": {
         "@type": "Person",
-        "name": "{{ page.extra.author }}"
-        {%- if page.extra.author_url %}
-        "url": "{{ page.extra.author_url | safe }}"{% endif %}
+        "name": "{{ page.extra.author }}",
+        "url": "{{ page.extra.author_url | safe }}"
     },{% endif %}
     "mainEntityOfPage": "True",
     {% if page.extra.keywords %}"keywords": {{ page.extra.keywords | json_encode | safe }},{% endif %}
