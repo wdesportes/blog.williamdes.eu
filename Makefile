@@ -1,7 +1,7 @@
 
 CONTAINER_USER="$(shell id -u):$(shell id -g)"
 
-IMAGE="ghcr.io/getzola/zola:v0.15.3"
+IMAGE="ghcr.io/getzola/zola:v0.16.1"
 
 CONTAINER_NAME="blog.williamdes.eu"
 PROJECT_NAME="blog.williamdes.eu"
