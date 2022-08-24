@@ -10,7 +10,7 @@
 		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
 		<published>2021-02-21T00:00:00+00:00</published>
 		<updated>2021-02-25T01:50:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
 		<id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
 		<content type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-story&quot;&gt;The story&lt;&#x2F;h3&gt;
@@ -31,11 +31,11 @@ It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in 
 &lt;p&gt;(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;configure-the-domain&quot;&gt;Configure the domain&lt;&#x2F;h4&gt;
 &lt;p&gt;Use the bolt icon on the login modal.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;your-vault-s-view-from-the-chrome-extension&quot;&gt;Your vault&#x27;s view from the Chrome extension&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;your-vault-s-view-from-the-web-ui&quot;&gt;Your vault&#x27;s view from the web UI&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;docker-compose&quot;&gt;Docker compose&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;yml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yml &quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bitwarden&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwardenrs&#x2F;server
@@ -74,7 +74,7 @@ It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in 
 		<title>A new uptime service for my infrastructure (upptime)</title>
 		<published>2021-02-03T15:00:00+00:00</published>
 		<updated>2021-02-24T17:10:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/" type="text/html"/>
 		<id>https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/</id>
 		<content type="html">&lt;p&gt;Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;some-story&quot;&gt;Some story&lt;&#x2F;h2&gt;
@@ -99,26 +99,26 @@ It is a great tool and I recommend it but having paid features was not for me, s
 Conclusion: it works on my workstation, not in production.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;screenshots-of-the-old-service&quot;&gt;Screenshots of the old service&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;the-homepage&quot;&gt;The homepage&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Accueil__wdes-stats___210203_004.jpg&quot; alt=&quot;The wdes-stats homepage&quot; title=&quot;The wdes-stats homepage&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Accueil__wdes-stats___210203_004.jpg&quot; alt=&quot;The wdes-stats homepage&quot; title=&quot;The wdes-stats homepage&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;the-admin-welcome&quot;&gt;The admin welcome&lt;&#x2F;h3&gt;
 &lt;p&gt;(After a GitHub login)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Administration___wdes-stats___210203_002.jpg&quot; alt=&quot;The wdes-stats admin welcome&quot; title=&quot;The wdes-stats admin welcome&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Administration___wdes-stats___210203_002.jpg&quot; alt=&quot;The wdes-stats admin welcome&quot; title=&quot;The wdes-stats admin welcome&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;the-servers-list&quot;&gt;The servers list&lt;&#x2F;h3&gt;
 &lt;p&gt;(with a enable&#x2F;disable button)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Administration___Serveurs___wdes-stats___210203_003.jpg&quot; alt=&quot;The wdes-stats servers list&quot; title=&quot;The wdes-stats servers list&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Administration___Serveurs___wdes-stats___210203_003.jpg&quot; alt=&quot;The wdes-stats servers list&quot; title=&quot;The wdes-stats servers list&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;a-time-stats-page&quot;&gt;A time stats page&lt;&#x2F;h3&gt;
 &lt;p&gt;(with a pie chart of the status codes)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg&quot; alt=&quot;The wdes-stats time stats page&quot; title=&quot;The wdes-stats time stats page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Statistiques_de_temps_du_serveur__wdes-stats___210203_005.jpg&quot; alt=&quot;The wdes-stats time stats page&quot; title=&quot;The wdes-stats time stats page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mirating-to-the-new-service&quot;&gt;Mirating to the new service&lt;&#x2F;h2&gt;
 &lt;p&gt;I did follow the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;docs&#x2F;get-started&quot;&gt;manual&lt;&#x2F;a&gt; and that was it !
 Here it is: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;status.datacenters.network&#x2F;&quot;&gt;https:&#x2F;&#x2F;status.datacenters.network&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;(did I choose to keep the watermarks, absolutely !)&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;screenshots&quot;&gt;Screenshots&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;the-homepage-1&quot;&gt;The homepage&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Home_status_Datacenters_network_210203_007.jpg&quot; alt=&quot;The status upptime homepage&quot; title=&quot;The upptime homepage&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Home_status_Datacenters_network_210203_007.jpg&quot; alt=&quot;The status upptime homepage&quot; title=&quot;The upptime homepage&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;a-time-stats-page-1&quot;&gt;A time stats page&lt;&#x2F;h3&gt;
 &lt;p&gt;(yes, it says it is down and &lt;del&gt;I do not know why for now&lt;&#x2F;del&gt; this is because if you use a custom commit template you can break the parsing, see the issue for that: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;upptime&#x2F;upptime&#x2F;issues&#x2F;268&quot;&gt;here&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Server_stats_status_Datacenters_network_210203_008.jpg&quot; alt=&quot;The upptime time stats page&quot; title=&quot;The upptime time stats page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;..&#x2F;screenshots&#x2F;Server_stats_status_Datacenters_network_210203_008.jpg&quot; alt=&quot;The upptime time stats page&quot; title=&quot;The upptime time stats page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

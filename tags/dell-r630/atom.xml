@@ -10,7 +10,7 @@
 		<title>Migrating to a new server housed at Dyjix</title>
 		<published>2021-07-02T20:20:00+00:02</published>
 		<updated>2021-07-24T17:00:00+00:02</updated>
-		<link href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
 		<content type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h4 id=&quot;migration&quot;&gt;Migration&lt;&#x2F;h4&gt;
@@ -53,11 +53,11 @@ The route to the IPV6 block will be deployed soon to Internet !
 This server is now owned by my company: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wdes.fr&#x2F;en&#x2F;&quot;&gt;Wdes SAS&lt;&#x2F;a&gt; and I am very satisfied with the machine, it works great and has all the performance needed.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;some-pictures&quot;&gt;Some pictures&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;housing-at-dyjix&quot;&gt;Housing at Dyjix&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg&quot; alt=&quot;The server installed at Dyjix&quot; title=&quot;The server installed at Dyjix&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg&quot; alt=&quot;The server installed at Dyjix&quot; title=&quot;The server installed at Dyjix&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;un-boxing&quot;&gt;Un-boxing&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_In_A_Box.jpg&quot; alt=&quot;The server in a box&quot; title=&quot;The server in a box&quot; &#x2F;&gt;
-&lt;img src=&quot;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Closed.jpg&quot; alt=&quot;The server closed&quot; title=&quot;The server closed&quot; &#x2F;&gt;
-&lt;img src=&quot;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Open.jpg&quot; alt=&quot;The server open&quot; title=&quot;The server open&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_In_A_Box.jpg&quot; alt=&quot;The server in a box&quot; title=&quot;The server in a box&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Closed.jpg&quot; alt=&quot;The server closed&quot; title=&quot;The server closed&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Open.jpg&quot; alt=&quot;The server open&quot; title=&quot;The server open&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>
 </feed>

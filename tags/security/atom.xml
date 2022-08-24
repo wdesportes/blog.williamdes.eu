@@ -10,7 +10,7 @@
 		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
 		<published>2021-02-21T00:00:00+00:00</published>
 		<updated>2021-02-25T01:50:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
 		<id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
 		<content type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-story&quot;&gt;The story&lt;&#x2F;h3&gt;
@@ -31,11 +31,11 @@ It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in 
 &lt;p&gt;(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;configure-the-domain&quot;&gt;Configure the domain&lt;&#x2F;h4&gt;
 &lt;p&gt;Use the bolt icon on the login modal.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;your-vault-s-view-from-the-chrome-extension&quot;&gt;Your vault&#x27;s view from the Chrome extension&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;your-vault-s-view-from-the-web-ui&quot;&gt;Your vault&#x27;s view from the web UI&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;docker-compose&quot;&gt;Docker compose&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;yml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yml &quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bitwarden&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwardenrs&#x2F;server

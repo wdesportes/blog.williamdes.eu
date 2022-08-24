@@ -10,7 +10,7 @@
 		<title>Report for September 2021</title>
 		<published>2021-08-30T12:00:00+00:00</published>
 		<updated>2021-09-23T23:50:00+02:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/09/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/09/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/09/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-35&quot;&gt;First week (35)&lt;&#x2F;h2&gt;
@@ -36,7 +36,7 @@ And finished a merge of QA into master, updating the proper baselines.&lt;&#x2F;
 		<title>Report for August 2021</title>
 		<published>2021-08-01T12:00:00+00:00</published>
 		<updated>2021-08-30T13:28:00+02:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/08/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/08/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/08/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-31&quot;&gt;First week (31)&lt;&#x2F;h2&gt;
@@ -124,7 +124,7 @@ And worked all day on making relation setup work correctly on each different sce
 		<title>Report for July 2021</title>
 		<published>2021-07-01T12:00:00+00:00</published>
 		<updated>2021-08-03T22:25:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/07/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/07/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/07/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for July 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-26&quot;&gt;First week (26)&lt;&#x2F;h2&gt;
@@ -204,7 +204,7 @@ Also did some issue management.&lt;&#x2F;p&gt;
 		<title>Report for June 2021</title>
 		<published>2021-06-01T12:00:00+00:00</published>
 		<updated>2021-07-04T22:25:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/06/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/06/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/06/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for June 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-22&quot;&gt;First week (22)&lt;&#x2F;h2&gt;
@@ -305,7 +305,7 @@ Finally I worked on the Mroonga support PR.&lt;&#x2F;p&gt;
 		<title>Report for May 2021</title>
 		<published>2021-05-01T12:00:00+00:00</published>
 		<updated>2021-06-01T11:50:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/05/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/05/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/05/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for May 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-18&quot;&gt;First week (18)&lt;&#x2F;h2&gt;
@@ -330,7 +330,7 @@ Now it is fixed and used. I built a secure unique ID to identify anonymously our
 		<title>Report for April 2021</title>
 		<published>2021-04-01T12:00:00+00:00</published>
 		<updated>2021-05-06T00:50:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/04/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for April 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-13&quot;&gt;First week (13)&lt;&#x2F;h2&gt;
@@ -442,7 +442,7 @@ Also did issue triage and pull-request merging and review.&lt;&#x2F;p&gt;
 		<title>Report for March 2021</title>
 		<published>2021-03-01T12:00:00+00:00</published>
 		<updated>2021-03-30T03:10:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/03/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/03/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/03/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for March 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-09&quot;&gt;First week (09)&lt;&#x2F;h2&gt;
@@ -541,7 +541,7 @@ Did some issue triage and improved some scripts installing Yarn modules in our s
 		<title>Report for February 2021</title>
 		<published>2021-02-01T12:00:00+00:00</published>
 		<updated>2021-02-28T17:22:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/02/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/02/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/02/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for February 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-05&quot;&gt;First week (05)&lt;&#x2F;h2&gt;
@@ -637,7 +637,7 @@ Also did search for bugs that could be solved in the issue base.&lt;&#x2F;p&gt;
 		<title>Follow my phpMyAdmin adventure</title>
 		<published>2021-01-13T12:00:00+00:00</published>
 		<updated>2021-01-13T12:00:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
 		<content type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
@@ -652,7 +652,7 @@ Since then I am a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=
 		<title>Report for January 2021</title>
 		<published>2021-01-01T12:00:00+00:00</published>
 		<updated>2021-01-31T23:41:00+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for January 2021.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-01&quot;&gt;First week (01)&lt;&#x2F;h2&gt;
@@ -743,7 +743,7 @@ I did write tests to reproduce an &lt;a rel=&quot;noopener&quot; target=&quot;_b
 		<title>Report for December 2020</title>
 		<published>2020-12-31T12:00:00+00:00</published>
 		<updated>2021-01-13T20:11:45+00:00</updated>
-		<link href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
 		<id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
 		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
