@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Making NVME SSDs work on a DELL R630</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="The adventure it has been to make NVME SSDs work on a DELL R630 server.">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Making NVME SSDs work on a DELL R630">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server">
+        <meta property="og:description" content="The adventure it has been to make NVME SSDs work on a DELL R630 server.">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2022-05-20">
+        <meta property="article:modified_time" content="2022-08-15">
+        <meta property="article:author" content="https:&#x2F;&#x2F;williamdes.eu">
+        <meta property="article:tags" content="infra-story"><meta property="article:tags" content="DELL"><meta property="article:tags" content="DELL-R630">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/stories",
+                    "name": "stories"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server",
+                    "name": "Making NVME SSDs work on a DELL R630"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/",
+    "headline": "Making NVME SSDs work on a DELL R630",
+    "alternativeHeadline": "The adventure it has been to make NVME SSDs work on a DELL R630 server.",
+    "dateCreated": "2022-05-20T00:07:00+0002",
+    "datePublished": "2022-05-20T00:07:00+0002",
+    "dateModified": "2022-08-15T00:14:13+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["housing","nvme","ssd","sas","sata"],
+    "articleSection": "Story",
+    "genre": ["infra-story","DELL","DELL-R630"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Making NVME SSDs work on a DELL R630</h1>
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2022-05-20T00:07:00+0002">May 20, 2022 00:07</time></span>
+            <span class="post-date"> and updated: <time datetime="2022-08-15T00:14:13+0002">August 15, 2022 00:14</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">9 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>The adventure it has been to make NVME SSDs work on a DELL R630 server.</p>
+<span id="continue-reading"></span>
+<p>This is the story about a R630 server having NVME, SAS and SATA disks working together.
+The server is owner by my company but for this blog post let's say it is my server.
+I did buy the server (<a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-poweredge-r630-10-sff-configure-to-order">Dell PowerEdge R630 1U 10x 2.5&quot; (SFF)</a>) in January of 2022.</p>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_MissingACPU.jpg" alt="DELL R630 missing a CPU" title="DELL R630 missing a CPU" /></p>
+<h3 id="the-failed-deployment-in-a-datacenter">The failed deployment in a datacenter</h3>
+<p>I was confident I could swap this new machine with the other one, they where quite identical.
+But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.</p>
+<p>The machine was configured to have a <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp">NVME U2 extender</a> and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-gdj3j-perc-h330-zm-mini-mono-13g-raid-controller-r75vt">PERC (RAID card)</a> that had <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j">the cables</a> included with it and that did solve the error I had that prevented the boot the other day at the datacenter.</p>
+<h4 id="the-perc-card">The PERC card</h4>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Card.jpg" alt="PERC card" title="PERC card" /></p>
+<h4 id="the-nvme-expander">The NVME expander</h4>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_NVME_Expander_Card.jpg" alt="NVME expander" title="NVME expander" /></p>
+<h4 id="mounting-the-cables-and-the-perc-raid-kit">Mounting the cables and the PERC/RAID kit</h4>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Plugged_In.jpg" alt="PERC card plugged in" title="PERC card plugged in" /></p>
+<p>I put in place the kit and plugged it the cables each one according to the labels. (yes it knows and complains if you switch them)</p>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_BP_Plugged_Cables.jpg" alt="PERC card plugged in BackPlane cables" title="PERC card plugged in BackPlane cables" /></p>
+<h5 id="the-cables">The cables</h5>
+<h5 id="perc-card">PERC card</h5>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Cables.jpg" alt="PERC card cables" title="PERC card cables" /></p>
+<h5 id="nvme-expander-into-the-backplane">NVME expander into the BackPlane</h5>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_NVME_Expander_Card_BackPlane_PluggedIn.jpg" alt="NVME expander card cables" title="NVME expander card cables" /></p>
+<h3 id="trying-to-make-nvme-disks-work">Trying to make NVME disks work</h3>
+<p>I did buy some NVME drives so I could test my setup. I was innocently thinking that it would work right after I slide then in the <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-8fkxc-poweredge-13g-sff-hot-swap-caddy-08fkxc">caddies</a> but obviously there was more funny things to happen.
+So I received the disks and did setup up one and then two. None of the disks where showing up, and the NVME card was not showing.</p>
+<p>I was not understanding what was wrong because the NVME card had green leds and the disks too. I then took the bet it was because they where NVME gen 4 and the system could only handle gen 3 but that was not it. I also did order a SAS disk to try it.</p>
+<p>I was now having a system with: 3 NVMEs not working, one SAS and one SATA disk showing up.
+After some debug and trying dumb things I tried to put the NVME card on the reizer of CPU 1.
+And boom ! it did show up in Linux. This was it, I had found something (written in very small on the other reizer was &quot;CPU 2&quot;). But on this reizer the cables where too short. So I was still having 3 non showing NVMEs.</p>
+<h4 id="a-second-cpu">A second CPU</h4>
+<p>I decided to contact the seller to buy a second CPU and RAM. Got them delivered very quickly (thank you &quot;UPS express&quot; !).
+Now I did put the CPU 2 and still nothing shows up, not even the CPU 2.
+After some <a rel="noopener" target="_blank" href="https://www.reddit.com/r/Dell/comments/usm9m8/r630_dual_cpu_not_showing_up/">asking Internet on Reddit</a> people started saying it was probably the motherboard.</p>
+<h4 id="new-motherboard">New motherboard</h4>
+<p>After contacting the seller I got it repaired by them and when I got back this server it did boot up and show 2 CPUs, all RAM, SAS, NVME and SATA disks.
+This was the end of 6 months of searching how to make a R630 work with NVME disks.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>A second CPU+RAM and a reizer PERC card + NVME enhancement card where needed for this setup.
+After that 4 NVME slots where available, SAS and SATA disks work too. All thoes types of disks can be together.</p>
+<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg" alt="DELL R630 with two CPUs a NVME expander and a PERC card" title="DELL R630 with two CPUs a NVME expander and a PERC card" /></p>
+<h3 id="lspci">lspci</h3>
+<p>This are the new lines in <code>lspci</code></p>
+<pre data-lang="diff" style="background-color:#2b303b;color:#c0c5ce;" class="language-diff "><code class="language-diff" data-lang="diff"><span>03:00.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:04.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:05.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:06.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:07.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>ff:0e.2 Unassigned class [ffff]: Intel Corporation Device 6ff2 (rev 01)
+</span><span>ff:0e.3 Unassigned class [ffff]: Intel Corporation Device 6ff3 (rev 01)
+</span></code></pre>
+<h4 id="full-lspci-before">Full <code>lspci</code> before</h4>
+<pre data-lang="lspci" style="background-color:#2b303b;color:#c0c5ce;" class="language-lspci "><code class="language-lspci" data-lang="lspci"><span>00:11.0 Unassigned class [ff00]: Intel Corporation C610/X99 series chipset SPSR (rev 05)
+</span><span>00:11.4 SATA controller: Intel Corporation C610/X99 series chipset sSATA Controller [AHCI mode] (rev 05)
+</span><span>00:16.0 Communication controller: Intel Corporation C610/X99 series chipset MEI Controller #1 (rev 05)
+</span><span>00:16.1 Communication controller: Intel Corporation C610/X99 series chipset MEI Controller #2 (rev 05)
+</span><span>00:1a.0 USB controller: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 (rev 05)
+</span><span>00:1c.0 PCI bridge: Intel Corporation C610/X99 series chipset PCI Express Root Port #1 (rev d5)
+</span><span>00:1c.7 PCI bridge: Intel Corporation C610/X99 series chipset PCI Express Root Port #8 (rev d5)
+</span><span>00:1d.0 USB controller: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #1 (rev 05)
+</span><span>00:1f.0 ISA bridge: Intel Corporation C610/X99 series chipset LPC Controller (rev 05)
+</span><span>00:1f.2 SATA controller: Intel Corporation C610/X99 series chipset 6-Port SATA Controller [AHCI mode] (rev 05)
+</span><span>01:00.0 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.1 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.2 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.3 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>02:00.0 Serial Attached SCSI controller: Broadcom / LSI SAS3008 PCI-Express Fusion-MPT SAS-3 (rev 02)
+</span><span>09:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
+</span><span>0a:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
+</span><span>0b:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe-PCI Bridge [PPB]
+</span><span>0c:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. G200eR2 (rev 01)
+</span></code></pre>
+<h4 id="full-lspci-after">Full <code>lspci</code> after</h4>
+<pre data-lang="lspci" style="background-color:#2b303b;color:#c0c5ce;" class="language-lspci "><code class="language-lspci" data-lang="lspci"><span>00:11.0 Unassigned class [ff00]: Intel Corporation C610/X99 series chipset SPSR (rev 05)
+</span><span>00:11.4 SATA controller: Intel Corporation C610/X99 series chipset sSATA Controller [AHCI mode] (rev 05)
+</span><span>00:16.0 Communication controller: Intel Corporation C610/X99 series chipset MEI Controller #1 (rev 05)
+</span><span>00:16.1 Communication controller: Intel Corporation C610/X99 series chipset MEI Controller #2 (rev 05)
+</span><span>00:1a.0 USB controller: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 (rev 05)
+</span><span>00:1c.0 PCI bridge: Intel Corporation C610/X99 series chipset PCI Express Root Port #1 (rev d5)
+</span><span>00:1c.7 PCI bridge: Intel Corporation C610/X99 series chipset PCI Express Root Port #8 (rev d5)
+</span><span>00:1d.0 USB controller: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #1 (rev 05)
+</span><span>00:1f.0 ISA bridge: Intel Corporation C610/X99 series chipset LPC Controller (rev 05)
+</span><span>00:1f.2 SATA controller: Intel Corporation C610/X99 series chipset 6-Port SATA Controller [AHCI mode] (rev 05)
+</span><span>01:00.0 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.1 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.2 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>01:00.3 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1/10 Gigabit Ethernet (rev 10)
+</span><span>02:00.0 Serial Attached SCSI controller: Broadcom / LSI SAS3008 PCI-Express Fusion-MPT SAS-3 (rev 02)
+</span><span>03:00.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:04.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:05.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:06.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>04:07.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
+</span><span>0e:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
+</span><span>0f:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
+</span><span>10:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe-PCI Bridge [PPB]
+</span><span>11:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. G200eR2 (rev 01)
+</span><span>ff:0e.2 Unassigned class [ffff]: Intel Corporation Device 6ff2 (rev 01)
+</span><span>ff:0e.3 Unassigned class [ffff]: Intel Corporation Device 6ff3 (rev 01)
+</span></code></pre>
+<style>
+img {
+    width: 24rem;
+}
+</style>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-story/">infra-story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/dell/">DELL</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/dell-r630/">DELL-R630</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2022 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <span>&middot;</span>
+            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
