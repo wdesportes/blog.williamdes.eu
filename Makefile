@@ -20,3 +20,8 @@ serve:
 
 date:
 	date +'%Y-%m-%dT%H:%M:%SZ' --utc
+
+cleanup:
+	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg
+	@echo "Cleaning up..."
+	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg -print0 -exec exiftool "-gps*=" {} \;
