@@ -1,7 +1,7 @@
 +++
 title = "Installing Crowdsec on pfSense"
 date = 2022-09-26T00:10:00+00:02
-updated = 2022-09-27T00:12:29+00:02
+updated = 2022-09-27T00:12:53+00:02
 
 [extra]
 author = "William Desportes"
@@ -39,7 +39,7 @@ Follow the post install instructions.
 To see what running `/var` on tmpfs is about: [screenshot](https://serverfault.com/a/832036/336084)
 
 You will need to change `data_dir` and `db_path` in `/usr/local/etc/crowdsec/config.yaml`.
-Set the folder to `/usr/local/crowdsec/data` and create it: `mkdir -p /usr/local/crowdsec/data/`
+Set the folder to `/usr/local/crowdsec/data/` and create it: `mkdir -p /usr/local/crowdsec/data/`
 
 #### Start the services
 
@@ -71,6 +71,7 @@ Reference: [pfSense documentation on boot scripts](https://docs.netgate.com/pfse
 tail -f /var/log/crowdsec*
 ```
 
+(You can logout/login to make cscli work withour the full path needed.)
 Find where the CLI is located:
 
 ```sh
@@ -109,9 +110,10 @@ Source code: [GitHub](https://github.com/crowdsecurity/cs-blocklist-mirror)
 curl -# -L -o crowdsec-blocklist-mirror-freebsd-amd64.tgz https://github.com/crowdsecurity/cs-blocklist-mirror/releases/download/v0.0.1/crowdsec-blocklist-mirror-freebsd-amd64.tgz
 tar -xzvf crowdsec-blocklist-mirror-freebsd-amd64.tgz -C /tmp
 rm crowdsec-blocklist-mirror-freebsd-amd64.tgz
+mkdir /usr/local/etc/crowdsec/bouncers/
 mv /tmp/crowdsec-blocklist-mirror-v0.0.1/config/crowdsec-blocklist-mirror.yaml /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
 mv /tmp/crowdsec-blocklist-mirror-v0.0.1/crowdsec-blocklist-mirror /usr/local/bin/
-rm -r /tmp/crowdsec-blocklist-mirror-v0.0.1/
+rm -vr /tmp/crowdsec-blocklist-mirror-v0.0.1/
 ```
 
 ##### Edit the config
@@ -197,6 +199,8 @@ service crowdsec_blocklist_mirror start
 ```
 
 #### Check that it works
+
+If there is no IPs, run: `service crowdsec restart` and re-try.
 
 ```sh
 curl http://127.0.0.1:41412/security/blocklist
