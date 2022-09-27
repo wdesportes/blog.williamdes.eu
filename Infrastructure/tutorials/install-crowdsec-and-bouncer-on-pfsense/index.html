@@ -98,7 +98,7 @@
     "alternativeHeadline": "Installing CrowdSec on pfSense",
     "dateCreated": "2022-09-26T00:10:00+0002",
     "datePublished": "2022-09-26T00:10:00+0002",
-    "dateModified": "2022-09-27T00:12:29+0002",
+    "dateModified": "2022-09-27T00:12:53+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -203,7 +203,7 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-09-26T00:10:00+0002">September 26, 2022 00:10</time></span>
-            <span class="post-date"> and updated: <time datetime="2022-09-27T00:12:29+0002">September 27, 2022 00:12</time></span>
+            <span class="post-date"> and updated: <time datetime="2022-09-27T00:12:53+0002">September 27, 2022 00:12</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">5 min read</span>
         </div>
@@ -220,7 +220,7 @@
 <h5 id="for-systems-running-var-on-tmpfs">For systems running <code>/var</code> on tmpfs</h5>
 <p>To see what running <code>/var</code> on tmpfs is about: <a rel="noopener" target="_blank" href="https://serverfault.com/a/832036/336084">screenshot</a></p>
 <p>You will need to change <code>data_dir</code> and <code>db_path</code> in <code>/usr/local/etc/crowdsec/config.yaml</code>.
-Set the folder to <code>/usr/local/crowdsec/data</code> and create it: <code>mkdir -p /usr/local/crowdsec/data/</code></p>
+Set the folder to <code>/usr/local/crowdsec/data/</code> and create it: <code>mkdir -p /usr/local/crowdsec/data/</code></p>
 <h4 id="start-the-services">Start the services</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec start
 </span></code></pre>
@@ -236,7 +236,8 @@ Set the folder to <code>/usr/local/crowdsec/data</code> and create it: <code>mkd
 <h4 id="look-at-your-logs">Look at your logs</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">tail -f</span><span> /var/log/crowdsec*
 </span></code></pre>
-<p>Find where the CLI is located:</p>
+<p>(You can logout/login to make cscli work withour the full path needed.)
+Find where the CLI is located:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">find</span><span> /</span><span style="color:#bf616a;"> -name</span><span> cscli
 </span></code></pre>
 <h4 id="enrol-the-instance-using-cscli">Enrol the instance using <code>cscli</code>.</h4>
@@ -258,9 +259,10 @@ Set the folder to <code>/usr/local/crowdsec/data</code> and create it: <code>mkd
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl</span><span> -#</span><span style="color:#bf616a;"> -L -o</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz https://github.com/crowdsecurity/cs-blocklist-mirror/releases/download/v0.0.1/crowdsec-blocklist-mirror-freebsd-amd64.tgz
 </span><span style="color:#bf616a;">tar -xzvf</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz</span><span style="color:#bf616a;"> -C</span><span> /tmp
 </span><span style="color:#bf616a;">rm</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz
+</span><span style="color:#bf616a;">mkdir</span><span> /usr/local/etc/crowdsec/bouncers/
 </span><span style="color:#bf616a;">mv</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/config/crowdsec-blocklist-mirror.yaml /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
 </span><span style="color:#bf616a;">mv</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/crowdsec-blocklist-mirror /usr/local/bin/
-</span><span style="color:#bf616a;">rm -r</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/
+</span><span style="color:#bf616a;">rm -vr</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/
 </span></code></pre>
 <h5 id="edit-the-config">Edit the config</h5>
 <p>(Source: <code>/tmp/crowdsec-blocklist-mirror-v0.0.1/install.sh</code>)</p>
@@ -323,6 +325,7 @@ Set the folder to <code>/usr/local/crowdsec/data</code> and create it: <code>mkd
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_blocklist_mirror start
 </span></code></pre>
 <h4 id="check-that-it-works">Check that it works</h4>
+<p>If there is no IPs, run: <code>service crowdsec restart</code> and re-try.</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl</span><span> http://127.0.0.1:41412/security/blocklist
 </span></code></pre>
 <h4 id="add-a-firewall-alias">Add a firewall alias</h4>

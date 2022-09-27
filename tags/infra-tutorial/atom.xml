@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-27T00:12:29+00:02</updated>
+	<updated>2022-09-27T00:12:53+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2022-09-27T00:12:29+00:02</updated>
+		<updated>2022-09-27T00:12:53+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
 		<content type="html">&lt;p&gt;Installing &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt; on pfSense&lt;&#x2F;p&gt;
@@ -24,7 +24,7 @@
 &lt;h5 id=&quot;for-systems-running-var-on-tmpfs&quot;&gt;For systems running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs&lt;&#x2F;h5&gt;
 &lt;p&gt;To see what running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs is about: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;serverfault.com&#x2F;a&#x2F;832036&#x2F;336084&quot;&gt;screenshot&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;You will need to change &lt;code&gt;data_dir&lt;&#x2F;code&gt; and &lt;code&gt;db_path&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;config.yaml&lt;&#x2F;code&gt;.
-Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&lt;&#x2F;code&gt; and create it: &lt;code&gt;mkdir -p &#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt; and create it: &lt;code&gt;mkdir -p &#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;start-the-services&quot;&gt;Start the services&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec start
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -40,7 +40,8 @@ Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&lt;&#
 &lt;h4 id=&quot;look-at-your-logs&quot;&gt;Look at your logs&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tail -f&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;var&#x2F;log&#x2F;crowdsec*
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Find where the CLI is located:&lt;&#x2F;p&gt;
+&lt;p&gt;(You can logout&#x2F;login to make cscli work withour the full path needed.)
+Find where the CLI is located:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -name&lt;&#x2F;span&gt;&lt;span&gt; cscli
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;enrol-the-instance-using-cscli&quot;&gt;Enrol the instance using &lt;code&gt;cscli&lt;&#x2F;code&gt;.&lt;&#x2F;h4&gt;
@@ -62,9 +63,10 @@ Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&lt;&#
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; -#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -L -o&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&#x2F;releases&#x2F;download&#x2F;v0.0.1&#x2F;crowdsec-blocklist-mirror-freebsd-amd64.tgz
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tar -xzvf&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -C&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;config&#x2F;crowdsec-blocklist-mirror.yaml &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;crowdsec-blocklist-mirror &#x2F;usr&#x2F;local&#x2F;bin&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -r&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -vr&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h5 id=&quot;edit-the-config&quot;&gt;Edit the config&lt;&#x2F;h5&gt;
 &lt;p&gt;(Source: &lt;code&gt;&#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;install.sh&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
@@ -127,6 +129,7 @@ Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&lt;&#
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror start
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;check-that-it-works&quot;&gt;Check that it works&lt;&#x2F;h4&gt;
+&lt;p&gt;If there is no IPs, run: &lt;code&gt;service crowdsec restart&lt;&#x2F;code&gt; and re-try.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; http:&#x2F;&#x2F;127.0.0.1:41412&#x2F;security&#x2F;blocklist
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;add-a-firewall-alias&quot;&gt;Add a firewall alias&lt;&#x2F;h4&gt;
