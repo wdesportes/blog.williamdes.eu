@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - security</title>
-	<link href="https://blog.williamdes.eu/tags/security/atom.xml" rel="self" type="application/atom+xml"/>
+	<title>Williamdes&#x27;s blog - infra-tutorial</title>
+	<link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
 	<updated>2022-09-27T00:12:29+00:02</updated>
-	<id>https://blog.williamdes.eu/tags/security/atom.xml</id>
+	<id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>
@@ -155,70 +155,6 @@ I could not figure out how to know that it actually works.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_firewall start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
-		<published>2021-02-21T00:00:00+00:00</published>
-		<updated>2021-02-25T01:50:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
-		<id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
-		<content type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-story&quot;&gt;The story&lt;&#x2F;h3&gt;
-&lt;p&gt;I was using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; since a couple of months I am convinced it is a good tool and started searching for self hosted options.
-Bitwarden is open-source, not like LastPass. You can browse the code &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitwarden&quot;&gt;on their GitHub&lt;&#x2F;a&gt;.
-I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&quot;&gt;someone&lt;&#x2F;a&gt; had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;wiki&#x2F;Proxy-examples&quot;&gt;configuring my haproxy&lt;&#x2F;a&gt; I got my deployed container working and could start my migration.
-Wait, you are asking If I had deployment issues ? hahaha, no. I used the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hub.docker.com&#x2F;r&#x2F;bitwardenrs&#x2F;server&quot;&gt;docker image&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;wiki&#x2F;Using-Docker-Compose&quot;&gt;with docker compose&lt;&#x2F;a&gt; and it just works.&lt;&#x2F;p&gt;
-&lt;p&gt;You can configure the domains allowed to register to your Bitwarden instance, very nice feature !
-And more cool things, just have a look to the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;blob&#x2F;1.19.0&#x2F;.env.template&quot;&gt;.env template&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I had a look to a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=lfHDqxCJA90&quot;&gt;French video&lt;&#x2F;a&gt; to install the official server using Docker, I could see a lot of &amp;quot;overkill&amp;quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.&lt;&#x2F;p&gt;
-&lt;p&gt;After setting up my instance I Exported all my Bitwarden accounts and my LastPass account and imported the data.
-Logged in with my phone and browser extension after defining the URL of my instance and that was it.&lt;&#x2F;p&gt;
-&lt;p&gt;What about you, just have a try ;)&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;some-details-about-how-it-works&quot;&gt;Some details about how it works&lt;&#x2F;h3&gt;
-&lt;p&gt;It works great, anyway nothing surprising with a Rust back-end.
-It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in case.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;some-screenshots&quot;&gt;Some screenshots&lt;&#x2F;h3&gt;
-&lt;p&gt;(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;configure-the-domain&quot;&gt;Configure the domain&lt;&#x2F;h4&gt;
-&lt;p&gt;Use the bolt icon on the login modal.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;your-vault-s-view-from-the-chrome-extension&quot;&gt;Your vault&#x27;s view from the Chrome extension&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;your-vault-s-view-from-the-web-ui&quot;&gt;Your vault&#x27;s view from the web UI&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;docker-compose&quot;&gt;Docker compose&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;yml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yml &quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bitwarden&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwardenrs&#x2F;server
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;restart&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;always
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dns_search&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hostname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;domainname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;container_name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;networks&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;my_network&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;aliases&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;                - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mem_limit&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;200m
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mem_reservation&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;100m
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;volumes&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_VOLUME}:&#x2F;data
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;environment&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;WEBSOCKET_ENABLED&lt;&#x2F;span&gt;&lt;span&gt;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SIGNUPS_ALLOWED&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_ENABLE_SIGNUPS}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SIGNUPS_DOMAINS_WHITELIST&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SIGNUPS_DOMAINS_WHITELIST}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ADMIN_TOKEN&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_ADMIN_TOKEN}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;INVITATION_ORG_NAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_INVITATION_ORG_NAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;DOMAIN&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_URL}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_HOST&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_HOST}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_FROM&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_FROM}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_FROM_NAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_FROM_NAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_PORT&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_PORT}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_SSL&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_SSL}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_EXPLICIT_TLS&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_EXPLICIT_TLS}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_USERNAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_USERNAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_PASSWORD&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_PASSWORD}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>

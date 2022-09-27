@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Installing Crowdsec on pfSense</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Installing CrowdSec on pfSense">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="Williamdes&#x27;s blog">
+        
+        <meta property="og:title" content="Installing Crowdsec on pfSense">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense">
+        <meta property="og:description" content="Installing CrowdSec on pfSense">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2022-09-26">
+        <meta property="article:modified_time" content="2022-09-27">
+        <meta property="article:author" content="https:&#x2F;&#x2F;williamdes.eu">
+        <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="security">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense",
+                    "name": "Installing Crowdsec on pfSense"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/",
+    "headline": "Installing Crowdsec on pfSense",
+    "alternativeHeadline": "Installing CrowdSec on pfSense",
+    "dateCreated": "2022-09-26T00:10:00+0002",
+    "datePublished": "2022-09-26T00:10:00+0002",
+    "dateModified": "2022-09-27T00:12:29+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["bouncer","crowdsec","security"],
+    "articleSection": "Tutorial",
+    "genre": ["infra-tutorial","security"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Installing Crowdsec on pfSense</h1>
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2022-09-26T00:10:00+0002">September 26, 2022 00:10</time></span>
+            <span class="post-date"> and updated: <time datetime="2022-09-27T00:12:29+0002">September 27, 2022 00:12</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">5 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Installing <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense</p>
+<span id="continue-reading"></span>
+<p>This is how to install <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense running freeBSD 12.3.</p>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open this <a rel="noopener" target="_blank" href="https://pkgs.org/download/crowdsec">package list</a> in a new browser tab.</p>
+<h3 id="how-to-install">How to install</h3>
+<h4 id="add-pkg">Add pkg</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/quarterly/All/crowdsec-1.3.4_1.pkg
+</span></code></pre>
+<p>Follow the post install instructions.</p>
+<h5 id="for-systems-running-var-on-tmpfs">For systems running <code>/var</code> on tmpfs</h5>
+<p>To see what running <code>/var</code> on tmpfs is about: <a rel="noopener" target="_blank" href="https://serverfault.com/a/832036/336084">screenshot</a></p>
+<p>You will need to change <code>data_dir</code> and <code>db_path</code> in <code>/usr/local/etc/crowdsec/config.yaml</code>.
+Set the folder to <code>/usr/local/crowdsec/data</code> and create it: <code>mkdir -p /usr/local/crowdsec/data/</code></p>
+<h4 id="start-the-services">Start the services</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec start
+</span></code></pre>
+<h4 id="make-it-start-at-boot">Make it start at boot</h4>
+<p>Add to <code>/etc/rc.conf.local</code>:</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
+</span></code></pre>
+<p>And create a file <code>/usr/local/etc/rc.d/crowdsec.sh</code> with contents:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec start
+</span></code></pre>
+<p>Make it executable: <code>chmod +x /usr/local/etc/rc.d/crowdsec.sh</code>.</p>
+<p>Reference: <a rel="noopener" target="_blank" href="https://docs.netgate.com/pfsense/en/latest/development/boot-commands.html#shell-script-option">pfSense documentation on boot scripts</a></p>
+<h4 id="look-at-your-logs">Look at your logs</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">tail -f</span><span> /var/log/crowdsec*
+</span></code></pre>
+<p>Find where the CLI is located:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">find</span><span> /</span><span style="color:#bf616a;"> -name</span><span> cscli
+</span></code></pre>
+<h4 id="enrol-the-instance-using-cscli">Enrol the instance using <code>cscli</code>.</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">/usr/local/bin/cscli</span><span> console enroll xxxxxxxxxxxxxxxxxx
+</span></code></pre>
+<h4 id="see-the-enrolled-instance">See the enrolled instance</h4>
+<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_dashboard_pfsense_instance.jpg" alt="instance on the dashboard at app.crowdsec.net" title="instance on the dashboard at app.crowdsec.net" /></p>
+<h4 id="add-scenarios">Add scenarios</h4>
+<p>Example:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cscli</span><span> scenarios list
+</span><span style="color:#bf616a;">cscli</span><span> scenarios list</span><span style="color:#bf616a;"> -a
+</span><span style="color:#bf616a;">cscli</span><span> scenarios install crowdsecurity/postfix-spam
+</span><span style="color:#bf616a;">cscli</span><span> scenarios install crowdsecurity/dovecot-spam
+</span></code></pre>
+<h3 id="use-the-blocklist-mirror-service">Use the blocklist mirror service</h3>
+<p>Reference: <a rel="noopener" target="_blank" href="https://docs.crowdsec.net/docs/bouncers/blocklist-mirror/">official install docs</a> and <a rel="noopener" target="_blank" href="https://www.crowdsec.net/blog/integrating-crowdsec-with-firewall-appliances">crowdsec blog</a>.</p>
+<p>Source code: <a rel="noopener" target="_blank" href="https://github.com/crowdsecurity/cs-blocklist-mirror">GitHub</a></p>
+<h4 id="install-the-service">Install the service</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl</span><span> -#</span><span style="color:#bf616a;"> -L -o</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz https://github.com/crowdsecurity/cs-blocklist-mirror/releases/download/v0.0.1/crowdsec-blocklist-mirror-freebsd-amd64.tgz
+</span><span style="color:#bf616a;">tar -xzvf</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz</span><span style="color:#bf616a;"> -C</span><span> /tmp
+</span><span style="color:#bf616a;">rm</span><span> crowdsec-blocklist-mirror-freebsd-amd64.tgz
+</span><span style="color:#bf616a;">mv</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/config/crowdsec-blocklist-mirror.yaml /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
+</span><span style="color:#bf616a;">mv</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/crowdsec-blocklist-mirror /usr/local/bin/
+</span><span style="color:#bf616a;">rm -r</span><span> /tmp/crowdsec-blocklist-mirror-v0.0.1/
+</span></code></pre>
+<h5 id="edit-the-config">Edit the config</h5>
+<p>(Source: <code>/tmp/crowdsec-blocklist-mirror-v0.0.1/install.sh</code>)</p>
+<p>Fetch an API key:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cscli</span><span> bouncers add crowdsec-blocklist-mirror-`</span><span style="color:#bf616a;">tr -dc</span><span> A-Za-z0-9 &lt; /dev/urandom | </span><span style="color:#bf616a;">head -c</span><span> 8`</span><span style="color:#bf616a;"> -o</span><span> raw
+</span></code></pre>
+<p>Replace <code>${API_KEY}</code> in <code>/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml</code> with the value.</p>
+<p>Replace <code>${CROWDSEC_LAPI_URL}</code> in <code>/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml</code> with the value found in <code>/usr/local/etc/crowdsec/local_api_credentials.yaml</code>. Most probably <code>http://127.0.0.1:8080/</code>.</p>
+<p>Create a file <code>/usr/local/etc/rc.d/crowdsec_blocklist_mirror</code> with contents:</p>
+<p>(inspired by crowdsec-firewall-bouncer's service file)</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/bin/sh
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># PROVIDE: crowdsec_blocklist_mirror
+</span><span style="color:#65737e;"># REQUIRE: LOGIN DAEMON NETWORKING
+</span><span style="color:#65737e;"># KEYWORD: shutdown
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+</span><span style="color:#65737e;"># to enable this service:
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># crowdsec_blocklist_mirror_enable (bool):	Set it to YES to enable crowdsec block list mirror.
+</span><span style="color:#65737e;">#					Default is &quot;NO&quot;
+</span><span style="color:#65737e;"># crowdsec_blocklist_mirror_config (str):	Set the bouncer config path.
+</span><span style="color:#65737e;">#					Default is &quot;/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml&quot;
+</span><span style="color:#65737e;"># crowdsec_blocklist_mirror_flags (str):	extra flags to run bouncer.
+</span><span style="color:#65737e;">#					Default is &quot;&quot;
+</span><span>
+</span><span style="color:#96b5b4;">.</span><span> /etc/rc.subr
+</span><span>
+</span><span style="color:#bf616a;">name</span><span>=</span><span style="color:#a3be8c;">crowdsec_blocklist_mirror
+</span><span style="color:#bf616a;">desc</span><span>=&quot;</span><span style="color:#a3be8c;">Crowdsec Blocklist Mirror</span><span>&quot;
+</span><span style="color:#bf616a;">rcvar</span><span>=</span><span style="color:#a3be8c;">crowdsec_blocklist_mirror_enable
+</span><span>
+</span><span style="color:#bf616a;">load_rc_config </span><span>$</span><span style="color:#bf616a;">name
+</span><span>
+</span><span style="color:#96b5b4;">: </span><span>&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_enable</span><span>:=</span><span style="color:#a3be8c;">NO}</span><span>&quot;
+</span><span style="color:#96b5b4;">: </span><span>&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_config</span><span>:=</span><span style="color:#a3be8c;">/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml}</span><span>&quot;
+</span><span style="color:#96b5b4;">: </span><span>&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_flags</span><span>:=</span><span style="color:#a3be8c;">}</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">pidfile</span><span>=</span><span style="color:#a3be8c;">/var/run/</span><span>$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">name</span><span style="color:#a3be8c;">}.pid
+</span><span style="color:#bf616a;">required_files</span><span>=&quot;$</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_config</span><span>&quot;
+</span><span style="color:#bf616a;">command</span><span>=&quot;</span><span style="color:#a3be8c;">/usr/local/bin/crowdsec-blocklist-mirror</span><span>&quot;
+</span><span style="color:#bf616a;">start_cmd</span><span>=&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">name</span><span style="color:#a3be8c;">}_start</span><span>&quot;
+</span><span>
+</span><span style="color:#8fa1b3;">crowdsec_blocklist_mirror_start</span><span>() {
+</span><span>    </span><span style="color:#bf616a;">/usr/sbin/daemon -f -p </span><span>${</span><span style="color:#bf616a;">pidfile</span><span>}</span><span style="color:#bf616a;"> -t </span><span>&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">desc</span><span style="color:#a3be8c;">}</span><span>&quot; -- \
+</span><span>        ${</span><span style="color:#bf616a;">command</span><span>} -c &quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_config</span><span style="color:#a3be8c;">}</span><span>&quot; ${</span><span style="color:#bf616a;">crowdsec_blocklist_mirror_flags</span><span>}
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">run_rc_command </span><span>&quot;$</span><span style="color:#bf616a;">1</span><span>&quot;
+</span></code></pre>
+<p>And make it executable: <code>chmod +x /usr/local/etc/rc.d/crowdsec_blocklist_mirror</code></p>
+<h4 id="make-then-start-at-boot">Make then start at boot</h4>
+<p>Add to <code>/etc/rc.conf.local</code>:</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_blocklist_mirror_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
+</span></code></pre>
+<p>Add to the file <code>/usr/local/etc/rc.d/crowdsec.sh</code>:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_blocklist_mirror start
+</span></code></pre>
+<h4 id="start-the-services-1">Start the services</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_blocklist_mirror start
+</span></code></pre>
+<h4 id="check-that-it-works">Check that it works</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl</span><span> http://127.0.0.1:41412/security/blocklist
+</span></code></pre>
+<h4 id="add-a-firewall-alias">Add a firewall alias</h4>
+<p>Go to: <code>Firewall</code> &gt; <code>Aliases</code> &gt; <code>URLs</code> and click on <code>+ Add</code>.
+The type is: <code>URL Table (IPs)</code>.</p>
+<p>Do like on the screenshot using the URL we tried earlier and the save.</p>
+<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_pfsense_add_url_alias.jpg" alt="Adding a firewall URL alias for CrowdSec on pfSense" title="Adding a firewall URL alias for CrowdSec on pfSense" /></p>
+<h4 id="add-a-firewall-rule">Add a firewall rule</h4>
+<p>Go to: <code>Firewall</code> &gt; <code>Rules</code> &gt; <code>Interface name for Internet</code> and click on <code>Add</code>.
+The source is <code>Single host and alias</code> and the type the name of the firewall aslias you created earlier.
+Do like on the screenshot and save. Then apply the changes.</p>
+<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_pfsense_add_firewall_rule.jpg" alt="Adding a firewall rule on the network interface for CrowdSec on pfSense" title="Adding a firewall rule on the network interface for CrowdSec on pfSense" /></p>
+<h3 id="or-use-the-firewall-bouncer-does-it-work-on-pfsense">Or use the firewall bouncer (does it work on pfSense ?)</h3>
+<p>This is an alternative to using the blocklist mirror service.
+I could not figure out how to know that it actually works.</p>
+<h4 id="add-pkg-1">Add pkg</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_4.pkg
+</span></code></pre>
+<p>Follow the post install instructions.</p>
+<h4 id="make-then-start-at-boot-1">Make then start at boot</h4>
+<p>Add to <code>/etc/rc.conf.local</code>:</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_firewall_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
+</span></code></pre>
+<h4 id="start-the-services-2">Start the services</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_firewall start
+</span></code></pre>
+<p>Add to the file <code>/usr/local/etc/rc.d/crowdsec.sh</code>:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_firewall start
+</span></code></pre>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-tutorial/">infra-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/security/">security</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2022 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <span>&middot;</span>
+            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

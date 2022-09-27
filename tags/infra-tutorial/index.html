@@ -26,7 +26,7 @@
 
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
-            
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -40,11 +40,46 @@
                     "@id": "https://blog.williamdes.eu",
                     "name": "Williamdes's blog"
                 }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags",
+                    "name": "Tags"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/tags/infra-tutorial",
+                    "name": "infra-tutorial"
+                }
             }
         ]
     }
 </script>
-        <script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/",
+                "name": "Installing Crowdsec on pfSense",
+                "url": "https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/"
+            }
+        }
+    ],
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "name": "Tag: infra-tutorial"
+}
+</script>
+<script>
             function setTheme() {
                 const time = new Date();
 
@@ -125,64 +160,35 @@
 
         <main class="main">
             
-            <div class="posts">
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>A new uptime service for my infrastructure (upptime)</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>Here is the story of why I did move from my <a rel="noopener" target="_blank" href="https://github.com/wdes/stats">custom made</a> <a rel="noopener" target="_blank" href="https://heroku.com">Heroku</a>/Node/<a rel="noopener" target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> stats service to <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a>.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-02-03T15:00:00+0000">February  3, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;"></a>
-
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>Follow my phpMyAdmin adventure</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>You can follow my phpMyAdmin adventure on this blog post.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-01-13T12:00:00+0000">January 13, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpmyadmin-adventure&#x2F;"></a>
-
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>Welcome to my blog !</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>This is my first blog post ever, I hope you will be interested by what I post.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-01-01T12:00:00+0000">January  1, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;welcome-to-my-blog&#x2F;"></a>
-
-                </article>
-                
-                <footer class="page-footer">
-                    <nav class="pagination">
-                        <a class="prev" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;">← Previous</a>
-                        <!--Hidden Next-Button-->
-                    </nav>
-                </footer>
-            </div>
+    <div class="posts">
+        <h2>Tag: infra-tutorial</h2>
+        <br>
+        
+        <article class="post-entry">
             
+                    <header class="entry-header">
+                        <h2>Installing Crowdsec on pfSense</h2>
+                    </header>
+                    <section class=entry-content>
+                        <p>Installing <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense</p>
+
+                    </section>
+                    <footer class="entry-footer">
+                        <time datetime="2022-09-26T00:10:00+0002">September 26, 2022</time>
+                    </footer>
+                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;"></a>
+
+        </article>
+        
+        <footer class="page-footer">
+            <nav class="pagination">
+                
+                <!-- <span>Page 1 of 1</span> -->
+                
+            </nav>
+        </footer>
+    </div>
+
         </main>
 
         <footer class="footer">
