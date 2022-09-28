@@ -22,14 +22,16 @@ Installing [CrowdSec](https://www.crowdsec.net/) on pfSense
 
 This is how to install [CrowdSec](https://www.crowdsec.net/) on pfSense running freeBSD 12.3.
 
-You will need to check the freeBSD version on your pfSense home page. Then open this [package list](https://pkgs.org/download/crowdsec) in a new browser tab.
+You can find this blog post on [Reddit](https://www.reddit.com/r/PFSENSE/comments/xq6xy6/protect_your_firewall_against_bad_ips_with/) and discuss about it.
+
+You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec/#packages) in a new browser tab.
 
 ### How to install
 
 #### Add pkg
 
 ```sh
-pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/quarterly/All/crowdsec-1.3.4_1.pkg
+pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_1.pkg
 ```
 
 Follow the post install instructions.
