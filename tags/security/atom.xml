@@ -15,10 +15,11 @@
 		<content type="html">&lt;p&gt;Installing &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt; on pfSense&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;This is how to install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt; on pfSense running freeBSD 12.3.&lt;&#x2F;p&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;pkgs.org&#x2F;download&#x2F;crowdsec&quot;&gt;package list&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find this blog post on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PFSENSE&#x2F;comments&#x2F;xq6xy6&#x2F;protect_your_firewall_against_bad_ips_with&#x2F;&quot;&gt;Reddit&lt;&#x2F;a&gt; and discuss about it.&lt;&#x2F;p&gt;
+&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;how-to-install&quot;&gt;How to install&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;add-pkg&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;quarterly&#x2F;All&#x2F;crowdsec-1.3.4_1.pkg
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.1_1.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;for-systems-running-var-on-tmpfs&quot;&gt;For systems running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs&lt;&#x2F;h5&gt;

@@ -211,10 +211,11 @@
     <div class="post-content"><p>Installing <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense</p>
 <span id="continue-reading"></span>
 <p>This is how to install <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense running freeBSD 12.3.</p>
-<p>You will need to check the freeBSD version on your pfSense home page. Then open this <a rel="noopener" target="_blank" href="https://pkgs.org/download/crowdsec">package list</a> in a new browser tab.</p>
+<p>You can find this blog post on <a rel="noopener" target="_blank" href="https://www.reddit.com/r/PFSENSE/comments/xq6xy6/protect_your_firewall_against_bad_ips_with/">Reddit</a> and discuss about it.</p>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec/#packages">package summary on freshports</a> in a new browser tab.</p>
 <h3 id="how-to-install">How to install</h3>
 <h4 id="add-pkg">Add pkg</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/quarterly/All/crowdsec-1.3.4_1.pkg
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_1.pkg
 </span></code></pre>
 <p>Follow the post install instructions.</p>
 <h5 id="for-systems-running-var-on-tmpfs">For systems running <code>/var</code> on tmpfs</h5>
