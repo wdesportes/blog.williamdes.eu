@@ -17,6 +17,10 @@
         {% if page.extra.author %}<meta name="author" content="{{ page.extra.author }}">{% endif %}
         {% if page.summary %}<meta name="description" content="{{ page.summary | markdown(inline=true) | striptags }}">{% endif %}
 
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
         <!-- Open Graph Tags -->
         <meta property="og:site_name" content="{{ config.title }}">
         {% if page %}
