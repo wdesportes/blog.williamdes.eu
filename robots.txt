@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /processed_images
 Allow: /
 Sitemap: https://blog.williamdes.eu/sitemap.xml
