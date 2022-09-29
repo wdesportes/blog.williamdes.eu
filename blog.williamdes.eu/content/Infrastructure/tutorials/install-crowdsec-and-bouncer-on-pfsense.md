@@ -10,6 +10,7 @@ headline = "Installing CrowdSec on pfSense"
 keywords = ["bouncer", "crowdsec", "security"]
 category = "Tutorial"
 images = []
+banner_path = "static/Infrastructure/tutorials/crowdsec_dashboard_pfsense_instance.jpg"
 
 
 [taxonomies]

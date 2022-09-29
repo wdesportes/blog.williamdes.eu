@@ -18,6 +18,7 @@ images = [
     "Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg",
     "Infrastructure/stories/RaspberryPi_4_cutting_and_soldering_for_the_fan.jpeg",
 ]
+banner_path = "static/Infrastructure/stories/Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.jpg"
 
 [taxonomies]
 tags = ["infra-story", "RaspberryPi"]

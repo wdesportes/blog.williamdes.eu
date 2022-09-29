@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /processed_images
+Allow: /
+Sitemap: {{ get_url(path="sitemap.xml") }}
