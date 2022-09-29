@@ -17,7 +17,7 @@ banner_path = "static/Infrastructure/tutorials/crowdsec_dashboard_pfsense_instan
 tags = ["infra-tutorial", "security"]
 +++
 
-Installing [CrowdSec](https://www.crowdsec.net/) on pfSense
+Protect pfSense from bad actors/IPs using [CrowdSec](https://www.crowdsec.net/).
 
 <!-- more -->
 
