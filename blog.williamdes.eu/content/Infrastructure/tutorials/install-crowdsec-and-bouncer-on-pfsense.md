@@ -22,11 +22,13 @@ Protect pfSense from bad actors/IPs using [CrowdSec](https://www.crowdsec.net/).
 
 This is how to install [CrowdSec](https://www.crowdsec.net/) on pfSense running freeBSD 12.3.
 
+To learn more about what is CrowdSec you can look at this [YouTube video from Lawrence Systems](https://www.youtube.com/watch?v=2Ec-FYmK4zg) or look at the [video from CrowdSec](https://www.youtube.com/watch?v=t99cnWYGhdw).
+
 You can find this blog post on [Reddit](https://www.reddit.com/r/PFSENSE/comments/xq6xy6/protect_your_firewall_against_bad_ips_with/) and discuss about it.
 
-You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec/#packages) in a new browser tab.
-
 ### How to install
+
+You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec/#packages) in a new browser tab.
 
 #### Add pkg
 
