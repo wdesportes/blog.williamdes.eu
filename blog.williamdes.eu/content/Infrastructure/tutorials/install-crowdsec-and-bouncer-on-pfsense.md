@@ -1,7 +1,7 @@
 +++
 title = "Installing Crowdsec on pfSense"
 date = 2022-09-26T00:10:00+00:02
-updated = 2022-09-27T00:12:53+00:02
+updated = 2022-11-03T00:13:10+00:02
 
 [extra]
 author = "William Desportes"
@@ -33,10 +33,12 @@ You will need to check the freeBSD version on your pfSense home page. Then open 
 #### Add pkg
 
 ```sh
-pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_1.pkg
+pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_2.pkg
 ```
 
 Follow the post install instructions.
+
+You should adjust `/usr/local/etc/crowdsec/acquis.yaml` and remove non valid files.
 
 ##### For systems running `/var` on tmpfs
 
