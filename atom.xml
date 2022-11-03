@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-10-01T11:11:00+00:02</updated>
+	<updated>2022-11-03T00:13:10+00:02</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2022-09-27T00:12:53+00:02</updated>
+		<updated>2022-11-03T00:13:10+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
 		<content type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -20,9 +20,10 @@
 &lt;h3 id=&quot;how-to-install&quot;&gt;How to install&lt;&#x2F;h3&gt;
 &lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;add-pkg&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.1_1.pkg
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.1_2.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
+&lt;p&gt;You should adjust &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;acquis.yaml&lt;&#x2F;code&gt; and remove non valid files.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;for-systems-running-var-on-tmpfs&quot;&gt;For systems running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs&lt;&#x2F;h5&gt;
 &lt;p&gt;To see what running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs is about: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;serverfault.com&#x2F;a&#x2F;832036&#x2F;336084&quot;&gt;screenshot&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;You will need to change &lt;code&gt;data_dir&lt;&#x2F;code&gt; and &lt;code&gt;db_path&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;config.yaml&lt;&#x2F;code&gt;.

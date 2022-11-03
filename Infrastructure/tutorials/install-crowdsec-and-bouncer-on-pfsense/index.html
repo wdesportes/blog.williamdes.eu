@@ -34,7 +34,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2022-09-26T00:10:00+00:02">
         <meta property="article:published_time" content="2022-09-26T00:10:00">
-        <meta property="article:modified_time" content="2022-09-27T00:12:53">
+        <meta property="article:modified_time" content="2022-11-03T00:13:10">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="security">
         
@@ -109,7 +109,7 @@
     "alternativeHeadline": "Installing CrowdSec on pfSense",
     "dateCreated": "2022-09-26T00:10:00+0002",
     "datePublished": "2022-09-26T00:10:00+0002",
-    "dateModified": "2022-09-27T00:12:53+0002",
+    "dateModified": "2022-11-03T00:13:10+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -214,7 +214,7 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-09-26T00:10:00+0002">September 26, 2022 00:10</time></span>
-            <span class="post-date"> and updated: <time datetime="2022-09-27T00:12:53+0002">September 27, 2022 00:12</time></span>
+            <span class="post-date"> and updated: <time datetime="2022-11-03T00:13:10+0002">November  3, 2022 00:13</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">5 min read</span>
         </div>
@@ -227,9 +227,10 @@
 <h3 id="how-to-install">How to install</h3>
 <p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec/#packages">package summary on freshports</a> in a new browser tab.</p>
 <h4 id="add-pkg">Add pkg</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_1.pkg
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_2.pkg
 </span></code></pre>
 <p>Follow the post install instructions.</p>
+<p>You should adjust <code>/usr/local/etc/crowdsec/acquis.yaml</code> and remove non valid files.</p>
 <h5 id="for-systems-running-var-on-tmpfs">For systems running <code>/var</code> on tmpfs</h5>
 <p>To see what running <code>/var</code> on tmpfs is about: <a rel="noopener" target="_blank" href="https://serverfault.com/a/832036/336084">screenshot</a></p>
 <p>You will need to change <code>data_dir</code> and <code>db_path</code> in <code>/usr/local/etc/crowdsec/config.yaml</code>.
