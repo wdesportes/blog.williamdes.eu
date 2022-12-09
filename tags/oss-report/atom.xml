@@ -4,8 +4,31 @@
 	<link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-10-01T11:11:00+00:02</updated>
+	<updated>2022-12-09T22:23:00+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for October 2022</title>
+		<published>2022-10-13T21:04:00+00:02</published>
+		<updated>2022-12-09T22:23:00+00:02</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/10/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2022/10/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for October 2022.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-40&quot;&gt;First week (40)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-41&quot;&gt;Second week (41)&lt;&#x2F;h2&gt;
+&lt;p&gt;I reviewed and merged quite a lot of pull-requests.
+Also made adjustments of tests. Rebased and tested contributors work.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-42&quot;&gt;Third week (42)&lt;&#x2F;h2&gt;
+&lt;p&gt;I sorted out a lof of old issues, reviewed a lot of pull-requests.
+Also fixed UI bugs on the old confirm modal about close modals and go&#x2F;cancel buttons.
+And fixed bugs on the monitor page.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-43&quot;&gt;Fourth week (43)&lt;&#x2F;h2&gt;
+&lt;p&gt;I started by fixing bugs and made changes to the issue and pull-request workflow and wrote them into a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;wiki&#x2F;Issue-and-pull-request-management&quot;&gt;wiki page&lt;&#x2F;a&gt;
+Merged and reviewed contributions. Changed jquery migrate and validation to the &lt;code&gt;.min.js&lt;&#x2F;code&gt; version.
+I wrote fixes for the multi table query interface. And improved some details on Metro theme.
+And finally I wrote more bug fixes and changed js.cookie.js to the &lt;code&gt;.min.js&lt;&#x2F;code&gt; version.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for September 2022</title>
 		<published>2022-09-09T21:04:00+00:02</published>
