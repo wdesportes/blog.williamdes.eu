@@ -4,7 +4,8 @@
 
 ## Overview
 
-Over the month of November 2022
+Over the month of November 2022 I did some bug fixing, pull-request reviews and improved the Original theme.
+Also wrote some documentation and some tests.
 
 ## First week (44)
 
