@@ -172,6 +172,13 @@
         <lastmod>2022-12-09T22:23:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2022/11/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2022/11/report/</loc>
+        <lastmod>2022-12-12T11:35:00+00:03</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
         <lastmod>2021-01-13T12:00:00Z</lastmod>
     </url>
@@ -213,6 +220,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-report/page/3/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-report/page/4/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-story/</loc>

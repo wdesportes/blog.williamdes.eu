@@ -4,8 +4,30 @@
 	<link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-09T22:23:00+00:02</updated>
+	<updated>2022-12-12T11:35:00+00:03</updated>
 	<id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Report for November 2022</title>
+		<published>2022-12-09T22:40:00+00:02</published>
+		<updated>2022-12-12T11:35:00+00:03</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/11/report/" type="text/html"/>
+		<id>https://blog.williamdes.eu/phpMyAdmin/2022/11/report/</id>
+		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for November 2022.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-44&quot;&gt;First week (44)&lt;&#x2F;h2&gt;
+&lt;p&gt;I did bump the CodeMirror library and merged some pull-requests.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;second-week-45&quot;&gt;Second week (45)&lt;&#x2F;h2&gt;
+&lt;p&gt;I worked on some Original theme fixes and fixed a bug about scrolling in the CodeMirror box.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;third-week-46&quot;&gt;Third week (46)&lt;&#x2F;h2&gt;
+&lt;p&gt;I merged pull-requests accors our repositories. Fixed the website CDN purge code.
+I worked on a JS performance issue on export as text. Updated the FAQ.
+Fixed multiple bugs and made visual improvements.
+Also migrated two search fields to bootstrap.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fourth-week-47&quot;&gt;Fourth week (47)&lt;&#x2F;h2&gt;
+&lt;p&gt;I reviewed and merged pull-requests accors our repositories.
+Documented, reviewed, wrote tests, merged the work for adding new ENVs on the docker repository.
+I also worked on Debian packaging and server maintenance.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Report for October 2022</title>
 		<published>2022-10-13T21:04:00+00:02</published>

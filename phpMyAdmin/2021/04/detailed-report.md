@@ -240,13 +240,6 @@ And did a bit of security research in our code-base.
 - [33e59a0d26 - Fix #141 - update menu icon for mobiles](https://github.com/phpmyadmin/website/commit/33e59a0d263669b18370407d0db7efd6b1ec121a)
 - [50d7c6fbc6 - Add Keybase PGP key link](https://github.com/phpmyadmin/website/commit/50d7c6fbc69b0eb9fde3ff5b8354bba4dd3812ac)
 
-## phpmyadmin/private (GitHub)
-
-- [c17ab794f2 - Add infrastructure entries of the day (demo server)](https://github.com/phpmyadmin/private/commit/c17ab794f2d442269815de18b4238a933d5e6e87)
-- [2ea4aff3bb - Add infrastructure entries of the day](https://github.com/phpmyadmin/private/commit/2ea4aff3bb021b3c49f7b59911e8e8bef545dab8)
-- [e1fd3e1908 - Add a CHANGELOG entry and README](https://github.com/phpmyadmin/private/commit/e1fd3e1908f2e514a33160535ac55d88a50c25a5)
-- [a2f92cdcec - Rotate the GH token for the error reporting server](https://github.com/phpmyadmin/private/commit/a2f92cdcecfb9e7a6e63370604ede5a5b0e7a704)
-
 ## phpmyadmin/error-reporting-server (GitHub)
 
 - [627320973b - Adjust tests and phpstan baseline](https://github.com/phpmyadmin/error-reporting-server/commit/627320973be4eea5ea1d406939a006827749970f)
