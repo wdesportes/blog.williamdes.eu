@@ -7,6 +7,28 @@
 Over the month of October 2022 I wrote fixes for 5.2 versions.
 Merged and reviewed contributor's work. Improved the Metro theme and the UI of old jquery modals.
 
+## First week (40)
+
+__not working on the project__
+
+## Second week (41)
+
+I reviewed and merged quite a lot of pull-requests.
+Also made adjustments of tests. Rebased and tested contributors work.
+
+## Third week (42)
+
+I sorted out a lof of old issues, reviewed a lot of pull-requests.
+Also fixed UI bugs on the old confirm modal about close modals and go/cancel buttons.
+And fixed bugs on the monitor page.
+
+## Fourth week (43)
+
+I started by fixing bugs and made changes to the issue and pull-request workflow and wrote them into a [wiki page](https://github.com/phpmyadmin/phpmyadmin/wiki/Issue-and-pull-request-management)
+Merged and reviewed contributions. Changed jquery migrate and validation to the `.min.js` version.
+I wrote fixes for the multi table query interface. And improved some details on Metro theme.
+And finally I wrote more bug fixes and changed js.cookie.js to the `.min.js` version.
+
 # Commit list
 
 ## phpmyadmin/phpmyadmin (GitHub)
@@ -77,6 +99,9 @@ Merged and reviewed contributor's work. Improved the Metro theme and the UI of o
 
 ### Week 44
 
+- [bff74dc588 - Fix #17705 - CodeMirror query box has overflow preventing click](https://github.com/phpmyadmin/phpmyadmin/commit/bff74dc588895c58a409af222e9d8911f4620fd7)
+- [10b2cbfd0a - Add a ChangeLog entry for #17705](https://github.com/phpmyadmin/phpmyadmin/commit/10b2cbfd0a7b1199a6a52e36f6617984d25b6606)
+- [6dd05c51ad - Fix #17705 - Inline SQL query edit FK checkbox preventing submit buttons from working](https://github.com/phpmyadmin/phpmyadmin/commit/6dd05c51ad390bd9c75cd467bb5de1e8c234ef93)
 - [472391794f - Add a ChangeLog entry for #16042](https://github.com/phpmyadmin/phpmyadmin/commit/472391794fc0d60c5024f31e75afafe562a652c8)
 - [dca4119c1f - Merge #17844 - Fix #16042 - Gzip encoding in Firefox - Exported gzip file of database has first ~73 kB uncompressed and rest is gzip compressed](https://github.com/phpmyadmin/phpmyadmin/commit/dca4119c1f2eac736c35eb2d4a5e4073d3f29790)
 - [e51e3fa71f - Fix typo in test data](https://github.com/phpmyadmin/phpmyadmin/commit/e51e3fa71f05e240ca017548463a2d37471ea88a)
@@ -84,3 +109,69 @@ Merged and reviewed contributor's work. Improved the Metro theme and the UI of o
 - [32de166f03 - Fix #17812 - Add missing close button style on pick from central column modal on table structure](https://github.com/phpmyadmin/phpmyadmin/commit/32de166f03914943d534f341219b4c3e7b2030b3)
 - [b033099d1e - Add a ChangeLog entry for #17842](https://github.com/phpmyadmin/phpmyadmin/commit/b033099d1ea7c85905b304f3d6c9ba50429545ce)
 - [00452af4dc - Merge #17845 - Fix #17842 - Change js.cookie.js to js.cookie.min.js](https://github.com/phpmyadmin/phpmyadmin/commit/00452af4dca33da17659af0280765668fdb0c8e6)
+
+# Handled issues
+
+## phpmyadmin/phpmyadmin (GitHub)
+
+### Week 40
+
+- [17748 - 5.2.0 fail to report that mysqli is missing](https://github.com/phpmyadmin/phpmyadmin/issues/17748)
+
+### Week 41
+
+- [17771 - FROM](https://github.com/phpmyadmin/phpmyadmin/issues/17771)
+- [17773 - On demo server footer links aren't clickable](https://github.com/phpmyadmin/phpmyadmin/issues/17773)
+- [17248 - please support uuid data type](https://github.com/phpmyadmin/phpmyadmin/issues/17248)
+- [17656 - Replace table prefix not working for me](https://github.com/phpmyadmin/phpmyadmin/issues/17656)
+
+### Week 42
+
+- [17317 - In insert mode,I didnt see the complete list of possible values for a column, based on some foreign table](https://github.com/phpmyadmin/phpmyadmin/issues/17317)
+- [17588 - Warning in .\libraries\classes\Display\Results.php#4403](https://github.com/phpmyadmin/phpmyadmin/issues/17588)
+- [17418 - phMyAdmin 5.5.1 & Xamp 8.1.2 > deprecation notices !](https://github.com/phpmyadmin/phpmyadmin/issues/17418)
+- [17552 - Connection Error](https://github.com/phpmyadmin/phpmyadmin/issues/17552)
+- [14018 - Manual download of language](https://github.com/phpmyadmin/phpmyadmin/issues/14018)
+- [12833 - Remove lines to free up space](https://github.com/phpmyadmin/phpmyadmin/issues/12833)
+- [14355 - Discussion: Introduction to Modern Javascript and Tools](https://github.com/phpmyadmin/phpmyadmin/issues/14355)
+- [14971 - Ability to generate pre-coded HTML+PHP forms to insert data in database](https://github.com/phpmyadmin/phpmyadmin/issues/14971)
+- [14368 - Support DATABASE_URL env var for deployment on Heroku/Dokku](https://github.com/phpmyadmin/phpmyadmin/issues/14368)
+- [16419 - Errors in 5.0.4 when removing pragmarx folder](https://github.com/phpmyadmin/phpmyadmin/issues/16419)
+- [16006 - Hiding host in failed login attempts](https://github.com/phpmyadmin/phpmyadmin/issues/16006)
+- [17489 - Error in reproducing the branch QA_5_1](https://github.com/phpmyadmin/phpmyadmin/issues/17489)
+- [16951 - Daily build failing](https://github.com/phpmyadmin/phpmyadmin/issues/16951)
+- [17811 - Symlink : autoload.php missing or not readable](https://github.com/phpmyadmin/phpmyadmin/issues/17811)
+- [17136 - Deprecation Notice when try create new table](https://github.com/phpmyadmin/phpmyadmin/issues/17136)
+
+### Week 43
+
+- [17434 - Fatal error: Unsupported operand types in Results.php](https://github.com/phpmyadmin/phpmyadmin/issues/17434)
+- [17534 - Index separation border](https://github.com/phpmyadmin/phpmyadmin/issues/17534)
+- [17390 - Create view modal doesn't show](https://github.com/phpmyadmin/phpmyadmin/issues/17390)
+- [17772 - Wrong styles for add button from central columns on MariaDB](https://github.com/phpmyadmin/phpmyadmin/issues/17772)
+- [17166 - Warning: #1287 'X' is deprecated and will be removed in a future release. Please use ST_X instead](https://github.com/phpmyadmin/phpmyadmin/issues/17166)
+- [17389 - HTML disappears when exporting settings to browser's storage](https://github.com/phpmyadmin/phpmyadmin/issues/17389)
+- [17179 - Uncaught TypeError: can't access property "messages", $.validator is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/17179)
+- [17175 - Uncaught TypeError: can't access property "setValue", ConsoleInput.inputs.bookmark is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/17175)
+- [17832 - Warning in ./libraries/classes/Dbal/DbiMysqli.php#198](https://github.com/phpmyadmin/phpmyadmin/issues/17832)
+- [17812 - [UI] Broken styles on old confirm modal](https://github.com/phpmyadmin/phpmyadmin/issues/17812)
+- [17842 - Use jquery.validate.min.js and js.cookie.min.js](https://github.com/phpmyadmin/phpmyadmin/issues/17842)
+- [17669 - The preview modal query index is below the modal  I believe that just change the z-index and it should solve.](https://github.com/phpmyadmin/phpmyadmin/issues/17669)
+- [17396 - Warning: Unknown: POST Content-Length of 46248103 bytes exceeds the limit of 8388608 bytes in Unknown on line 0](https://github.com/phpmyadmin/phpmyadmin/issues/17396)
+- [17481 - "show all" -> browse output empty - not even a empty result](https://github.com/phpmyadmin/phpmyadmin/issues/17481)
+- [17611 - Queries History - one click](https://github.com/phpmyadmin/phpmyadmin/issues/17611)
+- [17483 - phpMyAdmin ignore $cfg['Servers'][$i]['host'] in config.inc.php](https://github.com/phpmyadmin/phpmyadmin/issues/17483)
+- [17843 - Warning in ./libraries/classes/Dbal/DbiMysqli.php#209](https://github.com/phpmyadmin/phpmyadmin/issues/17843)
+
+### Week 44
+
+- [17642 - unknown bug on chrome](https://github.com/phpmyadmin/phpmyadmin/issues/17642)
+- [17847 - Uncaught TypeError: Cannot read properties of undefined (reading 'get')](https://github.com/phpmyadmin/phpmyadmin/issues/17847)
+- [17710 - phpMyAdmin - Configuring pmadb failed to access](https://github.com/phpmyadmin/phpmyadmin/issues/17710)
+- [16042 - Exported gzip file of database has first ~73 kB uncompressed and rest is gzip compressed](https://github.com/phpmyadmin/phpmyadmin/issues/16042)
+
+## phpmyadmin/docker (GitHub)
+
+### Week 40
+
+- [294 - deploy to kubernetes issue](https://github.com/phpmyadmin/docker/issues/294)
