@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-11-03T00:13:10+00:02</updated>
+	<updated>2023-01-01T14:31:13+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2022-11-03T00:13:10+00:02</updated>
+		<updated>2023-01-01T14:31:13+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
 		<content type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -19,8 +19,11 @@
 &lt;p&gt;You can find this blog post on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PFSENSE&#x2F;comments&#x2F;xq6xy6&#x2F;protect_your_firewall_against_bad_ips_with&#x2F;&quot;&gt;Reddit&lt;&#x2F;a&gt; and discuss about it.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;how-to-install&quot;&gt;How to install&lt;&#x2F;h3&gt;
 &lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;upgrade-your-setup&quot;&gt;Upgrade your setup&lt;&#x2F;h4&gt;
+&lt;p&gt;If you already did follow my blog post once and want to upgrade crowdsec,
+then do: &lt;code&gt;pkg del crowdsec&lt;&#x2F;code&gt; and follow the next step below.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;add-pkg&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.1_2.pkg
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.3.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
 &lt;p&gt;You should adjust &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;acquis.yaml&lt;&#x2F;code&gt; and remove non valid files.&lt;&#x2F;p&gt;
@@ -62,74 +65,33 @@ Find where the CLI is located:&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;use-the-blocklist-mirror-service&quot;&gt;Use the blocklist mirror service&lt;&#x2F;h3&gt;
 &lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.crowdsec.net&#x2F;docs&#x2F;bouncers&#x2F;blocklist-mirror&#x2F;&quot;&gt;official install docs&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;blog&#x2F;integrating-crowdsec-with-firewall-appliances&quot;&gt;crowdsec blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Source code: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&quot;&gt;GitHub&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;uninstall-the-manual-method-provided-by-my-blog&quot;&gt;Uninstall the manual method provided by my blog&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror stop
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;crowdsec-blocklist-mirror
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers list
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers remove crowdsec-blocklist-mirror-REPLACE_ME
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the blocklist enable line in &#x2F;etc&#x2F;rc.conf.local
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the service line in &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;install-the-service&quot;&gt;Install the service&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; -#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -L -o&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&#x2F;releases&#x2F;download&#x2F;v0.0.1&#x2F;crowdsec-blocklist-mirror-freebsd-amd64.tgz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tar -xzvf&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -C&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; crowdsec-blocklist-mirror-freebsd-amd64.tgz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;config&#x2F;crowdsec-blocklist-mirror.yaml &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;crowdsec-blocklist-mirror &#x2F;usr&#x2F;local&#x2F;bin&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -vr&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;
+&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-blocklist-mirror&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;add-pkg-1&quot;&gt;Add pkg&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-blocklist-mirror-0.0.1.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h5 id=&quot;edit-the-config&quot;&gt;Edit the config&lt;&#x2F;h5&gt;
-&lt;p&gt;(Source: &lt;code&gt;&#x2F;tmp&#x2F;crowdsec-blocklist-mirror-v0.0.1&#x2F;install.sh&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;Fetch an API key:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers add crowdsec-blocklist-mirror-`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tr -dc&lt;&#x2F;span&gt;&lt;span&gt; A-Za-z0-9 &amp;lt; &#x2F;dev&#x2F;urandom | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head -c&lt;&#x2F;span&gt;&lt;span&gt; 8`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; raw
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Replace &lt;code&gt;${API_KEY}&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml&lt;&#x2F;code&gt; with the value.&lt;&#x2F;p&gt;
-&lt;p&gt;Replace &lt;code&gt;${CROWDSEC_LAPI_URL}&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml&lt;&#x2F;code&gt; with the value found in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;local_api_credentials.yaml&lt;&#x2F;code&gt;. Most probably &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Create a file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror&lt;&#x2F;code&gt; with contents:&lt;&#x2F;p&gt;
-&lt;p&gt;(inspired by crowdsec-firewall-bouncer&#x27;s service file)&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#!&#x2F;bin&#x2F;sh
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# PROVIDE: crowdsec_blocklist_mirror
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# REQUIRE: LOGIN DAEMON NETWORKING
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# KEYWORD: shutdown
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Add the following lines to &#x2F;etc&#x2F;rc.conf.local or &#x2F;etc&#x2F;rc.conf
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# to enable this service:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# crowdsec_blocklist_mirror_enable (bool):	Set it to YES to enable crowdsec block list mirror.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#					Default is &amp;quot;NO&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# crowdsec_blocklist_mirror_config (str):	Set the bouncer config path.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#					Default is &amp;quot;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# crowdsec_blocklist_mirror_flags (str):	extra flags to run bouncer.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#					Default is &amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;rc.subr
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;crowdsec_blocklist_mirror
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;desc&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Crowdsec Blocklist Mirror&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rcvar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;crowdsec_blocklist_mirror_enable
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;load_rc_config &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_enable&lt;&#x2F;span&gt;&lt;span&gt;:=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;NO}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_config&lt;&#x2F;span&gt;&lt;span&gt;:=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_flags&lt;&#x2F;span&gt;&lt;span&gt;:=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pidfile&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;var&#x2F;run&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}.pid
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;required_files&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_config&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;command&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;crowdsec-blocklist-mirror&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;start_cmd&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}_start&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;crowdsec_blocklist_mirror_start&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;&#x2F;usr&#x2F;sbin&#x2F;daemon -f -p &lt;&#x2F;span&gt;&lt;span&gt;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pidfile&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -t &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;desc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; -- \
-&lt;&#x2F;span&gt;&lt;span&gt;        ${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;command&lt;&#x2F;span&gt;&lt;span&gt;} -c &amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_config&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; ${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_flags&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run_rc_command &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;And make it executable: &lt;code&gt;chmod +x &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;make-then-start-at-boot&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
 &lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_blocklist_mirror_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
+&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_mirror_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror start
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;start-the-services-1&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror start
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;check-that-it-works&quot;&gt;Check that it works&lt;&#x2F;h4&gt;
 &lt;p&gt;If there is no IPs, run: &lt;code&gt;service crowdsec restart&lt;&#x2F;code&gt; and re-try.&lt;&#x2F;p&gt;
@@ -148,8 +110,8 @@ Do like on the screenshot and save. Then apply the changes.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;or-use-the-firewall-bouncer-does-it-work-on-pfsense&quot;&gt;Or use the firewall bouncer (does it work on pfSense ?)&lt;&#x2F;h3&gt;
 &lt;p&gt;This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-pkg-1&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-firewall-bouncer-0.0.23.r2_4.pkg
+&lt;h4 id=&quot;add-pkg-2&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;make-then-start-at-boot-1&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
