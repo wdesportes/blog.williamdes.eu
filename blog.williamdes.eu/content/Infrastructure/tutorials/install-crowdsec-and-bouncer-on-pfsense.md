@@ -1,7 +1,7 @@
 +++
 title = "Installing Crowdsec on pfSense"
 date = 2022-09-26T00:10:00+00:02
-updated = 2023-01-01T14:31:13+00:02
+updated = 2023-01-01T14:40:00+00:04
 
 [extra]
 author = "William Desportes"
@@ -116,7 +116,7 @@ Reference: [official install docs](https://docs.crowdsec.net/docs/bouncers/block
 
 Source code: [GitHub](https://github.com/crowdsecurity/cs-blocklist-mirror)
 
-#### Uninstall the manual method provided by my blog
+#### Uninstall the manual method previously provided by my blog
 
 ```sh
 service crowdsec_blocklist_mirror stop
@@ -194,6 +194,8 @@ This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.
 
 #### Add pkg
+
+You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec-firewall-bouncer/#packages) in a new browser tab.
 
 ```sh
 pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
