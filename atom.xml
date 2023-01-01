@@ -4,7 +4,7 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-01T14:31:13+00:02</updated>
+	<updated>2023-01-01T14:40:00+00:04</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Report for November 2022</title>
@@ -54,7 +54,7 @@ And finally I wrote more bug fixes and changed js.cookie.js to the &lt;code&gt;.
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2023-01-01T14:31:13+00:02</updated>
+		<updated>2023-01-01T14:40:00+00:04</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
 		<content type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -110,7 +110,7 @@ Find where the CLI is located:&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;use-the-blocklist-mirror-service&quot;&gt;Use the blocklist mirror service&lt;&#x2F;h3&gt;
 &lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.crowdsec.net&#x2F;docs&#x2F;bouncers&#x2F;blocklist-mirror&#x2F;&quot;&gt;official install docs&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;blog&#x2F;integrating-crowdsec-with-firewall-appliances&quot;&gt;crowdsec blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Source code: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&quot;&gt;GitHub&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;uninstall-the-manual-method-provided-by-my-blog&quot;&gt;Uninstall the manual method provided by my blog&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;uninstall-the-manual-method-previously-provided-by-my-blog&quot;&gt;Uninstall the manual method previously provided by my blog&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror stop
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
@@ -156,6 +156,7 @@ Do like on the screenshot and save. Then apply the changes.&lt;&#x2F;p&gt;
 &lt;p&gt;This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;add-pkg-2&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
+&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-firewall-bouncer&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;

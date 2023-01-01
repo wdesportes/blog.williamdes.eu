@@ -34,7 +34,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2022-09-26T00:10:00+00:02">
         <meta property="article:published_time" content="2022-09-26T00:10:00">
-        <meta property="article:modified_time" content="2023-01-01T14:31:13">
+        <meta property="article:modified_time" content="2023-01-01T14:40:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="security">
         
@@ -109,7 +109,7 @@
     "alternativeHeadline": "Installing CrowdSec on pfSense",
     "dateCreated": "2022-09-26T00:10:00+0002",
     "datePublished": "2022-09-26T00:10:00+0002",
-    "dateModified": "2023-01-01T14:31:13+0002",
+    "dateModified": "2023-01-01T14:40:00+0004",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -214,9 +214,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-09-26T00:10:00+0002">September 26, 2022 00:10</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-01-01T14:31:13+0002">January  1, 2023 14:31</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-01-01T14:40:00+0004">January  1, 2023 14:40</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">4 min read</span>
+            <span class="post-reading-time">5 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Protect pfSense from bad actors/IPs using <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a>.</p>
@@ -272,7 +272,7 @@ Find where the CLI is located:</p>
 <h3 id="use-the-blocklist-mirror-service">Use the blocklist mirror service</h3>
 <p>Reference: <a rel="noopener" target="_blank" href="https://docs.crowdsec.net/docs/bouncers/blocklist-mirror/">official install docs</a> and <a rel="noopener" target="_blank" href="https://www.crowdsec.net/blog/integrating-crowdsec-with-firewall-appliances">crowdsec blog</a>.</p>
 <p>Source code: <a rel="noopener" target="_blank" href="https://github.com/crowdsecurity/cs-blocklist-mirror">GitHub</a></p>
-<h4 id="uninstall-the-manual-method-provided-by-my-blog">Uninstall the manual method provided by my blog</h4>
+<h4 id="uninstall-the-manual-method-previously-provided-by-my-blog">Uninstall the manual method previously provided by my blog</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_blocklist_mirror stop
 </span><span style="color:#bf616a;">rm</span><span> /usr/local/etc/rc.d/crowdsec_blocklist_mirror
 </span><span style="color:#bf616a;">rm</span><span> /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
@@ -318,6 +318,7 @@ Do like on the screenshot and save. Then apply the changes.</p>
 <p>This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.</p>
 <h4 id="add-pkg-2">Add pkg</h4>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec-firewall-bouncer/#packages">package summary on freshports</a> in a new browser tab.</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
 </span></code></pre>
 <p>Follow the post install instructions.</p>
