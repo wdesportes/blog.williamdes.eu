@@ -1,7 +1,7 @@
 +++
 title = "Installing Crowdsec on pfSense"
 date = 2022-09-26T00:10:00+00:02
-updated = 2022-11-03T00:13:10+00:02
+updated = 2023-01-01T14:31:13+00:02
 
 [extra]
 author = "William Desportes"
@@ -30,10 +30,15 @@ You can find this blog post on [Reddit](https://www.reddit.com/r/PFSENSE/comment
 
 You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec/#packages) in a new browser tab.
 
+#### Upgrade your setup
+
+If you already did follow my blog post once and want to upgrade crowdsec,
+then do: `pkg del crowdsec` and follow the next step below.
+
 #### Add pkg
 
 ```sh
-pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.1_2.pkg
+pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.3.pkg
 ```
 
 Follow the post install instructions.
@@ -97,6 +102,7 @@ find / -name cscli
 #### Add scenarios
 
 Example:
+
 ```sh
 cscli scenarios list
 cscli scenarios list -a
@@ -110,98 +116,51 @@ Reference: [official install docs](https://docs.crowdsec.net/docs/bouncers/block
 
 Source code: [GitHub](https://github.com/crowdsecurity/cs-blocklist-mirror)
 
+#### Uninstall the manual method provided by my blog
+
+```sh
+service crowdsec_blocklist_mirror stop
+rm /usr/local/etc/rc.d/crowdsec_blocklist_mirror
+rm /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
+rm /usr/local/bin/crowdsec-blocklist-mirror
+
+cscli bouncers list
+cscli bouncers remove crowdsec-blocklist-mirror-REPLACE_ME
+
+# Remove the blocklist enable line in /etc/rc.conf.local
+# Remove the service line in /usr/local/etc/rc.d/crowdsec.sh
+```
+
 #### Install the service
 
-```sh
-curl -# -L -o crowdsec-blocklist-mirror-freebsd-amd64.tgz https://github.com/crowdsecurity/cs-blocklist-mirror/releases/download/v0.0.1/crowdsec-blocklist-mirror-freebsd-amd64.tgz
-tar -xzvf crowdsec-blocklist-mirror-freebsd-amd64.tgz -C /tmp
-rm crowdsec-blocklist-mirror-freebsd-amd64.tgz
-mkdir /usr/local/etc/crowdsec/bouncers/
-mv /tmp/crowdsec-blocklist-mirror-v0.0.1/config/crowdsec-blocklist-mirror.yaml /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
-mv /tmp/crowdsec-blocklist-mirror-v0.0.1/crowdsec-blocklist-mirror /usr/local/bin/
-rm -vr /tmp/crowdsec-blocklist-mirror-v0.0.1/
-```
+You will need to check the freeBSD version on your pfSense home page. Then open the [package summary on freshports](https://www.freshports.org/security/crowdsec-blocklist-mirror/#packages) in a new browser tab.
 
-##### Edit the config
-
-(Source: `/tmp/crowdsec-blocklist-mirror-v0.0.1/install.sh`)
-
-Fetch an API key:
+##### Add pkg
 
 ```sh
-cscli bouncers add crowdsec-blocklist-mirror-`tr -dc A-Za-z0-9 < /dev/urandom | head -c 8` -o raw
+pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-blocklist-mirror-0.0.1.pkg
 ```
 
-Replace `${API_KEY}` in `/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml` with the value.
-
-Replace `${CROWDSEC_LAPI_URL}` in `/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml` with the value found in `/usr/local/etc/crowdsec/local_api_credentials.yaml`. Most probably `http://127.0.0.1:8080/`.
-
-Create a file `/usr/local/etc/rc.d/crowdsec_blocklist_mirror` with contents:
-
-(inspired by crowdsec-firewall-bouncer's service file)
-
-```sh
-#!/bin/sh
-#
-# PROVIDE: crowdsec_blocklist_mirror
-# REQUIRE: LOGIN DAEMON NETWORKING
-# KEYWORD: shutdown
-#
-# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
-# to enable this service:
-#
-# crowdsec_blocklist_mirror_enable (bool):	Set it to YES to enable crowdsec block list mirror.
-#					Default is "NO"
-# crowdsec_blocklist_mirror_config (str):	Set the bouncer config path.
-#					Default is "/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml"
-# crowdsec_blocklist_mirror_flags (str):	extra flags to run bouncer.
-#					Default is ""
-
-. /etc/rc.subr
-
-name=crowdsec_blocklist_mirror
-desc="Crowdsec Blocklist Mirror"
-rcvar=crowdsec_blocklist_mirror_enable
-
-load_rc_config $name
-
-: "${crowdsec_blocklist_mirror_enable:=NO}"
-: "${crowdsec_blocklist_mirror_config:=/usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml}"
-: "${crowdsec_blocklist_mirror_flags:=}"
-
-pidfile=/var/run/${name}.pid
-required_files="$crowdsec_blocklist_mirror_config"
-command="/usr/local/bin/crowdsec-blocklist-mirror"
-start_cmd="${name}_start"
-
-crowdsec_blocklist_mirror_start() {
-    /usr/sbin/daemon -f -p ${pidfile} -t "${desc}" -- \
-        ${command} -c "${crowdsec_blocklist_mirror_config}" ${crowdsec_blocklist_mirror_flags}
-}
-
-run_rc_command "$1"
-```
-
-And make it executable: `chmod +x /usr/local/etc/rc.d/crowdsec_blocklist_mirror`
+Follow the post install instructions.
 
 #### Make then start at boot
 
 Add to `/etc/rc.conf.local`:
 
 ```ini
-crowdsec_blocklist_mirror_enable="yes"
+crowdsec_mirror_enable="yes"
 ```
 
 Add to the file `/usr/local/etc/rc.d/crowdsec.sh`:
 
 ```sh
-service crowdsec_blocklist_mirror start
+service crowdsec_mirror start
 ```
 
 #### Start the services
 
 ```sh
-service crowdsec_blocklist_mirror start
+service crowdsec_mirror start
 ```
 
 #### Check that it works
@@ -237,11 +196,10 @@ I could not figure out how to know that it actually works.
 #### Add pkg
 
 ```sh
-pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_4.pkg
+pkg add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
 ```
 
 Follow the post install instructions.
-
 
 #### Make then start at boot
 
