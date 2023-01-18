@@ -4,6 +4,16 @@
         <loc>https://blog.williamdes.eu/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Debian/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Debian/manuals/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/</loc>
+        <lastmod>2023-01-18T12:40:00+00:05</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/</loc>
     </url>
     <url>
@@ -186,6 +196,12 @@
         <loc>https://blog.williamdes.eu/tags/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/debian-manual/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/debian-manual/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/dell-r630/</loc>
     </url>
     <url>
@@ -253,6 +269,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/raspberrypi/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/sbuild/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/sbuild/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/security/</loc>
