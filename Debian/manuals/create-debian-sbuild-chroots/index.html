@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-01-18T12:40:00+00:05">
         <meta property="article:published_time" content="2023-01-18T12:40:00">
-        <meta property="article:modified_time" content="2023-01-18T12:40:00">
+        <meta property="article:modified_time" content="2023-01-21T14:32:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="debian-manual"><meta property="article:tags" content="sbuild">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Setup Debian sbuild chroots",
     "dateCreated": "2023-01-18T12:40:00+0005",
     "datePublished": "2023-01-18T12:40:00+0005",
-    "dateModified": "2023-01-18T12:40:00+0005",
+    "dateModified": "2023-01-21T14:32:00+0005",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -209,9 +209,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-01-21T14:32:00+0005">January 21, 2023 14:32</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">1 min read</span>
+            <span class="post-reading-time">2 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Creating <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">sbuild</a> chroots for Debian package testing</p>
@@ -223,13 +223,22 @@
 <h3 id="normal-chroot">Normal chroot</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
+<h3 id="experimental-chroot">Experimental chroot</h3>
+<p>Create the chroot:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=experimental</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian experimental main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/experimental-amd64-sbuild http://ftp.fr.debian.org/debian
+</span></code></pre>
+<p>Make sure the packages in backports are preferred above the original ones:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:experimental-amd64-sbuild
+</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=experimental\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/experimental.pref
+</span><span style="color:#96b5b4;">exit
+</span></code></pre>
 <h3 id="backports-chroot">Backports chroot</h3>
 <p>Create the chroot:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bullseye-backports</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian bullseye-backports main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-backports-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <p>Make sure the packages in backports are preferred above the original ones:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:bullseye-backports-amd64-sbuild
-</span><span style="color:#96b5b4;">echo </span><span style="color:#bf616a;">-e </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=bullseye-backports\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/bullseye-backports.pref
+</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=bullseye-backports\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/bullseye-backports.pref
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <p>More about this on this <a rel="noopener" target="_blank" href="https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html">blog post</a></p>
@@ -239,6 +248,14 @@
 </span><span style="color:#bf616a;">sbuild -d</span><span> bullseye
 </span><span style="color:#65737e;"># Backports dist
 </span><span style="color:#bf616a;">sbuild -d</span><span> bullseye-backports
+</span></code></pre>
+<h3 id="list-chroots">List chroots</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">schroot -l
+</span></code></pre>
+<h3 id="remove-a-chroot">Remove a chroot</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm -r</span><span> /srv/chroot/experimental-amd64-sbuild
+</span><span style="color:#65737e;"># Find config the file and remove it
+</span><span style="color:#bf616a;">rm</span><span> /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
 </span></code></pre>
 </div>
     <footer class="post-footer">

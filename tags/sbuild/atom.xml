@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/sbuild/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-18T12:40:00+00:05</updated>
+	<updated>2023-01-21T14:32:00+00:05</updated>
 	<id>https://blog.williamdes.eu/tags/sbuild/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Setup Debian sbuild chroots</title>
 		<published>2023-01-18T12:40:00+00:05</published>
-		<updated>2023-01-18T12:40:00+00:05</updated>
+		<updated>2023-01-21T14:32:00+00:05</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/</id>
 		<content type="html">&lt;p&gt;Creating &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild&quot;&gt;sbuild&lt;&#x2F;a&gt; chroots for Debian package testing&lt;&#x2F;p&gt;
@@ -21,13 +21,22 @@
 &lt;h3 id=&quot;normal-chroot&quot;&gt;Normal chroot&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;bullseye-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;experimental-chroot&quot;&gt;Experimental chroot&lt;&#x2F;h3&gt;
+&lt;p&gt;Create the chroot:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=experimental&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;deb.debian.org&#x2F;debian experimental main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;experimental-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Make sure the packages in backports are preferred above the original ones:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:experimental-amd64-sbuild
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Package: *\nPin: release a=experimental\nPin-Priority:900&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt; &#x2F;etc&#x2F;apt&#x2F;preferences.d&#x2F;experimental.pref
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;exit
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;backports-chroot&quot;&gt;Backports chroot&lt;&#x2F;h3&gt;
 &lt;p&gt;Create the chroot:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=bullseye-backports&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;deb.debian.org&#x2F;debian bullseye-backports main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;bullseye-backports-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Make sure the packages in backports are preferred above the original ones:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:bullseye-backports-amd64-sbuild
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-e &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Package: *\nPin: release a=bullseye-backports\nPin-Priority:900&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt; &#x2F;etc&#x2F;apt&#x2F;preferences.d&#x2F;bullseye-backports.pref
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Package: *\nPin: release a=bullseye-backports\nPin-Priority:900&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt; &#x2F;etc&#x2F;apt&#x2F;preferences.d&#x2F;bullseye-backports.pref
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;exit
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;More about this on this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;aerostitch.github.io&#x2F;linux_and_unix&#x2F;debian&#x2F;sbuild_with_experimental_distribution.html&quot;&gt;blog post&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -37,6 +46,14 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild -d&lt;&#x2F;span&gt;&lt;span&gt; bullseye
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Backports dist
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild -d&lt;&#x2F;span&gt;&lt;span&gt; bullseye-backports
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;list-chroots&quot;&gt;List chroots&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;schroot -l
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;remove-a-chroot&quot;&gt;Remove a chroot&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -r&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;chroot&#x2F;experimental-amd64-sbuild
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Find config the file and remove it
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;schroot&#x2F;chroot.d&#x2F;experimental-amd64-sbuild-F28TrU
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
