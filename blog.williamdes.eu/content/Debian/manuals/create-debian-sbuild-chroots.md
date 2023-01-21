@@ -1,7 +1,7 @@
 +++
 title = "Setup Debian sbuild chroots"
 date = 2023-01-18T12:40:00+00:05
-updated = 2023-01-18T12:40:00+00:05
+updated = 2023-01-21T14:32:00+00:05
 
 [extra]
 author = "William Desportes"
@@ -34,6 +34,22 @@ But here is how I use and setup my chroots.
 sudo sbuild-createchroot --include=eatmydata,ccache bullseye /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
 
+### Experimental chroot
+
+Create the chroot:
+
+```sh
+sudo sbuild-createchroot --chroot-prefix=experimental --extra-repository='deb http://deb.debian.org/debian experimental main' --include=eatmydata,ccache bullseye /srv/chroot/experimental-amd64-sbuild http://ftp.fr.debian.org/debian
+```
+
+Make sure the packages in backports are preferred above the original ones:
+
+```sh
+sudo sbuild-shell source:experimental-amd64-sbuild
+echo "Package: *\nPin: release a=experimental\nPin-Priority:900" > /etc/apt/preferences.d/experimental.pref
+exit
+```
+
 ### Backports chroot
 
 Create the chroot:
@@ -46,7 +62,7 @@ Make sure the packages in backports are preferred above the original ones:
 
 ```sh
 sudo sbuild-shell source:bullseye-backports-amd64-sbuild
-echo -e "Package: *\nPin: release a=bullseye-backports\nPin-Priority:900" > /etc/apt/preferences.d/bullseye-backports.pref
+echo "Package: *\nPin: release a=bullseye-backports\nPin-Priority:900" > /etc/apt/preferences.d/bullseye-backports.pref
 exit
 ```
 
@@ -60,4 +76,18 @@ cd /home/user/packages/my-package
 sbuild -d bullseye
 # Backports dist
 sbuild -d bullseye-backports
+```
+
+### List chroots
+
+```sh
+schroot -l
+```
+
+### Remove a chroot
+
+```sh
+rm -r /srv/chroot/experimental-amd64-sbuild
+# Find config the file and remove it
+rm /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
 ```
