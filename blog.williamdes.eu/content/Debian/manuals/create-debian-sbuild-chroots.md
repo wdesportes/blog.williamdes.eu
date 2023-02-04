@@ -90,4 +90,5 @@ schroot -l
 rm -r /srv/chroot/experimental-amd64-sbuild
 # Find config the file and remove it
 rm /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
+rm /etc/sbuild/chroot/experimental-amd64-sbuild
 ```
