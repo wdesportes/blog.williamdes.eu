@@ -26,7 +26,20 @@ The [Debian wiki](https://wiki.debian.org/sbuild) explains this already pretty g
 
 But here is how I use and setup my chroots.
 
+## What is a chroot
+
+From what I understood its like some kind of "VM" that uses the host Kernel.
+But that's not really that is more like an environment where the OS root directory "/" is reset to some folder on you system.
+
+You can read more about it on [Debian wiki](https://wiki.debian.org/chroot) [fr](https://wiki.debian.org/fr/Chroot) and on [Wikipedia](https://en.wikipedia.org/wiki/Chroot)
+
 ## Setup the chroots
+
+### Sid chroot
+
+```sh
+sudo sbuild-createchroot --alias=sid --chroot-prefix=sid --include=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+```
 
 ### Normal chroot
 
@@ -72,6 +85,8 @@ More about this on this [blog post](https://aerostitch.github.io/linux_and_unix/
 
 ```sh
 cd /home/user/packages/my-package
+# sid dist
+sbuild -d sid
 # Normal dist
 sbuild -d bullseye
 # Backports dist
