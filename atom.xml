@@ -17,7 +17,14 @@
 &lt;p&gt;This is how to setup sbuild chroots for Debian packaging.&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild&quot;&gt;Debian wiki&lt;&#x2F;a&gt; explains this already pretty good.&lt;&#x2F;p&gt;
 &lt;p&gt;But here is how I use and setup my chroots.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-a-chroot&quot;&gt;What is a chroot&lt;&#x2F;h2&gt;
+&lt;p&gt;From what I understood its like some kind of &amp;quot;VM&amp;quot; that uses the host Kernel.
+But that&#x27;s not really that is more like an environment where the OS root directory &amp;quot;&#x2F;&amp;quot; is reset to some folder on you system.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read more about it on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;chroot&quot;&gt;Debian wiki&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;fr&#x2F;Chroot&quot;&gt;fr&lt;&#x2F;a&gt; and on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Chroot&quot;&gt;Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;setup-the-chroots&quot;&gt;Setup the chroots&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;sid-chroot&quot;&gt;Sid chroot&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --alias&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache sid &#x2F;srv&#x2F;chroot&#x2F;sid-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;normal-chroot&quot;&gt;Normal chroot&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;bullseye-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -42,6 +49,8 @@
 &lt;p&gt;More about this on this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;aerostitch.github.io&#x2F;linux_and_unix&#x2F;debian&#x2F;sbuild_with_experimental_distribution.html&quot;&gt;blog post&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;use-the-chroots&quot;&gt;Use the chroots&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;home&#x2F;user&#x2F;packages&#x2F;my-package
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# sid dist
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild -d&lt;&#x2F;span&gt;&lt;span&gt; sid
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Normal dist
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild -d&lt;&#x2F;span&gt;&lt;span&gt; bullseye
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Backports dist
@@ -54,6 +63,7 @@
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -r&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;chroot&#x2F;experimental-amd64-sbuild
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Find config the file and remove it
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;schroot&#x2F;chroot.d&#x2F;experimental-amd64-sbuild-F28TrU
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;sbuild&#x2F;chroot&#x2F;experimental-amd64-sbuild
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>

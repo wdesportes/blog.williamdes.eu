@@ -219,7 +219,14 @@
 <p>This is how to setup sbuild chroots for Debian packaging.</p>
 <p>The <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">Debian wiki</a> explains this already pretty good.</p>
 <p>But here is how I use and setup my chroots.</p>
+<h2 id="what-is-a-chroot">What is a chroot</h2>
+<p>From what I understood its like some kind of &quot;VM&quot; that uses the host Kernel.
+But that's not really that is more like an environment where the OS root directory &quot;/&quot; is reset to some folder on you system.</p>
+<p>You can read more about it on <a rel="noopener" target="_blank" href="https://wiki.debian.org/chroot">Debian wiki</a> <a rel="noopener" target="_blank" href="https://wiki.debian.org/fr/Chroot">fr</a> and on <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Chroot">Wikipedia</a></p>
 <h2 id="setup-the-chroots">Setup the chroots</h2>
+<h3 id="sid-chroot">Sid chroot</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=sid</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+</span></code></pre>
 <h3 id="normal-chroot">Normal chroot</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
@@ -244,6 +251,8 @@
 <p>More about this on this <a rel="noopener" target="_blank" href="https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html">blog post</a></p>
 <h2 id="use-the-chroots">Use the chroots</h2>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> /home/user/packages/my-package
+</span><span style="color:#65737e;"># sid dist
+</span><span style="color:#bf616a;">sbuild -d</span><span> sid
 </span><span style="color:#65737e;"># Normal dist
 </span><span style="color:#bf616a;">sbuild -d</span><span> bullseye
 </span><span style="color:#65737e;"># Backports dist
@@ -256,6 +265,7 @@
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm -r</span><span> /srv/chroot/experimental-amd64-sbuild
 </span><span style="color:#65737e;"># Find config the file and remove it
 </span><span style="color:#bf616a;">rm</span><span> /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
+</span><span style="color:#bf616a;">rm</span><span> /etc/sbuild/chroot/experimental-amd64-sbuild
 </span></code></pre>
 </div>
     <footer class="post-footer">
