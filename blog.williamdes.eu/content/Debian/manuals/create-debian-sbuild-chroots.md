@@ -1,7 +1,7 @@
 +++
 title = "Setup Debian sbuild chroots"
 date = 2023-01-18T12:40:00+00:05
-updated = 2023-01-21T14:32:00+00:05
+updated = 2023-02-08T14:36:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -35,10 +35,34 @@ You can read more about it on [Debian wiki](https://wiki.debian.org/chroot) [fr]
 
 ## Setup the chroots
 
+## Share APT cache across chroots
+
+It takes less bandwith, you can skip this if this is not an issue for you.
+
+This mounting technique is described on [Ubuntu wiki](https://wiki.ubuntu.com/SimpleSbuild).
+
+```sh
+mkdir /var/lib/sbuild/apt-cache
+sudo chown sbuild:sbuild /var/lib/sbuild/apt-cache
+# Add: /var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
+# Into: /etc/schroot/sbuild/fstab
+# Run a sbuild
+# Check that /var/lib/sbuild/apt-cache has new files or folders
+```
+
 ### Sid chroot
 
 ```sh
 sudo sbuild-createchroot --alias=sid --chroot-prefix=sid --include=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+```
+
+#### Update the sid chroot
+
+```sh
+sudo sbuild-shell source:sid-amd64-sbuild
+apt update
+apt upgrade -y
+exit
 ```
 
 ### Normal chroot
