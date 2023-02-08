@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/sbuild/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-21T14:32:00+00:05</updated>
+	<updated>2023-02-08T14:36:00+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/sbuild/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Setup Debian sbuild chroots</title>
 		<published>2023-01-18T12:40:00+00:05</published>
-		<updated>2023-01-21T14:32:00+00:05</updated>
+		<updated>2023-02-08T14:36:00+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/</id>
 		<content type="html">&lt;p&gt;Creating &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild&quot;&gt;sbuild&lt;&#x2F;a&gt; chroots for Debian package testing&lt;&#x2F;p&gt;
@@ -22,8 +22,24 @@
 But that&#x27;s not really that is more like an environment where the OS root directory &amp;quot;&#x2F;&amp;quot; is reset to some folder on you system.&lt;&#x2F;p&gt;
 &lt;p&gt;You can read more about it on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;chroot&quot;&gt;Debian wiki&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;fr&#x2F;Chroot&quot;&gt;fr&lt;&#x2F;a&gt; and on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Chroot&quot;&gt;Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;setup-the-chroots&quot;&gt;Setup the chroots&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;share-apt-cache-across-chroots&quot;&gt;Share APT cache across chroots&lt;&#x2F;h2&gt;
+&lt;p&gt;It takes less bandwith, you can skip this if this is not an issue for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This mounting technique is described on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.ubuntu.com&#x2F;SimpleSbuild&quot;&gt;Ubuntu wiki&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;var&#x2F;lib&#x2F;sbuild&#x2F;apt-cache
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; chown sbuild:sbuild &#x2F;var&#x2F;lib&#x2F;sbuild&#x2F;apt-cache
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Add: &#x2F;var&#x2F;lib&#x2F;sbuild&#x2F;apt-cache  &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives  none    rw,bind 0   0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Into: &#x2F;etc&#x2F;schroot&#x2F;sbuild&#x2F;fstab
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Run a sbuild
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Check that &#x2F;var&#x2F;lib&#x2F;sbuild&#x2F;apt-cache has new files or folders
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;sid-chroot&quot;&gt;Sid chroot&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --alias&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache sid &#x2F;srv&#x2F;chroot&#x2F;sid-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;update-the-sid-chroot&quot;&gt;Update the sid chroot&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:sid-amd64-sbuild
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; update
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; upgrade&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -y
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;exit
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;normal-chroot&quot;&gt;Normal chroot&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;bullseye-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian

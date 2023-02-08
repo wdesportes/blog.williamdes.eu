@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-01-18T12:40:00+00:05">
         <meta property="article:published_time" content="2023-01-18T12:40:00">
-        <meta property="article:modified_time" content="2023-01-21T14:32:00">
+        <meta property="article:modified_time" content="2023-02-08T14:36:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="debian-manual"><meta property="article:tags" content="sbuild">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Setup Debian sbuild chroots",
     "dateCreated": "2023-01-18T12:40:00+0005",
     "datePublished": "2023-01-18T12:40:00+0005",
-    "dateModified": "2023-01-21T14:32:00+0005",
+    "dateModified": "2023-02-08T14:36:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -209,9 +209,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-01-21T14:32:00+0005">January 21, 2023 14:32</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-02-08T14:36:00+0002">February  8, 2023 14:36</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">2 min read</span>
+            <span class="post-reading-time">3 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Creating <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">sbuild</a> chroots for Debian package testing</p>
@@ -224,8 +224,24 @@
 But that's not really that is more like an environment where the OS root directory &quot;/&quot; is reset to some folder on you system.</p>
 <p>You can read more about it on <a rel="noopener" target="_blank" href="https://wiki.debian.org/chroot">Debian wiki</a> <a rel="noopener" target="_blank" href="https://wiki.debian.org/fr/Chroot">fr</a> and on <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Chroot">Wikipedia</a></p>
 <h2 id="setup-the-chroots">Setup the chroots</h2>
+<h2 id="share-apt-cache-across-chroots">Share APT cache across chroots</h2>
+<p>It takes less bandwith, you can skip this if this is not an issue for you.</p>
+<p>This mounting technique is described on <a rel="noopener" target="_blank" href="https://wiki.ubuntu.com/SimpleSbuild">Ubuntu wiki</a>.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir</span><span> /var/lib/sbuild/apt-cache
+</span><span style="color:#bf616a;">sudo</span><span> chown sbuild:sbuild /var/lib/sbuild/apt-cache
+</span><span style="color:#65737e;"># Add: /var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
+</span><span style="color:#65737e;"># Into: /etc/schroot/sbuild/fstab
+</span><span style="color:#65737e;"># Run a sbuild
+</span><span style="color:#65737e;"># Check that /var/lib/sbuild/apt-cache has new files or folders
+</span></code></pre>
 <h3 id="sid-chroot">Sid chroot</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=sid</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+</span></code></pre>
+<h4 id="update-the-sid-chroot">Update the sid chroot</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:sid-amd64-sbuild
+</span><span style="color:#bf616a;">apt</span><span> update
+</span><span style="color:#bf616a;">apt</span><span> upgrade</span><span style="color:#bf616a;"> -y
+</span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <h3 id="normal-chroot">Normal chroot</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
