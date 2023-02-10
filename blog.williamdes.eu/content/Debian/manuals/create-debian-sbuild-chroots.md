@@ -35,6 +35,8 @@ You can read more about it on [Debian wiki](https://wiki.debian.org/chroot) [fr]
 
 ## Setup the chroots
 
+If you have an SSD and some useless RAM, you can use tmpfs to hold some files and avoid SSD writes: [Debian wiki](https://wiki.debian.org/sbuild#sbuild_with_tmpfs_.28schroot.29)
+
 ## Share APT cache across chroots
 
 It takes less bandwith, you can skip this if this is not an issue for you.
@@ -53,7 +55,7 @@ sudo chown sbuild:sbuild /var/lib/sbuild/apt-cache
 ### Sid chroot
 
 ```sh
-sudo sbuild-createchroot --alias=sid --chroot-prefix=sid --include=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+sudo sbuild-createchroot --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-unstable main' --alias=sid --chroot-prefix=sid --include=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
 
 #### Update the sid chroot
@@ -101,6 +103,12 @@ Make sure the packages in backports are preferred above the original ones:
 sudo sbuild-shell source:bullseye-backports-amd64-sbuild
 echo "Package: *\nPin: release a=bullseye-backports\nPin-Priority:900" > /etc/apt/preferences.d/bullseye-backports.pref
 exit
+```
+
+#### Early backports testing
+
+```sh
+sbuild -d bullseye-backports --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-bullseye-backports main'
 ```
 
 More about this on this [blog post](https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html)
