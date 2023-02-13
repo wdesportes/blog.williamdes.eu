@@ -4,8 +4,31 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-08T14:36:00+00:02</updated>
+	<updated>2023-02-13T13:10:00+00:02</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Install fortinet client on Debian 12 - bookworm</title>
+		<published>2023-02-13T13:10:00+00:02</published>
+		<updated>2023-02-13T13:10:00+00:02</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/" type="text/html"/>
+		<id>https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/</id>
+		<content type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.fortinet.com&#x2F;fr&#x2F;support&#x2F;product-downloads&quot;&gt;fortinet client&lt;&#x2F;a&gt; on Debian 12 - bookworm&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;This is how to setup fortinet on Debian 12 - bookworm.&lt;&#x2F;p&gt;
+&lt;p&gt;Their &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.fortinet.com&#x2F;fr&#x2F;support&#x2F;product-downloads&#x2F;linux&quot;&gt;webpage&lt;&#x2F;a&gt; is outdated and broken, here is my updated tutorial.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;fetch-the-gpg-key&quot;&gt;Fetch the GPG key&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;repo.fortinet.com&#x2F;repo&#x2F;7.0&#x2F;ubuntu&#x2F;DEB-GPG-KEY | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; gpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --dearmor -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;fortinet.gpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;add-sources-file&quot;&gt;Add sources file&lt;&#x2F;h3&gt;
+&lt;p&gt;Create a file at &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;fortinet.list&lt;&#x2F;code&gt; and put the following contents:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;apt&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-apt &quot;&gt;&lt;code class=&quot;language-apt&quot; data-lang=&quot;apt&quot;&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;fortinet.gpg] https:&#x2F;&#x2F;repo.fortinet.com&#x2F;repo&#x2F;7.0&#x2F;ubuntu bionic multiverse
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;screenshots&quot;&gt;Screenshots&lt;&#x2F;h3&gt;
+&lt;p&gt;On 2023-02-13 I followed this and it installed: &lt;code&gt;7.0.7.0246&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Debian&#x2F;tutorials&#x2F;install-forticlient-on-debian-12-bookworm&#x2F;..&#x2F;FortiClient--ZeroTrustFabricAgent_Debian_12_bookworm.jpg&quot; alt=&quot;FortiClient -- Zero Trust Fabric Agent on Debian 12 - bookworm&quot; title=&quot;FortiClient -- Zero Trust Fabric Agent on Debian 12 - bookworm&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Setup Debian sbuild chroots</title>
 		<published>2023-01-18T12:40:00+00:05</published>
@@ -34,7 +57,7 @@ But that&#x27;s not really that is more like an environment where the OS root di
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Check that &#x2F;var&#x2F;lib&#x2F;sbuild&#x2F;apt-cache has new files or folders
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;sid-chroot&quot;&gt;Sid chroot&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;incoming.debian.org&#x2F;debian-buildd&#x2F; buildd-unstable main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --alias&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache sid &#x2F;srv&#x2F;chroot&#x2F;sid-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;incoming.debian.org&#x2F;debian-buildd&#x2F; buildd-unstable main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;incoming.debian.org&#x2F;debian-buildd&#x2F; buildd-sid main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --alias&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=sid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache sid &#x2F;srv&#x2F;chroot&#x2F;sid-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;update-the-sid-chroot&quot;&gt;Update the sid chroot&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:sid-amd64-sbuild
@@ -43,11 +66,11 @@ But that&#x27;s not really that is more like an environment where the OS root di
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;exit
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;normal-chroot&quot;&gt;Normal chroot&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;bullseye-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --alias&lt;&#x2F;span&gt;&lt;span&gt;=bookworm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=bookworm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bookworm &#x2F;srv&#x2F;chroot&#x2F;bullseye-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;experimental-chroot&quot;&gt;Experimental chroot&lt;&#x2F;h3&gt;
 &lt;p&gt;Create the chroot:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=experimental&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;deb.debian.org&#x2F;debian experimental main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bullseye &#x2F;srv&#x2F;chroot&#x2F;experimental-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-createchroot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --chroot-prefix&lt;&#x2F;span&gt;&lt;span&gt;=experimental&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --extra-repository&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;deb http:&#x2F;&#x2F;deb.debian.org&#x2F;debian experimental main&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --include&lt;&#x2F;span&gt;&lt;span&gt;=eatmydata,ccache bookworm &#x2F;srv&#x2F;chroot&#x2F;experimental-amd64-sbuild http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Make sure the packages in backports are preferred above the original ones:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:experimental-amd64-sbuild
@@ -61,6 +84,9 @@ But that&#x27;s not really that is more like an environment where the OS root di
 &lt;p&gt;Make sure the packages in backports are preferred above the original ones:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-shell source:bullseye-backports-amd64-sbuild
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Package: *\nPin: release a=bullseye-backports\nPin-Priority:900&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt; &#x2F;etc&#x2F;apt&#x2F;preferences.d&#x2F;bullseye-backports.pref
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Update the chroot
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; update
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; upgrade
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;exit
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;early-backports-testing&quot;&gt;Early backports testing&lt;&#x2F;h4&gt;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog</title>
+        <title>Williamdes&#x27;s blog - Install fortinet client on Debian 12 - bookworm</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,8 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
         <!-- Standard meta tags -->
-        
-        
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Install fortinet client on Debian 12 - bookworm">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -22,8 +22,21 @@
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Williamdes's blog">
         
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://blog.williamdes.eu">
+        <meta property="og:title" content="Install fortinet client on Debian 12 - bookworm">
+        <meta property="og:url" content="https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm">
+        <meta property="og:description" content="Install fortinet client on Debian 12 - bookworm">
+        
+        
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/4d4bbb4acc8fd7c500.jpg"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="627"/>
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2023-02-13T13:10:00+00:02">
+        <meta property="article:published_time" content="2023-02-13T13:10:00">
+        
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="debian-tutorial"><meta property="article:tags" content="fortinet">
         
 
         <!-- CSS -->
@@ -34,6 +47,9 @@
 
 
 
+
+    
+    
 
     
     
@@ -59,16 +75,24 @@
                 "@type": "ListItem",
                 "position": 2,
                 "item": {
-                    "@id": "https://blog.williamdes.eu/Infrastructure",
-                    "name": "Infrastructure"
+                    "@id": "https://blog.williamdes.eu/Debian",
+                    "name": "Debian"
                 }
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "item": {
-                    "@id": "https://blog.williamdes.eu/Infrastructure/stories",
-                    "name": "stories"
+                    "@id": "https://blog.williamdes.eu/Debian/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm",
+                    "name": "Install fortinet client on Debian 12 - bookworm"
                 }
             }
         ]
@@ -76,39 +100,27 @@
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-                "@id": "https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/",
-                "name": "Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan",
-                "url": "https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/"
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-                "@id": "https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/",
-                "name": "Migrating to a new server housed at Dyjix",
-                "url": "https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/"
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-                "@id": "https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/",
-                "name": "Making NVME SSDs work on a DELL R630",
-                "url": "https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/"
-            }
-        }
-    ],
-    "itemListOrder": "https://schema.org/ItemListUnordered",
-    "name": ""
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/",
+    "headline": "Install fortinet client on Debian 12 - bookworm",
+    "alternativeHeadline": "Install fortinet client on Debian 12 - bookworm",
+    "dateCreated": "2023-02-13T13:10:00+0002",
+    "datePublished": "2023-02-13T13:10:00+0002",
+    
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["debian-tutorial","fortinet"],
+    "articleSection": "Tutorial",
+    "genre": ["debian-tutorial","fortinet"]
 }
 </script>
 <script>
@@ -171,7 +183,7 @@
         <!-- End Matomo Code -->
     </head>
 
-    <body class="list">
+    <body class="single">
 
     <!-- Apply theme -->
     <script>
@@ -182,7 +194,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <h1 class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></h1>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -192,51 +204,49 @@
 
         <main class="main">
             
-<div class="posts">
-    
-    
-                    <header class="entry-header">
-                        <h2>Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>I changed my Raspberry Pi fan for a <a rel="noopener" target="_blank" href="https://noctua.at/en/nf-a4x10-5v-pwm">Noctua NF-A4x10 5V PWM</a> and had a 2° temperature drop compared to the GeeekPi case fan.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-08-30T13:30:00+0002">August 30, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;raspberry-pi-with-noctua-fan&#x2F;"></a>
-
-    </article>
-    
-                    <header class="entry-header">
-                        <h2>Migrating to a new server housed at Dyjix</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>This is the story on how I migrated from a VPS to a Dell PowerEdge R630.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-07-02T20:20:00+0002">July  2, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;"></a>
-
-    </article>
-    
-                    <header class="entry-header">
-                        <h2>Making NVME SSDs work on a DELL R630</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>The adventure it has been to make NVME SSDs work on a DELL R630 server.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2022-05-20T00:07:00+0002">May 20, 2022</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;"></a>
-
-    </article>
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Install fortinet client on Debian 12 - bookworm</h1>
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2023-02-13T13:10:00+0002">February 13, 2023 13:10</time></span>
+            
+            <span>&middot;</span>
+            <span class="post-reading-time">1 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Install <a rel="noopener" target="_blank" href="https://www.fortinet.com/fr/support/product-downloads">fortinet client</a> on Debian 12 - bookworm</p>
+<span id="continue-reading"></span>
+<p>This is how to setup fortinet on Debian 12 - bookworm.</p>
+<p>Their <a rel="noopener" target="_blank" href="https://www.fortinet.com/fr/support/product-downloads/linux">webpage</a> is outdated and broken, here is my updated tutorial.</p>
+<h2 id="install">Install</h2>
+<h3 id="fetch-the-gpg-key">Fetch the GPG key</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl -fsSL</span><span> https://repo.fortinet.com/repo/7.0/ubuntu/DEB-GPG-KEY | </span><span style="color:#bf616a;">sudo</span><span> gpg</span><span style="color:#bf616a;"> --dearmor -o</span><span> /etc/apt/trusted.gpg.d/fortinet.gpg
+</span></code></pre>
+<h3 id="add-sources-file">Add sources file</h3>
+<p>Create a file at <code>/etc/apt/sources.list.d/fortinet.list</code> and put the following contents:</p>
+<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>deb [signed-by=/etc/apt/trusted.gpg.d/fortinet.gpg] https://repo.fortinet.com/repo/7.0/ubuntu bionic multiverse
+</span></code></pre>
+<h3 id="screenshots">Screenshots</h3>
+<p>On 2023-02-13 I followed this and it installed: <code>7.0.7.0246</code></p>
+<p><img src="https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/../FortiClient--ZeroTrustFabricAgent_Debian_12_bookworm.jpg" alt="FortiClient -- Zero Trust Fabric Agent on Debian 12 - bookworm" title="FortiClient -- Zero Trust Fabric Agent on Debian 12 - bookworm" /></p>
 </div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/debian-tutorial/">debian-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/fortinet/">fortinet</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
 
         </main>
 

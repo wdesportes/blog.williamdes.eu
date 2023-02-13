@@ -31,7 +31,16 @@
 
         <!-- Feeds -->
         <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
-            
+
+
+
+
+    
+    
+
+    
+    
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -45,11 +54,46 @@
                     "@id": "https://blog.williamdes.eu",
                     "name": "Williamdes's blog"
                 }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian",
+                    "name": "Debian"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian/tutorials",
+                    "name": "tutorials"
+                }
             }
         ]
     }
 </script>
-        <script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/",
+                "name": "Install fortinet client on Debian 12 - bookworm",
+                "url": "https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/"
+            }
+        }
+    ],
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "name": ""
+}
+</script>
+<script>
             function setTheme() {
                 const time = new Date();
 
@@ -130,96 +174,24 @@
 
         <main class="main">
             
-            <div class="posts">
-                
-                <article class="post-entry">
-                
+<div class="posts">
+    
+    
                     <header class="entry-header">
-                        <h2>Migrating to a new server housed at Dyjix</h2>
+                        <h2>Install fortinet client on Debian 12 - bookworm</h2>
                     </header>
                     <section class=entry-content>
-                        <p>This is the story on how I migrated from a VPS to a Dell PowerEdge R630.</p>
+                        <p>Install <a rel="noopener" target="_blank" href="https://www.fortinet.com/fr/support/product-downloads">fortinet client</a> on Debian 12 - bookworm</p>
 
                     </section>
                     <footer class="entry-footer">
-                        <time datetime="2021-07-02T20:20:00+0002">July  2, 2021</time>
+                        <time datetime="2023-02-13T13:10:00+0002">February 13, 2023</time>
                     </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;"></a>
+                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Debian&#x2F;tutorials&#x2F;install-forticlient-on-debian-12-bookworm&#x2F;"></a>
 
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>Here is a story about how I moved out from <a rel="noopener" target="_blank" href="https://www.lastpass.com/">LastPass</a> to <a rel="noopener" target="_blank" href="https://bitwarden.com/">Bitwarden</a> after 7 years using LastPass.</p>
+    </article>
+</div>
 
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-02-21T00:00:00+0000">February 21, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;"></a>
-
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>A new uptime service for my infrastructure (upptime)</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>Here is the story of why I did move from my <a rel="noopener" target="_blank" href="https://github.com/wdes/stats">custom made</a> <a rel="noopener" target="_blank" href="https://heroku.com">Heroku</a>/Node/<a rel="noopener" target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> stats service to <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a>.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-02-03T15:00:00+0000">February  3, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-my-uptime-service-to-upptime&#x2F;"></a>
-
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>Follow my phpMyAdmin adventure</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>You can follow my phpMyAdmin adventure on this blog post.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-01-13T12:00:00+0000">January 13, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;phpmyadmin-adventure&#x2F;"></a>
-
-                </article>
-                
-                <article class="post-entry">
-                
-                    <header class="entry-header">
-                        <h2>Welcome to my blog !</h2>
-                    </header>
-                    <section class=entry-content>
-                        <p>This is my first blog post ever, I hope you will be interested by what I post.</p>
-
-                    </section>
-                    <footer class="entry-footer">
-                        <time datetime="2021-01-01T12:00:00+0000">January  1, 2021</time>
-                    </footer>
-                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;welcome-to-my-blog&#x2F;"></a>
-
-                </article>
-                
-                <footer class="page-footer">
-                    <nav class="pagination">
-                        <a class="prev" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;">← Previous</a>
-                        <!--Hidden Next-Button-->
-                    </nav>
-                </footer>
-            </div>
-            
         </main>
 
         <footer class="footer">

@@ -14,6 +14,13 @@
         <lastmod>2023-02-08T14:36:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Debian/tutorials/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/</loc>
+        <lastmod>2023-02-13T13:10:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/</loc>
     </url>
     <url>
@@ -202,6 +209,12 @@
         <loc>https://blog.williamdes.eu/tags/debian-manual/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/debian-tutorial/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/debian-tutorial/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/dell-r630/</loc>
     </url>
     <url>
@@ -212,6 +225,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/dell/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/fortinet/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/fortinet/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/infra-story/</loc>

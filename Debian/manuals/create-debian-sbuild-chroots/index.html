@@ -236,7 +236,7 @@ But that's not really that is more like an environment where the OS root directo
 </span><span style="color:#65737e;"># Check that /var/lib/sbuild/apt-cache has new files or folders
 </span></code></pre>
 <h3 id="sid-chroot">Sid chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-unstable main</span><span>&#39;</span><span style="color:#bf616a;"> --alias</span><span>=sid</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-unstable main</span><span>&#39;</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-sid main</span><span>&#39;</span><span style="color:#bf616a;"> --alias</span><span>=sid</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <h4 id="update-the-sid-chroot">Update the sid chroot</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:sid-amd64-sbuild
@@ -245,11 +245,11 @@ But that's not really that is more like an environment where the OS root directo
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <h3 id="normal-chroot">Normal chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=bookworm</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bookworm</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <h3 id="experimental-chroot">Experimental chroot</h3>
 <p>Create the chroot:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=experimental</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian experimental main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/experimental-amd64-sbuild http://ftp.fr.debian.org/debian
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=experimental</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian experimental main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/experimental-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <p>Make sure the packages in backports are preferred above the original ones:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:experimental-amd64-sbuild
@@ -263,6 +263,9 @@ But that's not really that is more like an environment where the OS root directo
 <p>Make sure the packages in backports are preferred above the original ones:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:bullseye-backports-amd64-sbuild
 </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=bullseye-backports\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/bullseye-backports.pref
+</span><span style="color:#65737e;"># Update the chroot
+</span><span style="color:#bf616a;">apt</span><span> update
+</span><span style="color:#bf616a;">apt</span><span> upgrade
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <h4 id="early-backports-testing">Early backports testing</h4>
