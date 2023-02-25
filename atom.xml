@@ -4,7 +4,7 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-13T13:10:00+00:02</updated>
+	<updated>2023-02-26T00:53:00+00:02</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Install fortinet client on Debian 12 - bookworm</title>
@@ -436,6 +436,64 @@ img {
     width: 24rem;
 }
 &lt;&#x2F;style&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Add a crypt data volume to Alpine 3.17</title>
+		<published>2022-05-20T00:07:00+00:02</published>
+		<updated>2023-02-26T00:53:00+00:02</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/" type="text/html"/>
+		<id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/</id>
+		<content type="html">&lt;p&gt;Add a crypt data volume to Alpine 3.17&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;This is how to setup a data volume on an already configured Alpine 3.17 system.&lt;&#x2F;p&gt;
+&lt;p&gt;The disk is at: &lt;code&gt;&#x2F;dev&#x2F;sdb&lt;&#x2F;code&gt;, it also could be &lt;code&gt;&#x2F;dev&#x2F;vdb&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;creating-partitions&quot;&gt;Creating partitions&lt;&#x2F;h3&gt;
+&lt;p&gt;You can even skip this step and use all the disk at once.
+Just rename &lt;code&gt;sdb1&lt;&#x2F;code&gt; to &lt;code&gt;sdb&lt;&#x2F;code&gt; in other commands &amp;amp; scripts.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;fdisk&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;dev&#x2F;sdb
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enter the keyboard sequence:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# n
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# ENTER
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# ENTER
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# w
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;creating-luks-setup&quot;&gt;Creating LUKS setup&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apk&lt;&#x2F;span&gt;&lt;span&gt; add&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --update&lt;&#x2F;span&gt;&lt;span&gt; cryptsetup lsblk
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;creating-the-luks-lvm-ext4-partition&quot;&gt;Creating the LUKS&#x2F;LVM&#x2F;EXT4 partition&lt;&#x2F;h3&gt;
+&lt;p&gt;Make the LUKS drive:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksFormat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --hash&lt;&#x2F;span&gt;&lt;span&gt; sha512 &#x2F;dev&#x2F;sdb1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksOpen &#x2F;dev&#x2F;sdb1 enc_storage
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create LVM and ext4 into it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkfs.ext4&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;dev&#x2F;mapper&#x2F;enc_storage
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Mount it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;mnt&#x2F;storage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;lsblk
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-e &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;dev&#x2F;mapper&#x2F;enc_storage\t&#x2F;mnt&#x2F;storage\text4\tdefaults\t0\t0\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;fstab
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mount -a
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;lsblk
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;df -h
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;helper-script&quot;&gt;Helper script&lt;&#x2F;h4&gt;
+&lt;p&gt;I often put this in &lt;code&gt;~&#x2F;open.sh&lt;&#x2F;code&gt; to help unlocking the system when I have forgot the commands.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#!&#x2F;bin&#x2F;sh -exu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksOpen &#x2F;dev&#x2F;sdb1 enc_storage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mount -a -v
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#echo &amp;#39;Starting docker&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#rc-service docker start
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#echo &amp;#39;Waiting 4sec for Docker to start&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#sleep 4
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Done !&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
