@@ -1,6 +1,7 @@
 +++
 title = "Install fortinet client on Debian 12 - bookworm"
 date = 2023-02-13T13:10:00+00:02
+updated = 2023-03-02T14:00:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -38,6 +39,23 @@ Create a file at `/etc/apt/sources.list.d/fortinet.list` and put the following c
 
 ```apt
 deb [signed-by=/etc/apt/trusted.gpg.d/fortinet.gpg] https://repo.fortinet.com/repo/7.0/ubuntu bionic multiverse
+```
+
+### Install it
+
+```apt
+sudo apt update
+sudo apt install forticlient
+```
+
+### License
+
+At some point it bugged me into buying the license, so I `apt purge purge forticlient` and re-installed the deb from the website.
+But I think it's the same as the one from the repo. And after it did switch in the free mode.
+
+```sh
+sudo apt purge purge forticlient
+sudo apt install /home/williamdes/forticlient_vpn_7.0.7.0246_amd64.deb
 ```
 
 ### Screenshots
