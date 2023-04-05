@@ -31,7 +31,7 @@ jobs:
                   make build
                   TEMP_DIR="$(mktemp -d --suffix=_blog)"
                   cp -rp blog.williamdes.eu/public "${TEMP_DIR}"
-                  git checkout gh-pages
+                  git checkout cf-pages
                   git ls-files | xargs -r -n 1 rm
                   rm -rfd ./*
                   mv "${TEMP_DIR}"/public/* ./

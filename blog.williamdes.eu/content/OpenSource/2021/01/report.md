@@ -45,7 +45,7 @@ I spent some time configuring GitLab and GitLab pages for this blog, but it just
 ### Tuesday
 
 I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
-Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.
+Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on `gh-pages` when I edit the blog contents.
 
 ## Third week (03)
 
