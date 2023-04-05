@@ -36,7 +36,6 @@ jobs:
                   rm -rfd ./*
                   mv "${TEMP_DIR}"/public/* ./
                   rm -rf "${TEMP_DIR}"
-                  echo 'blog.williamdes.eu' > CNAME
                   git add -A
                   git commit --allow-empty -m "Content update ($(date --utc))"
                   git push
