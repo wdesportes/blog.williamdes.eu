@@ -747,7 +747,7 @@ And cleaned up some recent useless files that had and could enter the phar file.
 I spent some time configuring GitLab and GitLab pages for this blog, but it just did not work for some (still) unknown reason.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
 &lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
-Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on gh-pages when I edit the blog contents.&lt;&#x2F;p&gt;
+Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on &lt;code&gt;gh-pages&lt;&#x2F;code&gt; when I edit the blog contents.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;third-week-03&quot;&gt;Third week (03)&lt;&#x2F;h2&gt;
 &lt;p&gt;I created an &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doctum.long-term.support&#x2F;releases.rss&quot;&gt;RSS feed for Doctum&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
