@@ -1,4 +1,4 @@
-name: Publish to GitHub pages
+name: Publish to git for CloudFlare pages
 
 on:
     push:
