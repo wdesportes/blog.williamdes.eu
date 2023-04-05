@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Williamdes&#x27;s blog - OpenFortiGUI</title>
+	<link href="https://blog.williamdes.eu/tags/openfortigui/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.williamdes.eu"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-04-05T21:30:00+00:02</updated>
+	<id>https://blog.williamdes.eu/tags/openfortigui/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Install OpenFortiGUI client on Debian 12 - bookworm</title>
+		<published>2023-04-05T21:16:00+00:02</published>
+		<updated>2023-04-05T21:30:00+00:02</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/" type="text/html"/>
+		<id>https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/</id>
+		<content type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hadler.me&#x2F;linux&#x2F;openfortigui&#x2F;&quot;&gt;OpenFortiGUI&lt;&#x2F;a&gt; on Debian 12 - bookworm&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;This is how to setup OpenFortiGUI on Debian 12 - bookworm.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hadler.me&#x2F;linux&#x2F;openfortigui&#x2F;&quot;&gt;OpenFortiGUI&lt;&#x2F;a&gt; uses &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adrienverge&#x2F;openfortivpn&quot;&gt;the openfortivpn project&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;OpenFortiGUI is still not in Debian or Ubuntu, but someone did open a ITP for it: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bugs.debian.org&#x2F;888518&quot;&gt;#888518&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;fetch-the-gpg-key&quot;&gt;Fetch the GPG key&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;apt.iteas.at&#x2F;iteas-keyring.gpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;iteas-keyring.gpg
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;gpg --no-default-keyring --keyring&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;iteas-keyring.gpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --armor --export&lt;&#x2F;span&gt;&lt;span&gt; BA662621DA69F38C443F147C23CAE45582EB0928 | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; gpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --dearmor -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;iteas-keyring.gpg
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; .&#x2F;iteas-keyring.gpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;add-sources-file&quot;&gt;Add sources file&lt;&#x2F;h3&gt;
+&lt;p&gt;Create a file at &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;openfortigui.list&lt;&#x2F;code&gt; and put the following contents:&lt;&#x2F;p&gt;
+&lt;p&gt;Check on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;apt.iteas.at&#x2F;iteas&#x2F;dists&#x2F;&quot;&gt;https:&#x2F;&#x2F;apt.iteas.at&#x2F;iteas&#x2F;dists&#x2F;&lt;&#x2F;a&gt; if you find your dist.
+I did open an issue to ask for Debian bookworm to be added: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theinvisible&#x2F;openfortigui&#x2F;issues&#x2F;189&quot;&gt;theinvisible&#x2F;openfortigui#189&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;apt&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-apt &quot;&gt;&lt;code class=&quot;language-apt&quot; data-lang=&quot;apt&quot;&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;iteas-keyring.gpg] https:&#x2F;&#x2F;apt.iteas.at&#x2F;iteas bullseye main
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;install-it&quot;&gt;Install it&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;apt&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-apt &quot;&gt;&lt;code class=&quot;language-apt&quot; data-lang=&quot;apt&quot;&gt;&lt;span&gt;sudo apt update
+&lt;&#x2F;span&gt;&lt;span&gt;apt policy openfortigui
+&lt;&#x2F;span&gt;&lt;span&gt;sudo apt install openfortigui
+&lt;&#x2F;span&gt;&lt;span&gt;# Or (for me)
+&lt;&#x2F;span&gt;&lt;span&gt;sudo apt install openfortigui -t bullseye
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;screenshots&quot;&gt;Screenshots&lt;&#x2F;h3&gt;
+&lt;p&gt;On 2023-02-13 I followed this and it installed: &lt;code&gt;7.0.7.0246&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Debian&#x2F;tutorials&#x2F;install-openfortigui-on-debian-12-bookworm&#x2F;..&#x2F;OpenFortiGUI_0.9.8_Debian_12_bookworm.jpg&quot; alt=&quot;openFortiGUI - 0.9.8 on Debian 12 - bookworm&quot; title=&quot;openFortiGUI - 0.9.8 on Debian 12 - bookworm&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

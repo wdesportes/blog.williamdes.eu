@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - The Debian packages I maintain</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="A presentation of the Debian packages I maintain">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="The Debian packages I maintain">
+        <meta property="og:url" content="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain">
+        <meta property="og:description" content="A presentation of the Debian packages I maintain">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2023-05-05T19:50:00+00:00">
+        <meta property="article:published_time" content="2023-05-05T19:50:00">
+        
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="story"><meta property="article:tags" content="Debian">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian",
+                    "name": "Debian"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain",
+                    "name": "The Debian packages I maintain"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/",
+    "headline": "The Debian packages I maintain",
+    "alternativeHeadline": "A presentation of the Debian packages I maintain",
+    "dateCreated": "2023-05-05T19:50:00+0000",
+    "datePublished": "2023-05-05T19:50:00+0000",
+    
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    
+    "articleSection": "Story",
+    "genre": ["story","Debian"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">The Debian packages I maintain</h1>
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2023-05-05T19:50:00+0000">May  5, 2023 19:50</time></span>
+            
+            <span>&middot;</span>
+            <span class="post-reading-time">4 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>A presentation of the Debian packages I maintain</p>
+<span id="continue-reading"></span>
+<p>Since 2019 I started contributing to Debian.
+You can find a quick list of areas and dates I started contributing to Debian on <a rel="noopener" target="_blank" href="https://contributors.debian.org/contributor/williamdes/">my contributors.d.o page</a>.</p>
+<p>Here is the link to the full list of packages I maintain on <a rel="noopener" target="_blank" href="https://qa.debian.org/developer.php?login=williamdes@wdes.fr&amp;comaint=yes&amp;version=oldoldstable">qa.d.o</a></p>
+<h2 id="the-packages-i-maintain">The packages I maintain</h2>
+<p>I decided to make them easier to find and created labels for them on Debian Salsa (A GitLab instance that hosts the packages and CIs):</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://salsa.debian.org/explore/projects/topics/wdes-packaging-team">@wdes-packaging-team</a></li>
+<li><a rel="noopener" target="_blank" href="https://salsa.debian.org/explore/projects/topics/phpmyadmin-packaging-team">@phpmyadmin-packaging-team</a></li>
+</ul>
+<h3 id="libraries">Libraries</h3>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/tcpdf">tcpdf</a>, <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1073136/accepted-tcpdf-632dfsg1-1-source-into-unstable/">I adopted it in October 2019</a> and have been maintaining the packaging and sending it to stable-backports.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/jquery-timepicker">jquery-timepicker</a>, <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1210286/accepted-jquery-timepicker-163-1-source-into-unstable/">I adopted it in January 2021</a> and it's been a pleasure to package it and <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1401595/accepted-jquery-timepicker-163-2-source-into-unstable/">add tests</a> <a rel="noopener" target="_blank" href="https://salsa.debian.org/js-team/jquery-timepicker/-/commit/cf4b8b8c311d3232233741519bcc356b48ce4bdc">[git]</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-code-lts-u2f-php-server">php-code-lts-u2f-php-server</a> used by phpMyAdmin for legacy U2F, it's a library I <a rel="noopener" target="_blank" href="https://github.com/code-lts/U2F-php-server">took back maintenance at @code-lts</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/mariadb-mysql-kbs">mariadb-mysql-kbs</a>, my data library I made in <a rel="noopener" target="_blank" href="https://github.com/williamdes/mariadb-mysql-kbs/releases/tag/v1.0.0">July 2018</a>. Maintained up to date by my nice bot.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/dasprid-enum">dasprid-enum</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/baconqrcode">baconqrcode</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-zumba-json-serializer">php-zumba-json-serializer</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-slim-psr7">php-slim-psr7</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/google-recaptcha">google-recaptcha</a></li>
+</ul>
+<h4 id="phpmyadmin-libraires"><a rel="noopener" target="_blank" href="https://qa.debian.org/developer.php?email=team%2Bphpmyadmin%40tracker.debian.org">phpMyAdmin libraires</a></h4>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/twig-i18n-extension">twig-i18n-extension</a> previously <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/twig-extensions">twig-extensions</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin-shapefile">phpmyadmin-shapefile</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin-motranslator">phpmyadmin-motranslator</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin-sql-parser">phpmyadmin-sql-parser</a></li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin">phpmyadmin</a>, the phpMyAdmin package.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpsysinfo">phpsysinfo</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1406225/accepted-phpsysinfo-342-1-source-into-unstable/">adopted it in January 2023</a> to save it from beeing missing from Debian bookworm !</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpldapadmin">phpldapadmin</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1427368/accepted-phpldapadmin-1263-03-source-into-unstable/">saved/adopted it and made PHP 8.1/8.2 support</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/shunit2">shunit2</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1357356/accepted-shunit2-218-1-source-into-experimental/">finished the hard refurubishing work</a> and got it updated in Debian for bookworm.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phing">phing</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417993/accepted-phing-2174-1-source-into-unstable/">adopted it</a> to save it from beeing missing from Debian bookworm !</li>
+</ul>
+<h2 id="the-packages-i-help-maintain">The packages I help maintain</h2>
+<p>They are some that can be found on: <a rel="noopener" target="_blank" href="https://salsa.debian.org/explore/projects/topics/wdes-packaging-team">@wdes-packaging-team</a>.</p>
+<h3 id="libraries-1">Libraries</h3>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-image-text">php-image-text</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1412143/accepted-php-image-text-070-3-source-into-unstable/">wrote autopkgtests and refreshed the packaging</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-font-lib">php-font-lib</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1415724/accepted-php-font-lib-054dfsg-1-source-into-unstable/">refreshed the packaging</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf-svg-lib">php-dompdf-svg-lib</a>, one of the last packages to enter NEW for bookworm before the freeze.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf">php-dompdf</a>, was part of my February 2023 Debian contributions. I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417025/accepted-php-dompdf-202dfsg-1-source-into-unstable/">refreshed the packaging</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-nikic-fast-route">php-nikic-fast-route</a>, I added the package in <code>bullseye-backports</code>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-fig-http-message-util">php-fig-http-message-util</a></li>
+</ul>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/story/">story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/debian/">Debian</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2023 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

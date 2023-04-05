@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Install OpenFortiGUI client on Debian 12 - bookworm</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Install OpenFortiGUI on Debian 12 - bookworm">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Install OpenFortiGUI client on Debian 12 - bookworm">
+        <meta property="og:url" content="https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm">
+        <meta property="og:description" content="Install OpenFortiGUI on Debian 12 - bookworm">
+        
+        
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/3b10287e98c1682200.jpg"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="627"/>
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2023-04-05T21:16:00+00:02">
+        <meta property="article:published_time" content="2023-04-05T21:16:00">
+        <meta property="article:modified_time" content="2023-04-05T21:30:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="debian-tutorial"><meta property="article:tags" content="OpenFortiGUI">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian",
+                    "name": "Debian"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm",
+                    "name": "Install OpenFortiGUI client on Debian 12 - bookworm"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/",
+    "headline": "Install OpenFortiGUI client on Debian 12 - bookworm",
+    "alternativeHeadline": "Install OpenFortiGUI client on Debian 12 - bookworm",
+    "dateCreated": "2023-04-05T21:16:00+0002",
+    "datePublished": "2023-04-05T21:16:00+0002",
+    "dateModified": "2023-04-05T21:30:00+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["debian-tutorial","OpenFortiGUI"],
+    "articleSection": "Tutorial",
+    "genre": ["debian-tutorial","OpenFortiGUI"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Install OpenFortiGUI client on Debian 12 - bookworm</h1>
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2023-04-05T21:16:00+0002">April  5, 2023 21:16</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-04-05T21:30:00+0002">April  5, 2023 21:30</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">2 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Install <a rel="noopener" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> on Debian 12 - bookworm</p>
+<span id="continue-reading"></span>
+<p>This is how to setup OpenFortiGUI on Debian 12 - bookworm.</p>
+<p><a rel="noopener" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> uses <a rel="noopener" target="_blank" href="https://github.com/adrienverge/openfortivpn">the openfortivpn project</a>.</p>
+<p>OpenFortiGUI is still not in Debian or Ubuntu, but someone did open a ITP for it: <a rel="noopener" target="_blank" href="https://bugs.debian.org/888518">#888518</a></p>
+<h2 id="install">Install</h2>
+<h3 id="fetch-the-gpg-key">Fetch the GPG key</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl -fsSL</span><span> https://apt.iteas.at/iteas-keyring.gpg</span><span style="color:#bf616a;"> -o</span><span> ./iteas-keyring.gpg
+</span><span style="color:#bf616a;">gpg --no-default-keyring --keyring</span><span> ./iteas-keyring.gpg</span><span style="color:#bf616a;"> --armor --export</span><span> BA662621DA69F38C443F147C23CAE45582EB0928 | </span><span style="color:#bf616a;">sudo</span><span> gpg</span><span style="color:#bf616a;"> --dearmor -o</span><span> /etc/apt/trusted.gpg.d/iteas-keyring.gpg
+</span><span style="color:#bf616a;">rm</span><span> ./iteas-keyring.gpg
+</span></code></pre>
+<h3 id="add-sources-file">Add sources file</h3>
+<p>Create a file at <code>/etc/apt/sources.list.d/openfortigui.list</code> and put the following contents:</p>
+<p>Check on <a rel="noopener" target="_blank" href="https://apt.iteas.at/iteas/dists/">https://apt.iteas.at/iteas/dists/</a> if you find your dist.
+I did open an issue to ask for Debian bookworm to be added: <a rel="noopener" target="_blank" href="https://github.com/theinvisible/openfortigui/issues/189">theinvisible/openfortigui#189</a>.</p>
+<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>deb [signed-by=/etc/apt/trusted.gpg.d/iteas-keyring.gpg] https://apt.iteas.at/iteas bullseye main
+</span></code></pre>
+<h3 id="install-it">Install it</h3>
+<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>sudo apt update
+</span><span>apt policy openfortigui
+</span><span>sudo apt install openfortigui
+</span><span># Or (for me)
+</span><span>sudo apt install openfortigui -t bullseye
+</span></code></pre>
+<h3 id="screenshots">Screenshots</h3>
+<p>On 2023-02-13 I followed this and it installed: <code>7.0.7.0246</code></p>
+<p><img src="https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/../OpenFortiGUI_0.9.8_Debian_12_bookworm.jpg" alt="openFortiGUI - 0.9.8 on Debian 12 - bookworm" title="openFortiGUI - 0.9.8 on Debian 12 - bookworm" /></p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/debian-tutorial/">debian-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/openfortigui/">OpenFortiGUI</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2023 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
