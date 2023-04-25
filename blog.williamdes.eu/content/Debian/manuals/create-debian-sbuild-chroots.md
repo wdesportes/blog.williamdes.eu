@@ -1,7 +1,7 @@
 +++
 title = "Setup Debian sbuild chroots"
 date = 2023-01-18T12:40:00+00:05
-updated = 2023-02-08T14:36:00+00:02
+updated = 2023-04-25T19:52:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -70,7 +70,7 @@ exit
 ### Normal chroot
 
 ```sh
-sudo sbuild-createchroot --alias=bookworm --chroot-prefix=bookworm --include=eatmydata,ccache bookworm /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
+sudo sbuild-createchroot --alias=bookworm --chroot-prefix=bookworm --include=eatmydata,ccache bookworm /srv/chroot/bookworm-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
 
 ### Experimental chroot
@@ -115,6 +115,16 @@ sbuild -d bullseye-backports --extra-repository='deb http://incoming.debian.org/
 ```
 
 More about this on this [blog post](https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html)
+
+#### Ubuntu focal chroot
+
+```sh
+sudo sbuild-createchroot \
+    --extra-repository='deb http://security.ubuntu.com/ubuntu focal-security main restricted' \
+    --extra-repository='deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted' \
+    --alias=focal --chroot-prefix=focal --include=eatmydata,ccache \
+    focal /srv/chroot/focal-amd64-sbuild http://archive.ubuntu.com/ubuntu/
+```
 
 ## Use the chroots
 
