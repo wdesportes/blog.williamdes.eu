@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-01-18T12:40:00+00:05">
         <meta property="article:published_time" content="2023-01-18T12:40:00">
-        <meta property="article:modified_time" content="2023-02-08T14:36:00">
+        <meta property="article:modified_time" content="2023-04-25T19:52:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="debian-manual"><meta property="article:tags" content="sbuild">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Setup Debian sbuild chroots",
     "dateCreated": "2023-01-18T12:40:00+0005",
     "datePublished": "2023-01-18T12:40:00+0005",
-    "dateModified": "2023-02-08T14:36:00+0002",
+    "dateModified": "2023-04-25T19:52:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -209,7 +209,7 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-02-08T14:36:00+0002">February  8, 2023 14:36</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-04-25T19:52:00+0002">April 25, 2023 19:52</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">3 min read</span>
         </div>
@@ -245,7 +245,7 @@ But that's not really that is more like an environment where the OS root directo
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <h3 id="normal-chroot">Normal chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=bookworm</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bookworm</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/bullseye-amd64-sbuild http://ftp.fr.debian.org/debian
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=bookworm</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bookworm</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/bookworm-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <h3 id="experimental-chroot">Experimental chroot</h3>
 <p>Create the chroot:</p>
@@ -272,6 +272,13 @@ But that's not really that is more like an environment where the OS root directo
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild -d</span><span> bullseye-backports</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-bullseye-backports main</span><span>&#39;
 </span></code></pre>
 <p>More about this on this <a rel="noopener" target="_blank" href="https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html">blog post</a></p>
+<h4 id="ubuntu-focal-chroot">Ubuntu focal chroot</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://security.ubuntu.com/ubuntu focal-security main restricted</span><span>&#39; \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted</span><span>&#39; \
+</span><span style="color:#bf616a;">    --alias</span><span>=focal</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=focal</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache \
+</span><span>    focal /srv/chroot/focal-amd64-sbuild http://archive.ubuntu.com/ubuntu/
+</span></code></pre>
 <h2 id="use-the-chroots">Use the chroots</h2>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> /home/user/packages/my-package
 </span><span style="color:#65737e;"># sid dist
