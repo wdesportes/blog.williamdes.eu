@@ -274,9 +274,10 @@ But that's not really that is more like an environment where the OS root directo
 <p>More about this on this <a rel="noopener" target="_blank" href="https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html">blog post</a></p>
 <h4 id="ubuntu-focal-chroot">Ubuntu focal chroot</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot \
-</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://security.ubuntu.com/ubuntu focal-security main restricted</span><span>&#39; \
-</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted</span><span>&#39; \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse</span><span>&#39; \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse</span><span>&#39; \
 </span><span style="color:#bf616a;">    --alias</span><span>=focal</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=focal</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache \
+</span><span style="color:#bf616a;">    --components</span><span> main,restricted,universe,multiverse \
 </span><span>    focal /srv/chroot/focal-amd64-sbuild http://archive.ubuntu.com/ubuntu/
 </span></code></pre>
 <h2 id="use-the-chroots">Use the chroots</h2>
