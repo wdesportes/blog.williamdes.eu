@@ -120,9 +120,10 @@ More about this on this [blog post](https://aerostitch.github.io/linux_and_unix/
 
 ```sh
 sudo sbuild-createchroot \
-    --extra-repository='deb http://security.ubuntu.com/ubuntu focal-security main restricted' \
-    --extra-repository='deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted' \
+    --extra-repository='deb http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse' \
+    --extra-repository='deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse' \
     --alias=focal --chroot-prefix=focal --include=eatmydata,ccache \
+    --components main,restricted,universe,multiverse \
     focal /srv/chroot/focal-amd64-sbuild http://archive.ubuntu.com/ubuntu/
 ```
 
