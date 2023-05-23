@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2022-05-20T00:07:00+00:02">
         <meta property="article:published_time" content="2022-05-20T00:07:00">
-        <meta property="article:modified_time" content="2022-08-15T00:14:13">
+        <meta property="article:modified_time" content="2023-05-23T15:40:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-story"><meta property="article:tags" content="DELL"><meta property="article:tags" content="DELL-R630">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "The adventure it has been to make NVME SSDs work on a DELL R630 server.",
     "dateCreated": "2022-05-20T00:07:00+0002",
     "datePublished": "2022-05-20T00:07:00+0002",
-    "dateModified": "2022-08-15T00:14:13+0002",
+    "dateModified": "2023-05-23T15:40:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -209,7 +209,7 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-05-20T00:07:00+0002">May 20, 2022 00:07</time></span>
-            <span class="post-date"> and updated: <time datetime="2022-08-15T00:14:13+0002">August 15, 2022 00:14</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-05-23T15:40:00+0002">May 23, 2023 15:40</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">9 min read</span>
         </div>
@@ -225,8 +225,11 @@ I did buy the server (<a rel="noopener" target="_blank" href="https://www.bargai
 But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.</p>
 <p>The machine was configured to have a <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp">NVME U2 extender</a> and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-gdj3j-perc-h330-zm-mini-mono-13g-raid-controller-r75vt">PERC (RAID card)</a> that had <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j">the cables</a> included with it and that did solve the error I had that prevented the boot the other day at the datacenter.</p>
 <h4 id="the-perc-card">The PERC card</h4>
+<p>This card seems to be required in some ways to make the normal disks work.</p>
 <p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Card.jpg" alt="PERC card" title="PERC card" /></p>
 <h4 id="the-nvme-expander">The NVME expander</h4>
+<p>This extender card is only used to make NVME disks work. SAS, SATA &amp; SSD disks work without it.</p>
+<p>It's power consumption is about 45W at idle time. And seems to make the fans spin a bit faster too.</p>
 <p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_NVME_Expander_Card.jpg" alt="NVME expander" title="NVME expander" /></p>
 <h4 id="mounting-the-cables-and-the-perc-raid-kit">Mounting the cables and the PERC/RAID kit</h4>
 <p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Plugged_In.jpg" alt="PERC card plugged in" title="PERC card plugged in" /></p>
