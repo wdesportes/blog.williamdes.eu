@@ -1,7 +1,7 @@
 +++
 title = "Making NVME SSDs work on a DELL R630"
 date = 2022-05-20T00:07:00+00:02
-updated = 2022-08-15T00:14:13+00:02
+updated = 2023-05-23T15:40:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -35,9 +35,15 @@ The machine was configured to have a [NVME U2 extender](https://www.bargainhardw
 
 #### The PERC card
 
+This card seems to be required in some ways to make the normal disks work.
+
 ![PERC card](../DELL_PowerEdge_R630_PERC_Card.jpg "PERC card")
 
 #### The NVME expander
+
+This extender card is only used to make NVME disks work. SAS, SATA & SSD disks work without it.
+
+It's power consumption is about 45W at idle time. And seems to make the fans spin a bit faster too.
 
 ![NVME expander](../DELL_PowerEdge_R630_NVME_Expander_Card.jpg "NVME expander")
 
