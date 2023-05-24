@@ -1,7 +1,7 @@
 +++
 title = "Making NVME SSDs work on a DELL R630"
 date = 2022-05-20T00:07:00+00:02
-updated = 2023-05-23T15:40:00+00:02
+updated = 2023-05-24T15:40:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -31,11 +31,20 @@ I did buy the server ([Dell PowerEdge R630 1U 10x 2.5" (SFF)](https://www.bargai
 I was confident I could swap this new machine with the other one, they where quite identical.
 But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.
 
-The machine was configured to have a [NVME U2 extender](https://www.bargainhardware.co.uk/dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp) and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a [PERC (RAID card)](https://www.bargainhardware.co.uk/dell-gdj3j-perc-h330-zm-mini-mono-13g-raid-controller-r75vt) that had [the cables](https://www.bargainhardware.co.uk/dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j) included with it and that did solve the error I had that prevented the boot the other day at the datacenter.
+The machine was configured to have a [NVME U2 extender](https://www.bargainhardware.co.uk/dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp) and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a [PERC (SAS HBA card)](https://www.bargainhardware.co.uk/dell-thn56-hba330-mini-mono-12g-13g-internal-sas-hba-p2r3r) that had [the cables](https://www.bargainhardware.co.uk/dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j) included with it and that did solve the error I had that prevented the boot the other day at the datacenter.
+
+This requirement is explained in [this YouTube video](https://youtu.be/h9ZJoIqtayY?t=236).
 
 #### The PERC card
 
+This one is a: Dell HBA330 Mini Mono 12G/13G Internal SAS HBA
+
+This card is NOT a RAID card [says some techs on dell forums](https://www.dell.com/community/PowerEdge-HDD-SCSI-RAID/Replaced-H730-mini-with-HBA330-cant-install-anything-on-any/m-p/8077919/highlight/true#M58005). Be sure to choose a RAID card if you need RAID.
+
+There is different cards, this [YouTube video](https://youtu.be/h9ZJoIqtayY?t=165) has a good summary about them.
+
 This card seems to be required in some ways to make the normal disks work.
+Follow this [YouTube video](https://youtu.be/h9ZJoIqtayY?t=267) to find out how to install it.
 
 ![PERC card](../DELL_PowerEdge_R630_PERC_Card.jpg "PERC card")
 
@@ -47,7 +56,7 @@ It's power consumption is about 45W at idle time. And seems to make the fans spi
 
 ![NVME expander](../DELL_PowerEdge_R630_NVME_Expander_Card.jpg "NVME expander")
 
-#### Mounting the cables and the PERC/RAID kit
+#### Mounting the cables and the kit
 
 ![PERC card plugged in](../DELL_PowerEdge_R630_PERC_Plugged_In.jpg "PERC card plugged in")
 
@@ -90,7 +99,7 @@ This was the end of 6 months of searching how to make a R630 work with NVME disk
 ### Conclusion
 
 A second CPU+RAM and a reizer PERC card + NVME enhancement card where needed for this setup.
-After that 4 NVME slots where available, SAS and SATA disks work too. All thoes types of disks can be together.
+After that 4 NVME slots where available, SAS and SATA disks work too. All those types of disks can be together.
 
 ![DELL R630 with two CPUs a NVME expander and a PERC card](../DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg "DELL R630 with two CPUs a NVME expander and a PERC card")
 
