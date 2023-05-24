@@ -4,12 +4,12 @@
 	<link href="https://blog.williamdes.eu/tags/dell-r630/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-05-23T15:40:00+00:02</updated>
+	<updated>2023-05-24T15:40:00+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/dell-r630/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Making NVME SSDs work on a DELL R630</title>
 		<published>2022-05-20T00:07:00+00:02</published>
-		<updated>2023-05-23T15:40:00+00:02</updated>
+		<updated>2023-05-24T15:40:00+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
 		<content type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
@@ -21,15 +21,20 @@ I did buy the server (&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; h
 &lt;h3 id=&quot;the-failed-deployment-in-a-datacenter&quot;&gt;The failed deployment in a datacenter&lt;&#x2F;h3&gt;
 &lt;p&gt;I was confident I could swap this new machine with the other one, they where quite identical.
 But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.&lt;&#x2F;p&gt;
-&lt;p&gt;The machine was configured to have a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp&quot;&gt;NVME U2 extender&lt;&#x2F;a&gt; and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-gdj3j-perc-h330-zm-mini-mono-13g-raid-controller-r75vt&quot;&gt;PERC (RAID card)&lt;&#x2F;a&gt; that had &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j&quot;&gt;the cables&lt;&#x2F;a&gt; included with it and that did solve the error I had that prevented the boot the other day at the datacenter.&lt;&#x2F;p&gt;
+&lt;p&gt;The machine was configured to have a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp&quot;&gt;NVME U2 extender&lt;&#x2F;a&gt; and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-thn56-hba330-mini-mono-12g-13g-internal-sas-hba-p2r3r&quot;&gt;PERC (SAS HBA card)&lt;&#x2F;a&gt; that had &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j&quot;&gt;the cables&lt;&#x2F;a&gt; included with it and that did solve the error I had that prevented the boot the other day at the datacenter.&lt;&#x2F;p&gt;
+&lt;p&gt;This requirement is explained in &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=236&quot;&gt;this YouTube video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;the-perc-card&quot;&gt;The PERC card&lt;&#x2F;h4&gt;
-&lt;p&gt;This card seems to be required in some ways to make the normal disks work.&lt;&#x2F;p&gt;
+&lt;p&gt;This one is a: Dell HBA330 Mini Mono 12G&#x2F;13G Internal SAS HBA&lt;&#x2F;p&gt;
+&lt;p&gt;This card is NOT a RAID card &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.dell.com&#x2F;community&#x2F;PowerEdge-HDD-SCSI-RAID&#x2F;Replaced-H730-mini-with-HBA330-cant-install-anything-on-any&#x2F;m-p&#x2F;8077919&#x2F;highlight&#x2F;true#M58005&quot;&gt;says some techs on dell forums&lt;&#x2F;a&gt;. Be sure to choose a RAID card if you need RAID.&lt;&#x2F;p&gt;
+&lt;p&gt;There is different cards, this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=165&quot;&gt;YouTube video&lt;&#x2F;a&gt; has a good summary about them.&lt;&#x2F;p&gt;
+&lt;p&gt;This card seems to be required in some ways to make the normal disks work.
+Follow this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=267&quot;&gt;YouTube video&lt;&#x2F;a&gt; to find out how to install it.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_Card.jpg&quot; alt=&quot;PERC card&quot; title=&quot;PERC card&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;the-nvme-expander&quot;&gt;The NVME expander&lt;&#x2F;h4&gt;
 &lt;p&gt;This extender card is only used to make NVME disks work. SAS, SATA &amp;amp; SSD disks work without it.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s power consumption is about 45W at idle time. And seems to make the fans spin a bit faster too.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_NVME_Expander_Card.jpg&quot; alt=&quot;NVME expander&quot; title=&quot;NVME expander&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;mounting-the-cables-and-the-perc-raid-kit&quot;&gt;Mounting the cables and the PERC&#x2F;RAID kit&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;mounting-the-cables-and-the-kit&quot;&gt;Mounting the cables and the kit&lt;&#x2F;h4&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_Plugged_In.jpg&quot; alt=&quot;PERC card plugged in&quot; title=&quot;PERC card plugged in&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I put in place the kit and plugged it the cables each one according to the labels. (yes it knows and complains if you switch them)&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_BP_Plugged_Cables.jpg&quot; alt=&quot;PERC card plugged in BackPlane cables&quot; title=&quot;PERC card plugged in BackPlane cables&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
@@ -54,7 +59,7 @@ After some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;h
 This was the end of 6 months of searching how to make a R630 work with NVME disks.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
 &lt;p&gt;A second CPU+RAM and a reizer PERC card + NVME enhancement card where needed for this setup.
-After that 4 NVME slots where available, SAS and SATA disks work too. All thoes types of disks can be together.&lt;&#x2F;p&gt;
+After that 4 NVME slots where available, SAS and SATA disks work too. All those types of disks can be together.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg&quot; alt=&quot;DELL R630 with two CPUs a NVME expander and a PERC card&quot; title=&quot;DELL R630 with two CPUs a NVME expander and a PERC card&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;lspci&quot;&gt;lspci&lt;&#x2F;h3&gt;
 &lt;p&gt;This are the new lines in &lt;code&gt;lspci&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
