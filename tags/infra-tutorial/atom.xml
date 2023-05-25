@@ -4,8 +4,53 @@
 	<link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-26T00:53:00+00:02</updated>
+	<updated>2023-05-25T14:56:00+00:02</updated>
 	<id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Install racadm for iDRAC on Proxmox 7</title>
+		<published>2023-05-25T14:10:00+00:02</published>
+		<updated>2023-05-25T14:56:00+00:02</updated>
+		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/" type="text/html"/>
+		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/</id>
+		<content type="html">&lt;p&gt;Install iDRAC racadm tool on Proxmox 7&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;This is how to setup iDRAC&#x27;s racadm tool on Proxmox 7. And iDRAC Service Module(iSM).&lt;&#x2F;p&gt;
+&lt;p&gt;This article is inspired by &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;&quot;&gt;DELL&#x27;s manual&lt;&#x2F;a&gt; and this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.ceremade.dauphine.fr&#x2F;doc&#x2F;fr&#x2F;blog&#x2F;installer-dell-oms&quot;&gt;blog post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;fetch-the-gpg-key&quot;&gt;Fetch the GPG key&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;pgp_pubkeys&#x2F;0x1285491434D8786F.asc | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;gpg --dearmor -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;add-sources-file&quot;&gt;Add sources file&lt;&#x2F;h3&gt;
+&lt;p&gt;Create a file at &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;linux.dell.com.sources.list&lt;&#x2F;code&gt; and put the following contents:&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;10300&lt;&#x2F;code&gt; (&lt;code&gt;v10.3.0.0&lt;&#x2F;code&gt;) part is the OMSA version found on the matrix available on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;&quot;&gt;DELL&#x27;s page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you use the &lt;code&gt;jammy&lt;&#x2F;code&gt; release on a Debian 11 it will throw &lt;code&gt;uses unknown compression for member &#x27;control.tar.zst&#x27;, giving up&lt;&#x2F;code&gt; at install time. This is explained &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;a&#x2F;669008&#x2F;155610&quot;&gt;on stackoverflow (stackexchange)&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;deb&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-deb &quot;&gt;&lt;code class=&quot;language-deb&quot; data-lang=&quot;deb&quot;&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg] http:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;10300&#x2F;focal focal main
+&lt;&#x2F;span&gt;&lt;span&gt;# If you want iDRAC Service Module(iSM)
+&lt;&#x2F;span&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg] http:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;iSM&#x2F;5100&#x2F;bullseye bullseye main
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;install-it&quot;&gt;Install it&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;apt&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-apt &quot;&gt;&lt;code class=&quot;language-apt&quot; data-lang=&quot;apt&quot;&gt;&lt;span&gt;apt-get install srvadmin-idracadm8
+&lt;&#x2F;span&gt;&lt;span&gt;# If you want iDRAC Service Module(iSM)
+&lt;&#x2F;span&gt;&lt;span&gt;apt-get install dcism
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;try-racadm&quot;&gt;Try &lt;code&gt;racadm&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;racadm&lt;&#x2F;span&gt;&lt;span&gt; getsysinfo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;RAC Information:
+&lt;&#x2F;span&gt;&lt;span&gt;RAC Date&#x2F;Time           = Thu May 25 12:25:11 2023
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Firmware Version        = 2.84.84.84
+&lt;&#x2F;span&gt;&lt;span&gt;Firmware Build          = 02
+&lt;&#x2F;span&gt;&lt;span&gt;Last Firmware Update    = 05&#x2F;23&#x2F;2023 11:30:51
+&lt;&#x2F;span&gt;&lt;span&gt;[...]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;With &lt;code&gt;dcism&lt;&#x2F;code&gt; and a reboot:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;Host Name               = proxmox.local
+&lt;&#x2F;span&gt;&lt;span&gt;OS Name                 = Debian GNU&#x2F;Linux 11 (bullseye)
+&lt;&#x2F;span&gt;&lt;span&gt;OS Version              = 11 (bullseye) Kernel 6.2.11-2-pve (x86_64)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Installing Crowdsec on pfSense</title>
 		<published>2022-09-26T00:10:00+00:02</published>

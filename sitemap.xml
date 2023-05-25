@@ -58,6 +58,10 @@
         <lastmod>2023-01-01T14:40:00+00:04</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/</loc>
+        <lastmod>2023-05-25T14:56:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/OpenSource/</loc>
     </url>
     <url>
@@ -252,6 +256,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/fortinet/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/idrac/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/idrac/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/infra-story/</loc>
