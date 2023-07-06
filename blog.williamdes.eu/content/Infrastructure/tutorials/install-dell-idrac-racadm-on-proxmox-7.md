@@ -76,8 +76,8 @@ With `dcism` and a reboot:
 
 ```text
 Host Name               = proxmox.local
-OS Name                 = Debian GNU/Linux 11 (bullseye)
-OS Version              = 11 (bullseye) Kernel 6.2.11-2-pve (x86_64)
+OS Name                 = Debian GNU/Linux 12 (bookworm)
+OS Version              = 12 (bookworm) Kernel 6.2.16-3-pve (x86_64)
 ```
 
 ### On Proxmox 8
