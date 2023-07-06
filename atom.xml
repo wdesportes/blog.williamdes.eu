@@ -48,8 +48,8 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;With &lt;code&gt;dcism&lt;&#x2F;code&gt; and a reboot:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;Host Name               = proxmox.local
-&lt;&#x2F;span&gt;&lt;span&gt;OS Name                 = Debian GNU&#x2F;Linux 11 (bullseye)
-&lt;&#x2F;span&gt;&lt;span&gt;OS Version              = 11 (bullseye) Kernel 6.2.11-2-pve (x86_64)
+&lt;&#x2F;span&gt;&lt;span&gt;OS Name                 = Debian GNU&#x2F;Linux 12 (bookworm)
+&lt;&#x2F;span&gt;&lt;span&gt;OS Version              = 12 (bookworm) Kernel 6.2.16-3-pve (x86_64)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;on-proxmox-8&quot;&gt;On Proxmox 8&lt;&#x2F;h3&gt;
 &lt;p&gt;I added back &lt;code&gt;deb http:&#x2F;&#x2F;ftp.debian.org&#x2F;debian bullseye main&lt;&#x2F;code&gt; to the &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list&lt;&#x2F;code&gt; file and ran: &lt;code&gt;apt install libssl1.1&lt;&#x2F;code&gt;.
