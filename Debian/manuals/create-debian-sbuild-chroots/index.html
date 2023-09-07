@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-01-18T12:40:00+00:05">
         <meta property="article:published_time" content="2023-01-18T12:40:00">
-        <meta property="article:modified_time" content="2023-04-25T19:52:00">
+        <meta property="article:modified_time" content="2023-09-07T17:20:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="debian-manual"><meta property="article:tags" content="sbuild">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Setup Debian sbuild chroots",
     "dateCreated": "2023-01-18T12:40:00+0005",
     "datePublished": "2023-01-18T12:40:00+0005",
-    "dateModified": "2023-04-25T19:52:00+0002",
+    "dateModified": "2023-09-07T17:20:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -209,9 +209,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-04-25T19:52:00+0002">April 25, 2023 19:52</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-09-07T17:20:00+0002">September  7, 2023 17:20</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">3 min read</span>
+            <span class="post-reading-time">5 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Creating <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">sbuild</a> chroots for Debian package testing</p>
@@ -220,9 +220,10 @@
 <p>The <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">Debian wiki</a> explains this already pretty good.</p>
 <p>But here is how I use and setup my chroots.</p>
 <h2 id="what-is-a-chroot">What is a chroot</h2>
-<p>From what I understood its like some kind of &quot;VM&quot; that uses the host Kernel.
-But that's not really that is more like an environment where the OS root directory &quot;/&quot; is reset to some folder on you system.</p>
-<p>You can read more about it on <a rel="noopener" target="_blank" href="https://wiki.debian.org/chroot">Debian wiki</a> <a rel="noopener" target="_blank" href="https://wiki.debian.org/fr/Chroot">fr</a> and on <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Chroot">Wikipedia</a></p>
+<p>From what I understood its like some kind of &quot;VM&quot; that uses the host Kernel, this is named a &quot;chroot&quot;.
+But that's not really that is more like an environment where the OS root directory &quot;/&quot; is reset to some folder on you system.
+But for some reason I noticed they affect your host filesystem.</p>
+<p>You can read more about it on <a rel="noopener" target="_blank" href="https://wiki.debian.org/chroot">Debian wiki</a> <a rel="noopener" target="_blank" href="https://wiki.debian.org/fr/Chroot">fr</a> and on <a rel="noopener" target="_blank" href="https://wikipedia.org/wiki/Chroot">Wikipedia</a></p>
 <h2 id="setup-the-chroots">Setup the chroots</h2>
 <p>If you have an SSD and some useless RAM, you can use tmpfs to hold some files and avoid SSD writes: <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild#sbuild_with_tmpfs_.28schroot.29">Debian wiki</a></p>
 <h2 id="share-apt-cache-across-chroots">Share APT cache across chroots</h2>
@@ -297,6 +298,53 @@ But that's not really that is more like an environment where the OS root directo
 </span><span style="color:#65737e;"># Find config the file and remove it
 </span><span style="color:#bf616a;">rm</span><span> /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
 </span><span style="color:#bf616a;">rm</span><span> /etc/sbuild/chroot/experimental-amd64-sbuild
+</span></code></pre>
+<h2 id="install-a-qemu-chroot">Install a qemu chroot</h2>
+<p>This is a more like a real VM.
+I found some inspiration on this <a rel="noopener" target="_blank" href="https://anarc.at/blog/2022-04-27-sbuild-qemu/">blog post from anarc.at</a>.</p>
+<h3 id="install">Install</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">apt</span><span> install sbuild-qemu
+</span></code></pre>
+<h3 id="use-qemu-by-default">Use qemu by default</h3>
+<p>In <code>~/.sbuildrc</code> add this before the end</p>
+<pre data-lang="perl" style="background-color:#2b303b;color:#c0c5ce;" class="language-perl "><code class="language-perl" data-lang="perl"><span style="color:#65737e;"># extra parameters to pass to qemu
+</span><span style="color:#65737e;"># --enable-kvm is not necessary, detected on the fly by autopkgtest
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># ! Adjust this performance settings !
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># 4096 of RAM, 2 CPUs
+</span><span style="color:#b48ead;">my </span><span>@</span><span style="color:#bf616a;">_qemu_options </span><span>= (&#39;</span><span style="color:#a3be8c;">--ram-size=4096</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">--cpus=4</span><span>&#39;);
+</span><span>
+</span><span style="color:#65737e;"># run autopkgtest inside the schroot
+</span><span>$</span><span style="color:#bf616a;">run_autopkgtest </span><span>= </span><span style="color:#d08770;">1</span><span>;
+</span><span style="color:#65737e;"># tell sbuild to use autopkgtest as a chroot
+</span><span>$</span><span style="color:#bf616a;">chroot_mode </span><span>= &#39;</span><span style="color:#a3be8c;">autopkgtest</span><span>&#39;;
+</span><span style="color:#65737e;"># tell autopkgtest to use qemu
+</span><span>$</span><span style="color:#bf616a;">autopkgtest_virt_server </span><span>= &#39;</span><span style="color:#a3be8c;">qemu</span><span>&#39;;
+</span><span style="color:#65737e;"># tell autopkgtest-virt-qemu the path to the image
+</span><span style="color:#65737e;"># use --debug there to show what autopkgtest is doing
+</span><span>$</span><span style="color:#bf616a;">autopkgtest_virt_server_options </span><span>= [ @</span><span style="color:#bf616a;">_qemu_options</span><span>, &#39;</span><span style="color:#a3be8c;">--</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">/srv/sbuild/qemu/%r-autopkgtest-</span><span style="color:#d08770;">%a</span><span style="color:#a3be8c;">.img</span><span>&#39; ];
+</span><span style="color:#65737e;"># tell plain autopkgtest to use qemu, and the right image
+</span><span>$</span><span style="color:#bf616a;">autopkgtest_opts </span><span>= [ &#39;</span><span style="color:#a3be8c;">--</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">qemu</span><span>&#39;, @</span><span style="color:#bf616a;">_qemu_options</span><span>, &#39;</span><span style="color:#a3be8c;">/srv/sbuild/qemu/%r-autopkgtest-</span><span style="color:#d08770;">%a</span><span style="color:#a3be8c;">.img</span><span>&#39;];
+</span><span style="color:#65737e;"># no need to cleanup the chroot after build, we run in a completely clean VM
+</span><span>$</span><span style="color:#bf616a;">purge_build_deps </span><span>= &#39;</span><span style="color:#a3be8c;">never</span><span>&#39;;
+</span><span style="color:#65737e;"># no need for sudo
+</span><span>$</span><span style="color:#bf616a;">autopkgtest_root_args </span><span>= &#39;&#39;;
+</span></code></pre>
+<h3 id="create-a-sid-sbuild">Create a sid sbuild</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /srv/sbuild/qemu/
+</span><span style="color:#bf616a;">sbuild-qemu-create --install-packages</span><span> build-essential,debhelper</span><span style="color:#bf616a;"> -o</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img sid http://ftp.fr.debian.org/debian
+</span><span style="color:#bf616a;">sudo</span><span> chown root:sbuild  /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+</span></code></pre>
+<h4 id="update-the-sid-vm">Update the sid VM</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-qemu-update /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+</span></code></pre>
+<h4 id="run-commands-in-the-vm">Run commands in the VM</h4>
+<h5 id="forget-my-changes">Forget my changes</h5>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild-qemu-boot</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+</span></code></pre>
+<h5 id="keep-my-changes">Keep my changes</h5>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild-qemu-boot --read-write</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 </span></code></pre>
 </div>
     <footer class="post-footer">

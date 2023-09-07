@@ -4,7 +4,7 @@
 	<link href="https://blog.williamdes.eu/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://blog.williamdes.eu"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-07-06T16:07:00+00:02</updated>
+	<updated>2023-09-07T17:20:00+00:02</updated>
 	<id>https://blog.williamdes.eu/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Install racadm for iDRAC on Proxmox 7&#x2F;8</title>
@@ -189,7 +189,7 @@ But I think it&#x27;s the same as the one from the repo. And after it did switch
 	<entry xml:lang="en">
 		<title>Setup Debian sbuild chroots</title>
 		<published>2023-01-18T12:40:00+00:05</published>
-		<updated>2023-04-25T19:52:00+00:02</updated>
+		<updated>2023-09-07T17:20:00+00:02</updated>
 		<link rel="alternate" href="https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/" type="text/html"/>
 		<id>https://blog.williamdes.eu/Debian/manuals/create-debian-sbuild-chroots/</id>
 		<content type="html">&lt;p&gt;Creating &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild&quot;&gt;sbuild&lt;&#x2F;a&gt; chroots for Debian package testing&lt;&#x2F;p&gt;
@@ -198,9 +198,10 @@ But I think it&#x27;s the same as the one from the repo. And after it did switch
 &lt;p&gt;The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild&quot;&gt;Debian wiki&lt;&#x2F;a&gt; explains this already pretty good.&lt;&#x2F;p&gt;
 &lt;p&gt;But here is how I use and setup my chroots.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-a-chroot&quot;&gt;What is a chroot&lt;&#x2F;h2&gt;
-&lt;p&gt;From what I understood its like some kind of &amp;quot;VM&amp;quot; that uses the host Kernel.
-But that&#x27;s not really that is more like an environment where the OS root directory &amp;quot;&#x2F;&amp;quot; is reset to some folder on you system.&lt;&#x2F;p&gt;
-&lt;p&gt;You can read more about it on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;chroot&quot;&gt;Debian wiki&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;fr&#x2F;Chroot&quot;&gt;fr&lt;&#x2F;a&gt; and on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Chroot&quot;&gt;Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;From what I understood its like some kind of &amp;quot;VM&amp;quot; that uses the host Kernel, this is named a &amp;quot;chroot&amp;quot;.
+But that&#x27;s not really that is more like an environment where the OS root directory &amp;quot;&#x2F;&amp;quot; is reset to some folder on you system.
+But for some reason I noticed they affect your host filesystem.&lt;&#x2F;p&gt;
+&lt;p&gt;You can read more about it on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;chroot&quot;&gt;Debian wiki&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;fr&#x2F;Chroot&quot;&gt;fr&lt;&#x2F;a&gt; and on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wikipedia.org&#x2F;wiki&#x2F;Chroot&quot;&gt;Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;setup-the-chroots&quot;&gt;Setup the chroots&lt;&#x2F;h2&gt;
 &lt;p&gt;If you have an SSD and some useless RAM, you can use tmpfs to hold some files and avoid SSD writes: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wiki.debian.org&#x2F;sbuild#sbuild_with_tmpfs_.28schroot.29&quot;&gt;Debian wiki&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;share-apt-cache-across-chroots&quot;&gt;Share APT cache across chroots&lt;&#x2F;h2&gt;
@@ -275,6 +276,53 @@ But that&#x27;s not really that is more like an environment where the OS root di
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Find config the file and remove it
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;schroot&#x2F;chroot.d&#x2F;experimental-amd64-sbuild-F28TrU
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;sbuild&#x2F;chroot&#x2F;experimental-amd64-sbuild
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;install-a-qemu-chroot&quot;&gt;Install a qemu chroot&lt;&#x2F;h2&gt;
+&lt;p&gt;This is a more like a real VM.
+I found some inspiration on this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;anarc.at&#x2F;blog&#x2F;2022-04-27-sbuild-qemu&#x2F;&quot;&gt;blog post from anarc.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;install&quot;&gt;Install&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span&gt; install sbuild-qemu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;use-qemu-by-default&quot;&gt;Use qemu by default&lt;&#x2F;h3&gt;
+&lt;p&gt;In &lt;code&gt;~&#x2F;.sbuildrc&lt;&#x2F;code&gt; add this before the end&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;perl&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-perl &quot;&gt;&lt;code class=&quot;language-perl&quot; data-lang=&quot;perl&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# extra parameters to pass to qemu
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# --enable-kvm is not necessary, detected on the fly by autopkgtest
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# ! Adjust this performance settings !
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 4096 of RAM, 2 CPUs
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;my &lt;&#x2F;span&gt;&lt;span&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;_qemu_options &lt;&#x2F;span&gt;&lt;span&gt;= (&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;--ram-size=4096&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;--cpus=4&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# run autopkgtest inside the schroot
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run_autopkgtest &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# tell sbuild to use autopkgtest as a chroot
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;chroot_mode &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;autopkgtest&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# tell autopkgtest to use qemu
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;autopkgtest_virt_server &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;qemu&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# tell autopkgtest-virt-qemu the path to the image
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# use --debug there to show what autopkgtest is doing
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;autopkgtest_virt_server_options &lt;&#x2F;span&gt;&lt;span&gt;= [ @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;_qemu_options&lt;&#x2F;span&gt;&lt;span&gt;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;--&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;%r-autopkgtest-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.img&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; ];
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# tell plain autopkgtest to use qemu, and the right image
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;autopkgtest_opts &lt;&#x2F;span&gt;&lt;span&gt;= [ &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;--&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;qemu&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;_qemu_options&lt;&#x2F;span&gt;&lt;span&gt;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;%r-autopkgtest-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.img&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;];
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# no need to cleanup the chroot after build, we run in a completely clean VM
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;purge_build_deps &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;never&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# no need for sudo
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;autopkgtest_root_args &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&amp;#39;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;create-a-sid-sbuild&quot;&gt;Create a sid sbuild&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir -p&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild-qemu-create --install-packages&lt;&#x2F;span&gt;&lt;span&gt; build-essential,debhelper&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;sid-autopkgtest-amd64.img sid http:&#x2F;&#x2F;ftp.fr.debian.org&#x2F;debian
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; chown root:sbuild  &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;sid-autopkgtest-amd64.img
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;update-the-sid-vm&quot;&gt;Update the sid VM&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sbuild-qemu-update &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;sid-autopkgtest-amd64.img
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;run-commands-in-the-vm&quot;&gt;Run commands in the VM&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;forget-my-changes&quot;&gt;Forget my changes&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild-qemu-boot&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;sid-autopkgtest-amd64.img
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h5 id=&quot;keep-my-changes&quot;&gt;Keep my changes&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sbuild-qemu-boot --read-write&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;srv&#x2F;sbuild&#x2F;qemu&#x2F;sid-autopkgtest-amd64.img
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
