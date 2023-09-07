@@ -1,7 +1,7 @@
 +++
 title = "Setup Debian sbuild chroots"
 date = 2023-01-18T12:40:00+00:05
-updated = 2023-04-25T19:52:00+00:02
+updated = 2023-09-07T17:20:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -28,10 +28,11 @@ But here is how I use and setup my chroots.
 
 ## What is a chroot
 
-From what I understood its like some kind of "VM" that uses the host Kernel.
+From what I understood its like some kind of "VM" that uses the host Kernel, this is named a "chroot".
 But that's not really that is more like an environment where the OS root directory "/" is reset to some folder on you system.
+But for some reason I noticed they affect your host filesystem.
 
-You can read more about it on [Debian wiki](https://wiki.debian.org/chroot) [fr](https://wiki.debian.org/fr/Chroot) and on [Wikipedia](https://en.wikipedia.org/wiki/Chroot)
+You can read more about it on [Debian wiki](https://wiki.debian.org/chroot) [fr](https://wiki.debian.org/fr/Chroot) and on [Wikipedia](https://wikipedia.org/wiki/Chroot)
 
 ## Setup the chroots
 
@@ -152,4 +153,73 @@ rm -r /srv/chroot/experimental-amd64-sbuild
 # Find config the file and remove it
 rm /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
 rm /etc/sbuild/chroot/experimental-amd64-sbuild
+```
+
+## Install a qemu chroot
+
+This is a more like a real VM.
+I found some inspiration on this [blog post from anarc.at](https://anarc.at/blog/2022-04-27-sbuild-qemu/).
+
+### Install
+
+```sh
+apt install sbuild-qemu
+```
+
+### Use qemu by default
+
+In `~/.sbuildrc` add this before the end
+
+```perl
+# extra parameters to pass to qemu
+# --enable-kvm is not necessary, detected on the fly by autopkgtest
+#
+# ! Adjust this performance settings !
+#
+# 4096 of RAM, 2 CPUs
+my @_qemu_options = ('--ram-size=4096', '--cpus=4');
+
+# run autopkgtest inside the schroot
+$run_autopkgtest = 1;
+# tell sbuild to use autopkgtest as a chroot
+$chroot_mode = 'autopkgtest';
+# tell autopkgtest to use qemu
+$autopkgtest_virt_server = 'qemu';
+# tell autopkgtest-virt-qemu the path to the image
+# use --debug there to show what autopkgtest is doing
+$autopkgtest_virt_server_options = [ @_qemu_options, '--', '/srv/sbuild/qemu/%r-autopkgtest-%a.img' ];
+# tell plain autopkgtest to use qemu, and the right image
+$autopkgtest_opts = [ '--', 'qemu', @_qemu_options, '/srv/sbuild/qemu/%r-autopkgtest-%a.img'];
+# no need to cleanup the chroot after build, we run in a completely clean VM
+$purge_build_deps = 'never';
+# no need for sudo
+$autopkgtest_root_args = '';
+```
+
+### Create a sid sbuild
+
+```sh
+mkdir -p /srv/sbuild/qemu/
+sbuild-qemu-create --install-packages build-essential,debhelper -o /srv/sbuild/qemu/sid-autopkgtest-amd64.img sid http://ftp.fr.debian.org/debian
+sudo chown root:sbuild  /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+```
+
+#### Update the sid VM
+
+```sh
+sudo sbuild-qemu-update /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+```
+
+#### Run commands in the VM
+
+##### Forget my changes
+
+```sh
+sbuild-qemu-boot /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+```
+
+##### Keep my changes
+
+```sh
+sbuild-qemu-boot --read-write /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 ```
