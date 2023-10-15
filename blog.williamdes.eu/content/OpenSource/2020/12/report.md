@@ -6,6 +6,7 @@ category = "OpenSource - reports"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
 
 [taxonomies]
 tags = ["OSS-report"]

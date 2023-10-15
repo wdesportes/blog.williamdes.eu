@@ -6,6 +6,7 @@ updated = 2021-02-24T17:10:00Z
 [extra]
 author = "William Desportes"
 author_url = "https://williamdes.eu"
+retired = true
 category = "OpenSource - stories"
 headline = "Here is the story of why I did move from my custom made Heroku/Node/TypeScript stats service to upptime."
 keywords = ["upptime", "monitoring"]

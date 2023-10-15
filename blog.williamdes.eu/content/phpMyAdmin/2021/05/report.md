@@ -6,6 +6,7 @@ category = "phpMyAdmin - reports"
 
 [extra]
 author = "William Desportes"
+author_url = "https://williamdes.eu"
 
 [taxonomies]
 tags = ["phpMyAdmin", "OSS-report"]
