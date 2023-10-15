@@ -196,6 +196,14 @@ $purge_build_deps = 'never';
 $autopkgtest_root_args = '';
 ```
 
+### Create a bookworm sbuild
+
+```sh
+mkdir -p /srv/sbuild/qemu/
+sbuild-qemu-create --install-packages build-essential,debhelper -o /srv/sbuild/qemu/testing-autopkgtest-amd64.img testing http://ftp.fr.debian.org/debian
+sudo chown root:sbuild  /srv/sbuild/qemu/testing-autopkgtest-amd64.img
+```
+
 ### Create a sid sbuild
 
 ```sh
