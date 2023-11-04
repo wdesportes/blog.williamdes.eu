@@ -1,184 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - DELL-R630</title>
-	<link href="https://blog.williamdes.eu/tags/dell-r630/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://blog.williamdes.eu"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-05-24T15:40:00+00:02</updated>
-	<id>https://blog.williamdes.eu/tags/dell-r630/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Making NVME SSDs work on a DELL R630</title>
-		<published>2022-05-20T00:07:00+00:02</published>
-		<updated>2023-05-24T15:40:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
-		<content type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;This is the story about a R630 server having NVME, SAS and SATA disks working together.
-The server is owner by my company but for this blog post let&#x27;s say it is my server.
-I did buy the server (&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-poweredge-r630-10-sff-configure-to-order&quot;&gt;Dell PowerEdge R630 1U 10x 2.5&amp;quot; (SFF)&lt;&#x2F;a&gt;) in January of 2022.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_MissingACPU.jpg&quot; alt=&quot;DELL R630 missing a CPU&quot; title=&quot;DELL R630 missing a CPU&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;the-failed-deployment-in-a-datacenter&quot;&gt;The failed deployment in a datacenter&lt;&#x2F;h3&gt;
-&lt;p&gt;I was confident I could swap this new machine with the other one, they where quite identical.
-But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.&lt;&#x2F;p&gt;
-&lt;p&gt;The machine was configured to have a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-gy1td-poweredge-r630-u2-nvme-enablement-kit-k9tvp&quot;&gt;NVME U2 extender&lt;&#x2F;a&gt; and I had did the mistake to say in the configurator that I wanted not RAID card. Of course because I did not want RAID on this system. But anyway, I had to order a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-thn56-hba330-mini-mono-12g-13g-internal-sas-hba-p2r3r&quot;&gt;PERC (SAS HBA card)&lt;&#x2F;a&gt; that had &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-f7p5j-poweredge-r730-12xlff-perc-to-2x-mini-sas-hd-18-26-0f7p5j&quot;&gt;the cables&lt;&#x2F;a&gt; included with it and that did solve the error I had that prevented the boot the other day at the datacenter.&lt;&#x2F;p&gt;
-&lt;p&gt;This requirement is explained in &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=236&quot;&gt;this YouTube video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;the-perc-card&quot;&gt;The PERC card&lt;&#x2F;h4&gt;
-&lt;p&gt;This one is a: Dell HBA330 Mini Mono 12G&#x2F;13G Internal SAS HBA&lt;&#x2F;p&gt;
-&lt;p&gt;This card is NOT a RAID card &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.dell.com&#x2F;community&#x2F;PowerEdge-HDD-SCSI-RAID&#x2F;Replaced-H730-mini-with-HBA330-cant-install-anything-on-any&#x2F;m-p&#x2F;8077919&#x2F;highlight&#x2F;true#M58005&quot;&gt;says some techs on dell forums&lt;&#x2F;a&gt;. Be sure to choose a RAID card if you need RAID.&lt;&#x2F;p&gt;
-&lt;p&gt;There is different cards, this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=165&quot;&gt;YouTube video&lt;&#x2F;a&gt; has a good summary about them.&lt;&#x2F;p&gt;
-&lt;p&gt;This card seems to be required in some ways to make the normal disks work.
-Follow this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;h9ZJoIqtayY?t=267&quot;&gt;YouTube video&lt;&#x2F;a&gt; to find out how to install it.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_Card.jpg&quot; alt=&quot;PERC card&quot; title=&quot;PERC card&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;the-nvme-expander&quot;&gt;The NVME expander&lt;&#x2F;h4&gt;
-&lt;p&gt;This extender card is only used to make NVME disks work. SAS, SATA &amp;amp; SSD disks work without it.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s power consumption is about 45W at idle time. And seems to make the fans spin a bit faster too.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_NVME_Expander_Card.jpg&quot; alt=&quot;NVME expander&quot; title=&quot;NVME expander&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;mounting-the-cables-and-the-kit&quot;&gt;Mounting the cables and the kit&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_Plugged_In.jpg&quot; alt=&quot;PERC card plugged in&quot; title=&quot;PERC card plugged in&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I put in place the kit and plugged it the cables each one according to the labels. (yes it knows and complains if you switch them)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_BP_Plugged_Cables.jpg&quot; alt=&quot;PERC card plugged in BackPlane cables&quot; title=&quot;PERC card plugged in BackPlane cables&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;the-cables&quot;&gt;The cables&lt;&#x2F;h5&gt;
-&lt;h5 id=&quot;perc-card&quot;&gt;PERC card&lt;&#x2F;h5&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_PERC_Cables.jpg&quot; alt=&quot;PERC card cables&quot; title=&quot;PERC card cables&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;nvme-expander-into-the-backplane&quot;&gt;NVME expander into the BackPlane&lt;&#x2F;h5&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_NVME_Expander_Card_BackPlane_PluggedIn.jpg&quot; alt=&quot;NVME expander card cables&quot; title=&quot;NVME expander card cables&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;trying-to-make-nvme-disks-work&quot;&gt;Trying to make NVME disks work&lt;&#x2F;h3&gt;
-&lt;p&gt;I did buy some NVME drives so I could test my setup. I was innocently thinking that it would work right after I slide then in the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-8fkxc-poweredge-13g-sff-hot-swap-caddy-08fkxc&quot;&gt;caddies&lt;&#x2F;a&gt; but obviously there was more funny things to happen.
-So I received the disks and did setup up one and then two. None of the disks where showing up, and the NVME card was not showing.&lt;&#x2F;p&gt;
-&lt;p&gt;I was not understanding what was wrong because the NVME card had green leds and the disks too. I then took the bet it was because they where NVME gen 4 and the system could only handle gen 3 but that was not it. I also did order a SAS disk to try it.&lt;&#x2F;p&gt;
-&lt;p&gt;I was now having a system with: 3 NVMEs not working, one SAS and one SATA disk showing up.
-After some debug and trying dumb things I tried to put the NVME card on the reizer of CPU 1.
-And boom ! it did show up in Linux. This was it, I had found something (written in very small on the other reizer was &amp;quot;CPU 2&amp;quot;). But on this reizer the cables where too short. So I was still having 3 non showing NVMEs.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;a-second-cpu&quot;&gt;A second CPU&lt;&#x2F;h4&gt;
-&lt;p&gt;I decided to contact the seller to buy a second CPU and RAM. Got them delivered very quickly (thank you &amp;quot;UPS express&amp;quot; !).
-Now I did put the CPU 2 and still nothing shows up, not even the CPU 2.
-After some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Dell&#x2F;comments&#x2F;usm9m8&#x2F;r630_dual_cpu_not_showing_up&#x2F;&quot;&gt;asking Internet on Reddit&lt;&#x2F;a&gt; people started saying it was probably the motherboard.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;new-motherboard&quot;&gt;New motherboard&lt;&#x2F;h4&gt;
-&lt;p&gt;After contacting the seller I got it repaired by them and when I got back this server it did boot up and show 2 CPUs, all RAM, SAS, NVME and SATA disks.
-This was the end of 6 months of searching how to make a R630 work with NVME disks.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
-&lt;p&gt;A second CPU+RAM and a reizer PERC card + NVME enhancement card where needed for this setup.
-After that 4 NVME slots where available, SAS and SATA disks work too. All those types of disks can be together.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;making-nvme-ssds-work-on-dell-r630-server&#x2F;..&#x2F;DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg&quot; alt=&quot;DELL R630 with two CPUs a NVME expander and a PERC card&quot; title=&quot;DELL R630 with two CPUs a NVME expander and a PERC card&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;lspci&quot;&gt;lspci&lt;&#x2F;h3&gt;
-&lt;p&gt;This are the new lines in &lt;code&gt;lspci&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;diff&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-diff &quot;&gt;&lt;code class=&quot;language-diff&quot; data-lang=&quot;diff&quot;&gt;&lt;span&gt;03:00.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:04.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:05.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:06.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:07.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;ff:0e.2 Unassigned class [ffff]: Intel Corporation Device 6ff2 (rev 01)
-&lt;&#x2F;span&gt;&lt;span&gt;ff:0e.3 Unassigned class [ffff]: Intel Corporation Device 6ff3 (rev 01)
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;full-lspci-before&quot;&gt;Full &lt;code&gt;lspci&lt;&#x2F;code&gt; before&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;lspci&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-lspci &quot;&gt;&lt;code class=&quot;language-lspci&quot; data-lang=&quot;lspci&quot;&gt;&lt;span&gt;00:11.0 Unassigned class [ff00]: Intel Corporation C610&#x2F;X99 series chipset SPSR (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:11.4 SATA controller: Intel Corporation C610&#x2F;X99 series chipset sSATA Controller [AHCI mode] (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:16.0 Communication controller: Intel Corporation C610&#x2F;X99 series chipset MEI Controller #1 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:16.1 Communication controller: Intel Corporation C610&#x2F;X99 series chipset MEI Controller #2 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1a.0 USB controller: Intel Corporation C610&#x2F;X99 series chipset USB Enhanced Host Controller #2 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1c.0 PCI bridge: Intel Corporation C610&#x2F;X99 series chipset PCI Express Root Port #1 (rev d5)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1c.7 PCI bridge: Intel Corporation C610&#x2F;X99 series chipset PCI Express Root Port #8 (rev d5)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1d.0 USB controller: Intel Corporation C610&#x2F;X99 series chipset USB Enhanced Host Controller #1 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1f.0 ISA bridge: Intel Corporation C610&#x2F;X99 series chipset LPC Controller (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1f.2 SATA controller: Intel Corporation C610&#x2F;X99 series chipset 6-Port SATA Controller [AHCI mode] (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.0 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.1 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.2 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.3 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;02:00.0 Serial Attached SCSI controller: Broadcom &#x2F; LSI SAS3008 PCI-Express Fusion-MPT SAS-3 (rev 02)
-&lt;&#x2F;span&gt;&lt;span&gt;09:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
-&lt;&#x2F;span&gt;&lt;span&gt;0a:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
-&lt;&#x2F;span&gt;&lt;span&gt;0b:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe-PCI Bridge [PPB]
-&lt;&#x2F;span&gt;&lt;span&gt;0c:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. G200eR2 (rev 01)
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;full-lspci-after&quot;&gt;Full &lt;code&gt;lspci&lt;&#x2F;code&gt; after&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;lspci&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-lspci &quot;&gt;&lt;code class=&quot;language-lspci&quot; data-lang=&quot;lspci&quot;&gt;&lt;span&gt;00:11.0 Unassigned class [ff00]: Intel Corporation C610&#x2F;X99 series chipset SPSR (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:11.4 SATA controller: Intel Corporation C610&#x2F;X99 series chipset sSATA Controller [AHCI mode] (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:16.0 Communication controller: Intel Corporation C610&#x2F;X99 series chipset MEI Controller #1 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:16.1 Communication controller: Intel Corporation C610&#x2F;X99 series chipset MEI Controller #2 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1a.0 USB controller: Intel Corporation C610&#x2F;X99 series chipset USB Enhanced Host Controller #2 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1c.0 PCI bridge: Intel Corporation C610&#x2F;X99 series chipset PCI Express Root Port #1 (rev d5)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1c.7 PCI bridge: Intel Corporation C610&#x2F;X99 series chipset PCI Express Root Port #8 (rev d5)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1d.0 USB controller: Intel Corporation C610&#x2F;X99 series chipset USB Enhanced Host Controller #1 (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1f.0 ISA bridge: Intel Corporation C610&#x2F;X99 series chipset LPC Controller (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;00:1f.2 SATA controller: Intel Corporation C610&#x2F;X99 series chipset 6-Port SATA Controller [AHCI mode] (rev 05)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.0 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.1 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.2 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;01:00.3 Ethernet controller: Broadcom Inc. and subsidiaries NetXtreme II BCM57800 1&#x2F;10 Gigabit Ethernet (rev 10)
-&lt;&#x2F;span&gt;&lt;span&gt;02:00.0 Serial Attached SCSI controller: Broadcom &#x2F; LSI SAS3008 PCI-Express Fusion-MPT SAS-3 (rev 02)
-&lt;&#x2F;span&gt;&lt;span&gt;03:00.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:04.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:05.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:06.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;04:07.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT&#x2F;s) Switch (rev ab)
-&lt;&#x2F;span&gt;&lt;span&gt;0e:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
-&lt;&#x2F;span&gt;&lt;span&gt;0f:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe Switch [PS]
-&lt;&#x2F;span&gt;&lt;span&gt;10:00.0 PCI bridge: Renesas Technology Corp. SH7758 PCIe-PCI Bridge [PPB]
-&lt;&#x2F;span&gt;&lt;span&gt;11:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. G200eR2 (rev 01)
-&lt;&#x2F;span&gt;&lt;span&gt;ff:0e.2 Unassigned class [ffff]: Intel Corporation Device 6ff2 (rev 01)
-&lt;&#x2F;span&gt;&lt;span&gt;ff:0e.3 Unassigned class [ffff]: Intel Corporation Device 6ff3 (rev 01)
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;style&gt;
-img {
-    width: 24rem;
-}
-&lt;&#x2F;style&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Migrating to a new server housed at Dyjix</title>
-		<published>2021-07-02T20:20:00+00:02</published>
-		<updated>2021-07-24T17:00:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
-		<content type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h4 id=&quot;migration&quot;&gt;Migration&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;panel&#x2F;aff.php?aff=377&quot;&gt;Dyjix&lt;&#x2F;a&gt; has been my hosting provider since &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;wdesportes&#x2F;status&#x2F;1330493510131265541&quot;&gt;I switched off Scaleway in november 2020&lt;&#x2F;a&gt;.
-Scaleway was great, but I needed more power for my money. Dyjix has pretty good solutions&#x2F;pricings and you will get a big bunch of RAM and CPU for a decent amount of money per month.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;buying&quot;&gt;Buying&lt;&#x2F;h4&gt;
-&lt;p&gt;I decided I needed more CPU and RAM to run more services, then after searching on Internet I found the company &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;&quot;&gt;BargainHardware&lt;&#x2F;a&gt; and could very quickly configure &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.bargainhardware.co.uk&#x2F;dell-poweredge-r630-8-sff-configure-to-order&quot;&gt;my server&lt;&#x2F;a&gt;, buy it and had it delivered to France.
-A bunch of days later it was there (and I had to pay UPS the importation tax ^^).&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;installing-story&quot;&gt;Installing &amp;amp; story&lt;&#x2F;h4&gt;
-&lt;p&gt;Now was configuration time, I installed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;proxmox.com&#x2F;&quot;&gt;Proxmox&lt;&#x2F;a&gt; without any issues and ran my first VM.
-I had it installed in another datacenter that Dyjix but it turned out that was a very very bad choice for technical reasons and for human related reasons. I just felt like a number and not as a customer the company was caring about, it was terrible.
-Hopefully the network configuration I had made was perfect and on first start the service was available and running.&lt;&#x2F;p&gt;
-&lt;p&gt;Luckily Dyjix has &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;housing.php&quot;&gt;housing services&lt;&#x2F;a&gt; and I could reach out to them and they provided a custom better fitting solution for my server.
-I really do not know why I did not reach out to Dyjix first, anyway story is made and I am very happy of the service I have at Dyjix. They are a great team and really care about the service they provide !&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;specs&quot;&gt;Specs&lt;&#x2F;h3&gt;
-&lt;p&gt;It has a &lt;code&gt;24 x Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz (1 Socket)&lt;&#x2F;code&gt; and 128G of RAM in 4 x 32G sticks.
-With 2 x 1To SSDs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;technical-stories&quot;&gt;Technical stories&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;microtik-opnsense-pfsense&quot;&gt;Microtik -&amp;gt; OPNsense -&amp;gt; pfSense&lt;&#x2F;h4&gt;
-&lt;p&gt;I had first installed Microtik to manage my routing but it was not free as I found out after searching for hours why I had a very poor network access (1 Mb&#x2F;s). So I bought the 10G license (what a stupid idea) and it worked fine. The UI is fast and the CLI works fine too. That said it seemed to not perform great under heavy loads like DDOS attacks. I tried &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opnsense.org&#x2F;&quot;&gt;OPNsense&lt;&#x2F;a&gt; but the GUI was incredibly slow for no good reason and I had some difficulties using the routing UI. So I installed pfSense (even if there is some debate going on because they are not completely open-source) and it works flawlessly.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;vpn-access&quot;&gt;VPN access&lt;&#x2F;h4&gt;
-&lt;p&gt;The other company did not even offer a VPN to access my server, this seems maybe not a big deal but it is !
-Having access to your server without using the &amp;quot;Internet&amp;quot; IP is really something important.
-Dyjix has a VPN system that will allow you to access private IPs assigned to your server or your iDRAC port for example.
-This allows me to securely access my server and iDRAC (the DELL UI to access the embedded server controller system).&lt;&#x2F;p&gt;
-&lt;p&gt;Now I can sleep knowing that if my server freezes or crashes I will still have access to restarting it or a console using the iDRAC web GUI !&lt;&#x2F;p&gt;
-&lt;p&gt;From a security point of view it is better not to expose (what I had to do before..) the administrative UIs to the Internet.
-Someone could attack them and gain access to everything.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;peering-and-network-speed&quot;&gt;Peering and network speed&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;24179&quot;&gt;Dyjix&lt;&#x2F;a&gt; is in peering with &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;ix&#x2F;359&quot;&gt;France-IX&lt;&#x2F;a&gt; and France-IX peering point has &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.peeringdb.com&#x2F;net&#x2F;4224&quot;&gt;CloudFlare&lt;&#x2F;a&gt; as a peering. This is mind blowing and does make access times to my websites incredibly fast !
-My ping to CloudFlare is about 1-2 ms.
-Dyjix has a network speed of 100G&#x2F;s, this is also awesome !&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;power-consumption&quot;&gt;Power consumption&lt;&#x2F;h4&gt;
-&lt;p&gt;At &amp;quot;idle&amp;quot; the power consumption is around 65-70 Watts now, more load is expected to make this number vary.
-With a more intense load it should be around 140 Watts and the power supply can handle 750 Watts.
-I will create another blog post to talk about how I monitor this with the tool &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h4&gt;
-&lt;p&gt;Now the server is running fine and all services migrated from the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;dyjix.eu&#x2F;vps.php&quot;&gt;HDD-32&lt;&#x2F;a&gt; VM.
-The route to the IPV6 block will be deployed soon to Internet !
-This server is now owned by my company: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;wdes.fr&#x2F;en&#x2F;&quot;&gt;Wdes SAS&lt;&#x2F;a&gt; and I am very satisfied with the machine, it works great and has all the performance needed.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;some-pictures&quot;&gt;Some pictures&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;housing-at-dyjix&quot;&gt;Housing at Dyjix&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Dyjix_housing.jpg&quot; alt=&quot;The server installed at Dyjix&quot; title=&quot;The server installed at Dyjix&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;un-boxing&quot;&gt;Un-boxing&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_In_A_Box.jpg&quot; alt=&quot;The server in a box&quot; title=&quot;The server in a box&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Closed.jpg&quot; alt=&quot;The server closed&quot; title=&quot;The server closed&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;stories&#x2F;migrating-to-a-housed-server-at-dyjix&#x2F;..&#x2F;DELL_PowerEdge_R630_Wdes_SAS_Open.jpg&quot; alt=&quot;The server open&quot; title=&quot;The server open&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
+    <title>Williamdes&#x27;s blog - DELL-R630</title>
+    <link href="https://blog.williamdes.eu/tags/dell-r630/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-05-24T15:40:00+00:02</updated>
+    <id>https://blog.williamdes.eu/tags/dell-r630/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Making NVME SSDs work on a DELL R630</title>
+        <published>2022-05-20T00:07:00+00:02</published>
+        <updated>2023-05-24T15:40:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
+        
+        <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Migrating to a new server housed at Dyjix</title>
+        <published>2021-07-02T20:20:00+00:02</published>
+        <updated>2021-07-24T17:00:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
+        
+        <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
 </feed>

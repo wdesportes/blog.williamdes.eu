@@ -1,94 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - story</title>
-	<link href="https://blog.williamdes.eu/tags/story/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://blog.williamdes.eu"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-05-05T19:50:00+00:00</updated>
-	<id>https://blog.williamdes.eu/tags/story/atom.xml</id>
-	<entry xml:lang="en">
-		<title>The Debian packages I maintain</title>
-		<published>2023-05-05T19:50:00+00:00</published>
-		<updated>2023-05-05T19:50:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/</id>
-		<content type="html">&lt;p&gt;A presentation of the Debian packages I maintain&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;Since 2019 I started contributing to Debian.
-You can find a quick list of areas and dates I started contributing to Debian on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;contributors.debian.org&#x2F;contributor&#x2F;williamdes&#x2F;&quot;&gt;my contributors.d.o page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Here is the link to the full list of packages I maintain on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;qa.debian.org&#x2F;developer.php?login=williamdes@wdes.fr&amp;amp;comaint=yes&amp;amp;version=oldoldstable&quot;&gt;qa.d.o&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;the-packages-i-maintain&quot;&gt;The packages I maintain&lt;&#x2F;h2&gt;
-&lt;p&gt;I decided to make them easier to find and created labels for them on Debian Salsa (A GitLab instance that hosts the packages and CIs):&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;explore&#x2F;projects&#x2F;topics&#x2F;wdes-packaging-team&quot;&gt;@wdes-packaging-team&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;explore&#x2F;projects&#x2F;topics&#x2F;phpmyadmin-packaging-team&quot;&gt;@phpmyadmin-packaging-team&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;libraries&quot;&gt;Libraries&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;tcpdf&quot;&gt;tcpdf&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1073136&#x2F;accepted-tcpdf-632dfsg1-1-source-into-unstable&#x2F;&quot;&gt;I adopted it in October 2019&lt;&#x2F;a&gt; and have been maintaining the packaging and sending it to stable-backports.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;jquery-timepicker&quot;&gt;jquery-timepicker&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1210286&#x2F;accepted-jquery-timepicker-163-1-source-into-unstable&#x2F;&quot;&gt;I adopted it in January 2021&lt;&#x2F;a&gt; and it&#x27;s been a pleasure to package it and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1401595&#x2F;accepted-jquery-timepicker-163-2-source-into-unstable&#x2F;&quot;&gt;add tests&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;js-team&#x2F;jquery-timepicker&#x2F;-&#x2F;commit&#x2F;cf4b8b8c311d3232233741519bcc356b48ce4bdc&quot;&gt;[git]&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-code-lts-u2f-php-server&quot;&gt;php-code-lts-u2f-php-server&lt;&#x2F;a&gt; used by phpMyAdmin for legacy U2F, it&#x27;s a library I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;U2F-php-server&quot;&gt;took back maintenance at @code-lts&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;mariadb-mysql-kbs&quot;&gt;mariadb-mysql-kbs&lt;&#x2F;a&gt;, my data library I made in &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;williamdes&#x2F;mariadb-mysql-kbs&#x2F;releases&#x2F;tag&#x2F;v1.0.0&quot;&gt;July 2018&lt;&#x2F;a&gt;. Maintained up to date by my nice bot.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;dasprid-enum&quot;&gt;dasprid-enum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;baconqrcode&quot;&gt;baconqrcode&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-zumba-json-serializer&quot;&gt;php-zumba-json-serializer&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-slim-psr7&quot;&gt;php-slim-psr7&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;google-recaptcha&quot;&gt;google-recaptcha&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;phpmyadmin-libraires&quot;&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;qa.debian.org&#x2F;developer.php?email=team%2Bphpmyadmin%40tracker.debian.org&quot;&gt;phpMyAdmin libraires&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;twig-i18n-extension&quot;&gt;twig-i18n-extension&lt;&#x2F;a&gt; previously &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;twig-extensions&quot;&gt;twig-extensions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpmyadmin-shapefile&quot;&gt;phpmyadmin-shapefile&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpmyadmin-motranslator&quot;&gt;phpmyadmin-motranslator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpmyadmin-sql-parser&quot;&gt;phpmyadmin-sql-parser&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpmyadmin&quot;&gt;phpmyadmin&lt;&#x2F;a&gt;, the phpMyAdmin package.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpsysinfo&quot;&gt;phpsysinfo&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1406225&#x2F;accepted-phpsysinfo-342-1-source-into-unstable&#x2F;&quot;&gt;adopted it in January 2023&lt;&#x2F;a&gt; to save it from beeing missing from Debian bookworm !&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phpldapadmin&quot;&gt;phpldapadmin&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1427368&#x2F;accepted-phpldapadmin-1263-03-source-into-unstable&#x2F;&quot;&gt;saved&#x2F;adopted it and made PHP 8.1&#x2F;8.2 support&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;shunit2&quot;&gt;shunit2&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1357356&#x2F;accepted-shunit2-218-1-source-into-experimental&#x2F;&quot;&gt;finished the hard refurubishing work&lt;&#x2F;a&gt; and got it updated in Debian for bookworm.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;phing&quot;&gt;phing&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1417993&#x2F;accepted-phing-2174-1-source-into-unstable&#x2F;&quot;&gt;adopted it&lt;&#x2F;a&gt; to save it from beeing missing from Debian bookworm !&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;the-packages-i-help-maintain&quot;&gt;The packages I help maintain&lt;&#x2F;h2&gt;
-&lt;p&gt;They are some that can be found on: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;explore&#x2F;projects&#x2F;topics&#x2F;wdes-packaging-team&quot;&gt;@wdes-packaging-team&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;libraries-1&quot;&gt;Libraries&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-image-text&quot;&gt;php-image-text&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1412143&#x2F;accepted-php-image-text-070-3-source-into-unstable&#x2F;&quot;&gt;wrote autopkgtests and refreshed the packaging&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-font-lib&quot;&gt;php-font-lib&lt;&#x2F;a&gt;, I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1415724&#x2F;accepted-php-font-lib-054dfsg-1-source-into-unstable&#x2F;&quot;&gt;refreshed the packaging&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-dompdf-svg-lib&quot;&gt;php-dompdf-svg-lib&lt;&#x2F;a&gt;, one of the last packages to enter NEW for bookworm before the freeze.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-dompdf&quot;&gt;php-dompdf&lt;&#x2F;a&gt;, was part of my February 2023 Debian contributions. I &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;news&#x2F;1417025&#x2F;accepted-php-dompdf-202dfsg-1-source-into-unstable&#x2F;&quot;&gt;refreshed the packaging&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-nikic-fast-route&quot;&gt;php-nikic-fast-route&lt;&#x2F;a&gt;, I added the package in &lt;code&gt;bullseye-backports&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tracker.debian.org&#x2F;pkg&#x2F;php-fig-http-message-util&quot;&gt;php-fig-http-message-util&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Follow my phpMyAdmin adventure</title>
-		<published>2021-01-13T12:00:00+00:00</published>
-		<updated>2021-01-13T12:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
-		<content type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;After a lot of hours contributing to phpMyAdmin I received an unexpected invitation to join the team.
-That day was on the 27&#x2F;08&#x2F;2018, a very happy day !
-Since then I am a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;phpmyadmin.net&#x2F;team&quot;&gt;phpMyAdmin team member&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;I work for phpMyAdmin starting on the 01&#x2F;12&#x2F;2020.&lt;&#x2F;p&gt;
-&lt;p&gt;You can find my reports: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;tags&#x2F;phpmyadmin&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Welcome to my blog !</title>
-		<published>2021-01-01T12:00:00+00:00</published>
-		<updated>2021-01-13T23:00:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/welcome-to-my-blog/" type="text/html"/>
-		<id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
-		<content type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;I was thinking about writing a blog from some time, but here we are.
-This blog will contain phpMyAdmin work reports and technical blog posts.&lt;&#x2F;p&gt;
-&lt;p&gt;(This blog post was not written the 1st but who cares apart my favorite reader ;p )&lt;&#x2F;p&gt;
-</content>
-	</entry>
+    <title>Williamdes&#x27;s blog - story</title>
+    <link href="https://blog.williamdes.eu/tags/story/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-05-05T19:50:00+00:00</updated>
+    <id>https://blog.williamdes.eu/tags/story/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The Debian packages I maintain</title>
+        <published>2023-05-05T19:50:00+00:00</published>
+        <updated>2023-05-05T19:50:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/</id>
+        
+        <summary type="html">&lt;p&gt;A presentation of the Debian packages I maintain&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Follow my phpMyAdmin adventure</title>
+        <published>2021-01-13T12:00:00+00:00</published>
+        <updated>2021-01-13T12:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
+        
+        <summary type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Welcome to my blog !</title>
+        <published>2021-01-01T12:00:00+00:00</published>
+        <updated>2021-01-13T23:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/welcome-to-my-blog/" type="text/html"/>
+        <id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
+        
+        <summary type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
 </feed>

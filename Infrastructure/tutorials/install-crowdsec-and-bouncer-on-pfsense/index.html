@@ -27,7 +27,7 @@
         <meta property="og:description" content="Protect pfSense from bad actors&#x2F;IPs using CrowdSec.">
         
         
-        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/ba713cbf86f1683300.jpg"/>
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/crowdsec_logo_large.9247552ac3502e74.jpg"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         
@@ -207,6 +207,7 @@
 <article class="post-single">
     <header class="post-header">
         <h1 class="post-title">Installing Crowdsec on pfSense</h1>
+        
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
                 William Desportes
@@ -261,7 +262,7 @@ Find where the CLI is located:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">/usr/local/bin/cscli</span><span> console enroll xxxxxxxxxxxxxxxxxx
 </span></code></pre>
 <h4 id="see-the-enrolled-instance">See the enrolled instance</h4>
-<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_dashboard_pfsense_instance.jpg" alt="instance on the dashboard at app.crowdsec.net" title="instance on the dashboard at app.crowdsec.net" /></p>
+<p><img src="../crowdsec_dashboard_pfsense_instance.jpg" alt="instance on the dashboard at app.crowdsec.net" title="instance on the dashboard at app.crowdsec.net" /></p>
 <h4 id="add-scenarios">Add scenarios</h4>
 <p>Example:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cscli</span><span> scenarios list
@@ -308,12 +309,12 @@ Find where the CLI is located:</p>
 <p>Go to: <code>Firewall</code> &gt; <code>Aliases</code> &gt; <code>URLs</code> and click on <code>+ Add</code>.
 The type is: <code>URL Table (IPs)</code>.</p>
 <p>Do like on the screenshot using the URL we tried earlier and the save.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_pfsense_add_url_alias.jpg" alt="Adding a firewall URL alias for CrowdSec on pfSense" title="Adding a firewall URL alias for CrowdSec on pfSense" /></p>
+<p><img src="../crowdsec_pfsense_add_url_alias.jpg" alt="Adding a firewall URL alias for CrowdSec on pfSense" title="Adding a firewall URL alias for CrowdSec on pfSense" /></p>
 <h4 id="add-a-firewall-rule">Add a firewall rule</h4>
 <p>Go to: <code>Firewall</code> &gt; <code>Rules</code> &gt; <code>Interface name for Internet</code> and click on <code>Add</code>.
 The source is <code>Single host and alias</code> and the type the name of the firewall aslias you created earlier.
 Do like on the screenshot and save. Then apply the changes.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/../crowdsec_pfsense_add_firewall_rule.jpg" alt="Adding a firewall rule on the network interface for CrowdSec on pfSense" title="Adding a firewall rule on the network interface for CrowdSec on pfSense" /></p>
+<p><img src="../crowdsec_pfsense_add_firewall_rule.jpg" alt="Adding a firewall rule on the network interface for CrowdSec on pfSense" title="Adding a firewall rule on the network interface for CrowdSec on pfSense" /></p>
 <h3 id="or-use-the-firewall-bouncer-does-it-work-on-pfsense">Or use the firewall bouncer (does it work on pfSense ?)</h3>
 <p>This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.</p>
@@ -354,12 +355,12 @@ I could not figure out how to know that it actually works.</p>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
             <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
-            <span>&middot;</span>
+            <br>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
             <span>&middot;</span>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
             <span>&middot;</span>
-            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
             <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
             <br>

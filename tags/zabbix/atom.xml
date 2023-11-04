@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Williamdes&#x27;s blog - Zabbix</title>
+    <link href="https://blog.williamdes.eu/tags/zabbix/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-15T04:18:09+00:01</updated>
+    <id>https://blog.williamdes.eu/tags/zabbix/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Migrating from upptime to Zabbix and Vigil</title>
+        <published>2023-10-15T15:00:00+00:02</published>
+        <updated>2023-11-15T04:18:09+00:01</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/</id>
+        
+        <summary type="html">&lt;p&gt;I decided to end the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; monitoring experiment and switch to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;vigil&quot;&gt;Vigil&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

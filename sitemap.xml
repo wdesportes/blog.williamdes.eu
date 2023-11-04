@@ -39,6 +39,10 @@
         <lastmod>2023-05-24T15:40:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/</loc>
+        <lastmod>2023-11-15T04:18:09+00:01</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</loc>
         <lastmod>2021-07-24T17:00:00+00:02</lastmod>
     </url>
@@ -96,7 +100,7 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</loc>
-        <lastmod>2021-02-25T01:50:00Z</lastmod>
+        <lastmod>2023-10-15T12:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/page/1/</loc>
@@ -282,6 +286,12 @@
         <loc>https://blog.williamdes.eu/tags/luks/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/monitoring/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/monitoring/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/openfortigui/</loc>
     </url>
     <url>
@@ -349,6 +359,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/story/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/zabbix/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/zabbix/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/welcome-to-my-blog/</loc>

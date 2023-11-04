@@ -202,6 +202,7 @@
 <article class="post-single">
     <header class="post-header">
         <h1 class="post-title">Setup Debian sbuild chroots</h1>
+        
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
                 William Desportes
@@ -331,6 +332,11 @@ I found some inspiration on this <a rel="noopener" target="_blank" href="https:/
 </span><span style="color:#65737e;"># no need for sudo
 </span><span>$</span><span style="color:#bf616a;">autopkgtest_root_args </span><span>= &#39;&#39;;
 </span></code></pre>
+<h3 id="create-a-bookworm-sbuild">Create a bookworm sbuild</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /srv/sbuild/qemu/
+</span><span style="color:#bf616a;">sbuild-qemu-create --install-packages</span><span> build-essential,debhelper</span><span style="color:#bf616a;"> -o</span><span> /srv/sbuild/qemu/testing-autopkgtest-amd64.img testing http://ftp.fr.debian.org/debian
+</span><span style="color:#bf616a;">sudo</span><span> chown root:sbuild  /srv/sbuild/qemu/testing-autopkgtest-amd64.img
+</span></code></pre>
 <h3 id="create-a-sid-sbuild">Create a sid sbuild</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /srv/sbuild/qemu/
 </span><span style="color:#bf616a;">sbuild-qemu-create --install-packages</span><span> build-essential,debhelper</span><span style="color:#bf616a;"> -o</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img sid http://ftp.fr.debian.org/debian
@@ -368,12 +374,12 @@ I found some inspiration on this <a rel="noopener" target="_blank" href="https:/
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
             <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
-            <span>&middot;</span>
+            <br>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
             <span>&middot;</span>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
             <span>&middot;</span>
-            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
             <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
             <br>

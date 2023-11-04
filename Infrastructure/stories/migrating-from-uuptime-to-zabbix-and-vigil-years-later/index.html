@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Migrating from upptime to Zabbix and Vigil</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="I decided to end the upptime monitoring experiment and switch to Vigil and Zabbix.">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Migrating from upptime to Zabbix and Vigil">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later">
+        <meta property="og:description" content="I decided to end the upptime monitoring experiment and switch to Vigil and Zabbix.">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2023-10-15T15:00:00+00:02">
+        <meta property="article:published_time" content="2023-10-15T15:00:00">
+        <meta property="article:modified_time" content="2023-11-15T04:18:09">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="infra-story"><meta property="article:tags" content="monitoring"><meta property="article:tags" content="Zabbix">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/stories",
+                    "name": "stories"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later",
+                    "name": "Migrating from upptime to Zabbix and Vigil"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/",
+    "headline": "Migrating from upptime to Zabbix and Vigil",
+    "alternativeHeadline": "In this story",
+    "dateCreated": "2023-10-15T15:00:00+0002",
+    "datePublished": "2023-10-15T15:00:00+0002",
+    "dateModified": "2023-11-15T04:18:09+0001",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["monitoring","upptime","Zabbix","Vigil"],
+    "articleSection": "Story",
+    "genre": ["infra-story","monitoring","Zabbix"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.datacenters.network/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Migrating from upptime to Zabbix and Vigil</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2023-10-15T15:00:00+0002">October 15, 2023 15:00</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-11-15T04:18:09+0001">November 15, 2023 04:18</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">4 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>I decided to end the <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a> monitoring experiment and switch to <a rel="noopener" target="_blank" href="https://github.com/valeriansaliou/vigil">Vigil</a> and <a rel="noopener" target="_blank" href="https://www.zabbix.com/">Zabbix</a>.</p>
+<span id="continue-reading"></span><h3 id="some-story">Some story</h3>
+<p>This story starts with bugs not getting fixed, me wanting to remove NodeJS and getting rid of the way upptime stored it's data.
+They used commits in a Git repository, this is very clever but does not scale very well.</p>
+<p>The <a rel="noopener" target="_blank" href="https://github.com/wdes/status">repository</a> got way bigger than expected: 241k commits !
+For a diff of 486,889 added lines vs 486,161 removed lines.</p>
+<p>It ran from February 2021, to the end of July 2022. I did a <a rel="noopener" target="_blank" href="https://github.com/wdes/status/commits?author=williamdes">few config commits</a> but not much more, <a rel="noopener" target="_blank" href="https://github.com/wdes/status/blob/main/.upptimerc.yml">the config file</a> was in yaml.
+My last config adjustment was in July 2021, so the monitoring continue to run for one more year without any config changes.</p>
+<p>This monitoring experience lasted 1 year and a half.</p>
+<h3 id="the-bad-stuff">The bad stuff</h3>
+<p>It ran on NodeJS, that's already quite bad in some ways.
+But it required GitHub actions to run, and that's way worse because it asked a runner to run a task every minute or bunch of minutes.
+This was wasting the ressources other devs could use at GitHub and got my monthly quota to it's end.
+And used GitHub pages to host the built result. And did build graphs frequently.</p>
+<h3 id="the-security-part">The security part</h3>
+<p>It was not very easy to hide everything in ENVs and to do the configuration.</p>
+<h3 id="the-lost-history">The lost history</h3>
+<p>That's not what I wanted this part to be about, but having all the history in Git commits was not easy to take out.
+So it was lost, kind of.</p>
+<p>What was actually lost is what is the exact story about this migration, I do not remember everything.
+So bits and anecdotes are lost, It took me too long to finally decide to write about all this.</p>
+<h3 id="vigil-my-new-status-page">Vigil, my new status page</h3>
+<p>I did setup Vigil very easily, and my <a rel="noopener" target="_blank" href="https://github.com/datacenters-network/status">config is open-source</a>.
+You can see my monitoring has similarities from what it was before with upptime.
+But this time, I received notification on my Telegram account !</p>
+<p>I had asked upptime for more notification channels, but that never landed.
+Nowdays upptime seems to have <a rel="noopener" target="_blank" href="https://upptime.js.org/docs/notifications">quite some nice notifiers</a>.</p>
+<p>The good news: it is written in Rust and is open-source !
+It consumes 9 MB of RAM and 0% CPU.
+For the network part, it consumes 5 KB in and 700B out.
+I host it at <a rel="noopener" target="_blank" href="https://railway.app?referralCode=w6eB63">Railway.app</a> for free.</p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://status.crisp.chat/">Crisp.chat's status page</a></li>
+<li><a rel="noopener" target="_blank" href="https://status.datacenters.network/">Wdes's status page</a></li>
+</ul>
+<h3 id="zabbix-my-daily-monitoring-tool">Zabbix, my daily monitoring tool</h3>
+<p>Zabbix is fully open-source, very slow to answer new tickets but makes updates in a very regular way.
+It is written in PHP and other languages.
+I did not know a thing about Zabbix and deployed it in my infrastructure in 30 minutes using their docker-compose examples.
+They have examples for a lot of <a rel="noopener" target="_blank" href="https://github.com/zabbix/zabbix-docker">different docker variants</a>, Ubuntu, Alpine, CentOS.</p>
+<p>You can use PostgresSQL or MySQL/MariaDB to host the database.
+Years later (since 2021-07-15) and a bunch of servers monitored, the database is not that big.
+The top 3 tables are 1GiB, 1GiB and 650MiB for a total of 3.2 GiB on my current setup.
+The 5 tables with more rows are between 2 and 11 million lines. They do drop data at some configured dates, so the database keeps history but not too long.</p>
+<h4 id="different-monitoring-methods">Different monitoring methods</h4>
+<p>Zabbix can plug into the SNMP port of your server and take out all the data without any config at all.
+This is very cool because you can monitor servers without having to write rules or stuff.
+It monitors the server out of the box, and warns you about when things go wrong:</p>
+<ul>
+<li>High CPU</li>
+<li>Disk nearly full</li>
+<li>Host was restarted</li>
+<li>More..</li>
+</ul>
+<p>You also can install a Zabbix agent on the host to send data to Zabbix.
+Not the other way around with SNMP.
+With the local Zabbix agent you can even add new values in a very easy way.
+For example to add monitoring for an UPS: <a rel="noopener" target="_blank" href="https://github.com/reedacus25/zbx-apcupsd#readme">reedacus25/zbx-apcupsd on GitHub</a>.</p>
+<h5 id="sending-values-from-code-scripts">Sending values from code/scripts</h5>
+<p>If you have an app, and you want some specific metrics: you can use the Zabbix Sender API to send them to Zabbix.
+Nothing very complicated, a bunch of lines of code.</p>
+<p>For example: <code>zabbix_sender -z ZabbixHostNameOrIP -k custom-name.key-name -o &quot;value here&quot; -s &quot;ZabbixHostnameNotTheVisibleName&quot;</code></p>
+<h3 id="the-summary">The summary</h3>
+<p>I am very glad with Vigil and Zabbix, they are two tools that are very easy to use.
+And doubt changing tools anytime soon.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-story/">infra-story</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/monitoring/">monitoring</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/zabbix/">Zabbix</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2023 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

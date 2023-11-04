@@ -27,7 +27,7 @@
         <meta property="og:description" content="I changed my Raspberry Pi fan for a Noctua NF-A4x10 5V PWM and had a 2° temperature drop compared to the GeeekPi case fan.">
         
         
-        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/f9bf770f6fe3201600.jpg"/>
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.5b8275ed2dccda29.jpg"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         
@@ -215,6 +215,7 @@
 <article class="post-single">
     <header class="post-header">
         <h1 class="post-title">Changing my RaspberryPi 4 fan for a Noctua NF-A4x10 5V PWM fan</h1>
+        
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
                 William Desportes
@@ -245,19 +246,19 @@ Was PWM needed, the answer is no. But it is a nice to have to make a fun project
 <p>It did come with some very cool packaging, very premium feeling and a lot of connectors.</p>
 <h3 id="the-hacking-part">The hacking part</h3>
 <h4 id="the-kit">The kit</h4>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_kit.jpeg" alt="Noctua NF-A4x10 5V PWM kit" title="Noctua NF-A4x10 5V PWM kit" /></p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit.jpeg" alt="Noctua NF-A4x10 5V PWM kit" title="Noctua NF-A4x10 5V PWM kit" /></p>
 <h4 id="soldering-time">Soldering time</h4>
 <p>Noctua did provide a nice adapter so I only had to cut out the old fan wires and solder them to the adapter.
 I used heat shrink tubes to make a nice and secure finish (the two red tubes you can see on the picture).</p>
 <p>(The crapy background is my soldering board)</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../RaspberryPi_4_cutting_and_soldering_for_the_fan.jpeg" alt="cutting old fan connector and soldering then to the adapter" title="cutting old fan connector and soldering then to the adapter" /></p>
+<p><img src="../RaspberryPi_4_cutting_and_soldering_for_the_fan.jpeg" alt="cutting old fan connector and soldering then to the adapter" title="cutting old fan connector and soldering then to the adapter" /></p>
 <h4 id="plug-the-cable">Plug the cable</h4>
 <p>I did plug the fan cable into the adapter and then plugged all this into the two GPIO pins as you can see.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_GPIO_pins.jpg" alt="plugging into the GPIO pins" title="plugging into the GPIO pins" /></p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_GPIO_pins.jpg" alt="plugging into the GPIO pins" title="plugging into the GPIO pins" /></p>
 <h4 id="overview">Overview</h4>
 <p>The metal mounts for the fan where included in the setup of the GeeekPi case.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview.jpg" alt="an overview" title="an overview" /></p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.jpg" alt="an overview from the side" title="an overview from the side" /></p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview.jpg" alt="an overview" title="an overview" /></p>
+<p><img src="../Noctua_NF-A4x10_5V_PWM_kit_in_RaspberryPi_4_overview_side.jpg" alt="an overview from the side" title="an overview from the side" /></p>
 <h3 id="some-temperature-numbers">Some temperature numbers</h3>
 <p>Was this change worth it: yes !
 It's cooler and more silent.</p>
@@ -265,10 +266,10 @@ It's cooler and more silent.</p>
 <p>The spike on the graph is the moment between having old fan and having no fan at all, just the cooler.</p>
 <p>(The graph is done with <a rel="noopener" target="_blank" href="https://www.zabbix.com/">Zabbix</a> (a free tool), more on that in another blog post)
 (You can click the image to see it bigger)</p>
-<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg"><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg" alt="with the old fan and with the new fan" title="with the old fan and with the new fan" /></a></p>
+<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg"><img src="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix.jpg" alt="with the old fan and with the new fan" title="with the old fan and with the new fan" /></a></p>
 <h4 id="zoomed-in">Zoomed in</h4>
 <p>(You can click the image to see it bigger)</p>
-<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg"><img src="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg" alt="with the old fan and with the new fan (zoomed in)" title="with the old fan and with the new fan (zoomed in)" /></a></p>
+<p><a href="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg"><img src="../Noctua_NF-A4x10_5V_PWM_in_RaspberryPi_4_temp_Zabbix_zoom.jpg" alt="with the old fan and with the new fan (zoomed in)" title="with the old fan and with the new fan (zoomed in)" /></a></p>
 <h3 id="conclusion">Conclusion</h3>
 <p><a rel="noopener" target="_blank" href="https://noctua.at/en/products/fan">Noctua</a> fans are great, the perform very well and are silent.
 I can only recommend to buy them. They provide cool wiring stuff, you will have left overs for other projects.</p>
@@ -295,12 +296,12 @@ I can only recommend to buy them. They provide cool wiring stuff, you will have 
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
             <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
-            <span>&middot;</span>
+            <br>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
             <span>&middot;</span>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
             <span>&middot;</span>
-            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
             <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
             <br>

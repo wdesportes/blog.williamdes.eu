@@ -202,6 +202,7 @@
 <article class="post-single">
     <header class="post-header">
         <h1 class="post-title">Making NVME SSDs work on a DELL R630</h1>
+        
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
                 William Desportes
@@ -219,7 +220,7 @@
 <p>This is the story about a R630 server having NVME, SAS and SATA disks working together.
 The server is owner by my company but for this blog post let's say it is my server.
 I did buy the server (<a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-poweredge-r630-10-sff-configure-to-order">Dell PowerEdge R630 1U 10x 2.5&quot; (SFF)</a>) in January of 2022.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_MissingACPU.jpg" alt="DELL R630 missing a CPU" title="DELL R630 missing a CPU" /></p>
+<p><img src="../DELL_PowerEdge_R630_MissingACPU.jpg" alt="DELL R630 missing a CPU" title="DELL R630 missing a CPU" /></p>
 <h3 id="the-failed-deployment-in-a-datacenter">The failed deployment in a datacenter</h3>
 <p>I was confident I could swap this new machine with the other one, they where quite identical.
 But this turned out not to work, when we booted it up in the datacenter (I received it some days ago and could not do testing until then) we had a hard time understanding why it was complaining about the missing SAS cables for the 2 backplane ports.</p>
@@ -231,20 +232,20 @@ But this turned out not to work, when we booted it up in the datacenter (I recei
 <p>There is different cards, this <a rel="noopener" target="_blank" href="https://youtu.be/h9ZJoIqtayY?t=165">YouTube video</a> has a good summary about them.</p>
 <p>This card seems to be required in some ways to make the normal disks work.
 Follow this <a rel="noopener" target="_blank" href="https://youtu.be/h9ZJoIqtayY?t=267">YouTube video</a> to find out how to install it.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Card.jpg" alt="PERC card" title="PERC card" /></p>
+<p><img src="../DELL_PowerEdge_R630_PERC_Card.jpg" alt="PERC card" title="PERC card" /></p>
 <h4 id="the-nvme-expander">The NVME expander</h4>
 <p>This extender card is only used to make NVME disks work. SAS, SATA &amp; SSD disks work without it.</p>
 <p>It's power consumption is about 45W at idle time. And seems to make the fans spin a bit faster too.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_NVME_Expander_Card.jpg" alt="NVME expander" title="NVME expander" /></p>
+<p><img src="../DELL_PowerEdge_R630_NVME_Expander_Card.jpg" alt="NVME expander" title="NVME expander" /></p>
 <h4 id="mounting-the-cables-and-the-kit">Mounting the cables and the kit</h4>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Plugged_In.jpg" alt="PERC card plugged in" title="PERC card plugged in" /></p>
+<p><img src="../DELL_PowerEdge_R630_PERC_Plugged_In.jpg" alt="PERC card plugged in" title="PERC card plugged in" /></p>
 <p>I put in place the kit and plugged it the cables each one according to the labels. (yes it knows and complains if you switch them)</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_BP_Plugged_Cables.jpg" alt="PERC card plugged in BackPlane cables" title="PERC card plugged in BackPlane cables" /></p>
+<p><img src="../DELL_PowerEdge_R630_PERC_BP_Plugged_Cables.jpg" alt="PERC card plugged in BackPlane cables" title="PERC card plugged in BackPlane cables" /></p>
 <h5 id="the-cables">The cables</h5>
 <h5 id="perc-card">PERC card</h5>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_PERC_Cables.jpg" alt="PERC card cables" title="PERC card cables" /></p>
+<p><img src="../DELL_PowerEdge_R630_PERC_Cables.jpg" alt="PERC card cables" title="PERC card cables" /></p>
 <h5 id="nvme-expander-into-the-backplane">NVME expander into the BackPlane</h5>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_NVME_Expander_Card_BackPlane_PluggedIn.jpg" alt="NVME expander card cables" title="NVME expander card cables" /></p>
+<p><img src="../DELL_PowerEdge_R630_NVME_Expander_Card_BackPlane_PluggedIn.jpg" alt="NVME expander card cables" title="NVME expander card cables" /></p>
 <h3 id="trying-to-make-nvme-disks-work">Trying to make NVME disks work</h3>
 <p>I did buy some NVME drives so I could test my setup. I was innocently thinking that it would work right after I slide then in the <a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-8fkxc-poweredge-13g-sff-hot-swap-caddy-08fkxc">caddies</a> but obviously there was more funny things to happen.
 So I received the disks and did setup up one and then two. None of the disks where showing up, and the NVME card was not showing.</p>
@@ -262,7 +263,7 @@ This was the end of 6 months of searching how to make a R630 work with NVME disk
 <h3 id="conclusion">Conclusion</h3>
 <p>A second CPU+RAM and a reizer PERC card + NVME enhancement card where needed for this setup.
 After that 4 NVME slots where available, SAS and SATA disks work too. All those types of disks can be together.</p>
-<p><img src="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/../DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg" alt="DELL R630 with two CPUs a NVME expander and a PERC card" title="DELL R630 with two CPUs a NVME expander and a PERC card" /></p>
+<p><img src="../DELL_PowerEdge_R630_Two_CPU_NVME_PERC_SAS_SATA.jpg" alt="DELL R630 with two CPUs a NVME expander and a PERC card" title="DELL R630 with two CPUs a NVME expander and a PERC card" /></p>
 <h3 id="lspci">lspci</h3>
 <p>This are the new lines in <code>lspci</code></p>
 <pre data-lang="diff" style="background-color:#2b303b;color:#c0c5ce;" class="language-diff "><code class="language-diff" data-lang="diff"><span>03:00.0 PCI bridge: PLX Technology, Inc. PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch (rev ab)
@@ -351,12 +352,12 @@ img {
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
             <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
-            <span>&middot;</span>
+            <br>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
             <span>&middot;</span>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
             <span>&middot;</span>
-            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
             <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
             <br>

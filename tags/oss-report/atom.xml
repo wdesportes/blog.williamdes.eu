@@ -1,966 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - OSS-report</title>
-	<link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://blog.williamdes.eu"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-12T11:35:00+00:03</updated>
-	<id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Report for November 2022</title>
-		<published>2022-12-09T22:40:00+00:02</published>
-		<updated>2022-12-12T11:35:00+00:03</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/11/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2022/11/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for November 2022.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-44&quot;&gt;First week (44)&lt;&#x2F;h2&gt;
-&lt;p&gt;I did bump the CodeMirror library and merged some pull-requests.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-45&quot;&gt;Second week (45)&lt;&#x2F;h2&gt;
-&lt;p&gt;I worked on some Original theme fixes and fixed a bug about scrolling in the CodeMirror box.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-46&quot;&gt;Third week (46)&lt;&#x2F;h2&gt;
-&lt;p&gt;I merged pull-requests accors our repositories. Fixed the website CDN purge code.
-I worked on a JS performance issue on export as text. Updated the FAQ.
-Fixed multiple bugs and made visual improvements.
-Also migrated two search fields to bootstrap.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-47&quot;&gt;Fourth week (47)&lt;&#x2F;h2&gt;
-&lt;p&gt;I reviewed and merged pull-requests accors our repositories.
-Documented, reviewed, wrote tests, merged the work for adding new ENVs on the docker repository.
-I also worked on Debian packaging and server maintenance.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for October 2022</title>
-		<published>2022-10-13T21:04:00+00:02</published>
-		<updated>2022-12-09T22:23:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/10/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2022/10/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for October 2022.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-40&quot;&gt;First week (40)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-41&quot;&gt;Second week (41)&lt;&#x2F;h2&gt;
-&lt;p&gt;I reviewed and merged quite a lot of pull-requests.
-Also made adjustments of tests. Rebased and tested contributors work.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-42&quot;&gt;Third week (42)&lt;&#x2F;h2&gt;
-&lt;p&gt;I sorted out a lof of old issues, reviewed a lot of pull-requests.
-Also fixed UI bugs on the old confirm modal about close modals and go&#x2F;cancel buttons.
-And fixed bugs on the monitor page.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-43&quot;&gt;Fourth week (43)&lt;&#x2F;h2&gt;
-&lt;p&gt;I started by fixing bugs and made changes to the issue and pull-request workflow and wrote them into a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;wiki&#x2F;Issue-and-pull-request-management&quot;&gt;wiki page&lt;&#x2F;a&gt;
-Merged and reviewed contributions. Changed jquery migrate and validation to the &lt;code&gt;.min.js&lt;&#x2F;code&gt; version.
-I wrote fixes for the multi table query interface. And improved some details on Metro theme.
-And finally I wrote more bug fixes and changed js.cookie.js to the &lt;code&gt;.min.js&lt;&#x2F;code&gt; version.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for September 2022</title>
-		<published>2022-09-09T21:04:00+00:02</published>
-		<updated>2022-10-01T11:11:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/09/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2022/09/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2022.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-35&quot;&gt;First week (35)&lt;&#x2F;h2&gt;
-&lt;p&gt;I worked on our packaging script to allow users to remove some vendor folders.
-And worked on updating the FAQ about this. And wrote a script to check the class map.
-I merged a pull-request on sql-parser, updated baselines and composer scripts.
-Also did some work on the Debian packaging side. And worked on issue management.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-36&quot;&gt;Second week (36)&lt;&#x2F;h2&gt;
-&lt;p&gt;I did adjustments on our check build script. Fixed a bug on GIS visualization.
-And worked on issue management.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-37&quot;&gt;Third week (37)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-38&quot;&gt;Fourth week (38)&lt;&#x2F;h2&gt;
-&lt;p&gt;I documented 5.2 on our website.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fifth-week-39&quot;&gt;Fifth week (39)&lt;&#x2F;h2&gt;
-&lt;p&gt;I continued working on vendor removal. Made pull-request reviews.
-Did bug tracking. And did do some issue management.
-I wrote a test for the column compression option and improved the code.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for August 2022</title>
-		<published>2022-08-01T12:00:00+00:02</published>
-		<updated>2022-08-30T13:28:00+02:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/08/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2022/08/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2022.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-31&quot;&gt;First week (31)&lt;&#x2F;h2&gt;
-&lt;p&gt;On the docker repository I made some coding standard improvements.
-And made documentation improvements by adding missing new Docker ENVs to our embed documentation.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-32&quot;&gt;Second week (32)&lt;&#x2F;h2&gt;
-&lt;p&gt;On the docker repository I made some documentation improvements and also made some changes on our embed documentation.
-I did changes on our server to add more storage on the Sentry instance.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-33&quot;&gt;Third week (33)&lt;&#x2F;h2&gt;
-&lt;p&gt;I worked on fixing a JS error (issue &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;17620&quot;&gt;#17620&lt;&#x2F;a&gt;) and that ended up in multiple fixes around the &amp;quot;Debug SQL&amp;quot; console feature.
-Also fixed a JS errors on the Designer (issue &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;17543&quot;&gt;#17543&lt;&#x2F;a&gt; and issue &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;17546&quot;&gt;#17546&lt;&#x2F;a&gt;). And fixed some translation strings.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-34&quot;&gt;Fourth week (34)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for September 2021</title>
-		<published>2021-08-30T12:00:00+00:00</published>
-		<updated>2021-09-23T23:50:00+02:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/09/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/09/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-35&quot;&gt;First week (35)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-30-08-2021&quot;&gt;Monday (30&#x2F;08&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I finished working on the pmadb bug fixing. Wrote 7 changelog entries for it !
-I also did merge a pull-request.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I sorted out a lof of old issues.
-And finished a merge of QA into master, updating the proper baselines.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-thursday-friday-saturday-sunday&quot;&gt;Wednesday, Thursday, Friday, Saturday, Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-36&quot;&gt;Second week (36)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-37&quot;&gt;Third week (37)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-38&quot;&gt;Fourth week (38)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fifth-week-39&quot;&gt;Fifth week (39)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for August 2021</title>
-		<published>2021-08-01T12:00:00+00:00</published>
-		<updated>2021-08-30T13:28:00+02:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/08/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/08/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-31&quot;&gt;First week (31)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I did some issue and pull-request triage.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-32&quot;&gt;Second week (32)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-09-07-2021&quot;&gt;Monday (09&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on merging pull-requests and closing issues.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I merged pull-requests and worked on fixing issues.
-I tried to find the root cause of infinite loop bug on import but I did not find.
-Also wrote tests and made a fix for 2FA. Finally I did un-mock the TwoFactor tests class.&lt;&#x2F;p&gt;
-&lt;p&gt;478 issues, 21 PRs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I made some issue and pull-request management.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I searched for new bugs in our Sentry instance by filtering on PHP issues for the 5.1.1 release.
-I also merged a PR on the docker repo.
-And worked on finding out about the unit issue on the Import page. I wrote test cases.
-Finally wrote and improved some documentation on the README of the Docker repository.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged a sql-parser PR. And started to work on the issue #335&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I made a tutorial on how to run phpMyAdmin with a local database using a Unix socket.
-I ported fixes from a PR to master and QA. Also reviewed pull-requests.
-I also tried to reproduce a navigation tree issue.
-Finally I wrote test cases on sql-parser and merged a PR.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I researched more about &lt;code&gt;CREATE VIEW&lt;&#x2F;code&gt; syntaxes and added more test cases to the sql-parser library.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-33&quot;&gt;Third week (33)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-16-07-2021&quot;&gt;Monday (16&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged a pull-request into sql-parser and added new MariaDB contexts.
-Also improved the phpdoc blocks of generated context files.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on sql-parser on adding more test cases and fixing issues.
-Also merged and test pull-requests on the main repository and wrote a fix.
-Finally I also improved documentation for the config &amp;quot;DefaultFunctions&amp;quot;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some Debian packaging, to send 5.1.1 into unstable since Debian is not anymore in freeze mode.
-Also reviewed pull-requests. Wrote tests and commented some code.
-Finally did some testing of the PR I wrote tests for.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged a sql-parser PR and wrote a test for a new issue.
-Also started working on a fix for it.
-Finally did some sorting out on the sql-parser issues board.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on sql-parser, wrote tests to fix issues.
-I added support for KEY order and added missing KEY options.
-Also did some issue triage.
-Finally I merged a pull-request into the main repository QA branch.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I improved the release script to lock it for a particular series and also removed some old compat lines.
-I added one more file to exclude and added a security checkup step to the release script.
-On the release and check script I did some adjustments to exclude missed &lt;code&gt;Test&lt;&#x2F;code&gt; folders.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-34&quot;&gt;Fourth week (34)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-23-07-2021&quot;&gt;Monday (23&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I fixed file exclusions from the Dockerfiles of the docker repository. Upgraded the images to PHP 8.
-Fixed LOCAL DATA issues.
-I modified our test suite to properly check database selects.
-And removed a static property from the Tracking class.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I send into bullseye-backports the phpMyAdmin package.
-Sorted out issues and pull-requests.
-I worked on reproducibility between bundled releases.
-Finally I fixed a public security issue with signon auth.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I sorted out more issues, fixed a reported security issue.
-Also worked on supporting expressions in the GUI of phpMyAdmin.
-Did some bug fixing and finally I worked on sql-parser to support multiple expressions.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on adding support for multiple expressions on KEY statements.
-I wrote tests and adjusted support for Expressions in the phpMyAdmin GUI.
-Finally I wrote tests for the Relation class.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I started by writing more tests for the Relation class.
-And worked all day on making relation setup work correctly on each different scenario.&lt;&#x2F;p&gt;
-&lt;p&gt;460 issues, 27 PRs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-sunday&quot;&gt;Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for July 2021</title>
-		<published>2021-07-01T12:00:00+00:00</published>
-		<updated>2021-08-03T22:25:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/07/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/07/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for July 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-26&quot;&gt;First week (26)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Not working on the project&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I did some issue and pull-request triage.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-27&quot;&gt;Second week (27)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-tuesday-wednesday-05-07-2021&quot;&gt;Monday, Tuesday, Wednesday (05&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed bugs found after search in the code-base and reviewed&#x2F;merged pull-requests.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did one PR merge and did triage issues. Also did some infrastructure configuration.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I worked on the Mroonga support PR to clean and fix more code. I also wrote tests.
-Also did an infrastructure fix, disabled crons on non main repo to avoid forks running crons.
-And did un-mock a test.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-28&quot;&gt;Third week (28)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-12-07-2021&quot;&gt;Monday (12&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some issue triage and worked on merging pull-requests.
-I had to rebase most of them and edited the code for some of them.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed CSS bugs, did triage issues and pull-requests.
-Also worked on improving code by removing the test suite hack and also removed dead code.
-Also wrote a test and search before removed very old un-used code.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I removed an old FAQ section and updated two FAQ sections.
-And worked on the analyser URL issue.
-I also did enable full type mode of Psalm.
-Finally I reviewed all alters done by Psalm on UnusedVariable.&lt;&#x2F;p&gt;
-&lt;p&gt;Bug: bookmark_created, special_message global&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-saturday-sunday&quot;&gt;Friday, Saturday, Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-29&quot;&gt;Fourth week (29)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-19-07-2021&quot;&gt;Monday (19&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on fixing bugs and writing tests for the DatabaseTree.
-Also did triage issues and pull-requests. Finally I also sorted out some Sentry reports.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I made PR reviews and bug fixes.
-I also finished writing tests and merging my changes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on bug fixing and pull-request merging.
-Also wrote tests and improved code and types.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I patched a bunch of issues and merged a pull-request.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-saturday-sunday-1&quot;&gt;Friday, Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fifth-week-30&quot;&gt;Fifth week (30)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-26-07-2021&quot;&gt;Monday (26&#x2F;07&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on bug fixes and found a security issue.
-Also reported 2 normal issues due to my research.
-And made pull-request review. Found a non security bug SQL injection.
-I did some sorting out on the &amp;quot;bug&amp;quot;s we have in our issue board.
-Wrote tests for one and fixed it.&lt;&#x2F;p&gt;
-&lt;p&gt;493 issues open and 22 PRs&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I started by working on some UI migration to Bootstrap.
-I migrated the Theme dropdown and the database filter box.
-Also reviewed pull-requests and fixed bugs.
-Closed an old project board and did some sorting out and issue closing.&lt;&#x2F;p&gt;
-&lt;p&gt;482 issues open and 23 PRs&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged pull-requests and fixed issues.
-Also did some issue management.&lt;&#x2F;p&gt;
-&lt;p&gt;479 issues open and 20 PRs&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged pull-requests and did some issue management.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-saturday-sunday-2&quot;&gt;Friday, Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for June 2021</title>
-		<published>2021-06-01T12:00:00+00:00</published>
-		<updated>2021-07-04T22:25:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/06/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/06/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for June 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-22&quot;&gt;First week (22)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-01-06-2021&quot;&gt;Monday (01&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I added more tags and did some fixes on our Sentry error report forwarder.
-Found out on internet someone did a fix without reporting back to us the solution for &amp;quot;Undefined index: utf8mb3 on MySQL 8.0.11+&amp;quot;. I wrote tests for this issue and improved our test suite for Database fake query tests.
-I also removed mocks for &lt;code&gt;DatabaseInterfaceTest&lt;&#x2F;code&gt; and fixed our selenium test suite.
-And did some issue and pull-request triage.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on reproducing and fixing the Google Cloud Engine configuration for one of our users.
-This led to some interesting conclusions and findings.
-I found out we need to implement &lt;code&gt;HTTP_X_APPENGINE_HTTPS&lt;&#x2F;code&gt; and also probably &lt;code&gt;HTTP_X_APPENGINE_USER_IP&lt;&#x2F;code&gt;.
-On the phpMyAdmin test suite I improved the &lt;code&gt;RecentFavoriteTable&lt;&#x2F;code&gt; class code, fixed our multi arch test suite on master branch.
-And fixed &lt;code&gt;testSearchRecords&lt;&#x2F;code&gt; selenium test. Finally I also did issue and pull-request triage.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did infrastructure fixing for the new Sentry server. Backups of the error reporting server data and our CDN contents.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Another infrastructure day, I managed to reclaim most of the space used by the database server.
-I also did publish the sources for my extract program written in Rust and adjusted it.
-That allowed me to extract and compress all the new error reports from the error reporting server.
-Also moved some bootstrap tests code into our abstract test case class.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;phpMyAdmin 5.1.1 was released over night.
-I packaged phpMyAdmin 5.1.1 on Debian, fixed some tests that where failing and tested the version.
-Also fixed our daily composer script.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-sunday&quot;&gt;Saturday &amp;amp; Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Week end&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-23&quot;&gt;Second week (23)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-07-06-2021&quot;&gt;Monday (07&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some fixes on the release script after that composer released 2.1.2.
-Also did pull-request review.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did fix the 5.2 autoload on the phpunit test suite and made pull-request reviews.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on merging pull-requests and on my pull-request to fix and improve the Designer.
-Also made some jsdoc improvements to the javascript designer code using my PR as source.
-And finally did a bug fix found while testing the Designer interface.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I made fixes because our code relies on &lt;code&gt;cwd&lt;&#x2F;code&gt; to work.
-Also did issue and error reporting triage and some code search about error reports from Sentry.
-Finally I worked on the openlayers PR, added a LICENSE header and improved the sync script.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on Debian packaging to fix the openlayers build, Debian needs to have JS bundles built from source.
-I added patches and dependencies in the missing sources folder and re-built openlayers like in the PR.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-24&quot;&gt;Third week (24)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-14-06-2021&quot;&gt;Monday (14&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on a configuration issue reported by a user. I also improved the documentation configuration.
-Also sent to Debian experimental my changes from yesterday and packaged for Ubuntu focal the 5.1.1 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I fixed the package build to Ubuntu bionic (making webpack config work on v3 and make the testsuite phpunit 6 compatible).
-Also worked on porting some code out of my Designer PR and improving some code.
-I merged my Theme path fix PR and started fixing tests that used a static variable.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed a bug on a code refactoring and make some issue triage.
-Also worked on trying to find a better process for the &lt;code&gt;daily-composer&lt;&#x2F;code&gt; script.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made a working security reset for source files that changed in the composer version.
-Also implemented a Cache class and wrote tests for it. And fixed failing unit tests.
-And made translation fixes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on the Debian packaging to allow symfony v5 to be installed with our package.
-And made a PR to remove 2 near to useless symfony dev deps.
-Also did some research to use another DI system.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on improving the quality of release bundles by writing a better check script and removing non needed files.
-Also updated the CI of shapefile to add PHP 8.1 and removed non needed files from the vendor bundle.
-Finally I did some issue triage and a issue report about an error reported to our back-ends.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-25&quot;&gt;Fourth week (25)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-21-06-2021&quot;&gt;Monday (21&#x2F;06&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I made pull-request review&#x2F;merge and bug fixing.
-Part of the day I was not on the project.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I wrote tests for an issue and fixed it.
-Also made some pull-request review.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off, I deployed my first physical server in a datacenter&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;off&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I did triage error reports on the Sentry instance
-And wrote tests and fixes for some warnings and errors.
-Also did issue reporting and triage.
-Merged a pull-request and fixed jsdoc blocks.
-Finally I worked on the Mroonga support PR.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for May 2021</title>
-		<published>2021-05-01T12:00:00+00:00</published>
-		<updated>2021-06-01T11:50:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/05/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/05/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for May 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-18&quot;&gt;First week (18)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-19&quot;&gt;Second week (19)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-20&quot;&gt;Third week (20)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Issue and pull request triage.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-21&quot;&gt;Fourth week (21)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;On the week-end I did the setup of Sentry to manage our error reports.
-And finished the code I had prepared on the error reporting server to forward the reports to Sentry.
-Also fixed a security issue on the error reporting server that was of no severity since the code was yet not used.
-Now it is fixed and used. I built a secure unique ID to identify anonymously our users reports (just to make a near to true counter that says how many users are affected by a bug).
-(it&#x27;s not possible to get back the user IP without the secret that is on our server, and if you had access to the secret stealing it would require more time to get back to the original value, this would just not be worth it for an IP).&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for April 2021</title>
-		<published>2021-04-01T12:00:00+00:00</published>
-		<updated>2021-05-06T00:50:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/04/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for April 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-13&quot;&gt;First week (13)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-29-03-2021&quot;&gt;Monday (29&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on bug fixing and reproducing issues.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made fixes for reported issues and searched for errors to fix on the error reporting server.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I continued to work on bug fixes.
-And pull-request review and merging.
-Today: 477 issues, 141 bugs (133 not waiting on upstream).&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I tested all the interface and found some bugs I fixed.
-Some of them where UI bugs.
-I also worked on a content security policy bug and update the documentation.
-And wrote some tests to cover the Sanitize check link function.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on bug fixes and issue management.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-14&quot;&gt;Second week (14)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;Not working on the project&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-15&quot;&gt;Third week (15)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-12-04-2021&quot;&gt;Monday (12&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on merging pull-requests, writing tests and searching into Git history to understand a fix.
-Also removed dead code (but kept alive by tests). And worked on a PR for tomorrow about URL encoded &amp;amp; chars.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on merging contributions and I finished working on my URL generation fix.
-Made more bug fixes and updated translations.
-Also did write some test cases and help users on issues.
-I also did install &lt;code&gt;phpbench&lt;&#x2F;code&gt; and started writing a benchmarks.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I continued reviewing PRs and made some bug fixes after researching on the error reporting server for forgot reports.
-I also upgraded the JS lib for datatables on the error reporting server to add new values to the number of reports diplayed.
-And continued searching for reproductible issues using the error reporting server.
-Also wrote some phpbench code for the import from file but did not see anything alarming.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some pair coding with our contractor to fix an issue and continued cleaning up the error reports we receive.
-Also made a fix for the search feature and tried to reproduce issues.
-I found some interesting issues and reported to upstream CodeMirror.
-And made a fix on the error reporting server.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I did some issue triage and error report triage. Then I merged the pull-request to remove a redundant lib.
-And made a bunch of fixes on the GIS feature. Also did check all the occurrences where there was dragging in the UI and found some dead code. Finally I merged my PR to fix URLs after investigating in the GIT history.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some light issue triage.
-&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-16&quot;&gt;Fourth week (16)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-19-04-2021&quot;&gt;Monday (19&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I reviewed and merged pull-requests and did some research about error reports found on the server.
-Also did a fix and coding standard upgrade on the error reporting server.
-And wrote test cases for reported issues.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I merged some contributions and made fixes.
-Made some code improvements and optimizations.
-And wrote some tests after reverting old commits for older php versions.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the infrastructure to fix the demo server build failures.
-Also did issue triage and pull-request merging. I found two non translated buttons.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I started with some bash scripting to improve the demo server update script.
-And did bug fixes. And fixed the export in PHP format. And the JSON export for binary contents.
-I fixed the planet website CSS link and HTTP links. Also fixed the burger menu on planet and website.
-Also merged and reviewed pull-requests. And closed issues. Finally I started working on my Sentry migration.
-And wrote some test cases.
-Open issues: 481, PRs: 18.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on a memory crash issue introduced by a recent fix.
-And did testing on Windows using IIS and PHP 8.0.
-I wrote some tests for the issue and improved the actual SQL logging.
-And finally I reviewed and merged a contribution.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on some issue triage and merged some contributions.
-Also did bug fixes on the monitor page.
-And did some haproxy configuration to answer a question on the Docker repository.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fifth-week-17&quot;&gt;Fifth week (17)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-26-04-2021&quot;&gt;Monday (26&#x2F;04&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I did review some pull-requests and improved the demo server update script.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I worked on MySQL replication and fixed the setup errors.
-Also did pull-request review and code improvement.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some research on Docker signing and found made it work.
-Also worked on upload progress classes and trying to make &lt;code&gt;apcu&lt;&#x2F;code&gt; work, and made a PR to remove the old code upstream PHP confirmed not working. And cleaned some legacy PHP checks from the code-base.
-Did some JS dependencies upgrading. And finally worked on code improvement.
-And finally did some else branch removing in the code base.
-With some documentation updates.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed bugs on the normalisation process and wrote tests to cover them.
-And fixed missing CSS classes on the normalization process buttons.
-I also improved the testing code for controllers.
-Also did issue triage and pull-request merging and review.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on some security research in the code base.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Worked on some bug fixing.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for March 2021</title>
-		<published>2021-03-01T12:00:00+00:00</published>
-		<updated>2021-03-30T03:10:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/03/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/03/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for March 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-09&quot;&gt;First week (09)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-01-03-2021&quot;&gt;Monday (01&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on writing tests and finding out about a very old bug (phpMyAdmin 3.5.1+).&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I removed the last TravisCI config, and worked on migrating the error report server to a newer cake PHP version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on migrating to cake PHP 4.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;A lot of issue triage and test writing.
-Also replaced some deprecated code from the test-suite. And worked on more testing code improvements.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did review&#x2F;fix and test pull-requests.
-Write tests for pull-requests and remove some phpunit deprecations.
-Removed and improved some code that related to constants.
-I moved out some code and wrote tests for it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made bug fixes and test writing to cover the fixes.
-Also added a bunch of testing methods to create better tests and all the work ended up into a 3% coverage bump.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-10&quot;&gt;Second week (10)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-08-03-2021&quot;&gt;Monday (08&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I finished my migration to Cake PHP.
-Everything is working fine and I fixed a bunch of bugs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did merge all Twig init code in one place and improve the Twig cache warmup.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the error reporting server to fix some more bugs.
-Also did some Twig code fixes on-top of my work of Wednesday.
-I wrote some unit tests for cover more code.
-Also worked on removing an exit from our code base and wrote a test for the new function.
-And to finish the day I got most of the code of &lt;code&gt;CreateAddField&lt;&#x2F;code&gt; class &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;58d760b213b496ba1b22e27ccd8d0e4ae4ca2fc0&quot;&gt;covered&lt;&#x2F;a&gt; and discovered &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16728&quot;&gt;a bug&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some bug fixing and investigation.
-Also searched for files to remove from the final release bundle.
-I made &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;c62e27d6505ce22a36b635548e97f644198d6c11&quot;&gt;a fix&lt;&#x2F;a&gt; that removed some bad code that was parsing URLs in a very bad way and modifying them. Now the feature to add and remove order by clauses works fine !&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;Did a fix for the tcpdf cleaning I had did, could not find any coorect solution because the composer lock has saved the autoload list.
-Had to revert my fix at the end of the day.
-Also worked on bug fixes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Closed a bunch of issues and merged some PRs. And issue base cleaning.
-And did create bug fixes for some old bugs.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-11&quot;&gt;Third week (11)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-15-03-2021&quot;&gt;Monday (15&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the error reporting JS code and modal handling that is broken in some corner cases and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16736&quot;&gt;made a PR&lt;&#x2F;a&gt; for some of the changes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed a security bug I had found on the error reporting server and continued making bug fixes and searching for issues to close.
-Also merged my work from yesterday and made fixes on the error reporting server.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed the JS reflow issue and removed the last JS sync call of the JS codebase.
-Also figured out about how the infrastructure server works and found why the snapshots are not okay.
-And I added the short Git sha and build date to the snapshot version using &lt;code&gt;VERSION_SUFFIX&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some testing of the features and searched for issues to fix on the error reporting server.
-And made more bug fixes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Today I did some bug fixing and some research for generating fonts with our icons.
-Also did review some pull-requests.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-12&quot;&gt;Fourth week (12)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-22-03-2021&quot;&gt;Monday (22&#x2F;03&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;This day was a bug fixing and PR merge day.
-I also found some UI bugs and a non translated text.
-Project status today: 475 open issues, 23 PRs open.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some issue management and PR reviews.
-Also worked on build reproducibility and on updating FAQ 1.44.
-And did some PR testing and merging. To finish the day I upgraded our JS dependencies.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I upgraded jquery, openlayers and removed md5.js lib.
-And worked on a CLI command to generate the git information file for Demo servers. Actually the file is written by a script. The process is documented nowhere.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I finished working on my CLI class and got my PR approved and merged. Also updated the demo server script.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on reproducing issues on the composer version and also UI issues reported.
-And made a fix for tabs mode not respected, and for a bug that was local dependent due to an attempt to split on &#x27;:&#x27;.
-Also made a fix on the error reporting server.
-And finished with writing test cases and fixing the version parsing on the error reporting server.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Most of the day was off.&lt;&#x2F;em&gt;
-Today I pushed a fix after tcpdf did release the fixes for PHP 8.
-Did some issue triage and improved some scripts installing Yarn modules in our scripts.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;Day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for February 2021</title>
-		<published>2021-02-01T12:00:00+00:00</published>
-		<updated>2021-02-28T17:22:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/02/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/02/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for February 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-05&quot;&gt;First week (05)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-01-02-2021&quot;&gt;Monday (01&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Handled some issues and did some fixes on the Docker repository.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did handle a fix that was a left over of the stickfill migration.
-And worked on performance improvements.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;A day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did review some pull-requests and hunt for typos in most of our files. I found some and even found a potential bug on a HTML tag that had a typo in it. Also did triage some issues.
-And I migrated the website Python CI to GitHub actions with some sed commands to hack a backport Django did not do.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I moved the themes, motranslator, shapefile repositories to GitHub actions. Did the milestone process for sql-parser after the release.
-Also did fix a bunch of Documentation translations and migrated the repository to GitHub actions.
-Did some pull-request review and prepared 2 PRs for the 2 releases done this day of shapefile and motranslator.
-On Debian I imported the latest motranslator version and applied some guidelines.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;A little bit of infrastructure work for phpMyAdmin and issue triage.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I updated shapefile at Debian and copied all the fixes made earlier on motranslator.
-Also merged my shapefile 3 upgrade into 5.2.0-dev and worked on writing tests for the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;pull&#x2F;5&quot;&gt;new feature&lt;&#x2F;a&gt; proposed on the Twig i18n extension.
-I continued to work on the extension to bring all changes made at phpMyAdmin into it (translation context functions support).&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-06&quot;&gt;Second week (06)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-08-02-2021&quot;&gt;Monday (08&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I did migrate our Selenium test suite to GitHub actions and did some debug improvements for it (screenshots, source code).
-And did re-work some selenium scripts and work on making coverage work for E2E tests.
-Also did manage some issues.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I merged a batch of fixes and rebased some PRs, also merged my Selenium PR.
-For now pcov coverage will not work for the selenium test suite because it is too slow.
-Also tried to reproduce some bugs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on performance issues and tracking bugs reported for the Import feature.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Not much to report, a little bit of issue and PR review.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on my bot to deploy phpMyAdmin PRs.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on merging work done of the twig i18n extension. Made some bug fixes and reviewed pull-requests.
-Also did work on trying to reproduce bugs. Uploaded motranslator Update to the PPA and to buster-backports.
-Worked on Selenium tests to fix the errors.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;Sent shapefile to buster-backports and to our Ubuntu PPA. Made some stale issue triage and pull-request merging.&lt;&#x2F;p&gt;
-&lt;p&gt;Working on a big refactoring of the field flags handling. The code is currently like 2 people using a translator for languages they already know. The code fetches flags, builds a string with an array and all the codebase performs strpos onto the string. Very &amp;quot;stupid&amp;quot;, but maybe made sense sometime ago. Anyway it is eating performance and needs to be thrown out. Now only relying on a full typed object. This will bring safety and performance everywhere where field flags did leak.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-07&quot;&gt;Third week (07)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-15-02-2021&quot;&gt;Monday (15&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Worked on finishing my field flags refactoring. Pull-request testing and issue triage as I do everyday ^^
-Also did update my PR on the twig i18n extension.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Merged and reviewed some PRs. Wrote some tests for a PR.
-And continued working on my refactoring. Also fixed a Selenium test and a bug found by the test suite.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Worked on bug fixes, and fixed the Selenium test suite errors. Quite some bugs fixed !
-Also had a look to the error reporting server to find bugs to fix.
-And finished a JS doc linting PR.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some issue triage. And worked on reproducing some issues.
-Also worked on the INT validation form fixes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Not much, some issue tracking and PR merging.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;A day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made the release script way better by running tests on the &amp;quot;built package&amp;quot; rather than on a vendor folder that was not the one shipped to users. Also wrote a script to find and help remove useless vendor files from release tarballs.
-Also did some digging on the new errors found by phpstan. One seems to be true but I could not confirm any PHP warning, I am keeping my fix for later.
-And did refactor the route cache handling, now there is two flags. One to define if the routing cache should be skipped and another one to know if the cache can be written.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-08&quot;&gt;Fourth week (08)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-22-02-2021&quot;&gt;Monday (22&#x2F;02&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;Working on performance improvement to check that my PR does not add some slowness. I found out that calling getters on PHP costs a lot.
-I am comparing xhprof results to adjust my code. Also found out where all the performance is eaten on SQL exports.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some more work on my refactoring and merging PRs. Getting ready for the 5.1.0 release.
-And did research to find out how to cover the last un-covered lines of our i18n extension. 100% coverage, satisfying.
-Will do performance benchmarks to find out where I can improve the code before releasing the major version 4.
-I removed all the custom code on our main repository and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;created a PR&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made some updates to our website after the 5.1 release. Worked on testing in depth the &lt;code&gt;TODO&lt;&#x2F;code&gt;s that I have added while doing my refactoring. Had to dig to find why things where added 10 years ago ^^.
-Also wrote more tests for our i18n extension and made performance improvements. I released &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;releases&#x2F;tag&#x2F;v4.0.0&quot;&gt;v4.0.0&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16675&quot;&gt;updated it upstream&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I fixed some infrastructure scripts. Did some PR testing and found a very old and not reported bug.
-Also did search for bugs that could be solved in the issue base.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Started working on packaging phpMyAdmin 5.1 into Debian.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made some PR reviews.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;em&gt;A day off.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for January 2021</title>
-		<published>2021-01-01T12:00:00+00:00</published>
-		<updated>2021-01-31T23:59:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/2021/01/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/OpenSource/2021/01/report/</id>
-		<content type="html">&lt;p&gt;Here is my OpenSource report for January 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-01&quot;&gt;First week (01)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; to finish fixing my LDAP search configuration and the test suite.&lt;&#x2F;p&gt;
-&lt;p&gt;The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;docker-mailserver&quot;&gt;Docker Mailserver&lt;&#x2F;a&gt; invited me to join their GitHub organization. Thanks guys !&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;At Doctum I decided to drop PHP 7.1 series in favor of supporting PHP 8.0 on the phar. A &lt;code&gt;QA_5_3&lt;&#x2F;code&gt; branch was created but for now I have no idea if I will use it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;At Doctum I merged &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;pull&#x2F;24&quot;&gt;a pull-request&lt;&#x2F;a&gt; after a rebase to fix types resolving.
-And cleaned up some recent useless files that had and could enter the phar file. Also I did enable &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;code-lts&#x2F;doctum&#x2F;discussions&#x2F;25&quot;&gt;GitHub discussions&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I created the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sudo-bot&#x2F;action-scrutinizer&quot;&gt;sudo-bot&#x2F;action-scrutinizer&lt;&#x2F;a&gt; to move out some script lines on the phpMyAdmin sql-parser GitHub actions migration.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-02&quot;&gt;Second week (02)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;At Doctum I fixed my vendor cleaning script after I did find out that I had did a mistake in the path I configured.
-I spent some time configuring GitLab and GitLab pages for this blog, but it just did not work for some (still) unknown reason.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I moved this blog from GitLab to GitHub pages because for some reason it was not working and I always had some 401 errors when browsing. It just never worked and that made not sense because most of my websites are GitLab pages hosted.
-Anyway, bye bye GitLab pages. I used one of my bots to GPG sign and push commits on &lt;code&gt;gh-pages&lt;&#x2F;code&gt; when I edit the blog contents.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-03&quot;&gt;Third week (03)&lt;&#x2F;h2&gt;
-&lt;p&gt;I created an &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doctum.long-term.support&#x2F;releases.rss&quot;&gt;RSS feed for Doctum&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for January 2021</title>
-		<published>2021-01-01T12:00:00+00:00</published>
-		<updated>2021-01-31T23:41:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for January 2021.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-01&quot;&gt;First week (01)&lt;&#x2F;h2&gt;
-&lt;p&gt;This week was a quite busy one and I could not dev as much as I expected. Real life is important too ;p&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;monday-04-01-2021&quot;&gt;Monday (04&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;More work on the Debian 5.0 version.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;The Debian version &lt;code&gt;5.0.4+dfsg1-1&lt;&#x2F;code&gt; landed after a lot lot lot of time fixing and improving things for 5.0 series to be accepted into Debian. Thanks to everybody that helped me and reviewed my work. The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;merge_requests&#x2F;30&quot;&gt;pull-request&lt;&#x2F;a&gt; was &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;f8ca6504dc6f1ee6a8b2fcbb29b9baff30017ed1&quot;&gt;merged&lt;&#x2F;a&gt; after 3 months open lacking reviews and me pushing more and more commits.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I migrated sql-parser to GitHub actions. Still working on the Debian package.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-02&quot;&gt;Second week (02)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-11-01-2021&quot;&gt;Monday (11&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;And I worked on copyright updates for the Debian version 5.0.4+dfsg2, that required to search on each file for missing copyrights in the d&#x2F;copyright file and document them. Most of the source files that where excluded are now back.
-I also had to remove the lib that finds out the strength of passwords because it could not be re-build from source (DFSG not compatible). All the &lt;code&gt;.min.js&lt;&#x2F;code&gt; files had to be &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;c4b28b4c5ca955c7ddf1858b6e5e9f89d3505216&quot;&gt;re-built from source&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;abac8a5cf05e2955a2c5bd14dc52c0ab75405659&quot;&gt;I added the missing source files&lt;&#x2F;a&gt; to the &lt;code&gt;debian&#x2F;missing-sources&lt;&#x2F;code&gt; directory. The Debian version no more has &lt;code&gt;zxcvbn&lt;&#x2F;code&gt; until the from source issue can be solved. For now &lt;code&gt;?&lt;&#x2F;code&gt; force is displayed when you type passwords.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-1&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;All the work from yesterday landed into &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;phpmyadmin-team&#x2F;phpmyadmin&#x2F;-&#x2F;commit&#x2F;9206cece4599be77d436057fe51f7b106e9b8de2&quot;&gt;a merge&lt;&#x2F;a&gt; and David did upload the changes to unstable.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-1&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I handled some issue triage and pull-request reviews.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did merge some pull-requests and upgraded psalm to &lt;code&gt;4.4.0&lt;&#x2F;code&gt;.
-On &lt;code&gt;twig-i18n-extension&lt;&#x2F;code&gt; I moved to GitHub actions and did setup phpstan.
-Also &lt;code&gt;phpmyadmin&#x2F;coding-standard&lt;&#x2F;code&gt; has a quick move to GitHub actions and I found out &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;coding-standard&#x2F;pull&#x2F;9&quot;&gt;a licensing issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;On the Debian packaging side I made sure &lt;code&gt;buster-backports&lt;&#x2F;code&gt; was ready and prepared the backport of &lt;code&gt;twig&lt;&#x2F;code&gt;.
-And updated the Ubuntu PPA Bionic to &lt;code&gt;5.0.4&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some quick changes on the Ubuntu PPA.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some fixes on the Ubuntu PPA.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some fixes on the Ubuntu PPA to end the nighmare I accidentally created yesterday with the polyfill package.&lt;&#x2F;p&gt;
-&lt;p&gt;At Debian I did open bugs to remove the abandonned twig-extensions package.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-03&quot;&gt;Third week (03)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-18-01-2021&quot;&gt;Monday (18&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I handled some issues about Debian and Ubuntu packaging.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-2&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I build the focal version for phpMyAdmin PPA.
-At &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did finish my work on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16547&quot;&gt;the license violation&lt;&#x2F;a&gt;. And &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16583&quot;&gt;migrated the repository to GitHub actions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-2&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did work on re-working the version handling and re-working the release script&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-2&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I merged some work and did send sql-parser 5 to the phpMyAdmin PPA.
-Also applied some Debian guidelines for the sql-parser packaging.
-And updated my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdesportes&#x2F;phpmyadmin-local-setup&quot;&gt;open-source phpMyAdmin dev setup&lt;&#x2F;a&gt;.
-Also added support for &lt;code&gt;[ci skip]&lt;&#x2F;code&gt; on GitHub actions and did try to fix the TravisCI builds.
-Using Weblate I translated the new strings from the merged PR to fix the privilege label and started cleaning blocked translations in the &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;[br]&lt;&#x2F;code&gt; transition and some older ones from the &lt;code&gt;&amp;lt;br&#x2F;&amp;gt;&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;&amp;lt;br &#x2F;&amp;gt;&lt;&#x2F;code&gt; to &lt;code&gt;&amp;lt;br&amp;gt;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-2&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some more cleaning on Weblate and some PR updates.
-I imported &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;security-tracker.debian.org&#x2F;tracker&#x2F;CVE-2021-21252&quot;&gt;the security fix&lt;&#x2F;a&gt; into Debian and imported my font removal also.
-Also tested the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16586&quot;&gt;transformation to image PR&lt;&#x2F;a&gt; and made a fix ontop if it.
-And to finish the day like a night own I did finally &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;find a way to make jest edit files on the fly&lt;&#x2F;a&gt; to test them.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some changes on the Debian side and imported a patch that was on the Debian side.
-On the main repository I did merge some pull-requests and finished the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16409&quot;&gt;first Jest unit testing integration&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some PR and issue management and also some documentation management.
-And also did work on some slowness issues and made two PRs (&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16590&quot;&gt;1&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;pull&#x2F;16591&quot;&gt;2&lt;&#x2F;a&gt;). I had a auto-logout error on my local setup and did fix it buy adding the server number to the request.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-04&quot;&gt;Fourth week (04)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-25-01-2021&quot;&gt;Monday (25&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on tracking down slowness in our code base and merged my work on the async console setup.
-Also did some performance debugging with xhprof and sent a bugfix to our Ubuntu PPA.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-3&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Not much to say, &#x2F;afk part of the day, some issue and PR management.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday-3&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;Some PR testing and a TCPDF PHP 8.0 fix.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-3&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I spent some time fixing the theme generator and merging the fixes I made.
-Also did some issue triage and worked on 2 PRs open at the &lt;code&gt;docker&lt;&#x2F;code&gt; repository (added more tests, and fixed mistakes).&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-3&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on a complete &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;docker&#x2F;pull&#x2F;323&quot;&gt;re-work of the &lt;code&gt;docker&lt;&#x2F;code&gt; repository testsuite&lt;&#x2F;a&gt;.
-This will make us move to GitHub actions completely.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I merged a fix on the Docker repository and did some issue triage and reproduction.
-Also fixed a 5.1.0-rc1 bug on multi server setup.
-I did write tests to reproduce an &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;issues&#x2F;16595&quot;&gt;issue&lt;&#x2F;a&gt; and cover more of our codebase.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on fixing a UI bug that I found when browsing code. Also fixed and re-based 2 PRs to fix one UI bug and another one to enhance the UI feature that had a bug.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for December 2020</title>
-		<published>2020-12-31T12:00:00+00:00</published>
-		<updated>2021-01-15T18:52:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/2020/12/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/OpenSource/2020/12/report/</id>
-		<content type="html">&lt;p&gt;Here is my OpenSource report for December 2020.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;first-week-50&quot;&gt;First week (50)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-sunday&quot;&gt;Monday -&amp;gt; Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;phpmyadmin&quot;&gt;phpMyadmin&lt;&#x2F;h4&gt;
-&lt;p&gt;I did merge two very good pull-requests that fixed some previously merged code.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-51&quot;&gt;Second week (51)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;The &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; project was exported as an open-source project.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-thursday&quot;&gt;Tuesday -&amp;gt; Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;This is my last day (18&#x2F;12&#x2F;2020) at my job, horray !&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I adjusted some things.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-52&quot;&gt;Third week (52)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-saturday&quot;&gt;Monday -&amp;gt; Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I added some fancy things and made the project usable and testable for anyone.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-53&quot;&gt;Fourth week (53)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I made sending and receiving work fine.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I added a phpunit test suite for the mailserver.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phar-io&#x2F;phar.io&#x2F;pull&#x2F;99&quot;&gt;pull-request&lt;&#x2F;a&gt; to fix things at phar.io.
-And also made a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phar-io&#x2F;phar.io&#x2F;pull&#x2F;100&quot;&gt;pull-request&lt;&#x2F;a&gt; at phar.io to add Doctum and bump copyright years.
-At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I made &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&#x2F;commit&#x2F;81d3f6fe571919a1d23a7283a117a3f4ab5f0b91&quot;&gt;user passwords more secure&lt;&#x2F;a&gt; by understanding that the sasl plugin does not support more algorithms than &lt;code&gt;MD5, SMD5, SHA, SSHA, CRYPT&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-01-01-2021&quot;&gt;Friday (01&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; I implemented dynamic domain names.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;Upstream &lt;code&gt;mariadb-mysql-kbs&lt;&#x2F;code&gt; I released a new version after some fixes where done.
-I created a pull-request at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tomav&#x2F;docker-mailserver&#x2F;pull&#x2F;1737&quot;&gt;docker-mailserver&lt;&#x2F;a&gt; to fix shebangs and it got merged.
-And another &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tomav&#x2F;docker-mailserver&#x2F;pull&#x2F;1736&quot;&gt;pull-request&lt;&#x2F;a&gt; to implement manual DKIM domain lists in the config script.
-I also worked at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; to make my external domain sending and receiving work.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked at &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;desportes&#x2F;infrastructure&quot;&gt;desportes infrastructure&lt;&#x2F;a&gt; and got everything working after I understood the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tomav&#x2F;docker-mailserver&#x2F;issues&#x2F;1694&quot;&gt;issue&lt;&#x2F;a&gt; about my config for postfix &lt;code&gt;virtual_alias_domains&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Report for December 2020</title>
-		<published>2020-12-31T12:00:00+00:00</published>
-		<updated>2021-01-13T20:11:45+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
-		<id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
-		<content type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;(this was re-build from what I could find, the blog did not exist at this time)
-(this means some entries could be missing, for ever)&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;first-week-50&quot;&gt;First week (50)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0ae5216e283ba80704a34d850ce29a4f690160a1&quot;&gt;code improvement&lt;&#x2F;a&gt;, some bug fixing and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;66f38555d4637362082dbe54925261687a5f0fa7&quot;&gt;transformed some inline PHP&#x2F;HTML to twig&lt;&#x2F;a&gt;.
-I removed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;f78aa880e7ce614737cba050422ed5f13366b76b&quot;&gt;a broken link&lt;&#x2F;a&gt; in out documentation and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;1d154724a5192addf6015a316b7d7382c77de361&quot;&gt;added PHP typehints&lt;&#x2F;a&gt;.
-And some pull-request merging.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-wednesday&quot;&gt;Tuesday -&amp;gt; Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;a5dc78edac859199b9b9113c02fee810eaca5fe6&quot;&gt;sync jqplot plugins from updated-jqplot node package&lt;&#x2F;a&gt; and fix out PHP 8.0 testsuite &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;4d3ecbe4e71396edc80138202cbfcfa8e5907ef8&quot;&gt;failing on string vs numbers beeing compared&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;afdf57aed25ac54cb48c8d781bd6c512def68bbc&quot;&gt;re-build all jqplot files from the updated-jqplot npm package&lt;&#x2F;a&gt;, this is very important to have reproductible builds from source. That will help a lot on Debian when we have to re-build files from source to be dfsg compatible. I did some related work on the JS modules management.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did fix some PHP 8.0 issues and backports some of my PHP 8.0 fixes. And also made the TravisCI CI go back to green.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did merge two very good pull-requests that fixed some previously merged code.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;second-week-51&quot;&gt;Second week (51)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-thursday&quot;&gt;Monday -&amp;gt; Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-1&quot;&gt;Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;I made some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;fb5d6159af9fd9f7b6859b42d6b31528d89f7514&quot;&gt;phpdoc changes&lt;&#x2F;a&gt; after running Doctum. And also did fix some &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;b4f1e14e8025def8bb047bdc6797aeeb581e1b0f&quot;&gt;phpstan errors&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-1&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did some changes on the new &lt;code&gt;QA_5_1&lt;&#x2F;code&gt; branch to prepare it as a QA branch and opened an issue at Weblate to warn about some docker issues.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-1&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I did merge &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;ac7abd86129552dce96c46f9941e1ec86b05d757&quot;&gt;a pull-request&lt;&#x2F;a&gt; to fix the CI after my changes to make 5.2.0-dev the new dev version.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;third-week-52&quot;&gt;Third week (52)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-1&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did update CodeMirror to 5.59.0, merge some pull-requests and update some JS dependencies.
-Also I upgraded the Doctum version and removed some old tricks in the configuration now that Doctum has fixed that.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday-friday&quot;&gt;Tuesday -&amp;gt; Friday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-2&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;At &lt;code&gt;phpmyadmin&#x2F;docker&lt;&#x2F;code&gt; I did merge all the pull-requests that where open and made some documentation improvements.
-Now we are near to only use GitHub actions on this repository.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-2&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fourth-week-53&quot;&gt;Fourth week (53)&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;monday-2&quot;&gt;Monday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;tuesday&quot;&gt;Tuesday&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Nothing to report&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wednesday&quot;&gt;Wednesday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; to make it clean and follow the Debian rules.
-On &lt;code&gt;phpmyadmin&#x2F;twig-i18n-extension&lt;&#x2F;code&gt; I did &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;twig-i18n-extension&#x2F;commit&#x2F;aec9e489c66930be87a67a7b511a01b3e61d1a57&quot;&gt;edit the PHP 8.0 constraint&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;On &lt;code&gt;phpmyadmin&#x2F;phpmyadmin&lt;&#x2F;code&gt; I did merge a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;0747f8aca155acf71c693671fddee34e61082292&quot;&gt;pull-request&lt;&#x2F;a&gt; that removes some old UI tricks to make gradients and I am very happy about that.
-I also &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phpmyadmin&#x2F;phpmyadmin&#x2F;commit&#x2F;64efdebbd3f0791a79730b92aaf5754c87b431d8&quot;&gt;updated the psalm baseline&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;thursday-1&quot;&gt;Thursday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; to make it clean and follow the Debian rules.
-I did the same on the &lt;code&gt;mariadb-mysql-kbs&lt;&#x2F;code&gt; package.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;friday-01-01-2021&quot;&gt;Friday (01&#x2F;01&#x2F;2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; and &lt;code&gt;1.2.4-2&lt;&#x2F;code&gt; was released.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;saturday-3&quot;&gt;Saturday&lt;&#x2F;h3&gt;
-&lt;p&gt;I worked on the Debian package &lt;code&gt;google-recaptcha&lt;&#x2F;code&gt; and &lt;code&gt;1.2.4-3&lt;&#x2F;code&gt; was released.
-Started some cleaning on &lt;code&gt;jquery-timepicker&lt;&#x2F;code&gt; to prepare it for an upload.
-Some more cleaning and fixing on &lt;code&gt;mariadb-mysql-kbs&lt;&#x2F;code&gt; package and &lt;code&gt;1.2.11-2&lt;&#x2F;code&gt; was released.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;sunday-3&quot;&gt;Sunday&lt;&#x2F;h3&gt;
-&lt;p&gt;I finished cleaning and adjusting &lt;code&gt;jquery-timepicker&lt;&#x2F;code&gt; and &lt;code&gt;1.6.3-1&lt;&#x2F;code&gt; was released.
-At &lt;code&gt;mariadb-mysql-kbs&lt;&#x2F;code&gt; for Debian, I prepared the next release.&lt;&#x2F;p&gt;
-</content>
-	</entry>
+    <title>Williamdes&#x27;s blog - OSS-report</title>
+    <link href="https://blog.williamdes.eu/tags/oss-report/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-12-12T11:35:00+00:03</updated>
+    <id>https://blog.williamdes.eu/tags/oss-report/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Report for November 2022</title>
+        <published>2022-12-09T22:40:00+00:02</published>
+        <updated>2022-12-12T11:35:00+00:03</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/11/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2022/11/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for November 2022.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for October 2022</title>
+        <published>2022-10-13T21:04:00+00:02</published>
+        <updated>2022-12-09T22:23:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/10/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2022/10/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for October 2022.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for September 2022</title>
+        <published>2022-09-09T21:04:00+00:02</published>
+        <updated>2022-10-01T11:11:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/09/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2022/09/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2022.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for August 2022</title>
+        <published>2022-08-01T12:00:00+00:02</published>
+        <updated>2022-08-30T13:28:00+02:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2022/08/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2022/08/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2022.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for September 2021</title>
+        <published>2021-08-30T12:00:00+00:00</published>
+        <updated>2021-09-23T23:50:00+02:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/09/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/09/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for September 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for August 2021</title>
+        <published>2021-08-01T12:00:00+00:00</published>
+        <updated>2021-08-30T13:28:00+02:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/08/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/08/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for August 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for July 2021</title>
+        <published>2021-07-01T12:00:00+00:00</published>
+        <updated>2021-08-03T22:25:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/07/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/07/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for July 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for June 2021</title>
+        <published>2021-06-01T12:00:00+00:00</published>
+        <updated>2021-07-04T22:25:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/06/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/06/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for June 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for May 2021</title>
+        <published>2021-05-01T12:00:00+00:00</published>
+        <updated>2021-06-01T11:50:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/05/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/05/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for May 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for April 2021</title>
+        <published>2021-04-01T12:00:00+00:00</published>
+        <updated>2021-05-06T00:50:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/04/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/04/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for April 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for March 2021</title>
+        <published>2021-03-01T12:00:00+00:00</published>
+        <updated>2021-03-30T03:10:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/03/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/03/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for March 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for February 2021</title>
+        <published>2021-02-01T12:00:00+00:00</published>
+        <updated>2021-02-28T17:22:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/02/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/02/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for February 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for January 2021</title>
+        <published>2021-01-01T12:00:00+00:00</published>
+        <updated>2021-01-31T23:59:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/OpenSource/2021/01/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/OpenSource/2021/01/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my OpenSource report for January 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for January 2021</title>
+        <published>2021-01-01T12:00:00+00:00</published>
+        <updated>2021-01-31T23:41:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2021/01/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2021/01/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for January 2021.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for December 2020</title>
+        <published>2020-12-31T12:00:00+00:00</published>
+        <updated>2021-01-15T18:52:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/OpenSource/2020/12/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/OpenSource/2020/12/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my OpenSource report for December 2020.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Report for December 2020</title>
+        <published>2020-12-31T12:00:00+00:00</published>
+        <updated>2021-01-13T20:11:45+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/phpMyAdmin/2020/12/report/" type="text/html"/>
+        <id>https://blog.williamdes.eu/phpMyAdmin/2020/12/report/</id>
+        
+        <summary type="html">&lt;p&gt;Here is my phpMyAdmin report for December 2020.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
 </feed>

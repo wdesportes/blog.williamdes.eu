@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
+        <title>Williamdes&#x27;s blog - Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -22,14 +22,14 @@
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Williamdes's blog">
         
-        <meta property="og:title" content="Moving from LastPass to Bitwarden self-hosted (Rust back-end)">
+        <meta property="og:title" content="Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)">
         <meta property="og:url" content="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass">
         <meta property="og:description" content="Here is a story about how I moved out from LastPass to Bitwarden after 7 years using LastPass.">
         
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2021-02-21T00:00:00+00:00">
         <meta property="article:published_time" content="2021-02-21T00:00:00">
-        <meta property="article:modified_time" content="2021-02-25T01:50:00">
+        <meta property="article:modified_time" content="2023-10-15T12:00:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="OSS-story"><meta property="article:tags" content="security">
         
@@ -87,7 +87,7 @@
                 "position": 4,
                 "item": {
                     "@id": "https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass",
-                    "name": "Moving from LastPass to Bitwarden self-hosted (Rust back-end)"
+                    "name": "Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)"
                 }
             }
         ]
@@ -104,11 +104,11 @@
   "https://blog.williamdes.eu/OpenSource/stories/screenshots/Bitwarden_working_2021.jpg"
 ],
     "url": "https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/",
-    "headline": "Moving from LastPass to Bitwarden self-hosted (Rust back-end)",
-    "alternativeHeadline": "Here is a story about how I moved out from LastPass to Bitwarden after 7 years using LastPass.",
+    "headline": "Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)",
+    "alternativeHeadline": "Here is a story about how I moved out from LastPass to Bitwarden (Vaultwarden) after 7 years using LastPass.",
     "dateCreated": "2021-02-21T00:00:00+0000",
     "datePublished": "2021-02-21T00:00:00+0000",
-    "dateModified": "2021-02-25T01:50:00+0000",
+    "dateModified": "2023-10-15T12:00:00+0000",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -205,7 +205,8 @@
             
 <article class="post-single">
     <header class="post-header">
-        <h1 class="post-title">Moving from LastPass to Bitwarden self-hosted (Rust back-end)</h1>
+        <h1 class="post-title">Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)</h1>
+        
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
                 William Desportes
@@ -213,19 +214,21 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2021-02-21T00:00:00+0000">February 21, 2021 00:00</time></span>
-            <span class="post-date"> and updated: <time datetime="2021-02-25T01:50:00+0000">February 25, 2021 01:50</time></span>
+            <span class="post-date"> and updated: <time datetime="2023-10-15T12:00:00+0000">October 15, 2023 12:00</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">3 min read</span>
+            <span class="post-reading-time">4 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Here is a story about how I moved out from <a rel="noopener" target="_blank" href="https://www.lastpass.com/">LastPass</a> to <a rel="noopener" target="_blank" href="https://bitwarden.com/">Bitwarden</a> after 7 years using LastPass.</p>
 <span id="continue-reading"></span><h3 id="the-story">The story</h3>
+<p>Edit: I updated this blog post in 2023, I am very happy about Vaultwarden, the maintenance is regular and very good.
+It is still as good as it was when I started using it in 2021.</p>
 <p>I was using <a rel="noopener" target="_blank" href="https://www.lastpass.com/">LastPass</a> since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using <a rel="noopener" target="_blank" href="https://bitwarden.com/">Bitwarden</a> since a couple of months I am convinced it is a good tool and started searching for self hosted options.
 Bitwarden is open-source, not like LastPass. You can browse the code <a rel="noopener" target="_blank" href="https://github.com/bitwarden">on their GitHub</a>.
-I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that <a rel="noopener" target="_blank" href="https://github.com/dani-garcia">someone</a> had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/wiki/Proxy-examples">configuring my haproxy</a> I got my deployed container working and could start my migration.
-Wait, you are asking If I had deployment issues ? hahaha, no. I used the <a rel="noopener" target="_blank" href="https://hub.docker.com/r/bitwardenrs/server">docker image</a> <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/wiki/Using-Docker-Compose">with docker compose</a> and it just works.</p>
+I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that <a rel="noopener" target="_blank" href="https://github.com/dani-garcia">someone</a> had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples">configuring my haproxy</a> I got my deployed container working and could start my migration.
+Wait, you are asking If I had deployment issues ? hahaha, no. I used the <a rel="noopener" target="_blank" href="https://hub.docker.com/r/vaultwarden/server">docker image</a> <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/vaultwarden/wiki/Using-Docker-Compose">with docker compose</a> and it just works.</p>
 <p>You can configure the domains allowed to register to your Bitwarden instance, very nice feature !
-And more cool things, just have a look to the <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/bitwarden_rs/blob/1.19.0/.env.template">.env template</a></p>
+And more cool things, just have a look to the <a rel="noopener" target="_blank" href="https://github.com/dani-garcia/vaultwarden/blob/1.29.2/.env.template">.env template</a></p>
 <p>I had a look to a <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=lfHDqxCJA90">French video</a> to install the official server using Docker, I could see a lot of &quot;overkill&quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.</p>
 <p>After setting up my instance I Exported all my Bitwarden accounts and my LastPass account and imported the data.
 Logged in with my phone and browser extension after defining the URL of my instance and that was it.</p>
@@ -237,42 +240,46 @@ It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in 
 <p>(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)</p>
 <h4 id="configure-the-domain">Configure the domain</h4>
 <p>Use the bolt icon on the login modal.</p>
-<p><img src="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/../screenshots/Bitwarden_configure_url_2021.jpg" alt="Configure the instance URL modal" title="Configure the instance URL modal" /></p>
+<p><img src="../screenshots/Bitwarden_configure_url_2021.jpg" alt="Configure the instance URL modal" title="Configure the instance URL modal" /></p>
 <h4 id="your-vault-s-view-from-the-chrome-extension">Your vault's view from the Chrome extension</h4>
-<p><img src="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/../screenshots/Bitwarden_modal_2021.jpg" alt="Your vault modal from the Chrome extension" title="Your vault modal from the Chrome extension" /></p>
+<p><img src="../screenshots/Bitwarden_modal_2021.jpg" alt="Your vault modal from the Chrome extension" title="Your vault modal from the Chrome extension" /></p>
 <h4 id="your-vault-s-view-from-the-web-ui">Your vault's view from the web UI</h4>
-<p><img src="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/../screenshots/Bitwarden_working_2021.jpg" alt="Your vault from the web UI" title="Your vault from the web UI" /></p>
+<p><img src="../screenshots/Bitwarden_working_2021.jpg" alt="Your vault from the web UI" title="Your vault from the web UI" /></p>
 <h3 id="docker-compose">Docker compose</h3>
-<pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#bf616a;">bitwarden</span><span>:
-</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">bitwardenrs/server
+<pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#bf616a;">vaultwarden</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">vaultwarden/server:latest
 </span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">always
-</span><span>    </span><span style="color:#bf616a;">dns_search</span><span>: </span><span style="color:#a3be8c;">host.tld
-</span><span>    </span><span style="color:#bf616a;">hostname</span><span>: </span><span style="color:#a3be8c;">bitwarden.host.tld
-</span><span>    </span><span style="color:#bf616a;">domainname</span><span>: </span><span style="color:#a3be8c;">host.tld
-</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">bitwarden.host.tld
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">vaultwarden.host.tld
 </span><span>    </span><span style="color:#bf616a;">networks</span><span>:
 </span><span>        </span><span style="color:#bf616a;">my_network</span><span>:
 </span><span>            </span><span style="color:#bf616a;">aliases</span><span>:
-</span><span>                - </span><span style="color:#a3be8c;">bitwarden.host.tld
+</span><span>                - </span><span style="color:#a3be8c;">vaultwarden.host.tld
 </span><span>    </span><span style="color:#bf616a;">mem_limit</span><span>: </span><span style="color:#a3be8c;">200m
 </span><span>    </span><span style="color:#bf616a;">mem_reservation</span><span>: </span><span style="color:#a3be8c;">100m
 </span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
-</span><span>        - </span><span style="color:#a3be8c;">${BITWARDEN_VOLUME}:/data
+</span><span>        - </span><span style="color:#a3be8c;">${VAULTWARDEN_VOLUME}:/data
+</span><span>    </span><span style="color:#bf616a;">healthcheck</span><span>:
+</span><span>        </span><span style="color:#bf616a;">test</span><span>: [&quot;</span><span style="color:#a3be8c;">CMD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">curl</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">-s</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">--fail</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">https://vaultwarden.host.tld/api/alive</span><span>&quot;]
+</span><span>        </span><span style="color:#bf616a;">start_period</span><span>: </span><span style="color:#a3be8c;">2s
+</span><span>        </span><span style="color:#bf616a;">interval</span><span>: </span><span style="color:#a3be8c;">30s
+</span><span>        </span><span style="color:#bf616a;">timeout</span><span>: </span><span style="color:#a3be8c;">1s
+</span><span>        </span><span style="color:#bf616a;">retries</span><span>: </span><span style="color:#d08770;">3
 </span><span>    </span><span style="color:#bf616a;">environment</span><span>:
 </span><span>        </span><span style="color:#bf616a;">WEBSOCKET_ENABLED</span><span>: &#39;</span><span style="color:#a3be8c;">true</span><span>&#39;
-</span><span>        </span><span style="color:#bf616a;">SIGNUPS_ALLOWED</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_ENABLE_SIGNUPS}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SIGNUPS_DOMAINS_WHITELIST</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SIGNUPS_DOMAINS_WHITELIST}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">ADMIN_TOKEN</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_ADMIN_TOKEN}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">INVITATION_ORG_NAME</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_INVITATION_ORG_NAME}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">DOMAIN</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_URL}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_HOST</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_HOST}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_FROM</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_FROM}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_FROM_NAME</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_FROM_NAME}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_PORT</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_PORT}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_SSL</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_SSL}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_EXPLICIT_TLS</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_EXPLICIT_TLS}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_USERNAME</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_USERNAME}</span><span>&quot;
-</span><span>        </span><span style="color:#bf616a;">SMTP_PASSWORD</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_PASSWORD}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SIGNUPS_ALLOWED</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_ENABLE_SIGNUPS}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SIGNUPS_DOMAINS_WHITELIST</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SIGNUPS_DOMAINS_WHITELIST}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">ADMIN_TOKEN</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_ADMIN_TOKEN}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">INVITATION_ORG_NAME</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_INVITATION_ORG_NAME}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">DOMAIN</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_URL}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_HOST</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_HOST}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_FROM</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_FROM}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_FROM_NAME</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_FROM_NAME}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_PORT</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_PORT}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_SSL</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_SSL}</span><span>&quot;
+</span><span>        </span><span style="color:#65737e;"># &quot;starttls&quot;, &quot;force_tls&quot; or  &quot;off&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_SECURITY</span><span>: &quot;</span><span style="color:#a3be8c;">${BITWARDEN_SMTP_SECURITY:-force_tls}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_USERNAME</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_USERNAME}</span><span>&quot;
+</span><span>        </span><span style="color:#bf616a;">SMTP_PASSWORD</span><span>: &quot;</span><span style="color:#a3be8c;">${VAULTWARDEN_SMTP_PASSWORD}</span><span>&quot;
 </span></code></pre>
 </div>
     <footer class="post-footer">
@@ -296,12 +303,12 @@ It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in 
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
             <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
-            <span>&middot;</span>
+            <br>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
             <span>&middot;</span>
             <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
             <span>&middot;</span>
-            <span>Visit <a href="https://williamdes.eu" rel="noopener" target="_blank">my personal website</a></span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
             <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
             <br>

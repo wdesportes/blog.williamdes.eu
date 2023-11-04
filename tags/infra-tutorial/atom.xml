@@ -1,243 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - infra-tutorial</title>
-	<link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://blog.williamdes.eu"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-07-06T16:07:00+00:02</updated>
-	<id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Install racadm for iDRAC on Proxmox 7&#x2F;8</title>
-		<published>2023-05-25T14:10:00+00:02</published>
-		<updated>2023-07-06T16:07:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/</id>
-		<content type="html">&lt;p&gt;Install iDRAC racadm tool on Proxmox 7&#x2F;8&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;This is how to setup iDRAC&#x27;s racadm tool on Proxmox 7&#x2F;8. And iDRAC Service Module(iSM).&lt;&#x2F;p&gt;
-&lt;p&gt;This article is inspired by &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;&quot;&gt;DELL&#x27;s manual&lt;&#x2F;a&gt; and this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.ceremade.dauphine.fr&#x2F;doc&#x2F;fr&#x2F;blog&#x2F;installer-dell-oms&quot;&gt;blog post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;fetch-the-gpg-key&quot;&gt;Fetch the GPG key&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;pgp_pubkeys&#x2F;0x1285491434D8786F.asc | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;gpg --dearmor -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;add-sources-file&quot;&gt;Add sources file&lt;&#x2F;h3&gt;
-&lt;p&gt;Create a file at &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;linux.dell.com.sources.list&lt;&#x2F;code&gt; and put the following contents:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;deb&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-deb &quot;&gt;&lt;code class=&quot;language-deb&quot; data-lang=&quot;deb&quot;&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg] http:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;11000&#x2F;jammy jammy main
-&lt;&#x2F;span&gt;&lt;span&gt;# For Proxmox 7
-&lt;&#x2F;span&gt;&lt;span&gt;#deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg] http:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;10300&#x2F;focal focal main
-&lt;&#x2F;span&gt;&lt;span&gt;# If you want iDRAC Service Module(iSM)
-&lt;&#x2F;span&gt;&lt;span&gt;deb [signed-by=&#x2F;etc&#x2F;apt&#x2F;trusted.gpg.d&#x2F;dell-apt-key.gpg] http:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;iSM&#x2F;5100&#x2F;bullseye bullseye main
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The &lt;code&gt;10300&lt;&#x2F;code&gt; (&lt;code&gt;v10.3.0.0&lt;&#x2F;code&gt;) part is the OMSA version found on the matrix available on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;linux.dell.com&#x2F;repo&#x2F;community&#x2F;openmanage&#x2F;&quot;&gt;DELL&#x27;s page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;If you use the &lt;code&gt;jammy&lt;&#x2F;code&gt; release on a Debian 11 it will throw &lt;code&gt;uses unknown compression for member &#x27;control.tar.zst&#x27;, giving up&lt;&#x2F;code&gt; at install time. This is explained &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;a&#x2F;669008&#x2F;155610&quot;&gt;on stackoverflow (stackexchange)&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;install-it&quot;&gt;Install it&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;apt&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-apt &quot;&gt;&lt;code class=&quot;language-apt&quot; data-lang=&quot;apt&quot;&gt;&lt;span&gt;apt-get install srvadmin-idracadm8
-&lt;&#x2F;span&gt;&lt;span&gt;# If you want iDRAC Service Module(iSM)
-&lt;&#x2F;span&gt;&lt;span&gt;apt-get install dcism
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;try-racadm&quot;&gt;Try &lt;code&gt;racadm&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;racadm&lt;&#x2F;span&gt;&lt;span&gt; getsysinfo
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;RAC Information:
-&lt;&#x2F;span&gt;&lt;span&gt;RAC Date&#x2F;Time           = Thu May 25 12:25:11 2023
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Firmware Version        = 2.84.84.84
-&lt;&#x2F;span&gt;&lt;span&gt;Firmware Build          = 02
-&lt;&#x2F;span&gt;&lt;span&gt;Last Firmware Update    = 05&#x2F;23&#x2F;2023 11:30:51
-&lt;&#x2F;span&gt;&lt;span&gt;[...]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;With &lt;code&gt;dcism&lt;&#x2F;code&gt; and a reboot:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;Host Name               = proxmox.local
-&lt;&#x2F;span&gt;&lt;span&gt;OS Name                 = Debian GNU&#x2F;Linux 12 (bookworm)
-&lt;&#x2F;span&gt;&lt;span&gt;OS Version              = 12 (bookworm) Kernel 6.2.16-3-pve (x86_64)
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;on-proxmox-8&quot;&gt;On Proxmox 8&lt;&#x2F;h3&gt;
-&lt;p&gt;I added back &lt;code&gt;deb http:&#x2F;&#x2F;ftp.debian.org&#x2F;debian bullseye main&lt;&#x2F;code&gt; to the &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list&lt;&#x2F;code&gt; file and ran: &lt;code&gt;apt install libssl1.1&lt;&#x2F;code&gt;.
-Because the binary &lt;code&gt;&#x2F;opt&#x2F;dell&#x2F;srvadmin&#x2F;iSM&#x2F;bin&#x2F;Invoke-iSMPKIHelper&lt;&#x2F;code&gt; needs it (&lt;code&gt;ldd &#x2F;opt&#x2F;dell&#x2F;srvadmin&#x2F;iSM&#x2F;bin&#x2F;Invoke-iSMPKIHelper&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
-&lt;p&gt;And after added a file &lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;preferences.d&#x2F;bullseye&lt;&#x2F;code&gt; with the contents:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rfc822&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rfc822 &quot;&gt;&lt;code class=&quot;language-rfc822&quot; data-lang=&quot;rfc822&quot;&gt;&lt;span&gt;Package: *
-&lt;&#x2F;span&gt;&lt;span&gt;Pin: release n=bullseye
-&lt;&#x2F;span&gt;&lt;span&gt;Pin-Priority: -1
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Installing Crowdsec on pfSense</title>
-		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2023-01-01T14:40:00+00:04</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
-		<content type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;This is how to install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt; on pfSense running freeBSD 12.3.&lt;&#x2F;p&gt;
-&lt;p&gt;To learn more about what is CrowdSec you can look at this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=2Ec-FYmK4zg&quot;&gt;YouTube video from Lawrence Systems&lt;&#x2F;a&gt; or look at the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=t99cnWYGhdw&quot;&gt;video from CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;You can find this blog post on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PFSENSE&#x2F;comments&#x2F;xq6xy6&#x2F;protect_your_firewall_against_bad_ips_with&#x2F;&quot;&gt;Reddit&lt;&#x2F;a&gt; and discuss about it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;how-to-install&quot;&gt;How to install&lt;&#x2F;h3&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;upgrade-your-setup&quot;&gt;Upgrade your setup&lt;&#x2F;h4&gt;
-&lt;p&gt;If you already did follow my blog post once and want to upgrade crowdsec,
-then do: &lt;code&gt;pkg del crowdsec&lt;&#x2F;code&gt; and follow the next step below.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-pkg&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.3.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;p&gt;You should adjust &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;acquis.yaml&lt;&#x2F;code&gt; and remove non valid files.&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;for-systems-running-var-on-tmpfs&quot;&gt;For systems running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs&lt;&#x2F;h5&gt;
-&lt;p&gt;To see what running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs is about: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;serverfault.com&#x2F;a&#x2F;832036&#x2F;336084&quot;&gt;screenshot&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;You will need to change &lt;code&gt;data_dir&lt;&#x2F;code&gt; and &lt;code&gt;db_path&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;config.yaml&lt;&#x2F;code&gt;.
-Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt; and create it: &lt;code&gt;mkdir -p &#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;start-the-services&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;make-it-start-at-boot&quot;&gt;Make it start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;And create a file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt; with contents:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Make it executable: &lt;code&gt;chmod +x &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.netgate.com&#x2F;pfsense&#x2F;en&#x2F;latest&#x2F;development&#x2F;boot-commands.html#shell-script-option&quot;&gt;pfSense documentation on boot scripts&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;look-at-your-logs&quot;&gt;Look at your logs&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tail -f&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;var&#x2F;log&#x2F;crowdsec*
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;(You can logout&#x2F;login to make cscli work withour the full path needed.)
-Find where the CLI is located:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -name&lt;&#x2F;span&gt;&lt;span&gt; cscli
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;enrol-the-instance-using-cscli&quot;&gt;Enrol the instance using &lt;code&gt;cscli&lt;&#x2F;code&gt;.&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;cscli&lt;&#x2F;span&gt;&lt;span&gt; console enroll xxxxxxxxxxxxxxxxxx
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;see-the-enrolled-instance&quot;&gt;See the enrolled instance&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_dashboard_pfsense_instance.jpg&quot; alt=&quot;instance on the dashboard at app.crowdsec.net&quot; title=&quot;instance on the dashboard at app.crowdsec.net&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-scenarios&quot;&gt;Add scenarios&lt;&#x2F;h4&gt;
-&lt;p&gt;Example:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios list
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios list&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -a
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios install crowdsecurity&#x2F;postfix-spam
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios install crowdsecurity&#x2F;dovecot-spam
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;use-the-blocklist-mirror-service&quot;&gt;Use the blocklist mirror service&lt;&#x2F;h3&gt;
-&lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.crowdsec.net&#x2F;docs&#x2F;bouncers&#x2F;blocklist-mirror&#x2F;&quot;&gt;official install docs&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;blog&#x2F;integrating-crowdsec-with-firewall-appliances&quot;&gt;crowdsec blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Source code: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&quot;&gt;GitHub&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;uninstall-the-manual-method-previously-provided-by-my-blog&quot;&gt;Uninstall the manual method previously provided by my blog&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror stop
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;crowdsec-blocklist-mirror
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers list
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers remove crowdsec-blocklist-mirror-REPLACE_ME
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the blocklist enable line in &#x2F;etc&#x2F;rc.conf.local
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the service line in &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;install-the-service&quot;&gt;Install the service&lt;&#x2F;h4&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-blocklist-mirror&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;add-pkg-1&quot;&gt;Add pkg&lt;&#x2F;h5&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-blocklist-mirror-0.0.1.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;make-then-start-at-boot&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_mirror_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;start-the-services-1&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;check-that-it-works&quot;&gt;Check that it works&lt;&#x2F;h4&gt;
-&lt;p&gt;If there is no IPs, run: &lt;code&gt;service crowdsec restart&lt;&#x2F;code&gt; and re-try.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; http:&#x2F;&#x2F;127.0.0.1:41412&#x2F;security&#x2F;blocklist
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;add-a-firewall-alias&quot;&gt;Add a firewall alias&lt;&#x2F;h4&gt;
-&lt;p&gt;Go to: &lt;code&gt;Firewall&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Aliases&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;URLs&lt;&#x2F;code&gt; and click on &lt;code&gt;+ Add&lt;&#x2F;code&gt;.
-The type is: &lt;code&gt;URL Table (IPs)&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Do like on the screenshot using the URL we tried earlier and the save.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_pfsense_add_url_alias.jpg&quot; alt=&quot;Adding a firewall URL alias for CrowdSec on pfSense&quot; title=&quot;Adding a firewall URL alias for CrowdSec on pfSense&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-a-firewall-rule&quot;&gt;Add a firewall rule&lt;&#x2F;h4&gt;
-&lt;p&gt;Go to: &lt;code&gt;Firewall&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Rules&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Interface name for Internet&lt;&#x2F;code&gt; and click on &lt;code&gt;Add&lt;&#x2F;code&gt;.
-The source is &lt;code&gt;Single host and alias&lt;&#x2F;code&gt; and the type the name of the firewall aslias you created earlier.
-Do like on the screenshot and save. Then apply the changes.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_pfsense_add_firewall_rule.jpg&quot; alt=&quot;Adding a firewall rule on the network interface for CrowdSec on pfSense&quot; title=&quot;Adding a firewall rule on the network interface for CrowdSec on pfSense&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;or-use-the-firewall-bouncer-does-it-work-on-pfsense&quot;&gt;Or use the firewall bouncer (does it work on pfSense ?)&lt;&#x2F;h3&gt;
-&lt;p&gt;This is an alternative to using the blocklist mirror service.
-I could not figure out how to know that it actually works.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-pkg-2&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-firewall-bouncer&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;make-then-start-at-boot-1&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_firewall_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;start-the-services-2&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_firewall start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_firewall start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Add a crypt data volume to Alpine 3.17</title>
-		<published>2022-05-20T00:07:00+00:02</published>
-		<updated>2023-02-26T00:53:00+00:02</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/</id>
-		<content type="html">&lt;p&gt;Add a crypt data volume to Alpine 3.17&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;This is how to setup a data volume on an already configured Alpine 3.17 system.&lt;&#x2F;p&gt;
-&lt;p&gt;The disk is at: &lt;code&gt;&#x2F;dev&#x2F;sdb&lt;&#x2F;code&gt;, it also could be &lt;code&gt;&#x2F;dev&#x2F;vdb&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;creating-partitions&quot;&gt;Creating partitions&lt;&#x2F;h3&gt;
-&lt;p&gt;You can even skip this step and use all the disk at once.
-Just rename &lt;code&gt;sdb1&lt;&#x2F;code&gt; to &lt;code&gt;sdb&lt;&#x2F;code&gt; in other commands &amp;amp; scripts.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;fdisk&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;dev&#x2F;sdb
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enter the keyboard sequence:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# n
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# ENTER
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# ENTER
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# p
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# w
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;creating-luks-setup&quot;&gt;Creating LUKS setup&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;apk&lt;&#x2F;span&gt;&lt;span&gt; add&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --update&lt;&#x2F;span&gt;&lt;span&gt; cryptsetup lsblk
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;creating-the-luks-lvm-ext4-partition&quot;&gt;Creating the LUKS&#x2F;LVM&#x2F;EXT4 partition&lt;&#x2F;h3&gt;
-&lt;p&gt;Make the LUKS drive:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksFormat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --hash&lt;&#x2F;span&gt;&lt;span&gt; sha512 &#x2F;dev&#x2F;sdb1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksOpen &#x2F;dev&#x2F;sdb1 enc_storage
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Create LVM and ext4 into it:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkfs.ext4&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;dev&#x2F;mapper&#x2F;enc_storage
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Mount it:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;mnt&#x2F;storage
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;lsblk
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-e &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;dev&#x2F;mapper&#x2F;enc_storage\t&#x2F;mnt&#x2F;storage\text4\tdefaults\t0\t0\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;fstab
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mount -a
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;lsblk
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;df -h
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;helper-script&quot;&gt;Helper script&lt;&#x2F;h4&gt;
-&lt;p&gt;I often put this in &lt;code&gt;~&#x2F;open.sh&lt;&#x2F;code&gt; to help unlocking the system when I have forgot the commands.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#!&#x2F;bin&#x2F;sh -exu
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cryptsetup&lt;&#x2F;span&gt;&lt;span&gt; luksOpen &#x2F;dev&#x2F;sdb1 enc_storage
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mount -a -v
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#echo &amp;#39;Starting docker&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#rc-service docker start
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#echo &amp;#39;Waiting 4sec for Docker to start&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;#sleep 4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Done !&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
+    <title>Williamdes&#x27;s blog - infra-tutorial</title>
+    <link href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-07-06T16:07:00+00:02</updated>
+    <id>https://blog.williamdes.eu/tags/infra-tutorial/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Install racadm for iDRAC on Proxmox 7&#x2F;8</title>
+        <published>2023-05-25T14:10:00+00:02</published>
+        <updated>2023-07-06T16:07:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/</id>
+        
+        <summary type="html">&lt;p&gt;Install iDRAC racadm tool on Proxmox 7&#x2F;8&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Installing Crowdsec on pfSense</title>
+        <published>2022-09-26T00:10:00+00:02</published>
+        <updated>2023-01-01T14:40:00+00:04</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
+        
+        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Add a crypt data volume to Alpine 3.17</title>
+        <published>2022-05-20T00:07:00+00:02</published>
+        <updated>2023-02-26T00:53:00+00:02</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/</id>
+        
+        <summary type="html">&lt;p&gt;Add a crypt data volume to Alpine 3.17&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
 </feed>

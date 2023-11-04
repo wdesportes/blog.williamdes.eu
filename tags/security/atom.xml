@@ -1,194 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Williamdes&#x27;s blog - security</title>
-	<link href="https://blog.williamdes.eu/tags/security/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://blog.williamdes.eu"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-01T14:40:00+00:04</updated>
-	<id>https://blog.williamdes.eu/tags/security/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Installing Crowdsec on pfSense</title>
-		<published>2022-09-26T00:10:00+00:02</published>
-		<updated>2023-01-01T14:40:00+00:04</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
-		<id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
-		<content type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;This is how to install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt; on pfSense running freeBSD 12.3.&lt;&#x2F;p&gt;
-&lt;p&gt;To learn more about what is CrowdSec you can look at this &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=2Ec-FYmK4zg&quot;&gt;YouTube video from Lawrence Systems&lt;&#x2F;a&gt; or look at the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=t99cnWYGhdw&quot;&gt;video from CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;You can find this blog post on &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;PFSENSE&#x2F;comments&#x2F;xq6xy6&#x2F;protect_your_firewall_against_bad_ips_with&#x2F;&quot;&gt;Reddit&lt;&#x2F;a&gt; and discuss about it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;how-to-install&quot;&gt;How to install&lt;&#x2F;h3&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;upgrade-your-setup&quot;&gt;Upgrade your setup&lt;&#x2F;h4&gt;
-&lt;p&gt;If you already did follow my blog post once and want to upgrade crowdsec,
-then do: &lt;code&gt;pkg del crowdsec&lt;&#x2F;code&gt; and follow the next step below.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-pkg&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-1.4.3.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;p&gt;You should adjust &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;acquis.yaml&lt;&#x2F;code&gt; and remove non valid files.&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;for-systems-running-var-on-tmpfs&quot;&gt;For systems running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs&lt;&#x2F;h5&gt;
-&lt;p&gt;To see what running &lt;code&gt;&#x2F;var&lt;&#x2F;code&gt; on tmpfs is about: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;serverfault.com&#x2F;a&#x2F;832036&#x2F;336084&quot;&gt;screenshot&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;You will need to change &lt;code&gt;data_dir&lt;&#x2F;code&gt; and &lt;code&gt;db_path&lt;&#x2F;code&gt; in &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;config.yaml&lt;&#x2F;code&gt;.
-Set the folder to &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt; and create it: &lt;code&gt;mkdir -p &#x2F;usr&#x2F;local&#x2F;crowdsec&#x2F;data&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;start-the-services&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;make-it-start-at-boot&quot;&gt;Make it start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;And create a file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt; with contents:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Make it executable: &lt;code&gt;chmod +x &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.netgate.com&#x2F;pfsense&#x2F;en&#x2F;latest&#x2F;development&#x2F;boot-commands.html#shell-script-option&quot;&gt;pfSense documentation on boot scripts&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;look-at-your-logs&quot;&gt;Look at your logs&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tail -f&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;var&#x2F;log&#x2F;crowdsec*
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;(You can logout&#x2F;login to make cscli work withour the full path needed.)
-Find where the CLI is located:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -name&lt;&#x2F;span&gt;&lt;span&gt; cscli
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;enrol-the-instance-using-cscli&quot;&gt;Enrol the instance using &lt;code&gt;cscli&lt;&#x2F;code&gt;.&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;cscli&lt;&#x2F;span&gt;&lt;span&gt; console enroll xxxxxxxxxxxxxxxxxx
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;see-the-enrolled-instance&quot;&gt;See the enrolled instance&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_dashboard_pfsense_instance.jpg&quot; alt=&quot;instance on the dashboard at app.crowdsec.net&quot; title=&quot;instance on the dashboard at app.crowdsec.net&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-scenarios&quot;&gt;Add scenarios&lt;&#x2F;h4&gt;
-&lt;p&gt;Example:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios list
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios list&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -a
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios install crowdsecurity&#x2F;postfix-spam
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; scenarios install crowdsecurity&#x2F;dovecot-spam
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;use-the-blocklist-mirror-service&quot;&gt;Use the blocklist mirror service&lt;&#x2F;h3&gt;
-&lt;p&gt;Reference: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.crowdsec.net&#x2F;docs&#x2F;bouncers&#x2F;blocklist-mirror&#x2F;&quot;&gt;official install docs&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;blog&#x2F;integrating-crowdsec-with-firewall-appliances&quot;&gt;crowdsec blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Source code: &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;crowdsecurity&#x2F;cs-blocklist-mirror&quot;&gt;GitHub&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;uninstall-the-manual-method-previously-provided-by-my-blog&quot;&gt;Uninstall the manual method previously provided by my blog&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_blocklist_mirror stop
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec_blocklist_mirror
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;crowdsec&#x2F;bouncers&#x2F;crowdsec-blocklist-mirror.yaml
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;crowdsec-blocklist-mirror
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers list
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cscli&lt;&#x2F;span&gt;&lt;span&gt; bouncers remove crowdsec-blocklist-mirror-REPLACE_ME
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the blocklist enable line in &#x2F;etc&#x2F;rc.conf.local
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remove the service line in &#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;install-the-service&quot;&gt;Install the service&lt;&#x2F;h4&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-blocklist-mirror&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;h5 id=&quot;add-pkg-1&quot;&gt;Add pkg&lt;&#x2F;h5&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-blocklist-mirror-0.0.1.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;make-then-start-at-boot&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_mirror_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;start-the-services-1&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_mirror start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;check-that-it-works&quot;&gt;Check that it works&lt;&#x2F;h4&gt;
-&lt;p&gt;If there is no IPs, run: &lt;code&gt;service crowdsec restart&lt;&#x2F;code&gt; and re-try.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; http:&#x2F;&#x2F;127.0.0.1:41412&#x2F;security&#x2F;blocklist
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;add-a-firewall-alias&quot;&gt;Add a firewall alias&lt;&#x2F;h4&gt;
-&lt;p&gt;Go to: &lt;code&gt;Firewall&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Aliases&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;URLs&lt;&#x2F;code&gt; and click on &lt;code&gt;+ Add&lt;&#x2F;code&gt;.
-The type is: &lt;code&gt;URL Table (IPs)&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Do like on the screenshot using the URL we tried earlier and the save.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_pfsense_add_url_alias.jpg&quot; alt=&quot;Adding a firewall URL alias for CrowdSec on pfSense&quot; title=&quot;Adding a firewall URL alias for CrowdSec on pfSense&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-a-firewall-rule&quot;&gt;Add a firewall rule&lt;&#x2F;h4&gt;
-&lt;p&gt;Go to: &lt;code&gt;Firewall&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Rules&lt;&#x2F;code&gt; &amp;gt; &lt;code&gt;Interface name for Internet&lt;&#x2F;code&gt; and click on &lt;code&gt;Add&lt;&#x2F;code&gt;.
-The source is &lt;code&gt;Single host and alias&lt;&#x2F;code&gt; and the type the name of the firewall aslias you created earlier.
-Do like on the screenshot and save. Then apply the changes.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;Infrastructure&#x2F;tutorials&#x2F;install-crowdsec-and-bouncer-on-pfsense&#x2F;..&#x2F;crowdsec_pfsense_add_firewall_rule.jpg&quot; alt=&quot;Adding a firewall rule on the network interface for CrowdSec on pfSense&quot; title=&quot;Adding a firewall rule on the network interface for CrowdSec on pfSense&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;or-use-the-firewall-bouncer-does-it-work-on-pfsense&quot;&gt;Or use the firewall bouncer (does it work on pfSense ?)&lt;&#x2F;h3&gt;
-&lt;p&gt;This is an alternative to using the blocklist mirror service.
-I could not figure out how to know that it actually works.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;add-pkg-2&quot;&gt;Add pkg&lt;&#x2F;h4&gt;
-&lt;p&gt;You will need to check the freeBSD version on your pfSense home page. Then open the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.freshports.org&#x2F;security&#x2F;crowdsec-firewall-bouncer&#x2F;#packages&quot;&gt;package summary on freshports&lt;&#x2F;a&gt; in a new browser tab.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkg&lt;&#x2F;span&gt;&lt;span&gt; add https:&#x2F;&#x2F;pkg.freebsd.org&#x2F;FreeBSD:12:amd64&#x2F;latest&#x2F;All&#x2F;crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Follow the post install instructions.&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;make-then-start-at-boot-1&quot;&gt;Make then start at boot&lt;&#x2F;h4&gt;
-&lt;p&gt;Add to &lt;code&gt;&#x2F;etc&#x2F;rc.conf.local&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;crowdsec_firewall_enable&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;yes&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;start-the-services-2&quot;&gt;Start the services&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_firewall start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Add to the file &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;rc.d&#x2F;crowdsec.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt; crowdsec_firewall start
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Moving from LastPass to Bitwarden self-hosted (Rust back-end)</title>
-		<published>2021-02-21T00:00:00+00:00</published>
-		<updated>2021-02-25T01:50:00+00:00</updated>
-		<link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
-		<id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
-		<content type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;the-story&quot;&gt;The story&lt;&#x2F;h3&gt;
-&lt;p&gt;I was using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; since 7 years (or maybe more, last email found is in 2014) and I decided it was a cool adventure but some recent news did make me say goodbye for some new fresh tech. Using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; since a couple of months I am convinced it is a good tool and started searching for self hosted options.
-Bitwarden is open-source, not like LastPass. You can browse the code &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitwarden&quot;&gt;on their GitHub&lt;&#x2F;a&gt;.
-I read that to self host Bitwarden it needed some gigs of ram and I was quite perplex to read that. I understood why when I found out they where using Microsoft SQL server and running C#. It seemed quite overkill but Internet is big and I found out that &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&quot;&gt;someone&lt;&#x2F;a&gt; had re-implemented all that in Rust. I love Rust and that was enough for me to decide to have a try. After some minutes &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;wiki&#x2F;Proxy-examples&quot;&gt;configuring my haproxy&lt;&#x2F;a&gt; I got my deployed container working and could start my migration.
-Wait, you are asking If I had deployment issues ? hahaha, no. I used the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hub.docker.com&#x2F;r&#x2F;bitwardenrs&#x2F;server&quot;&gt;docker image&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;wiki&#x2F;Using-Docker-Compose&quot;&gt;with docker compose&lt;&#x2F;a&gt; and it just works.&lt;&#x2F;p&gt;
-&lt;p&gt;You can configure the domains allowed to register to your Bitwarden instance, very nice feature !
-And more cool things, just have a look to the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dani-garcia&#x2F;bitwarden_rs&#x2F;blob&#x2F;1.19.0&#x2F;.env.template&quot;&gt;.env template&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I had a look to a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=lfHDqxCJA90&quot;&gt;French video&lt;&#x2F;a&gt; to install the official server using Docker, I could see a lot of &amp;quot;overkill&amp;quot; stuff and one non pleasant thing was: to have to ask for an install key to Bitwarden using a form on their website. No way I would fill this form, I have nobody to inform if I install or not the Bitwarden server.&lt;&#x2F;p&gt;
-&lt;p&gt;After setting up my instance I Exported all my Bitwarden accounts and my LastPass account and imported the data.
-Logged in with my phone and browser extension after defining the URL of my instance and that was it.&lt;&#x2F;p&gt;
-&lt;p&gt;What about you, just have a try ;)&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;some-details-about-how-it-works&quot;&gt;Some details about how it works&lt;&#x2F;h3&gt;
-&lt;p&gt;It works great, anyway nothing surprising with a Rust back-end.
-It consumes less than 50MiB of RAM, I allocated 200MiB to the container just in case.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;some-screenshots&quot;&gt;Some screenshots&lt;&#x2F;h3&gt;
-&lt;p&gt;(Yes they are in French, the UI is intuitive enough for non French users to understand my screenshots)&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;configure-the-domain&quot;&gt;Configure the domain&lt;&#x2F;h4&gt;
-&lt;p&gt;Use the bolt icon on the login modal.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_configure_url_2021.jpg&quot; alt=&quot;Configure the instance URL modal&quot; title=&quot;Configure the instance URL modal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;your-vault-s-view-from-the-chrome-extension&quot;&gt;Your vault&#x27;s view from the Chrome extension&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_modal_2021.jpg&quot; alt=&quot;Your vault modal from the Chrome extension&quot; title=&quot;Your vault modal from the Chrome extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h4 id=&quot;your-vault-s-view-from-the-web-ui&quot;&gt;Your vault&#x27;s view from the web UI&lt;&#x2F;h4&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;moving-to-bitwarden-self-hosted-rust-from-lastpass&#x2F;..&#x2F;screenshots&#x2F;Bitwarden_working_2021.jpg&quot; alt=&quot;Your vault from the web UI&quot; title=&quot;Your vault from the web UI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;docker-compose&quot;&gt;Docker compose&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;yml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yml &quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bitwarden&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwardenrs&#x2F;server
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;restart&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;always
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dns_search&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hostname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;domainname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;container_name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;networks&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;my_network&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;aliases&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;                - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bitwarden.host.tld
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mem_limit&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;200m
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mem_reservation&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;100m
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;volumes&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_VOLUME}:&#x2F;data
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;environment&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;WEBSOCKET_ENABLED&lt;&#x2F;span&gt;&lt;span&gt;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SIGNUPS_ALLOWED&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_ENABLE_SIGNUPS}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SIGNUPS_DOMAINS_WHITELIST&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SIGNUPS_DOMAINS_WHITELIST}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ADMIN_TOKEN&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_ADMIN_TOKEN}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;INVITATION_ORG_NAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_INVITATION_ORG_NAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;DOMAIN&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_URL}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_HOST&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_HOST}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_FROM&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_FROM}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_FROM_NAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_FROM_NAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_PORT&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_PORT}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_SSL&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_SSL}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_EXPLICIT_TLS&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_EXPLICIT_TLS}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_USERNAME&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_USERNAME}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SMTP_PASSWORD&lt;&#x2F;span&gt;&lt;span&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${BITWARDEN_SMTP_PASSWORD}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
+    <title>Williamdes&#x27;s blog - security</title>
+    <link href="https://blog.williamdes.eu/tags/security/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.williamdes.eu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-10-15T12:00:00+00:00</updated>
+    <id>https://blog.williamdes.eu/tags/security/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Installing Crowdsec on pfSense</title>
+        <published>2022-09-26T00:10:00+00:02</published>
+        <updated>2023-01-01T14:40:00+00:04</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/" type="text/html"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
+        
+        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)</title>
+        <published>2021-02-21T00:00:00+00:00</published>
+        <updated>2023-10-15T12:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/" type="text/html"/>
+        <id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
+        
+        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
 </feed>
