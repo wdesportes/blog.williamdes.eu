@@ -87,7 +87,7 @@ Conclusion: it works on my workstation, not in production.
 ## Mirating to the new service
 
 I did follow the [manual](https://upptime.js.org/docs/get-started) and that was it !
-Here it is: [https://status.datacenters.network/](https://status.datacenters.network/)
+Here it is: [https://status.wdes.eu/](https://status.wdes.eu/)
 
 (did I choose to keep the watermarks, absolutely !)
 

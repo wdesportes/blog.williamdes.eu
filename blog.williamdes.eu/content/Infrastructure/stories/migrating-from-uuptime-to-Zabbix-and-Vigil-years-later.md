@@ -69,7 +69,7 @@ I host it at [Railway.app](https://railway.app?referralCode=w6eB63) for free.
 #### Examples
 
 - [Crisp.chat's status page](https://status.crisp.chat/)
-- [Wdes's status page](https://status.datacenters.network/)
+- [Wdes's status page](https://status.wdes.eu/)
 
 ### Zabbix, my daily monitoring tool
 
