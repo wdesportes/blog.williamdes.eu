@@ -1,7 +1,7 @@
 +++
 title = "Add a crypt data volume to Alpine 3.17"
 date = 2022-05-20T00:07:00+00:02
-updated = 2023-02-26T00:53:00+00:02
+updated = 2024-03-09T11:44:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -93,3 +93,13 @@ mount -a -v
 #sleep 4
 echo 'Done !'
 ```
+
+#### Or `crypttab`
+
+See: https://manpages.ubuntu.com/manpages/focal/en/man5/crypttab.5.html - `initramfs` "This option is specific to the Debian crypttab format. It's not supported by systemd." - `luks` "Force LUKS mode" - `discard` "Allow using of discards (TRIM) requests for device"
+
+Use `lsblk -o uuid,mountpoint,path | grep -F "/dev/sdb1"`
+Add `enc_storage UUID=xxx-xxx-xx-xx-xxxx none luks,discard,initramfs` to `/etc/crypttab`
+And `update-initramfs -c -k $(uname -r)`
+
+See: https://serverfault.com/a/1101450/336084
