@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Williamdes&#x27;s blog - story</title>
-    <link href="https://blog.williamdes.eu/tags/story/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.williamdes.eu"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/story/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-05-05T19:50:00+00:00</updated>
     <id>https://blog.williamdes.eu/tags/story/atom.xml</id>
@@ -10,10 +10,16 @@
         <title>The Debian packages I maintain</title>
         <published>2023-05-05T19:50:00+00:00</published>
         <updated>2023-05-05T19:50:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/"/>
         <id>https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/</id>
         
         <summary type="html">&lt;p&gt;A presentation of the Debian packages I maintain&lt;&#x2F;p&gt;
@@ -24,10 +30,16 @@
         <title>Follow my phpMyAdmin adventure</title>
         <published>2021-01-13T12:00:00+00:00</published>
         <updated>2021-01-13T12:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.williamdes.eu/phpmyadmin-adventure/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/phpmyadmin-adventure/"/>
         <id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
         
         <summary type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
@@ -38,10 +50,16 @@
         <title>Welcome to my blog !</title>
         <published>2021-01-01T12:00:00+00:00</published>
         <updated>2021-01-13T23:00:00+00:00</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.williamdes.eu/welcome-to-my-blog/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/welcome-to-my-blog/"/>
         <id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
         
         <summary type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;

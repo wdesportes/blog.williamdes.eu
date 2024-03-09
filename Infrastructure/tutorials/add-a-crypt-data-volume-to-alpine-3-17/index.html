@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2022-05-20T00:07:00+00:02">
         <meta property="article:published_time" content="2022-05-20T00:07:00">
-        <meta property="article:modified_time" content="2023-02-26T00:53:00">
+        <meta property="article:modified_time" content="2024-03-09T11:44:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="LUKS">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Add a crypt data volume to Alpine 3.17",
     "dateCreated": "2022-05-20T00:07:00+0002",
     "datePublished": "2022-05-20T00:07:00+0002",
-    "dateModified": "2023-02-26T00:53:00+0002",
+    "dateModified": "2024-03-09T11:44:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -210,9 +210,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-05-20T00:07:00+0002">May 20, 2022 00:07</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-02-26T00:53:00+0002">February 26, 2023 00:53</time></span>
+            <span class="post-date"> and updated: <time datetime="2024-03-09T11:44:00+0002">March  9, 2024 11:44</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">1 min read</span>
+            <span class="post-reading-time">2 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Add a crypt data volume to Alpine 3.17</p>
@@ -265,6 +265,12 @@ Just rename <code>sdb1</code> to <code>sdb</code> in other commands &amp; script
 </span><span style="color:#65737e;">#sleep 4
 </span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">Done !</span><span>&#39;
 </span></code></pre>
+<h4 id="or-crypttab">Or <code>crypttab</code></h4>
+<p>See: https://manpages.ubuntu.com/manpages/focal/en/man5/crypttab.5.html - <code>initramfs</code> &quot;This option is specific to the Debian crypttab format. It's not supported by systemd.&quot; - <code>luks</code> &quot;Force LUKS mode&quot; - <code>discard</code> &quot;Allow using of discards (TRIM) requests for device&quot;</p>
+<p>Use <code>lsblk -o uuid,mountpoint,path | grep -F &quot;/dev/sdb1&quot;</code>
+Add <code>enc_storage UUID=xxx-xxx-xx-xx-xxxx none luks,discard,initramfs</code> to <code>/etc/crypttab</code>
+And <code>update-initramfs -c -k $(uname -r)</code></p>
+<p>See: https://serverfault.com/a/1101450/336084</p>
 </div>
     <footer class="post-footer">
         
@@ -282,7 +288,7 @@ Just rename <code>sdb1</code> to <code>sdb</code> in other commands &amp; script
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2023 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2024 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

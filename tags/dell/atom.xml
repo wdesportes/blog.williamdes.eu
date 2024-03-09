@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Williamdes&#x27;s blog - DELL</title>
-    <link href="https://blog.williamdes.eu/tags/dell/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://blog.williamdes.eu"/>
+    <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/dell/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-05-24T15:40:00+00:02</updated>
     <id>https://blog.williamdes.eu/tags/dell/atom.xml</id>
@@ -10,10 +10,16 @@
         <title>Making NVME SSDs work on a DELL R630</title>
         <published>2022-05-20T00:07:00+00:02</published>
         <updated>2023-05-24T15:40:00+00:02</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
         
         <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
@@ -24,10 +30,16 @@
         <title>Migrating to a new server housed at Dyjix</title>
         <published>2021-07-02T20:20:00+00:02</published>
         <updated>2021-07-24T17:00:00+00:02</updated>
+        
         <author>
-          <name>Unknown</name>
+          <name>
+            
+              Unknown
+            
+          </name>
         </author>
-        <link rel="alternate" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/" type="text/html"/>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
         
         <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
