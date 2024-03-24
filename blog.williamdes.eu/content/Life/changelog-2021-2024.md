@@ -157,3 +157,6 @@ And the office I managed to get rid of most of the ivy and patched part of the r
 You can notice the left part has newer or cleaner slates.
 
 ![03/2024](../Bureaux-Wdes/Avancée-2024-03-21.jpg "03/2024")
+
+I am now looking forward for a better work schedule and maybe getting back to work for phpMyAdmin.
+And also updating my open-source libraries and projects.

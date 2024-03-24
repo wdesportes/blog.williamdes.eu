@@ -24,4 +24,5 @@ date:
 cleanup:
 	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg
 	@echo "Cleaning up..."
-	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg -print0 -exec exiftool "-gps*=" {} \;
+	find ./${PROJECT_NAME}/ -name *.jpg -print0 -exec exiftool -overwrite_original "-gps*=" {} \;
+	find ./${PROJECT_NAME}/ -name *.jpeg -print0 -exec exiftool -overwrite_original "-gps*=" {} \;
