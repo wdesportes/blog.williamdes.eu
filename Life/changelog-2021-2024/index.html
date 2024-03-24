@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - My life changelog from 2021 to 2024</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="My life changelog from 2021 to 2024.">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="My life changelog from 2021 to 2024">
+        <meta property="og:url" content="https://blog.williamdes.eu/Life/changelog-2021-2024">
+        <meta property="og:description" content="My life changelog from 2021 to 2024.">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2024-03-19T21:36:00+00:01">
+        <meta property="article:published_time" content="2024-03-19T21:36:00">
+        <meta property="article:modified_time" content="2024-03-24T17:00:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="Life"><meta property="article:tags" content="Life-changelog">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Life",
+                    "name": "Life"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Life/changelog-2021-2024",
+                    "name": "My life changelog from 2021 to 2024"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Life/changelog-2021-2024/",
+    "headline": "My life changelog from 2021 to 2024",
+    
+    "dateCreated": "2024-03-19T21:36:00+0001",
+    "datePublished": "2024-03-19T21:36:00+0001",
+    "dateModified": "2024-03-24T17:00:00+0001",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    
+    
+    "genre": ["Life","Life-changelog"]
+}
+</script>
+<script>
+            function setTheme() {
+                const time = new Date();
+
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="//analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">My life changelog from 2021 to 2024</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2024-03-19T21:36:00+0001">March 19, 2024 21:36</time></span>
+            <span class="post-date"> and updated: <time datetime="2024-03-24T17:00:00+0001">March 24, 2024 17:00</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">7 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>My life changelog from 2021 to 2024.</p>
+<span id="continue-reading"></span>
+<p><img src="../Gourin-fum%C3%A9e-au-loin.jpg" alt="Gourin - fumée au loin -11/2023" title="Gourin - fumée au loin -11/2023" /></p>
+<h4 id="december-2020">December 2020</h4>
+<p>On this <a href="https://blog.williamdes.eu/phpmyadmin-adventure/">blog post</a> I explained that I started in December 2020 to work for phpMyAdmin.
+In fact in 20/11/2020 I was officially a freelance and could start invoicing clients.</p>
+<h4 id="2021">2021</h4>
+<p>Until 09/2021 I was working for phpMyAdmin, but one day my previous boss called me back.
+He asked me if I would want to work for the client I was working for when I was their employee.
+I agreed, this was an opportunity to end up what I had left behind me. I loved that mission because of how much I had improved their code and infrastructure.</p>
+<h4 id="the-story-about-this-mission">The story about this mission</h4>
+<p>This was my first job after I had finished with school. My first commit to this project was in 03/10/2018.
+In fact this client has tried to hire another development company to do the work.
+Maybe it was for them a way to test if we where doing the job or not. But that nearly costed them taking the company near to thinking about closing. Their customers where unhappy.
+The story is that at the moment where they &quot;fired&quot; us, I had passed on some of my knowledge to the new team. And had given instructions on how to maintain the project.</p>
+<p>I pushed one last commit on the day <code>26/06/2020</code>:</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>Merge branch &#39;QA&#39; into development (bye everybody, good luck !)
+</span><span>
+</span><span>Just remember my first commit back in the day 1e8781697caf57752fabe9b4889dfc521d74ff52 the 03/10/2018
+</span></code></pre>
+<p>But you can easily guess that they did not follow my instructions and when I did come back the tech debt was burning down the project.
+They agreed to all of the features the client wanted, but did not do the necessary refactoring work.
+Implementing stuff in front-ends with nasty hacks. That meant that the front-ends where very slow on some crucial operations. For example instead of passing down an array to the back end they called <code>foreach item do POST /api</code>.
+What a mess. Even invoices where generated on the fly, but never stored. We (me and the new team) had to revert most of what they did. This team of thieves in my opinion mostly robbed the client while not doing the necessary work.
+It took them one year and some months to take an updated and production ready project into shreds and deep tech debt.</p>
+<p>On the <code>03/09/2021</code> I was back pushing commits and started taking the project out of the fire. I took some days off to sort out my new workaway. And started for real on the <code>27/09/2021</code>.
+On the <code>07/09/2021</code> my best friend joined the party, thank you so much ! We had awesome moments together and killed tech debt and cleaned the project.</p>
+<p>Being back on this project was awesome, I really loved it. Very good and incredible memories.</p>
+<h4 id="the-workaway-lifestyle">The &quot;workaway&quot; lifestyle</h4>
+<p>After some seaching I had found a <a rel="noopener" target="_blank" href="https://www.workaway.info/">workaway</a> near where my parents live.
+Because before that I was spending awesome time with my best friend 5 hours long from where my parents where.</p>
+<p><img src="../An-abandonned-windmill-in-France.jpg" alt="An abandonned windmill in France" title="An abandonned windmill in France" /></p>
+<p>I will not give too much details, but I ended up seaching for this workaway to find some place where I could help and have some more/different fun in my life. On the <code>11/09/2021</code> I arrived at this new location. My sleeping place was an Adria caravan.
+On this picture you can see my car (Opel Astra) and the Adria caravan. (The licence plate is no longer mine, I sold the car)
+I spent so much good days sleeping in this caravan. It was peaceful and I could enjoy the noise of rain falling and wind blowing.
+<img src="../Arriving-at-the-workaway-My-Opel-Astra-and-the-Adria-Caravan.jpeg" alt="Arriving at my workaway - My car (Opel Astra 2013) and the Adria caravan" title="Arriving at my workaway - My car (Opel Astra 2013) and the Adria caravan" /></p>
+<p>So, what was my mission at this workaway: Helping with the animals, repairing and maintaining buildings or meadows.</p>
+<p>The unexpected event: One month after my arrival, I met my incredible girlfriend.
+We both love animals and nature. Meeting someone in such a place really made sense.</p>
+<p><img src="../Bretagne-meadow-Very-old-tree.jpg" alt="A very old tree near my workaway in Britany" title="A very old tree near my workaway in Britany" /></p>
+<p>At the end of the year I bought myself an Adria caravan from 1988.</p>
+<h4 id="adria-caravan-from-1988">Adria Caravan from 1988</h4>
+<p>With some repairs done to the front, that's why a panel is slightly more beige.</p>
+<p><img src="../Adria-1988/My-Adria-Caravan.jpg" alt="My Adria caravan" title="My Adria caravan" /></p>
+<h4 id="2022">2022</h4>
+<p>This was a year of hard work, I had a lot of work for my client and also had to help at the workaway.
+And I renovated my caravan.</p>
+<p>On <code>25/04/2022</code> my best friend left the project I started working on in 2021. It is now a bit less fun to work on.</p>
+<p>In 10/2022 I was in Berlin at <a rel="noopener" target="_blank" href="https://eurorust.eu/2022/">eurorust 2022</a>, it was a cool event where I met nice developers.</p>
+<p><img src="../Berlin-2022-10.jpg" alt="A park in Berlin - 2022" title="A park in Berlin - 2022" /></p>
+<p>At the end of this year I took some vacations on the Reunion island.
+This also was the end of my workaway. I also shut down my freelance status.</p>
+<h4 id="reunion-island">Reunion island</h4>
+<p><img src="../La-R%C3%A9union/A-coast.jpg" alt="The coastline" title="The coastline" />
+<img src="../La-R%C3%A9union/La-Reunion-Flag.jpg" alt="The flag" title="The flag" />
+<img src="../La-R%C3%A9union/Some-palm-trees.jpg" alt="Some palm tres" title="Some palm tres" />
+<img src="../La-R%C3%A9union/The-mountains.jpg" alt="The mountains" title="The mountains" />
+<img src="../La-R%C3%A9union/The-volcano.jpg" alt="The volcano" title="The volcano" /></p>
+<h4 id="2023">2023</h4>
+<p>I started this new year I was now an employee of my own company (100% shareholder).
+This has social benefits like retirement and health insurance.
+But it also costs much more than a freelance status. For a freelance it is only ~24% taxes on the income/invoices.</p>
+<p>I am very glad with this new status, it simplifies some aspects in my life. My company also provides hosting services to other companies.
+At the start of the year in 03/2023 I got myself an appartment. Nothing incredible but that was the only rent I could afford. I miss working and living in my caravan.</p>
+<p>At the same time period I sold my Opel Astra car and bought the exact same one but running on gas, the previous one was running on gasoline.
+I did this swap because it was the right time to sell the other one as it had not too much kilometers. Some not so much bucks I now have the same one with ~100 000 km less.
+I visited the south of France in my trip to go buy the car.</p>
+<h5 id="visiting-lyon">Visiting Lyon</h5>
+<p><img src="../Lyon-fountain.jpg" alt="A fountain in Lyon" title="A fountain in Lyon" />
+<img src="../Lyon-Horloge-Astronomique-1598.jpg" alt="L'horloge astronomique de Lyon - 1598" title="L'horloge astronomique de Lyon - 1598" />
+<img src="../Lyon-Horloge-Astronomique-1598-infos.jpg" alt="L'horloge astronomique de Lyon - 1598" title="L'horloge astronomique de Lyon - 1598" /></p>
+<h5 id="company-s-office">Company's office</h5>
+<p>At the end of the year, I bought for my company a place to host it's &quot;office&quot;. This really was for me some light since I started working very hard in 09/2021.</p>
+<p>There is a lot of roof work to do, and ivy on one of the sides.</p>
+<p><img src="../Bureaux-Wdes/D%C3%A9but-2023-12-25.jpg" alt="12/2023" title="12/2023" /></p>
+<h4 id="january-mid-march-2024">January -&gt; mid March 2024</h4>
+<p>I started trying to slow down my work schedule. That helped do some open-source tasks and having a better quality of life.
+And the office I managed to get rid of most of the ivy and patched part of the roof.
+You can notice the left part has newer or cleaner slates.</p>
+<p><img src="../Bureaux-Wdes/Avanc%C3%A9e-2024-03-21.jpg" alt="03/2024" title="03/2024" /></p>
+<p>I am now looking forward for a better work schedule and maybe getting back to work for phpMyAdmin.
+And also updating my open-source libraries and projects.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/life/">Life</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/life-changelog/">Life-changelog</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2024 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
