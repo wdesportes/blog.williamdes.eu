@@ -1,6 +1,7 @@
 +++
 title = "Follow my phpMyAdmin adventure"
 date = 2021-01-13T12:00:00Z
+updated = 2024-03-19T23:00:00Z
 
 [extra]
 author = "William Desportes"
@@ -21,6 +22,7 @@ After a lot of hours contributing to phpMyAdmin I received an unexpected invitat
 That day was on the 27/08/2018, a very happy day !
 Since then I am a [phpMyAdmin team member](https://phpmyadmin.net/team).
 
-I work for phpMyAdmin starting on the 01/12/2020.
+I worked for phpMyAdmin from the 01/12/2020 to 30/11/2022.
+With some months where I was working for other clients or my own projects.
 
 You can find my reports: [here](https://blog.williamdes.eu/tags/phpmyadmin/)
