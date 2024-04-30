@@ -66,6 +66,14 @@
         <lastmod>2023-07-06T16:07:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/</loc>
+        <lastmod>2024-05-07T16:59:00+00:02</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/opnsense-add-firewall-rule-from-console/</loc>
+        <lastmod>2024-04-13T11:40:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Life/</loc>
     </url>
     <url>
@@ -329,6 +337,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/openfortigui/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/opnsense/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/opnsense/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-report/</loc>

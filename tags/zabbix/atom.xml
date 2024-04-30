@@ -4,8 +4,28 @@
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/zabbix/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-11-15T04:18:09+00:01</updated>
+    <updated>2024-05-07T16:59:00+00:02</updated>
     <id>https://blog.williamdes.eu/tags/zabbix/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Monitoring an UPS using Zabbix and Apcupsd</title>
+        <published>2024-05-07T16:59:00+00:02</published>
+        <updated>2024-05-07T16:59:00+00:02</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/</id>
+        
+        <summary type="html">&lt;p&gt;Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Migrating from upptime to Zabbix and Vigil</title>
         <published>2023-10-15T15:00:00+00:02</published>

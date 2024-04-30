@@ -1,0 +1,411 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    - uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    - uuid: af251381b1fc47e884c723bf15a00530
+      template: APCUPSd
+      name: APCUPSd
+      description: 'Template for reading APC UPS over USB interface using apcupsd.'
+      groups:
+        - name: Templates
+      items:
+        - uuid: d9468824456a404ea40633cc07f7bfc8
+          name: 'Apcupsd status'
+          key: apcupsd
+          delay: 10s
+          history: '0'
+          trends: '0'
+          value_type: TEXT
+          description: 'JSON data for apcupsd'
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: b794f5bdba344543b2e7e681d50455ea
+          name: 'UPS Battery Voltage'
+          type: DEPENDENT
+          key: apcupsd.BATTV
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.BATTV
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 10608a49fdd5445ab6ac35eca19e30b9
+          name: 'UPS Battery Charge'
+          type: DEPENDENT
+          key: apcupsd.BCHARGE
+          delay: '0'
+          history: 30d
+          units: '%'
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.BCHARGE
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 5b723ff2fc634a0ab86f0b55f0133d4d
+          name: 'UPS High-Voltage Transfer'
+          type: DEPENDENT
+          key: apcupsd.HITRANS
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.HITRANS
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 2bc53a0f5b034c8d86f65ffed66da3f5
+          name: 'UPS Line Frequency'
+          type: DEPENDENT
+          key: apcupsd.LINEFREQ
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: Hz
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.LINEFREQ
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 20ff8be0b5c8470799778b26139836d6
+          name: 'UPS Line Voltage'
+          type: DEPENDENT
+          key: apcupsd.LINEV
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.LINEV
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 51358dd1a867490eba18c33ab64c8b42
+          name: 'UPS Load'
+          type: DEPENDENT
+          key: apcupsd.LOADPCT
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: '%'
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.LOADPCT
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: d16db749542f48cabe66de6b338f8eef
+          name: 'UPS Low-Voltage Transfer'
+          type: DEPENDENT
+          key: apcupsd.LOTRANS
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.LOTRANS
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 427d1532a5a84ec3bd36f946b00c20c6
+          name: 'UPS Max time'
+          type: DEPENDENT
+          key: apcupsd.MAXTIME
+          delay: '0'
+          history: 7d
+          units: s
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.MAXTIME
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: c95a44749bc846408107ed86b13b3a58
+          name: 'UPS Minimum Battery Charge'
+          type: DEPENDENT
+          key: apcupsd.MBATTCHG
+          delay: '0'
+          history: 30d
+          units: '%'
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.MBATTCHG
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: fa9cf2371e72476f958ef2dd3542ac06
+          name: 'UPS Minimum Time on Battery Remaining'
+          type: DEPENDENT
+          key: apcupsd.MINTIMEL
+          delay: '0'
+          history: 30d
+          units: m
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.MINTIMEL
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: c182be711c5d43188993fc288442644c
+          name: 'UPS Watts Load'
+          type: CALCULATED
+          key: apcupsd.nomwatts
+          units: w
+          params: 'last(//apcupsd.LOADPCT) / 100 * {$APC_NOM_WATTS}'
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 2b17cd8b73804f9284e1cab9905d843d
+          name: 'UPS Number of transfers'
+          type: DEPENDENT
+          key: apcupsd.NUMXFERS
+          delay: '0'
+          history: 7d
+          units: Transfers
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.NUMXFERS
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: c7c8d57bf9024bddad62677360ab92bd
+          name: 'UPS Ouput voltage'
+          type: DEPENDENT
+          key: apcupsd.OUTPUTV
+          delay: '0'
+          history: 7d
+          value_type: FLOAT
+          units: V
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.OUTPUTV
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 1a66aa1cc9804945b31db89ab6b6813d
+          name: 'UPS Serial number'
+          type: DEPENDENT
+          key: apcupsd.SERIALNO
+          delay: '0'
+          history: 7d
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.SERIALNO
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 8973885efc6946b2810ab35e2f4cff00
+          name: 'UPS Start time'
+          type: DEPENDENT
+          key: apcupsd.STARTTIME
+          delay: '0'
+          history: 7d
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.STARTTIME
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: a210bb3345634ccd813fc537e2415353
+          name: 'UPS State flag'
+          type: DEPENDENT
+          key: apcupsd.STATFLAG
+          delay: '0'
+          history: 30d
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.STATFLAG
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: d1f08efb853848ea84d421c822e6df83
+          name: 'UPS Status'
+          type: DEPENDENT
+          key: apcupsd.Status
+          delay: '0'
+          history: 30d
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.STATUS
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+          triggers:
+            - uuid: b58f4b7c5dc941a4bc7e3b07fa57c30d
+              expression: 'find(/APCUPSd/apcupsd.Status,#1,"regexp","^(ONLINE)$")=0'
+              name: 'UPS Power Interruption'
+              priority: AVERAGE
+              dependencies:
+                - name: 'UPS Recharging'
+                  expression: 'find(/APCUPSd/apcupsd.Status,1s,"regexp","^(CHARGING)$")=1'
+                - name: 'UPS Time Remaining Very Low'
+                  expression: 'last(/APCUPSd/apcupsd.TIMELEFT)<{$APC_REM_CRIT}'
+            - uuid: 5da72f304a434131a6fa5e899d69b401
+              expression: 'find(/APCUPSd/apcupsd.Status,1s,"regexp","^(CHARGING)$")=1'
+              name: 'UPS Recharging'
+              priority: INFO
+              manual_close: 'YES'
+        - uuid: 4e58fbf6a9a8439aa451b05cc2ed9032
+          name: 'UPS Time Left on Battery'
+          type: DEPENDENT
+          key: apcupsd.TIMELEFT
+          delay: '0'
+          history: 30d
+          value_type: FLOAT
+          units: m
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.TIMELEFT
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+          triggers:
+            - uuid: 5826c2e117b74ab99c01885027b1bcf5
+              expression: 'last(/APCUPSd/apcupsd.TIMELEFT)<{$APC_REM_WARN}'
+              name: 'UPS Time Remaining Low'
+              priority: HIGH
+              dependencies:
+                - name: 'UPS Recharging'
+                  expression: 'find(/APCUPSd/apcupsd.Status,1s,"regexp","^(CHARGING)$")=1'
+            - uuid: 3c619bbd6f2e4dca8ec6cdc872d94b7f
+              expression: 'last(/APCUPSd/apcupsd.TIMELEFT)<{$APC_REM_CRIT}'
+              name: 'UPS Time Remaining Very Low'
+              priority: DISASTER
+              dependencies:
+                - name: 'UPS Recharging'
+                  expression: 'find(/APCUPSd/apcupsd.Status,1s,"regexp","^(CHARGING)$")=1'
+        - uuid: 0dd99ddc7ed34320871d3940eb7bcee8
+          name: 'UPS Time on Battery'
+          type: DEPENDENT
+          key: apcupsd.TONBATT
+          delay: '0'
+          history: 30d
+          units: s
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.TONBATT
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+        - uuid: 288b38dba8f545dfbbf4f002851938fb
+          name: 'UPS Last transfer date to off battery since startup'
+          type: DEPENDENT
+          key: apcupsd.XOFFBATT
+          delay: '0'
+          history: 7d
+          trends: '0'
+          value_type: TEXT
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.XOFFBATT
+          master_item:
+            key: apcupsd
+          tags:
+            - tag: Application
+              value: UPS
+      macros:
+        - macro: '{$APC_NOM_WATTS}'
+          value: '650'
+          description: 'nominal wattage of UPS, pulled from running apcaccess and using value of watts for NOMPOWER'
+        - macro: '{$APC_REM_CRIT}'
+          value: '3'
+          description: 'Minutes remaining on UPS power - critical'
+        - macro: '{$APC_REM_WARN}'
+          value: '10'
+          description: 'Minutes remaining on UPS power - warning'
+  graphs:
+    - uuid: 30fa5286885744b6b5af18682928313a
+      name: 'Line Voltage'
+      graph_items:
+        - drawtype: DASHED_LINE
+          color: FF0000
+          item:
+            host: APCUPSd
+            key: apcupsd.HITRANS
+        - sortorder: '1'
+          drawtype: BOLD_LINE
+          color: 00FF00
+          item:
+            host: APCUPSd
+            key: apcupsd.LINEV
+        - sortorder: '2'
+          drawtype: DASHED_LINE
+          color: FF0000
+          item:
+            host: APCUPSd
+            key: apcupsd.LOTRANS
