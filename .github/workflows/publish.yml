@@ -1,4 +1,4 @@
-name: Publish to git to static pages
+name: Publish to git (static pages)
 
 permissions:
     contents: none
@@ -18,7 +18,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
               with:
-                  fetch-depth: 1
+                  # Fetch all branches to have static-pages too
+                  fetch-depth: 0
                   token: ${{ secrets.SUDO_BOT_TOKEN }}
                   # Already the default value, but so you understand the push command will have creds
                   persist-credentials: true
