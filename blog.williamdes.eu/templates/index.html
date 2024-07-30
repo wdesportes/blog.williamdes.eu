@@ -49,7 +49,7 @@
         <link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) }}">
 
         <!-- Feeds -->
-        {% if config.generate_feed %}<link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">{% endif %}
+        {% if config.generate_feeds %}{% for feed in config.feed_filenames %}<link rel="alternate" type={% if feed == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=feed) | safe }}">{% endfor %}{% endif %}
 
 
         {%- block jsonld %}
@@ -172,7 +172,7 @@
             <span>&middot;</span>
             <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
             <span>&middot;</span>
-            <span><a href="{{ get_url(path=config.feed_filename) | safe }}" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            {% if config.generate_feeds %}{% for feed in config.feed_filenames %}<span><a href="{{ get_url(path=feed) | safe }}" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>{% endfor %}{% endif %}
             <br>
             <span>If you are searching for cookies, this is not a bakery website ^^</span>
         </footer>

@@ -10,7 +10,8 @@ build_search_index = false
 
 title = "Williamdes's blog"
 
-generate_feed = true
+generate_feeds = true
+feed_filenames = ["atom.xml"]
 
 taxonomies = [
     {name = "tags", feed = true, paginate_by = 5},
