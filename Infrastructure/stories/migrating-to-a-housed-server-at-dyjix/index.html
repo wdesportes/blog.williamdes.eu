@@ -123,72 +123,25 @@
     "genre": ["infra-story","DELL","DELL-R630"]
 }
 </script>
-<script>
-            function setTheme() {
-                const time = new Date();
-
-                const prev = localStorage.getItem('date');
-                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
-
-                const now = time.getTime();
-                let sunrise;
-                let sunset;
-
-                function setBodyClass() {
-                    if (now > sunrise && now < sunset) return;
-                    document.body.classList.add('dark');
-                }
-
-                if (date !== prev) {
-                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=f96ef8fc7d8247deae9022b4cedd6f97')
-                        .then(res => res.json())
-                        .then(data => {
-                            sunrise = data.sunrise.split(':').map(Number);
-                            sunset = data.sunset.split(':').map(Number);
-                    })
-                    .catch(() => {
-                        sunrise = [7, 0];
-                        sunset = [19, 0];
-                    })
-                    .finally(() => {
-                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
-                        sunset = time.setHours(sunset[0], sunset[1], 0);
-                        setBodyClass();
-                        localStorage.setItem('sunrise', sunrise);
-                        localStorage.setItem('sunset', sunset);
-                    });
-                    localStorage.setItem('date', date);
-                } else {
-                    sunrise = Number(localStorage.getItem('sunrise'));
-                    sunset = Number(localStorage.getItem('sunset'));
-                    setBodyClass();
-                }
-            }
-        </script>
-        <!-- Matomo -->
+<!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
-            var u="//analytics.wdes.eu/";
+            var u="https://analytics.wdes.eu/";
             _paq.push(['setTrackerUrl', u+'matomo.php']);
             _paq.push(['setSiteId', '1']);
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
         </script>
-        <noscript><p><img src="//analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
         <!-- End Matomo Code -->
     </head>
 
     <body class="single">
-
-    <!-- Apply theme -->
-    <script>
-      setTheme();
-    </script>
 
     
         <header class="header">
