@@ -270,7 +270,7 @@ Also did work on trying to reproduce bugs. Uploaded motranslator Update to the P
 Worked on Selenium tests to fix the errors.</p>
 <h3 id="sunday-1">Sunday</h3>
 <p>Sent shapefile to buster-backports and to our Ubuntu PPA. Made some stale issue triage and pull-request merging.</p>
-<p>Working on a big refactoring of the field flags handling. The code is currently like 2 people using a translator for languages they already know. The code fetches flags, builds a string with an array and all the codebase performs strpos onto the string. Very &quot;stupid&quot;, but maybe made sense sometime ago. Anyway it is eating performance and needs to be thrown out. Now only relying on a full typed object. This will bring safety and performance everywhere where field flags did leak.</p>
+<p>Working on a big refactoring of the field flags handling. The code is currently like 2 people using a translator for languages they already know. The code fetches flags, builds a string with an array and all the codebase performs strpos onto the string. Very "stupid", but maybe made sense sometime ago. Anyway it is eating performance and needs to be thrown out. Now only relying on a full typed object. This will bring safety and performance everywhere where field flags did leak.</p>
 <h2 id="third-week-07">Third week (07)</h2>
 <h3 id="monday-15-02-2021">Monday (15/02/2021)</h3>
 <p>Worked on finishing my field flags refactoring. Pull-request testing and issue triage as I do everyday ^^
@@ -290,7 +290,7 @@ Also worked on the INT validation form fixes.</p>
 <h3 id="saturday-2">Saturday</h3>
 <p><em>A day off.</em></p>
 <h3 id="sunday-2">Sunday</h3>
-<p>I made the release script way better by running tests on the &quot;built package&quot; rather than on a vendor folder that was not the one shipped to users. Also wrote a script to find and help remove useless vendor files from release tarballs.
+<p>I made the release script way better by running tests on the "built package" rather than on a vendor folder that was not the one shipped to users. Also wrote a script to find and help remove useless vendor files from release tarballs.
 Also did some digging on the new errors found by phpstan. One seems to be true but I could not confirm any PHP warning, I am keeping my fix for later.
 And did refactor the route cache handling, now there is two flags. One to define if the routing cache should be skipped and another one to know if the cache can be written.</p>
 <h2 id="fourth-week-08">Fourth week (08)</h2>

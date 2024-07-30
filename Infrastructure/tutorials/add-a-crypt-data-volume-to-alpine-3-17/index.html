@@ -266,8 +266,8 @@ Just rename <code>sdb1</code> to <code>sdb</code> in other commands &amp; script
 </span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">Done !</span><span>&#39;
 </span></code></pre>
 <h4 id="or-crypttab">Or <code>crypttab</code></h4>
-<p>See: https://manpages.ubuntu.com/manpages/focal/en/man5/crypttab.5.html - <code>initramfs</code> &quot;This option is specific to the Debian crypttab format. It's not supported by systemd.&quot; - <code>luks</code> &quot;Force LUKS mode&quot; - <code>discard</code> &quot;Allow using of discards (TRIM) requests for device&quot;</p>
-<p>Use <code>lsblk -o uuid,mountpoint,path | grep -F &quot;/dev/sdb1&quot;</code>
+<p>See: https://manpages.ubuntu.com/manpages/focal/en/man5/crypttab.5.html - <code>initramfs</code> "This option is specific to the Debian crypttab format. It's not supported by systemd." - <code>luks</code> "Force LUKS mode" - <code>discard</code> "Allow using of discards (TRIM) requests for device"</p>
+<p>Use <code>lsblk -o uuid,mountpoint,path | grep -F "/dev/sdb1"</code>
 Add <code>enc_storage UUID=xxx-xxx-xx-xx-xxxx none luks,discard,initramfs</code> to <code>/etc/crypttab</code>
 And <code>update-initramfs -c -k $(uname -r)</code></p>
 <p>See: https://serverfault.com/a/1101450/336084</p>

@@ -219,7 +219,7 @@
 <span id="continue-reading"></span>
 <p>This is the story about a R630 server having NVME, SAS and SATA disks working together.
 The server is owner by my company but for this blog post let's say it is my server.
-I did buy the server (<a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-poweredge-r630-10-sff-configure-to-order">Dell PowerEdge R630 1U 10x 2.5&quot; (SFF)</a>) in January of 2022.</p>
+I did buy the server (<a rel="noopener" target="_blank" href="https://www.bargainhardware.co.uk/dell-poweredge-r630-10-sff-configure-to-order">Dell PowerEdge R630 1U 10x 2.5" (SFF)</a>) in January of 2022.</p>
 <p><img src="../DELL_PowerEdge_R630_MissingACPU.jpg" alt="DELL R630 missing a CPU" title="DELL R630 missing a CPU" /></p>
 <h3 id="the-failed-deployment-in-a-datacenter">The failed deployment in a datacenter</h3>
 <p>I was confident I could swap this new machine with the other one, they where quite identical.
@@ -252,9 +252,9 @@ So I received the disks and did setup up one and then two. None of the disks whe
 <p>I was not understanding what was wrong because the NVME card had green leds and the disks too. I then took the bet it was because they where NVME gen 4 and the system could only handle gen 3 but that was not it. I also did order a SAS disk to try it.</p>
 <p>I was now having a system with: 3 NVMEs not working, one SAS and one SATA disk showing up.
 After some debug and trying dumb things I tried to put the NVME card on the reizer of CPU 1.
-And boom ! it did show up in Linux. This was it, I had found something (written in very small on the other reizer was &quot;CPU 2&quot;). But on this reizer the cables where too short. So I was still having 3 non showing NVMEs.</p>
+And boom ! it did show up in Linux. This was it, I had found something (written in very small on the other reizer was "CPU 2"). But on this reizer the cables where too short. So I was still having 3 non showing NVMEs.</p>
 <h4 id="a-second-cpu">A second CPU</h4>
-<p>I decided to contact the seller to buy a second CPU and RAM. Got them delivered very quickly (thank you &quot;UPS express&quot; !).
+<p>I decided to contact the seller to buy a second CPU and RAM. Got them delivered very quickly (thank you "UPS express" !).
 Now I did put the CPU 2 and still nothing shows up, not even the CPU 2.
 After some <a rel="noopener" target="_blank" href="https://www.reddit.com/r/Dell/comments/usm9m8/r630_dual_cpu_not_showing_up/">asking Internet on Reddit</a> people started saying it was probably the motherboard.</p>
 <h4 id="new-motherboard">New motherboard</h4>
