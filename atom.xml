@@ -4,7 +4,7 @@
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-05-07T16:59:00+00:02</updated>
+    <updated>2024-09-16T21:54:33+00:02</updated>
     <id>https://blog.williamdes.eu/atom.xml</id>
     <entry xml:lang="en">
         <title>Monitoring an UPS using Zabbix and Apcupsd</title>
@@ -149,7 +149,7 @@
     <entry xml:lang="en">
         <title>The Debian packages I maintain</title>
         <published>2023-05-05T19:50:00+00:00</published>
-        <updated>2023-05-05T19:50:00+00:00</updated>
+        <updated>2024-09-16T21:54:33+00:02</updated>
         
         <author>
           <name>
