@@ -1,6 +1,7 @@
 +++
 title = "The Debian packages I maintain"
 date = 2023-05-05T19:50:00Z
+updated = 2024-09-16T21:54:33+00:02
 
 [extra]
 author = "William Desportes"
@@ -55,6 +56,7 @@ I decided to make them easier to find and created labels for them on Debian Sals
 - [phpldapadmin](https://tracker.debian.org/pkg/phpldapadmin), I [saved/adopted it and made PHP 8.1/8.2 support](https://tracker.debian.org/news/1427368/accepted-phpldapadmin-1263-03-source-into-unstable/).
 - [shunit2](https://tracker.debian.org/pkg/shunit2), I [finished the hard refurubishing work](https://tracker.debian.org/news/1357356/accepted-shunit2-218-1-source-into-experimental/) and got it updated in Debian for bookworm.
 - [phing](https://tracker.debian.org/pkg/phing), I [adopted it](https://tracker.debian.org/news/1417993/accepted-phing-2174-1-source-into-unstable/) to save it from beeing missing from Debian bookworm !
+- [kcov](https://tracker.debian.org/pkg/kcov), I [adopted this very old package that existed in Debian jessie and stretch](https://tracker.debian.org/pkg/kcov) and got it updated in Debian for trixie.
 
 ## The packages I help maintain
 
