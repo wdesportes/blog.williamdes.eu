@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Installing a distributed etcd cluster on Debian 12</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Install a distributed etcd cluster on Debian 12.">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Installing a distributed etcd cluster on Debian 12">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster">
+        <meta property="og:description" content="Install a distributed etcd cluster on Debian 12.">
+        
+        
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/crowdsec_logo_large.9247552ac3502e74.jpg"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="627"/>
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2024-10-20T14:30:00+00:02">
+        <meta property="article:published_time" content="2024-10-20T14:30:00">
+        <meta property="article:modified_time" content="2024-10-21T00:45:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="distributed"><meta property="article:tags" content="etcd">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster",
+                    "name": "Installing a distributed etcd cluster on Debian 12"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/",
+    "headline": "Installing a distributed etcd cluster on Debian 12",
+    "alternativeHeadline": "How to install a distributed etcd cluster on Debian 12.",
+    "dateCreated": "2024-10-20T14:30:00+0002",
+    "datePublished": "2024-10-20T14:30:00+0002",
+    "dateModified": "2024-10-21T00:45:00+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["distributed","etcd"],
+    "articleSection": "Tutorial",
+    "genre": ["infra-tutorial","distributed","etcd"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Installing a distributed etcd cluster on Debian 12</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2024-10-20T14:30:00+0002">October 20, 2024 14:30</time></span>
+            <span class="post-date"> and updated: <time datetime="2024-10-21T00:45:00+0002">October 21, 2024 00:45</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">6 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Install a distributed <a rel="noopener" target="_blank" href="https://etcd.io">etcd</a> cluster on Debian 12.</p>
+<span id="continue-reading"></span>
+<p>This post will cover how to install a distributed <a rel="noopener" target="_blank" href="https://etcd.io">etcd</a> cluster on Debian 12.</p>
+<h2 id="what-is-etcd">What is etcd ?</h2>
+<p>"etcd is a distributed, reliable key-value store for the most critical data of a distributed system."</p>
+<h2 id="installing">Installing</h2>
+<p>On all nodes, run <code>apt-get install etcd-server</code>.
+At the time writing this the Debian bookworm version of <code>etcd-server</code> is <code>3.4.23-4+b4</code>.</p>
+<p>On one node you will need <code>etcd-client</code> to run <code>etcdctl</code> and check the network status.</p>
+<h2 id="topology">Topology</h2>
+<p>This will be a 3 node setup, the "Tours" and "Paris" nodes have private and public ips (via Internet) to communicate between each other.
+The "Mini" node will only be able to communicate with the other nodes via the public Internet.
+The "Mini" node can receive traffic on it's IPv4 IP, but not on it's IPv6 IP.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>-                      private link
+</span><span>-  +----------------+                  +----------------+
+</span><span>-  |                +-----------------&gt;|                |
+</span><span>-  |   Tours        |                  |   Paris        |
+</span><span>-  |                |&lt;-----------------+                |
+</span><span>-  |                |                  |                |
+</span><span>-  +-----+--+-------+                  +---+------+-----+
+</span><span>-      ^ |  | ^       Internet link        | ^    | ^
+</span><span>-      | |  | |                            | |    | |
+</span><span>-      | |  | +----------------------------+ |    | |
+</span><span>-      | |  +--------------------------------+    | |
+</span><span>-      | |                                        | |
+</span><span>-      | |                                        | |
+</span><span>-      | | Internet link                          | |  Internet link
+</span><span>-      | |                                        | |
+</span><span>-      | |                                        | |
+</span><span>-      | |                                        | |
+</span><span>-      | |                                        | |
+</span><span>-      | |           +----------------+           | |
+</span><span>-      | |           |                |           | |
+</span><span>-      | +----------&gt;|   Mini         |&lt;----------+ |
+</span><span>-      +-------------+                +-------------+
+</span><span>-                    |                |
+</span><span>-                    +----------------+
+</span></code></pre>
+<h2 id="configuring">Configuring</h2>
+<h3 id="the-variables">The variables</h3>
+<p>You can find them on <a rel="noopener" target="_blank" href="https://etcd.io/docs/v3.4/op-guide/configuration/">etcd.io 3.4 op-guide</a>.</p>
+<ul>
+<li><code>ETCD_NAME</code> is the human-readable name for the node.</li>
+<li><code>ETCD_DATA_DIR</code> is important as it is the path to the data directory.</li>
+<li><code>ETCD_LISTEN_CLIENT_URLS</code> is the list (comma separated) of URLs to listen (port <code>2379</code>) on for client traffic. The format is <code>scheme://IP:port</code>, to bind all IPs use <code>0.0.0.0</code>.</li>
+<li><code>ETCD_LISTEN_PEER_URLS</code> same as clients but using the port <code>2380</code>.</li>
+<li><code>ETCD_ADVERTISE_CLIENT_URLS</code> is a list of this member's client URLs to advertise to the rest of the cluster. These URLs can contain domain names. Avoid <code>localhost</code> as it may create infinite loops. Example: <code>http://example.com:2379, http://10.0.0.1:2379</code></li>
+</ul>
+<h4 id="bootstrap-variables-for-the-cluster">Bootstrap variables for the cluster</h4>
+<ul>
+<li><code>ETCD_INITIAL_ADVERTISE_PEER_URLS</code> is a list of this member's peer URLs to advertise to the rest of the cluster. These addresses are used for communicating etcd data around the cluster. At least one must be routable to all cluster members. These URLs can contain domain names.</li>
+<li><code>ETCD_INITIAL_CLUSTER</code> is the initial cluster configuration for bootstrapping. Example: <code>default=http://localhost:2380</code></li>
+<li><code>ETCD_INITIAL_CLUSTER_STATE</code> is a value to set to "new" for all members present during initial static or DNS bootstrapping. If this option is set to "existing", etcd will attempt to join the existing cluster. If the wrong value is set, etcd will attempt to start but fail safely.</li>
+<li><code>ETCD_INITIAL_CLUSTER_TOKEN</code> A value to use for the initial cluster token for the etcd cluster during bootstrap.</li>
+</ul>
+<h3 id="the-mini-node">The mini node</h3>
+<p>Edit: <code>/etc/default/etcd</code></p>
+<pre data-lang="env" style="background-color:#2b303b;color:#c0c5ce;" class="language-env "><code class="language-env" data-lang="env"><span>ETCD_NAME=&quot;company-name-mini&quot;
+</span><span>ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+</span><span>
+</span><span>ETCD_LISTEN_CLIENT_URLS=&quot;http://192.168.1.11:2379,http://127.0.0.1:2379&quot;
+</span><span>ETCD_LISTEN_PEER_URLS=&quot;http://192.168.1.11:2380&quot;
+</span><span># Public IPs here or private ones if applicable
+</span><span>ETCD_ADVERTISE_CLIENT_URLS=&quot;http://82.11.22.33:2379&quot;
+</span><span>
+</span><span>ETCD_INITIAL_CLUSTER_STATE=&quot;new&quot;
+</span><span>ETCD_INITIAL_CLUSTER_TOKEN=&quot;company-name-etcd-cluster-random-string&quot;
+</span><span>
+</span><span># Similar to ETCD_ADVERTISE_CLIENT_URLS with another port
+</span><span>ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;http://82.11.22.33:2380&quot;
+</span><span>ETCD_INITIAL_CLUSTER=&quot;company-name-mini=http://82.11.22.33:2380,company-name-tours=http://195.8.70.6:2380,company-name-paris=http://185.132.200.12:2380&quot;
+</span></code></pre>
+<h3 id="the-paris-node">The "Paris" node</h3>
+<p>Edit: <code>/etc/default/etcd</code></p>
+<pre data-lang="env" style="background-color:#2b303b;color:#c0c5ce;" class="language-env "><code class="language-env" data-lang="env"><span>ETCD_NAME=&quot;company-name-paris&quot;
+</span><span>ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+</span><span>
+</span><span>ETCD_LISTEN_CLIENT_URLS=&quot;http://10.18.22.5:2379,http://127.0.0.1:2379&quot;
+</span><span>ETCD_LISTEN_PEER_URLS=&quot;http://10.18.22.5:2380&quot;
+</span><span># Public IPs here or private ones if applicable
+</span><span>ETCD_ADVERTISE_CLIENT_URLS=&quot;http://185.132.200.12:2379&quot;
+</span><span>
+</span><span>ETCD_INITIAL_CLUSTER_STATE=&quot;new&quot;
+</span><span>ETCD_INITIAL_CLUSTER_TOKEN=&quot;company-name-etcd-cluster-random-string&quot;
+</span><span>
+</span><span># Similar to ETCD_ADVERTISE_CLIENT_URLS with another port
+</span><span>ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;http://185.132.200.12:2380&quot;
+</span><span>ETCD_INITIAL_CLUSTER=&quot;company-name-mini=http://82.11.22.33:2380,company-name-tours=http://195.8.70.6:2380,company-name-paris=http://185.132.200.12:2380&quot;
+</span></code></pre>
+<h3 id="the-tours-node">The "Tours" node</h3>
+<p>Edit: <code>/etc/default/etcd</code></p>
+<pre data-lang="env" style="background-color:#2b303b;color:#c0c5ce;" class="language-env "><code class="language-env" data-lang="env"><span>ETCD_NAME=&quot;company-name-tours&quot;
+</span><span>ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+</span><span>
+</span><span>ETCD_LISTEN_CLIENT_URLS=&quot;http://172.16.22.3:2379,http://127.0.0.1:2379&quot;
+</span><span>ETCD_LISTEN_PEER_URLS=&quot;http://172.16.22.3:2380,http://127.0.0.1:2380&quot;
+</span><span># Public IPs here or private ones if applicable
+</span><span>ETCD_ADVERTISE_CLIENT_URLS=&quot;http://195.8.70.6:2379&quot;
+</span><span>
+</span><span>ETCD_INITIAL_CLUSTER_STATE=&quot;new&quot;
+</span><span>ETCD_INITIAL_CLUSTER_TOKEN=&quot;company-name-etcd-cluster-random-string&quot;
+</span><span>
+</span><span># Similar to ETCD_ADVERTISE_CLIENT_URLS with another port
+</span><span>ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;http://195.8.70.6:2380&quot;
+</span><span>ETCD_INITIAL_CLUSTER=&quot;company-name-mini=http://82.11.22.33:2380,company-name-tours=http://195.8.70.6:2380,company-name-paris=http://185.132.200.12:2380&quot;
+</span></code></pre>
+<h2 id="testing">Testing</h2>
+<h3 id="firewall-tests">Firewall tests</h3>
+<p>You will need to add this script <code>listen.py</code> on all machines, it only does a port listen:</p>
+<pre data-lang="py" style="background-color:#2b303b;color:#c0c5ce;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#65737e;">#!/usr/bin/python
+</span><span style="color:#b48ead;">import </span><span>socket
+</span><span>
+</span><span style="color:#65737e;"># Source: https://gist.github.com/echojc/5632656
+</span><span>
+</span><span>port = </span><span style="color:#d08770;">2380
+</span><span>s = socket.</span><span style="color:#bf616a;">socket</span><span>(socket.</span><span style="color:#bf616a;">AF_INET</span><span>, socket.</span><span style="color:#bf616a;">SOCK_STREAM</span><span>)
+</span><span>s.</span><span style="color:#bf616a;">bind</span><span>((&#39;&#39;, port))
+</span><span>s.</span><span style="color:#bf616a;">listen</span><span>(</span><span style="color:#d08770;">1</span><span>)
+</span><span>
+</span><span style="color:#b48ead;">while </span><span style="color:#d08770;">1</span><span>:
+</span><span>  (c, a) = s.</span><span style="color:#bf616a;">accept</span><span>()
+</span><span>  </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">connection from: </span><span>&#39;, a)
+</span></code></pre>
+<p>Then run it:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Stop etcd if it is running
+</span><span style="color:#bf616a;">service</span><span> etcd stop
+</span><span style="color:#65737e;"># WARNING: delete any previous data
+</span><span style="color:#bf616a;">rm -rv</span><span> /var/lib/etcd/*
+</span><span style="color:#65737e;"># Listen to the port
+</span><span style="color:#bf616a;">python3</span><span> listen.py &amp;
+</span><span style="color:#65737e;"># Write the pid in a file
+</span><span style="color:#96b5b4;">echo </span><span>$</span><span style="color:#bf616a;">! </span><span>&gt;/tmp/test_server.pid
+</span></code></pre>
+<p>Also, source of the port testing command: <a rel="noopener" target="_blank" href="https://superuser.com/a/1053577/609233">a post on superuser</a>.</p>
+<h4 id="on-the-mini-node">On the mini node</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Test itself
+</span><span>&lt;/dev/tcp/192.168.2.32/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Tours
+</span><span>&lt;/dev/tcp/195.8.70.6/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Paris
+</span><span>&lt;/dev/tcp/185.132.200.12/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span></code></pre>
+<h4 id="on-the-paris-node">On the Paris node</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Test itself
+</span><span>&lt;/dev/tcp/10.18.22.5/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Mini
+</span><span>&lt;/dev/tcp/82.11.22.33/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Tours
+</span><span>&lt;/dev/tcp/195.8.70.6/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span></code></pre>
+<h4 id="on-the-tours-node">On the Tours node</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Test itself
+</span><span>&lt;/dev/tcp/172.16.22.3/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Mini
+</span><span>&lt;/dev/tcp/82.11.22.33/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span><span style="color:#65737e;"># Test Paris
+</span><span>&lt;/dev/tcp/185.132.200.12/2380 &amp;&amp; </span><span style="color:#96b5b4;">echo</span><span> Port is open || </span><span style="color:#96b5b4;">echo</span><span> Port is closed
+</span></code></pre>
+<h3 id="start-the-cluster">Start the cluster</h3>
+<p>Notes: You must start at least 2 etcd nodes whitin 50 seconds or it will return error because of the master election timeout.</p>
+<p>Note: One mistake I made while doing the setup was not having the same <code>ETCD_INITIAL_CLUSTER</code> on all 3 machines.
+It did give some weird <code>context deadline exceeded</code> and <code>exceeded header timeout</code>.</p>
+<p>On all machines, run:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Kill the PID
+</span><span style="color:#96b5b4;">kill </span><span>$(</span><span style="color:#bf616a;">cat</span><span> /tmp/test_server.pid)
+</span><span style="color:#65737e;"># Remove the PID file
+</span><span style="color:#bf616a;">rm -v</span><span> /tmp/test_server.pid ./listen.py
+</span><span style="color:#bf616a;">service</span><span> etcd start
+</span><span style="color:#65737e;"># Maybe wait one second and run:
+</span><span style="color:#bf616a;">curl</span><span> http://127.0.0.1:2380/version
+</span><span style="color:#65737e;"># On my setup it outputs: {&quot;etcdserver&quot;:&quot;3.4.23&quot;,&quot;etcdcluster&quot;:&quot;3.4.0&quot;}
+</span></code></pre>
+<h3 id="inspect-the-cluster">Inspect the cluster</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Run this on the node(s) where etcd-client is installed
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=127.0.0.1:2380 endpoint status</span><span style="color:#bf616a;"> -w</span><span> table
+</span></code></pre>
+<p>Split in two for small screens ;)</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+----------------+-----------------+---------+---------+-----------+
+</span><span>|    ENDPOINT    |       ID        | VERSION | DB SIZE | IS LEADER |
+</span><span>+----------------+-----------------+---------+---------+-----------+
+</span><span>| 127.0.0.1:2380 | 934de65da148d6d |  3.4.23 |   20 kB |     false |
+</span><span>+----------------+-----------------+---------+---------+-----------+
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+------------+-----------+------------+--------------------+--------+
+</span><span>| IS LEARNER | RAFT TERM | RAFT INDEX | RAFT APPLIED INDEX | ERRORS |
+</span><span>+------------+-----------+------------+--------------------+--------+
+</span><span>|      false |         3 |         14 |                 14 |        |
+</span><span>+------------+-----------+------------+--------------------+--------+
+</span></code></pre>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://127.0.0.1:2380 member list
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span># 934de65da148d6d, started, company-name-mini, http://82.11.22.33:2380, http://82.11.22.33:2379, false
+</span><span># 6c34ed0ae8842035, started, company-name-paris, http://185.132.200.12:2380, http://185.132.200.12:2379, false
+</span><span># d9f8d0469a6bd93d, started, company-name-tours, http://195.8.70.6:2380, http://195.8.70.6:2379, false
+</span></code></pre>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Ask all nodes at once (set one to 127.0.0.1):
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://82.11.22.33:2380,http://195.8.70.6:2380,http://127.0.0.1:2380 endpoint status</span><span style="color:#bf616a;"> -w</span><span> table
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://82.11.22.33:2380,http://195.8.70.6:2380,http://127.0.0.1:2380 member list</span><span style="color:#bf616a;"> -w</span><span> table
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://82.11.22.33:2380,http://195.8.70.6:2380,http://127.0.0.1:2380 alarm list
+</span></code></pre>
+<h3 id="test-the-cluster">Test the cluster</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># On one node
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://127.0.0.1:2380 put testkey okay
+</span><span style="color:#65737e;"># Try on all nodes
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://127.0.0.1:2380 get testkey
+</span><span style="color:#65737e;"># On one node
+</span><span style="color:#bf616a;">etcdctl --endpoints</span><span>=http://127.0.0.1:2380 del testkey
+</span></code></pre>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-tutorial/">infra-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/distributed/">distributed</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/etcd/">etcd</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2024 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

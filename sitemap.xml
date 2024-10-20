@@ -58,6 +58,10 @@
         <lastmod>2024-03-09T11:44:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/</loc>
+        <lastmod>2024-10-21T00:45:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</loc>
         <lastmod>2023-01-01T14:40:00+00:04</lastmod>
     </url>
@@ -285,6 +289,18 @@
         <loc>https://blog.williamdes.eu/tags/dell/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/distributed/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/distributed/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/etcd/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/etcd/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/fortinet/</loc>
     </url>
     <url>
@@ -307,6 +323,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/infra-tutorial/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/infra-tutorial/page/2/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/life-changelog/</loc>

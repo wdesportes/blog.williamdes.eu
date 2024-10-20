@@ -4,8 +4,28 @@
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-09-16T21:54:33+00:02</updated>
+    <updated>2024-10-21T00:45:00+00:02</updated>
     <id>https://blog.williamdes.eu/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Installing a distributed etcd cluster on Debian 12</title>
+        <published>2024-10-20T14:30:00+00:02</published>
+        <updated>2024-10-21T00:45:00+00:02</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/"/>
+        <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/</id>
+        
+        <summary type="html">&lt;p&gt;Install a distributed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;etcd.io&quot;&gt;etcd&lt;&#x2F;a&gt; cluster on Debian 12.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Monitoring an UPS using Zabbix and Apcupsd</title>
         <published>2024-05-07T16:59:00+00:02</published>
