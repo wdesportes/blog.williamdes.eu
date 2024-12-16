@@ -10,7 +10,6 @@ headline = "How to install a distributed etcd cluster on Debian 12."
 keywords = ["distributed", "etcd"]
 category = "Tutorial"
 images = []
-banner_path = "static/Infrastructure/tutorials/crowdsec_logo_large.jpg"
 
 [taxonomies]
 tags = ["infra-tutorial", "distributed", "etcd"]
@@ -25,6 +24,8 @@ This post will cover how to install a distributed [etcd](https://etcd.io) cluste
 ## What is etcd ?
 
 "etcd is a distributed, reliable key-value store for the most critical data of a distributed system."
+
+If you are looking for a SQL style alternative to etcd, check out the [article about rqlite](./install-a-distributed-rqlite-cluster.md).
 
 ## Installing
 
