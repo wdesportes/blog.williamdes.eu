@@ -26,11 +26,6 @@
         <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster">
         <meta property="og:description" content="Install a distributed etcd cluster on Debian 12.">
         
-        
-        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/crowdsec_logo_large.9247552ac3502e74.jpg"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="627"/>
-        
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2024-10-20T14:30:00+00:02">
         <meta property="article:published_time" content="2024-10-20T14:30:00">
@@ -178,6 +173,7 @@
 <p>This post will cover how to install a distributed <a rel="noopener" target="_blank" href="https://etcd.io">etcd</a> cluster on Debian 12.</p>
 <h2 id="what-is-etcd">What is etcd ?</h2>
 <p>"etcd is a distributed, reliable key-value store for the most critical data of a distributed system."</p>
+<p>If you are looking for a SQL style alternative to etcd, check out the <a href="https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/./install-a-distributed-rqlite-cluster.md">article about rqlite</a>.</p>
 <h2 id="installing">Installing</h2>
 <p>On all nodes, run <code>apt-get install etcd-server</code>.
 At the time writing this the Debian bookworm version of <code>etcd-server</code> is <code>3.4.23-4+b4</code>.</p>
@@ -400,7 +396,7 @@ It did give some weird <code>context deadline exceeded</code> and <code>exceeded
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2024 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
