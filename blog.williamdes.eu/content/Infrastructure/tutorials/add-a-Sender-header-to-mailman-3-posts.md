@@ -1,7 +1,7 @@
 +++
 title = "How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts"
 date = 2025-01-05T19:41:00+00:01
-updated = 2025-01-05T19:58:00+00:01
+updated = 2025-01-05T20:22:00+00:01
 
 [extra]
 author = "William Desportes"
@@ -204,6 +204,22 @@ class MailmanHeaderCleanerHandler:
         # Remove some headers
         del msg['X-Mailman-Version']
         del msg['X-Mailman-Rule-Misses']
+```
+
+## Finalize the setup
+
+You need to restart the mailman3 service: `service mailman3 restart`.
+Then you can check everything is loaded by running `mailman shell` or `sudo -S -u lists-user mailman shell`:
+```sh
+mailman shell
+Welcome to the GNU Mailman shell
+
+>>> config.plugins
+{'mailman_sender_plugin': <mailman_sender_plugin.plugin.SenderHeaderPlugin object at 0xcafefffffff1>}
+>>> config.handlers
+{'to-usenet': ..., 'acknowledge': ..., [...], 'cleanse-dkim': ..., 'mailman-sender-handler': <mailman_sender_plugin.handlers.handlers.SenderHeaderHandler object at 0xcafefffffff2>, 'mailman-headers-handler': <mailman_sender_plugin.handlers.handlers.MailmanHeaderCleanerHandler object at 0xcafefffffff3>}
+>>> config.pipelines
+{'default-owner-pipeline': <mailman.pipelines.builtin.OwnerPipeline object at 0xcafefffffff4>, 'default-posting-pipeline': <mailman.pipelines.builtin.PostingPipeline object at 0xcafefffffff5>, 'virgin': <mailman.pipelines.virgin.VirginPipeline object at 0xcafefffffff6>, 'mail-sender-pipeline': <mailman_sender_plugin.pipelines.pipelines.MailSenderPipeline object at 0xcafefffffff7>}
 ```
 
 ## Change the pipeline in the mailing list settings
