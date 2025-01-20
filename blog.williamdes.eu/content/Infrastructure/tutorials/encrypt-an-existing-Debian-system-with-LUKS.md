@@ -27,10 +27,12 @@ You will need some megabytes free on your disk.
 
 ## References
 
-On Internet you can find other posts asking how to encrypt a drive:
+On Internet you can find other posts asking/showing how to encrypt a drive:
 - This [Reddit post on linuxadmin](https://www.reddit.com/r/linuxadmin/comments/j3gyk9/possible_to_convert_to_luks_encryption_without/) has some interesting answers.
 - A [Reddit post on Debian](https://www.reddit.com/r/debian/comments/feaa7g/is_it_possible_to_perform_full_disk_encryption/)
 - A [Reddit post on Fedora](https://www.reddit.com/r/Fedora/comments/kyj373/cryptsetup_reencrypt_it_worked/) that says that it works.
+- This [blog post on education.fr](https://blog.apps.education.fr/articles/debian-linux-en-full-disk-encryption-sur-machine-efi2022-10-26t160921692z).
+- [krzys-h's gist to automate the disk conversion](https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8).
 
 There was another tool that did the conversion on the fly, named [luksipc](https://www.johannes-bauer.com/linux/luksipc/).
 I am not sure you should use it.
