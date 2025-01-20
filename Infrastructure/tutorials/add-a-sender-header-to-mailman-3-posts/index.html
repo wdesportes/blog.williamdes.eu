@@ -334,6 +334,7 @@
 </span><span>        </span><span style="color:#65737e;"># Remove some headers
 </span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Version</span><span>&#39;]
 </span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Rule-Misses</span><span>&#39;]
+</span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Rule-Hits</span><span>&#39;]
 </span></code></pre>
 <h2 id="finalize-the-setup">Finalize the setup</h2>
 <p>You need to restart the mailman3 service: <code>service mailman3 restart</code>.

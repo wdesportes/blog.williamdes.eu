@@ -62,6 +62,10 @@
         <lastmod>2025-01-05T20:22:00+00:01</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/</loc>
+        <lastmod>2025-01-20T02:11:00+00:01</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/</loc>
         <lastmod>2024-10-21T00:45:00+00:02</lastmod>
     </url>
@@ -147,6 +151,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/page/2/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/page/3/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/phpMyAdmin/2020/</loc>

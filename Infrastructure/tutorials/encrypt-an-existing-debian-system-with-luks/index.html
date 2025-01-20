@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Encrypt an existing Debian 12 system with LUKS</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Encrypt an existing Debian system with LUKS">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Encrypt an existing Debian 12 system with LUKS">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks">
+        <meta property="og:description" content="Encrypt an existing Debian system with LUKS">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2025-01-19T21:58:00+00:01">
+        <meta property="article:published_time" content="2025-01-19T21:58:00">
+        <meta property="article:modified_time" content="2025-01-20T02:11:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="security"><meta property="article:tags" content="LUKS">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks",
+                    "name": "Encrypt an existing Debian 12 system with LUKS"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/",
+    "headline": "Encrypt an existing Debian 12 system with LUKS",
+    "alternativeHeadline": "Encrypt an existing Debian 12 system with LUKS",
+    "dateCreated": "2025-01-19T21:58:00+0001",
+    "datePublished": "2025-01-19T21:58:00+0001",
+    "dateModified": "2025-01-20T02:11:00+0001",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["LUKS","encryption"],
+    "articleSection": "Tutorial",
+    "genre": ["infra-tutorial","security","LUKS"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Encrypt an existing Debian 12 system with LUKS</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2025-01-19T21:58:00+0001">January 19, 2025 21:58</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-01-20T02:11:00+0001">January 20, 2025 02:11</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">7 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Encrypt an existing Debian system with LUKS</p>
+<span id="continue-reading"></span>
+<p>This is how to encyrpt an existing Debian system using LUKS.</p>
+<p>In this example the VM (virtual machine) has one virtual disk attached.
+You will need some megabytes free on your disk.</p>
+<h2 id="references">References</h2>
+<p>On Internet you can find other posts asking how to encrypt a drive:</p>
+<ul>
+<li>This <a rel="noopener" target="_blank" href="https://www.reddit.com/r/linuxadmin/comments/j3gyk9/possible_to_convert_to_luks_encryption_without/">Reddit post on linuxadmin</a> has some interesting answers.</li>
+<li>A <a rel="noopener" target="_blank" href="https://www.reddit.com/r/debian/comments/feaa7g/is_it_possible_to_perform_full_disk_encryption/">Reddit post on Debian</a></li>
+<li>A <a rel="noopener" target="_blank" href="https://www.reddit.com/r/Fedora/comments/kyj373/cryptsetup_reencrypt_it_worked/">Reddit post on Fedora</a> that says that it works.</li>
+</ul>
+<p>There was another tool that did the conversion on the fly, named <a rel="noopener" target="_blank" href="https://www.johannes-bauer.com/linux/luksipc/">luksipc</a>.
+I am not sure you should use it.</p>
+<h2 id="actual-machine-disk-disposition">Actual machine disk disposition</h2>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> lsblk
+</span><span style="color:#bf616a;">NAME</span><span>    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+</span><span style="color:#bf616a;">sda</span><span>       8:0    0    2G  0 disk
+</span><span style="color:#bf616a;">├─sda1</span><span>    8:1    0  1.9G  0 part /
+</span><span style="color:#bf616a;">├─sda14</span><span>   8:14   0    3M  0 part
+</span><span style="color:#bf616a;">└─sda15</span><span>   8:15   0  124M  0 part /boot/efi
+</span></code></pre>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> fdisk</span><span style="color:#bf616a;"> -l
+</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 2 GiB, 2147483648 bytes, 4194304 sectors
+</span><span style="color:#bf616a;">Disk</span><span> model: QEMU HARDDISK
+</span><span style="color:#bf616a;">Units:</span><span> sectors of 1 * 512 = 512 bytes
+</span><span style="color:#bf616a;">Sector</span><span> size (logical/physical)</span><span style="color:#96b5b4;">:</span><span> 512 bytes / 512 bytes
+</span><span style="color:#bf616a;">I/O</span><span> size (minimum/optimal)</span><span style="color:#96b5b4;">:</span><span> 512 bytes / 512 bytes
+</span><span style="color:#bf616a;">Disklabel</span><span> type: gpt
+</span><span style="color:#bf616a;">Disk</span><span> identifier: 56E4EDE3-4BA3-6942-9E58-D1EFDCB32B4A
+</span><span>
+</span><span style="color:#bf616a;">Device</span><span>      Start     End Sectors  Size Type
+</span><span style="color:#bf616a;">/dev/sda1</span><span>  262144 4192255 3930112  1.9G Linux root (x86-64)
+</span><span style="color:#bf616a;">/dev/sda14</span><span>   2048    8191    6144    3M BIOS boot
+</span><span style="color:#bf616a;">/dev/sda15</span><span>   8192  262143  253952  124M EFI System
+</span><span>
+</span><span style="color:#bf616a;">Partition</span><span> table entries are not in disk order.
+</span></code></pre>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> blkid
+</span><span style="color:#bf616a;">/dev/sda15:</span><span> SEC_TYPE=&quot;</span><span style="color:#a3be8c;">msdos</span><span>&quot; UUID=&quot;</span><span style="color:#a3be8c;">E6F2-C0D9</span><span>&quot; BLOCK_SIZE=&quot;</span><span style="color:#a3be8c;">512</span><span>&quot; TYPE=&quot;</span><span style="color:#a3be8c;">vfat</span><span>&quot; PARTUUID=&quot;</span><span style="color:#a3be8c;">cec893d8-f47d-4f0f-b0b7-c3f3a4fac1cf</span><span>&quot;
+</span><span style="color:#bf616a;">/dev/sda1:</span><span> UUID=&quot;</span><span style="color:#a3be8c;">4594baf1-164a-4cb0-980f-105744df462c</span><span>&quot; BLOCK_SIZE=&quot;</span><span style="color:#a3be8c;">4096</span><span>&quot; TYPE=&quot;</span><span style="color:#a3be8c;">ext4</span><span>&quot; PARTUUID=&quot;</span><span style="color:#a3be8c;">54c133f2-e7f5-43a6-9540-cea1cbc4654c</span><span>&quot;
+</span><span style="color:#bf616a;">/dev/sda14:</span><span> PARTUUID=&quot;</span><span style="color:#a3be8c;">3747106c-99e7-1748-8308-ee6ae31f457b</span><span>&quot;
+</span></code></pre>
+<h2 id="prepare-the-actual-system">Prepare the actual system</h2>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">apt</span><span> install cryptsetup cryptsetup-initramfs
+</span></code></pre>
+<p>Add <code>GRUB_ENABLE_CRYPTODISK=y</code> to <code>/etc/default/grub</code></p>
+<p>Ensure the keyboard layout is usable in <code>/etc/default/keyboard</code></p>
+<pre data-lang="env" style="background-color:#2b303b;color:#c0c5ce;" class="language-env "><code class="language-env" data-lang="env"><span>XKBMODEL=&quot;pc105&quot;
+</span><span>XKBLAYOUT=&quot;fr&quot;
+</span><span>XKBVARIANT=&quot;latin9&quot;
+</span></code></pre>
+<p>Run <code>update-initramfs -u</code></p>
+<p>You can check that the cryptsetup is installed: <code>lsinitramfs /boot/initrd.img-6.11.10+bpo-amd64 | grep crypt</code>
+Using the filename from the <code>update-initramfs</code> command.</p>
+<p>You may want to <code>reboot</code> and check that everything still works fine.
+Now shut down the machine.</p>
+<h2 id="setup-debian-live">Setup Debian live</h2>
+<ul>
+<li>Load <code>https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.9.0-amd64-standard.iso</code> on a CD or USB stick.</li>
+<li>Boot the VM/machine on the ISO.</li>
+<li>Choose the "Live" option.</li>
+<li>Install <code>cryptsetup</code>: <code>sudo apt install cryptsetup -y</code></li>
+</ul>
+<p>You will probably need to add the <code>nameserver 1.1.1.1</code> line to the <code>/etc/resolv.conf</code> file.
+And add an IP manually</p>
+<ul>
+<li>Check before with <code>ip link</code>.</li>
+<li><code>sudo ip addr add 10.10.10.3/24 dev ens18</code>.</li>
+<li><code>sudo ip net add default via 10.10.10.1</code>.</li>
+<li><code>ping 1.1.1.1</code> should reply</li>
+</ul>
+<p>At this point I installed <code>openssh-server</code> to work remotely: <code>sudo apt install openssh-server -y</code>
+And did allow root access and changed the root password. And restarted the service.</p>
+<h2 id="start-converting-the-drive">Start converting the drive</h2>
+<p>Run <code>fdisk -l</code> and find the drive path.</p>
+<p>Now, you can paste the script from <a rel="noopener" target="_blank" href="https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8">krzys-h's gist</a>.
+Or use my version of this script:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/bin/bash
+</span><span>
+</span><span style="color:#96b5b4;">set</span><span> -euo pipefail
+</span><span>
+</span><span style="color:#65737e;"># Uncomment to debug/inspect the commands
+</span><span style="color:#65737e;">#set -x
+</span><span>
+</span><span style="color:#65737e;"># Encrypt an existing partition with LUKS2 on Debian 12
+</span><span>
+</span><span style="color:#65737e;"># DISCLAIMER: USE AT YOUR OWN RISK AND MAKE BACKUPS
+</span><span style="color:#65737e;"># Made for my personal use and has almost NO error checking!!
+</span><span>
+</span><span style="color:#65737e;"># Based on instructions from:
+</span><span style="color:#65737e;"># https://wiki.archlinux.org/index.php/dm-crypt/Device_encryption#Encrypt_an_existing_unencrypted_filesystem
+</span><span>
+</span><span style="color:#bf616a;">DISK</span><span>=&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">1</span><span>:-</span><span style="color:#a3be8c;">}</span><span>&quot;
+</span><span>
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span style="color:#bf616a;">-z </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; </span><span style="color:#96b5b4;">]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>	</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Usage: </span><span>$</span><span style="color:#bf616a;">0</span><span style="color:#a3be8c;"> /dev/sdXY</span><span>&quot;
+</span><span>	</span><span style="color:#96b5b4;">exit</span><span> 1
+</span><span style="color:#b48ead;">fi
+</span><span>
+</span><span style="color:#65737e;"># Run a filesystem check
+</span><span style="color:#bf616a;">e2fsck -f </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Make the filesystem slightly smaller to make space for the LUKS header
+</span><span style="color:#bf616a;">BLOCK_SIZE</span><span>=`</span><span style="color:#bf616a;">dumpe2fs -h </span><span>$</span><span style="color:#bf616a;">DISK </span><span>| </span><span style="color:#bf616a;">grep </span><span>&quot;</span><span style="color:#a3be8c;">Block size</span><span>&quot; | </span><span style="color:#bf616a;">cut -d </span><span>&#39;</span><span style="color:#a3be8c;">:</span><span>&#39;</span><span style="color:#bf616a;"> -f</span><span> 2 | </span><span style="color:#bf616a;">tr -d </span><span>&#39; &#39;`
+</span><span style="color:#bf616a;">BLOCK_COUNT</span><span>=`</span><span style="color:#bf616a;">dumpe2fs -h </span><span>$</span><span style="color:#bf616a;">DISK </span><span>| </span><span style="color:#bf616a;">grep </span><span>&quot;</span><span style="color:#a3be8c;">Block count</span><span>&quot; | </span><span style="color:#bf616a;">cut -d </span><span>&#39;</span><span style="color:#a3be8c;">:</span><span>&#39;</span><span style="color:#bf616a;"> -f</span><span> 2 | </span><span style="color:#bf616a;">tr -d </span><span>&#39; &#39;`
+</span><span style="color:#bf616a;">SPACE_TO_FREE</span><span>=$</span><span style="color:#a3be8c;">((</span><span style="color:#d08770;">1024 </span><span>* </span><span style="color:#d08770;">1024 </span><span>* </span><span style="color:#d08770;">32</span><span style="color:#a3be8c;">)) </span><span style="color:#65737e;"># 16MB should be enough, but add a safety margin
+</span><span style="color:#bf616a;">NEW_BLOCK_COUNT</span><span>=$</span><span style="color:#a3be8c;">((</span><span>$</span><span style="color:#bf616a;">BLOCK_COUNT </span><span>- $</span><span style="color:#bf616a;">SPACE_TO_FREE </span><span>/ $</span><span style="color:#bf616a;">BLOCK_SIZE</span><span style="color:#a3be8c;">))
+</span><span style="color:#bf616a;">resize2fs -p </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; &quot;$</span><span style="color:#bf616a;">NEW_BLOCK_COUNT</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Run the encryption process
+</span><span style="color:#65737e;"># MAN: https://man7.org/linux/man-pages/man8/cryptsetup-reencrypt.8.html
+</span><span style="color:#bf616a;">cryptsetup</span><span> reencrypt</span><span style="color:#bf616a;"> --encrypt --reduce-device-size</span><span> 16M &quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Resize the filesystem to fill up the remaining space (i.e. remove the safety margin from earlier)
+</span><span style="color:#bf616a;">cryptsetup</span><span> open &quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; recrypt
+</span><span style="color:#bf616a;">resize2fs</span><span> /dev/mapper/recrypt
+</span><span style="color:#bf616a;">cryptsetup</span><span> close recrypt
+</span><span>
+</span><span style="color:#65737e;"># Don&#39;t forget to update /etc/crypttab and /etc/fstab if required!
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># For example:
+</span><span style="color:#65737e;"># /etc/crypttab
+</span><span style="color:#65737e;"># crypt_root    UUID=xxx    none    luks
+</span><span style="color:#65737e;"># /etc/fstab
+</span><span style="color:#65737e;"># /dev/mapper/crypt_root    /        ext4    errors=remount-ro    0    1
+</span><span style="color:#65737e;">#
+</span><span style="color:#65737e;"># Remember to run &quot;update-initramfs -u -k all&quot; after updating the rootfs crypttab
+</span></code></pre>
+<h2 id="adjust-the-encryption-key">Adjust the encryption key</h2>
+<p>As said on <a rel="noopener" target="_blank" href="https://www.reddit.com/r/debian/comments/15w9c6e/cryptomount_invalid_passphrase_despite_being/">Debian's reddit</a> and <a rel="noopener" target="_blank" href="https://unix.stackexchange.com/q/764872/155610">Unix StackExchange</a> GRUB will not unlock if the keyslot is <code>PBKDF: argon2id</code></p>
+<p>You will need to run:</p>
+<ul>
+<li><code>cryptsetup luksDump /dev/sda</code> to check that is needs to be converted</li>
+<li><code>cryptsetup luksConvertKey --pbkdf pbkdf2 /dev/sda</code> to convert the key</li>
+<li><code>cryptsetup luksDump /dev/sda</code> to check that is worked</li>
+</ul>
+<h2 id="chroot-into-the-system-and-adjust-it">Chroot into the system and adjust it</h2>
+<p>Thank you <a rel="noopener" target="_blank" href="https://www.finnie.org/2009/07/26/howto-encrypt-an-existing-debian-installation/">finnie.org</a> for this part of the tutorial !</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">DEVICE_NAME</span><span>=&quot;</span><span style="color:#a3be8c;">root_crypt</span><span>&quot;
+</span><span style="color:#bf616a;">cryptsetup</span><span> open /dev/sda1 ${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span><span style="color:#bf616a;">mkdir</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span><span style="color:#bf616a;">mount</span><span> /dev/mapper/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>} /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span><span style="color:#bf616a;">mount -t</span><span> proc none /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/proc
+</span><span style="color:#bf616a;">mount -t</span><span> sysfs none /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/sys
+</span><span style="color:#bf616a;">mount --bind</span><span> /dev /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/dev
+</span></code></pre>
+<p>Enter the chroot: <code>chroot /mnt/${DEVICE_NAME}</code></p>
+<h3 id="once-in-the-chroot">Once in the chroot</h3>
+<ul>
+<li>run <code>fdisk -l</code> and check if you have an EFI partition
+<ul>
+<li>If you have one, mount it: <code>mount /dev/sda15 /boot/efi</code></li>
+</ul>
+</li>
+<li>run <code>blkid -o value -s UUID /dev/sda1</code> and keep the value</li>
+<li>edit <code>/etc/crypttab</code> and add the following line: <code>root_crypt	UUID=&lt;blkid value here&gt;	none	luks</code>
+<ul>
+<li>Example: <code>root_crypt	UUID=24bfb42b-007d-4777-9889-46d3e016e60b	none	luks</code></li>
+</ul>
+</li>
+<li>edit <code>/etc/fstab</code> to change the root line
+<ul>
+<li>Example: <code>PARTUUID=54c133f2-e7f5-43a6-9540-cea1cbc4654c / ext4 rw,discard,errors=remount-ro 0 1</code>
+Is now <code>/dev/mapper/root_crypt / ext4 rw,discard,errors=remount-ro 0 1</code></li>
+</ul>
+</li>
+<li>Check that the <code>/etc/mtab</code> does not differ from reality: <code>diff -u /etc/mtab /proc/mounts</code>
+If it differs (the diff command returns a difference), run: <code>cat /proc/mounts &gt;/etc/mtab</code></li>
+</ul>
+<h4 id="fix-the-boot-process">Fix the boot process</h4>
+<ul>
+<li>Re-install grub <code>grub-install /dev/sda</code> (I am not sure this step is required)</li>
+<li>Update initramfs: <code>update-initramfs -k all -u</code></li>
+<li>Run <code>lsblk -o uuid,name</code>
+<ul>
+<li><code>24bfb42b-007d-4777-9889-46d3e016e60b ├─sda1</code></li>
+<li><code>4594baf1-164a-4cb0-980f-105744df462c │ └─root_crypt</code></li>
+</ul>
+</li>
+</ul>
+<p>In <code>/etc/default/grub</code> edit <code>GRUB_CMDLINE_LINUX=</code></p>
+<ul>
+<li>Add <code>cryptdevice=UUID=&lt;your_encrypted_crypt_device_uuid&gt;:root_crypt root=UUID=&lt;your_unencrypted_root_partition_uuid&gt;</code>
+<ul>
+<li>Example <code>cryptdevice=UUID=24bfb42b-007d-4777-9889-46d3e016e60b:root_crypt root=UUID=4594baf1-164a-4cb0-980f-105744df462c</code></li>
+<li>Example (should work) <code>cryptdevice=UUID=24bfb42b-007d-4777-9889-46d3e016e60b:root_crypt root=/dev/mapper/root_crypt</code></li>
+</ul>
+</li>
+<li>Check that it boots on <code>root=</code> and has <code>cryptdevice=</code> by running <code>cat /boot/grub/grub.cfg | grep -F "root="</code></li>
+<li>Run <code>update-grub</code></li>
+<li>Check that it boots on <code>root=</code> and has <code>cryptdevice=</code> by running <code>cat /boot/grub/grub.cfg | grep -F "root="</code></li>
+</ul>
+<p>You can learn more about <a rel="noopener" target="_blank" href="https://wiki.archlinux.org/title/Dm-crypt/System_configuration#cryptdevice">the boot parameters on the wiki page of Archlinux</a>.</p>
+<p>Exit the chroot: <code>exit</code></p>
+<h3 id="cleanup-the-chroot">Cleanup the chroot</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/proc
+</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/sys
+</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/dev
+</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/boot/efi
+</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span><span style="color:#bf616a;">cryptsetup</span><span> close ${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span><span style="color:#bf616a;">rmdir -v</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
+</span></code></pre>
+<h2 id="finishing-the-job">Finishing the job</h2>
+<p>Shutdown the live VM: <code>poweroff</code>
+And boot the machine to see if it works ?!</p>
+<p>If the system hangs on <code>random: crng init done</code> then the unlock may be waiting for you on another TTY.
+<a rel="noopener" target="_blank" href="https://raspberrypi.stackexchange.com/a/136648/114760">Explained on RaspberryPi StackExchange</a>.</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-tutorial/">infra-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/security/">security</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/luks/">LUKS</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
