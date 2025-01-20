@@ -204,6 +204,7 @@ class MailmanHeaderCleanerHandler:
         # Remove some headers
         del msg['X-Mailman-Version']
         del msg['X-Mailman-Rule-Misses']
+        del msg['X-Mailman-Rule-Hits']
 ```
 
 ## Finalize the setup
