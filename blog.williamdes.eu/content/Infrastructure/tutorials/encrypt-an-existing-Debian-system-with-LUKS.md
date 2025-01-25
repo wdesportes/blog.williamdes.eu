@@ -1,7 +1,7 @@
 +++
 title = "Encrypt an existing Debian 12 system with LUKS"
 date = 2025-01-19T21:58:00+00:01
-updated = 2025-01-20T02:11:00+00:01
+updated = 2025-01-20T14:11:00+00:01
 
 [extra]
 author = "William Desportes"
@@ -183,6 +183,10 @@ You will need to run:
 - `cryptsetup luksDump /dev/sda` to check that is needs to be converted
 - `cryptsetup luksConvertKey --pbkdf pbkdf2 /dev/sda` to convert the key
 - `cryptsetup luksDump /dev/sda` to check that is worked
+- `sudo cryptsetup --verbose open --test-passphrase /dev/sda` to check the password is working
+
+Note: always use `--pbkdf pbkdf2` to change the password or do other key changes.
+Example to change the password: `cryptsetup luksChangeKey --pbkdf pbkdf2 /dev/sda`
 
 ## Chroot into the system and adjust it
 
