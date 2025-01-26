@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2022-05-20T00:07:00+00:02">
         <meta property="article:published_time" content="2022-05-20T00:07:00">
-        <meta property="article:modified_time" content="2024-03-09T11:44:00">
+        <meta property="article:modified_time" content="2025-01-26T00:51:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="LUKS">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Add a crypt data volume to Alpine 3.17",
     "dateCreated": "2022-05-20T00:07:00+0002",
     "datePublished": "2022-05-20T00:07:00+0002",
-    "dateModified": "2024-03-09T11:44:00+0002",
+    "dateModified": "2025-01-26T00:51:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -163,7 +163,7 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2022-05-20T00:07:00+0002">May 20, 2022 00:07</time></span>
-            <span class="post-date"> and updated: <time datetime="2024-03-09T11:44:00+0002">March  9, 2024 11:44</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-01-26T00:51:00+0002">January 26, 2025 00:51</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">2 min read</span>
         </div>
@@ -192,8 +192,12 @@ Just rename <code>sdb1</code> to <code>sdb</code> in other commands &amp; script
 </span></code></pre>
 <h3 id="creating-the-luks-lvm-ext4-partition">Creating the LUKS/LVM/EXT4 partition</h3>
 <p>Make the LUKS drive:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cryptsetup</span><span> luksFormat</span><span style="color:#bf616a;"> --hash</span><span> sha512 /dev/sdb1
-</span><span style="color:#bf616a;">cryptsetup</span><span> luksOpen /dev/sdb1 enc_storage
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cryptsetup</span><span> benchmark</span><span style="color:#bf616a;"> --cipher</span><span>=aes-xts-plain64
+</span><span style="color:#65737e;"># Source: https://wiki.archlinux.org/title/Dm-crypt/Device_encryption#Encryption_options_with_dm-crypt
+</span><span style="color:#65737e;"># Use --pbkdf=pbkdf2 for Grub to be able to unlock at boot time
+</span><span style="color:#bf616a;">cryptsetup</span><span> luksFormat</span><span style="color:#bf616a;"> --cipher</span><span>=aes-xts-plain64</span><span style="color:#bf616a;"> --key-size</span><span>=512</span><span style="color:#bf616a;"> --hash</span><span>=sha512</span><span style="color:#bf616a;"> --pbkdf</span><span>=pbkdf2 /dev/sdx1
+</span><span style="color:#bf616a;">cryptsetup</span><span> luksDump /dev/sdx1
+</span><span style="color:#bf616a;">cryptsetup</span><span> luksOpen /dev/sdx1 enc_storage
 </span></code></pre>
 <p>Create LVM and ext4 into it:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkfs.ext4</span><span> /dev/mapper/enc_storage

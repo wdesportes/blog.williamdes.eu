@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2025-01-19T21:58:00+00:01">
         <meta property="article:published_time" content="2025-01-19T21:58:00">
-        <meta property="article:modified_time" content="2025-01-20T14:11:00">
+        <meta property="article:modified_time" content="2025-01-26T14:08:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="security"><meta property="article:tags" content="LUKS">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Encrypt an existing Debian 12 system with LUKS",
     "dateCreated": "2025-01-19T21:58:00+0001",
     "datePublished": "2025-01-19T21:58:00+0001",
-    "dateModified": "2025-01-20T14:11:00+0001",
+    "dateModified": "2025-01-26T14:08:00+0001",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -163,9 +163,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2025-01-19T21:58:00+0001">January 19, 2025 21:58</time></span>
-            <span class="post-date"> and updated: <time datetime="2025-01-20T14:11:00+0001">January 20, 2025 14:11</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-01-26T14:08:00+0001">January 26, 2025 14:08</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">7 min read</span>
+            <span class="post-reading-time">8 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Encrypt an existing Debian system with LUKS</p>
@@ -382,6 +382,54 @@ If it differs (the diff command returns a difference), run: <code>cat /proc/moun
 And boot the machine to see if it works ?!</p>
 <p>If the system hangs on <code>random: crng init done</code> then the unlock may be waiting for you on another TTY.
 <a rel="noopener" target="_blank" href="https://raspberrypi.stackexchange.com/a/136648/114760">Explained on RaspberryPi StackExchange</a>.</p>
+<h2 id="bonus-commands-grow-the-luks-partition-and-the-ext4-partition-to-the-full-disk-size">Bonus commands: grow the LUKS partition and the ext4 partition to the full disk size</h2>
+<p>Thank you to <a rel="noopener" target="_blank" href="https://blog.fotto.de/resize-a-luks-encrypted-root-partition/">foorschtbar (blog post on fotto.de)</a> for the commands.</p>
+<p>If you resize your VM disk, you may want to expand.
+This also works to do a live resizing of the root partition.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> apt install</span><span style="color:#bf616a;"> -y</span><span> parted
+</span><span style="color:#bf616a;">$</span><span> parted /dev/sda
+</span><span>
+</span><span style="color:#bf616a;">GNU</span><span> Parted 3.5
+</span><span style="color:#bf616a;">Using</span><span> /dev/sda
+</span><span>
+</span><span>(</span><span style="color:#bf616a;">parted</span><span>) print
+</span><span>
+</span><span style="color:#bf616a;">Model:</span><span> VMware Virtual disk (scsi)
+</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 53.7GB
+</span><span style="color:#bf616a;">Partition</span><span> Table: gpt
+</span><span>
+</span><span style="color:#bf616a;">Number</span><span>  Start   End     Size    File system  Name  Flags
+</span><span style="color:#bf616a;">14</span><span>      1049kB  4194kB  3146kB                     bios_grub
+</span><span style="color:#bf616a;">15</span><span>      4194kB  134MB   130MB   fat16              boot, esp
+</span><span> </span><span style="color:#bf616a;">1</span><span>      134MB   2146MB  2012MB
+</span><span>
+</span><span>(</span><span style="color:#bf616a;">parted</span><span>) resizepart
+</span><span>
+</span><span style="color:#bf616a;">Partition</span><span> number? 1
+</span><span style="color:#bf616a;">End?  </span><span style="color:#b48ead;">[</span><span>2146MB</span><span style="color:#b48ead;">]</span><span>? 100%
+</span><span>
+</span><span>(</span><span style="color:#bf616a;">parted</span><span>) print
+</span><span>
+</span><span style="color:#bf616a;">Model:</span><span> VMware Virtual disk (scsi)
+</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 53.7GB
+</span><span style="color:#bf616a;">Partition</span><span> Table: gpt
+</span><span>
+</span><span style="color:#bf616a;">Number</span><span>  Start   End     Size    File system  Name  Flags
+</span><span style="color:#bf616a;">14</span><span>      1049kB  4194kB  3146kB                     bios_grub
+</span><span style="color:#bf616a;">15</span><span>      4194kB  134MB   130MB   fat16              boot, esp
+</span><span> </span><span style="color:#bf616a;">1</span><span>      134MB   53.7GB  53.6GB
+</span><span>
+</span><span>(</span><span style="color:#bf616a;">parted</span><span>) q
+</span></code></pre>
+<p>If you use LVM, use the blog post linked above.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># I assume the LUKS partition is open at the name root_crypt
+</span><span style="color:#bf616a;">cryptsetup</span><span> resize root_crypt
+</span><span style="color:#65737e;"># Resize the EXT-4 file system
+</span><span style="color:#bf616a;">resize2fs</span><span> /dev/mapper/root_crypt
+</span></code></pre>
+<ul>
+<li>Reboot, all done.</li>
+</ul>
 </div>
     <footer class="post-footer">
         
