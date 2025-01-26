@@ -1,7 +1,7 @@
 +++
 title = "Add a crypt data volume to Alpine 3.17"
 date = 2022-05-20T00:07:00+00:02
-updated = 2024-03-09T11:44:00+00:02
+updated = 2025-01-26T00:51:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -57,8 +57,12 @@ apk add --update cryptsetup lsblk
 Make the LUKS drive:
 
 ```sh
-cryptsetup luksFormat --hash sha512 /dev/sdb1
-cryptsetup luksOpen /dev/sdb1 enc_storage
+cryptsetup benchmark --cipher=aes-xts-plain64
+# Source: https://wiki.archlinux.org/title/Dm-crypt/Device_encryption#Encryption_options_with_dm-crypt
+# Use --pbkdf=pbkdf2 for Grub to be able to unlock at boot time
+cryptsetup luksFormat --cipher=aes-xts-plain64 --key-size=512 --hash=sha512 --pbkdf=pbkdf2 /dev/sdx1
+cryptsetup luksDump /dev/sdx1
+cryptsetup luksOpen /dev/sdx1 enc_storage
 ```
 
 Create LVM and ext4 into it:
