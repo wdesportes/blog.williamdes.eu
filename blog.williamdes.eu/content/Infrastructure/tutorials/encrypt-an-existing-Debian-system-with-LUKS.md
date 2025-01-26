@@ -1,7 +1,7 @@
 +++
 title = "Encrypt an existing Debian 12 system with LUKS"
 date = 2025-01-19T21:58:00+00:01
-updated = 2025-01-20T14:11:00+00:01
+updated = 2025-01-26T14:08:00+00:01
 
 [extra]
 author = "William Desportes"
@@ -257,3 +257,58 @@ And boot the machine to see if it works ?!
 
 If the system hangs on `random: crng init done` then the unlock may be waiting for you on another TTY.
 [Explained on RaspberryPi StackExchange](https://raspberrypi.stackexchange.com/a/136648/114760).
+
+## Bonus commands: grow the LUKS partition and the ext4 partition to the full disk size
+
+Thank you to [foorschtbar (blog post on fotto.de)](https://blog.fotto.de/resize-a-luks-encrypted-root-partition/) for the commands.
+
+If you resize your VM disk, you may want to expand.
+This also works to do a live resizing of the root partition.
+
+```sh
+$ apt install -y parted
+$ parted /dev/sda
+
+GNU Parted 3.5
+Using /dev/sda
+
+(parted) print
+
+Model: VMware Virtual disk (scsi)
+Disk /dev/sda: 53.7GB
+Partition Table: gpt
+
+Number  Start   End     Size    File system  Name  Flags
+14      1049kB  4194kB  3146kB                     bios_grub
+15      4194kB  134MB   130MB   fat16              boot, esp
+ 1      134MB   2146MB  2012MB
+
+(parted) resizepart
+
+Partition number? 1
+End?  [2146MB]? 100%
+
+(parted) print
+
+Model: VMware Virtual disk (scsi)
+Disk /dev/sda: 53.7GB
+Partition Table: gpt
+
+Number  Start   End     Size    File system  Name  Flags
+14      1049kB  4194kB  3146kB                     bios_grub
+15      4194kB  134MB   130MB   fat16              boot, esp
+ 1      134MB   53.7GB  53.6GB
+
+(parted) q
+```
+
+If you use LVM, use the blog post linked above.
+
+```sh
+# I assume the LUKS partition is open at the name root_crypt
+cryptsetup resize root_crypt
+# Resize the EXT-4 file system
+resize2fs /dev/mapper/root_crypt
+```
+
+- Reboot, all done.
