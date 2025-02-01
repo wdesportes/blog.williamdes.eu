@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-01-18T12:40:00+00:05">
         <meta property="article:published_time" content="2023-01-18T12:40:00">
-        <meta property="article:modified_time" content="2023-09-07T17:20:00">
+        <meta property="article:modified_time" content="2025-02-01T17:14:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="debian-manual"><meta property="article:tags" content="sbuild">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "Setup Debian sbuild chroots",
     "dateCreated": "2023-01-18T12:40:00+0005",
     "datePublished": "2023-01-18T12:40:00+0005",
-    "dateModified": "2023-09-07T17:20:00+0002",
+    "dateModified": "2025-02-01T17:14:00+0001",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -163,9 +163,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
-            <span class="post-date"> and updated: <time datetime="2023-09-07T17:20:00+0002">September  7, 2023 17:20</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-02-01T17:14:00+0001">February  1, 2025 17:14</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">5 min read</span>
+            <span class="post-reading-time">6 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Creating <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">sbuild</a> chroots for Debian package testing</p>
@@ -183,25 +183,44 @@ But for some reason I noticed they affect your host filesystem.</p>
 <h2 id="share-apt-cache-across-chroots">Share APT cache across chroots</h2>
 <p>It takes less bandwith, you can skip this if this is not an issue for you.</p>
 <p>This mounting technique is described on <a rel="noopener" target="_blank" href="https://wiki.ubuntu.com/SimpleSbuild">Ubuntu wiki</a>.</p>
+<h3 id="apt-archives-cache">APT archives cache</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir</span><span> /var/lib/sbuild/apt-cache
 </span><span style="color:#bf616a;">sudo</span><span> chown sbuild:sbuild /var/lib/sbuild/apt-cache
-</span><span style="color:#65737e;"># Add: /var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
-</span><span style="color:#65737e;"># Into: /etc/schroot/sbuild/fstab
-</span><span style="color:#65737e;"># Run a sbuild
-</span><span style="color:#65737e;"># Check that /var/lib/sbuild/apt-cache has new files or folders
+</span></code></pre>
+<p>In <code>/etc/schroot/sbuild/fstab</code>, add:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
+</span></code></pre>
+<p>Run a sbuild, and check that /var/lib/sbuild/apt-cache has new files or folders</p>
+<h3 id="add-your-user-to-the-sbuild-group">Add your user to the sbuild group</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-adduser williamdes
+</span><span style="color:#bf616a;">newgrp</span><span> sbuild
+</span><span style="color:#65737e;"># Check (or use: id)
+</span><span style="color:#bf616a;">groups
 </span></code></pre>
 <h3 id="sid-chroot">Sid chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-unstable main</span><span>&#39;</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-sid main</span><span>&#39;</span><span style="color:#bf616a;"> --alias</span><span>=sid</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+<p>You can add more packages to <code>--include</code>.
+The packages will not be used for DEP-8 autopkgtests, check the "Autopkgtests" section of this blog post.</p>
+<p>For example: <code>--include eatmydata,ccache,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium</code></p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">INCLUDED_PACKAGES</span><span>=</span><span style="color:#a3be8c;">eatmydata,ccache </span><span>\
+</span><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-unstable main</span><span>&#39; \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-sid main</span><span>&#39; \
+</span><span style="color:#bf616a;">    --alias</span><span>=sid</span><span style="color:#bf616a;"> --alias</span><span>=UNRELEASED</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=sid \
+</span><span style="color:#bf616a;">    --include</span><span>=$</span><span style="color:#bf616a;">INCLUDED_PACKAGES </span><span>\
+</span><span>    sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
+<p>Run the sbuild chroot: <code>sbuild -c sid</code></p>
 <h4 id="update-the-sid-chroot">Update the sid chroot</h4>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:sid-amd64-sbuild
 </span><span style="color:#bf616a;">apt</span><span> update
 </span><span style="color:#bf616a;">apt</span><span> upgrade</span><span style="color:#bf616a;"> -y
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
+<p>Or: <code>sudo sbuild-update -ugd sid</code></p>
 <h3 id="normal-chroot">Normal chroot</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --alias</span><span>=bookworm</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bookworm</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/bookworm-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
+<p>Run the chroot: <code>sbuild -c bookworm</code></p>
 <h3 id="experimental-chroot">Experimental chroot</h3>
 <p>Create the chroot:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=experimental</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian experimental main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bookworm /srv/chroot/experimental-amd64-sbuild http://ftp.fr.debian.org/debian
@@ -248,7 +267,8 @@ But for some reason I noticed they affect your host filesystem.</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">schroot -l
 </span></code></pre>
 <h3 id="remove-a-chroot">Remove a chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm -r</span><span> /srv/chroot/experimental-amd64-sbuild
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Also check: /srv/sbuild/qemu/
+</span><span style="color:#bf616a;">rm -r</span><span> /srv/chroot/experimental-amd64-sbuild
 </span><span style="color:#65737e;"># Find config the file and remove it
 </span><span style="color:#bf616a;">rm</span><span> /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
 </span><span style="color:#bf616a;">rm</span><span> /etc/sbuild/chroot/experimental-amd64-sbuild
@@ -284,25 +304,41 @@ I found some inspiration on this <a rel="noopener" target="_blank" href="https:/
 </span><span>$</span><span style="color:#bf616a;">purge_build_deps </span><span>= &#39;</span><span style="color:#a3be8c;">never</span><span>&#39;;
 </span><span style="color:#65737e;"># no need for sudo
 </span><span>$</span><span style="color:#bf616a;">autopkgtest_root_args </span><span>= &#39;&#39;;
+</span><span>
+</span><span style="color:#65737e;"># Lintian config
+</span><span style="color:#65737e;"># Display info and pedantic tags.
+</span><span style="color:#65737e;"># You can add &#39;--suppress-tags&#39;, &#39;inconsistent-maintainer,unreleased-changes,changelog-distribution-does-not-match-changes-file,missing-pkg-php-tools-addon&#39;
+</span><span>$</span><span style="color:#bf616a;">lintian_opts </span><span>= [&#39;</span><span style="color:#a3be8c;">--display-info</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">--verbose</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">--fail-on</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">error,warning</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">--info</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">--pedantic</span><span>&#39;];
 </span></code></pre>
 <h3 id="create-a-bookworm-sbuild">Create a bookworm sbuild</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /srv/sbuild/qemu/
 </span><span style="color:#bf616a;">sbuild-qemu-create --install-packages</span><span> build-essential,debhelper</span><span style="color:#bf616a;"> -o</span><span> /srv/sbuild/qemu/testing-autopkgtest-amd64.img testing http://ftp.fr.debian.org/debian
 </span><span style="color:#bf616a;">sudo</span><span> chown root:sbuild  /srv/sbuild/qemu/testing-autopkgtest-amd64.img
 </span></code></pre>
-<h3 id="create-a-sid-sbuild">Create a sid sbuild</h3>
+<h3 id="autopkgtests">Autopkgtests</h3>
+<h4 id="create-a-sid-sbuild">Create a sid sbuild</h4>
+<p>You can install more packages, for example: <code>--install-packages build-essential,debhelper,fakeroot,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium</code></p>
+<p>If you change <code>sid</code> by <code>unstable</code> it will be a unstable sbuild.</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /srv/sbuild/qemu/
-</span><span style="color:#bf616a;">sbuild-qemu-create --install-packages</span><span> build-essential,debhelper</span><span style="color:#bf616a;"> -o</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img sid http://ftp.fr.debian.org/debian
-</span><span style="color:#bf616a;">sudo</span><span> chown root:sbuild  /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">DIST</span><span>=</span><span style="color:#a3be8c;">unstable</span><span>;
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">INCLUDED_PACKAGES</span><span>=</span><span style="color:#a3be8c;">build-essential,debhelper,fakeroot,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium</span><span>;
+</span><span>
+</span><span style="color:#bf616a;">sudo</span><span> sbuild-qemu-create \
+</span><span style="color:#bf616a;">    --install-packages </span><span>$</span><span style="color:#bf616a;">INCLUDED_PACKAGES </span><span>\
+</span><span style="color:#bf616a;">    -o</span><span> /srv/sbuild/qemu/$</span><span style="color:#bf616a;">DIST</span><span>-autopkgtest-amd64.img \
+</span><span>    $</span><span style="color:#bf616a;">DIST</span><span> http://ftp.fr.debian.org/debian
+</span><span>
+</span><span style="color:#bf616a;">sudo</span><span> chown root:sbuild  /srv/sbuild/qemu/$</span><span style="color:#bf616a;">DIST</span><span>-autopkgtest-amd64.img
 </span></code></pre>
-<h4 id="update-the-sid-vm">Update the sid VM</h4>
+<p>Run the sbuild VM: <code>sbuild -d sid</code>, or to run and skip Lintian: <code>sbuild -d sid --no-run-lintian</code></p>
+<h5 id="update-the-sid-vm">Update the sid VM</h5>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-qemu-update /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 </span></code></pre>
-<h4 id="run-commands-in-the-vm">Run commands in the VM</h4>
-<h5 id="forget-my-changes">Forget my changes</h5>
+<h6 id="run-commands-in-the-vm">Run commands in the VM</h6>
+<h6 id="forget-my-changes">Forget my changes</h6>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild-qemu-boot</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 </span></code></pre>
-<h5 id="keep-my-changes">Keep my changes</h5>
+<h6 id="keep-my-changes">Keep my changes</h6>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild-qemu-boot --read-write</span><span> /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 </span></code></pre>
 </div>
