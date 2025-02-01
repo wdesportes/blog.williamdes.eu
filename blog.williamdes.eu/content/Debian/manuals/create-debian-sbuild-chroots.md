@@ -1,7 +1,7 @@
 +++
 title = "Setup Debian sbuild chroots"
 date = 2023-01-18T12:40:00+00:05
-updated = 2023-09-07T17:20:00+00:02
+updated = 2025-02-01T17:14:00+00:01
 
 [extra]
 author = "William Desportes"
@@ -44,20 +44,48 @@ It takes less bandwith, you can skip this if this is not an issue for you.
 
 This mounting technique is described on [Ubuntu wiki](https://wiki.ubuntu.com/SimpleSbuild).
 
+### APT archives cache
+
 ```sh
 mkdir /var/lib/sbuild/apt-cache
 sudo chown sbuild:sbuild /var/lib/sbuild/apt-cache
-# Add: /var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
-# Into: /etc/schroot/sbuild/fstab
-# Run a sbuild
-# Check that /var/lib/sbuild/apt-cache has new files or folders
+```
+
+In `/etc/schroot/sbuild/fstab`, add:
+
+```
+/var/lib/sbuild/apt-cache  /var/cache/apt/archives  none    rw,bind 0   0
+```
+
+Run a sbuild, and check that /var/lib/sbuild/apt-cache has new files or folders
+
+### Add your user to the sbuild group
+
+```sh
+sudo sbuild-adduser williamdes
+newgrp sbuild
+# Check (or use: id)
+groups
 ```
 
 ### Sid chroot
 
+You can add more packages to `--include`.
+The packages will not be used for DEP-8 autopkgtests, check the "Autopkgtests" section of this blog post.
+
+For example: `--include eatmydata,ccache,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium`
+
 ```sh
-sudo sbuild-createchroot --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-unstable main' --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-sid main' --alias=sid --chroot-prefix=sid --include=eatmydata,ccache sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
+INCLUDED_PACKAGES=eatmydata,ccache \
+sudo sbuild-createchroot \
+    --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-unstable main' \
+    --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-sid main' \
+    --alias=sid --alias=UNRELEASED --chroot-prefix=sid \
+    --include=$INCLUDED_PACKAGES \
+    sid /srv/chroot/sid-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
+
+Run the sbuild chroot: `sbuild -c sid`
 
 #### Update the sid chroot
 
@@ -68,11 +96,15 @@ apt upgrade -y
 exit
 ```
 
+Or: `sudo sbuild-update -ugd sid`
+
 ### Normal chroot
 
 ```sh
 sudo sbuild-createchroot --alias=bookworm --chroot-prefix=bookworm --include=eatmydata,ccache bookworm /srv/chroot/bookworm-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
+
+Run the chroot: `sbuild -c bookworm`
 
 ### Experimental chroot
 
@@ -149,6 +181,7 @@ schroot -l
 ### Remove a chroot
 
 ```sh
+# Also check: /srv/sbuild/qemu/
 rm -r /srv/chroot/experimental-amd64-sbuild
 # Find config the file and remove it
 rm /etc/schroot/chroot.d/experimental-amd64-sbuild-F28TrU
@@ -194,6 +227,11 @@ $autopkgtest_opts = [ '--', 'qemu', @_qemu_options, '/srv/sbuild/qemu/%r-autopkg
 $purge_build_deps = 'never';
 # no need for sudo
 $autopkgtest_root_args = '';
+
+# Lintian config
+# Display info and pedantic tags.
+# You can add '--suppress-tags', 'inconsistent-maintainer,unreleased-changes,changelog-distribution-does-not-match-changes-file,missing-pkg-php-tools-addon'
+$lintian_opts = ['--display-info', '--verbose', '--fail-on', 'error,warning', '--info', '--pedantic'];
 ```
 
 ### Create a bookworm sbuild
@@ -204,29 +242,44 @@ sbuild-qemu-create --install-packages build-essential,debhelper -o /srv/sbuild/q
 sudo chown root:sbuild  /srv/sbuild/qemu/testing-autopkgtest-amd64.img
 ```
 
-### Create a sid sbuild
+### Autopkgtests
+
+#### Create a sid sbuild
+
+You can install more packages, for example: `--install-packages build-essential,debhelper,fakeroot,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium`
+
+If you change `sid` by `unstable` it will be a unstable sbuild.
 
 ```sh
 mkdir -p /srv/sbuild/qemu/
-sbuild-qemu-create --install-packages build-essential,debhelper -o /srv/sbuild/qemu/sid-autopkgtest-amd64.img sid http://ftp.fr.debian.org/debian
-sudo chown root:sbuild  /srv/sbuild/qemu/sid-autopkgtest-amd64.img
+export DIST=unstable;
+export INCLUDED_PACKAGES=build-essential,debhelper,fakeroot,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli,lighttpd,chromium,chromium-driver,python3-selenium;
+
+sudo sbuild-qemu-create \
+    --install-packages $INCLUDED_PACKAGES \
+    -o /srv/sbuild/qemu/$DIST-autopkgtest-amd64.img \
+    $DIST http://ftp.fr.debian.org/debian
+
+sudo chown root:sbuild  /srv/sbuild/qemu/$DIST-autopkgtest-amd64.img
 ```
 
-#### Update the sid VM
+Run the sbuild VM: `sbuild -d sid`, or to run and skip Lintian: `sbuild -d sid --no-run-lintian`
+
+##### Update the sid VM
 
 ```sh
 sudo sbuild-qemu-update /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 ```
 
-#### Run commands in the VM
+###### Run commands in the VM
 
-##### Forget my changes
+###### Forget my changes
 
 ```sh
 sbuild-qemu-boot /srv/sbuild/qemu/sid-autopkgtest-amd64.img
 ```
 
-##### Keep my changes
+###### Keep my changes
 
 ```sh
 sbuild-qemu-boot --read-write /srv/sbuild/qemu/sid-autopkgtest-amd64.img
