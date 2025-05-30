@@ -4,7 +4,7 @@
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-02-18T00:04:00+00:01</updated>
+    <updated>2025-05-30T11:45:00+00:02</updated>
     <id>https://blog.williamdes.eu/atom.xml</id>
     <entry xml:lang="en">
         <title>Encrypt an existing Debian 12 system with LUKS</title>
@@ -267,9 +267,9 @@
         
     </entry>
     <entry xml:lang="en">
-        <title>Install OpenFortiGUI client on Debian 12 - bookworm</title>
+        <title>Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie</title>
         <published>2023-04-05T21:16:00+00:02</published>
-        <updated>2023-04-05T21:30:00+00:02</updated>
+        <updated>2025-05-30T11:45:00+00:02</updated>
         
         <author>
           <name>
@@ -282,14 +282,14 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/"/>
         <id>https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/</id>
         
-        <summary type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hadler.me&#x2F;linux&#x2F;openfortigui&#x2F;&quot;&gt;OpenFortiGUI&lt;&#x2F;a&gt; on Debian 12 - bookworm&lt;&#x2F;p&gt;
+        <summary type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;hadler.me&#x2F;linux&#x2F;openfortigui&#x2F;&quot;&gt;OpenFortiGUI&lt;&#x2F;a&gt; on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie&lt;&#x2F;p&gt;
 </summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>Install fortinet client on Debian 12 - bookworm</title>
+        <title>Install fortinet client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie</title>
         <published>2023-02-13T13:10:00+00:02</published>
-        <updated>2023-03-02T14:00:00+00:02</updated>
+        <updated>2025-05-30T11:45:00+00:02</updated>
         
         <author>
           <name>
@@ -302,7 +302,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/"/>
         <id>https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/</id>
         
-        <summary type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.fortinet.com&#x2F;fr&#x2F;support&#x2F;product-downloads&quot;&gt;fortinet client&lt;&#x2F;a&gt; on Debian 12 - bookworm&lt;&#x2F;p&gt;
+        <summary type="html">&lt;p&gt;Install &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.fortinet.com&#x2F;fr&#x2F;support&#x2F;product-downloads&quot;&gt;fortinet client&lt;&#x2F;a&gt; on Debian 12 - Bookworm&#x2F;Trixie&lt;&#x2F;p&gt;
 </summary>
         
     </entry>
