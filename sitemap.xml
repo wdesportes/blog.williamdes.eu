@@ -66,6 +66,10 @@
         <lastmod>2025-01-26T14:08:00+00:01</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker/</loc>
+        <lastmod>2025-07-17T17:11:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/</loc>
         <lastmod>2024-10-21T00:45:00+00:02</lastmod>
     </url>
@@ -332,6 +336,12 @@
         <loc>https://blog.williamdes.eu/tags/fortinet/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/gitlab/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/gitlab/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/idrac/</loc>
     </url>
     <url>
@@ -459,6 +469,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/security/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/ssh/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/ssh/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/story/</loc>

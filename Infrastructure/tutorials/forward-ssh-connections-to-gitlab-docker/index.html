@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Forward SSH connections to GitLab running with Docker</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Forward SSH connections to GitLab running with Docker">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Forward SSH connections to GitLab running with Docker">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker">
+        <meta property="og:description" content="Forward SSH connections to GitLab running with Docker">
+        
+        
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/GitLab_SSH_Network_diagram.1c3aeb28dd207dbc.png"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="627"/>
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2025-07-17T15:53:00+00:02">
+        <meta property="article:published_time" content="2025-07-17T15:53:00">
+        <meta property="article:modified_time" content="2025-07-17T17:11:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="gitlab"><meta property="article:tags" content="ssh">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker",
+                    "name": "Forward SSH connections to GitLab running with Docker"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    "image": [
+  "https://blog.williamdes.eu/Infrastructure/tutorials/GitLab_SSH_Network_diagram.png"
+],
+    "url": "https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker/",
+    "headline": "Forward SSH connections to GitLab running with Docker",
+    "alternativeHeadline": "Forward SSH connections to GitLab running with Docker",
+    "dateCreated": "2025-07-17T15:53:00+0002",
+    "datePublished": "2025-07-17T15:53:00+0002",
+    "dateModified": "2025-07-17T17:11:00+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["gitlab","ssh","forwarding"],
+    "articleSection": "Tutorial",
+    "genre": ["infra-tutorial","gitlab","ssh"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Forward SSH connections to GitLab running with Docker</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2025-07-17T15:53:00+0002">July 17, 2025 15:53</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-07-17T17:11:00+0002">July 17, 2025 17:11</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">4 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Forward SSH connections to GitLab running with Docker</p>
+<span id="continue-reading"></span>
+<p>In this tutorial I will explain how to redirect the <code>git@</code> connections to your GitLab instance.</p>
+<h2 id="the-network-setup">The network setup</h2>
+<p><img src="../GitLab_SSH_Network_diagram.png" alt="The network setup" title="The network setup" /></p>
+<h2 id="creating-the-git-user-on-the-host-system">Creating the <code>git</code> user on the host system</h2>
+<p>Ensure you have access to <code>docker ps</code> or add yourself to the <code>docker</code> group: <code>sudo usermod -aG docker $USER &amp;&amp; newgrp docker</code>.</p>
+<p>Then create the <code>git</code> user:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> useradd</span><span style="color:#bf616a;"> --uid </span><span>$(</span><span style="color:#bf616a;">docker</span><span> exec gitlab id git</span><span style="color:#bf616a;"> -u</span><span>)</span><span style="color:#bf616a;"> --gid </span><span>$(</span><span style="color:#bf616a;">docker</span><span> exec gitlab id git</span><span style="color:#bf616a;"> -g</span><span>)</span><span style="color:#bf616a;"> --home-dir</span><span> /opt/gitlab/data</span><span style="color:#bf616a;"> --no-create-home</span><span> git
+</span></code></pre>
+<h2 id="creating-the-scripts">Creating the scripts</h2>
+<p>Create the directory structure on the host system:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /opt/gitlab/embedded/service/gitlab-shell/bin
+</span></code></pre>
+<p>Create 3 scripts:</p>
+<ul>
+<li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell</code>:</li>
+</ul>
+<p>This script wraps the GitLab shell access.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env sh
+</span><span>
+</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-eu
+</span><span>
+</span><span style="color:#bf616a;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span> gitlab-shell &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
+</span></code></pre>
+<ul>
+<li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check</code>:</li>
+</ul>
+<p>This script manages asking to GitLab if a key is authorized to access the SSH server.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env sh
+</span><span>
+</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-eu
+</span><span>
+</span><span style="color:#bf616a;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span> gitlab-shell-authorized-keys-check &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
+</span></code></pre>
+<ul>
+<li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</code>:</li>
+</ul>
+<p>This script does all the magic of communicating with the GitLab container.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env bash
+</span><span>
+</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-e
+</span><span>
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[[ </span><span>&quot;$</span><span style="color:#bf616a;">1</span><span>&quot; == &quot;</span><span style="color:#a3be8c;">gitlab-shell-authorized-keys-check</span><span>&quot; </span><span style="color:#96b5b4;">]]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>  </span><span style="color:#bf616a;">SCRIPT</span><span>=&quot;$</span><span style="color:#bf616a;">1</span><span style="color:#a3be8c;"> git</span><span>&quot;
+</span><span>  </span><span style="color:#96b5b4;">shift
+</span><span style="color:#b48ead;">elif </span><span style="color:#96b5b4;">[[ </span><span>&quot;$</span><span style="color:#bf616a;">1</span><span>&quot; == &quot;</span><span style="color:#a3be8c;">gitlab-shell</span><span>&quot; </span><span style="color:#96b5b4;">]]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>  </span><span style="color:#bf616a;">SCRIPT</span><span>=&quot;$</span><span style="color:#bf616a;">1</span><span>&quot;
+</span><span>  </span><span style="color:#96b5b4;">shift
+</span><span style="color:#b48ead;">else
+</span><span>  </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">&#39;</span><span>$</span><span style="color:#bf616a;">1</span><span style="color:#a3be8c;">&#39; unknown. Aborting.</span><span>&quot;
+</span><span>  </span><span style="color:#96b5b4;">exit</span><span> 1
+</span><span style="color:#b48ead;">fi
+</span><span>
+</span><span style="color:#96b5b4;">exec</span><span> docker exec -i \
+</span><span>    --env SSH_CONNECTION=&quot;$</span><span style="color:#bf616a;">SSH_CONNECTION</span><span>&quot; \
+</span><span>    --env SSH_CLIENT=&quot;$</span><span style="color:#bf616a;">SSH_CLIENT</span><span>&quot; \
+</span><span>    --env SSH_TTY=&quot;$</span><span style="color:#bf616a;">SSH_TTY</span><span>&quot; \
+</span><span>    --env GIT_SSH=&quot;$</span><span style="color:#bf616a;">GIT_SSH</span><span>&quot; \
+</span><span>    --env SSH_ORIGINAL_COMMAND=&quot;$</span><span style="color:#bf616a;">SSH_ORIGINAL_COMMAND</span><span>&quot; \
+</span><span>    gitlab \
+</span><span>    /opt/gitlab/embedded/service/gitlab-shell/bin/${</span><span style="color:#bf616a;">SCRIPT</span><span>} &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
+</span></code></pre>
+<ul>
+<li>Ensure <code>gitlab-shell</code> script is owned by <code>git</code>: <code>sudo chown git:git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell</code></li>
+<li>Make all 3 scripts executable: <code>sudo chmod +x /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</code></li>
+</ul>
+<h3 id="check-the-scripts">Check the scripts</h3>
+<p>I created the following checks:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo -u</span><span> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell
+</span><span style="color:#65737e;"># Only SSH allowed
+</span></code></pre>
+<p>and</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo -u</span><span> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell-authorized-keys-check
+</span><span style="color:#65737e;"># Insufficient arguments. 1. Usage
+</span><span style="color:#65737e;">#	gitlab-shell-authorized-keys-check &lt;expected-username&gt; &lt;actual-username&gt; &lt;key&gt;
+</span></code></pre>
+<h2 id="adjust-the-ssh-server-config">Adjust the ssh server config</h2>
+<p>Finally in <code>/etc/ssh/sshd_config</code> you will need to add:</p>
+<pre data-lang="ssh" style="background-color:#2b303b;color:#c0c5ce;" class="language-ssh "><code class="language-ssh" data-lang="ssh"><span>Match User git
+</span><span>    PermitEmptyPasswords no
+</span><span>    PasswordAuthentication no
+</span><span>    AuthorizedKeysCommand /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check %u %k
+</span><span>    AuthorizedKeysCommandUser git
+</span></code></pre>
+<p>And then <code>sudo service sshd restart</code></p>
+<h2 id="testing-the-ssh-connection">Testing the ssh connection</h2>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> git@instanceHostName
+</span></code></pre>
+<p>Example:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> git@10.10.10.1
+</span><span style="color:#bf616a;">PTY</span><span> allocation request failed on channel 0
+</span><span style="color:#bf616a;">Welcome</span><span> to GitLab, @williamdes!
+</span><span style="color:#bf616a;">Connection</span><span> to 10.10.10.1 closed.
+</span></code></pre>
+<p>You can use <code>ssh git@instanceHostName -vv</code> to debug further.
+Be sure to add your SSH public key on your GitLab profile (SSH keys).
+You can check your agent has it loaded by using the command <code>ssh-add -L</code>.
+Bonus: it will display the public key to add on your GitLab account.</p>
+<h2 id="some-references">Some references</h2>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://github.com/sameersbn/docker-gitlab/issues/1517#issuecomment-1481697589">Matthias Baur's solutions</a></li>
+<li><a rel="noopener" target="_blank" href="https://blog.xiaket.org/2017/exposing.ssh.port.in.dockerized.gitlab-ce.html">A blog post from xiaket.org (untested)</a></li>
+<li><a rel="noopener" target="_blank" href="https://gitlab.com/gitlab-org/gitlab/-/blob/v18.2.0-ee/doc/administration/operations/fast_ssh_key_lookup.md">GitLab documentation about fast SSH key lookup</a></li>
+<li><a rel="noopener" target="_blank" href="https://docs.gitlab.com/administration/operations/ssh_certificates/">GitLab documentation about <code>AuthorizedPrincipalsCommand</code></a></li>
+<li><a rel="noopener" target="_blank" href="https://docs.gitea.com/installation/install-with-docker#ssh-container-passthrough">Gitea SSH container passthrough</a></li>
+</ul>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-tutorial/">infra-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/gitlab/">gitlab</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/ssh/">ssh</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>
