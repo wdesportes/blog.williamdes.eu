@@ -127,14 +127,18 @@ exit
 Create the chroot:
 
 ```sh
-sudo sbuild-createchroot --chroot-prefix=bullseye-backports --extra-repository='deb http://deb.debian.org/debian bullseye-backports main' --include=eatmydata,ccache bullseye /srv/chroot/bullseye-backports-amd64-sbuild http://ftp.fr.debian.org/debian
+sudo sbuild-createchroot \
+    --chroot-prefix=bookworm-backports \
+    --extra-repository='deb http://deb.debian.org/debian bookworm-backports main' \
+    --include eatmydata,ccache,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli \
+    bookworm /srv/chroot/bookworm-backports-amd64-sbuild http://ftp.fr.debian.org/debian
 ```
 
 Make sure the packages in backports are preferred above the original ones:
 
 ```sh
-sudo sbuild-shell source:bullseye-backports-amd64-sbuild
-echo "Package: *\nPin: release a=bullseye-backports\nPin-Priority:900" > /etc/apt/preferences.d/bullseye-backports.pref
+sudo sbuild-shell source:bookworm-backports-amd64-sbuild
+echo "Package: *\nPin: release a=bookworm-backports\nPin-Priority:900" > /etc/apt/preferences.d/bookworm-backports.pref
 # Update the chroot
 apt update
 apt upgrade
@@ -144,7 +148,7 @@ exit
 #### Early backports testing
 
 ```sh
-sbuild -d bullseye-backports --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-bullseye-backports main'
+sbuild -d bookworm-backports --extra-repository='deb http://incoming.debian.org/debian-buildd/ buildd-bookworm-backports main'
 ```
 
 More about this on this [blog post](https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html)
@@ -167,9 +171,9 @@ cd /home/user/packages/my-package
 # sid dist
 sbuild -d sid
 # Normal dist
-sbuild -d bullseye
+sbuild -d bookworm
 # Backports dist
-sbuild -d bullseye-backports
+sbuild -d bookworm-backports
 ```
 
 ### List chroots
