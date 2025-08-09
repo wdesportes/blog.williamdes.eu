@@ -38,6 +38,7 @@ jobs:
                   TEMP_DIR="$(mktemp -d --suffix=_blog)"
                   cp -rp blog.williamdes.eu/public "${TEMP_DIR}"
                   git checkout static-pages
+                  sudo chown -R $USER:$USER ./
                   git ls-files | xargs -r -n 1 rm -vf
                   rm -rfd ./*
                   mv "${TEMP_DIR}"/public/* ./
