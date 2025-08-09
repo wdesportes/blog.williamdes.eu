@@ -10,13 +10,13 @@ version:
 	docker run --name ${CONTAINER_NAME} --rm -it ${IMAGE} --version
 
 init:
-	docker run --name ${CONTAINER_NAME} --rm -it --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app ${IMAGE} init ${PROJECT_NAME}
+	docker run --name ${CONTAINER_NAME} --rm -it  -v ${PWD}:/app --workdir /app ${IMAGE} init ${PROJECT_NAME}
 
 build:
-	docker run --name ${CONTAINER_NAME} --rm --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app/${PROJECT_NAME} ${IMAGE} build
+	docker run --name ${CONTAINER_NAME} --rm  -v ${PWD}:/app --workdir /app/${PROJECT_NAME} ${IMAGE} build
 
 serve:
-	docker run --name ${CONTAINER_NAME} --rm --user ${CONTAINER_USER} -v ${PWD}:/app --workdir /app/${PROJECT_NAME} --network host ${IMAGE} serve --interface 0.0.0.0 --port 8111 --base-url localhost
+	docker run --name ${CONTAINER_NAME} --rm  -v ${PWD}:/app -p 8111:8111 --workdir /app/${PROJECT_NAME} ${IMAGE} serve --interface 0.0.0.0 --port 8111 --base-url localhost
 
 date:
 	date +'%Y-%m-%dT%H:%M:%SZ' --utc
