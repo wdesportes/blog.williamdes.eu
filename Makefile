@@ -22,7 +22,8 @@ date:
 	date +'%Y-%m-%dT%H:%M:%SZ' --utc
 
 cleanup:
-	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg
+	find ./${PROJECT_NAME}/ -name *.jpg -or -name *.jpeg -or -name *.png
 	@echo "Cleaning up..."
+	find ./${PROJECT_NAME}/ -name *.png -print0 -exec exiftool -overwrite_original "-gps*=" {} \;
 	find ./${PROJECT_NAME}/ -name *.jpg -print0 -exec exiftool -overwrite_original "-gps*=" {} \;
 	find ./${PROJECT_NAME}/ -name *.jpeg -print0 -exec exiftool -overwrite_original "-gps*=" {} \;
