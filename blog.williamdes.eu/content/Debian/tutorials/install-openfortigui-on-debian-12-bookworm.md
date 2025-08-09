@@ -67,6 +67,8 @@ Uncomment:
 
 See: https://github.com/adrienverge/openfortivpn/issues/1076#issuecomment-2156366824
 
+Or the logs will say `DEBUG:  if_config: not ready yet...`.
+
 ### Screenshots
 
 On 2023-02-13 I followed this and it installed: `0.9.8`
