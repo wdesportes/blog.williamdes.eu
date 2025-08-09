@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/</id>
         
-        <summary type="html">&lt;p&gt;Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/</id>
         
-        <summary type="html">&lt;p&gt;I decided to end the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; monitoring experiment and switch to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;vigil&quot;&gt;Vigil&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;I decided to end the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; monitoring experiment and switch to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;vigil&quot;&gt;Vigil&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

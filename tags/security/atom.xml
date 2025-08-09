@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/</id>
         
-        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
         
-        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -62,8 +60,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
         
-        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

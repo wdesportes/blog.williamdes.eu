@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
         
-        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/</id>
         
-        <summary type="html">&lt;p&gt;Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

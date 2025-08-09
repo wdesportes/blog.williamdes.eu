@@ -165,7 +165,7 @@
             <span class="post-date">Published: <time datetime="2023-01-18T12:40:00+0005">January 18, 2023 12:40</time></span>
             <span class="post-date"> and updated: <time datetime="2025-02-01T17:14:00+0001">February  1, 2025 17:14</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">6 min read</span>
+            <span class="post-reading-time">3 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Creating <a rel="noopener" target="_blank" href="https://wiki.debian.org/sbuild">sbuild</a> chroots for Debian package testing</p>
@@ -232,18 +232,22 @@ The packages will not be used for DEP-8 autopkgtests, check the "Autopkgtests" s
 </span></code></pre>
 <h3 id="backports-chroot">Backports chroot</h3>
 <p>Create the chroot:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot</span><span style="color:#bf616a;"> --chroot-prefix</span><span>=bullseye-backports</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian bullseye-backports main</span><span>&#39;</span><span style="color:#bf616a;"> --include</span><span>=eatmydata,ccache bullseye /srv/chroot/bullseye-backports-amd64-sbuild http://ftp.fr.debian.org/debian
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-createchroot \
+</span><span style="color:#bf616a;">    --chroot-prefix</span><span>=bookworm-backports \
+</span><span style="color:#bf616a;">    --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://deb.debian.org/debian bookworm-backports main</span><span>&#39; \
+</span><span style="color:#bf616a;">    --include</span><span> eatmydata,ccache,lintian,pkg-php-tools,phpunit,phpab,php-cgi,php-cli \
+</span><span>    bookworm /srv/chroot/bookworm-backports-amd64-sbuild http://ftp.fr.debian.org/debian
 </span></code></pre>
 <p>Make sure the packages in backports are preferred above the original ones:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:bullseye-backports-amd64-sbuild
-</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=bullseye-backports\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/bullseye-backports.pref
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> sbuild-shell source:bookworm-backports-amd64-sbuild
+</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Package: *\nPin: release a=bookworm-backports\nPin-Priority:900</span><span>&quot; &gt; /etc/apt/preferences.d/bookworm-backports.pref
 </span><span style="color:#65737e;"># Update the chroot
 </span><span style="color:#bf616a;">apt</span><span> update
 </span><span style="color:#bf616a;">apt</span><span> upgrade
 </span><span style="color:#96b5b4;">exit
 </span></code></pre>
 <h4 id="early-backports-testing">Early backports testing</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild -d</span><span> bullseye-backports</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-bullseye-backports main</span><span>&#39;
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sbuild -d</span><span> bookworm-backports</span><span style="color:#bf616a;"> --extra-repository</span><span>=&#39;</span><span style="color:#a3be8c;">deb http://incoming.debian.org/debian-buildd/ buildd-bookworm-backports main</span><span>&#39;
 </span></code></pre>
 <p>More about this on this <a rel="noopener" target="_blank" href="https://aerostitch.github.io/linux_and_unix/debian/sbuild_with_experimental_distribution.html">blog post</a></p>
 <h4 id="ubuntu-focal-chroot">Ubuntu focal chroot</h4>
@@ -259,9 +263,9 @@ The packages will not be used for DEP-8 autopkgtests, check the "Autopkgtests" s
 </span><span style="color:#65737e;"># sid dist
 </span><span style="color:#bf616a;">sbuild -d</span><span> sid
 </span><span style="color:#65737e;"># Normal dist
-</span><span style="color:#bf616a;">sbuild -d</span><span> bullseye
+</span><span style="color:#bf616a;">sbuild -d</span><span> bookworm
 </span><span style="color:#65737e;"># Backports dist
-</span><span style="color:#bf616a;">sbuild -d</span><span> bullseye-backports
+</span><span style="color:#bf616a;">sbuild -d</span><span> bookworm-backports
 </span></code></pre>
 <h3 id="list-chroots">List chroots</h3>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">schroot -l

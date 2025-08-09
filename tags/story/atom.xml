@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/"/>
         <id>https://blog.williamdes.eu/Debian/the-debian-packages-i-maintain/</id>
         
-        <summary type="html">&lt;p&gt;A presentation of the Debian packages I maintain&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;A presentation of the Debian packages I maintain&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/phpmyadmin-adventure/"/>
         <id>https://blog.williamdes.eu/phpmyadmin-adventure/</id>
         
-        <summary type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;You can follow my phpMyAdmin adventure on this blog post.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -62,8 +60,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/welcome-to-my-blog/"/>
         <id>https://blog.williamdes.eu/welcome-to-my-blog/</id>
         
-        <summary type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;This is my first blog post ever, I hope you will be interested by what I post.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
         
-        <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
         
-        <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

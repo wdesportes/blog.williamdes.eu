@@ -90,6 +90,10 @@
         <lastmod>2024-04-13T11:40:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults/</loc>
+        <lastmod>2025-08-10T00:10:00+00:01</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Life/</loc>
     </url>
     <url>
@@ -361,6 +365,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/infra-tutorial/page/2/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/ldap/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/ldap/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/life-changelog/</loc>

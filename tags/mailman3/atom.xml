@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts/</id>
         
-        <summary type="html">&lt;p&gt;How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

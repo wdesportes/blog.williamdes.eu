@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage">
+        <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults">
+        <meta property="og:description" content="Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2025-02-24T15:33:00+00:01">
+        <meta property="article:published_time" content="2025-02-24T15:33:00">
+        <meta property="article:modified_time" content="2025-08-10T00:10:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="LDAP">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure",
+                    "name": "Infrastructure"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults",
+                    "name": "Secure defaults for LDAP password (CRYPT/PBKDF2/SHA2/ARGON2) storage"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults/",
+    "headline": "Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage",
+    "alternativeHeadline": "Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage",
+    "dateCreated": "2025-02-24T15:33:00+0001",
+    "datePublished": "2025-02-24T15:33:00+0001",
+    "dateModified": "2025-08-10T00:10:00+0001",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["LDAP","password","CRYPT","PBKDF2","SHA2","ARGON2"],
+    "articleSection": "Tutorial",
+    "genre": ["infra-tutorial","LDAP"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2025-02-24T15:33:00+0001">February 24, 2025 15:33</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-08-10T00:10:00+0001">August 10, 2025 00:10</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">6 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Secure defaults for LDAP password (CRYPT/PBKDF2/SHA2/ARGON2) storage</p>
+<span id="continue-reading"></span>
+<p>While configuring LDAP you might be asking yourself "what are the different password storage methods/hashes ?".</p>
+<p>I did some browsing on the web and found it complictated to figure out what are the password hashing methods to keep your LDAP data secure.
+That means, you have passwords to access the LDAP database but the database also stores passwords for your users.</p>
+<p>You can learn more about password on <a rel="noopener" target="_blank" href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP's Password Storage Cheat Sheet</a>.</p>
+<h2 id="the-basics">The basics</h2>
+<p>The manual of <a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd/slapd.conf.5.en.html#password">slapd.conf</a> says:</p>
+<ul>
+<li>The <hash> must be one of <code>{SSHA}</code>, <code>{SHA}</code>, <code>{SMD5}</code>, <code>{MD5}</code>, <code>{CRYPT}</code>, and <code>{CLEARTEXT}</code>.</li>
+<li>The default is <code>{SSHA}</code>.</li>
+</ul>
+<p>You can also have <a rel="noopener" target="_blank" href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#argon2id"><code>{ARGON2}</code></a> in Debian slapd versions after <code>2.5.4+dfsg-1</code> thanks to this <a rel="noopener" target="_blank" href="https://salsa.debian.org/openldap-team/openldap/-/commit/fe779ffb7b8a677853f7fc12af58912d8e767963">commit</a> to change the packaging. But you still need to add a line to the <code>slapd.conf</code> file: <code>moduleload argon2</code>.</p>
+<p>Let's check each one, starting with the most risky ones:</p>
+<ul>
+<li><code>{CLEARTEXT}</code> Obviously the password can be seen by everyone</li>
+<li><code>{MD5}</code> We all know this, md5 can be reverted by bruteforce attempts and dictionnary attacks, for example on <a rel="noopener" target="_blank" href="https://md5decrypt.net/en/">md5decrypt.net</a>. You can read more about it on <a rel="noopener" target="_blank" href="https://stackoverflow.com/q/1240852/5155484">StackOverflow</a>.
+<ul>
+<li>Do not use <code>md5</code>.</li>
+</ul>
+</li>
+<li><code>{SMD5}</code> The same but with a <a rel="noopener" target="_blank" href="https://wikipedia.org/wiki/Salt_(cryptography)">salt</a>, this will make attacks much more complicated and hard to do.</li>
+<li><code>{SHA}</code> <code>sha1</code> is a bit better than <code>md5</code> but <a rel="noopener" target="_blank" href="https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html">Google</a> did find some ways to exploit it when it is used for fingerprints. And for passwords, everyone already agrees that you should not use <code>sha1</code>. Read more about it on <a rel="noopener" target="_blank" href="https://stackoverflow.com/a/42421467/5155484">StackOverflow</a>.
+<ul>
+<li><a rel="noopener" target="_blank" href="https://csrc.nist.gov/projects/hash-functions">NIST (National Institute of Standards and Technology) deprecated the use of SHA-1 in 2011</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://www.cnil.fr/fr/securite-chiffrement-hachage-signature">CNIL</a> says not to use it.</li>
+</ul>
+</li>
+<li><code>{SSHA}</code> The same but with a <a rel="noopener" target="_blank" href="https://wikipedia.org/wiki/Salt_(cryptography)">salt</a>, this will make attacks much more complicated and hard to do.</li>
+<li><code>{CRYPT}</code> Is not quite good for passwords.
+<ul>
+<li>The <a rel="noopener" target="_blank" href="https://httpd.apache.org/docs/2.4/programs/htpasswd.html#security">Apache2</a> webserver explains the "Security Considerations"</li>
+<li>And links to more about it <a rel="noopener" target="_blank" href="https://www.akkadia.org/drepper/SHA-crypt.txt">Unix crypt using SHA-256 and SHA-512</a>.</li>
+<li>The <a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/libcrypt-dev/crypt.5.en.html#sha512crypt">Debian manual</a> for crypt explains the format</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-format">The format</h2>
+<blockquote>
+<p>Since glibc 2.7, the SHA-256 and SHA-512 implementations support a
+user-supplied number of hashing rounds, defaulting to 5000.  If
+the "$id$" characters in the salt are followed by "rounds=xxx$",
+where xxx is an integer, then the result has the form</p>
+<p><code>$id$rounds=yyy$salt$hashed</code></p>
+</blockquote>
+<p>Using <a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd/slappasswd.8.en.html">slappasswd</a> and the command: <code>slappasswd -h '{CRYPT}' -c '$6$rounds=300000$%.16s'</code> it generates a password in the format:</p>
+<p>$6$[cost]$[22 character salt][31 character hash]</p>
+<p>For example, with input password abc123xyz, cost 12, and a random salt, the output of bcrypt is the string:</p>
+<ul>
+<li>SHA-256 <code>$5$</code></li>
+<li>SHA-512 <code>$6$</code></li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span> {CRYPT}$6$rounds=300000$OJaNHOxGKWWtaK$xxxxxxxxxxxxxxxxxx.
+</span><span> \_____/\/\___________/ \_____________/ \________________/
+</span><span> Hash   Alg Cost Options     Salt        Hashed password
+</span></code></pre>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>password-hash {SSHA} {CRYPT} {ARGON2}`
+</span><span>password-crypt-salt-format &quot;$6$rounds=300000$%.16s&quot;
+</span></code></pre>
+<h2 id="more-schemes-for-slappasswd">More schemes for slappasswd</h2>
+<h3 id="debian-bookworm">Debian bookworm</h3>
+<p>As I found out on the webpage: <a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd-contrib/index.html">slapd-contrib manuals</a></p>
+<p>There is 2 schemes added by the contrib package (<code>slapd-contrib</code>):</p>
+<ul>
+<li>
+<p><a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd-contrib/slapd-pw-pbkdf2.5.en.html">pbkdf2</a></p>
+</li>
+<li>
+<p><code>{PBKDF2}</code> - alias to {PBKDF2-SHA1}</p>
+</li>
+<li>
+<p><code>{PBKDF2-SHA1}</code> - PBKDF2 using HMAC-SHA-1 as the underlying pseudorandom function</p>
+</li>
+<li>
+<p><code>{PBKDF2-SHA256}</code> - PBKDF2 using HMAC-SHA-256 as the underlying pseudorandom function</p>
+</li>
+<li>
+<p><code>{PBKDF2-SHA512}</code> - PBKDF2 using HMAC-SHA-512 as the underlying pseudorandom function</p>
+</li>
+<li>
+<p><a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd-contrib/slapd-pw-sha2.5.en.html">sha2</a></p>
+<ul>
+<li><code>{SSHA256}</code> - SHA-256 with salt, giving hash values of 256 bits length</li>
+<li><code>{SHA256}</code> - plain SHA-256 giving hash values of 256 bits length</li>
+<li><code>{SSHA384}</code> - SHA-384 with salt, giving hash values of 384 bits length</li>
+<li><code>{SHA384}</code> - plain SHA-384 giving hash values of 384 bits length</li>
+<li><code>{SSHA512}</code> - SHA-512 with salt, giving hash values of 512 bits length</li>
+<li><code>{SHA512}</code> - plain SHA-512 giving hash values of 512 bits length</li>
+</ul>
+</li>
+<li>
+<p><a rel="noopener" target="_blank" href="https://manpages.debian.org/bookworm/slapd-contrib/slapo-smbk5pwd.5.en.html">smbk5pwd</a> (Samba &amp; Kerberos password sync overlay to slapd)
+Have fun. I have no way to test it.</p>
+<ul>
+<li><code>{K5KEY}</code> - to be used in the <code>userPassword</code> attribute.</li>
+</ul>
+</li>
+<li>
+<p>(Undocumented)</p>
+<ul>
+<li><code>{NS-MTA-MD5}</code> - Netscape MTA MD5 hashed passwords (the only one <code>slappasswd</code> does not apparently support)</li>
+<li><code>{APR1}</code> - <a rel="noopener" target="_blank" href="https://fr.wikipedia.org/wiki/APR1">APR1</a>, suported by <a rel="noopener" target="_blank" href="https://httpd.apache.org/docs/2.4/en/misc/password_encryptions.html">Apache2 htaccess</a></li>
+<li><code>{BSDMD5}</code> - Seems to be MD5 crypt, see this <a rel="noopener" target="_blank" href="https://www.openldap.net/lists/openldap-bugs/201407/msg00030.html">openldap mailing list post</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="debian-trixie">Debian trixie</h3>
+<p>Released on 08/2025.</p>
+<p><a rel="noopener" target="_blank" href="https://manpages.debian.org/testing/slapd-contrib/index.html">slapd-contrib manuals</a></p>
+<p>There is 1 more scheme than in <code>bookworm</code>:</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://manpages.debian.org/testing/slapd-contrib/slapd-pw-argon2.5.en.html">argon2</a>
+<ul>
+<li><code>{ARGON2}</code> - Argon 2, like <code>{CRYPT}</code> you can use parameters in the salt/format: <code>{ARGON2}$argon2i$v=19$m=4096,t=3,p=1$...</code></li>
+</ul>
+</li>
+</ul>
+<p>But <code>argon2</code> got moved from <a rel="noopener" target="_blank" href="https://salsa.debian.org/openldap-team/openldap/-/commit/fe779ffb7b8a677853f7fc12af58912d8e767963">slapd-contrib to slapd</a> in the Debian version <code>2.5.4+dfsg-1~exp1</code>.
+So all versions above will find the module in <code>/usr/lib/ldap/argon2.so</code></p>
+<p>And that means that slappasswd wants it this way: <code>slappasswd -o module-load=argon2 -h '{ARGON2}'</code>.
+And here is the result: <code>{ARGON2}$argon2id$v=19$m=7168,t=5,p=1$oFzolryiDLgxHI07Ut495A$MnuYn7SV7mrtqfq3W/izjmdZpc6S6UOoQNZhBrgbOkM</code></p>
+<p>To change the default parameters you need to use it like this:
+<code>slappasswd -o module-load="argon2 m=7168" -h '{ARGON2}'</code>.</p>
+<p>It supports <code>m=&lt;memory&gt;</code>, <code>p=&lt;parallelism&gt;</code> and <code>t=&lt;iterations&gt;</code> parameters.</p>
+<p>The existing list of schemes supported from <code>bookworm</code> remain unchanged.</p>
+<p>But one more interesting module is added: <a rel="noopener" target="_blank" href="https://manpages.debian.org/testing/slapd-contrib/slapm-ppm.5.en.html">ppm (Password Policy Module) - extension of the password policy overlay</a>.</p>
+<h3 id="example">Example</h3>
+<p>If you have the error: <code>Password generation failed for scheme {PBKDF2}: scheme not recognized</code>
+You maybe need to install <code>apt install slapd-contrib</code> or/and add <code>-o module-load=pw-pbkdf2</code> to the command line.</p>
+<p>Run <code>slappasswd -o module-load=pw-pbkdf2 -h '{PBKDF2}'</code>
+And here is the result: <code>{PBKDF2}10000$yRnewNnSbe9LyLCmc7wTdw$YZ.z5OpUKcs8t1lYe3rkPnVS8K4</code></p>
+<h2 id="note">Note</h2>
+<p>I am not sure why I was holding publishing this article, normally it is up to date.
+Please contact me if not.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>https://www.redpill-linpro.com/techblog/2016/08/16/ldap-password-hash.html</li>
+<li>https://kb.brightcomputing.com/knowledge-base/how-can-i-change-the-password-policy-of-ldap/</li>
+<li>https://strugglers.net/~andy/mothballed-blog/2010/01/23/openldap-and-md5crypt/</li>
+<li>https://serverfault.com/a/571989/336084</li>
+<li>https://github.com/P-H-C/phc-string-format/blob/master/phc-sf-spec.md</li>
+<li>https://manpages.debian.org/bookworm/libcrypt-dev/crypt.5.en.html</li>
+<li>https://manpages.debian.org/bookworm/slapd/slapd.conf.5.en.html#password</li>
+<li>https://www.wolfssl.com/fips-140-3-and-sha-1-retirement/</li>
+<li>https://www.arsouyes.org/articles/2019/52_Hash_Function_Cryptography/</li>
+<li>https://passlib.readthedocs.io/en/stable/narr/quickstart.html#recommended-hashes</li>
+</ul>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/infra-tutorial/">infra-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/ldap/">LDAP</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

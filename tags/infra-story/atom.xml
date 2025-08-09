@@ -22,8 +22,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-from-uuptime-to-zabbix-and-vigil-years-later/</id>
         
-        <summary type="html">&lt;p&gt;I decided to end the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; monitoring experiment and switch to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;vigil&quot;&gt;Vigil&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;I decided to end the &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt; monitoring experiment and switch to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;vigil&quot;&gt;Vigil&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.zabbix.com&#x2F;&quot;&gt;Zabbix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -42,8 +41,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/making-nvme-ssds-work-on-dell-r630-server/</id>
         
-        <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;The adventure it has been to make NVME SSDs work on a DELL R630 server.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -62,8 +60,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/raspberry-pi-with-noctua-fan/</id>
         
-        <summary type="html">&lt;p&gt;I changed my Raspberry Pi fan for a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;I changed my Raspberry Pi fan for a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;noctua.at&#x2F;en&#x2F;nf-a4x10-5v-pwm&quot;&gt;Noctua NF-A4x10 5V PWM&lt;&#x2F;a&gt; and had a 2° temperature drop compared to the GeeekPi case fan.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -82,8 +79,7 @@
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/"/>
         <id>https://blog.williamdes.eu/Infrastructure/stories/migrating-to-a-housed-server-at-dyjix/</id>
         
-        <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;
-</summary>
+        <summary type="html">&lt;p&gt;This is the story on how I migrated from a VPS to a Dell PowerEdge R630.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>
