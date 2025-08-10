@@ -4,12 +4,12 @@
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/debian/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-09-16T21:54:33+00:02</updated>
+    <updated>2025-08-10T12:27:00+00:02</updated>
     <id>https://blog.williamdes.eu/tags/debian/atom.xml</id>
     <entry xml:lang="en">
         <title>The Debian packages I maintain</title>
         <published>2023-05-05T19:50:00+00:00</published>
-        <updated>2024-09-16T21:54:33+00:02</updated>
+        <updated>2025-08-10T12:27:00+00:02</updated>
         
         <author>
           <name>

@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-05-05T19:50:00+00:00">
         <meta property="article:published_time" content="2023-05-05T19:50:00">
-        <meta property="article:modified_time" content="2024-09-16T21:54:33">
+        <meta property="article:modified_time" content="2025-08-10T12:27:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="story"><meta property="article:tags" content="Debian">
         
@@ -93,7 +93,7 @@
     "alternativeHeadline": "A presentation of the Debian packages I maintain",
     "dateCreated": "2023-05-05T19:50:00+0000",
     "datePublished": "2023-05-05T19:50:00+0000",
-    "dateModified": "2024-09-16T21:54:33+0002",
+    "dateModified": "2025-08-10T12:27:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -152,9 +152,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2023-05-05T19:50:00+0000">May  5, 2023 19:50</time></span>
-            <span class="post-date"> and updated: <time datetime="2024-09-16T21:54:33+0002">September 16, 2024 21:54</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-08-10T12:27:00+0002">August 10, 2025 12:27</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">4 min read</span>
+            <span class="post-reading-time">5 min read</span>
         </div>
     </header>
     <div class="post-content"><p>A presentation of the Debian packages I maintain</p>
@@ -162,6 +162,10 @@
 <p>Since 2019 I started contributing to Debian.
 You can find a quick list of areas and dates I started contributing to Debian on <a rel="noopener" target="_blank" href="https://contributors.debian.org/contributor/williamdes/">my contributors.d.o page</a>.</p>
 <p>Here is the link to the full list of packages I maintain on <a rel="noopener" target="_blank" href="https://qa.debian.org/developer.php?login=williamdes@wdes.fr&amp;comaint=yes&amp;version=oldoldstable">qa.d.o</a></p>
+<h2 id="qa-efforts">QA efforts</h2>
+<p>On my free time I try to get rid of old and non working packages in Debian.<br>
+For that I built a dashboard project: <a rel="noopener" target="_blank" href="https://debian-dashboard-ce9e3e.pages.debian.net/en/">Debian dashboard - by @williamdes</a></p>
+<p>You can find a list of removed packages <a rel="noopener" target="_blank" href="https://bugs.debian.org/cgi-bin/pkgreport.cgi?archive=both;src=ftp.debian.org;submitter=williamdes%40wdes.fr">here</a></p>
 <h2 id="the-packages-i-maintain">The packages I maintain</h2>
 <p>I decided to make them easier to find and created labels for them on Debian Salsa (A GitLab instance that hosts the packages and CIs):</p>
 <ul>
@@ -180,7 +184,7 @@ You can find a quick list of areas and dates I started contributing to Debian on
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-slim-psr7">php-slim-psr7</a></li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/google-recaptcha">google-recaptcha</a></li>
 </ul>
-<h4 id="phpmyadmin-libraires"><a rel="noopener" target="_blank" href="https://qa.debian.org/developer.php?email=team%2Bphpmyadmin%40tracker.debian.org">phpMyAdmin libraires</a></h4>
+<h4 id="phpmyadmin-libraries"><a rel="noopener" target="_blank" href="https://qa.debian.org/developer.php?email=team%2Bphpmyadmin%40tracker.debian.org">phpMyAdmin libraries</a></h4>
 <ul>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/twig-i18n-extension">twig-i18n-extension</a> previously <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/twig-extensions">twig-extensions</a></li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin-shapefile">phpmyadmin-shapefile</a></li>
@@ -190,11 +194,16 @@ You can find a quick list of areas and dates I started contributing to Debian on
 <h3 id="tools">Tools</h3>
 <ul>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin">phpmyadmin</a>, the phpMyAdmin package.</li>
-<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpsysinfo">phpsysinfo</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1406225/accepted-phpsysinfo-342-1-source-into-unstable/">adopted it in January 2023</a> to save it from beeing missing from Debian bookworm !</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpsysinfo">phpsysinfo</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1406225/accepted-phpsysinfo-342-1-source-into-unstable/">adopted it in January 2023</a> to save it from being missing from Debian Bookworm !</li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpldapadmin">phpldapadmin</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1427368/accepted-phpldapadmin-1263-03-source-into-unstable/">saved/adopted it and made PHP 8.1/8.2 support</a>.</li>
-<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/shunit2">shunit2</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1357356/accepted-shunit2-218-1-source-into-experimental/">finished the hard refurubishing work</a> and got it updated in Debian for bookworm.</li>
-<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phing">phing</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417993/accepted-phing-2174-1-source-into-unstable/">adopted it</a> to save it from beeing missing from Debian bookworm !</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/shunit2">shunit2</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1357356/accepted-shunit2-218-1-source-into-experimental/">finished the hard refurubishing work</a> and got it updated in Debian for Bookworm.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phing">phing</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417993/accepted-phing-2174-1-source-into-unstable/">adopted it</a> to save it from being missing from Debian Bookworm and Debian Trixie (again !) !</li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/kcov">kcov</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/kcov">adopted this very old package that existed in Debian jessie and stretch</a> and got it updated in Debian for trixie.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/dmarc-srg">dmarc-srg</a>, I packaged this tool for Debian Trixie and Debian Bookworm backports.</li>
+</ul>
+<h3 id="games">Games</h3>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/piu-piu">piu-piu</a>, The game is fun, I am <a rel="noopener" target="_blank" href="https://github.com/vaniacer/piu-piu-SH/issues/31">working with the maintainer</a> to get it updated in Debian.</li>
 </ul>
 <h2 id="the-packages-i-help-maintain">The packages I help maintain</h2>
 <p>They are some that can be found on: <a rel="noopener" target="_blank" href="https://salsa.debian.org/explore/projects/topics/wdes-packaging-team">@wdes-packaging-team</a>.</p>
@@ -202,10 +211,29 @@ You can find a quick list of areas and dates I started contributing to Debian on
 <ul>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-image-text">php-image-text</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1412143/accepted-php-image-text-070-3-source-into-unstable/">wrote autopkgtests and refreshed the packaging</a>.</li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-font-lib">php-font-lib</a>, I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1415724/accepted-php-font-lib-054dfsg-1-source-into-unstable/">refreshed the packaging</a>.</li>
-<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf-svg-lib">php-dompdf-svg-lib</a>, one of the last packages to enter NEW for bookworm before the freeze.</li>
-<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf">php-dompdf</a>, was part of my February 2023 Debian contributions. I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417025/accepted-php-dompdf-202dfsg-1-source-into-unstable/">refreshed the packaging</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf-svg-lib">php-dompdf-svg-lib</a>, one of the last packages to enter NEW for Bookworm before the freeze. It will be missing in Debian Trixie.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-dompdf">php-dompdf</a>, was part of my February 2023 Debian contributions. I <a rel="noopener" target="_blank" href="https://tracker.debian.org/news/1417025/accepted-php-dompdf-202dfsg-1-source-into-unstable/">refreshed the packaging</a>. It will be missing in Debian Trixie.</li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-nikic-fast-route">php-nikic-fast-route</a>, I added the package in <code>bullseye-backports</code>.</li>
 <li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-fig-http-message-util">php-fig-http-message-util</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-di">php-di</a>, I packaged it for <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo">matomo</a>.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-di-invoker">php-di-invoker</a>, I packaged it for <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo">matomo</a>.</li>
+</ul>
+<h3 id="matomo">Matomo</h3>
+<p>I help on this project and try my best to enforce best practices and write DEP-8 tests to ensure top quality packages.</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo">matomo</a> itself.</li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-component-cache">matomo-component-cache</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-component-decompress">matomo-component-decompress</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-component-ini">matomo-component-ini</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-component-network">matomo-component-network</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-device-detector">matomo-device-detector</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-php-tracker">matomo-php-tracker</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-referrer-spam-list">matomo-referrer-spam-list</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/matomo-searchengine-and-social-list">matomo-searchengine-and-social-list</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-jshrink">php-jshrink</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-maxmind-web-service-common">php-maxmind-web-service-common</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-sparkline">php-sparkline</a></li>
+<li><a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/php-spyc">php-spyc</a></li>
 </ul>
 </div>
     <footer class="post-footer">
