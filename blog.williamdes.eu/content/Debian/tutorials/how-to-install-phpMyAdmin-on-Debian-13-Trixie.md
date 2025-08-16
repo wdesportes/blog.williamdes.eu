@@ -1,7 +1,7 @@
 +++
 title = "How to install phpMyAdmin on Debian 13 - Trixie ?"
-date = 2025-08-20T00:29:00+00:01
-updated = 2025-08-21T03:25:00+00:01
+date = 2025-08-10T00:29:00+00:01
+updated = 2025-08-11T03:25:00+00:01
 
 [extra]
 author = "William Desportes"
