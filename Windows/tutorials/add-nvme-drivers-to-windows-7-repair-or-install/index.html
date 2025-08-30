@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - Add NVME drivers to Windows 7 (install&#x2F;repair)</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="How to add NVME drivers to Windows 7 (install&#x2F;repair) ?">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="Add NVME drivers to Windows 7 (install&#x2F;repair)">
+        <meta property="og:url" content="https://blog.williamdes.eu/Windows/tutorials/add-nvme-drivers-to-windows-7-repair-or-install">
+        <meta property="og:description" content="How to add NVME drivers to Windows 7 (install&#x2F;repair) ?">
+        
+        
+        <meta property="og:image" content="https://blog.williamdes.eu/processed_images/Windows7_NVME_Disks.8c524563f10db65f.jpg"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="627"/>
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2025-08-16T13:40:00+00:02">
+        <meta property="article:published_time" content="2025-08-16T13:40:00">
+        <meta property="article:modified_time" content="2025-08-30T08:30:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="windows-tutorial"><meta property="article:tags" content="Windows7"><meta property="article:tags" content="NVE">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Windows",
+                    "name": "Windows"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Windows/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Windows/tutorials/add-nvme-drivers-to-windows-7-repair-or-install",
+                    "name": "Add NVME drivers to Windows 7 (install/repair)"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    "image": [
+  "https://blog.williamdes.eu/Windows/tutorials/TODO.png",
+  "https://blog.williamdes.eu/Windows/tutorials/Rufus_4.9p_Windows7_Finished.png",
+  "https://blog.williamdes.eu/Windows/tutorials/Rufus_4.9p_Windows_ISO.png",
+  "https://blog.williamdes.eu/Windows/tutorials/Update_boot.wim-1.png",
+  "https://blog.williamdes.eu/Windows/tutorials/Update_boot.wim-2.png",
+  "https://blog.williamdes.eu/Windows/tutorials/Update_install.wim-3.png",
+  "https://blog.williamdes.eu/Windows/tutorials/WIM-TEMP_folder.jpg",
+  "https://blog.williamdes.eu/Windows/tutorials/Windows7_NVME_Disks.jpg",
+  "https://blog.williamdes.eu/Windows/tutorials/Windows_Terminal_As_Administrator.png"
+],
+    "url": "https://blog.williamdes.eu/Windows/tutorials/add-nvme-drivers-to-windows-7-repair-or-install/",
+    "headline": "Add NVME drivers to Windows 7 (install&#x2F;repair)",
+    "alternativeHeadline": "Add NVME drivers to Windows 7 (install&#x2F;repair)",
+    "dateCreated": "2025-08-16T13:40:00+0002",
+    "datePublished": "2025-08-16T13:40:00+0002",
+    "dateModified": "2025-08-30T08:30:00+0001",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["windows-tutorial","Windows7","NVE"],
+    "articleSection": "Tutorial",
+    "genre": ["windows-tutorial","Windows7","NVE"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Add NVME drivers to Windows 7 (install&#x2F;repair)</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2025-08-16T13:40:00+0002">August 16, 2025 13:40</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-08-30T08:30:00+0001">August 30, 2025 08:30</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">9 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>How to add NVME drivers to Windows 7 (install/repair) ?</p>
+<span id="continue-reading"></span>
+<p>In this blog post I will explain how to add NVME drivers to a Windows 7 installation.</p>
+<h3 id="current-setup-and-situation">Current setup and situation</h3>
+<ul>
+<li>An old Windows 7 from a hard drive that I copied into an NVME M2 disk
+<ul>
+<li><code>dd if=/dev/sda of=/dev/nvme0n1 bs=10M conv=sync,noerror status=progress</code>.</li>
+<li>The old disk was plugged into an USB port. I used Debian live to copy the data.</li>
+</ul>
+</li>
+<li>A <a rel="noopener" target="_blank" href="https://pcsupport.lenovo.com/fr/fr/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t590-type-20n4-20n5/20n5/20n5s31u02">ThinkPad T590</a>.</li>
+<li>The old Windows 7 system booted fine on a <a rel="noopener" target="_blank" href="https://pcsupport.lenovo.com/us/fr/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p70/20es/20ess2j700/">ThinkPad P70</a></li>
+<li>On the new ThinkPad T590 it does not boot, because some drivers are missing.</li>
+</ul>
+<!-- T590 -> https://linux-hardware.org/?probe=7a8f8ba626 -->
+<h3 id="making-an-usb-key">Making an USB key</h3>
+<p>WARNING: For recovery you should use an ISO that is the same variant than the system you are trying to repair.</p>
+<p>I used the ISO <a rel="noopener" target="_blank" href="https://archive.org/details/7601.24214.180801-1700.win-7sp-1-ldr-escrow-client-homepremium-x-64-fre-en-us_202301">7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_HOMEPREMIUM_x64FRE_en-us.iso from archive.org</a></p>
+<p>ISO fingerprints:</p>
+<ul>
+<li>sha512: <code>91c5cb78fbbaff269bab48f4b67b041afca5ec71cc7beb5ff7fb05e1e4fe8b44aae0e4b8d5fe5a62894a7f7c2e90f024abec66cc72e06b30eb7ab5d52d42381b</code></li>
+<li>sha256: <code>42dc3f66741a3afbb9223b1e45e811c4f881c7ef19ccb7ac2fdb43025193901a</code></li>
+<li>sha1: <code>c15bb9873548bd4a69371bc7966560c13162128c</code></li>
+<li>rg-adguard: <a rel="noopener" target="_blank" href="https://files.rg-adguard.net/file/2fbbbbc9-08ee-fee8-8eb2-512b2ac8fd25">proof this is an official ISO</a> (Windows 7 with Service Pack 1 (Updated August 2018))</li>
+</ul>
+<p>On Windows you can use <a rel="noopener" target="_blank" href="https://rufus.ie/en/">Rufus</a> to make the USB drive.</p>
+<p><img src="../Rufus_4.9p_Windows_ISO.png" alt="Rufus 4.9p ready to make the Windows USB key" title="Rufus 4.9p ready to make the Windows USB key" />
+<img src="../Rufus_4.9p_Windows7_Finished.png" alt="Rufus 4.9p done making the Windows USB key" title="Rufus 4.9p done making the Windows USB key" /></p>
+<p>On Linux/Debian 13 you can maybe do the work of Rufus, but I have no easy solution for you (given that we need to edit the result/ISO).</p>
+<h3 id="adding-drivers-and-all-updates-using-updatepack7r2-exe">Adding drivers and all updates using <code>UpdatePack7R2.exe</code></h3>
+<p>The tool is published here: <a rel="noopener" target="_blank" href="https://blog.simplix.info/update7/">simplix's blog</a></p>
+<p>You can download it here: <a rel="noopener" target="_blank" href="https://archive.org/details/simplix-update-pack-7-r-2-25.8.12">UpdatePack7R2-25.8.12.exe from archive.org</a></p>
+<p>You can find your Index by running: <code>dism.exe /Get-ImageInfo /imagefile:F:\sources\boot.wim</code><br>
+Or it will take ages by applying updates 4 times, one for each edition of Windows.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">UpdatePack7R2-25.8.12.exe</span><span> /WimFile=F:</span><span style="color:#96b5b4;">\s</span><span>ources</span><span style="color:#96b5b4;">\i</span><span>nstall.wim /Index=* /Boot=F:</span><span style="color:#96b5b4;">\s</span><span>ources</span><span style="color:#96b5b4;">\b</span><span>oot.wim /Optimize
+</span></code></pre>
+<p>Then, when it is finished and presents a log: you can ask to eject the USB key.</p>
+<h4 id="for-installation">For installation</h4>
+<p>It works !
+<img src="../Windows7_NVME_Disks.jpg" alt="It works !" title="It works !" /></p>
+<p>Note: I used the ISO <code>fr_windows_7_home_premium_with_sp1_x64_dvd_u_676521.iso</code></p>
+<h4 id="for-recovery">For recovery</h4>
+<p>Using 7-zip you need to open <code>F:\sources\install.wim</code> and then copy <code>C:\Windows\System32\Recovery\winRE.wim</code> into an USB key.<br>
+Then use this key with Debian live ISO and replace the <code>winRE.wim</code> file you will find in the <code>SYSTEM</code> partition.
+You can now reboot, you will now have NVME and USB 3.0 working fine in recovery mode !</p>
+<h5 id="add-drivers-to-windows-7">Add drivers to Windows 7</h5>
+<p>When you are in recovery mode, open a terminal and run:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">diskpart
+</span><span style="color:#bf616a;">list</span><span> volume
+</span><span style="color:#96b5b4;">exit
+</span></code></pre>
+<p>You can now understand what letter is assigned to your install drive.<br>
+Then run (<code>G:</code> is another USB key):</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir</span><span> G:</span><span style="color:#96b5b4;">\T</span><span>EMP
+</span><span style="color:#bf616a;">dism</span><span> /Image:C:</span><span style="color:#96b5b4;">\ </span><span>/Add-Package /PackagePath:&quot;</span><span style="color:#a3be8c;">G:\WIM-TEMP</span><span>&quot; /ScratchDir:&quot;</span><span style="color:#a3be8c;">G:\TEMP</span><span>&quot;
+</span><span>
+</span><span>
+</span><span style="color:#bf616a;">dism</span><span> /Mount-Image /Image:D:</span><span style="color:#96b5b4;">\ </span><span>/Add-Package /PackagePath:&quot;</span><span style="color:#a3be8c;">G:\WIM-TEMP</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">dism</span><span> /Image:D:</span><span style="color:#96b5b4;">\ </span><span>/Add-Driver /Driver:&quot;</span><span style="color:#a3be8c;">G:\WIM-TEMP</span><span>&quot; /Recurse /forceunsigned
+</span><span>
+</span><span style="color:#bf616a;">dism</span><span> /Unmount-Image /MountDir:C:</span><span style="color:#96b5b4;">\t</span><span>mp</span><span style="color:#96b5b4;">\m</span><span>ount /Commit
+</span><span>
+</span></code></pre>
+<p>See: <a rel="noopener" target="_blank" href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options?view=windows-11#add-package">Dism /Add-Package documentation at Microsoft</a></p>
+<p>If needed (ROLLBACK): <code>dism /image:C:\ /cleanup-image /RevertPendingActions</code></p>
+<p>https://superuser.com/a/938104/609233</p>
+<h3 id="adding-the-nvme-driver-with-dism">Adding the NVME driver with dism</h3>
+<p>Check out <a rel="noopener" target="_blank" href="https://www.pc2s.fr/installation-de-windows-7-sur-ssd-pcie-nvme-natif/">pc2s.fr blog post</a> that has a similar way to do it.</p>
+<p>Alternative downloads:</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://pcsupport.lenovo.com/us/fr/downloads/ds105871">KB2990941 on pcsupport.lenovo.com</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3087873%20x64">KB3087873 on Microsoft catalog</a></li>
+</ul>
+<h4 id="update-wim-files">Update WIM files</h4>
+<p>We will need some Microsoft updates &amp; drivers:</p>
+<ul>
+<li>NVMe Support Hotfix (KB2990941)</li>
+<li>NVMe Bugfix (KB3087873)</li>
+<li>Kernel-Mode Driver Framework version 1.11
+(KMDF supports kernel-mode drivers)</li>
+</ul>
+<!-- - User-Mode Driver Framework version 1.11
+(UMDF supports user-mode drivers) -->
+<ul>
+<li>Intel(R) USB 3.0 eXtensible Host Controller drivers (unzip: <code>Intel_USB_3.0_xHC_Driver_KBL_MR3_5.0.3.42\Drivers\Win7\x64</code>)</li>
+</ul>
+<p>On the USB key, create a folder named <code>WIM-TEMP</code> in your local user and extract the files into it:</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://web.archive.org/web/20250616023539/https://www.pc2s.fr/wp-content/uploads/2018/04/Windows6.1-KB2990941-v3-x64.msu_.zip"><code>Windows6.1-KB2990941-v3-x64.msu</code></a></li>
+<li><a rel="noopener" target="_blank" href="https://web.archive.org/web/20250721165338/https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/htfx/2015/09/windows6.1-kb3087873-v2-x64_098e3dc3e7133ba8a37b2e47260cd8cba960deb8.msu"><code>windows6.1-kb3087873-v2-x64_098e3dc3e7133ba8a37b2e47260cd8cba960deb8.msu</code></a></li>
+<li><a rel="noopener" target="_blank" href="https://web.archive.org/web/20171011191455/https://www.microsoft.com/en-us/download/details.aspx?id=38423"><code>kmdf-1.11-Win-6.1-x86.msu</code></a></li>
+<li><a rel="noopener" target="_blank" href="https://web.archive.org/web/20250816151013/https://dcdrivers.driverscloud.com/drivers/516/516c74210986ed756dc968134f212685/Intel(R)_USB_3.0_eXtensible_Host_Controller_Driver_5.0.3.42.zip"><code>iusb3*</code></a></li>
+</ul>
+<!-- - [`Umdf-1.11-Win-6.1-x86.msu`](https://web.archive.org/web/20240418155454/https://www.microsoft.com/en-us/download/details.aspx?id=38421) -->
+<p><img src="../WIM-TEMP_folder.jpg" alt="The folder WIM-TEMP ready" title="The folder WIM-TEMP ready" /></p>
+<p>From the start menu, open the terminal as an Administrator:
+<img src="../Windows_Terminal_As_Administrator.png" alt="Open the terminal as an Administrator" title="Open the terminal as an Administrator" /></p>
+<h5 id="the-boot-wim-image">The <code>boot.wim</code> image</h5>
+<p>You can check by running: <code>dism.exe /Get-ImageInfo /imagefile:F:\sources\boot.wim</code></p>
+<ul>
+<li>The first Index (<code>1</code>) is for <code>Windows PE</code>
+<ul>
+<li>Run the commands
+<ul>
+<li><code>mkdir C:\WIM-MOUNT</code></li>
+<li><code>dism.exe /Mount-WIM /WimFile:"F:\sources\boot.wim" /index:1 /MountDir:"C:\WIM-MOUNT"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Package /PackagePath:"C:\Users\Williamdes\Documents\WIM-TEMP"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Driver /Driver:"C:\Users\Williamdes\Documents\WIM-TEMP" /Recurse</code></li>
+<li><code>dism.exe /Unmount-wim /mountdir:"C:\WIM-MOUNT" /commit</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../Update_boot.wim-1.png" alt="Update boot.wim index 1" title="Update `boot.wim` index `1`" /></p>
+<ul>
+<li>The second Index (<code>2</code>) is for <code>Windows Setup</code>
+<ul>
+<li>Run the commands
+<ul>
+<li><code>dism.exe /Mount-WIM /WimFile:"F:\sources\boot.wim" /index:2 /MountDir:"C:\WIM-MOUNT"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Package /PackagePath:"C:\Users\Williamdes\Documents\WIM-TEMP"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Driver /Driver:"C:\Users\Williamdes\Documents\WIM-TEMP" /Recurse</code></li>
+<li><code>dism.exe /Unmount-wim /mountdir:"C:\WIM-MOUNT" /commit</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../Update_boot.wim-2.png" alt="Update boot.wim index 2" title="Update `boot.wim` index `2`" /></p>
+<h5 id="the-install-wim-image">The <code>install.wim</code> image</h5>
+<p>You should check by running: <code>dism.exe /Get-ImageInfo /imagefile:F:\sources\install.wim</code></p>
+<p>For the second ISO, there is 4 indexes:</p>
+<ul>
+<li><code>1</code> -&gt; Windows 7 Home Basic</li>
+<li><code>2</code> -&gt; Windows 7 Home Premium</li>
+<li><code>3</code> -&gt; Windows 7 Professional</li>
+<li><code>4</code> -&gt; Windows 7 Ultimate</li>
+</ul>
+<p>Use the right one. For the second ISO use the index <code>3</code>.</p>
+<ul>
+<li>The third index (<code>3</code>) is for <code>Windows 7 Professional</code>
+<ul>
+<li>Run the commands
+<ul>
+<li><code>dism.exe /Mount-WIM /WimFile:"F:\sources\install.wim" /index:3 /MountDir:"C:\WIM-MOUNT"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Package /PackagePath:"C:\Users\Williamdes\Documents\WIM-TEMP"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Driver /Driver:"C:\Users\Williamdes\Documents\WIM-TEMP" /Recurse</code></li>
+<li><code>dism.exe /Unmount-wim /mountdir:"C:\WIM-MOUNT" /commit</code></li>
+<li><code>rmdir C:\WIM-MOUNT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../Update_install.wim-3.png" alt="Update install.wim index 3" title="Update `install.wim` index `3`" /></p>
+<p>Now, eject the USB key.</p>
+<p><img src="../Windows7_NVME_Disks.jpg" alt="It works !" title="It works !" /></p>
+<h4 id="the-winre-wim-image">The <code>winRE.wim</code> image</h4>
+<p>This is the recovery image from the SYSTEM partition.<br>
+You can extract it from an existing Windows installation and perform the following commands:</p>
+<p>You can check by running: <code>dism.exe /Get-ImageInfo /imagefile:C:\Users\Williamdes\Documents\winRE.wim</code></p>
+<ul>
+<li>The first index (<code>1</code>) is <code> Microsoft Windows Recovery Environment (x64)</code>
+<ul>
+<li>Run the commands
+<ul>
+<li><code>mkdir C:\WIM-MOUNT</code></li>
+<li><code>dism.exe /Mount-WIM /WimFile:"C:\Users\Williamdes\Documents\winRE.wim" /index:1 /MountDir:"C:\WIM-MOUNT"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Package /PackagePath:"C:\Users\Williamdes\Documents\WIM-TEMP"</code></li>
+<li><code>dism.exe /image:"C:\WIM-MOUNT" /Add-Driver /Driver:"C:\Users\Williamdes\Documents\WIM-TEMP" /Recurse</code></li>
+<li><code>dism.exe /Unmount-wim /mountdir:"C:\WIM-MOUNT" /commit</code></li>
+<li><code>rmdir C:\WIM-MOUNT</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Put the image back into the original computer.</p>
+<h3 id="notes">Notes</h3>
+<p>This article is not perfect, it was a lot of trial an error.<br>
+Using <code>UpdatePack7R2</code> was the best solution, as it made me a working USB drive to boot.<br>
+Please email me to improve the article or provide feedback.</p>
+<p>Also, on the ThinkPad T590 I could get the graphics working for Windows 7 using this custom driver: <a rel="noopener" target="_blank" href="https://archive.org/details/inteluhd-win7#review-1755464715">Intel UHD Graphics 610/630 x64 driver for Windows 7, 8.x, 10 (up to 1607)</a><br>
+That said I could not find a way to make the USB 3.0 work in the running Windows 7 OS.
+And it seems to be impossible to have a driver that works for the Intel Wifi card <a rel="noopener" target="_blank" href="https://linux-hardware.org/?id=pci:8086-9df0-8086-0030">8086:9df0:8086:0030 - Cannon Point-LP CNVi</a>. I tried modifying the Windows 10 driver and after it installs the network card does not work. That said ethernet worked as expected.</p>
+<h3 id="more-isos">More ISOs</h3>
+<ul>
+<li>
+<p><a rel="noopener" target="_blank" href="https://getintopc.com/softwares/operating-systems/windows-7-professional-sp1-multilingual-april-2023-free-download-9753788/">_Getintopc.com_Win.7.Pro.April.18-04-2023.iso from getintopc.com</a>.</p>
+<p>ISO fingerprints:</p>
+<ul>
+<li>sha512: <code>476876266fe51033ced4aa3e316aa7ffde6f5931aecbb01f6ae6756b43539df53c29a360dcd92764e674db9a613ac92042c9d521f1f604661035fa092e4ff2e3</code></li>
+<li>sha256: <code>3b8821c9d77aaf72704329c4556804348c403c163b3be5a3932408226098859b</code></li>
+<li>sha1: <code>a8f7f11f3216636f40c57c0db3851658d6a0ea15</code></li>
+<li>rg-adguard: not found, this ISO is not official.</li>
+<li>archived at: <a rel="noopener" target="_blank" href="https://archive.org/details/getintopc.com-win.-7.-pro.-april.-18-04-2023">archive.org</a>.<br></li>
+</ul>
+</li>
+<li>
+<p><a rel="noopener" target="_blank" href="https://lecrabeinfo.net/telecharger/windows-7-professionnel-sp1-x64/">fr_windows_7_professional_with_sp1_x64_dvd_u_678724.iso from lecrabeinfo.net</a>.</p>
+<ul>
+<li>sha1: <code>f9f0512f7ca5e2cd1502a41f6e88d80f4655bbcd</code>.</li>
+<li>rg-adguard: <a rel="noopener" target="_blank" href="https://files.rg-adguard.net/file/401ae6ab-fa95-892a-c53c-cbef3d0d40e7">proof this is an official ISO</a> (Windows 7 with Service Pack 1 (Updated May 2011))</li>
+</ul>
+</li>
+<li>
+<p><a rel="noopener" target="_blank" href="https://archive.org/details/win7-pro-sp1-english">Windows_7_64-bit_Professional_x64.iso from archive.org</a>.</p>
+<p>ISO fingerprints:</p>
+<ul>
+<li>sha512: <code>ab0db0283f61a5bbe44797d74546786bf41685175764a448d2e3bd629f292f1e7d829757b26be346b5044d78c9c1891736d93237cee4b1b6f5996a902c86d15f</code></li>
+<li>sha256: <code>3dae1a531b90fa72e59b4a86b20216188d398c8c070da4a5c5a44fe08b1b6e55</code></li>
+<li>sha1: <code>0bcfc54019ea175b1ee51f6d2b207a3d14dd2b58</code></li>
+<li>rg-adguard: <a rel="noopener" target="_blank" href="https://files.rg-adguard.net/file/11ad6502-c2aa-261c-8c3f-c81477b21dd2">proof this is an official ISO</a> (Windows 7 with Service Pack 1 (Updated May 2011))</li>
+</ul>
+</li>
+<li>
+<p><a rel="noopener" target="_blank" href="https://lecrabeinfo.net/telecharger/windows-7-edition-familiale-premium-sp1-x64/">fr_windows_7_home_premium_with_sp1_x64_dvd_u_676521.iso from lecrabeinfo.net</a></p>
+<p>ISO fingerprints:</p>
+<ul>
+<li>sha512: <code>4be431b327b557adbe46e45e8ea166e6538e6ef9a27e8d05a2ce5f246579f2b2</code></li>
+<li>sha256: <code>5f791cd996b9ffdfb812ee5e245923a4c1553fc9ed3f4985755d52f598d827ea</code></li>
+<li>sha1: <code>7f3e41579c3404ba86d4a53ec13f69844f2473be</code></li>
+<li>rg-adguard: <a rel="noopener" target="_blank" href="https://files.rg-adguard.net/file/f45bdbd5-f62e-e03e-3d30-328fb4623ea1">proof this is an official ISO</a> (Windows 7 with Service Pack 1 (Updated May 2011))</li>
+</ul>
+</li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://www.reddit.com/r/windows7/comments/y51ubx/windows_7_nvme_m2_drivers/">"Pilotes Windows 7 NVMe M2" on Reddit</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.pc2s.fr/installation-de-windows-7-sur-ssd-pcie-nvme-natif/">pc2s.fr blog post</a></li>
+<li><a rel="noopener" target="_blank" href="https://getgreenshot.org/">Greenshot</a> for the screenshots on Windows.</li>
+<li><a rel="noopener" target="_blank" href="https://ftp.hp.com/pub/caps-softpaq/cmit/whitepapers/Windows_7_OS_Install_NVME.pdf">Whitepaper from HP to install NVME on Windows 7</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.informatiweb.net/tutoriels/informatique/articles/intel-nuc-skull-canyon-installer-windows-7-via-usb-3-0.html">" Installer Windows 7 (avec le support de l'USB 3.0 et du NVMe)" from informatiweb.net</a></li>
+<li><a rel="noopener" target="_blank" href="https://forum.level1techs.com/t/where-to-find-nvme-hotfixes-2990941-3087873-win7/145629">A question on level1techs about NVME on Windows 7</a></li>
+</ul>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/windows-tutorial/">windows-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/windows7/">Windows7</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/nve/">NVE</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

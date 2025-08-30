@@ -22,7 +22,7 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/Debian/tutorials/how-to-install-phpmyadmin-on-debian-13-trixie/</loc>
-        <lastmod>2025-08-21T03:25:00+00:01</lastmod>
+        <lastmod>2025-08-11T03:25:00+00:01</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/Debian/tutorials/install-forticlient-on-debian-12-bookworm/</loc>
@@ -157,6 +157,16 @@
     <url>
         <loc>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</loc>
         <lastmod>2023-10-15T12:00:00Z</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Windows/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Windows/tutorials/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Windows/tutorials/add-nvme-drivers-to-windows-7-repair-or-install/</loc>
+        <lastmod>2025-08-30T08:30:00+00:01</lastmod>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/page/1/</loc>
@@ -407,6 +417,12 @@
         <loc>https://blog.williamdes.eu/tags/monitoring/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/nve/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/nve/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/openfortigui/</loc>
     </url>
     <url>
@@ -495,6 +511,18 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/story/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/windows-tutorial/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/windows-tutorial/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/windows7/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/windows7/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/zabbix/</loc>
