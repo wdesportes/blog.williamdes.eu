@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Williamdes&#x27;s blog - How to start with Rust and ESP32</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="William Desportes">
+        <meta name="description" content="How to start with Rust and an ESP32 board ?">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@wdesportes" />
+        <meta name="twitter:creator" content="@wdesportes" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Williamdes's blog">
+        
+        <meta property="og:title" content="How to start with Rust and ESP32">
+        <meta property="og:url" content="https://blog.williamdes.eu/Hardware/tutorials/how-to-start-with-esp32-and-rust">
+        <meta property="og:description" content="How to start with Rust and an ESP32 board ?">
+        
+        <meta property="og:type" content="article">
+        <meta name="publish_date" property="og:publish_date" content="2024-10-18T13:10:00+00:02">
+        <meta property="article:published_time" content="2024-10-18T13:10:00">
+        <meta property="article:modified_time" content="2025-10-09T13:51:00">
+        <meta property="article:author" content="https://williamdes.eu">
+        <meta property="article:tags" content="hardware-tutorial"><meta property="article:tags" content="ESP32"><meta property="article:tags" content="Rust">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://blog.williamdes.eu/main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://blog.williamdes.eu/atom.xml">
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "https://blog.williamdes.eu",
+                    "name": "Williamdes's blog"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Hardware",
+                    "name": "Hardware"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Hardware/tutorials",
+                    "name": "tutorials"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@id": "https://blog.williamdes.eu/Hardware/tutorials/how-to-start-with-esp32-and-rust",
+                    "name": "How to start with Rust and ESP32"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    
+    
+    "url": "https://blog.williamdes.eu/Hardware/tutorials/how-to-start-with-esp32-and-rust/",
+    "headline": "How to start with Rust and ESP32",
+    "alternativeHeadline": "How to start with Rust and ESP32",
+    "dateCreated": "2024-10-18T13:10:00+0002",
+    "datePublished": "2024-10-18T13:10:00+0002",
+    "dateModified": "2025-10-09T13:51:00+0002",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "author": {
+        "@type": "Person",
+        "name": "William Desportes",
+        "url": "https://williamdes.eu"
+    },
+    "mainEntityOfPage": "True",
+    "keywords": ["hardware-tutorial","ESP32","Rust"],
+    "articleSection": "Tutorial",
+    "genre": ["hardware-tutorial","ESP32","Rust"]
+}
+</script>
+<!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://analytics.wdes.eu/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <noscript><p><img src="https://analytics.wdes.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+        <!-- End Matomo Code -->
+    </head>
+
+    <body class="single">
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">How to start with Rust and ESP32</h1>
+        
+        <div class="post-meta">
+            Author: <a class="post-author" href="https://williamdes.eu">
+                William Desportes
+            </a>
+            
+            <br/>
+            <span class="post-date">Published: <time datetime="2024-10-18T13:10:00+0002">October 18, 2024 13:10</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-10-09T13:51:00+0002">October  9, 2025 13:51</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">3 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>How to start with Rust and an ESP32 board ?</p>
+<span id="continue-reading"></span>
+<p>In this blog post I will explain you how to get started with an ESP32 and Rust.</p>
+<p>One big question you may be asking yourself: what model does support Rust ?</p>
+<p>The <a rel="noopener" target="_blank" href="https://github.com/esp-rs/esp-idf-svc">supported board versions</a> seem to be:</p>
+<ul>
+<li>
+<p>esp32</p>
+</li>
+<li>
+<p>esp32c2</p>
+</li>
+<li>
+<p>esp32c3</p>
+</li>
+<li>
+<p>esp32c6</p>
+</li>
+<li>
+<p>esp32h2</p>
+</li>
+<li>
+<p>esp32s2</p>
+</li>
+<li>
+<p>esp32s3</p>
+</li>
+</ul>
+<p>And maybe <code>ESP32-P4</code> according to the README.</p>
+<p>What device should I buy ?</p>
+<p>I did buy the <a rel="noopener" target="_blank" href="https://www.amazon.fr/dp/B07X92FSW7">Hailege ESP32 Wireless Stick Lora+WiFi+BLE Development Board SX1262 Module LoRa WiFi Bluetooth Arduino LoRaWAN 863/928MHz with 0.49 inch OLED Display</a> from Amazon but you should maybe buy it at <a rel="noopener" target="_blank" href="https://heltec.org/project/wireless-stick-v3/">heltec.org</a>.</p>
+<p>It has support for:</p>
+<ul>
+<li>LoRa/LoRaWAN</li>
+<li>WiFi</li>
+<li>Bluetooth</li>
+</ul>
+<p>It comes with the OLED 64*32 (0.49 inch) screen <a rel="noopener" target="_blank" href="https://www.opldisplaytec.com/product/134"><code>nfp1315-99a</code></a>.
+The screen uses the chip <a rel="noopener" target="_blank" href="https://cursedhardware.github.io/epd-driver-ic/SSD1315.pdf">SSD1315</a>.
+It seems to be <code>ESP32-S3FN8</code> according to the <a rel="noopener" target="_blank" href="https://docs.heltec.org/en/node/esp32/wireless_stick/hardware_update_log.html#v3">Heltec doc</a> that says: <code>MCU is changed from ESP32-D0WDQ6 to [</code>ESP32-S3FN8`](https://products.espressif.com/#/product-comparison?names=ESP32-S3FN8&amp;type=SoC) for V3.</p>
+<p>The Amazon pinout picture is garbage, see <a rel="noopener" target="_blank" href="https://heltec.org/project/wireless-stick-v3/">heltec.org</a> for the real one.
+High resolution picture: <a rel="noopener" target="_blank" href="https://resource.heltec.cn/download/Wireless_Stick_V3/HTIT-WS_V3.png">heltec.cn (HTIT-WS_V3.png)</a></p>
+<p>High resolution schematic diagram: <a rel="noopener" target="_blank" href="https://resource.heltec.cn/download/Wireless_Stick_V3/HTIT-WS_V3_Schematic_Diagram.pdf">heltec.cn (HTIT-WS_V3_Schematic_Diagram.pdf)</a></p>
+<p>The OLED pins are advertised as <a rel="noopener" target="_blank" href="https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/3.0.2/variants/heltec_wireless_stick_v3/pins_arduino.h">Heltec source code</a>:
+GPIO 4 -&gt; OLED SDA
+GPIO 15 -&gt; OLED SCL
+GPIO 16 -&gt; OLED reset</p>
+<p>static const uint8_t Vext = 36;
+static const uint8_t LED  = 35;
+static const uint8_t RST_OLED = 21;
+static const uint8_t SCL_OLED = 18;
+static const uint8_t SDA_OLED = 17;</p>
+<p>// Slave address bit (SA0)
+SSD1306 has to recognize the slave address before transmitting or receiving any information by the
+I 2 C-bus.</p>
+<p>// SDA acts as a communication channel between the transmitter and the receiver. The data and the
+acknowledgement are sent through the SDA</p>
+<p>// I 2 C-bus clock signal (SCL)
+The transmission of information in the I2
+C-bus is following a clock signal, SCL. Each transmission of
+data bit is taken place during a single clock period of SCL</p>
+<p>// https://www.smart-prototyping.com/image/data/9_Modules/101855%200.66%20OLED%206448%20IICSPI/SSD1306.pdf</p>
+<h2 id="tooling-install">Tooling install</h2>
+<p>Obviously you will have to install Rust. My current version is: <code>rustc 1.88.0 (6b00bc388 2025-06-23)</code>.</p>
+<p>If there is a some build failure related to Python you may need to install this:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt install python3.11-venv
+</span></code></pre>
+<p><a rel="noopener" target="_blank" href="https://github.com/esp-rs/esp-idf-template?tab=readme-ov-file#install-cargo-sub-commands">Install espflash and tools</a>:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cargo</span><span> install espup
+</span><span style="color:#bf616a;">cargo</span><span> install espflash
+</span><span style="color:#bf616a;">cargo</span><span> install ldproxy
+</span><span style="color:#bf616a;">cargo</span><span> install cargo-generate
+</span></code></pre>
+<p>If you do not install <code>ldproxy</code> the <code>cargo run</code> will fail:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>error: linker `ldproxy` not found
+</span><span>  |
+</span><span>  = note: No such file or directory (os error 2)
+</span></code></pre>
+<h2 id="device-info">Device info</h2>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">espflash</span><span> board-info
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[2025-10-09T12:02:26Z INFO ] Serial port: &#39;/dev/ttyUSB0&#39;
+</span><span>[2025-10-09T12:02:26Z INFO ] Connecting...
+</span><span>[2025-10-09T12:02:26Z INFO ] Using flash stub
+</span><span>Chip type:         esp32s3 (revision v0.2)
+</span><span>Crystal frequency: 40 MHz
+</span><span>Flash size:        8MB
+</span><span>Features:          WiFi, BLE, Embedded Flash
+</span><span>MAC address:       48:27:e2:e4:8a:6c
+</span><span>
+</span><span>Security Information:
+</span><span>=====================
+</span><span>Flags: 0x00000000 (0)
+</span><span>Key Purposes: [0, 0, 0, 0, 0, 0, 12]
+</span><span>Chip ID: 9
+</span><span>API Version: 0
+</span><span>Secure Boot: Disabled
+</span><span>Flash Encryption: Disabled
+</span><span>SPI Boot Crypt Count (SPI_BOOT_CRYPT_CNT): 0x0
+</span></code></pre>
+<p>This may throw an error:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ espflash board-info
+</span><span>
+</span><span>  × Failed to open serial port /dev/ttyUSB0
+</span><span>  ├─▶ Error while connecting to device
+</span><span>  ├─▶ IO error while using serial port: Permission denied
+</span><span>  ╰─▶ Permission denied
+</span></code></pre>
+<p>Add your user to the group of the file:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> ls</span><span style="color:#bf616a;"> -lah</span><span> /dev/ttyUSB0
+</span><span style="color:#bf616a;">crw-rw----</span><span> 1 root dialout 188, 0 Dec 21 16:37 /dev/ttyUSB0
+</span></code></pre>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Print current user groups
+</span><span style="color:#bf616a;">id
+</span><span style="color:#bf616a;">sudo</span><span> usermod</span><span style="color:#bf616a;"> -a -G</span><span> dialout $</span><span style="color:#bf616a;">USER
+</span><span style="color:#65737e;"># Add the group without re-login
+</span><span style="color:#bf616a;">newgrp</span><span> dialout
+</span><span style="color:#65737e;"># Print current user groups
+</span><span style="color:#bf616a;">id
+</span></code></pre>
+<h2 id="setup-the-project">Setup the project</h2>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cargo</span><span> generate esp-rs/esp-idf-template cargo
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>⚠️   Favorite `esp-rs/esp-idf-template` not found in config, using it as a git repository: https://github.com/esp-rs/esp-idf-template.git
+</span><span>🤷   Project Name: esp32-lcd
+</span><span>🔧   Destination: &lt;workdir&gt;/esp32-lcd ...
+</span><span>🔧   project-name: esp32-lcd ...
+</span><span>🔧   Generating template ...
+</span><span>✔ 🤷   Which MCU to target? · esp32s3
+</span><span>✔ 🤷   Configure advanced template options? · true
+</span><span>✔ 🤷   ESP-IDF version (master = UNSTABLE) · v5.3
+</span><span>✔ 🤷   Configure project to use Dev Containers (VS Code and GitHub Codespaces)? · false
+</span><span>✔ 🤷   Configure project to support Wokwi simulation with Wokwi VS Code extension? · false
+</span><span>✔ 🤷   Add CI files for GitHub Action? · false
+</span><span>[ 1/11] Done: .cargo/config.toml
+</span><span>[ 2/11] Done: .cargo
+</span><span>[ 3/11] Done: .gitignore
+</span><span>[ 4/11] Done: .vscode
+</span><span>[ 5/11] Done: Cargo.toml
+</span><span>[ 6/11] Done: build.rs
+</span><span>[ 7/11] Ignored: pre-script.rhai
+</span><span>[ 8/11] Done: rust-toolchain.toml
+</span><span>[ 9/11] Done: sdkconfig.defaults
+</span><span>[10/11] Done: src/main.rs
+</span><span>[11/11] Done: src
+</span><span>🔧   Moving generated files into: `&lt;workdir&gt;/esp32-lcd`...
+</span><span>🔧   Initializing a fresh Git repository
+</span><span>✨   Done! New project created &lt;workdir&gt;/esp32-lcd
+</span></code></pre>
+<h3 id="run-it">Run it</h3>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> esp32-lcd
+</span><span style="color:#bf616a;">cargo</span><span> run
+</span></code></pre>
+<p>After the build you will see this output:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[2025-10-09T12:16:10Z INFO ] Serial port: &#39;/dev/ttyUSB0&#39;
+</span><span>[2025-10-09T12:16:10Z INFO ] Connecting...
+</span><span>[2025-10-09T12:16:11Z INFO ] Using flash stub
+</span><span>Chip type:         esp32s3 (revision v0.2)
+</span><span>Crystal frequency: 40 MHz
+</span><span>Flash size:        8MB
+</span><span>Features:          WiFi, BLE, Embedded Flash
+</span><span>MAC address:       48:27:e2:e4:8a:6c
+</span><span>App/part. size:    517,568/8,323,072 bytes, 6.22%
+</span><span>[00:00:01] [========================================]      14/14      0x0      Verifying... OK!
+</span><span>[00:00:00] [========================================]       1/1       0x8000   Verifying... OK!
+</span><span>[00:00:27] [========================================]     261/261     0x10000  Verifying... OK!
+</span><span>[2025-10-09T12:16:41Z INFO ] Flashing has completed!
+</span><span>Commands:
+</span><span>    CTRL+R    Reset chip
+</span><span>    CTRL+C    Exit
+</span><span>
+</span><span>ESP-ROM:esp32s3-20210327
+</span><span>Build:Mar 27 2021
+</span><span>rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+</span><span>SPIWP:0xee
+</span><span>mode:DIO, clock div:2
+</span><span>load:0x3fce2810,len:0x15a0
+</span><span>load:0x403c8700,len:0x4
+</span><span>load:0x403c8704,len:0xd24
+</span><span>load:0x403cb700,len:0x2f04
+</span><span>entry 0x403c8928
+</span><span>I (30) boot: ESP-IDF v5.4.1-426-g3ad36321ea 2nd stage bootloader
+</span><span>I (30) boot: compile time Apr 24 2025 15:55:11
+</span><span>I (30) boot: Multicore bootloader
+</span><span>I (32) boot: chip revision: v0.2
+</span><span>I (34) boot: efuse block revision: v1.3
+</span><span>I (38) boot.esp32s3: Boot SPI Speed : 40MHz
+</span><span>I (42) boot.esp32s3: SPI Mode       : DIO
+</span><span>I (46) boot.esp32s3: SPI Flash Size : 8MB
+</span><span>I (49) boot: Enabling RNG early entropy source...
+</span><span>I (54) boot: Partition Table:
+</span><span>I (56) boot: ## Label            Usage          Type ST Offset   Length
+</span><span>I (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+</span><span>I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+</span><span>I (76) boot:  2 factory          factory app      00 00 00010000 007f0000
+</span><span>I (82) boot: End of partition table
+</span><span>I (86) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=20308h (131848) map
+</span><span>I (125) esp_image: segment 1: paddr=00030330 vaddr=3fc90e00 size=0296ch ( 10604) load
+</span><span>I (129) esp_image: segment 2: paddr=00032ca4 vaddr=40374000 size=0cd48h ( 52552) load
+</span><span>I (144) esp_image: segment 3: paddr=0003f9f4 vaddr=00000000 size=00624h (  1572)
+</span><span>I (145) esp_image: segment 4: paddr=00040020 vaddr=42000020 size=4e570h (320880) map
+</span><span>I (231) boot: Loaded app from partition at offset 0x10000
+</span><span>I (232) boot: Disabling RNG early entropy source...
+</span><span>I (242) cpu_start: Multicore app
+</span><span>I (252) cpu_start: Pro cpu start user code
+</span><span>I (252) cpu_start: cpu freq: 160000000 Hz
+</span><span>I (252) app_init: Application information:
+</span><span>I (255) app_init: Project name:     libespidf
+</span><span>I (260) app_init: App version:      1
+</span><span>I (264) app_init: Compile time:     Oct  9 2025 14:15:30
+</span><span>I (270) app_init: ELF file SHA256:  000000000...
+</span><span>I (275) app_init: ESP-IDF:          v5.3.3
+</span><span>I (280) efuse_init: Min chip rev:     v0.0
+</span><span>I (285) efuse_init: Max chip rev:     v0.99
+</span><span>I (290) efuse_init: Chip rev:         v0.2
+</span><span>I (295) heap_init: Initializing. RAM available for dynamic allocation:
+</span><span>I (302) heap_init: At 3FC940C8 len 00055648 (341 KiB): RAM
+</span><span>I (308) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+</span><span>I (314) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+</span><span>I (320) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+</span><span>I (328) spi_flash: detected chip: gd
+</span><span>I (331) spi_flash: flash io: dio
+</span><span>W (335) pcnt(legacy): legacy driver is deprecated, please migrate to `driver/pulse_cnt.h`
+</span><span>W (343) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+</span><span>W (354) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`
+</span><span>I (363) sleep: Configure to isolate all GPIO pins in sleep state
+</span><span>I (370) sleep: Enable automatic switching of GPIO sleep configuration
+</span><span>I (377) main_task: Started on CPU0
+</span><span>I (387) main_task: Calling app_main()
+</span><span>I (387) esp32_lcd: Hello, world!
+</span><span>I (387) main_task: Returned from app_main()
+</span></code></pre>
+<p>Success !</p>
+<h2 id="writing-some-code">Writing some code</h2>
+<h3 id="testing-the-board-with-arduino">Testing the board with Arduino</h3>
+<p>Using Arduino IDE and as explained on <a rel="noopener" target="_blank" href="https://github.com/HelTecAutomation/Heltec_ESP32/">Heltec ESP32's GitHub</a> I verified I could get the screen working.</p>
+<pre data-lang="ino" style="background-color:#2b303b;color:#c0c5ce;" class="language-ino "><code class="language-ino" data-lang="ino"><span>#include &lt;Wire.h&gt;
+</span><span>#include &quot;HT_SSD1306Wire.h&quot;
+</span><span>
+</span><span>static SSD1306Wire  display(0x3c, 500000, SDA_OLED, SCL_OLED, GEOMETRY_128_64, RST_OLED); // addr , freq , i2c group , resolution , rst
+</span><span>
+</span><span>void drawLines() {
+</span><span>  for (int16_t i=0; i&lt;display.getWidth(); i+=4) {
+</span><span>    display.drawLine(0, 0, i, display.getHeight()-1);
+</span><span>    display.display();
+</span><span>    delay(10);
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span>void LedON(void)
+</span><span>{
+</span><span>  pinMode(LED,OUTPUT);
+</span><span>  digitalWrite(LED, HIGH);
+</span><span>}
+</span><span>
+</span><span>void VextON(void)
+</span><span>{
+</span><span>  pinMode(Vext,OUTPUT);
+</span><span>  digitalWrite(Vext, LOW);
+</span><span>}
+</span><span>
+</span><span>void VextOFF(void) //Vext default OFF
+</span><span>{
+</span><span>  pinMode(Vext,OUTPUT);
+</span><span>  digitalWrite(Vext, HIGH);
+</span><span>}
+</span><span>
+</span><span>void setup() {
+</span><span>  LedON();
+</span><span>  VextON();
+</span><span>  delay(100);
+</span><span>  display.init();
+</span><span>  drawLines();
+</span><span>}
+</span><span>
+</span><span>void loop() { }
+</span></code></pre>
+<h3 id="writing-rust">Writing Rust !</h3>
+<p>Now that we know the pins and addresses are correct, let's Rust !</p>
+<p>The <a rel="noopener" target="_blank" href="https://github.com/esp-rs/esp-idf-hal/blob/2af4695/examples/ledc_simple.rs">example</a> to light the LED (GPIO 35) works, just change the pin number in the code.</p>
+<p>To be done, the OLED display !</p>
+<p>// https://github.com/ivmarkov/rust-esp32-std-demo/issues/158
+// http://cholla.mmto.org/electronics/displays/oled/</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://blog.williamdes.eu/tags/hardware-tutorial/">hardware-tutorial</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/esp32/">ESP32</a></li>
+        
+            <li><a href="https://blog.williamdes.eu/tags/rust/">Rust</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021-2025 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
+            <span>&middot;</span>
+            <span>Theme <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+            <br>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu" rel="noopener" target="_blank">Source code on GitHub</a></span>
+            <span>&middot;</span>
+            <span><a href="https://github.com/wdesportes/blog.williamdes.eu/discussions" rel="noopener" target="_blank">Found a bug ?</a></span>
+            <span>&middot;</span>
+            <span><a href="https://williamdes.eu" rel="noopener" target="_blank">Visit my personal website</a></span>
+            <span>&middot;</span>
+            <span><a href="https://blog.williamdes.eu/atom.xml" rel="noopener" target="_blank" type="application/rss+xml">RSS feed</a></span>
+            <br>
+            <span>If you are searching for cookies, this is not a bakery website ^^</span>
+        </footer>
+    
+    </body>
+</html>

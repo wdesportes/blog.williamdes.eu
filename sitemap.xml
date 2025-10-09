@@ -33,6 +33,13 @@
         <lastmod>2025-05-30T11:45:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Hardware/tutorials/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/Hardware/tutorials/how-to-start-with-esp32-and-rust/</loc>
+        <lastmod>2025-10-09T13:51:00+00:02</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/</loc>
     </url>
     <url>
@@ -342,6 +349,12 @@
         <loc>https://blog.williamdes.eu/tags/distributed/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/esp32/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/esp32/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/etcd/</loc>
     </url>
     <url>
@@ -358,6 +371,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/gitlab/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/hardware-tutorial/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/hardware-tutorial/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/idrac/</loc>
@@ -487,6 +506,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/raspberrypi/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/rust/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/rust/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/sbuild/</loc>
