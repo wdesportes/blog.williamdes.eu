@@ -1,7 +1,7 @@
 +++
 title = "How to start with Rust and ESP32"
 date = 2024-10-18T13:10:00+00:02
-updated = 2025-10-09T13:51:00+00:02
+updated = 2025-10-10T15:59:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -62,11 +62,17 @@ GPIO 4 -> OLED SDA
 GPIO 15 -> OLED SCL
 GPIO 16 -> OLED reset
 
+Source: [Heltec-Aaron-Lee/WiFi_Kit_series:heltec_wifi_lora_32_V3/pins_arduino.h](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/f22306d4a5b3a8df03eb7c9896f39f7b0e6bc302/variants/heltec_wifi_lora_32_V3/pins_arduino.h#L65-L68)
+
+```c
+static const uint8_t SDA = 41;
+static const uint8_t SCL = 42;
 static const uint8_t Vext = 36;
 static const uint8_t LED  = 35;
 static const uint8_t RST_OLED = 21;
 static const uint8_t SCL_OLED = 18;
 static const uint8_t SDA_OLED = 17;
+```
 
 // Slave address bit (SA0)
 SSD1306 has to recognize the slave address before transmitting or receiving any information by the
@@ -82,6 +88,9 @@ data bit is taken place during a single clock period of SCL
 
 // https://www.smart-prototyping.com/image/data/9_Modules/101855%200.66%20OLED%206448%20IICSPI/SSD1306.pdf
 
+Are `SSD1306` and `SSD1315` the same ?
+Discussion on: https://github.com/olikraus/u8g2/discussions/2540
+
 ## Tooling install
 
 Obviously you will have to install Rust. My current version is: `rustc 1.88.0 (6b00bc388 2025-06-23)`.
@@ -96,6 +105,7 @@ sudo apt install python3.11-venv
 
 ```sh
 cargo install espup
+# Update: espup install / espup update
 cargo install espflash
 cargo install ldproxy
 cargo install cargo-generate
@@ -107,6 +117,9 @@ error: linker `ldproxy` not found
   |
   = note: No such file or directory (os error 2)
 ```
+
+If you have the `undefined reference to `__pender'` see https://embassy.dev/book/#_embassy_time_throws_linker_errors
+I removed the `embassy-time-driver` feature that I did not need and it fixed it.
 
 ## Device info
 
