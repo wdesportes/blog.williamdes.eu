@@ -29,7 +29,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2024-10-18T13:10:00+00:02">
         <meta property="article:published_time" content="2024-10-18T13:10:00">
-        <meta property="article:modified_time" content="2025-10-09T13:51:00">
+        <meta property="article:modified_time" content="2025-10-10T15:59:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="hardware-tutorial"><meta property="article:tags" content="ESP32"><meta property="article:tags" content="Rust">
         
@@ -104,7 +104,7 @@
     "alternativeHeadline": "How to start with Rust and ESP32",
     "dateCreated": "2024-10-18T13:10:00+0002",
     "datePublished": "2024-10-18T13:10:00+0002",
-    "dateModified": "2025-10-09T13:51:00+0002",
+    "dateModified": "2025-10-10T15:59:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": {
@@ -163,9 +163,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2024-10-18T13:10:00+0002">October 18, 2024 13:10</time></span>
-            <span class="post-date"> and updated: <time datetime="2025-10-09T13:51:00+0002">October  9, 2025 13:51</time></span>
+            <span class="post-date"> and updated: <time datetime="2025-10-10T15:59:00+0002">October 10, 2025 15:59</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">3 min read</span>
+            <span class="post-reading-time">4 min read</span>
         </div>
     </header>
     <div class="post-content"><p>How to start with Rust and an ESP32 board ?</p>
@@ -215,11 +215,15 @@ High resolution picture: <a rel="noopener" target="_blank" href="https://resourc
 GPIO 4 -&gt; OLED SDA
 GPIO 15 -&gt; OLED SCL
 GPIO 16 -&gt; OLED reset</p>
-<p>static const uint8_t Vext = 36;
-static const uint8_t LED  = 35;
-static const uint8_t RST_OLED = 21;
-static const uint8_t SCL_OLED = 18;
-static const uint8_t SDA_OLED = 17;</p>
+<p>Source: <a rel="noopener" target="_blank" href="https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/f22306d4a5b3a8df03eb7c9896f39f7b0e6bc302/variants/heltec_wifi_lora_32_V3/pins_arduino.h#L65-L68">Heltec-Aaron-Lee/WiFi_Kit_series:heltec_wifi_lora_32_V3/pins_arduino.h</a></p>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">static const </span><span>uint8_t SDA = </span><span style="color:#d08770;">41</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t SCL = </span><span style="color:#d08770;">42</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t Vext = </span><span style="color:#d08770;">36</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t LED  = </span><span style="color:#d08770;">35</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t RST_OLED = </span><span style="color:#d08770;">21</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t SCL_OLED = </span><span style="color:#d08770;">18</span><span>;
+</span><span style="color:#b48ead;">static const </span><span>uint8_t SDA_OLED = </span><span style="color:#d08770;">17</span><span>;
+</span></code></pre>
 <p>// Slave address bit (SA0)
 SSD1306 has to recognize the slave address before transmitting or receiving any information by the
 I 2 C-bus.</p>
@@ -230,6 +234,8 @@ The transmission of information in the I2
 C-bus is following a clock signal, SCL. Each transmission of
 data bit is taken place during a single clock period of SCL</p>
 <p>// https://www.smart-prototyping.com/image/data/9_Modules/101855%200.66%20OLED%206448%20IICSPI/SSD1306.pdf</p>
+<p>Are <code>SSD1306</code> and <code>SSD1315</code> the same ?
+Discussion on: https://github.com/olikraus/u8g2/discussions/2540</p>
 <h2 id="tooling-install">Tooling install</h2>
 <p>Obviously you will have to install Rust. My current version is: <code>rustc 1.88.0 (6b00bc388 2025-06-23)</code>.</p>
 <p>If there is a some build failure related to Python you may need to install this:</p>
@@ -237,6 +243,7 @@ data bit is taken place during a single clock period of SCL</p>
 </span></code></pre>
 <p><a rel="noopener" target="_blank" href="https://github.com/esp-rs/esp-idf-template?tab=readme-ov-file#install-cargo-sub-commands">Install espflash and tools</a>:</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cargo</span><span> install espup
+</span><span style="color:#65737e;"># Update: espup install / espup update
 </span><span style="color:#bf616a;">cargo</span><span> install espflash
 </span><span style="color:#bf616a;">cargo</span><span> install ldproxy
 </span><span style="color:#bf616a;">cargo</span><span> install cargo-generate
@@ -246,6 +253,7 @@ data bit is taken place during a single clock period of SCL</p>
 </span><span>  |
 </span><span>  = note: No such file or directory (os error 2)
 </span></code></pre>
+<p>If you have the <code>undefined reference to </code>__pender'<code>see https://embassy.dev/book/#_embassy_time_throws_linker_errors I removed the</code>embassy-time-driver` feature that I did not need and it fixed it.</p>
 <h2 id="device-info">Device info</h2>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">espflash</span><span> board-info
 </span></code></pre>
