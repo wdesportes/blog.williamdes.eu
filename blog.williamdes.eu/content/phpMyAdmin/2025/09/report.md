@@ -34,7 +34,7 @@ And did some configuration work on "DMARC mitigation" for all the phpMyAdmin lis
 
 I did some cleaning up and uploaded motranslator as `5.4.0-2`.
 
-And for `phpmyadmin` I sent 4:5.2.2-really+dfsg-2 to unstable after updating a source file to fix `CVE-2025-3573` and fixing tests for PHPUnit 12.
+And for `phpmyadmin` I sent `4:5.2.2-really+dfsg-2` to unstable after updating a source file to fix `CVE-2025-3573` and fixing tests for PHPUnit 12.
 
 - [73bcccae78 - CVE-2025-3573 - Update jquery.validate.js to 1.21.0 (in sync with 5.2.2)](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/73bcccae78b408898c6f706cd6127b8595281daa)
 - [85505ecbb3 - Update tests to run on phpunit 12](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/85505ecbb3dad2a07862b3872c8cda264faeeab8)
