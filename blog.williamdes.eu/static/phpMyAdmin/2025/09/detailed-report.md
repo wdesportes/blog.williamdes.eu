@@ -30,9 +30,6 @@ And for `phpmyadmin` I sent `4:5.2.2-really+dfsg-2` to unstable after updating a
 
 ## Second week (37)
 
-
-### Week 37
-
 - I fixed the example on the README of `twig-i18n-extension`: [5bb71fdb70 - Fix the example](https://github.com/phpmyadmin/twig-i18n-extension/commit/5bb71fdb700c47521a6aaf398d36293504d33474).
 
 I merged some pull-requests:
