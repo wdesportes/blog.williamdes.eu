@@ -4,7 +4,7 @@ use std::{env, fs, process::exit};
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() != 2 {
+    if args.len() != 3 {
         eprintln!("Missing arguments !");
         eprintln!(
             "Use: make-report phpMyAdmin/2025/09/detailed-report.md phpMyAdmin/2025/09/REPORT_2025_09.pdf"
