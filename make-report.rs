@@ -7,7 +7,7 @@ fn main() {
     if args.len() != 3 {
         eprintln!("Missing arguments !");
         eprintln!(
-            "Use: make-report phpMyAdmin/2025/09/detailed-report.md phpMyAdmin/2025/09/REPORT_2025_09.pdf"
+            "Use: make-report phpMyAdmin/2025/10/detailed-report.md phpMyAdmin/2025/10/REPORT_2025_10.pdf"
         );
         exit(1);
     }
@@ -20,12 +20,19 @@ fn main() {
 
     let markdown: String = fs::read_to_string(input_file).expect("The input file should read");
 
-    parse_into_file(
+    match parse_into_file(
         markdown,
         output_file,
         ConfigSource::File("./markdown2pdfrc.toml"),
-    )
-    .expect("The PDF to build");
-    println!("Report generated !");
-    showfile::show_path_in_file_manager(output_file);
+    ) {
+        Ok(_) => {
+            println!("Report generated !");
+            showfile::show_path_in_file_manager(output_file);
+        }
+        Err(e) => {
+            eprintln!("Parsing error !");
+            eprintln!("{}", e);
+            exit(1);
+        }
+    };
 }

@@ -317,6 +317,13 @@
         <lastmod>2025-10-29T10:33:00+00:01</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2025/10/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2025/10/report/</loc>
+        <lastmod>2025-11-05T17:16:00+00:01</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
         <lastmod>2024-03-19T23:00:00Z</lastmod>
     </url>
@@ -517,6 +524,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/4/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/5/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/raspberrypi/</loc>
