@@ -28,16 +28,6 @@ And did re-write a test for 6.0. And updated some documentations.
 
 ## phpmyadmin/phpmyadmin (GitHub)
 
-### Week 01
-
-- [3dd3a7b997 - Merge #20006 - Fix tests after merge](https://github.com/phpmyadmin/phpmyadmin/commit/3dd3a7b997835f071a1035be544416cdd0b700e7)
-- [1e66805318 - Bump docs year to 2026](https://github.com/phpmyadmin/phpmyadmin/commit/1e66805318f13051c982304d1284f791051e9a4a)
-- [93bfcec64c - Update a broken link,  reported by LG6280 on Weblate](https://github.com/phpmyadmin/phpmyadmin/commit/93bfcec64c87c2455422f934e80eac230f43744a)
-- [c47e13192f - Remove a double space, reported by RickyLam11 on Weblate](https://github.com/phpmyadmin/phpmyadmin/commit/c47e13192fe00360d4f72e8c758535eb28bf19e8)
-- [c16304a9f8 - Update doc links to https if possible](https://github.com/phpmyadmin/phpmyadmin/commit/c16304a9f8c5ee178e351f3f34b1d37259166aa7)
-- [bbfa40bd98 - Merge Weblate translations](https://github.com/phpmyadmin/phpmyadmin/commit/bbfa40bd981f448beedda42ff30f00018d329e0e)
-- [4efc69d083 - Fix a coding standard mistake](https://github.com/phpmyadmin/phpmyadmin/commit/4efc69d083c83903498d4324d1309b8843de234b)
-
 ### Week 49
 
 - [3e20f101f7 - Merge #19978 - Convert false links into buttons](https://github.com/phpmyadmin/phpmyadmin/commit/3e20f101f7052fdbd35e4452245850e51519d3d9)
@@ -122,14 +112,6 @@ And did re-write a test for 6.0. And updated some documentations.
 # Handled issues
 
 ## phpmyadmin/phpmyadmin (GitHub)
-
-### Week 01
-
-- [19976 - [Bug]: Bootstrap theme icons are not visible on bigger screens](https://github.com/phpmyadmin/phpmyadmin/issues/19976)
-- [19900 - [Bug]: Two-factor authentication disappears](https://github.com/phpmyadmin/phpmyadmin/issues/19900)
-- [19339 - json column not always with syntax highlighting](https://github.com/phpmyadmin/phpmyadmin/issues/19339)
-- [19964 - [Bug]: Error importing CSV with more decimals than the column](https://github.com/phpmyadmin/phpmyadmin/issues/19964)
-- [19896 - [Bug]: `$cfg['DefaultTabServer']` doesn't seem to work](https://github.com/phpmyadmin/phpmyadmin/issues/19896)
 
 ### Week 49
 
