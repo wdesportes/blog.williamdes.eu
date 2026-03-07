@@ -338,6 +338,20 @@
         <lastmod>2026-01-01T15:00:00+00:01</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2026/01/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2026/01/report/</loc>
+        <lastmod>2026-03-07T16:57:00+00:01</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2026/02/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/phpMyAdmin/2026/02/report/</loc>
+        <lastmod>2026-03-07T16:57:00+00:01</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/phpmyadmin-adventure/</loc>
         <lastmod>2024-03-19T23:00:00Z</lastmod>
     </url>
@@ -505,6 +519,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-report/page/5/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/oss-report/page/6/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/oss-security/</loc>
