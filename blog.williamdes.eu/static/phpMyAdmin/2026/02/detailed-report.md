@@ -257,7 +257,7 @@ And worked on some fixes and improvements for the error reporting server.
 - [20050 - [Bug]: Cannot access user management when connection and server collation differs](https://github.com/phpmyadmin/phpmyadmin/issues/20050)
 - [20074 - [Bug]: "%s" in the dialog when delete user](https://github.com/phpmyadmin/phpmyadmin/issues/20074)
 - [20078 - [Feat]: rename setup.html to install.html](https://github.com/phpmyadmin/phpmyadmin/issues/20078)
-- [19876 - ` 2054: The server requested authentication method unknown to the client [auth_gssapi_client]`](https://github.com/phpmyadmin/phpmyadmin/issues/19876)
+- [19876 - 2054: The server requested authentication method unknown to the client `auth_gssapi_client`](https://github.com/phpmyadmin/phpmyadmin/issues/19876)
 - [18156 - Columns are disappearing when reordering them](https://github.com/phpmyadmin/phpmyadmin/issues/18156)
 - [19924 - phpMyAdmin's Demo Website is out of space](https://github.com/phpmyadmin/phpmyadmin/issues/19924)
 - [20069 - [6.0]: Uncaught ReferenceError: CodeMirror is not defined](https://github.com/phpmyadmin/phpmyadmin/issues/20069)
@@ -284,7 +284,7 @@ And worked on some fixes and improvements for the error reporting server.
 - [20118 - [Bug]: ErrorException: Undefined global variable $sql_insert_syntax](https://github.com/phpmyadmin/phpmyadmin/issues/20118)
 - [17285 - Exported Triggers not usable for import again ](https://github.com/phpmyadmin/phpmyadmin/issues/17285)
 - [20116 - [Bug]: TypeError: Fullscreen request denied](https://github.com/phpmyadmin/phpmyadmin/issues/20116)
-- [19865 - [Bug]: X-ob_mode header should use hyphens](https://github.com/phpmyadmin/phpmyadmin/issues/19865)
+- [19865 - [Bug]: `X-ob_mode` header should use hyphens](https://github.com/phpmyadmin/phpmyadmin/issues/19865)
 - [19644 - Uncaught TypeError: can't access property "success", data is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/19644)
 - [20133 - [Bug]: ErrorException: Undefined array key 0](https://github.com/phpmyadmin/phpmyadmin/issues/20133)
 
