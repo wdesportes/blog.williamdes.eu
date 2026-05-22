@@ -135,7 +135,7 @@ And worked on some fixes and improvements for the error reporting server.
 - [ed45933a55 - Drop old stalebot config](https://github.com/phpmyadmin/shapefile/commit/ed45933a551e8f863e3b4f154c3205b5f532786a)
 - [dd4f743ea4 - Drop support for phpunit 10, support 11 and 12](https://github.com/phpmyadmin/shapefile/commit/dd4f743ea48c2216bbf83609d54e9e61a0a99d37)
 
-## `phpmyadmin/localized_docs` (GitHub)
+## phpmyadmin/localized_docs (GitHub)
 
 ### Week 09
 

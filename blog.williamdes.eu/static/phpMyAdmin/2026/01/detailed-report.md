@@ -9,7 +9,7 @@ I also did some issues triage.
 
 ## First week (01)
 
-I worked on the `localized_docs` repository to make it build like a matrix.
+I worked on the localized_docs repository to make it build like a matrix.
 And better understand what are the translations that need fixing.
 
 ## Second week (02)
@@ -47,7 +47,7 @@ I merged some contributions.
 - [565b9fcc96 - Merge #20049 - Remove getStatusInfo from tests](https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)
 - [3b961d3c84 - Merge #20035 - Clean up TransformationPluginsTest](https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)
 
-## `phpmyadmin/localized_docs` (GitHub)
+## phpmyadmin/localized_docs (GitHub)
 
 ### Week 01
 
