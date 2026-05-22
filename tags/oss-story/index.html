@@ -74,6 +74,15 @@
             "@type": "ListItem",
             "position": 1,
             "item": {
+                "@id": "https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings/",
+                "name": "My open-source security findings from 2018 to 2023",
+                "url": "https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
                 "@id": "https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/",
                 "name": "Moving from LastPass to Bitwarden self-hosted (Rust back-end: Vaultwarden)",
                 "url": "https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/"
@@ -81,7 +90,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 2,
+            "position": 3,
             "item": {
                 "@id": "https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/",
                 "name": "A new uptime service for my infrastructure (upptime)",
@@ -130,6 +139,33 @@
     <div class="posts">
         <h2>Tag: OSS-story</h2>
         <br>
+        
+            
+            <article class="post-entry">
+                
+                    <header class="entry-header">
+                        <h2>My open-source security findings from 2018 to 2023</h2>
+                    </header>
+                    <section class=entry-content>
+                        <!--
+Guidelines for editing this post:
+- When a CVE has a vendor advisory (PMASA for phpMyAdmin, GHSA for GitHub-hosted), always pair them on the same line: `**CVE-XXXX-YYYYY** / **[PMASA-YYYY-N](url)** — fixed in phpMyAdmin X.Y.Z.`
+- For phpMyAdmin CVEs, always use the full form "fixed in phpMyAdmin X.Y.Z" (with the project name), not just "fixed in X.Y.Z".
+- Keep entries chronological (oldest first); one H2 per year (or year-grouped theme).
+- Link to other posts on this blog using Zola's `@/path/to/post.md` syntax; full URLs for external sources.
+- Dates in DD/MM/YYYY format.
+- Update the title's year range and the headline when adding new disclosures; the URL slug stays version-free.
+- Always bump the `updated` field in the frontmatter when editing this post; use the current `Europe/Paris` offset (e.g. `2026-05-22T12:40:50+02:00`).
+-->
+<p>A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.</p>
+                    </section>
+                    <footer class="entry-footer">
+                        <time datetime="2026-05-22T12:43:28+0200">May 22, 2026</time>
+                    </footer>
+                    <a class="entry-link" href="https:&#x2F;&#x2F;blog.williamdes.eu&#x2F;OpenSource&#x2F;stories&#x2F;my-opensource-security-findings&#x2F;"></a>
+
+            </article>
+            
         
             
             <article class="post-entry">

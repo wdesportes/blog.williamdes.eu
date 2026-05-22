@@ -166,6 +166,10 @@
         <lastmod>2023-10-15T12:00:00Z</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings/</loc>
+        <lastmod>2026-05-22T12:43:28+02:00</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Windows/</loc>
     </url>
     <url>
@@ -558,6 +562,9 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/5/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/phpmyadmin/page/6/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/raspberrypi/</loc>
