@@ -22,11 +22,26 @@
     "inLanguage": "{{ page.lang }}",
     "isFamilyFriendly": "true",
     {% if page.extra.author and page.extra.author_url -%}
+    {% if page.extra.co_author -%}
+    "author": [
+        {
+            "@type": "Person",
+            "name": "{{ page.extra.author }}",
+            "url": "{{ page.extra.author_url | safe }}"
+        },
+        {
+            "@type": "Person",
+            "name": "{{ page.extra.co_author }}"{% if page.extra.co_author_url %},
+            "url": "{{ page.extra.co_author_url | safe }}"{% endif %}
+        }
+    ],
+    {%- else %}
     "author": {
         "@type": "Person",
         "name": "{{ page.extra.author }}",
         "url": "{{ page.extra.author_url | safe }}"
-    },{% endif %}
+    },{% endif -%}
+    {% endif %}
     "mainEntityOfPage": "True",
     {% if page.extra.keywords %}"keywords": {{ page.extra.keywords | json_encode | safe }},{% endif %}
     {% if page.extra.category %}"articleSection": "{{ page.extra.category }}",{% endif %}
@@ -47,6 +62,13 @@
             {% else %}<span class="post-author">
                 Author: {{ page.extra.author }}
             </span>{% endif %}
+            {% if page.extra.co_author %}<br/>
+            {% if page.extra.co_author_url %}Co-author: <a class="post-co-author" href="{{ page.extra.co_author_url | safe }}">
+                {{ page.extra.co_author }}
+            </a>
+            {% else %}<span class="post-co-author">
+                Co-author: {{ page.extra.co_author }}
+            </span>{% endif %}{% endif %}
             <br/>
             <span class="post-date">Published: <time datetime="{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%z") }}">{{ page.date | date(format="%B %e, %Y %H:%M") }}</time></span>
             {% if page.updated %}<span class="post-date"> and updated: <time datetime="{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S%z") }}">{{ page.updated | date(format="%B %e, %Y %H:%M") }}</time></span>{% endif %}
