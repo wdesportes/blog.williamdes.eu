@@ -5,7 +5,7 @@ edition = "2024"
 private = true
 
 [dependencies]
-markdown2pdf = "=0.1.8"
+markdown2pdf = "=1.1.0"
 showfile = "0.1.1"
 
 [[bin]]

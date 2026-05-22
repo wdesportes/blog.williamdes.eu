@@ -1,702 +1,1471 @@
 %PDF-1.3
+%ª≠¿ﬁ
 1 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
+<</Type/Pages/Count 2/Kids[8 0 R 9 0 R]>>
 endobj
 2 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Bold/Encoding/WinAnsiEncoding>>
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
 endobj
 3 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Oblique/Encoding/WinAnsiEncoding>>
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Bold/Encoding/WinAnsiEncoding>>
 endobj
 4 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica-BoldOblique/Encoding/WinAnsiEncoding>>
+<</Type/Font/Subtype/Type1/BaseFont/Courier/Encoding/WinAnsiEncoding>>
 endobj
 5 0 obj
-<</Type/Pages/Count 2/Kids[186 0 R 225 0 R]>>
+<</F5 2 0 R/F6 3 0 R/F9 4 0 R>>
 endobj
 6 0 obj
-<</Type/Outlines/Count 0>>
+<<>>
 endobj
 7 0 obj
-<</Trapped/False/CreationDate(D:20260307165706+00'00')/ModDate(D:20260307165706+00'00')/GTS_PDFXVersion()/Title()/Author()/Creator()/Producer()/Subject()/Identifier()/Keywords()>>
+<<>>
 endobj
 8 0 obj
-<</Type/OCG/CreatorInfo<</Creator(Adobe Illustrator 14.0)/Subtype/Artwork>>>>
+<</Type/Page/MediaBox[0 0 595 842]/TrimBox[0 0 595 842]/CropBox[0 0 595 842]/Parent 1 0 R/Resources 10 0 R/Contents 11 0 R/Annots[<</Type/Annot/Subtype/Link/Rect[78.53697 439.7268 428.06824 447.7268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 428.0268 397.83777 436.0268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 416.32678 308.90417 424.32678]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 404.62677 387.6151 412.62677]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 392.92676 251.53697 400.92676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 363.12674 362.24402 371.12674]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 351.42673 266.64246 359.42673]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 339.7267 302.21277 347.7267]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 328.02673 318.2323 336.02673]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 277.82666 264.4276 285.82666]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 266.12665 247.07213 274.12665]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 254.42664 221.72057 262.42664]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 242.72662 205.29088 250.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 231.02661 210.61119 239.02661]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 219.3266 264.89246 227.3266]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 169.12653 140.8065 177.12653]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/dff37bab81ffb72c8d3aade19c5a25f8ea0ca2ac)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 157.42651 253.32603 165.42651]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 145.7265 307.56042 153.7265]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 134.02649 277.75574 142.02649]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 122.32648 249.75182 130.32648]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>]>>
 endobj
 9 0 obj
-[/View/Design]
+<</Type/Page/MediaBox[0 0 595 842]/TrimBox[0 0 595 842]/CropBox[0 0 595 842]/Parent 1 0 R/Resources 12 0 R/Contents 13 0 R/Annots[<</Type/Annot/Subtype/Link/Rect[78.53697 767.92676 395.57605 775.92676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 738.1268 337.32214 746.1268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19909)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 726.42676 301.32605 734.42676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 696.62683 275.49792 704.62683]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20024)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 684.9268 110.1151 692.9268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20045)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 655.12683 187.9315 663.12683]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>]>>
 endobj
 10 0 obj
-<</Type/OCG/Name(Layer 1)/Intent 9 0 R/Usage 8 0 R>>
+<</Font 5 0 R/XObject 6 0 R/ExtGState 7 0 R>>
 endobj
 11 0 obj
-<</Type/OCG/Name(Layer 1)/Intent 9 0 R/Usage 8 0 R>>
+<</Length 14563>>stream
+q
+BT
+182.86584 761.62683 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Consulting Services for phpMyAdmin) Tj
+ET
+Q
+q
+BT
+64.063 740.42676 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+(Report - January 2026) Tj
+ET
+Q
+q
+BT
+64.063 720.02686 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+(Overview) Tj
+ET
+Q
+q
+BT
+64.063 705.82684 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(In January I merged + reviewed contributions. I also did some issues triage.) Tj
+ET
+Q
+q
+BT
+64.063 684.4269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<4669727374207765656B2028303129> Tj
+ET
+Q
+q
+BT
+64.063 670.22687 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I worked on the ) Tj
+0 0 0 rg
+/F9 8 Tf
+(localized_docs) Tj
+0 0 0 rg
+/F5 8 Tf
+( repository to make it build like a matrix. And better understand what are the translations that ) Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+(need fixing.) Tj
+ET
+Q
+q
+BT
+64.063 637.6269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<5365636F6E64207765656B2028303229> Tj
+ET
+Q
+q
+BT
+64.063 623.4269 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F6 8 Tf
+(Nothing to report) Tj
+ET
+Q
+q
+BT
+64.063 602.0269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<5468697264207765656B2028303329> Tj
+ET
+Q
+q
+BT
+64.063 587.8269 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I merged some contributions.) Tj
+ET
+Q
+q
+BT
+64.063 566.4269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<466F75727468207765656B2028303429> Tj
+ET
+Q
+q
+BT
+64.063 552.22687 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I merged some contributions.) Tj
+ET
+Q
+q
+BT
+64.063 530.82684 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<4669667468207765656B2028303529> Tj
+ET
+Q
+q
+BT
+64.063 516.62683 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F6 8 Tf
+(Nothing to report) Tj
+ET
+Q
+q
+BT
+263.0275 493.22684 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Commit list) Tj
+ET
+Q
+q
+BT
+64.063 472.02682 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F7068706D7961646D696E202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 453.62683 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 03) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 442.1268 m
+66.063835 441.72882 l
+65.83839 441.39142 l
+65.500984 441.16595 l
+65.103 441.0868 l
+64.70501 441.16595 l
+64.36761 441.39142 l
+64.14216 441.72882 l
+64.062996 442.1268 l
+64.14216 442.52478 l
+64.36761 442.86218 l
+64.70501 443.08765 l
+65.103 443.1668 l
+65.500984 443.08765 l
+65.83839 442.86218 l
+66.063835 442.52478 l
+h
+f
+Q
+q
+BT
+78.53698 439.72684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(de85bcb05c - Merge #19331 - Fix #17182 - FK Relationship View constraint name natural ordering) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 438.76685 m
+428.06827 438.76685 l
+S
+Q
+q
+0 0 0 rg
+66.143 430.4268 m
+66.063835 430.0288 l
+65.83839 429.6914 l
+65.500984 429.46594 l
+65.103 429.38678 l
+64.70501 429.46594 l
+64.36761 429.6914 l
+64.14216 430.0288 l
+64.062996 430.4268 l
+64.14216 430.82477 l
+64.36761 431.16217 l
+64.70501 431.38763 l
+65.103 431.4668 l
+65.500984 431.38763 l
+65.83839 431.16217 l
+66.063835 430.82477 l
+h
+f
+Q
+q
+BT
+78.53698 428.02682 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(72287e2ebf - Merge #19910 - Switch the theme used when building our HTML documents) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 427.06683 m
+397.83777 427.06683 l
+S
+Q
+q
+0 0 0 rg
+66.143 418.72678 m
+66.063835 418.3288 l
+65.83839 417.9914 l
+65.500984 417.76593 l
+65.103 417.68677 l
+64.70501 417.76593 l
+64.36761 417.9914 l
+64.14216 418.3288 l
+64.062996 418.72678 l
+64.14216 419.12476 l
+64.36761 419.46216 l
+64.70501 419.68762 l
+65.103 419.76678 l
+65.500984 419.68762 l
+65.83839 419.46216 l
+66.063835 419.12476 l
+h
+f
+Q
+q
+BT
+78.53698 416.3268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(79061b5c6f - Merge #20017 - Insufficient space export exception) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 415.36682 m
+308.9042 415.36682 l
+S
+Q
+q
+0 0 0 rg
+66.143 407.02676 m
+66.063835 406.62878 l
+65.83839 406.29138 l
+65.500984 406.06592 l
+65.103 405.98676 l
+64.70501 406.06592 l
+64.36761 406.29138 l
+64.14216 406.62878 l
+64.062996 407.02676 l
+64.14216 407.42474 l
+64.36761 407.76215 l
+64.70501 407.9876 l
+65.103 408.06677 l
+65.500984 407.9876 l
+65.83839 407.76215 l
+66.063835 407.42474 l
+h
+f
+Q
+q
+BT
+78.53698 404.6268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(228696e32b - Merge #20004 - Add integration tests for export plugin structure methods) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 403.6668 m
+387.61514 403.6668 l
+S
+Q
+q
+0 0 0 rg
+66.143 395.32675 m
+66.063835 394.92877 l
+65.83839 394.59137 l
+65.500984 394.3659 l
+65.103 394.28674 l
+64.70501 394.3659 l
+64.36761 394.59137 l
+64.14216 394.92877 l
+64.062996 395.32675 l
+64.14216 395.72473 l
+64.36761 396.06213 l
+64.70501 396.2876 l
+65.103 396.36676 l
+65.500984 396.2876 l
+65.83839 396.06213 l
+66.063835 395.72473 l
+h
+f
+Q
+q
+BT
+78.53698 392.92682 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(cd1b3ad028 - Merge #20025 - Nodes refactoring) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 391.9668 m
+251.53699 391.9668 l
+S
+Q
+q
+BT
+64.063 377.02676 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 04) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 365.52673 m
+66.063835 365.12875 l
+65.83839 364.79135 l
+65.500984 364.5659 l
+65.103 364.48672 l
+64.70501 364.5659 l
+64.36761 364.79135 l
+64.14216 365.12875 l
+64.062996 365.52673 l
+64.14216 365.9247 l
+64.36761 366.26212 l
+64.70501 366.48758 l
+65.103 366.56674 l
+65.500984 366.48758 l
+65.83839 366.26212 l
+66.063835 365.9247 l
+h
+f
+Q
+q
+BT
+78.53698 363.12677 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(b1cec4e48f - Merge #20047 - Fix case where user preferences are not removed) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 362.16678 m
+362.24405 362.16678 l
+S
+Q
+q
+0 0 0 rg
+66.143 353.82672 m
+66.063835 353.42874 l
+65.83839 353.09134 l
+65.500984 352.86588 l
+65.103 352.7867 l
+64.70501 352.86588 l
+64.36761 353.09134 l
+64.14216 353.42874 l
+64.062996 353.82672 l
+64.14216 354.2247 l
+64.36761 354.5621 l
+64.70501 354.78757 l
+65.103 354.86673 l
+65.500984 354.78757 l
+65.83839 354.5621 l
+66.063835 354.2247 l
+h
+f
+Q
+q
+BT
+78.53698 351.42676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(dc1408701f - Merge #19997 - Fix Export checkboxes) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 350.46677 m
+266.6425 350.46677 l
+S
+Q
+q
+0 0 0 rg
+66.143 342.1267 m
+66.063835 341.72873 l
+65.83839 341.39133 l
+65.500984 341.16586 l
+65.103 341.0867 l
+64.70501 341.16586 l
+64.36761 341.39133 l
+64.14216 341.72873 l
+64.062996 342.1267 l
+64.14216 342.5247 l
+64.36761 342.8621 l
+64.70501 343.08755 l
+65.103 343.16672 l
+65.500984 343.08755 l
+65.83839 342.8621 l
+66.063835 342.5247 l
+h
+f
+Q
+q
+BT
+78.53698 339.72675 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(565b9fcc96 - Merge #20049 - Remove getStatusInfo from tests) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 338.76675 m
+302.2128 338.76675 l
+S
+Q
+q
+0 0 0 rg
+66.143 330.42673 m
+66.063835 330.02875 l
+65.83839 329.69135 l
+65.500984 329.46588 l
+65.103 329.38672 l
+64.70501 329.46588 l
+64.36761 329.69135 l
+64.14216 330.02875 l
+64.062996 330.42673 l
+64.14216 330.8247 l
+64.36761 331.1621 l
+64.70501 331.38757 l
+65.103 331.46674 l
+65.500984 331.38757 l
+65.83839 331.1621 l
+66.063835 330.8247 l
+h
+f
+Q
+q
+BT
+78.53698 328.02676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(3b961d3c84 - Merge #20035 - Clean up TransformationPluginsTest) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 327.06674 m
+318.23233 327.06674 l
+S
+Q
+q
+BT
+64.063 310.12674 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F9 12 Tf
+(phpmyadmin/localized_docs) Tj
+0 0 0 rg
+/F5 12 Tf
+<202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 291.7267 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 01) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 280.22668 m
+66.063835 279.82867 l
+65.83839 279.49127 l
+65.500984 279.26587 l
+65.103 279.1867 l
+64.70501 279.26587 l
+64.36761 279.49127 l
+64.14216 279.82867 l
+64.062996 280.22668 l
+64.14216 280.6247 l
+64.36761 280.9621 l
+64.70501 281.1875 l
+65.103 281.26666 l
+65.500984 281.1875 l
+65.83839 280.9621 l
+66.063835 280.6247 l
+h
+f
+Q
+q
+BT
+78.53698 277.8267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(33a11be918 - Cancel concurrent in progress actions) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 276.86667 m
+264.4276 276.86667 l
+S
+Q
+q
+0 0 0 rg
+66.143 268.52667 m
+66.063835 268.12866 l
+65.83839 267.79126 l
+65.500984 267.56586 l
+65.103 267.4867 l
+64.70501 267.56586 l
+64.36761 267.79126 l
+64.14216 268.12866 l
+64.062996 268.52667 l
+64.14216 268.92468 l
+64.36761 269.2621 l
+64.70501 269.4875 l
+65.103 269.56665 l
+65.500984 269.4875 l
+65.83839 269.2621 l
+66.063835 268.92468 l
+h
+f
+Q
+q
+BT
+78.53698 266.12668 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(8abba04939 - Output errors in the job summary) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 265.16666 m
+247.07214 265.16666 l
+S
+Q
+q
+0 0 0 rg
+66.143 256.82666 m
+66.063835 256.42865 l
+65.83839 256.09125 l
+65.500984 255.86584 l
+65.103 255.78668 l
+64.70501 255.86584 l
+64.36761 256.09125 l
+64.14216 256.42865 l
+64.062996 256.82666 l
+64.14216 257.22467 l
+64.36761 257.56207 l
+64.70501 257.78748 l
+65.103 257.86664 l
+65.500984 257.78748 l
+65.83839 257.56207 l
+66.063835 257.22467 l
+h
+f
+Q
+q
+BT
+78.53698 254.42665 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(39dee6efca - Restore modification times) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 253.46664 m
+221.72058 253.46664 l
+S
+Q
+q
+0 0 0 rg
+66.143 245.12665 m
+66.063835 244.72864 l
+65.83839 244.39124 l
+65.500984 244.16583 l
+65.103 244.08667 l
+64.70501 244.16583 l
+64.36761 244.39124 l
+64.14216 244.72864 l
+64.062996 245.12665 l
+64.14216 245.52466 l
+64.36761 245.86206 l
+64.70501 246.08746 l
+65.103 246.16663 l
+65.500984 246.08746 l
+65.83839 245.86206 l
+66.063835 245.52466 l
+h
+f
+Q
+q
+BT
+78.53698 242.72664 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(6578c9d4ff - Cache the docs output) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 241.76662 m
+205.2909 241.76662 l
+S
+Q
+q
+0 0 0 rg
+66.143 233.42664 m
+66.063835 233.02863 l
+65.83839 232.69122 l
+65.500984 232.46582 l
+65.103 232.38666 l
+64.70501 232.46582 l
+64.36761 232.69122 l
+64.14216 233.02863 l
+64.062996 233.42664 l
+64.14216 233.82465 l
+64.36761 234.16205 l
+64.70501 234.38745 l
+65.103 234.46661 l
+65.500984 234.38745 l
+65.83839 234.16205 l
+66.063835 233.82465 l
+h
+f
+Q
+q
+BT
+78.53698 231.02663 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2c37e98244 - Generate the CI matrix) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 230.0666 m
+210.6112 230.0666 l
+S
+Q
+q
+0 0 0 rg
+66.143 221.72662 m
+66.063835 221.32861 l
+65.83839 220.99121 l
+65.500984 220.76581 l
+65.103 220.68665 l
+64.70501 220.76581 l
+64.36761 220.99121 l
+64.14216 221.32861 l
+64.062996 221.72662 l
+64.14216 222.12463 l
+64.36761 222.46204 l
+64.70501 222.68744 l
+65.103 222.7666 l
+65.500984 222.68744 l
+65.83839 222.46204 l
+66.063835 222.12463 l
+h
+f
+Q
+q
+BT
+78.53698 219.32663 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(ad255a9922 - Merge #35 - Update translation badge) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 218.3666 m
+264.89246 218.3666 l
+S
+Q
+q
+BT
+64.063 201.42659 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2D7465616D2F6D6172696164622D6D7973716C2D6B627320284769744C616229> Tj
+ET
+Q
+q
+BT
+64.063 183.02657 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 03) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 171.52655 m
+66.063835 171.12854 l
+65.83839 170.79114 l
+65.500984 170.56573 l
+65.103 170.48657 l
+64.70501 170.56573 l
+64.36761 170.79114 l
+64.14216 171.12854 l
+64.062996 171.52655 l
+64.14216 171.92456 l
+64.36761 172.26196 l
+64.70501 172.48737 l
+65.103 172.56653 l
+65.500984 172.48737 l
+65.83839 172.26196 l
+66.063835 171.92456 l
+h
+f
+Q
+q
+BT
+78.53698 169.12654 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(dff37bab81 - d/ch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 168.16652 m
+140.80652 168.16652 l
+S
+Q
+q
+0 0 0 rg
+66.143 159.82654 m
+66.063835 159.42853 l
+65.83839 159.09113 l
+65.500984 158.86572 l
+65.103 158.78656 l
+64.70501 158.86572 l
+64.36761 159.09113 l
+64.14216 159.42853 l
+64.062996 159.82654 l
+64.14216 160.22455 l
+64.36761 160.56195 l
+64.70501 160.78735 l
+65.103 160.86652 l
+65.500984 160.78735 l
+65.83839 160.56195 l
+66.063835 160.22455 l
+h
+f
+Q
+q
+BT
+78.53698 157.42653 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2a30d80362 - Update Standards-Version to 4.7.3) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 156.4665 m
+253.32605 156.4665 l
+S
+Q
+q
+0 0 0 rg
+66.143 148.12653 m
+66.063835 147.72852 l
+65.83839 147.39111 l
+65.500984 147.16571 l
+65.103 147.08655 l
+64.70501 147.16571 l
+64.36761 147.39111 l
+64.14216 147.72852 l
+64.062996 148.12653 l
+64.14216 148.52454 l
+64.36761 148.86194 l
+64.70501 149.08734 l
+65.103 149.1665 l
+65.500984 149.08734 l
+65.83839 148.86194 l
+66.063835 148.52454 l
+h
+f
+Q
+q
+BT
+78.53698 145.72652 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(8e87450c25 - Merge !2 - Update d/watch to use uscan v5 syntax) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 144.7665 m
+307.56046 144.7665 l
+S
+Q
+q
+0 0 0 rg
+66.143 136.42651 m
+66.063835 136.0285 l
+65.83839 135.6911 l
+65.500984 135.4657 l
+65.103 135.38654 l
+64.70501 135.4657 l
+64.36761 135.6911 l
+64.14216 136.0285 l
+64.062996 136.42651 l
+64.14216 136.82452 l
+64.36761 137.16193 l
+64.70501 137.38733 l
+65.103 137.46649 l
+65.500984 137.38733 l
+65.83839 137.16193 l
+66.063835 136.82452 l
+h
+f
+Q
+q
+BT
+78.53698 134.0265 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(501fd61cc6 - Drop now default Rules-Requires-Root: no) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 133.06648 m
+277.75574 133.06648 l
+S
+Q
+q
+0 0 0 rg
+66.143 124.7265 m
+66.063835 124.32849 l
+65.83839 123.99109 l
+65.500984 123.765686 l
+65.103 123.68652 l
+64.70501 123.765686 l
+64.36761 123.99109 l
+64.14216 124.32849 l
+64.062996 124.7265 l
+64.14216 125.12451 l
+64.36761 125.461914 l
+64.70501 125.68732 l
+65.103 125.76648 l
+65.500984 125.68732 l
+65.83839 125.461914 l
+66.063835 125.12451 l
+h
+f
+Q
+q
+BT
+78.53698 122.326485 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(cdae66b0a3 - Drop now default Priority: optional) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 121.36647 m
+249.75183 121.36647 l
+S
+Q
+q
+BT
+249.77602 102.42646 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Handled issues) Tj
+ET
+Q
+q
+BT
+64.063 81.22645 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F7068706D7961646D696E202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 62.826424 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 02) Tj
+ET
+Q
+endstream 
 endobj
 12 0 obj
-<</Helvetica 1 0 R/Helvetica-Bold 2 0 R/Helvetica-BoldOblique 4 0 R/Helvetica-Oblique 3 0 R>>
+<</Font 5 0 R/XObject 6 0 R/ExtGState 7 0 R>>
 endobj
 13 0 obj
-<</Type/Annot/Subtype/Link/Rect[154.74126 265.45187 188.08528 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
+<</Length 3698>>stream
+q
+0 0 0 rg
+66.143 770.3268 m
+66.063835 769.9288 l
+65.83839 769.5914 l
+65.500984 769.36597 l
+65.103 769.28674 l
+64.70501 769.36597 l
+64.36761 769.5914 l
+64.14216 769.9288 l
+64.062996 770.3268 l
+64.14216 770.72473 l
+64.36761 771.06213 l
+64.70501 771.2876 l
+65.103 771.36676 l
+65.500984 771.2876 l
+65.83839 771.06213 l
+66.063835 770.72473 l
+h
+f
+Q
+q
+BT
+78.53698 767.9269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(18025 - PHPMyAdmin sometimes not showing foreign-key related data in search or insert) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 766.9669 m
+395.57608 766.9669 l
+S
+Q
+q
+BT
+64.063 752.02686 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 03) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 740.5268 m
+66.063835 740.1288 l
+65.83839 739.7914 l
+65.500984 739.5659 l
+65.103 739.48676 l
+64.70501 739.5659 l
+64.36761 739.7914 l
+64.14216 740.1288 l
+64.062996 740.5268 l
+64.14216 740.92474 l
+64.36761 741.26215 l
+64.70501 741.4876 l
+65.103 741.5668 l
+65.500984 741.4876 l
+65.83839 741.26215 l
+66.063835 740.92474 l
+h
+f
+Q
+q
+BT
+78.53698 738.12683 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(19909 - [Feat]: Documentation - improve styling for generated HTML files) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 737.1668 m
+337.32217 737.1668 l
+S
+Q
+q
+0 0 0 rg
+66.143 728.8268 m
+66.063835 728.4288 l
+65.83839 728.0914 l
+65.500984 727.86597 l
+65.103 727.7868 l
+64.70501 727.86597 l
+64.36761 728.0914 l
+64.14216 728.4288 l
+64.062996 728.8268 l
+64.14216 729.2248 l
+64.36761 729.5622 l
+64.70501 729.7876 l
+65.103 729.86676 l
+65.500984 729.7876 l
+65.83839 729.5622 l
+66.063835 729.2248 l
+h
+f
+Q
+q
+BT
+78.53698 726.4268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(17182 - FK Relationship View constraint name natural ordering) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 725.46686 m
+301.32608 725.46686 l
+S
+Q
+q
+BT
+64.063 710.52686 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 04) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 699.0268 m
+66.063835 698.6288 l
+65.83839 698.2914 l
+65.500984 698.066 l
+65.103 697.9868 l
+64.70501 698.066 l
+64.36761 698.2914 l
+64.14216 698.6288 l
+64.062996 699.0268 l
+64.14216 699.4248 l
+64.36761 699.7622 l
+64.70501 699.9876 l
+65.103 700.0668 l
+65.500984 699.9876 l
+65.83839 699.7622 l
+66.063835 699.4248 l
+h
+f
+Q
+q
+BT
+78.53698 696.6269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20024 - [Bug]: CSV Import Corrupts JSON Data Format) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 695.6669 m
+275.49796 695.6669 l
+S
+Q
+q
+0 0 0 rg
+66.143 687.3268 m
+66.063835 686.92883 l
+65.83839 686.59143 l
+65.500984 686.36597 l
+65.103 686.2868 l
+64.70501 686.36597 l
+64.36761 686.59143 l
+64.14216 686.92883 l
+64.062996 687.3268 l
+64.14216 687.7248 l
+64.36761 688.0622 l
+64.70501 688.2876 l
+65.103 688.3668 l
+65.500984 688.2876 l
+65.83839 688.0622 l
+66.063835 687.7248 l
+h
+f
+Q
+q
+BT
+78.53698 684.9269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20045 - .) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 683.96686 m
+110.115105 683.96686 l
+S
+Q
+q
+BT
+64.063 669.02686 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 05) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 657.5268 m
+66.063835 657.1288 l
+65.83839 656.7914 l
+65.500984 656.566 l
+65.103 656.4868 l
+64.70501 656.566 l
+64.36761 656.7914 l
+64.14216 657.1288 l
+64.062996 657.5268 l
+64.14216 657.9248 l
+64.36761 658.2622 l
+64.70501 658.4877 l
+65.103 658.5668 l
+65.500984 658.4877 l
+65.83839 658.2622 l
+66.063835 657.9248 l
+h
+f
+Q
+q
+BT
+78.53698 655.1269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20057 - Update More Features) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 654.1669 m
+187.93152 654.1669 l
+S
+Q
+endstream 
 endobj
 14 0 obj
-<</Type/Annot/Subtype/Link/Rect[196.0933 436.65213 242.33334 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
+<</Type/Outlines/Count 22/First 15 0 R/Last 36 0 R>>
 endobj
 15 0 obj
-<</Type/Annot/Subtype/Link/Rect[298.7974 436.65213 321.02942 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300031>/Dest[8 0 R/XYZ null null null]/Next 16 0 R>>
 endobj
 16 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.14921 332.252 76.03721 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300032>/Dest[8 0 R/XYZ null null null]/Prev 15 0 R/Next 17 0 R>>
 endobj
 17 0 obj
-<</Type/Annot/Subtype/Link/Rect[130.29324 412.6521 135.18126 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300033>/Dest[8 0 R/XYZ null null null]/Prev 16 0 R/Next 18 0 R>>
 endobj
 18 0 obj
-<</Type/Annot/Subtype/Link/Rect[184.54126 138.65169 202.33328 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300033>/Dest[8 0 R/XYZ null null null]/Prev 17 0 R/Next 19 0 R>>
 endobj
 19 0 obj
-<</Type/Annot/Subtype/Link/Rect[252.99734 356.25204 266.78137 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300034>/Dest[8 0 R/XYZ null null null]/Prev 18 0 R/Next 20 0 R>>
 endobj
 20 0 obj
-<</Type/Annot/Subtype/Link/Rect[280.12537 356.25204 311.2454 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020004600690066007400680020007700650065006B00200028003000350029>/Dest[8 0 R/XYZ null null null]/Prev 19 0 R/Next 21 0 R>>
 endobj
 21 0 obj
-<</Type/Annot/Subtype/Link/Rect[166.74127 332.252 216.10931 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020004600690072007300740020007700650065006B00200028003000310029>/Dest[8 0 R/XYZ null null null]/Prev 20 0 R/Next 22 0 R>>
 endobj
 22 0 obj
-<</Type/Annot/Subtype/Link/Rect[136.95724 253.45187 150.30125 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF002000200046006F00750072007400680020007700650065006B00200028003000340029>/Dest[8 0 R/XYZ null null null]/Prev 21 0 R/Next 23 0 R>>
 endobj
 23 0 obj
-<</Type/Annot/Subtype/Link/Rect[240.12532 424.65213 269.91736 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020004F0076006500720076006900650077>/Dest[8 0 R/XYZ null null null]/Prev 22 0 R/Next 24 0 R>>
 endobj
 24 0 obj
-<</Type/Annot/Subtype/Link/Rect[130.29324 344.252 135.18126 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020005200650070006F007200740020002D0020004A0061006E007500610072007900200032003000320036>/Dest[8 0 R/XYZ null null null]/Prev 23 0 R/Next 25 0 R>>
 endobj
 25 0 obj
-<</Type/Annot/Subtype/Link/Rect[171.64528 320.25198 267.22934 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020005300650063006F006E00640020007700650065006B00200028003000320029>/Dest[8 0 R/XYZ null null null]/Prev 24 0 R/Next 26 0 R>>
 endobj
 26 0 obj
-<</Type/Annot/Subtype/Link/Rect[146.29324 265.45187 154.74126 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020005400680069007200640020007700650065006B00200028003000330029>/Dest[8 0 R/XYZ null null null]/Prev 25 0 R/Next 27 0 R>>
 endobj
 27 0 obj
-<</Type/Annot/Subtype/Link/Rect[129.84525 356.25204 134.73325 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002D007400650061006D002F006D006100720069006100640062002D006D007900730071006C002D006B0062007300200028004700690074004C006100620029>/Dest[8 0 R/XYZ null null null]/Prev 26 0 R/Next 28 0 R>>
 endobj
 28 0 obj
-<</Type/Annot/Subtype/Link/Rect[145.40526 126.65167 175.19728 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F006C006F00630061006C0069007A00650064005F0064006F00630073002000280047006900740048007500620029>/Dest[8 0 R/XYZ null null null]/Prev 27 0 R/Next 29 0 R>>
 endobj
 29 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.37321 436.65213 78.26121 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F007000680070006D007900610064006D0069006E002000280047006900740048007500620029>/Dest[8 0 R/XYZ null null null]/Prev 28 0 R/Next 30 0 R>>
 endobj
 30 0 obj
-<</Type/Annot/Subtype/Link/Rect[272.58936 400.6521 305.93338 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F007000680070006D007900610064006D0069006E002000280047006900740048007500620029>/Dest[8 0 R/XYZ null null null]/Prev 29 0 R/Next 31 0 R>>
 endobj
 31 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.70921 217.45183 114.28524 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0043006F006D006D006900740020006C006900730074>/Dest[8 0 R/XYZ null null null]/Prev 30 0 R/Next 32 0 R>>
 endobj
 32 0 obj
-<</Type/Annot/Subtype/Link/Rect[213.00531 400.6521 224.56532 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0043006F006E00730075006C00740069006E006700200053006500720076006900630065007300200066006F00720020007000680070004D007900410064006D0069006E>/Dest[8 0 R/XYZ null null null]/Prev 31 0 R/Next 33 0 R>>
 endobj
 33 0 obj
-<</Type/Annot/Subtype/Link/Rect[173.41328 344.252 215.65332 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF00480061006E0064006C006500640020006900730073007500650073>/Dest[8 0 R/XYZ null null null]/Prev 32 0 R/Next 34 0 R>>
 endobj
 34 0 obj
-<</Type/Annot/Subtype/Link/Rect[101.38123 412.6521 130.29324 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300033>/Dest[9 0 R/XYZ null null null]/Prev 33 0 R/Next 35 0 R>>
 endobj
 35 0 obj
-<</Type/Annot/Subtype/Link/Rect[175.64528 412.6521 199.21329 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300034>/Dest[9 0 R/XYZ null null null]/Prev 34 0 R/Next 36 0 R>>
 endobj
 36 0 obj
-<</Type/Annot/Subtype/Link/Rect[132.96524 400.6521 137.85326 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
+<</Parent 14 0 R/Title<FEFF0020002000200020005700650065006B002000300035>/Dest[9 0 R/XYZ null null null]/Prev 35 0 R>>
 endobj
 37 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.14921 356.25204 76.03721 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
+<</Type/Catalog/PageLayout/OneColumn/PageMode(UseOutlines)/Pages 1 0 R/Outlines 14 0 R>>
 endobj
 38 0 obj
-<</Type/Annot/Subtype/Link/Rect[135.18126 412.6521 175.64528 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-39 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.70921 388.6521 103.605225 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-40 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.03721 332.252 100.93323 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-41 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 265.45187 74.2692 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-42 0 obj
-<</Type/Annot/Subtype/Link/Rect[188.08528 265.45187 213.4293 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-43 0 obj
-<</Type/Annot/Subtype/Link/Rect[132.06924 229.45184 154.30927 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-44 0 obj
-<</Type/Annot/Subtype/Link/Rect[100.93323 356.25204 129.84525 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-45 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 332.252 71.1492 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-46 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.709206 126.65167 103.605225 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-47 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.597206 344.252 76.48521 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-48 0 obj
-<</Type/Annot/Subtype/Link/Rect[160.52527 320.25198 171.64528 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-49 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.48521 344.252 101.38123 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-50 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 436.65213 73.37321 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-51 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.597206 241.45186 76.48521 245.77217]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-52 0 obj
-<</Type/Annot/Subtype/Link/Rect[136.95726 436.65213 149.84528 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-53 0 obj
-<</Type/Annot/Subtype/Link/Rect[152.52527 205.45181 191.65329 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-54 0 obj
-<</Type/Annot/Subtype/Link/Rect[166.74127 356.25204 190.74928 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-55 0 obj
-<</Type/Annot/Subtype/Link/Rect[150.30125 253.45187 163.19727 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-56 0 obj
-<</Type/Annot/Subtype/Link/Rect[347.70944 436.65213 377.05347 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-57 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.2692 253.45187 79.1572 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-58 0 obj
-<</Type/Annot/Subtype/Link/Rect[199.21329 424.65213 218.78131 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-59 0 obj
-<</Type/Annot/Subtype/Link/Rect[184.09329 126.65167 199.21329 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-60 0 obj
-<</Type/Annot/Subtype/Link/Rect[222.78133 126.65167 233.45334 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-61 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 114.65166 71.1492 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-62 0 obj
-<</Type/Annot/Subtype/Link/Rect[95.59722 114.65166 112.49323 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-63 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.70921 102.65164 98.269226 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-64 0 obj
-<</Type/Annot/Subtype/Link/Rect[151.62126 241.45186 170.73328 245.77217]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-65 0 obj
-<</Type/Annot/Subtype/Link/Rect[170.74127 102.65164 198.7573 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-66 0 obj
-<</Type/Annot/Subtype/Link/Rect[154.30925 400.6521 193.88528 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-67 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.03721 356.25204 100.93323 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-68 0 obj
-<</Type/Annot/Subtype/Link/Rect[321.02942 436.65213 347.70944 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-69 0 obj
-<</Type/Annot/Subtype/Link/Rect[69.37321 229.45184 74.26121 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-70 0 obj
-<</Type/Annot/Subtype/Link/Rect[103.157234 436.65213 132.06924 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-71 0 obj
-<</Type/Annot/Subtype/Link/Rect[79.1572 253.45187 105.397224 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-72 0 obj
-<</Type/Annot/Subtype/Link/Rect[134.73325 356.25204 147.62126 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-73 0 obj
-<</Type/Annot/Subtype/Link/Rect[106.717224 241.45186 151.62126 245.77217]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-74 0 obj
-<</Type/Annot/Subtype/Link/Rect[199.21329 412.6521 223.66931 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-75 0 obj
-<</Type/Annot/Subtype/Link/Rect[234.33333 332.252 251.22932 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-76 0 obj
-<</Type/Annot/Subtype/Link/Rect[79.1572 138.65169 107.173225 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-77 0 obj
-<</Type/Annot/Subtype/Link/Rect[112.501236 126.65167 117.389244 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-78 0 obj
-<</Type/Annot/Subtype/Link/Rect[307.7014 424.65213 346.8294 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-79 0 obj
-<</Type/Annot/Subtype/Link/Rect[105.397224 253.45187 128.50923 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-80 0 obj
-<</Type/Annot/Subtype/Link/Rect[183.6453 436.65213 196.0933 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-81 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 388.6521 73.821205 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-82 0 obj
-<</Type/Annot/Subtype/Link/Rect[193.88528 400.6521 213.00531 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-83 0 obj
-<</Type/Annot/Subtype/Link/Rect[217.8613 114.65166 226.7573 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-84 0 obj
-<</Type/Annot/Subtype/Link/Rect[137.40526 388.6521 162.74928 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-85 0 obj
-<</Type/Annot/Subtype/Link/Rect[115.16524 102.65164 141.40526 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-86 0 obj
-<</Type/Annot/Subtype/Link/Rect[224.56532 400.6521 249.02135 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-87 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.821205 320.25198 78.709206 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-88 0 obj
-<</Type/Annot/Subtype/Link/Rect[103.605225 320.25198 132.51724 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-89 0 obj
-<</Type/Annot/Subtype/Link/Rect[99.60522 229.45184 112.94923 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-90 0 obj
-<</Type/Annot/Subtype/Link/Rect[218.78131 424.65213 240.12532 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-91 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.709206 150.6517 89.829216 154.97202]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/dff37bab81ffb72c8d3aade19c5a25f8ea0ca2ac)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-92 0 obj
-<</Type/Annot/Subtype/Link/Rect[148.06927 344.252 173.41328 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-93 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 424.65213 72.045204 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-94 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.26121 229.45184 99.60522 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-95 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.821205 102.65164 78.70921 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-96 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 412.6521 71.597206 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-97 0 obj
-<</Type/Annot/Subtype/Link/Rect[103.605225 388.6521 132.51724 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-98 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 356.25204 71.14921 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-99 0 obj
-<</Type/Annot/Subtype/Link/Rect[137.85326 400.6521 154.30925 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-100 0 obj
-<</Type/Annot/Subtype/Link/Rect[138.73325 114.65166 217.8613 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-101 0 obj
-<</Type/Annot/Subtype/Link/Rect[161.41327 424.65213 174.75728 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-102 0 obj
-<</Type/Annot/Subtype/Link/Rect[79.1572 205.45181 104.05322 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-103 0 obj
-<</Type/Annot/Subtype/Link/Rect[129.84525 332.252 134.73325 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-104 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.2692 205.45181 79.1572 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-105 0 obj
-<</Type/Annot/Subtype/Link/Rect[175.19728 126.65167 184.09329 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-106 0 obj
-<</Type/Annot/Subtype/Link/Rect[130.74124 424.65213 135.62926 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-107 0 obj
-<</Type/Annot/Subtype/Link/Rect[141.40526 102.65164 170.74127 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-108 0 obj
-<</Type/Annot/Subtype/Link/Rect[132.51724 320.25198 137.40526 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-109 0 obj
-<</Type/Annot/Subtype/Link/Rect[103.605225 126.65167 112.501236 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-110 0 obj
-<</Type/Annot/Subtype/Link/Rect[137.85326 217.45183 159.62927 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-111 0 obj
-<</Type/Annot/Subtype/Link/Rect[174.75728 424.65213 199.21329 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-112 0 obj
-<</Type/Annot/Subtype/Link/Rect[261.89334 436.65213 298.7974 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-113 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.821205 388.6521 78.70921 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-114 0 obj
-<</Type/Annot/Subtype/Link/Rect[283.70135 424.65213 307.7014 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-115 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.26121 436.65213 103.157234 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-116 0 obj
-<</Type/Annot/Subtype/Link/Rect[199.21329 126.65167 222.78131 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-117 0 obj
-<</Type/Annot/Subtype/Link/Rect[162.74928 388.6521 200.5413 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-118 0 obj
-<</Type/Annot/Subtype/Link/Rect[127.62925 217.45183 137.85326 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-119 0 obj
-<</Type/Annot/Subtype/Link/Rect[132.51724 388.6521 137.40526 392.97238]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cd1b3ad028cbb6f0d13c2dbe23ed263da78433f0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-120 0 obj
-<</Type/Annot/Subtype/Link/Rect[132.06924 436.65213 136.95726 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-121 0 obj
-<</Type/Annot/Subtype/Link/Rect[106.27723 265.45187 146.29326 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-122 0 obj
-<</Type/Annot/Subtype/Link/Rect[233.45334 126.65167 256.57336 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-123 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 205.45181 74.2692 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-124 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.48521 412.6521 101.38123 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-125 0 obj
-<</Type/Annot/Subtype/Link/Rect[79.1572 400.6521 104.05322 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-126 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 229.45184 69.3732 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-127 0 obj
-<</Type/Annot/Subtype/Link/Rect[242.33334 436.65213 261.89334 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-128 0 obj
-<</Type/Annot/Subtype/Link/Rect[98.269226 102.65164 115.16524 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-129 0 obj
-<</Type/Annot/Subtype/Link/Rect[135.18126 344.252 148.06927 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-130 0 obj
-<</Type/Annot/Subtype/Link/Rect[100.93323 332.252 129.84525 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-131 0 obj
-<</Type/Annot/Subtype/Link/Rect[223.66931 412.6521 257.90933 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-132 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 150.6517 69.821205 154.97202]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/dff37bab81ffb72c8d3aade19c5a25f8ea0ca2ac)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-133 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 138.65169 74.2692 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-134 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 400.6521 74.2692 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-135 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.821205 217.45183 78.70921 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-136 0 obj
-<</Type/Annot/Subtype/Link/Rect[208.53331 356.25204 252.99734 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-137 0 obj
-<</Type/Annot/Subtype/Link/Rect[107.173225 138.65169 175.64526 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-138 0 obj
-<</Type/Annot/Subtype/Link/Rect[101.82922 424.65213 130.74124 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-139 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.597206 412.6521 76.48521 416.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/79061b5c6fc164700a0a34abf8872985942eeec9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-140 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 217.45183 73.821205 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-141 0 obj
-<</Type/Annot/Subtype/Link/Rect[178.7573 436.65213 183.6453 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-142 0 obj
-<</Type/Annot/Subtype/Link/Rect[216.10931 332.252 234.33333 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-143 0 obj
-<</Type/Annot/Subtype/Link/Rect[101.38123 344.252 130.29324 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-144 0 obj
-<</Type/Annot/Subtype/Link/Rect[249.02135 400.6521 272.58936 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-145 0 obj
-<</Type/Annot/Subtype/Link/Rect[69.821205 150.6517 74.709206 154.97202]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/dff37bab81ffb72c8d3aade19c5a25f8ea0ca2ac)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-146 0 obj
-<</Type/Annot/Subtype/Link/Rect[135.62926 424.65213 161.41327 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-147 0 obj
-<</Type/Annot/Subtype/Link/Rect[305.93338 400.6521 336.6134 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-148 0 obj
-<</Type/Annot/Subtype/Link/Rect[128.50925 253.45187 136.95724 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-149 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 320.25198 73.821205 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-150 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.48521 241.45186 106.717224 245.77217]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-151 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.2692 400.6521 79.1572 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-152 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 253.45187 74.2692 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-153 0 obj
-<</Type/Annot/Subtype/Link/Rect[104.05322 400.6521 132.96524 404.9724]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/228696e32b83f2c5d7d3e099e4cf7cef4f95b9c0)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-154 0 obj
-<</Type/Annot/Subtype/Link/Rect[266.78137 356.25204 280.12537 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-155 0 obj
-<</Type/Annot/Subtype/Link/Rect[114.28524 217.45183 127.62925 221.77214]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-156 0 obj
-<</Type/Annot/Subtype/Link/Rect[112.49323 114.65166 138.73325 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-157 0 obj
-<</Type/Annot/Subtype/Link/Rect[269.91736 424.65213 283.70135 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-158 0 obj
-<</Type/Annot/Subtype/Link/Rect[134.73325 332.252 166.74127 336.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/565b9fcc963d6dbdc3bd0aa1f6109f4869302ba9)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-159 0 obj
-<</Type/Annot/Subtype/Link/Rect[78.709206 320.25198 103.605225 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-160 0 obj
-<</Type/Annot/Subtype/Link/Rect[72.045204 424.65213 76.93321 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-161 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.2692 138.65169 79.1572 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-162 0 obj
-<</Type/Annot/Subtype/Link/Rect[119.62123 205.45181 124.50924 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-163 0 obj
-<</Type/Annot/Subtype/Link/Rect[117.389244 126.65167 145.40526 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-164 0 obj
-<</Type/Annot/Subtype/Link/Rect[149.84528 436.65213 178.7573 440.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-165 0 obj
-<</Type/Annot/Subtype/Link/Rect[190.74928 356.25204 208.5333 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-166 0 obj
-<</Type/Annot/Subtype/Link/Rect[74.2692 265.45187 79.1572 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-167 0 obj
-<</Type/Annot/Subtype/Link/Rect[163.19727 253.45187 196.0853 257.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/8abba04939a438160f8625e6b4dab1f1ba10be60)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-168 0 obj
-<</Type/Annot/Subtype/Link/Rect[147.62126 356.25204 166.74127 360.57236]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/b1cec4e48f093e7c26cfad55446d84dc6ad22de8)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-169 0 obj
-<</Type/Annot/Subtype/Link/Rect[79.1572 265.45187 106.27723 269.7722]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/33a11be91842523fb258bb5c8854af49c64f74fe)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-170 0 obj
-<</Type/Annot/Subtype/Link/Rect[104.05322 205.45181 119.62123 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-171 0 obj
-<</Type/Annot/Subtype/Link/Rect[71.14921 114.65166 76.03721 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-172 0 obj
-<</Type/Annot/Subtype/Link/Rect[137.40526 320.25198 160.52527 324.5723]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3b961d3c8420a3e3a3bd18d60dfcd00fa179c98b)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-173 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 241.45186 71.597206 245.77217]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/39dee6efcad15393e9c39a6b3cba88edc3cd00cd)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-174 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 344.252 71.597206 348.57233]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/dc1408701f25b3cb19df6931b769425a9a417c9f)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-175 0 obj
-<</Type/Annot/Subtype/Link/Rect[112.94924 229.45184 132.06926 233.77216]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/6578c9d4ffbb53ef755e649f496215e0de467e54)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-176 0 obj
-<</Type/Annot/Subtype/Link/Rect[124.50924 205.45181 152.52527 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-177 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.03721 114.65166 95.59722 118.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/501fd61cc685cd5824584e31380341332079dc55)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-178 0 obj
-<</Type/Annot/Subtype/Link/Rect[73.821205 126.65167 78.709206 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-179 0 obj
-<</Type/Annot/Subtype/Link/Rect[191.65329 205.45181 213.8933 209.77213]/A<</S/URI/URI(https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-180 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 102.65164 73.821205 106.97196]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-181 0 obj
-<</Type/Annot/Subtype/Link/Rect[76.93321 424.65213 101.82922 428.97244]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/72287e2ebfaa2bc318c8075765ecbbf3ebd3ea8d)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-182 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 126.65167 73.821205 130.97198]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/8e87450c252cbb0b42c686f6430b25cbccf82124)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-183 0 obj
-<</Type/Annot/Subtype/Link/Rect[175.64526 138.65169 184.54126 142.972]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/2a30d8036251a543dca67a08eaba1557cef50a21)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-184 0 obj
-<</Properties<</MC0 10 0 R>>/Annots<</Type/Annot/Subtype/Link/Rect[27.56517 436.65213 73.37321 440.97244]>>/Font 12 0 R>>
-endobj
-185 0 obj
-<</Filter/FlateDecode/Length 1760>>stream
-x⁄≈YÌä7¸øO±/êÒH-µ$Åª˝ ?bB‡^ ƒ$B ‰˘S›öùënµ#-8¯åÕÌå,uµ™K’⁄?üé>ûÊ„Î˘t¯˚˙vpS¢ì=æ˝t∞v‚«cúÌ4ìu«∑Oá?~˛ÚÔÁ˛¯Ì◊Ô^ˇ˙ÚÈhÙ˜√˜é¯ ó@¡Û)8N|·`Áéoæ˜ƒ>ÿ¿x*ø—Ì93_ÉΩ}
-3«0ªsHŒ∞„≥Ã°o.o92K¯·:≤“d¬É»¨FÊ-÷úe•‡nkŸÛÌ7˜¬q{∆,!›ûí%‡%ÓØÔy
-XüwpW@ø%¿áPLjßhÒ„ﬁMJiäﬁ˙zŒcÃ≥!-˚¡ªı7$Îr`œÙ◊5·íò%¶rÁ≠txüÿØ€©õk/˝ÿ-Ì≈æÆa@¨≥~ñ5÷‰çƒææM ñP´ œütvÄ(†0Ì≈!»#m4—ºx^3f#halÍfÅ£üúø⁄]0?h…ØUˆØ€˛"Û±»¬	ÔH2á8_‰ˇ¯+ÚÜgÅñ¯ ù F:•~*Êº¸0≤zëÁ-Ï<Ú{*"√∫’hSŒì˜#ƒé œ;Ÿ£ã5âCÃæ
-/#¥¢∞W\çGF£ƒ≤≈(πhÁS#ñ˙! 3ÀÀ—Â\eÉ+‰x©Î3ê]ò¿/Ú{Z}ÃÂ«˚$¥#$$3ÕﬁRh-∏$˚rÃJØKäÑB=+íÌBù”$ˆ†Í≤ò~( ı	øhØ‹Zrx'5c‚◊∆ÌÉë”®ß2◊ ‹˛]‰nπG @˛ÕÅìïc–pG^ôª∞˝l„Âê°ˇïÿ-#ÑîNë¨ ⁄wBgÒ/°íN´n"ët	≥W9Ÿ(1åØF…^õO◊ƒ∫ ·∏Ì¨•É&o\T|áÉØ2÷¥≈jŒ¸n˚§Zª[áÏH≠ö6e7_&Oë.à)n∫ÿpo+±◊wDÜídñLcºJv56‡/∂¥5÷≠–ƒC÷áÑä◊ºæ_l‘ªb¢ÂàIRX≈1b™¬ªË·Èu‰i≥"çäN)‹O¨uCâ`ã?ëê4Xñ˘âƒ&¸;ﬂè˜îa ù∂Ú©»T)R–ó{RWq÷œ5“Ëù;ªSAqD∫íÍŸ 'çû¶üπ"‚X!AG‚·Ã	Åg![c|Z⁄&˘ë)Â∏7ùFUiúVÑ>ƒ˜ç<”ÊjæQ¥èzûáPg∂0∞£ãAYY∂O°ñìÏ~ºh‘Ωp)ÇÇÇ9^KÈA„ÿ >üê”P™`.G<••‹|u>
-?·ß¯ÇÉa$sÿß\œÓ¥°åOe,kåøHîU'$UÃ¬ëÏıÔ„Å∆£Tß ëtœiºÎÁM1\I/=ñî÷($—zGÒ…rrÕr™^⁄•PîNñò™%P*o!ñtÍ($≤æ±®⁄	VìQm√ôµŸÁÅ$97í$(*tCÿ≈yR≠S?IÆ•'§ZLË˜,ﬁH“Í.–z#<€ó¥9r≤¸ ñ ëñ'w>5é†"ˇ+å ÖÌµM‘¢'ë[ëèMJ∞¸⁄ΩÿÙ·⁄yÆò§ÁÜ#Åõä¯.5u@∫V/˝kAÂÕêlΩ≠jeÓ–≥Æ˙B˘p◊ö⁄π&∆ß≠È¯≈≈ÛFœ¶dLœâòÈÓ.ÿÑKäªâª+˙éj3rW°˛(6wÀd1),^nÙIªA[ü˙’π5+EÉv,Täë*˛bH˚Ä<) ◊ÑK@}r•_£⁄úò0á–|eBà	5Å‘◊Y/‹á≥◊ÆIØ2˚`úÉ‡Â¥ƒŒ∞ :±iKG∏ùû•+∏™˜Ãæ¨ÂKí:áÅ‹€§·vÕ9t;Y√∆πÿ∂ò§Ü0>∫ÿ∫’VeòóΩÍájÇÜ⁄˜Ö,‘ y4P†JK’Ç¢~Òu∆M≠ªƒ~∞s.“ﬁ)* 7ÖC'üäñF=lS{Ω‹∏˜àZ∑â≈=¶"ÊÓÍ,XÇ+ Ã≥:{Vçﬁ“^sq~kÌYFÇ‡“_ûÂHﬂ∏±*ÓI™~DqA=\òµoåó~ÕrﬂIı$©“ú4JÕÖú9}
-AÆuŸ–Áª¡¢ÿw“{Iî™cÜ_o©uS§è9˚¸ç›) jLPMx∑ÀHÊ,+Ó+ªWÈP
-3”É„æÃ(T…:<∂πª∏÷~ª˙Dïâ·-&067Üf@
-åqCÙË‚¢±è¨5Õß”ÉlÆ¨~(/ß§„ _vnßà|÷v·¨'äºO˘‘÷'WiË•ú≥k∂
-+4õ»£8kñ˚2!ÎWÇ5´íhc	ëKÄÎv› ÓÆ{}ä/kësoˆnO„R*ßÍ´ñ‚¿˛e¥|%k‹∑æB%/∆‘?Ÿ]€€ƒø.Oˇ~CU
-endstream 
-endobj
-186 0 obj
-<</Type/Page/Rotate 0/MediaBox[0 0 595.27563 841.88983]/TrimBox[0 0 595.27563 841.88983]/CropBox[0 0 595.27563 841.88983]/Annots[13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R 137 0 R 138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R 146 0 R 147 0 R 148 0 R 149 0 R 150 0 R 151 0 R 152 0 R 153 0 R 154 0 R 155 0 R 156 0 R 157 0 R 158 0 R 159 0 R 160 0 R 161 0 R 162 0 R 163 0 R 164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 170 0 R 171 0 R 172 0 R 173 0 R 174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 180 0 R 181 0 R 182 0 R 183 0 R]/Parent 5 0 R/Resources 184 0 R/Contents 185 0 R>>
-endobj
-187 0 obj
-<</Type/Annot/Subtype/Link/Rect[325.0134 813.05255 344.57343 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-188 0 obj
-<</Type/Annot/Subtype/Link/Rect[220.98132 768.6526 250.32533 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-189 0 obj
-<</Type/Annot/Subtype/Link/Rect[315.6774 813.05255 325.0134 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-190 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 736.2525 56.917194 740.5728]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-191 0 obj
-<</Type/Annot/Subtype/Link/Rect[194.73329 813.05255 236.52533 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-192 0 obj
-<</Type/Annot/Subtype/Link/Rect[108.925224 813.05255 149.82126 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-193 0 obj
-<</Type/Annot/Subtype/Link/Rect[289.44537 813.05255 315.6774 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-194 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 724.25244 52.02919 728.5728]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20045)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-195 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 724.25244 56.917194 728.5728]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20045)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-196 0 obj
-<</Type/Annot/Subtype/Link/Rect[149.82126 813.05255 163.16528 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-197 0 obj
-<</Type/Annot/Subtype/Link/Rect[105.381226 691.8524 136.94925 696.1727]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-198 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 780.6526 75.1492 784.9729]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-199 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 736.2525 52.02919 740.5728]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-200 0 obj
-<</Type/Annot/Subtype/Link/Rect[84.93321 691.8524 105.381226 696.1727]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-201 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 813.05255 52.02919 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-202 0 obj
-<</Type/Annot/Subtype/Link/Rect[236.52533 813.05255 263.20535 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-203 0 obj
-<</Type/Annot/Subtype/Link/Rect[194.30128 768.6526 220.9813 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-204 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 691.8524 52.02919 696.1727]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-205 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 780.6526 56.917194 784.9729]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-206 0 obj
-<</Type/Annot/Subtype/Link/Rect[280.99738 813.05255 289.44537 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-207 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 813.05255 108.92522 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-208 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 768.6526 56.917194 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-209 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 768.6526 69.3652 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-210 0 obj
-<</Type/Annot/Subtype/Link/Rect[115.60523 768.6526 135.16524 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-211 0 obj
-<</Type/Annot/Subtype/Link/Rect[69.3652 768.6526 115.60523 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-212 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 736.2525 73.3732 740.5728]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-213 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 691.8524 56.917194 696.1727]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-214 0 obj
-<</Type/Annot/Subtype/Link/Rect[52.02919 813.05255 56.917194 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-215 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 768.6526 52.02919 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-216 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 691.8524 84.93321 696.1727]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20057)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-217 0 obj
-<</Type/Annot/Subtype/Link/Rect[263.20535 813.05255 280.99738 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-218 0 obj
-<</Type/Annot/Subtype/Link/Rect[135.16524 768.6526 172.06927 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-219 0 obj
-<</Type/Annot/Subtype/Link/Rect[27.56517 780.6526 52.02919 784.9729]/A<</S/URI/URI()>>/Border[0 0 0]/C[]/H/I>>
-endobj
-220 0 obj
-<</Type/Annot/Subtype/Link/Rect[172.06927 768.6526 194.30128 772.9729]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17182)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-221 0 obj
-<</Type/Annot/Subtype/Link/Rect[163.16528 813.05255 194.73329 817.37286]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18025)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-222 0 obj
-<</Type/Annot/Subtype/Link/Rect[56.917187 724.25244 59.14119 728.5728]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20045)>>/Border[0 0 0]/C[]/H/I>>
-endobj
-223 0 obj
-<</Properties<</MC0 11 0 R>>/Annots<</Type/Annot/Subtype/Link/Rect[27.56517 813.05255 52.02919 817.37286]>>/Font 12 0 R>>
-endobj
-224 0 obj
-<</Filter/FlateDecode/Length 546>>stream
-x⁄ΩU€j€@}◊WË*ÔŒuB!∫—áÜR–î&Öñ@)î|f◊—J∂dø$¡òù€Œúsv|¯÷’ááŒ’mﬂUˇ™v™†	`TO_+ÄFTΩÑ:xls==Vá/Oœ/Oˇˇ¸Qáz˙U›AÓs=˝©Ó–c@áÄ<[;
-ˆÈ5íí^¢≥OQF≥∞íY”7ŒdTZ≈;k -1b66´ZÕ^Z´KNÚt‚≠6K©d$ã/Á”nÿº v[Ò€Îÿ£†î-√î†√ÜAUc8≈N#6ﬁ√tü⁄øœèµw@Vªê•-0:ƒU·mN4∏FH˜9âˆÔ0np“í‰YÈ-ˆ~ˆ#®úÿ∞ièhE≥óUgÍØQ≠⁄Ç¢íFC~É´rJÉ	…s~L+D=u´ºTÀî¡=	VõÏN¥éG≠N¥¸`˝í’£:≥8Î- ¢∏w¨ñèöÊM⁄Wò≈}"$\KÑÊóíPaü¡f¿≥Ë£∫‚OP∞.ê‚1  1≥8iı||¢p}∂∏∏tkq…ö…∫B‘ı@rõ™iLîvXµ¥hhS‘`DÍÖ§ë—Ù1ü≤h”‰ZÑ˘lŸ&-Zñ›3“H√Íqú,:.†>Y?DûÀÙW»ËDiku√pÖ"5Ë”Â∑Çw€óËõ¿ÁuﬂküQ7atæÌ˚2ı«ﬂåÖ\ûÜÅ<˜ıΩ∫WÃ¥òù
-endstream 
-endobj
-225 0 obj
-<</Type/Page/Rotate 0/MediaBox[0 0 595.27563 841.88983]/TrimBox[0 0 595.27563 841.88983]/CropBox[0 0 595.27563 841.88983]/Annots[187 0 R 188 0 R 189 0 R 190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R 200 0 R 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 211 0 R 212 0 R 213 0 R 214 0 R 215 0 R 216 0 R 217 0 R 218 0 R 219 0 R 220 0 R 221 0 R 222 0 R]/Parent 5 0 R/Resources 223 0 R/Contents 224 0 R>>
-endobj
-226 0 obj
-<</Type/Catalog/PageLayout/OneColumn/PageMode/UseNone/Outlines 6 0 R/Pages 5 0 R/OCProperties<</OCGs[10 0 R 11 0 R]/D<</Order[10 0 R 11 0 R]/RBGroups[]/ON[10 0 R 11 0 R]>>>>>>
-endobj
-227 0 obj
-<</Root 226 0 R/Info 7 0 R/ID[(HEIGIDGCBAAHFGBHAEFHCBHGAJHCJDHF)(HAGDGDAHDEGHBCFAHHDBHFHBEGCFIFGC)]/Type/XRef/Size 228/W[1 4 2]/Index[1 227]/Length 1589>>stream
-   	     a     æ        Ç    ø    È    ¨    	    '    l    ±        ˝    ◊    ±    à    a    	N    
-)        ‹    ∫    ï    n    H    &            …    ¢    Ä    Y    2        ‰    Ω    ñ    o    I    !    ¸    Ÿ    ∏    ì     i    !Y    "1    #    #„    $º    %ö    &u    'T    (/    )    )Ë    *¬    +ù    ,å    -{    .g    /U    0C    1"    2    2È    3√    4û    5{    6W    74    8    8Ô    9»    :°    ;ç    <~    =W    >6    ?    ?Ë    @¡    AÆ    Bà    Cw    DP    E*    F    F„    Gæ    H¨    IÖ    J_    K<    L*    M    M›    N∂    Oè    P~    QZ    R8    S    SÓ    Tﬁ    U∫    V™    WÖ    Xw    YW    Z3    [    [Ë    \√    ]ü    ^è    _i    `I    a$    b     bﬂ    cœ    d¨    eÖ    f]    g:    h    i    i‡    j∫    kî    lÇ    mm    nD    o#    oˇ    pÓ    q     r£    sÇ    t\    u6    v    vÍ    wŸ    xµ    yé    zm    {G    |'    |˝    }Ÿ    ~≥    è    Äo    Å_    Ç;    É    ÉÒ    ÑÃ    Ö∂    Üñ    áá    àb    â=    ä    äˆ    ã“    åØ    çè    é}    èX    ê7    ë    ë    í–    ìæ    îÆ    ïç    ñ|    óW    òF    ô4    ôø    †Ê    ¶¨    ßd    ®    ®“    ©S    ™    ™∆    ´~    ¨4    ¨Î    ≠§    Æ\    Æ‹    Ø\    ∞    ∞     ±É    ≤9    ≤Ó    ≥o    ¥(    ¥·    µó    ∂L    ∑    ∑∏    ∏8    ∏Ó    π¶    ∫[    ª    ª     ºÅ    Ω    Ω∏    æq    ø(    ø≥    ¬    ƒ     ƒ¡  
-endstream 
-endobj
-
+<</Trapped/False/CreationDate(D:19700101000000+00'00')/ModDate(D:19700101000000+00'00')/GTS_PDFXVersion()/Title<FEFF006D00610072006B0064006F0077006E0032007000640066>/Author()/Creator<FEFF006D00610072006B0064006F0077006E0032007000640066>/Producer()/Subject()/Identifier()/Keywords()>>
+endobj
+xref
+0 39
+0000000000 65535 f 
+0000000015 00000 n 
+0000000072 00000 n 
+0000000160 00000 n 
+0000000253 00000 n 
+0000000339 00000 n 
+0000000386 00000 n 
+0000000406 00000 n 
+0000000426 00000 n 
+0000004705 00000 n 
+0000005844 00000 n 
+0000005906 00000 n 
+0000020521 00000 n 
+0000020583 00000 n 
+0000024332 00000 n 
+0000024401 00000 n 
+0000024535 00000 n 
+0000024681 00000 n 
+0000024827 00000 n 
+0000024973 00000 n 
+0000025119 00000 n 
+0000025289 00000 n 
+0000025459 00000 n 
+0000025633 00000 n 
+0000025775 00000 n 
+0000025969 00000 n 
+0000026143 00000 n 
+0000026313 00000 n 
+0000026591 00000 n 
+0000026837 00000 n 
+0000027067 00000 n 
+0000027297 00000 n 
+0000027443 00000 n 
+0000027681 00000 n 
+0000027839 00000 n 
+0000027985 00000 n 
+0000028131 00000 n 
+0000028265 00000 n 
+0000028370 00000 n 
+trailer
+<</Root 37 0 R/Info 38 0 R/ID[(BBBGJGEGFJDDBBDBIDDEHEBABCIACEIJ)(BBEAIAJCIIJEBBFBGFBFGJJFBBCDFHAG)]/Size 39>>
 startxref
-50369
+28670
 %%EOF
