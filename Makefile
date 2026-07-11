@@ -1,4 +1,4 @@
-IMAGE="ghcr.io/getzola/zola:v0.21.0"
+IMAGE="ghcr.io/getzola/zola:v0.22.1"
 
 CONTAINER_NAME="blog.williamdes.eu"
 PROJECT_NAME="blog.williamdes.eu"
@@ -13,7 +13,7 @@ build:
 	docker run --name ${CONTAINER_NAME} --rm  -v ${PWD}:/app --workdir /app/${PROJECT_NAME} ${IMAGE} build
 
 serve:
-	docker run --name ${CONTAINER_NAME} --rm  -v ${PWD}:/app -p 8111:8111 --workdir /app/${PROJECT_NAME} ${IMAGE} serve --interface 0.0.0.0 --port 8111 --base-url localhost
+	docker run --name ${CONTAINER_NAME} --rm  -v ${PWD}:/app -p 127.0.0.1:8111:8111 --workdir /app/${PROJECT_NAME} ${IMAGE} serve --interface 0.0.0.0 --port 8111 --base-url localhost
 
 fix-perms:
 	find ${PWD} -type d -exec chmod 0777 {} \;
