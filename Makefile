@@ -1,4 +1,4 @@
-IMAGE="ghcr.io/getzola/zola:v0.22.1"
+IMAGE="ghcr.io/getzola/zola:v0.23.3"
 
 CONTAINER_NAME="blog.williamdes.eu"
 PROJECT_NAME="blog.williamdes.eu"
