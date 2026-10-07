@@ -1,7 +1,7 @@
 +++
 title = "My open-source security findings from 2018 to 2023"
 date = 2026-05-22T12:43:28+02:00
-updated = 2026-05-22T12:43:28+02:00
+updated = 2026-06-24T15:14:55+02:00
 category = "OpenSource - security"
 
 [extra]
@@ -9,7 +9,7 @@ author = "William Desportes"
 author_url = "https://williamdes.eu"
 co_author = "Claude Opus 4.7 (1M context)"
 co_author_url = "https://www.anthropic.com/claude"
-headline = "A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php."
+headline = "A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php."
 keywords = ["security", "CVE", "phpMyAdmin"]
 category = "Security discovery"
 images = []
@@ -29,7 +29,7 @@ Guidelines for editing this post:
 - Always bump the `updated` field in the frontmatter when editing this post; use the current `Europe/Paris` offset (e.g. `2026-05-22T12:40:50+02:00`).
 -->
 
-A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.
+A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.
 
 <!-- more -->
 
@@ -49,6 +49,12 @@ The same surface area came back, this time as something more serious. Both bugs 
 - **CVE-2019-18622** / **[PMASA-2019-5](https://www.phpmyadmin.net/security/PMASA-2019-5/)** — same class of bug but covering a different version range (including the 4.7.x line and 4.9.x prior to 4.9.2); fixed in phpMyAdmin 4.9.2.
 
 To be honest, my method was unscientific: I tested with every weird character I could think of in database names until something broke. It kept breaking.
+
+## 2020 — SQL injection in table creation (the one I fixed, not found)
+
+This one is different from the rest of the list: I did not discover it, I fixed it. It was reported by `MatisAct` on the `03/02/2020` ([phpmyadmin/phpmyadmin#15898](https://github.com/phpmyadmin/phpmyadmin/issues/15898)) — an SQL injection in `getTableCreationQuery` (`CreateAddField.php`), reachable through the `tbl_storage_engine` and `tbl_collation` parameters of `tbl_create.php`. As the phpMyAdmin team member assigned to the issue, I handled the fix, which is why [PT Security's advisory database](https://dbugs.ptsecurity.com/researchers/Williamdes) credits me on it.
+
+- **CVE-2020-22452** (PT-2023-11619, CVSS 9.8) — fixed in phpMyAdmin 5.2.0 via [phpmyadmin/phpmyadmin#16004](https://github.com/phpmyadmin/phpmyadmin/pull/16004). The CVE was only published on the `26/01/2023`, well after the fix shipped; there is no PMASA for it.
 
 ## 2022 — Two-factor authentication bypass
 
@@ -70,4 +76,4 @@ Depending on the version of the back-end, the attack could either overwrite exis
 
 ## Closing notes
 
-Five CVEs over five years is not a lot in the grand scheme of bug-hunting, but they are all real bugs in widely-deployed PHP code, fixed by responsive maintainers. To everyone who triaged my reports, replied to my emails, and shipped the fixes: thank you. That responsiveness is what makes coordinated disclosure worth doing.
+Six CVEs over six years — five I found and one I fixed — is not a lot in the grand scheme of bug-hunting, but they are all real bugs in widely-deployed PHP code, fixed by responsive maintainers. To everyone who triaged my reports, replied to my emails, and shipped the fixes: thank you. That responsiveness is what makes coordinated disclosure worth doing.
