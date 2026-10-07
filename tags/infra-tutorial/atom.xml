@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Williamdes&#x27;s blog - infra-tutorial</title>
+    <title>Williamdes&#39;s blog - infra-tutorial</title>
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/infra-tutorial/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
@@ -12,36 +12,28 @@
         <updated>2025-07-17T17:11:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/forward-ssh-connections-to-gitlab-docker/</id>
         
-        <summary type="html">&lt;p&gt;Forward SSH connections to GitLab running with Docker&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Forward SSH connections to GitLab running with Docker&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage</title>
+        <title>Secure defaults for LDAP password (CRYPT/PBKDF2/SHA2/ARGON2) storage</title>
         <published>2025-02-24T15:33:00+00:01</published>
         <updated>2025-08-10T00:10:00+00:01</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/secure-ldap-password-crypt-pbkdf2-sha2-argon2-defaults/</id>
         
-        <summary type="html">&lt;p&gt;Secure defaults for LDAP password (CRYPT&#x2F;PBKDF2&#x2F;SHA2&#x2F;ARGON2) storage&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Secure defaults for LDAP password (CRYPT/PBKDF2/SHA2/ARGON2) storage&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -50,36 +42,28 @@
         <updated>2025-01-26T14:08:00+00:01</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/</id>
         
-        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts</title>
+        <title>How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts</title>
         <published>2025-01-05T19:41:00+00:01</published>
         <updated>2025-01-05T20:22:00+00:01</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts/</id>
         
-        <summary type="html">&lt;p&gt;How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -88,17 +72,13 @@
         <updated>2024-10-21T00:45:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-a-distributed-etcd-cluster/</id>
         
-        <summary type="html">&lt;p&gt;Install a distributed &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;etcd.io&quot;&gt;etcd&lt;&#x2F;a&gt; cluster on Debian 12.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Install a distributed &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://etcd.io&quot;&gt;etcd&lt;/a&gt; cluster on Debian 12.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -107,17 +87,13 @@
         <updated>2024-05-07T16:59:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/monitor-ups-with-zabbix-agent-using-apcupsd/</id>
         
-        <summary type="html">&lt;p&gt;Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -126,36 +102,28 @@
         <updated>2024-04-13T11:40:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/opnsense-add-firewall-rule-from-console/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/opnsense-add-firewall-rule-from-console/</id>
         
-        <summary type="html">&lt;p&gt;Add a rule manually to OPNsense firewall&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Add a rule manually to OPNsense firewall&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
-        <title>Install racadm for iDRAC on Proxmox 7&#x2F;8</title>
+        <title>Install racadm for iDRAC on Proxmox 7/8</title>
         <published>2023-05-25T14:10:00+00:02</published>
         <updated>2023-07-06T16:07:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/</id>
         
-        <summary type="html">&lt;p&gt;Install iDRAC racadm tool on Proxmox 7&#x2F;8&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Install iDRAC racadm tool on Proxmox 7/8&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -164,17 +132,13 @@
         <updated>2023-01-01T14:40:00+00:04</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
         
-        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Protect pfSense from bad actors/IPs using &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://www.crowdsec.net/&quot;&gt;CrowdSec&lt;/a&gt;.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -183,17 +147,13 @@
         <updated>2025-01-26T00:51:00+00:02</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/add-a-crypt-data-volume-to-alpine-3-17/</id>
         
-        <summary type="html">&lt;p&gt;Add a crypt data volume to Alpine 3.17&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Add a crypt data volume to Alpine 3.17&lt;/p&gt;</summary>
         
     </entry>
 </feed>

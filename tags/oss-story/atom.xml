@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Williamdes&#x27;s blog - OSS-story</title>
+    <title>Williamdes&#39;s blog - OSS-story</title>
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/oss-story/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-05-22T12:43:28+02:00</updated>
+    <updated>2026-06-24T15:14:55+02:00</updated>
     <id>https://blog.williamdes.eu/tags/oss-story/atom.xml</id>
     <entry xml:lang="en">
         <title>My open-source security findings from 2018 to 2023</title>
         <published>2026-05-22T12:43:28+02:00</published>
-        <updated>2026-05-22T12:43:28+02:00</updated>
+        <updated>2026-06-24T15:14:55+02:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings/"/>
@@ -24,15 +20,15 @@
         
         <summary type="html">&lt;!--
 Guidelines for editing this post:
-- When a CVE has a vendor advisory (PMASA for phpMyAdmin, GHSA for GitHub-hosted), always pair them on the same line: `**CVE-XXXX-YYYYY** &#x2F; **[PMASA-YYYY-N](url)** — fixed in phpMyAdmin X.Y.Z.`
+- When a CVE has a vendor advisory (PMASA for phpMyAdmin, GHSA for GitHub-hosted), always pair them on the same line: `**CVE-XXXX-YYYYY** / **[PMASA-YYYY-N](url)** — fixed in phpMyAdmin X.Y.Z.`
 - For phpMyAdmin CVEs, always use the full form &quot;fixed in phpMyAdmin X.Y.Z&quot; (with the project name), not just &quot;fixed in X.Y.Z&quot;.
 - Keep entries chronological (oldest first); one H2 per year (or year-grouped theme).
-- Link to other posts on this blog using Zola&#x27;s `@&#x2F;path&#x2F;to&#x2F;post.md` syntax; full URLs for external sources.
-- Dates in DD&#x2F;MM&#x2F;YYYY format.
-- Update the title&#x27;s year range and the headline when adding new disclosures; the URL slug stays version-free.
-- Always bump the `updated` field in the frontmatter when editing this post; use the current `Europe&#x2F;Paris` offset (e.g. `2026-05-22T12:40:50+02:00`).
+- Link to other posts on this blog using Zola&#39;s `@/path/to/post.md` syntax; full URLs for external sources.
+- Dates in DD/MM/YYYY format.
+- Update the title&#39;s year range and the headline when adding new disclosures; the URL slug stays version-free.
+- Always bump the `updated` field in the frontmatter when editing this post; use the current `Europe/Paris` offset (e.g. `2026-05-22T12:40:50+02:00`).
 --&gt;
-&lt;p&gt;A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.&lt;&#x2F;p&gt;</summary>
+&lt;p&gt;A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -41,17 +37,13 @@ Guidelines for editing this post:
         <updated>2023-10-15T12:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
         
-        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://www.lastpass.com/&quot;&gt;LastPass&lt;/a&gt; to &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://bitwarden.com/&quot;&gt;Bitwarden&lt;/a&gt; after 7 years using LastPass.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -60,17 +52,13 @@ Guidelines for editing this post:
         <updated>2021-02-24T17:10:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-my-uptime-service-to-upptime/</id>
         
-        <summary type="html">&lt;p&gt;Here is the story of why I did move from my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wdes&#x2F;stats&quot;&gt;custom made&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;heroku.com&quot;&gt;Heroku&lt;&#x2F;a&gt;&#x2F;Node&#x2F;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.typescriptlang.org&#x2F;&quot;&gt;TypeScript&lt;&#x2F;a&gt; stats service to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;upptime.js.org&#x2F;&quot;&gt;upptime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Here is the story of why I did move from my &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://github.com/wdes/stats&quot;&gt;custom made&lt;/a&gt; &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://heroku.com&quot;&gt;Heroku&lt;/a&gt;/Node/&lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; stats service to &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://upptime.js.org/&quot;&gt;upptime&lt;/a&gt;.&lt;/p&gt;</summary>
         
     </entry>
 </feed>

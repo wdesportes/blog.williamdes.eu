@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts</title>
+        <title>Williamdes&#39;s blog - How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,7 +12,7 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts">
+        <meta name="description" content="How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -22,9 +22,9 @@
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Williamdes's blog">
         
-        <meta property="og:title" content="How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts">
+        <meta property="og:title" content="How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts">
         <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts">
-        <meta property="og:description" content="How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts">
+        <meta property="og:description" content="How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts">
         
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2025-01-05T19:41:00+00:01">
@@ -43,14 +43,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -93,6 +95,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -100,8 +105,8 @@
     
     
     "url": "https://blog.williamdes.eu/Infrastructure/tutorials/add-a-sender-header-to-mailman-3-posts/",
-    "headline": "How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts",
-    "alternativeHeadline": "How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts",
+    "headline": "How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts",
+    "alternativeHeadline": "How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts",
     "dateCreated": "2025-01-05T19:41:00+0001",
     "datePublished": "2025-01-05T19:41:00+0001",
     "dateModified": "2025-01-05T20:22:00+0001",
@@ -143,7 +148,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -155,7 +160,7 @@
             
 <article class="post-single">
     <header class="post-header">
-        <h1 class="post-title">How to write a plugin&#x2F;handler&#x2F;pipeline for mailman3 to add&#x2F;edit&#x2F;remove headers of posts</h1>
+        <h1 class="post-title">How to write a plugin/handler/pipeline for mailman3 to add/edit/remove headers of posts</h1>
         
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
@@ -176,30 +181,26 @@
 <p>Tested on Debian 12 with mailman3: <code>3.3.8-2~deb12u2</code>.</p>
 <h2 id="configuring-the-plugin-in-mailman">Configuring the plugin in mailman</h2>
 <p>In <code>/etc/mailman3/mailman.cfg</code> you will need to add</p>
-<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#b48ead;">[plugin.mailman_sender_plugin]
-</span><span style="color:#65737e;"># The file will be at: /usr/lib/python3/dist-packages/mailman_sender_plugin/plugin.py
-</span><span style="color:#65737e;"># And it needs a class named `SenderHeaderPlugin` that implements `IPlugin`.
-</span><span style="color:#bf616a;">class</span><span>: mailman_sender_plugin.plugin.SenderHeaderPlugin
-</span><span style="color:#bf616a;">enabled</span><span>: </span><span style="color:#d08770;">yes
-</span><span style="color:#65737e;"># If you need a config file for the plugin, see: https://github.com/TIM-JYU/mailman-rest-events
-</span><span style="color:#65737e;"># configuration: /etc/mailman3/mailman-sender-plugin.cfg
-</span></code></pre>
-<h2 id="creating-the-files-and-folders">Creating the files and folders</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="ini"><span class="giallo-l"><span>[plugin.mailman_sender_plugin]</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># The file will be at: /usr/lib/python3/dist-packages/mailman_sender_plugin/plugin.py</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># And it needs a class named `SenderHeaderPlugin` that implements `IPlugin`.</span></span>
+<span class="giallo-l"><span>class: mailman_sender_plugin.plugin.SenderHeaderPlugin</span></span>
+<span class="giallo-l"><span>enabled: yes</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># If you need a config file for the plugin, see: https://github.com/TIM-JYU/mailman-rest-events</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># configuration: /etc/mailman3/mailman-sender-plugin.cfg</span></span></code></pre><h2 id="creating-the-files-and-folders">Creating the files and folders</h2>
 <p>Create a new folder for your package: <code>/usr/lib/python3/dist-packages/mailman_sender_plugin</code>.</p>
 <p>The structure will be:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/usr/lib/python3/dist-packages/mailman_sender_plugin
-</span><span>├── handlers
-</span><span>│   ├── handlers.py
-</span><span>│   └── __init__.py
-</span><span>├── pipelines
-</span><span>│   ├── __init__.py
-</span><span>│   └── pipelines.py
-</span><span>├── __init__.py
-</span><span>└── plugin.py
-</span><span>
-</span><span>3 directories, 6 files
-</span></code></pre>
-<h3 id="init-py-files"><code>__init__.py</code> files</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>/usr/lib/python3/dist-packages/mailman_sender_plugin</span></span>
+<span class="giallo-l"><span>├── handlers</span></span>
+<span class="giallo-l"><span>│   ├── handlers.py</span></span>
+<span class="giallo-l"><span>│   └── __init__.py</span></span>
+<span class="giallo-l"><span>├── pipelines</span></span>
+<span class="giallo-l"><span>│   ├── __init__.py</span></span>
+<span class="giallo-l"><span>│   └── pipelines.py</span></span>
+<span class="giallo-l"><span>├── __init__.py</span></span>
+<span class="giallo-l"><span>└── plugin.py</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>3 directories, 6 files</span></span></code></pre><h3 id="init-py-files"><code>__init__.py</code> files</h3>
 <p>Files to create:</p>
 <ul>
 <li><code>__init__.py</code></li>
@@ -207,151 +208,141 @@
 <li><code>pipelines/__init__.py</code></li>
 </ul>
 <p>Each <code>__init__.py</code> can be empty or have the contents:</p>
-<pre data-lang="py" style="background-color:#2b303b;color:#c0c5ce;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#65737e;"># This file is required to make the directory a Python package.
-</span><span style="color:#65737e;"># It can remain empty.
-</span></code></pre>
-<h3 id="plugin-py"><code>plugin.py</code></h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="python"><span class="giallo-l"><span style="color: #7285B7;"># This file is required to make the directory a Python package.</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># It can remain empty.</span></span></code></pre><h3 id="plugin-py"><code>plugin.py</code></h3>
 <p>The <code>plugin.py</code> file has methods that do nothing:</p>
-<pre data-lang="py" style="background-color:#2b303b;color:#c0c5ce;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#b48ead;">from </span><span>public </span><span style="color:#b48ead;">import </span><span>public
-</span><span style="color:#b48ead;">from </span><span>zope.interface </span><span style="color:#b48ead;">import </span><span>implementer
-</span><span style="color:#b48ead;">from </span><span>mailman.interfaces.plugin </span><span style="color:#b48ead;">import </span><span>IPlugin
-</span><span>
-</span><span>@</span><span style="color:#bf616a;">public
-</span><span>@</span><span style="color:#bf616a;">implementer</span><span>(IPlugin)
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">SenderHeaderPlugin</span><span style="color:#eff1f5;">:
-</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">pre_hook</span><span>(</span><span style="color:#bf616a;">self</span><span>):
-</span><span>        </span><span style="color:#b48ead;">pass
-</span><span>
-</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">post_hook</span><span>(</span><span style="color:#bf616a;">self</span><span>):
-</span><span>        </span><span style="color:#b48ead;">pass
-</span><span>
-</span><span>    @</span><span style="color:#96b5b4;">property
-</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">resource</span><span>(</span><span style="color:#bf616a;">self</span><span>):
-</span><span>        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">None
-</span></code></pre>
-<h3 id="pipelines-pipelines-py"><code>pipelines/pipelines.py</code></h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="python"><span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> public</span><span style="color: #EBBBFF;"> import</span><span> public</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> zope.interface</span><span style="color: #EBBBFF;"> import</span><span> implementer</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> mailman.interfaces.plugin</span><span style="color: #EBBBFF;"> import</span><span> IPlugin</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@public</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@implementer</span><span>(</span><span style="color: #BBDAFF;">IPlugin</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">class</span><span style="color: #FFEEAD;"> SenderHeaderPlugin</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">    def</span><span style="color: #BBDAFF;"> pre_hook</span><span>(</span><span style="color: #FFC58F;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        pass</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">    def</span><span style="color: #BBDAFF;"> post_hook</span><span>(</span><span style="color: #FFC58F;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        pass</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">    @</span><span style="color: #FFEEAD;">property</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">    def</span><span style="color: #BBDAFF;"> resource</span><span>(</span><span style="color: #FFC58F;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        return</span><span style="color: #FFC58F;"> None</span></span></code></pre><h3 id="pipelines-pipelines-py"><code>pipelines/pipelines.py</code></h3>
 <p>The <code>plugin.py</code> file has methods that do nothing:</p>
-<pre data-lang="py" style="background-color:#2b303b;color:#c0c5ce;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#b48ead;">from </span><span>public </span><span style="color:#b48ead;">import </span><span>public
-</span><span style="color:#b48ead;">from </span><span>mailman.interfaces.pipeline </span><span style="color:#b48ead;">import </span><span>IPipeline
-</span><span style="color:#b48ead;">from </span><span>mailman.pipelines.base </span><span style="color:#b48ead;">import </span><span>BasePipeline
-</span><span style="color:#65737e;">#from mailman.pipelines.builtin import PostingPipeline
-</span><span style="color:#b48ead;">from </span><span>zope.interface </span><span style="color:#b48ead;">import </span><span>implementer
-</span><span>
-</span><span style="color:#65737e;"># Pipelines are list of &quot;handlers&quot;
-</span><span style="color:#65737e;"># https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/handlers/docs/handlers.html
-</span><span>
-</span><span style="color:#65737e;"># The Pipelines has to be an implementation of the IPipeline inteface
-</span><span style="color:#65737e;"># https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/interfaces/pipeline.py#L63
-</span><span>
-</span><span style="color:#65737e;"># Here are some example of built-in pipelines that are used by default in Mailman.
-</span><span style="color:#65737e;"># https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/pipelines/builtin.py
-</span><span>
-</span><span>@</span><span style="color:#bf616a;">public
-</span><span>@</span><span style="color:#bf616a;">implementer</span><span>(IPipeline)
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">MailSenderPipeline</span><span style="color:#eff1f5;">(</span><span style="color:#a3be8c;">BasePipeline</span><span style="color:#eff1f5;">):
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># The name of the pipeline should be unique.
-</span><span>    name = &#39;</span><span style="color:#a3be8c;">mail-sender-pipeline</span><span>&#39;
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># Briefly describe the pipeline so it can be shown in web frontends to users when choosing a pipeline.
-</span><span>    description = &#39;</span><span style="color:#a3be8c;">Add Sender header and modify headers pipeline</span><span>&#39;
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># List of handlers, in the correct order, to be used for processing the email.
-</span><span>    </span><span style="color:#65737e;"># See: https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/pipelines/builtin.py
-</span><span>    </span><span style="color:#65737e;"># You can add your handler at the end if the order is correct for your use case
-</span><span>    </span><span style="color:#65737e;"># _default_handlers = PostingPipeline._default_handlers + (&#39;mailman-after-sent-handler&#39;)
-</span><span>    _default_handlers = (
-</span><span>        &#39;</span><span style="color:#a3be8c;">validate-authenticity</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">mime-delete</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">tagger</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">member-recipients</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">avoid-duplicates</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">cleanse</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">cleanse-dkim</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">cook-headers</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">subject-prefix</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">rfc-2369</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">to-archive</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">to-digest</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">to-usenet</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">after-delivery</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">acknowledge</span><span>&#39;,
-</span><span>        </span><span style="color:#65737e;"># All decoration is now done in delivery.
-</span><span>        </span><span style="color:#65737e;"># &#39;decorate&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">dmarc</span><span>&#39;,
-</span><span>        </span><span style="color:#65737e;"># Message decoration in delivery can break an arc signature, so sign
-</span><span>        </span><span style="color:#65737e;"># in delivery after decorating.
-</span><span>        </span><span style="color:#65737e;"># &#39;arc-sign&#39;,
-</span><span>        </span><span style="color:#65737e;"># Add the Sender header
-</span><span>        &#39;</span><span style="color:#a3be8c;">mailman-sender-handler</span><span>&#39;,
-</span><span>        &#39;</span><span style="color:#a3be8c;">mailman-headers-handler</span><span>&#39;,
-</span><span>        </span><span style="color:#65737e;"># Send it
-</span><span>        &#39;</span><span style="color:#a3be8c;">to-outgoing</span><span>&#39;,
-</span><span>    )
-</span></code></pre>
-<h3 id="handlers-handlers-py"><code>handlers/handlers.py</code></h3>
-<pre data-lang="py" style="background-color:#2b303b;color:#c0c5ce;" class="language-py "><code class="language-py" data-lang="py"><span style="color:#b48ead;">from </span><span>public </span><span style="color:#b48ead;">import </span><span>public
-</span><span style="color:#b48ead;">from </span><span>zope.interface </span><span style="color:#b48ead;">import </span><span>implementer
-</span><span style="color:#b48ead;">from </span><span>mailman.interfaces.handler </span><span style="color:#b48ead;">import </span><span>IHandler
-</span><span>
-</span><span style="color:#65737e;"># Use this in the process function: raise DiscardMessage(&#39;Message was discarded because ...&#39;)
-</span><span style="color:#65737e;">#from mailman.interfaces.pipeline import (
-</span><span style="color:#65737e;">#    DiscardMessage,
-</span><span style="color:#65737e;">#    RejectMessage,
-</span><span style="color:#65737e;">#)
-</span><span>
-</span><span style="color:#65737e;">#import logging
-</span><span style="color:#65737e;">#elog = logging.getLogger(&quot;mailman.error&quot;)
-</span><span style="color:#65737e;"># Use this for logging in functions
-</span><span style="color:#65737e;">#elog.error(&#39;My error message&#39;)
-</span><span>
-</span><span>@</span><span style="color:#bf616a;">public
-</span><span>@</span><span style="color:#bf616a;">implementer</span><span>(IHandler)
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">SenderHeaderHandler</span><span style="color:#eff1f5;">:
-</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;A handler to add the Sender header to each email.&quot;&quot;&quot;
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># The name of the handler should be unique.
-</span><span>    name = &#39;</span><span style="color:#a3be8c;">mailman-sender-handler</span><span>&#39;
-</span><span>    description = &#39;</span><span style="color:#a3be8c;">Add the Sender header to emails.</span><span>&#39;
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># Documentation for mlist can be found here: https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/listconf.html
-</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">process</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">mlist</span><span>, </span><span style="color:#bf616a;">msg</span><span>, </span><span style="color:#bf616a;">msgdata</span><span>):
-</span><span>        </span><span style="color:#65737e;">&quot;&quot;&quot;Add the Sender header to the email.&quot;&quot;&quot;
-</span><span>        </span><span style="color:#65737e;"># Do not add already set headers, it would exist twice afterwards
-</span><span>        </span><span style="color:#b48ead;">if </span><span>not &#39;</span><span style="color:#a3be8c;">Sender</span><span>&#39; in msg:
-</span><span>            </span><span style="color:#65737e;"># Add the Sender header using the mailing list post address
-</span><span>            msg[&#39;</span><span style="color:#a3be8c;">Sender</span><span>&#39;] = mlist.posting_address
-</span><span>
-</span><span>@</span><span style="color:#bf616a;">public
-</span><span>@</span><span style="color:#bf616a;">implementer</span><span>(IHandler)
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">MailmanHeaderCleanerHandler</span><span style="color:#eff1f5;">:
-</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;A handler to edit the mailman headers for each email.&quot;&quot;&quot;
-</span><span>
-</span><span>    </span><span style="color:#65737e;"># The name of the handler should be unique.
-</span><span>    name = &#39;</span><span style="color:#a3be8c;">mailman-headers-handler</span><span>&#39;
-</span><span>    description = &#39;</span><span style="color:#a3be8c;">Edit the mailman header for emails.</span><span>&#39;
-</span><span>
-</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">process</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">mlist</span><span>, </span><span style="color:#bf616a;">msg</span><span>, </span><span style="color:#bf616a;">msgdata</span><span>):
-</span><span>        </span><span style="color:#65737e;">&quot;&quot;&quot;Edit the mailman header for emails.&quot;&quot;&quot;
-</span><span>        </span><span style="color:#65737e;"># Remove some headers
-</span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Version</span><span>&#39;]
-</span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Rule-Misses</span><span>&#39;]
-</span><span>        </span><span style="color:#b48ead;">del </span><span>msg[&#39;</span><span style="color:#a3be8c;">X-Mailman-Rule-Hits</span><span>&#39;]
-</span></code></pre>
-<h2 id="finalize-the-setup">Finalize the setup</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="python"><span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> public</span><span style="color: #EBBBFF;"> import</span><span> public</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> mailman.interfaces.pipeline</span><span style="color: #EBBBFF;"> import</span><span> IPipeline</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> mailman.pipelines.base</span><span style="color: #EBBBFF;"> import</span><span> BasePipeline</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#from mailman.pipelines.builtin import PostingPipeline</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> zope.interface</span><span style="color: #EBBBFF;"> import</span><span> implementer</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Pipelines are list of &quot;handlers&quot;</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/handlers/docs/handlers.html</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># The Pipelines has to be an implementation of the IPipeline inteface</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/interfaces/pipeline.py#L63</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Here are some example of built-in pipelines that are used by default in Mailman.</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/pipelines/builtin.py</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@public</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@implementer</span><span>(</span><span style="color: #BBDAFF;">IPipeline</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">class</span><span style="color: #FFEEAD;"> MailSenderPipeline</span><span>(</span><span style="color: #D1F1A9;">BasePipeline</span><span>):</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # The name of the pipeline should be unique.</span></span>
+<span class="giallo-l"><span>    name</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;mail-sender-pipeline&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # Briefly describe the pipeline so it can be shown in web frontends to users when choosing a pipeline.</span></span>
+<span class="giallo-l"><span>    description</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;Add Sender header and modify headers pipeline&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # List of handlers, in the correct order, to be used for processing the email.</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # See: https://gitlab.com/mailman/mailman/-/blob/master/src/mailman/pipelines/builtin.py</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # You can add your handler at the end if the order is correct for your use case</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # _default_handlers = PostingPipeline._default_handlers + (&#39;mailman-after-sent-handler&#39;)</span></span>
+<span class="giallo-l"><span>    _default_handlers</span><span style="color: #99FFFF;"> =</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;validate-authenticity&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;mime-delete&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;tagger&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;member-recipients&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;avoid-duplicates&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;cleanse&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;cleanse-dkim&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;cook-headers&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;subject-prefix&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;rfc-2369&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;to-archive&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;to-digest&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;to-usenet&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;after-delivery&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;acknowledge&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # All decoration is now done in delivery.</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # &#39;decorate&#39;,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;dmarc&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # Message decoration in delivery can break an arc signature, so sign</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # in delivery after decorating.</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # &#39;arc-sign&#39;,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # Add the Sender header</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;mailman-sender-handler&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;mailman-headers-handler&#39;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # Send it</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &#39;to-outgoing&#39;</span><span>,</span></span>
+<span class="giallo-l"><span>    )</span></span></code></pre><h3 id="handlers-handlers-py"><code>handlers/handlers.py</code></h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="python"><span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> public</span><span style="color: #EBBBFF;"> import</span><span> public</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> zope.interface</span><span style="color: #EBBBFF;"> import</span><span> implementer</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">from</span><span> mailman.interfaces.handler</span><span style="color: #EBBBFF;"> import</span><span> IHandler</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Use this in the process function: raise DiscardMessage(&#39;Message was discarded because ...&#39;)</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#from mailman.interfaces.pipeline import (</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#    DiscardMessage,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#    RejectMessage,</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">#import logging</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#elog = logging.getLogger(&quot;mailman.error&quot;)</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Use this for logging in functions</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#elog.error(&#39;My error message&#39;)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@public</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@implementer</span><span>(</span><span style="color: #BBDAFF;">IHandler</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">class</span><span style="color: #FFEEAD;"> SenderHeaderHandler</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">    &quot;&quot;&quot;A handler to add the Sender header to each email.&quot;&quot;&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # The name of the handler should be unique.</span></span>
+<span class="giallo-l"><span>    name</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;mailman-sender-handler&#39;</span></span>
+<span class="giallo-l"><span>    description</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;Add the Sender header to emails.&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # Documentation for mlist can be found here: https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/listconf.html</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">    def</span><span style="color: #BBDAFF;"> process</span><span>(</span><span style="color: #FFC58F;">self</span><span>,</span><span style="color: #FFC58F;"> mlist</span><span>,</span><span style="color: #FFC58F;"> msg</span><span>,</span><span style="color: #FFC58F;"> msgdata</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &quot;&quot;&quot;Add the Sender header to the email.&quot;&quot;&quot;</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # Do not add already set headers, it would exist twice afterwards</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        if</span><span style="color: #99FFFF;"> not</span><span style="color: #D1F1A9;"> &#39;Sender&#39;</span><span style="color: #99FFFF;"> in</span><span> msg:</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">            # Add the Sender header using the mailing list post address</span></span>
+<span class="giallo-l"><span>            msg[</span><span style="color: #D1F1A9;">&#39;Sender&#39;</span><span>]</span><span style="color: #99FFFF;"> =</span><span> mlist.posting_address</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@public</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">@implementer</span><span>(</span><span style="color: #BBDAFF;">IHandler</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">class</span><span style="color: #FFEEAD;"> MailmanHeaderCleanerHandler</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">    &quot;&quot;&quot;A handler to edit the mailman headers for each email.&quot;&quot;&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;">    # The name of the handler should be unique.</span></span>
+<span class="giallo-l"><span>    name</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;mailman-headers-handler&#39;</span></span>
+<span class="giallo-l"><span>    description</span><span style="color: #99FFFF;"> =</span><span style="color: #D1F1A9;"> &#39;Edit the mailman header for emails.&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">    def</span><span style="color: #BBDAFF;"> process</span><span>(</span><span style="color: #FFC58F;">self</span><span>,</span><span style="color: #FFC58F;"> mlist</span><span>,</span><span style="color: #FFC58F;"> msg</span><span>,</span><span style="color: #FFC58F;"> msgdata</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">        &quot;&quot;&quot;Edit the mailman header for emails.&quot;&quot;&quot;</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">        # Remove some headers</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        del</span><span> msg[</span><span style="color: #D1F1A9;">&#39;X-Mailman-Version&#39;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        del</span><span> msg[</span><span style="color: #D1F1A9;">&#39;X-Mailman-Rule-Misses&#39;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">        del</span><span> msg[</span><span style="color: #D1F1A9;">&#39;X-Mailman-Rule-Hits&#39;</span><span>]</span></span></code></pre><h2 id="finalize-the-setup">Finalize the setup</h2>
 <p>You need to restart the mailman3 service: <code>service mailman3 restart</code>.
 Then you can check everything is loaded by running <code>mailman shell</code> or <code>sudo -S -u lists-user mailman shell</code>:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mailman</span><span> shell
-</span><span style="color:#bf616a;">Welcome</span><span> to the GNU Mailman shell
-</span><span>
-</span><span>&gt;&gt;&gt; config.plugins
-</span><span style="color:#bf616a;">{</span><span>&#39;</span><span style="color:#a3be8c;">mailman_sender_plugin</span><span>&#39;</span><span style="color:#bf616a;">: </span><span>&lt;mailman_sender_plugin.plugin.SenderHeaderPlugin object at 0xcafefffffff</span><span style="color:#d08770;">1</span><span>&gt;}
-</span><span>&gt;&gt;&gt; config.handlers
-</span><span style="color:#bf616a;">{</span><span>&#39;</span><span style="color:#a3be8c;">to-usenet</span><span>&#39;</span><span style="color:#bf616a;">:</span><span> ..., &#39;</span><span style="color:#a3be8c;">acknowledge</span><span>&#39;: ..., </span><span style="color:#b48ead;">[</span><span>...</span><span style="color:#b48ead;">]</span><span>, &#39;</span><span style="color:#a3be8c;">cleanse-dkim</span><span>&#39;: ..., &#39;</span><span style="color:#a3be8c;">mailman-sender-handler</span><span>&#39;: &lt;mailman_sender_plugin.handlers.handlers.SenderHeaderHandler object at 0xcafefffffff</span><span style="color:#d08770;">2</span><span>&gt;, &#39;</span><span style="color:#a3be8c;">mailman-headers-handler</span><span>&#39;: &lt;mailman_sender_plugin.handlers.handlers.MailmanHeaderCleanerHandler object at 0xcafefffffff</span><span style="color:#d08770;">3</span><span>&gt;}
-</span><span>&gt;&gt;&gt; config.pipelines
-</span><span style="color:#bf616a;">{</span><span>&#39;</span><span style="color:#a3be8c;">default-owner-pipeline</span><span>&#39;</span><span style="color:#bf616a;">: </span><span>&lt;mailman.pipelines.builtin.OwnerPipeline object at 0xcafefffffff</span><span style="color:#d08770;">4</span><span>&gt;, &#39;</span><span style="color:#a3be8c;">default-posting-pipeline</span><span>&#39;: &lt;mailman.pipelines.builtin.PostingPipeline object at 0xcafefffffff</span><span style="color:#d08770;">5</span><span>&gt;, &#39;</span><span style="color:#a3be8c;">virgin</span><span>&#39;: &lt;mailman.pipelines.virgin.VirginPipeline object at 0xcafefffffff</span><span style="color:#d08770;">6</span><span>&gt;, &#39;</span><span style="color:#a3be8c;">mail-sender-pipeline</span><span>&#39;: &lt;mailman_sender_plugin.pipelines.pipelines.MailSenderPipeline object at 0xcafefffffff</span><span style="color:#d08770;">7</span><span>&gt;}
-</span></code></pre>
-<h2 id="change-the-pipeline-in-the-mailing-list-settings">Change the pipeline in the mailing list settings</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">mailman</span><span style="color: #D1F1A9;"> shell</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Welcome</span><span style="color: #D1F1A9;"> to the GNU Mailman shell</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&gt;&gt;&gt;</span><span style="color: #BBDAFF;"> config.plugins</span></span>
+<span class="giallo-l"><span>{</span><span style="color: #BBDAFF;">&#39;mailman_sender_plugin&#39;:</span><span style="color: #99FFFF;"> &lt;</span><span style="color: #D1F1A9;">mailman_sender_plugin.plugin.SenderHeaderPlugin object at</span><span style="color: #FFC58F;"> 0xcafefffffff</span><span style="color: #99FFFF;">1&gt;</span><span style="color: #D1F1A9;">}</span></span>
+<span class="giallo-l"><span>&gt;&gt;&gt;</span><span style="color: #BBDAFF;"> config.handlers</span></span>
+<span class="giallo-l"><span>{</span><span style="color: #BBDAFF;">&#39;to-usenet&#39;:</span><span style="color: #D1F1A9;"> ..., &#39;acknowledge&#39;: ...,</span><span> [...], </span><span style="color: #D1F1A9;">&#39;cleanse-dkim&#39;</span><span>: ..., </span><span style="color: #D1F1A9;">&#39;mailman-sender-handler&#39;</span><span>: </span><span style="color: #99FFFF;">&lt;</span><span>mailman_sender_plugin.handlers.handlers.SenderHeaderHandler object at 0xcafefffffff</span><span style="color: #99FFFF;">2&gt;</span><span>, </span><span style="color: #D1F1A9;">&#39;mailman-headers-handler&#39;</span><span>: </span><span style="color: #99FFFF;">&lt;</span><span>mailman_sender_plugin.handlers.handlers.MailmanHeaderCleanerHandler object at 0xcafefffffff</span><span style="color: #99FFFF;">3&gt;</span><span>}</span></span>
+<span class="giallo-l"><span>&gt;&gt;&gt;</span><span style="color: #BBDAFF;"> config.pipelines</span></span>
+<span class="giallo-l"><span>{</span><span style="color: #BBDAFF;">&#39;default-owner-pipeline&#39;:</span><span style="color: #99FFFF;"> &lt;</span><span style="color: #D1F1A9;">mailman.pipelines.builtin.OwnerPipeline object at</span><span style="color: #FFC58F;"> 0xcafefffffff</span><span style="color: #99FFFF;">4&gt;</span><span style="color: #D1F1A9;">, &#39;default-posting-pipeline&#39;:</span><span style="color: #99FFFF;"> &lt;</span><span style="color: #D1F1A9;">mailman.pipelines.builtin.PostingPipeline object at</span><span style="color: #FFC58F;"> 0xcafefffffff</span><span style="color: #99FFFF;">5&gt;</span><span style="color: #D1F1A9;">, &#39;virgin&#39;:</span><span style="color: #99FFFF;"> &lt;</span><span style="color: #D1F1A9;">mailman.pipelines.virgin.VirginPipeline object at</span><span style="color: #FFC58F;"> 0xcafefffffff</span><span style="color: #99FFFF;">6&gt;</span><span style="color: #D1F1A9;">, &#39;mail-sender-pipeline&#39;:</span><span style="color: #99FFFF;"> &lt;</span><span style="color: #D1F1A9;">mailman_sender_plugin.pipelines.pipelines.MailSenderPipeline object at</span><span style="color: #FFC58F;"> 0xcafefffffff</span><span style="color: #99FFFF;">7&gt;</span><span style="color: #D1F1A9;">}</span></span></code></pre><h2 id="change-the-pipeline-in-the-mailing-list-settings">Change the pipeline in the mailing list settings</h2>
 <p>Go to: "Settings" "Alter Messages " and change "Pipeline" to "mail-sender-pipeline".
 The save the settings and send a test email to valide that all works fine.</p>
 <p>Note: the HTML of the webpage was altered to only show the setting you need to change.</p>
@@ -362,11 +353,11 @@ The save the settings and send a test email to valide that all works fine.</p>
 This will stop changing the <code>From:</code> field of emails.</p>
 <p>References:</p>
 <ul>
-<li><a rel="noopener" target="_blank" href="http://threebean.org/blog/plugins-for-mailman3/">Archive the contents to an API - threebean.org</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/TIM-JYU/mailman-rest-events">The mailman-rest-events plugin</a></li>
-<li><a rel="noopener" target="_blank" href="https://gitlab.com/mailman/example-mailman-plugin/">The example plugin from mailman - mailman/example-mailman-plugin</a></li>
-<li><a rel="noopener" target="_blank" href="https://lists.mailman3.org/archives/list/mailman-users@mailman3.org/thread/IQUAWUO6KG5KF47SV43IAVWA4T7BALRB/">adding personalized email header/content in mailman 3 - lists.mailman3.org</a></li>
-<li><a rel="noopener" target="_blank" href="https://lists.mailman3.org/archives/list/mailman-users@mailman3.org/thread/EQ3GRZ42HPPJ72GKPUF5IVB5JM3WYUGV/">(Custom) Plugins: Proper file path(s) for adding a handler? - lists.mailman3.org</a></li>
+<li><a rel="noopener external" target="_blank" href="http://threebean.org/blog/plugins-for-mailman3/">Archive the contents to an API - threebean.org</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/TIM-JYU/mailman-rest-events">The mailman-rest-events plugin</a></li>
+<li><a rel="noopener external" target="_blank" href="https://gitlab.com/mailman/example-mailman-plugin/">The example plugin from mailman - mailman/example-mailman-plugin</a></li>
+<li><a rel="noopener external" target="_blank" href="https://lists.mailman3.org/archives/list/mailman-users@mailman3.org/thread/IQUAWUO6KG5KF47SV43IAVWA4T7BALRB/">adding personalized email header/content in mailman 3 - lists.mailman3.org</a></li>
+<li><a rel="noopener external" target="_blank" href="https://lists.mailman3.org/archives/list/mailman-users@mailman3.org/thread/EQ3GRZ42HPPJ72GKPUF5IVB5JM3WYUGV/">(Custom) Plugins: Proper file path(s) for adding a handler? - lists.mailman3.org</a></li>
 </ul>
 </div>
     <footer class="post-footer">
@@ -385,7 +376,7 @@ This will stop changing the <code>From:</code> field of emails.</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

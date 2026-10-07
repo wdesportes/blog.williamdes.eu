@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Monitoring an UPS using Zabbix and Apcupsd</title>
+        <title>Williamdes&#39;s blog - Monitoring an UPS using Zabbix and Apcupsd</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -48,14 +48,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -98,6 +100,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -148,7 +153,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -185,88 +190,80 @@
 <li>And of course you will need a configured <code>apcupsd</code>, Ubuntu has a good tutorial for that.</li>
 </ul>
 <h3 id="check-everyting-is-setup">Check everyting is setup</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> apcupsd</span><span style="color:#bf616a;"> --version
-</span><span style="color:#bf616a;">apcupsd</span><span> 3.14.14 (31 May 2016) </span><span style="color:#bf616a;">debian
-</span><span style="color:#bf616a;">$</span><span> jq</span><span style="color:#bf616a;"> --version
-</span><span style="color:#bf616a;">jq-1.6
-</span><span style="color:#bf616a;">$</span><span> zabbix_agent2</span><span style="color:#bf616a;"> --version
-</span><span style="color:#bf616a;">zabbix_agent2</span><span> (Zabbix) </span><span style="color:#bf616a;">6.4.13
-</span></code></pre>
-<h3 id="config-files">Config files</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> apcupsd</span><span> --version</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">apcupsd</span><span style="color: #FFC58F;"> 3.14.14</span><span> (31</span><span style="color: #D1F1A9;"> May</span><span style="color: #FFC58F;"> 2016</span><span>) debian</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> jq</span><span> --version</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">jq-1.6</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> zabbix_agent2</span><span> --version</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">zabbix_agent2</span><span> (Zabbix) 6.4.13</span></span></code></pre><h3 id="config-files">Config files</h3>
 <p>Create <code>/etc/zabbix/zabbix_agent2.d/userparameter_apcupsd.conf</code></p>
 <p>With:</p>
-<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>UserParameter=apcupsd,apcaccess | jq -s -R -f /etc/zabbix/zabbix_agent</span><span style="color:#d08770;">2</span><span>.d/apcupsd_filter.jq
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="json"><span class="giallo-l"><span>UserParameter=apcupsd,apcaccess | jq -s -R -f /etc/zabbix/zabbix_agent</span><span style="color: #FFC58F;">2</span><span>.d/apcupsd_filter.jq</span></span></code></pre>
 <p>Create <code>/etc/zabbix/zabbix_agent2.d/apcupsd_filter.jq</code></p>
-<pre data-lang="jq" style="background-color:#2b303b;color:#c0c5ce;" class="language-jq "><code class="language-jq" data-lang="jq"><span># See https://linux.die.net/man/8/apcaccess
-</span><span># Newer versions of jq will have `trim` and some of this mess can be cleaned up
-</span><span># See: https://github.com/jqlang/jq/issues/3078#issuecomment-2018999435
-</span><span>[
-</span><span>
-</span><span>    split(&quot;\n&quot;)[] # transform input into array
-</span><span>    | split(&quot;: &quot;) # where first element has key names
-</span><span>    | select(length==2) # check we have a key and a value
-</span><span>    | (
-</span><span>       # If the value contains some string or if the key is NUMXFERS
-</span><span>       if (.[1] | test(&quot;Seconds|Volts|Percent|Minutes|Hz&quot;; &quot;x&quot;)) or (.[0] | test(&quot;NUMXFERS&quot;; &quot;x&quot;))
-</span><span>                      then
-</span><span>                        {(.[0]|split(&quot; &quot;)[0]):.[1]|split(&quot; &quot;)[0]|tonumber}
-</span><span>                      else
-</span><span>                        {(.[0]|split(&quot; &quot;)[0]): .[1]|rtrimstr(&quot; &quot;)|rtrimstr(&quot; &quot;)}
-</span><span>                      end
-</span><span>       )
-</span><span>]
-</span><span>| add
-</span></code></pre>
-<h3 id="check-that-it-works">Check that it works</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span># See https://linux.die.net/man/8/apcaccess</span></span>
+<span class="giallo-l"><span># Newer versions of jq will have `trim` and some of this mess can be cleaned up</span></span>
+<span class="giallo-l"><span># See: https://github.com/jqlang/jq/issues/3078#issuecomment-2018999435</span></span>
+<span class="giallo-l"><span>[</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    split(&quot;\n&quot;)[] # transform input into array</span></span>
+<span class="giallo-l"><span>    | split(&quot;: &quot;) # where first element has key names</span></span>
+<span class="giallo-l"><span>    | select(length==2) # check we have a key and a value</span></span>
+<span class="giallo-l"><span>    | (</span></span>
+<span class="giallo-l"><span>       # If the value contains some string or if the key is NUMXFERS</span></span>
+<span class="giallo-l"><span>       if (.[1] | test(&quot;Seconds|Volts|Percent|Minutes|Hz&quot;; &quot;x&quot;)) or (.[0] | test(&quot;NUMXFERS&quot;; &quot;x&quot;))</span></span>
+<span class="giallo-l"><span>                      then</span></span>
+<span class="giallo-l"><span>                        {(.[0]|split(&quot; &quot;)[0]):.[1]|split(&quot; &quot;)[0]|tonumber}</span></span>
+<span class="giallo-l"><span>                      else</span></span>
+<span class="giallo-l"><span>                        {(.[0]|split(&quot; &quot;)[0]): .[1]|rtrimstr(&quot; &quot;)|rtrimstr(&quot; &quot;)}</span></span>
+<span class="giallo-l"><span>                      end</span></span>
+<span class="giallo-l"><span>       )</span></span>
+<span class="giallo-l"><span>]</span></span>
+<span class="giallo-l"><span>| add</span></span></code></pre><h3 id="check-that-it-works">Check that it works</h3>
 <p>Run:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">apcaccess </span><span>| </span><span style="color:#bf616a;">jq -s -R -f</span><span> /etc/zabbix/zabbix_agent2.d/apcupsd_filter.jq
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">apcaccess</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> jq</span><span> -s -R -f</span><span style="color: #D1F1A9;"> /etc/zabbix/zabbix_agent2.d/apcupsd_filter.jq</span></span></code></pre>
 <p>It outputs:</p>
-<p>See: <a rel="noopener" target="_blank" href="https://linux.die.net/man/8/apcaccess">man apcaccess</a> for the keys descriptions.</p>
-<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
-</span><span>  &quot;</span><span style="color:#a3be8c;">APC</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">001,029,0691</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">DATE</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">2024-04-07 16:38:34 +0200</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">HOSTNAME</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">my-machine</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">VERSION</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">3.14.14 (31 May 2016) debian</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">UPSNAME</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">ET_MYUPS</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">CABLE</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">USB Cable</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">DRIVER</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">USB UPS Driver</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">UPSMODE</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">Stand Alone</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">STARTTIME</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">2024-04-07 14:01:53 +0200</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">MODEL</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">Ellipse PRO</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">STATUS</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">ONLINE</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">LOADPCT</span><span>&quot;: </span><span style="color:#d08770;">10</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">BCHARGE</span><span>&quot;: </span><span style="color:#d08770;">72</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">TIMELEFT</span><span>&quot;: </span><span style="color:#d08770;">34.1</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">MBATTCHG</span><span>&quot;: </span><span style="color:#d08770;">45</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">MINTIMEL</span><span>&quot;: </span><span style="color:#d08770;">30</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">MAXTIME</span><span>&quot;: </span><span style="color:#d08770;">0</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">OUTPUTV</span><span>&quot;: </span><span style="color:#d08770;">233</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">DWAKE</span><span>&quot;: </span><span style="color:#d08770;">-1</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">LOTRANS</span><span>&quot;: </span><span style="color:#d08770;">165</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">HITRANS</span><span>&quot;: </span><span style="color:#d08770;">285</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">ALARMDEL</span><span>&quot;: </span><span style="color:#d08770;">30</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">LINEFREQ</span><span>&quot;: </span><span style="color:#d08770;">50</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">NUMXFERS</span><span>&quot;: </span><span style="color:#d08770;">0</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">TONBATT</span><span>&quot;: </span><span style="color:#d08770;">0</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">CUMONBATT</span><span>&quot;: </span><span style="color:#d08770;">0</span><span>,
-</span><span>  &quot;</span><span style="color:#a3be8c;">XOFFBATT</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">N/A</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">STATFLAG</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">0x05000008</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">SERIALNO</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">PXXXHXXABD</span><span>&quot;,
-</span><span>  &quot;</span><span style="color:#a3be8c;">END</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">2024-04-07 16:39:25 +0200</span><span>&quot;
-</span><span>}
-</span></code></pre>
-<h3 id="zabbix-setup">Zabbix setup</h3>
+<p>See: <a rel="noopener external" target="_blank" href="https://linux.die.net/man/8/apcaccess">man apcaccess</a> for the keys descriptions.</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="json"><span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;APC&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;001,029,0691&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;DATE&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;2024-04-07 16:38:34 +0200&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;HOSTNAME&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;my-machine&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;VERSION&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;3.14.14 (31 May 2016) debian&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;UPSNAME&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;ET_MYUPS&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;CABLE&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;USB Cable&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;DRIVER&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;USB UPS Driver&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;UPSMODE&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;Stand Alone&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;STARTTIME&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;2024-04-07 14:01:53 +0200&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;MODEL&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;Ellipse PRO&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;STATUS&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;ONLINE&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;LOADPCT&quot;</span><span>:</span><span style="color: #FFC58F;"> 10</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;BCHARGE&quot;</span><span>:</span><span style="color: #FFC58F;"> 72</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;TIMELEFT&quot;</span><span>:</span><span style="color: #FFC58F;"> 34.1</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;MBATTCHG&quot;</span><span>:</span><span style="color: #FFC58F;"> 45</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;MINTIMEL&quot;</span><span>:</span><span style="color: #FFC58F;"> 30</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;MAXTIME&quot;</span><span>:</span><span style="color: #FFC58F;"> 0</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;OUTPUTV&quot;</span><span>:</span><span style="color: #FFC58F;"> 233</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;DWAKE&quot;</span><span>:</span><span style="color: #FFC58F;"> -1</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;LOTRANS&quot;</span><span>:</span><span style="color: #FFC58F;"> 165</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;HITRANS&quot;</span><span>:</span><span style="color: #FFC58F;"> 285</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;ALARMDEL&quot;</span><span>:</span><span style="color: #FFC58F;"> 30</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;LINEFREQ&quot;</span><span>:</span><span style="color: #FFC58F;"> 50</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;NUMXFERS&quot;</span><span>:</span><span style="color: #FFC58F;"> 0</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;TONBATT&quot;</span><span>:</span><span style="color: #FFC58F;"> 0</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;CUMONBATT&quot;</span><span>:</span><span style="color: #FFC58F;"> 0</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;XOFFBATT&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;N/A&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;STATFLAG&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;0x05000008&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;SERIALNO&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;PXXXHXXABD&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFEEAD;">  &quot;END&quot;</span><span>:</span><span style="color: #D1F1A9;"> &quot;2024-04-07 16:39:25 +0200&quot;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="zabbix-setup">Zabbix setup</h3>
 <p>Download the template: <a href="../Zabbix-UPS-Apcupsd.yaml">Zabbix-UPS-Apcupsd.yaml</a></p>
 <p>Import the template in "Data Collection" &gt; "Templates".</p>
 <p>Then go to your "Host" and link the template in the "Templates" section.</p>
 <h4 id="latest-data">Latest data</h4>
 <p>Note: some items do not exist on my UPS, they may exist on yours.
-Feel free to add some missing <a rel="noopener" target="_blank" href="https://linux.die.net/man/8/apcaccess">keys</a> and contact me to update the template.</p>
+Feel free to add some missing <a rel="noopener external" target="_blank" href="https://linux.die.net/man/8/apcaccess">keys</a> and contact me to update the template.</p>
 <p><img src="../Zabbix-UPS-Apcupsd-latest-data.jpg" alt="Latest data in Zabbix" title="Latest data in Zabbix" /></p>
 <h3 id="some-notes">Some notes</h3>
-<p>I was originally using <a rel="noopener" target="_blank" href="https://github.com/cavazquez/zabbix_template_apcupsd">cavazquez's Zabbix template</a>.</p>
+<p>I was originally using <a rel="noopener external" target="_blank" href="https://github.com/cavazquez/zabbix_template_apcupsd">cavazquez's Zabbix template</a>.</p>
 </div>
     <footer class="post-footer">
         
@@ -284,7 +281,7 @@ Feel free to add some missing <a rel="noopener" target="_blank" href="https://li
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie</title>
+        <title>Williamdes&#39;s blog - Install OpenFortiGUI client on Debian 12/13 - Bookworm/Trixie</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,7 +12,7 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Install OpenFortiGUI on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie">
+        <meta name="description" content="Install OpenFortiGUI on Debian 12/13 - Bookworm/Trixie">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -22,9 +22,9 @@
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Williamdes's blog">
         
-        <meta property="og:title" content="Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie">
+        <meta property="og:title" content="Install OpenFortiGUI client on Debian 12/13 - Bookworm/Trixie">
         <meta property="og:url" content="https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm">
-        <meta property="og:description" content="Install OpenFortiGUI on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie">
+        <meta property="og:description" content="Install OpenFortiGUI on Debian 12/13 - Bookworm/Trixie">
         
         
         <meta property="og:image" content="https://blog.williamdes.eu/processed_images/OpenFortiGUI_0.9.8_Debian_12_bookworm.729171636400bc37.jpg"/>
@@ -48,14 +48,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -98,6 +100,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -105,8 +110,8 @@
     
     
     "url": "https://blog.williamdes.eu/Debian/tutorials/install-openfortigui-on-debian-12-bookworm/",
-    "headline": "Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie",
-    "alternativeHeadline": "Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie",
+    "headline": "Install OpenFortiGUI client on Debian 12/13 - Bookworm/Trixie",
+    "alternativeHeadline": "Install OpenFortiGUI client on Debian 12/13 - Bookworm/Trixie",
     "dateCreated": "2023-04-05T21:16:00+0002",
     "datePublished": "2023-04-05T21:16:00+0002",
     "dateModified": "2025-05-30T11:45:00+0002",
@@ -148,7 +153,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -160,7 +165,7 @@
             
 <article class="post-single">
     <header class="post-header">
-        <h1 class="post-title">Install OpenFortiGUI client on Debian 12&#x2F;13 - Bookworm&#x2F;Trixie</h1>
+        <h1 class="post-title">Install OpenFortiGUI client on Debian 12/13 - Bookworm/Trixie</h1>
         
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
@@ -175,31 +180,25 @@
             <span class="post-reading-time">1 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>Install <a rel="noopener" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> on Debian 12/13 - Bookworm/Trixie</p>
+    <div class="post-content"><p>Install <a rel="noopener external" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> on Debian 12/13 - Bookworm/Trixie</p>
 <span id="continue-reading"></span>
 <p>This is how to setup OpenFortiGUI on Debian 12/13 - Bookworm/Trixie.</p>
-<p><a rel="noopener" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> uses <a rel="noopener" target="_blank" href="https://github.com/adrienverge/openfortivpn">the openfortivpn project</a>.</p>
-<p>OpenFortiGUI is still not in Debian or Ubuntu, but someone did open a ITP for it: <a rel="noopener" target="_blank" href="https://bugs.debian.org/888518">#888518</a></p>
+<p><a rel="noopener external" target="_blank" href="https://hadler.me/linux/openfortigui/">OpenFortiGUI</a> uses <a rel="noopener external" target="_blank" href="https://github.com/adrienverge/openfortivpn">the openfortivpn project</a>.</p>
+<p>OpenFortiGUI is still not in Debian or Ubuntu, but someone did open a ITP for it: <a rel="noopener external" target="_blank" href="https://bugs.debian.org/888518">#888518</a></p>
 <h2 id="install">Install</h2>
 <h3 id="fetch-the-gpg-key">Fetch the GPG key</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl -fsSL</span><span> https://apt.iteas.at/iteas-keyring.gpg</span><span style="color:#bf616a;"> -o</span><span> ./iteas-keyring.gpg
-</span><span style="color:#bf616a;">gpg --no-default-keyring --keyring</span><span> ./iteas-keyring.gpg</span><span style="color:#bf616a;"> --armor --export</span><span> BA662621DA69F38C443F147C23CAE45582EB0928 | </span><span style="color:#bf616a;">sudo</span><span> gpg</span><span style="color:#bf616a;"> --dearmor -o</span><span> /etc/apt/trusted.gpg.d/iteas-keyring.gpg
-</span><span style="color:#bf616a;">rm</span><span> ./iteas-keyring.gpg
-</span></code></pre>
-<h3 id="add-sources-file">Add sources file</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">curl</span><span> -fsSL</span><span style="color: #D1F1A9;"> https://apt.iteas.at/iteas-keyring.gpg</span><span> -o</span><span style="color: #D1F1A9;"> ./iteas-keyring.gpg</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">gpg</span><span> --no-default-keyring --keyring</span><span style="color: #D1F1A9;"> ./iteas-keyring.gpg</span><span> --armor --export</span><span style="color: #D1F1A9;"> BA662621DA69F38C443F147C23CAE45582EB0928</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> sudo</span><span style="color: #D1F1A9;"> gpg</span><span> --dearmor -o</span><span style="color: #D1F1A9;"> /etc/apt/trusted.gpg.d/iteas-keyring.gpg</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rm</span><span style="color: #D1F1A9;"> ./iteas-keyring.gpg</span></span></code></pre><h3 id="add-sources-file">Add sources file</h3>
 <p>Create a file at <code>/etc/apt/sources.list.d/openfortigui.list</code> and put the following contents:</p>
-<p>Check on <a rel="noopener" target="_blank" href="https://apt.iteas.at/iteas/dists/">https://apt.iteas.at/iteas/dists/</a> if you find your dist.
-I did open an issue to ask for Debian <code>trixie</code> to be added: <a rel="noopener" target="_blank" href="https://github.com/theinvisible/openfortigui/issues/204">theinvisible/openfortigui#189</a>.</p>
-<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>deb [signed-by=/etc/apt/trusted.gpg.d/iteas-keyring.gpg] https://apt.iteas.at/iteas bookworm main
-</span></code></pre>
-<h3 id="install-it">Install it</h3>
-<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>sudo apt update
-</span><span>apt policy openfortigui
-</span><span>sudo apt install openfortigui
-</span><span># Or (for me)
-</span><span>sudo apt install openfortigui -t bookworm
-</span></code></pre>
-<h3 id="for-debian-13-trixie">For Debian 13 "Trixie"</h3>
+<p>Check on <a rel="noopener external" target="_blank" href="https://apt.iteas.at/iteas/dists/">https://apt.iteas.at/iteas/dists/</a> if you find your dist.
+I did open an issue to ask for Debian <code>trixie</code> to be added: <a rel="noopener external" target="_blank" href="https://github.com/theinvisible/openfortigui/issues/204">theinvisible/openfortigui#189</a>.</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>deb [signed-by=/etc/apt/trusted.gpg.d/iteas-keyring.gpg] https://apt.iteas.at/iteas bookworm main</span></span></code></pre><h3 id="install-it">Install it</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt update</span></span>
+<span class="giallo-l"><span>apt policy openfortigui</span></span>
+<span class="giallo-l"><span>sudo apt install openfortigui</span></span>
+<span class="giallo-l"><span># Or (for me)</span></span>
+<span class="giallo-l"><span>sudo apt install openfortigui -t bookworm</span></span></code></pre><h3 id="for-debian-13-trixie">For Debian 13 "Trixie"</h3>
 <p>You will need to edit the PPP options in <code>/etc/ppp/options</code>:</p>
 <p>Uncomment:</p>
 <ul>
@@ -229,7 +228,7 @@ I did open an issue to ask for Debian <code>trixie</code> to be added: <a rel="n
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

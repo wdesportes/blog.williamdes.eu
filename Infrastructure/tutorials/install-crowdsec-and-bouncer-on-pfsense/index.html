@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Installing Crowdsec on pfSense</title>
+        <title>Williamdes&#39;s blog - Installing Crowdsec on pfSense</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,7 +12,7 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Protect pfSense from bad actors&#x2F;IPs using CrowdSec.">
+        <meta name="description" content="Protect pfSense from bad actors/IPs using CrowdSec.">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -24,7 +24,7 @@
         
         <meta property="og:title" content="Installing Crowdsec on pfSense">
         <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense">
-        <meta property="og:description" content="Protect pfSense from bad actors&#x2F;IPs using CrowdSec.">
+        <meta property="og:description" content="Protect pfSense from bad actors/IPs using CrowdSec.">
         
         
         <meta property="og:image" content="https://blog.williamdes.eu/processed_images/crowdsec_logo_large.8da777561d0df799.jpg"/>
@@ -48,14 +48,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -98,6 +100,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -148,7 +153,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -172,95 +177,73 @@
             <span class="post-date">Published: <time datetime="2022-09-26T00:10:00+0002">September 26, 2022 00:10</time></span>
             <span class="post-date"> and updated: <time datetime="2023-01-01T14:40:00+0004">January  1, 2023 14:40</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">4 min read</span>
+            <span class="post-reading-time">3 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>Protect pfSense from bad actors/IPs using <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a>.</p>
+    <div class="post-content"><p>Protect pfSense from bad actors/IPs using <a rel="noopener external" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a>.</p>
 <span id="continue-reading"></span>
-<p>This is how to install <a rel="noopener" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense running freeBSD 12.3.</p>
-<p>To learn more about what is CrowdSec you can look at this <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=2Ec-FYmK4zg">YouTube video from Lawrence Systems</a> or look at the <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=t99cnWYGhdw">video from CrowdSec</a>.</p>
-<p>You can find this blog post on <a rel="noopener" target="_blank" href="https://www.reddit.com/r/PFSENSE/comments/xq6xy6/protect_your_firewall_against_bad_ips_with/">Reddit</a> and discuss about it.</p>
+<p>This is how to install <a rel="noopener external" target="_blank" href="https://www.crowdsec.net/">CrowdSec</a> on pfSense running freeBSD 12.3.</p>
+<p>To learn more about what is CrowdSec you can look at this <a rel="noopener external" target="_blank" href="https://www.youtube.com/watch?v=2Ec-FYmK4zg">YouTube video from Lawrence Systems</a> or look at the <a rel="noopener external" target="_blank" href="https://www.youtube.com/watch?v=t99cnWYGhdw">video from CrowdSec</a>.</p>
+<p>You can find this blog post on <a rel="noopener external" target="_blank" href="https://www.reddit.com/r/PFSENSE/comments/xq6xy6/protect_your_firewall_against_bad_ips_with/">Reddit</a> and discuss about it.</p>
 <h3 id="how-to-install">How to install</h3>
-<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec/#packages">package summary on freshports</a> in a new browser tab.</p>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener external" target="_blank" href="https://www.freshports.org/security/crowdsec/#packages">package summary on freshports</a> in a new browser tab.</p>
 <h4 id="upgrade-your-setup">Upgrade your setup</h4>
 <p>If you already did follow my blog post once and want to upgrade crowdsec,
 then do: <code>pkg del crowdsec</code> and follow the next step below.</p>
 <h4 id="add-pkg">Add pkg</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.3.pkg
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">pkg</span><span style="color: #D1F1A9;"> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-1.4.3.pkg</span></span></code></pre>
 <p>Follow the post install instructions.</p>
 <p>You should adjust <code>/usr/local/etc/crowdsec/acquis.yaml</code> and remove non valid files.</p>
 <h5 id="for-systems-running-var-on-tmpfs">For systems running <code>/var</code> on tmpfs</h5>
-<p>To see what running <code>/var</code> on tmpfs is about: <a rel="noopener" target="_blank" href="https://serverfault.com/a/832036/336084">screenshot</a></p>
+<p>To see what running <code>/var</code> on tmpfs is about: <a rel="noopener external" target="_blank" href="https://serverfault.com/a/832036/336084">screenshot</a></p>
 <p>You will need to change <code>data_dir</code> and <code>db_path</code> in <code>/usr/local/etc/crowdsec/config.yaml</code>.
 Set the folder to <code>/usr/local/crowdsec/data/</code> and create it: <code>mkdir -p /usr/local/crowdsec/data/</code></p>
 <h4 id="start-the-services">Start the services</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec start
-</span></code></pre>
-<h4 id="make-it-start-at-boot">Make it start at boot</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec start</span></span></code></pre><h4 id="make-it-start-at-boot">Make it start at boot</h4>
 <p>Add to <code>/etc/rc.conf.local</code>:</p>
-<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="ini"><span class="giallo-l"><span style="color: #EBBBFF;">crowdsec_enable</span><span>=</span><span style="color: #D1F1A9;">&quot;yes&quot;</span></span></code></pre>
 <p>And create a file <code>/usr/local/etc/rc.d/crowdsec.sh</code> with contents:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec start
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec start</span></span></code></pre>
 <p>Make it executable: <code>chmod +x /usr/local/etc/rc.d/crowdsec.sh</code>.</p>
-<p>Reference: <a rel="noopener" target="_blank" href="https://docs.netgate.com/pfsense/en/latest/development/boot-commands.html#shell-script-option">pfSense documentation on boot scripts</a></p>
+<p>Reference: <a rel="noopener external" target="_blank" href="https://docs.netgate.com/pfsense/en/latest/development/boot-commands.html#shell-script-option">pfSense documentation on boot scripts</a></p>
 <h4 id="look-at-your-logs">Look at your logs</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">tail -f</span><span> /var/log/crowdsec*
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">tail</span><span> -f</span><span style="color: #D1F1A9;"> /var/log/crowdsec</span><span style="color: #FF9DA4;">*</span></span></code></pre>
 <p>(You can logout/login to make cscli work withour the full path needed.)
 Find where the CLI is located:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">find</span><span> /</span><span style="color:#bf616a;"> -name</span><span> cscli
-</span></code></pre>
-<h4 id="enrol-the-instance-using-cscli">Enrol the instance using <code>cscli</code>.</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">/usr/local/bin/cscli</span><span> console enroll xxxxxxxxxxxxxxxxxx
-</span></code></pre>
-<h4 id="see-the-enrolled-instance">See the enrolled instance</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">find</span><span style="color: #D1F1A9;"> /</span><span> -name</span><span style="color: #D1F1A9;"> cscli</span></span></code></pre><h4 id="enrol-the-instance-using-cscli">Enrol the instance using <code>cscli</code>.</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">/usr/local/bin/cscli</span><span style="color: #D1F1A9;"> console enroll xxxxxxxxxxxxxxxxxx</span></span></code></pre><h4 id="see-the-enrolled-instance">See the enrolled instance</h4>
 <p><img src="../crowdsec_dashboard_pfsense_instance.jpg" alt="instance on the dashboard at app.crowdsec.net" title="instance on the dashboard at app.crowdsec.net" /></p>
 <h4 id="add-scenarios">Add scenarios</h4>
 <p>Example:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cscli</span><span> scenarios list
-</span><span style="color:#bf616a;">cscli</span><span> scenarios list</span><span style="color:#bf616a;"> -a
-</span><span style="color:#bf616a;">cscli</span><span> scenarios install crowdsecurity/postfix-spam
-</span><span style="color:#bf616a;">cscli</span><span> scenarios install crowdsecurity/dovecot-spam
-</span></code></pre>
-<h3 id="use-the-blocklist-mirror-service">Use the blocklist mirror service</h3>
-<p>Reference: <a rel="noopener" target="_blank" href="https://docs.crowdsec.net/docs/bouncers/blocklist-mirror/">official install docs</a> and <a rel="noopener" target="_blank" href="https://www.crowdsec.net/blog/integrating-crowdsec-with-firewall-appliances">crowdsec blog</a>.</p>
-<p>Source code: <a rel="noopener" target="_blank" href="https://github.com/crowdsecurity/cs-blocklist-mirror">GitHub</a></p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> scenarios list</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> scenarios list</span><span> -a</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> scenarios install crowdsecurity/postfix-spam</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> scenarios install crowdsecurity/dovecot-spam</span></span></code></pre><h3 id="use-the-blocklist-mirror-service">Use the blocklist mirror service</h3>
+<p>Reference: <a rel="noopener external" target="_blank" href="https://docs.crowdsec.net/docs/bouncers/blocklist-mirror/">official install docs</a> and <a rel="noopener external" target="_blank" href="https://www.crowdsec.net/blog/integrating-crowdsec-with-firewall-appliances">crowdsec blog</a>.</p>
+<p>Source code: <a rel="noopener external" target="_blank" href="https://github.com/crowdsecurity/cs-blocklist-mirror">GitHub</a></p>
 <h4 id="uninstall-the-manual-method-previously-provided-by-my-blog">Uninstall the manual method previously provided by my blog</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_blocklist_mirror stop
-</span><span style="color:#bf616a;">rm</span><span> /usr/local/etc/rc.d/crowdsec_blocklist_mirror
-</span><span style="color:#bf616a;">rm</span><span> /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml
-</span><span style="color:#bf616a;">rm</span><span> /usr/local/bin/crowdsec-blocklist-mirror
-</span><span>
-</span><span style="color:#bf616a;">cscli</span><span> bouncers list
-</span><span style="color:#bf616a;">cscli</span><span> bouncers remove crowdsec-blocklist-mirror-REPLACE_ME
-</span><span>
-</span><span style="color:#65737e;"># Remove the blocklist enable line in /etc/rc.conf.local
-</span><span style="color:#65737e;"># Remove the service line in /usr/local/etc/rc.d/crowdsec.sh
-</span></code></pre>
-<h4 id="install-the-service">Install the service</h4>
-<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec-blocklist-mirror/#packages">package summary on freshports</a> in a new browser tab.</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec_blocklist_mirror stop</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rm</span><span style="color: #D1F1A9;"> /usr/local/etc/rc.d/crowdsec_blocklist_mirror</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rm</span><span style="color: #D1F1A9;"> /usr/local/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rm</span><span style="color: #D1F1A9;"> /usr/local/bin/crowdsec-blocklist-mirror</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> bouncers list</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cscli</span><span style="color: #D1F1A9;"> bouncers remove crowdsec-blocklist-mirror-REPLACE_ME</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Remove the blocklist enable line in /etc/rc.conf.local</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Remove the service line in /usr/local/etc/rc.d/crowdsec.sh</span></span></code></pre><h4 id="install-the-service">Install the service</h4>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener external" target="_blank" href="https://www.freshports.org/security/crowdsec-blocklist-mirror/#packages">package summary on freshports</a> in a new browser tab.</p>
 <h5 id="add-pkg-1">Add pkg</h5>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-blocklist-mirror-0.0.1.pkg
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">pkg</span><span style="color: #D1F1A9;"> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-blocklist-mirror-0.0.1.pkg</span></span></code></pre>
 <p>Follow the post install instructions.</p>
 <h4 id="make-then-start-at-boot">Make then start at boot</h4>
 <p>Add to <code>/etc/rc.conf.local</code>:</p>
-<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_mirror_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="ini"><span class="giallo-l"><span style="color: #EBBBFF;">crowdsec_mirror_enable</span><span>=</span><span style="color: #D1F1A9;">&quot;yes&quot;</span></span></code></pre>
 <p>Add to the file <code>/usr/local/etc/rc.d/crowdsec.sh</code>:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_mirror start
-</span></code></pre>
-<h4 id="start-the-services-1">Start the services</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_mirror start
-</span></code></pre>
-<h4 id="check-that-it-works">Check that it works</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec_mirror start</span></span></code></pre><h4 id="start-the-services-1">Start the services</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec_mirror start</span></span></code></pre><h4 id="check-that-it-works">Check that it works</h4>
 <p>If there is no IPs, run: <code>service crowdsec restart</code> and re-try.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl</span><span> http://127.0.0.1:41412/security/blocklist
-</span></code></pre>
-<h4 id="add-a-firewall-alias">Add a firewall alias</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">curl</span><span style="color: #D1F1A9;"> http://127.0.0.1:41412/security/blocklist</span></span></code></pre><h4 id="add-a-firewall-alias">Add a firewall alias</h4>
 <p>Go to: <code>Firewall</code> &gt; <code>Aliases</code> &gt; <code>URLs</code> and click on <code>+ Add</code>.
 The type is: <code>URL Table (IPs)</code>.</p>
 <p>Do like on the screenshot using the URL we tried earlier and the save.</p>
@@ -274,21 +257,15 @@ Do like on the screenshot and save. Then apply the changes.</p>
 <p>This is an alternative to using the blocklist mirror service.
 I could not figure out how to know that it actually works.</p>
 <h4 id="add-pkg-2">Add pkg</h4>
-<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener" target="_blank" href="https://www.freshports.org/security/crowdsec-firewall-bouncer/#packages">package summary on freshports</a> in a new browser tab.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">pkg</span><span> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_6.pkg
-</span></code></pre>
+<p>You will need to check the freeBSD version on your pfSense home page. Then open the <a rel="noopener external" target="_blank" href="https://www.freshports.org/security/crowdsec-firewall-bouncer/#packages">package summary on freshports</a> in a new browser tab.</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">pkg</span><span style="color: #D1F1A9;"> add https://pkg.freebsd.org/FreeBSD:12:amd64/latest/All/crowdsec-firewall-bouncer-0.0.23.r2_6.pkg</span></span></code></pre>
 <p>Follow the post install instructions.</p>
 <h4 id="make-then-start-at-boot-1">Make then start at boot</h4>
 <p>Add to <code>/etc/rc.conf.local</code>:</p>
-<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#bf616a;">crowdsec_firewall_enable</span><span>=</span><span style="color:#a3be8c;">&quot;yes&quot;
-</span></code></pre>
-<h4 id="start-the-services-2">Start the services</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_firewall start
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="ini"><span class="giallo-l"><span style="color: #EBBBFF;">crowdsec_firewall_enable</span><span>=</span><span style="color: #D1F1A9;">&quot;yes&quot;</span></span></code></pre><h4 id="start-the-services-2">Start the services</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec_firewall start</span></span></code></pre>
 <p>Add to the file <code>/usr/local/etc/rc.d/crowdsec.sh</code>:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">service</span><span> crowdsec_firewall start
-</span></code></pre>
-</div>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">service</span><span style="color: #D1F1A9;"> crowdsec_firewall start</span></span></code></pre></div>
     <footer class="post-footer">
         
         <ul class="post-tags">
@@ -305,7 +282,7 @@ I could not figure out how to know that it actually works.</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

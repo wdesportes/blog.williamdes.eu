@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Migrating from upptime to Zabbix and Vigil</title>
+        <title>Williamdes&#39;s blog - Migrating from upptime to Zabbix and Vigil</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -43,14 +43,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -93,6 +95,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -143,7 +148,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -170,13 +175,13 @@
             <span class="post-reading-time">4 min read</span>
         </div>
     </header>
-    <div class="post-content"><p>I decided to end the <a rel="noopener" target="_blank" href="https://upptime.js.org/">upptime</a> monitoring experiment and switch to <a rel="noopener" target="_blank" href="https://github.com/valeriansaliou/vigil">Vigil</a> and <a rel="noopener" target="_blank" href="https://www.zabbix.com/">Zabbix</a>.</p>
+    <div class="post-content"><p>I decided to end the <a rel="noopener external" target="_blank" href="https://upptime.js.org/">upptime</a> monitoring experiment and switch to <a rel="noopener external" target="_blank" href="https://github.com/valeriansaliou/vigil">Vigil</a> and <a rel="noopener external" target="_blank" href="https://www.zabbix.com/">Zabbix</a>.</p>
 <span id="continue-reading"></span><h3 id="some-story">Some story</h3>
 <p>This story starts with bugs not getting fixed, me wanting to remove NodeJS and getting rid of the way upptime stored it's data.
 They used commits in a Git repository, this is very clever but does not scale very well.</p>
-<p>The <a rel="noopener" target="_blank" href="https://github.com/wdes/status">repository</a> got way bigger than expected: 241k commits !
+<p>The <a rel="noopener external" target="_blank" href="https://github.com/wdes/status">repository</a> got way bigger than expected: 241k commits !
 For a diff of 486,889 added lines vs 486,161 removed lines.</p>
-<p>It ran from February 2021, to the end of July 2022. I did a <a rel="noopener" target="_blank" href="https://github.com/wdes/status/commits?author=williamdes">few config commits</a> but not much more, <a rel="noopener" target="_blank" href="https://github.com/wdes/status/blob/main/.upptimerc.yml">the config file</a> was in yaml.
+<p>It ran from February 2021, to the end of July 2022. I did a <a rel="noopener external" target="_blank" href="https://github.com/wdes/status/commits?author=williamdes">few config commits</a> but not much more, <a rel="noopener external" target="_blank" href="https://github.com/wdes/status/blob/main/.upptimerc.yml">the config file</a> was in yaml.
 My last config adjustment was in July 2021, so the monitoring continue to run for one more year without any config changes.</p>
 <p>This monitoring experience lasted 1 year and a half.</p>
 <h3 id="the-bad-stuff">The bad stuff</h3>
@@ -192,25 +197,25 @@ So it was lost, kind of.</p>
 <p>What was actually lost is what is the exact story about this migration, I do not remember everything.
 So bits and anecdotes are lost, It took me too long to finally decide to write about all this.</p>
 <h3 id="vigil-my-new-status-page">Vigil, my new status page</h3>
-<p>I did setup Vigil very easily, and my <a rel="noopener" target="_blank" href="https://github.com/datacenters-network/status">config is open-source</a>.
+<p>I did setup Vigil very easily, and my <a rel="noopener external" target="_blank" href="https://github.com/datacenters-network/status">config is open-source</a>.
 You can see my monitoring has similarities from what it was before with upptime.
 But this time, I received notification on my Telegram account !</p>
 <p>I had asked upptime for more notification channels, but that never landed.
-Nowdays upptime seems to have <a rel="noopener" target="_blank" href="https://upptime.js.org/docs/notifications">quite some nice notifiers</a>.</p>
+Nowdays upptime seems to have <a rel="noopener external" target="_blank" href="https://upptime.js.org/docs/notifications">quite some nice notifiers</a>.</p>
 <p>The good news: it is written in Rust and is open-source !
 It consumes 9 MB of RAM and 0% CPU.
 For the network part, it consumes 5 KB in and 700B out.
-I host it at <a rel="noopener" target="_blank" href="https://railway.app?referralCode=w6eB63">Railway.app</a> for free.</p>
+I host it at <a rel="noopener external" target="_blank" href="https://railway.app?referralCode=w6eB63">Railway.app</a> for free.</p>
 <h4 id="examples">Examples</h4>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://status.crisp.chat/">Crisp.chat's status page</a></li>
-<li><a rel="noopener" target="_blank" href="https://status.wdes.eu/">Wdes's status page</a></li>
+<li><a rel="noopener external" target="_blank" href="https://status.crisp.chat/">Crisp.chat's status page</a></li>
+<li><a rel="noopener external" target="_blank" href="https://status.wdes.eu/">Wdes's status page</a></li>
 </ul>
 <h3 id="zabbix-my-daily-monitoring-tool">Zabbix, my daily monitoring tool</h3>
 <p>Zabbix is fully open-source, very slow to answer new tickets but makes updates in a very regular way.
 It is written in PHP and other languages.
 I did not know a thing about Zabbix and deployed it in my infrastructure in 30 minutes using their docker-compose examples.
-They have examples for a lot of <a rel="noopener" target="_blank" href="https://github.com/zabbix/zabbix-docker">different docker variants</a>, Ubuntu, Alpine, CentOS.</p>
+They have examples for a lot of <a rel="noopener external" target="_blank" href="https://github.com/zabbix/zabbix-docker">different docker variants</a>, Ubuntu, Alpine, CentOS.</p>
 <p>You can use PostgresSQL or MySQL/MariaDB to host the database.
 Years later (since 2021-07-15) and a bunch of servers monitored, the database is not that big.
 The top 3 tables are 1GiB, 1GiB and 650MiB for a total of 3.2 GiB on my current setup.
@@ -228,7 +233,7 @@ It monitors the server out of the box, and warns you about when things go wrong:
 <p>You also can install a Zabbix agent on the host to send data to Zabbix.
 Not the other way around with SNMP.
 With the local Zabbix agent you can even add new values in a very easy way.
-For example to add monitoring for an UPS: <a rel="noopener" target="_blank" href="https://github.com/reedacus25/zbx-apcupsd#readme">reedacus25/zbx-apcupsd on GitHub</a>.</p>
+For example to add monitoring for an UPS: <a rel="noopener external" target="_blank" href="https://github.com/reedacus25/zbx-apcupsd#readme">reedacus25/zbx-apcupsd on GitHub</a>.</p>
 <h5 id="sending-values-from-code-scripts">Sending values from code/scripts</h5>
 <p>If you have an app, and you want some specific metrics: you can use the Zabbix Sender API to send them to Zabbix.
 Nothing very complicated, a bunch of lines of code.</p>
@@ -255,7 +260,7 @@ And doubt changing tools anytime soon.</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - My open-source security findings from 2018 to 2023</title>
+        <title>Williamdes&#39;s blog - My open-source security findings from 2018 to 2023</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -13,7 +13,7 @@
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
         <meta name="description" content="
-A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.">
+A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -26,12 +26,12 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
         <meta property="og:title" content="My open-source security findings from 2018 to 2023">
         <meta property="og:url" content="https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings">
         <meta property="og:description" content="
-A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.">
+A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.">
         
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2026-05-22T12:43:28+02:00">
         <meta property="article:published_time" content="2026-05-22T12:43:28">
-        <meta property="article:modified_time" content="2026-05-22T12:43:28">
+        <meta property="article:modified_time" content="2026-06-24T15:14:55">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="OSS-security"><meta property="article:tags" content="OSS-story"><meta property="article:tags" content="phpMyAdmin">
         
@@ -45,14 +45,16 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -95,6 +97,9 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -103,10 +108,10 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
     
     "url": "https://blog.williamdes.eu/OpenSource/stories/my-opensource-security-findings/",
     "headline": "My open-source security findings from 2018 to 2023",
-    "alternativeHeadline": "A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.",
+    "alternativeHeadline": "A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.",
     "dateCreated": "2026-05-22T12:43:28+0200",
     "datePublished": "2026-05-22T12:43:28+0200",
-    "dateModified": "2026-05-22T12:43:28+0200",
+    "dateModified": "2026-06-24T15:14:55+0200",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "author": [
@@ -151,7 +156,7 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -177,7 +182,7 @@ A short tour of the five CVEs I have publicly disclosed in open-source projects,
             
             <br/>
             <span class="post-date">Published: <time datetime="2026-05-22T12:43:28+0200">May 22, 2026 12:43</time></span>
-            <span class="post-date"> and updated: <time datetime="2026-05-22T12:43:28+0200">May 22, 2026 12:43</time></span>
+            <span class="post-date"> and updated: <time datetime="2026-06-24T15:14:55+0200">June 24, 2026 15:14</time></span>
             <span>&middot;</span>
             <span class="post-reading-time">4 min read</span>
         </div>
@@ -192,38 +197,43 @@ Guidelines for editing this post:
 - Update the title's year range and the headline when adding new disclosures; the URL slug stays version-free.
 - Always bump the `updated` field in the frontmatter when editing this post; use the current `Europe/Paris` offset (e.g. `2026-05-22T12:40:50+02:00`).
 -->
-<p>A short tour of the five CVEs I have publicly disclosed in open-source projects, from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.</p>
+<p>A short tour of the six CVEs I have a hand in across open-source projects — five I disclosed myself and one I fixed for the phpMyAdmin team — from a 2018 XSS in phpMyAdmin to a 2023 path traversal in resumable.php.</p>
 <span id="continue-reading"></span>
-<p>I joined the <a rel="noopener" target="_blank" href="https://www.phpmyadmin.net/team/">phpMyAdmin team</a> on the <code>27/08/2018</code>. A lot of my early security work is on that codebase, and in particular on one feature: the Designer. I ended up coming back to it more than once.</p>
+<p>I joined the <a rel="noopener external" target="_blank" href="https://www.phpmyadmin.net/team/">phpMyAdmin team</a> on the <code>27/08/2018</code>. A lot of my early security work is on that codebase, and in particular on one feature: the Designer. I ended up coming back to it more than once.</p>
 <h2 id="2018-xss-in-the-designer">2018 — XSS in the Designer</h2>
 <p>My first publicly credited disclosure. A specially crafted database name could be reflected in the Designer feature and execute as JavaScript in the browser.</p>
 <ul>
-<li><strong>CVE-2018-12581</strong> / <strong><a rel="noopener" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2018-3/">PMASA-2018-3</a></strong> — fixed in phpMyAdmin 4.8.2.</li>
+<li><strong>CVE-2018-12581</strong> / <strong><a rel="noopener external" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2018-3/">PMASA-2018-3</a></strong> — fixed in phpMyAdmin 4.8.2.</li>
 </ul>
 <h2 id="2019-two-sql-injections-in-the-designer">2019 — Two SQL injections in the Designer</h2>
 <p>The same surface area came back, this time as something more serious. Both bugs are triggered through crafted database names in the Designer and were rated <code>serious</code> by the phpMyAdmin security team.</p>
 <ul>
-<li><strong>CVE-2019-11768</strong> / <strong><a rel="noopener" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2019-3/">PMASA-2019-3</a></strong> — fixed in phpMyAdmin 4.8.6.</li>
-<li><strong>CVE-2019-18622</strong> / <strong><a rel="noopener" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2019-5/">PMASA-2019-5</a></strong> — same class of bug but covering a different version range (including the 4.7.x line and 4.9.x prior to 4.9.2); fixed in phpMyAdmin 4.9.2.</li>
+<li><strong>CVE-2019-11768</strong> / <strong><a rel="noopener external" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2019-3/">PMASA-2019-3</a></strong> — fixed in phpMyAdmin 4.8.6.</li>
+<li><strong>CVE-2019-18622</strong> / <strong><a rel="noopener external" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2019-5/">PMASA-2019-5</a></strong> — same class of bug but covering a different version range (including the 4.7.x line and 4.9.x prior to 4.9.2); fixed in phpMyAdmin 4.9.2.</li>
 </ul>
 <p>To be honest, my method was unscientific: I tested with every weird character I could think of in database names until something broke. It kept breaking.</p>
+<h2 id="2020-sql-injection-in-table-creation-the-one-i-fixed-not-found">2020 — SQL injection in table creation (the one I fixed, not found)</h2>
+<p>This one is different from the rest of the list: I did not discover it, I fixed it. It was reported by <code>MatisAct</code> on the <code>03/02/2020</code> (<a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/issues/15898">phpmyadmin/phpmyadmin#15898</a>) — an SQL injection in <code>getTableCreationQuery</code> (<code>CreateAddField.php</code>), reachable through the <code>tbl_storage_engine</code> and <code>tbl_collation</code> parameters of <code>tbl_create.php</code>. As the phpMyAdmin team member assigned to the issue, I handled the fix, which is why <a rel="noopener external" target="_blank" href="https://dbugs.ptsecurity.com/researchers/Williamdes">PT Security's advisory database</a> credits me on it.</p>
+<ul>
+<li><strong>CVE-2020-22452</strong> (PT-2023-11619, CVSS 9.8) — fixed in phpMyAdmin 5.2.0 via <a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/16004">phpmyadmin/phpmyadmin#16004</a>. The CVE was only published on the <code>26/01/2023</code>, well after the fix shipped; there is no PMASA for it.</li>
+</ul>
 <h2 id="2022-two-factor-authentication-bypass">2022 — Two-factor authentication bypass</h2>
 <p>A sequence of actions an already-authenticated user could perform to circumvent their own 2FA protections. The phpMyAdmin team rated this <code>low</code> severity because the attacker needed valid credentials first, but it was still a real bypass and worth fixing.</p>
 <ul>
-<li><strong>CVE-2022-23807</strong> / <strong><a rel="noopener" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2022-1/">PMASA-2022-1</a></strong> — fixed in phpMyAdmin 4.9.8 and 5.1.2.</li>
+<li><strong>CVE-2022-23807</strong> / <strong><a rel="noopener external" target="_blank" href="https://www.phpmyadmin.net/security/PMASA-2022-1/">PMASA-2022-1</a></strong> — fixed in phpMyAdmin 4.9.8 and 5.1.2.</li>
 </ul>
 <h2 id="2023-path-traversal-in-dilab-resumable-php">2023 — Path traversal in dilab/resumable.php</h2>
-<p>On the <code>07/12/2023</code> I reported an arbitrary file write bug in <a rel="noopener" target="_blank" href="https://github.com/dilab/resumable.php">dilab/resumable.php</a>, the PHP back-end for resumable.js. I noticed something off in my own unit tests — the code was managing to write outside its test folder — and from there I built a small proof of concept (a path like <code>../../test-hack.txt</code> in <code>resumableFilename</code> and <code>resumableRelativePath</code>) and emailed the author. After the fix, I opened a CVE request via MITRE.</p>
+<p>On the <code>07/12/2023</code> I reported an arbitrary file write bug in <a rel="noopener external" target="_blank" href="https://github.com/dilab/resumable.php">dilab/resumable.php</a>, the PHP back-end for resumable.js. I noticed something off in my own unit tests — the code was managing to write outside its test folder — and from there I built a small proof of concept (a path like <code>../../test-hack.txt</code> in <code>resumableFilename</code> and <code>resumableRelativePath</code>) and emailed the author. After the fix, I opened a CVE request via MITRE.</p>
 <ul>
-<li><strong>CVE-2023-52086</strong> — GitHub advisory: <a rel="noopener" target="_blank" href="https://github.com/advisories/GHSA-pg6w-hq9f-wfwr">GHSA-pg6w-hq9f-wfwr</a>.</li>
-<li>Original report: <a rel="noopener" target="_blank" href="https://github.com/dilab/resumable.php/issues/34">dilab/resumable.php#34</a>.</li>
-<li>Fix in the upstream: <a rel="noopener" target="_blank" href="https://github.com/dilab/resumable.php/pull/27">dilab/resumable.php#27</a>.</li>
-<li>Also fixed in my own fork <a rel="noopener" target="_blank" href="https://github.com/code-lts/resumable.php">code-lts/resumable.php</a> — commits <a rel="noopener" target="_blank" href="https://github.com/code-lts/resumable.php/commit/d3552efd403e2d87407934477eee642836cab3b4">d3552ef</a> ("Fix remote file overwrite and arbitrary file injection in the file system") and <a rel="noopener" target="_blank" href="https://github.com/code-lts/resumable.php/commit/7e7697f60f1089f060c87d888c9ef114dfcef00f">7e7697f</a> ("Security fix n°2 - make chunk names safe too"), both shipped in <a rel="noopener" target="_blank" href="https://github.com/code-lts/resumable.php/releases/tag/v1.0.0">v1.0.0</a>.</li>
+<li><strong>CVE-2023-52086</strong> — GitHub advisory: <a rel="noopener external" target="_blank" href="https://github.com/advisories/GHSA-pg6w-hq9f-wfwr">GHSA-pg6w-hq9f-wfwr</a>.</li>
+<li>Original report: <a rel="noopener external" target="_blank" href="https://github.com/dilab/resumable.php/issues/34">dilab/resumable.php#34</a>.</li>
+<li>Fix in the upstream: <a rel="noopener external" target="_blank" href="https://github.com/dilab/resumable.php/pull/27">dilab/resumable.php#27</a>.</li>
+<li>Also fixed in my own fork <a rel="noopener external" target="_blank" href="https://github.com/code-lts/resumable.php">code-lts/resumable.php</a> — commits <a rel="noopener external" target="_blank" href="https://github.com/code-lts/resumable.php/commit/d3552efd403e2d87407934477eee642836cab3b4">d3552ef</a> ("Fix remote file overwrite and arbitrary file injection in the file system") and <a rel="noopener external" target="_blank" href="https://github.com/code-lts/resumable.php/commit/7e7697f60f1089f060c87d888c9ef114dfcef00f">7e7697f</a> ("Security fix n°2 - make chunk names safe too"), both shipped in <a rel="noopener external" target="_blank" href="https://github.com/code-lts/resumable.php/releases/tag/v1.0.0">v1.0.0</a>.</li>
 <li>I wrote a dedicated post about it: <a href="https://blog.williamdes.eu/OpenSource/2023/12/report/">CVE-2023-52086 - My security gift for the end of the year 2023</a>.</li>
 </ul>
 <p>Depending on the version of the back-end, the attack could either overwrite existing files or write new files outside the intended directory.</p>
 <h2 id="closing-notes">Closing notes</h2>
-<p>Five CVEs over five years is not a lot in the grand scheme of bug-hunting, but they are all real bugs in widely-deployed PHP code, fixed by responsive maintainers. To everyone who triaged my reports, replied to my emails, and shipped the fixes: thank you. That responsiveness is what makes coordinated disclosure worth doing.</p>
+<p>Six CVEs over six years — five I found and one I fixed — is not a lot in the grand scheme of bug-hunting, but they are all real bugs in widely-deployed PHP code, fixed by responsive maintainers. To everyone who triaged my reports, replied to my emails, and shipped the fixes: thank you. That responsiveness is what makes coordinated disclosure worth doing.</p>
 </div>
     <footer class="post-footer">
         
@@ -243,7 +253,7 @@ Guidelines for editing this post:
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

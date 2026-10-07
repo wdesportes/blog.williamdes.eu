@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Encrypt an existing Debian 12 system with LUKS</title>
+        <title>Williamdes&#39;s blog - Encrypt an existing Debian 12 system with LUKS</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -43,14 +43,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -93,6 +95,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -143,7 +148,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -167,7 +172,7 @@
             <span class="post-date">Published: <time datetime="2025-01-19T21:58:00+0001">January 19, 2025 21:58</time></span>
             <span class="post-date"> and updated: <time datetime="2025-01-26T14:08:00+0001">January 26, 2025 14:08</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">5 min read</span>
+            <span class="post-reading-time">4 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Encrypt an existing Debian system with LUKS</p>
@@ -178,52 +183,44 @@ You will need some megabytes free on your disk.</p>
 <h2 id="references">References</h2>
 <p>On Internet you can find other posts asking/showing how to encrypt a drive:</p>
 <ul>
-<li>This <a rel="noopener" target="_blank" href="https://www.reddit.com/r/linuxadmin/comments/j3gyk9/possible_to_convert_to_luks_encryption_without/">Reddit post on linuxadmin</a> has some interesting answers.</li>
-<li>A <a rel="noopener" target="_blank" href="https://www.reddit.com/r/debian/comments/feaa7g/is_it_possible_to_perform_full_disk_encryption/">Reddit post on Debian</a></li>
-<li>A <a rel="noopener" target="_blank" href="https://www.reddit.com/r/Fedora/comments/kyj373/cryptsetup_reencrypt_it_worked/">Reddit post on Fedora</a> that says that it works.</li>
-<li>This <a rel="noopener" target="_blank" href="https://blog.apps.education.fr/articles/debian-linux-en-full-disk-encryption-sur-machine-efi2022-10-26t160921692z">blog post on education.fr</a>.</li>
-<li><a rel="noopener" target="_blank" href="https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8">krzys-h's gist to automate the disk conversion</a>.</li>
+<li>This <a rel="noopener external" target="_blank" href="https://www.reddit.com/r/linuxadmin/comments/j3gyk9/possible_to_convert_to_luks_encryption_without/">Reddit post on linuxadmin</a> has some interesting answers.</li>
+<li>A <a rel="noopener external" target="_blank" href="https://www.reddit.com/r/debian/comments/feaa7g/is_it_possible_to_perform_full_disk_encryption/">Reddit post on Debian</a></li>
+<li>A <a rel="noopener external" target="_blank" href="https://www.reddit.com/r/Fedora/comments/kyj373/cryptsetup_reencrypt_it_worked/">Reddit post on Fedora</a> that says that it works.</li>
+<li>This <a rel="noopener external" target="_blank" href="https://blog.apps.education.fr/articles/debian-linux-en-full-disk-encryption-sur-machine-efi2022-10-26t160921692z">blog post on education.fr</a>.</li>
+<li><a rel="noopener external" target="_blank" href="https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8">krzys-h's gist to automate the disk conversion</a>.</li>
 </ul>
-<p>There was another tool that did the conversion on the fly, named <a rel="noopener" target="_blank" href="https://www.johannes-bauer.com/linux/luksipc/">luksipc</a>.
+<p>There was another tool that did the conversion on the fly, named <a rel="noopener external" target="_blank" href="https://www.johannes-bauer.com/linux/luksipc/">luksipc</a>.
 I am not sure you should use it.</p>
 <h2 id="actual-machine-disk-disposition">Actual machine disk disposition</h2>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> lsblk
-</span><span style="color:#bf616a;">NAME</span><span>    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-</span><span style="color:#bf616a;">sda</span><span>       8:0    0    2G  0 disk
-</span><span style="color:#bf616a;">├─sda1</span><span>    8:1    0  1.9G  0 part /
-</span><span style="color:#bf616a;">├─sda14</span><span>   8:14   0    3M  0 part
-</span><span style="color:#bf616a;">└─sda15</span><span>   8:15   0  124M  0 part /boot/efi
-</span></code></pre>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> fdisk</span><span style="color:#bf616a;"> -l
-</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 2 GiB, 2147483648 bytes, 4194304 sectors
-</span><span style="color:#bf616a;">Disk</span><span> model: QEMU HARDDISK
-</span><span style="color:#bf616a;">Units:</span><span> sectors of 1 * 512 = 512 bytes
-</span><span style="color:#bf616a;">Sector</span><span> size (logical/physical)</span><span style="color:#96b5b4;">:</span><span> 512 bytes / 512 bytes
-</span><span style="color:#bf616a;">I/O</span><span> size (minimum/optimal)</span><span style="color:#96b5b4;">:</span><span> 512 bytes / 512 bytes
-</span><span style="color:#bf616a;">Disklabel</span><span> type: gpt
-</span><span style="color:#bf616a;">Disk</span><span> identifier: 56E4EDE3-4BA3-6942-9E58-D1EFDCB32B4A
-</span><span>
-</span><span style="color:#bf616a;">Device</span><span>      Start     End Sectors  Size Type
-</span><span style="color:#bf616a;">/dev/sda1</span><span>  262144 4192255 3930112  1.9G Linux root (x86-64)
-</span><span style="color:#bf616a;">/dev/sda14</span><span>   2048    8191    6144    3M BIOS boot
-</span><span style="color:#bf616a;">/dev/sda15</span><span>   8192  262143  253952  124M EFI System
-</span><span>
-</span><span style="color:#bf616a;">Partition</span><span> table entries are not in disk order.
-</span></code></pre>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> blkid
-</span><span style="color:#bf616a;">/dev/sda15:</span><span> SEC_TYPE=&quot;</span><span style="color:#a3be8c;">msdos</span><span>&quot; UUID=&quot;</span><span style="color:#a3be8c;">E6F2-C0D9</span><span>&quot; BLOCK_SIZE=&quot;</span><span style="color:#a3be8c;">512</span><span>&quot; TYPE=&quot;</span><span style="color:#a3be8c;">vfat</span><span>&quot; PARTUUID=&quot;</span><span style="color:#a3be8c;">cec893d8-f47d-4f0f-b0b7-c3f3a4fac1cf</span><span>&quot;
-</span><span style="color:#bf616a;">/dev/sda1:</span><span> UUID=&quot;</span><span style="color:#a3be8c;">4594baf1-164a-4cb0-980f-105744df462c</span><span>&quot; BLOCK_SIZE=&quot;</span><span style="color:#a3be8c;">4096</span><span>&quot; TYPE=&quot;</span><span style="color:#a3be8c;">ext4</span><span>&quot; PARTUUID=&quot;</span><span style="color:#a3be8c;">54c133f2-e7f5-43a6-9540-cea1cbc4654c</span><span>&quot;
-</span><span style="color:#bf616a;">/dev/sda14:</span><span> PARTUUID=&quot;</span><span style="color:#a3be8c;">3747106c-99e7-1748-8308-ee6ae31f457b</span><span>&quot;
-</span></code></pre>
-<h2 id="prepare-the-actual-system">Prepare the actual system</h2>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">apt</span><span> install cryptsetup cryptsetup-initramfs
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> lsblk</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">NAME</span><span style="color: #D1F1A9;">    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">sda</span><span style="color: #D1F1A9;">       8:0</span><span style="color: #FFC58F;">    0</span><span style="color: #D1F1A9;">    2G</span><span style="color: #FFC58F;">  0</span><span style="color: #D1F1A9;"> disk</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">├─sda1</span><span style="color: #D1F1A9;">    8:1</span><span style="color: #FFC58F;">    0</span><span style="color: #D1F1A9;">  1.9G</span><span style="color: #FFC58F;">  0</span><span style="color: #D1F1A9;"> part /</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">├─sda14</span><span style="color: #D1F1A9;">   8:14</span><span style="color: #FFC58F;">   0</span><span style="color: #D1F1A9;">    3M</span><span style="color: #FFC58F;">  0</span><span style="color: #D1F1A9;"> part</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">└─sda15</span><span style="color: #D1F1A9;">   8:15</span><span style="color: #FFC58F;">   0</span><span style="color: #D1F1A9;">  124M</span><span style="color: #FFC58F;">  0</span><span style="color: #D1F1A9;"> part /boot/efi</span></span></code></pre><pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> fdisk</span><span> -l</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disk</span><span style="color: #D1F1A9;"> /dev/sda:</span><span style="color: #FFC58F;"> 2</span><span style="color: #D1F1A9;"> GiB,</span><span style="color: #FFC58F;"> 2147483648</span><span style="color: #D1F1A9;"> bytes,</span><span style="color: #FFC58F;"> 4194304</span><span style="color: #D1F1A9;"> sectors</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disk</span><span style="color: #D1F1A9;"> model: QEMU HARDDISK</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Units:</span><span style="color: #D1F1A9;"> sectors of</span><span style="color: #FFC58F;"> 1</span><span style="color: #FF9DA4;"> *</span><span style="color: #FFC58F;"> 512</span><span style="color: #D1F1A9;"> =</span><span style="color: #FFC58F;"> 512</span><span style="color: #D1F1A9;"> bytes</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Sector</span><span style="color: #D1F1A9;"> size</span><span> (logical/physical): 512 bytes / 512 bytes</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">I/O</span><span style="color: #D1F1A9;"> size</span><span> (minimum/optimal): 512 bytes / 512 bytes</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disklabel</span><span style="color: #D1F1A9;"> type: gpt</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disk</span><span style="color: #D1F1A9;"> identifier: 56E4EDE3-4BA3-6942-9E58-D1EFDCB32B4A</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Device</span><span style="color: #D1F1A9;">      Start     End Sectors  Size Type</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda1</span><span style="color: #FFC58F;">  262144 4192255 3930112</span><span style="color: #D1F1A9;">  1.9G Linux root</span><span> (x86-64)</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda14</span><span style="color: #FFC58F;">   2048    8191    6144</span><span style="color: #D1F1A9;">    3M BIOS boot</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda15</span><span style="color: #FFC58F;">   8192  262143  253952</span><span style="color: #D1F1A9;">  124M EFI System</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Partition</span><span style="color: #D1F1A9;"> table entries are not in disk order.</span></span></code></pre><pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> blkid</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda15:</span><span style="color: #D1F1A9;"> SEC_TYPE=&quot;msdos&quot; UUID=&quot;E6F2-C0D9&quot; BLOCK_SIZE=&quot;512&quot; TYPE=&quot;vfat&quot; PARTUUID=&quot;cec893d8-f47d-4f0f-b0b7-c3f3a4fac1cf&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda1:</span><span style="color: #D1F1A9;"> UUID=&quot;4594baf1-164a-4cb0-980f-105744df462c&quot; BLOCK_SIZE=&quot;4096&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;54c133f2-e7f5-43a6-9540-cea1cbc4654c&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/dev/sda14:</span><span style="color: #D1F1A9;"> PARTUUID=&quot;3747106c-99e7-1748-8308-ee6ae31f457b&quot;</span></span></code></pre><h2 id="prepare-the-actual-system">Prepare the actual system</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">apt</span><span style="color: #D1F1A9;"> install cryptsetup cryptsetup-initramfs</span></span></code></pre>
 <p>Add <code>GRUB_ENABLE_CRYPTODISK=y</code> to <code>/etc/default/grub</code></p>
 <p>Ensure the keyboard layout is usable in <code>/etc/default/keyboard</code></p>
-<pre data-lang="env" style="background-color:#2b303b;color:#c0c5ce;" class="language-env "><code class="language-env" data-lang="env"><span>XKBMODEL=&quot;pc105&quot;
-</span><span>XKBLAYOUT=&quot;fr&quot;
-</span><span>XKBVARIANT=&quot;latin9&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>XKBMODEL=&quot;pc105&quot;</span></span>
+<span class="giallo-l"><span>XKBLAYOUT=&quot;fr&quot;</span></span>
+<span class="giallo-l"><span>XKBVARIANT=&quot;latin9&quot;</span></span></code></pre>
 <p>Run <code>update-initramfs -u</code></p>
 <p>You can check that the cryptsetup is installed: <code>lsinitramfs /boot/initrd.img-6.11.10+bpo-amd64 | grep crypt</code>
 Using the filename from the <code>update-initramfs</code> command.</p>
@@ -248,61 +245,59 @@ And add an IP manually</p>
 And did allow root access and changed the root password. And restarted the service.</p>
 <h2 id="start-converting-the-drive">Start converting the drive</h2>
 <p>Run <code>fdisk -l</code> and find the drive path.</p>
-<p>Now, you can paste the script from <a rel="noopener" target="_blank" href="https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8">krzys-h's gist</a>.
+<p>Now, you can paste the script from <a rel="noopener external" target="_blank" href="https://gist.github.com/krzys-h/226a16eb56c82df0dc3a9d35fad989c8">krzys-h's gist</a>.
 Or use my version of this script:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/bin/bash
-</span><span>
-</span><span style="color:#96b5b4;">set</span><span> -euo pipefail
-</span><span>
-</span><span style="color:#65737e;"># Uncomment to debug/inspect the commands
-</span><span style="color:#65737e;">#set -x
-</span><span>
-</span><span style="color:#65737e;"># Encrypt an existing partition with LUKS2 on Debian 12
-</span><span>
-</span><span style="color:#65737e;"># DISCLAIMER: USE AT YOUR OWN RISK AND MAKE BACKUPS
-</span><span style="color:#65737e;"># Made for my personal use and has almost NO error checking!!
-</span><span>
-</span><span style="color:#65737e;"># Based on instructions from:
-</span><span style="color:#65737e;"># https://wiki.archlinux.org/index.php/dm-crypt/Device_encryption#Encrypt_an_existing_unencrypted_filesystem
-</span><span>
-</span><span style="color:#bf616a;">DISK</span><span>=&quot;$</span><span style="color:#a3be8c;">{</span><span style="color:#bf616a;">1</span><span>:-</span><span style="color:#a3be8c;">}</span><span>&quot;
-</span><span>
-</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span style="color:#bf616a;">-z </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; </span><span style="color:#96b5b4;">]</span><span>; </span><span style="color:#b48ead;">then
-</span><span>	</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Usage: </span><span>$</span><span style="color:#bf616a;">0</span><span style="color:#a3be8c;"> /dev/sdXY</span><span>&quot;
-</span><span>	</span><span style="color:#96b5b4;">exit</span><span> 1
-</span><span style="color:#b48ead;">fi
-</span><span>
-</span><span style="color:#65737e;"># Run a filesystem check
-</span><span style="color:#bf616a;">e2fsck -f </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot;
-</span><span>
-</span><span style="color:#65737e;"># Make the filesystem slightly smaller to make space for the LUKS header
-</span><span style="color:#bf616a;">BLOCK_SIZE</span><span>=`</span><span style="color:#bf616a;">dumpe2fs -h </span><span>$</span><span style="color:#bf616a;">DISK </span><span>| </span><span style="color:#bf616a;">grep </span><span>&quot;</span><span style="color:#a3be8c;">Block size</span><span>&quot; | </span><span style="color:#bf616a;">cut -d </span><span>&#39;</span><span style="color:#a3be8c;">:</span><span>&#39;</span><span style="color:#bf616a;"> -f</span><span> 2 | </span><span style="color:#bf616a;">tr -d </span><span>&#39; &#39;`
-</span><span style="color:#bf616a;">BLOCK_COUNT</span><span>=`</span><span style="color:#bf616a;">dumpe2fs -h </span><span>$</span><span style="color:#bf616a;">DISK </span><span>| </span><span style="color:#bf616a;">grep </span><span>&quot;</span><span style="color:#a3be8c;">Block count</span><span>&quot; | </span><span style="color:#bf616a;">cut -d </span><span>&#39;</span><span style="color:#a3be8c;">:</span><span>&#39;</span><span style="color:#bf616a;"> -f</span><span> 2 | </span><span style="color:#bf616a;">tr -d </span><span>&#39; &#39;`
-</span><span style="color:#bf616a;">SPACE_TO_FREE</span><span>=$</span><span style="color:#a3be8c;">((</span><span style="color:#d08770;">1024 </span><span>* </span><span style="color:#d08770;">1024 </span><span>* </span><span style="color:#d08770;">32</span><span style="color:#a3be8c;">)) </span><span style="color:#65737e;"># 16MB should be enough, but add a safety margin
-</span><span style="color:#bf616a;">NEW_BLOCK_COUNT</span><span>=$</span><span style="color:#a3be8c;">((</span><span>$</span><span style="color:#bf616a;">BLOCK_COUNT </span><span>- $</span><span style="color:#bf616a;">SPACE_TO_FREE </span><span>/ $</span><span style="color:#bf616a;">BLOCK_SIZE</span><span style="color:#a3be8c;">))
-</span><span style="color:#bf616a;">resize2fs -p </span><span>&quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; &quot;$</span><span style="color:#bf616a;">NEW_BLOCK_COUNT</span><span>&quot;
-</span><span>
-</span><span style="color:#65737e;"># Run the encryption process
-</span><span style="color:#65737e;"># MAN: https://man7.org/linux/man-pages/man8/cryptsetup-reencrypt.8.html
-</span><span style="color:#bf616a;">cryptsetup</span><span> reencrypt</span><span style="color:#bf616a;"> --encrypt --reduce-device-size</span><span> 16M &quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot;
-</span><span>
-</span><span style="color:#65737e;"># Resize the filesystem to fill up the remaining space (i.e. remove the safety margin from earlier)
-</span><span style="color:#bf616a;">cryptsetup</span><span> open &quot;$</span><span style="color:#bf616a;">DISK</span><span>&quot; recrypt
-</span><span style="color:#bf616a;">resize2fs</span><span> /dev/mapper/recrypt
-</span><span style="color:#bf616a;">cryptsetup</span><span> close recrypt
-</span><span>
-</span><span style="color:#65737e;"># Don&#39;t forget to update /etc/crypttab and /etc/fstab if required!
-</span><span style="color:#65737e;">#
-</span><span style="color:#65737e;"># For example:
-</span><span style="color:#65737e;"># /etc/crypttab
-</span><span style="color:#65737e;"># crypt_root    UUID=xxx    none    luks
-</span><span style="color:#65737e;"># /etc/fstab
-</span><span style="color:#65737e;"># /dev/mapper/crypt_root    /        ext4    errors=remount-ro    0    1
-</span><span style="color:#65737e;">#
-</span><span style="color:#65737e;"># Remember to run &quot;update-initramfs -u -k all&quot; after updating the rootfs crypttab
-</span></code></pre>
-<h2 id="adjust-the-encryption-key">Adjust the encryption key</h2>
-<p>As said on <a rel="noopener" target="_blank" href="https://www.reddit.com/r/debian/comments/15w9c6e/cryptomount_invalid_passphrase_despite_being/">Debian's reddit</a> and <a rel="noopener" target="_blank" href="https://unix.stackexchange.com/q/764872/155610">Unix StackExchange</a> GRUB will not unlock if the keyslot is <code>PBKDF: argon2id</code></p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;">#!/bin/bash</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">set</span><span> -euo</span><span style="color: #D1F1A9;"> pipefail</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Uncomment to debug/inspect the commands</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#set -x</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Encrypt an existing partition with LUKS2 on Debian 12</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># DISCLAIMER: USE AT YOUR OWN RISK AND MAKE BACKUPS</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Made for my personal use and has almost NO error checking!!</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Based on instructions from:</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># https://wiki.archlinux.org/index.php/dm-crypt/Device_encryption#Encrypt_an_existing_unencrypted_filesystem</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">DISK</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;">${1</span><span style="color: #99FFFF;">:-</span><span style="color: #FFC58F;">}</span><span style="color: #D1F1A9;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">if</span><span> [</span><span style="color: #99FFFF;"> -z</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FF9DA4;">$DISK</span><span style="color: #D1F1A9;">&quot;</span><span> ];</span><span style="color: #EBBBFF;"> then</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">	echo</span><span style="color: #D1F1A9;"> &quot;Usage: </span><span style="color: #FFC58F;">$0</span><span style="color: #D1F1A9;"> /dev/sdXY&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">	exit</span><span style="color: #FFC58F;"> 1</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">fi</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Run a filesystem check</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">e2fsck</span><span> -f</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FF9DA4;">$DISK</span><span style="color: #D1F1A9;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Make the filesystem slightly smaller to make space for the LUKS header</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">BLOCK_SIZE</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">`</span><span style="color: #BBDAFF;">dumpe2fs</span><span> -h</span><span style="color: #FF9DA4;"> $DISK</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> grep</span><span style="color: #D1F1A9;"> &quot;Block size&quot;</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> cut</span><span> -d</span><span style="color: #D1F1A9;"> &#39;:&#39;</span><span> -f</span><span style="color: #FFC58F;"> 2</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> tr</span><span> -d</span><span style="color: #D1F1A9;"> &#39; &#39;`</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">BLOCK_COUNT</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">`</span><span style="color: #BBDAFF;">dumpe2fs</span><span> -h</span><span style="color: #FF9DA4;"> $DISK</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> grep</span><span style="color: #D1F1A9;"> &quot;Block count&quot;</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> cut</span><span> -d</span><span style="color: #D1F1A9;"> &#39;:&#39;</span><span> -f</span><span style="color: #FFC58F;"> 2</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> tr</span><span> -d</span><span style="color: #D1F1A9;"> &#39; &#39;`</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">SPACE_TO_FREE</span><span style="color: #99FFFF;">=</span><span>$((</span><span style="color: #BBDAFF;">1024</span><span style="color: #FF9DA4;"> *</span><span style="color: #FFC58F;"> 1024</span><span style="color: #FF9DA4;"> *</span><span style="color: #FFC58F;"> 32</span><span>))</span><span style="color: #7285B7;"> # 16MB should be enough, but add a safety margin</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">NEW_BLOCK_COUNT</span><span style="color: #99FFFF;">=</span><span>$((</span><span style="color: #FF9DA4;">$BLOCK_COUNT</span><span> - </span><span style="color: #FF9DA4;">$SPACE_TO_FREE</span><span> / </span><span style="color: #FF9DA4;">$BLOCK_SIZE</span><span>))</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">resize2fs</span><span> -p</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FF9DA4;">$DISK</span><span style="color: #D1F1A9;">&quot; &quot;</span><span style="color: #FF9DA4;">$NEW_BLOCK_COUNT</span><span style="color: #D1F1A9;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Run the encryption process</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># MAN: https://man7.org/linux/man-pages/man8/cryptsetup-reencrypt.8.html</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> reencrypt</span><span> --encrypt --reduce-device-size</span><span style="color: #D1F1A9;"> 16M &quot;</span><span style="color: #FF9DA4;">$DISK</span><span style="color: #D1F1A9;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Resize the filesystem to fill up the remaining space (i.e. remove the safety margin from earlier)</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> open &quot;</span><span style="color: #FF9DA4;">$DISK</span><span style="color: #D1F1A9;">&quot; recrypt</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">resize2fs</span><span style="color: #D1F1A9;"> /dev/mapper/recrypt</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> close recrypt</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Don&#39;t forget to update /etc/crypttab and /etc/fstab if required!</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># For example:</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># /etc/crypttab</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># crypt_root    UUID=xxx    none    luks</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># /etc/fstab</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># /dev/mapper/crypt_root    /        ext4    errors=remount-ro    0    1</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Remember to run &quot;update-initramfs -u -k all&quot; after updating the rootfs crypttab</span></span></code></pre><h2 id="adjust-the-encryption-key">Adjust the encryption key</h2>
+<p>As said on <a rel="noopener external" target="_blank" href="https://www.reddit.com/r/debian/comments/15w9c6e/cryptomount_invalid_passphrase_despite_being/">Debian's reddit</a> and <a rel="noopener external" target="_blank" href="https://unix.stackexchange.com/q/764872/155610">Unix StackExchange</a> GRUB will not unlock if the keyslot is <code>PBKDF: argon2id</code></p>
 <p>You will need to run:</p>
 <ul>
 <li><code>cryptsetup luksDump /dev/sda</code> to check that is needs to be converted</li>
@@ -313,15 +308,14 @@ Or use my version of this script:</p>
 <p>Note: always use <code>--pbkdf pbkdf2</code> to change the password or do other key changes.
 Example to change the password: <code>cryptsetup luksChangeKey --pbkdf pbkdf2 /dev/sda</code></p>
 <h2 id="chroot-into-the-system-and-adjust-it">Chroot into the system and adjust it</h2>
-<p>Thank you <a rel="noopener" target="_blank" href="https://www.finnie.org/2009/07/26/howto-encrypt-an-existing-debian-installation/">finnie.org</a> for this part of the tutorial !</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">DEVICE_NAME</span><span>=&quot;</span><span style="color:#a3be8c;">root_crypt</span><span>&quot;
-</span><span style="color:#bf616a;">cryptsetup</span><span> open /dev/sda1 ${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span><span style="color:#bf616a;">mkdir</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span><span style="color:#bf616a;">mount</span><span> /dev/mapper/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>} /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span><span style="color:#bf616a;">mount -t</span><span> proc none /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/proc
-</span><span style="color:#bf616a;">mount -t</span><span> sysfs none /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/sys
-</span><span style="color:#bf616a;">mount --bind</span><span> /dev /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/dev
-</span></code></pre>
+<p>Thank you <a rel="noopener external" target="_blank" href="https://www.finnie.org/2009/07/26/howto-encrypt-an-existing-debian-installation/">finnie.org</a> for this part of the tutorial !</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #FF9DA4;">DEVICE_NAME</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">&quot;root_crypt&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> open /dev/sda1</span><span> ${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mkdir</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span style="color: #D1F1A9;"> /dev/mapper/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span> -t</span><span style="color: #D1F1A9;"> proc none /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/proc</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span> -t</span><span style="color: #D1F1A9;"> sysfs none /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/sys</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span> --bind</span><span style="color: #D1F1A9;"> /dev /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/dev</span></span></code></pre>
 <p>Enter the chroot: <code>chroot /mnt/${DEVICE_NAME}</code></p>
 <h3 id="once-in-the-chroot">Once in the chroot</h3>
 <ul>
@@ -368,67 +362,63 @@ If it differs (the diff command returns a difference), run: <code>cat /proc/moun
 <li>Run <code>update-grub</code></li>
 <li>Check that it boots on <code>root=</code> and has <code>cryptdevice=</code> by running <code>cat /boot/grub/grub.cfg | grep -F "root="</code></li>
 </ul>
-<p>You can learn more about <a rel="noopener" target="_blank" href="https://wiki.archlinux.org/title/Dm-crypt/System_configuration#cryptdevice">the boot parameters on the wiki page of Archlinux</a>.</p>
+<p>You can learn more about <a rel="noopener external" target="_blank" href="https://wiki.archlinux.org/title/Dm-crypt/System_configuration#cryptdevice">the boot parameters on the wiki page of Archlinux</a>.</p>
 <p>Exit the chroot: <code>exit</code></p>
 <h3 id="cleanup-the-chroot">Cleanup the chroot</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/proc
-</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/sys
-</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/dev
-</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}/boot/efi
-</span><span style="color:#bf616a;">umount</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span><span style="color:#bf616a;">cryptsetup</span><span> close ${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span><span style="color:#bf616a;">rmdir -v</span><span> /mnt/${</span><span style="color:#bf616a;">DEVICE_NAME</span><span>}
-</span></code></pre>
-<h2 id="finishing-the-job">Finishing the job</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">umount</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/proc</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">umount</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/sys</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">umount</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/dev</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">umount</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span><span style="color: #D1F1A9;">/boot/efi</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">umount</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> close</span><span> ${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rmdir</span><span> -v</span><span style="color: #D1F1A9;"> /mnt/</span><span>${</span><span style="color: #FF9DA4;">DEVICE_NAME</span><span>}</span></span></code></pre><h2 id="finishing-the-job">Finishing the job</h2>
 <p>Shutdown the live VM: <code>poweroff</code>
 And boot the machine to see if it works ?!</p>
 <p>If the system hangs on <code>random: crng init done</code> then the unlock may be waiting for you on another TTY.
-<a rel="noopener" target="_blank" href="https://raspberrypi.stackexchange.com/a/136648/114760">Explained on RaspberryPi StackExchange</a>.</p>
+<a rel="noopener external" target="_blank" href="https://raspberrypi.stackexchange.com/a/136648/114760">Explained on RaspberryPi StackExchange</a>.</p>
 <h2 id="bonus-commands-grow-the-luks-partition-and-the-ext4-partition-to-the-full-disk-size">Bonus commands: grow the LUKS partition and the ext4 partition to the full disk size</h2>
-<p>Thank you to <a rel="noopener" target="_blank" href="https://blog.fotto.de/resize-a-luks-encrypted-root-partition/">foorschtbar (blog post on fotto.de)</a> for the commands.</p>
+<p>Thank you to <a rel="noopener external" target="_blank" href="https://blog.fotto.de/resize-a-luks-encrypted-root-partition/">foorschtbar (blog post on fotto.de)</a> for the commands.</p>
 <p>If you resize your VM disk, you may want to expand.
 This also works to do a live resizing of the root partition.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> apt install</span><span style="color:#bf616a;"> -y</span><span> parted
-</span><span style="color:#bf616a;">$</span><span> parted /dev/sda
-</span><span>
-</span><span style="color:#bf616a;">GNU</span><span> Parted 3.5
-</span><span style="color:#bf616a;">Using</span><span> /dev/sda
-</span><span>
-</span><span>(</span><span style="color:#bf616a;">parted</span><span>) print
-</span><span>
-</span><span style="color:#bf616a;">Model:</span><span> VMware Virtual disk (scsi)
-</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 53.7GB
-</span><span style="color:#bf616a;">Partition</span><span> Table: gpt
-</span><span>
-</span><span style="color:#bf616a;">Number</span><span>  Start   End     Size    File system  Name  Flags
-</span><span style="color:#bf616a;">14</span><span>      1049kB  4194kB  3146kB                     bios_grub
-</span><span style="color:#bf616a;">15</span><span>      4194kB  134MB   130MB   fat16              boot, esp
-</span><span> </span><span style="color:#bf616a;">1</span><span>      134MB   2146MB  2012MB
-</span><span>
-</span><span>(</span><span style="color:#bf616a;">parted</span><span>) resizepart
-</span><span>
-</span><span style="color:#bf616a;">Partition</span><span> number? 1
-</span><span style="color:#bf616a;">End?  </span><span style="color:#b48ead;">[</span><span>2146MB</span><span style="color:#b48ead;">]</span><span>? 100%
-</span><span>
-</span><span>(</span><span style="color:#bf616a;">parted</span><span>) print
-</span><span>
-</span><span style="color:#bf616a;">Model:</span><span> VMware Virtual disk (scsi)
-</span><span style="color:#bf616a;">Disk</span><span> /dev/sda: 53.7GB
-</span><span style="color:#bf616a;">Partition</span><span> Table: gpt
-</span><span>
-</span><span style="color:#bf616a;">Number</span><span>  Start   End     Size    File system  Name  Flags
-</span><span style="color:#bf616a;">14</span><span>      1049kB  4194kB  3146kB                     bios_grub
-</span><span style="color:#bf616a;">15</span><span>      4194kB  134MB   130MB   fat16              boot, esp
-</span><span> </span><span style="color:#bf616a;">1</span><span>      134MB   53.7GB  53.6GB
-</span><span>
-</span><span>(</span><span style="color:#bf616a;">parted</span><span>) q
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> apt install</span><span> -y</span><span style="color: #D1F1A9;"> parted</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">$</span><span style="color: #D1F1A9;"> parted /dev/sda</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">GNU</span><span style="color: #D1F1A9;"> Parted</span><span style="color: #FFC58F;"> 3.5</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Using</span><span style="color: #D1F1A9;"> /dev/sda</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>(</span><span style="color: #BBDAFF;">parted</span><span>)</span><span style="color: #BBDAFF;"> print</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Model:</span><span style="color: #D1F1A9;"> VMware Virtual disk</span><span> (scsi)</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disk</span><span style="color: #D1F1A9;"> /dev/sda: 53.7GB</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Partition</span><span style="color: #D1F1A9;"> Table: gpt</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Number</span><span style="color: #D1F1A9;">  Start   End     Size    File system  Name  Flags</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">14</span><span style="color: #D1F1A9;">      1049kB  4194kB  3146kB                     bios_grub</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">15</span><span style="color: #D1F1A9;">      4194kB  134MB   130MB   fat16              boot, esp</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;"> 1</span><span style="color: #D1F1A9;">      134MB   2146MB  2012MB</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>(</span><span style="color: #BBDAFF;">parted</span><span>)</span><span style="color: #BBDAFF;"> resizepart</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Partition</span><span style="color: #D1F1A9;"> number?</span><span style="color: #FFC58F;"> 1</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">End?</span><span>  [2146MB]</span><span style="color: #99FFFF;">?</span><span> 100%</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>(</span><span style="color: #BBDAFF;">parted</span><span>)</span><span style="color: #BBDAFF;"> print</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Model:</span><span style="color: #D1F1A9;"> VMware Virtual disk</span><span> (scsi)</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Disk</span><span style="color: #D1F1A9;"> /dev/sda: 53.7GB</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Partition</span><span style="color: #D1F1A9;"> Table: gpt</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Number</span><span style="color: #D1F1A9;">  Start   End     Size    File system  Name  Flags</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">14</span><span style="color: #D1F1A9;">      1049kB  4194kB  3146kB                     bios_grub</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">15</span><span style="color: #D1F1A9;">      4194kB  134MB   130MB   fat16              boot, esp</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;"> 1</span><span style="color: #D1F1A9;">      134MB   53.7GB  53.6GB</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>(</span><span style="color: #BBDAFF;">parted</span><span>)</span><span style="color: #BBDAFF;"> q</span></span></code></pre>
 <p>If you use LVM, use the blog post linked above.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># I assume the LUKS partition is open at the name root_crypt
-</span><span style="color:#bf616a;">cryptsetup</span><span> resize root_crypt
-</span><span style="color:#65737e;"># Resize the EXT-4 file system
-</span><span style="color:#bf616a;">resize2fs</span><span> /dev/mapper/root_crypt
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;"># I assume the LUKS partition is open at the name root_crypt</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> resize root_crypt</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Resize the EXT-4 file system</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">resize2fs</span><span style="color: #D1F1A9;"> /dev/mapper/root_crypt</span></span></code></pre>
 <ul>
 <li>Reboot, all done.</li>
 </ul>
@@ -451,7 +441,7 @@ This also works to do a live resizing of the root partition.</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

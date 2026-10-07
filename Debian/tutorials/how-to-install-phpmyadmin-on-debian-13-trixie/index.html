@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - How to install phpMyAdmin on Debian 13 - Trixie ?</title>
+        <title>Williamdes&#39;s blog - How to install phpMyAdmin on Debian 13 - Trixie ?</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -48,14 +48,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -98,6 +100,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -158,7 +163,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -190,30 +195,26 @@
 <p>In this post I will explain how to install using APT.</p>
 <h3 id="introduction">Introduction</h3>
 <p>First of all, this post has been tested on Debian Trixie on 10/08/2025.<br>
-This post is written by a phpMyAdmin team member (williamdes/myself),<br> I am also the one responsible for the APT package <a rel="noopener" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin"><code>phpmyadmin</code></a> in Debian, <a rel="noopener" target="_blank" href="https://launchpad.net/ubuntu/+source/phpmyadmin">Ubuntu</a> and <a rel="noopener" target="_blank" href="https://repology.org/project/phpmyadmin/versions">derivatives</a>. And the <a rel="noopener" target="_blank" href="https://launchpad.net/~phpmyadmin/+archive/ubuntu/ppa">Ubuntu PPA</a> for <code>phpmyadmin</code>.</p>
+This post is written by a phpMyAdmin team member (williamdes/myself),<br> I am also the one responsible for the APT package <a rel="noopener external" target="_blank" href="https://tracker.debian.org/pkg/phpmyadmin"><code>phpmyadmin</code></a> in Debian, <a rel="noopener external" target="_blank" href="https://launchpad.net/ubuntu/+source/phpmyadmin">Ubuntu</a> and <a rel="noopener external" target="_blank" href="https://repology.org/project/phpmyadmin/versions">derivatives</a>. And the <a rel="noopener external" target="_blank" href="https://launchpad.net/~phpmyadmin/+archive/ubuntu/ppa">Ubuntu PPA</a> for <code>phpmyadmin</code>.</p>
 <h3 id="installing-on-debian-trixie">Installing on Debian Trixie</h3>
-<p>Using the ISO image <a rel="noopener" target="_blank" href="https://cdimage.debian.org/mirror/cdimage/release/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso">debian-13.0.0-amd64-netinst.iso</a> and VirtualBox 7.0.
+<p>Using the ISO image <a rel="noopener external" target="_blank" href="https://cdimage.debian.org/mirror/cdimage/release/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso">debian-13.0.0-amd64-netinst.iso</a> and VirtualBox 7.0.
 After adding my user to the sudo group, I did open a terminal and ran the install command:</p>
 <h4 id="stay-up-to-date">Stay up to date</h4>
-<p>You should setup Debian backports in your APT sources: <a rel="noopener" target="_blank" href="https://wiki.debian.org/Backports#Adding_the_repository">Debian wiki for backports</a><br>
+<p>You should setup Debian backports in your APT sources: <a rel="noopener external" target="_blank" href="https://wiki.debian.org/Backports#Adding_the_repository">Debian wiki for backports</a><br>
 I will provide updated versions of phpMyAdmin on this official backports channel. No need to do manual and insecure installations ;)</p>
 <h4 id="install-with-apache2">Install with Apache2</h4>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt install phpmyadmin libapache2-mod-php
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span style="color: #D1F1A9;"> apt install phpmyadmin libapache2-mod-php</span></span></code></pre>
 <p>Then it asks:</p>
 <ul>
 <li>For the webserver to reconfigure: I checked "apache2".</li>
 <li>If I want to configure the "phpmyadmin" database: I opted for "No". Because the DB server is not yet installed.</li>
 </ul>
-<p>You can now access phpMyAdmin from <a rel="noopener" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a>.<br>
+<p>You can now access phpMyAdmin from <a rel="noopener external" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a>.<br>
 There is normally no need to reload the apache2 webserver, in case of a 404 error run: <code>sudo service apache2 reload</code></p>
 <p><img src="../phpMyAdmin_Debian_13_Login.png" alt="phpMyAdmin on Debian 13 - Trixie | Login page" title="phpMyAdmin on Debian 13 - Trixie | Login page" /></p>
 <h5 id="install-a-database-server">Install a database server</h5>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt install mariadb-server
-</span></code></pre>
-<h6 id="configure-phpmyadmin-to-the-database-server">Configure phpMyAdmin to the database server</h6>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> dpkg-reconfigure phpmyadmin
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span style="color: #D1F1A9;"> apt install mariadb-server</span></span></code></pre><h6 id="configure-phpmyadmin-to-the-database-server">Configure phpMyAdmin to the database server</h6>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span style="color: #D1F1A9;"> dpkg-reconfigure phpmyadmin</span></span></code></pre>
 <p>Then it asks:</p>
 <ul>
 <li>If I want to configure the "phpmyadmin" database: I opted for "Yes".</li>
@@ -226,47 +227,41 @@ There is normally no need to reload the apache2 webserver, in case of a 404 erro
 <li>For the webserver to reconfigure: I kept "apache2".</li>
 </ul>
 <p>The values are written to <code>/etc/phpmyadmin/config-db.php</code> you can edit them instead of running <code>dpkg-reconfigure</code>.</p>
-<p>You can login on phpMyAdmin from <a rel="noopener" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> using <code>phpmyadmin</code> as the username, and using the password for the user found in <code>/etc/phpmyadmin/config-db.php</code>.</p>
+<p>You can login on phpMyAdmin from <a rel="noopener external" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> using <code>phpmyadmin</code> as the username, and using the password for the user found in <code>/etc/phpmyadmin/config-db.php</code>.</p>
 <p><img src="../phpMyAdmin_Debian_13_Home.png" alt="phpMyAdmin on Debian 13 - Trixie | Home page for the phpmyadmin user" title="phpMyAdmin on Debian 13 - Trixie | Home page for the phpmyadmin user" /></p>
 <p><img src="../phpMyAdmin_Debian_13_table-list.png" alt="phpMyAdmin on Debian 13 - Trixie | Table list for the phpmyadmin user" title="phpMyAdmin on Debian 13 - Trixie | Table list for the phpmyadmin user" /></p>
 <h5 id="allow-no-password-access">Allow no password access ?</h5>
 <p>You might have noticed that you can not access phpMyAdmin using "root" and no password.
-But there is solutions for this. Ref: <a rel="noopener" target="_blank" href="https://stackoverflow.com/questions/5908752/does-phpmyadmin-allownopassword-work-with-mysql-databases">StackOverflow answers to allow no password login</a></p>
+But there is solutions for this. Ref: <a rel="noopener external" target="_blank" href="https://stackoverflow.com/questions/5908752/does-phpmyadmin-allownopassword-work-with-mysql-databases">StackOverflow answers to allow no password login</a></p>
 <p>I recommend adding a custom config file instead of changing the default config file (<code>/etc/phpmyadmin/config.inc.php</code>):</p>
 <p>Create the config file <code>/etc/phpmyadmin/conf.d/no-password.php</code>:</p>
-<pre data-lang="php" style="background-color:#2b303b;color:#c0c5ce;" class="language-php "><code class="language-php" data-lang="php"><span style="color:#ab7967;">&lt;?php
-</span><span>
-</span><span>$</span><span style="color:#bf616a;">i </span><span>= </span><span style="color:#d08770;">1</span><span>;
-</span><span>
-</span><span>$</span><span style="color:#bf616a;">cfg</span><span>[&#39;</span><span style="color:#a3be8c;">Servers</span><span>&#39;][$</span><span style="color:#bf616a;">i</span><span>][&#39;</span><span style="color:#a3be8c;">AllowNoPassword</span><span>&#39;] = </span><span style="color:#d08770;">true</span><span>;
-</span></code></pre>
-<h5 id="change-the-root-password">Change the root password</h5>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="php"><span class="giallo-l"><span style="color: #99FFFF;">&lt;?</span><span>php</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">$i</span><span style="color: #99FFFF;"> =</span><span style="color: #FFC58F;"> 1</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">$cfg</span><span>[</span><span style="color: #D1F1A9;">&#39;Servers&#39;</span><span>][</span><span style="color: #FF9DA4;">$i</span><span>][</span><span style="color: #D1F1A9;">&#39;AllowNoPassword&#39;</span><span>]</span><span style="color: #99FFFF;"> =</span><span style="color: #FFC58F;"> true</span><span>;</span></span></code></pre><h5 id="change-the-root-password">Change the root password</h5>
 <p>Open the MariaDB terminal by running:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> mariadb
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span style="color: #D1F1A9;"> mariadb</span></span></code></pre>
 <p>Then enter the query:</p>
-<pre data-lang="sql" style="background-color:#2b303b;color:#c0c5ce;" class="language-sql "><code class="language-sql" data-lang="sql"><span style="color:#b48ead;">SET</span><span> PASSWORD FOR root@localhost = PASSWORD(&#39;</span><span style="color:#a3be8c;">new_password</span><span>&#39;);
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="sql"><span class="giallo-l"><span style="color: #EBBBFF;">SET PASSWORD FOR root</span><span>@localhost</span><span style="color: #99FFFF;"> =</span><span style="color: #EBBBFF;"> PASSWORD</span><span>(</span><span style="color: #D1F1A9;">&#39;new_password&#39;</span><span>);</span></span></code></pre>
 <p>Quit the MariaDB terminal by using <kbd>CTRL</kbd>+<kbd>C</kbd></p>
 <p>You should be able to login using the password:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mariadb -u</span><span> root</span><span style="color:#bf616a;"> -h</span><span> 127.0.0.1</span><span style="color:#bf616a;"> -p
-</span></code></pre>
-<p>If it works, go to <a rel="noopener" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> and enjoy phpMyAdmin !</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">mariadb</span><span> -u</span><span style="color: #D1F1A9;"> root</span><span> -h</span><span style="color: #FFC58F;"> 127.0.0.1</span><span> -p</span></span></code></pre>
+<p>If it works, go to <a rel="noopener external" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> and enjoy phpMyAdmin !</p>
 <h3 id="installing-more-themes">Installing more themes</h3>
 <p>This method works but could make your installed themes go away with each phpMyAdmin update.
 Sorry, there is no Debian packages for each theme. This is too much work.</p>
-<p>Go to <a rel="noopener" target="_blank" href="https://phpmyadmin.net/themes/#pma_5_2">phpMyAdmin website - themes</a>.
+<p>Go to <a rel="noopener external" target="_blank" href="https://phpmyadmin.net/themes/#pma_5_2">phpMyAdmin website - themes</a>.
 Find one that is compatible with phpMyAdmin 5.2.x</p>
 <p>I will be using Boodark Nord 1.1.0 for this example:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">wget</span><span> https://files.phpmyadmin.net/themes/boodark-nord/1.1.0/boodark-nord-1.1.0.zip</span><span style="color:#bf616a;"> -O</span><span> /tmp/theme.zip
-</span><span style="color:#96b5b4;">cd</span><span> /usr/share/phpmyadmin/themes/
-</span><span style="color:#65737e;"># If needed: sudo apt-get install unzip -y
-</span><span style="color:#bf616a;">unzip</span><span> /tmp/theme.zip
-</span><span style="color:#65737e;"># Should show boodark-nord with all the other themes
-</span><span style="color:#bf616a;">ls -lah
-</span><span style="color:#65737e;"># Cleanup
-</span><span style="color:#bf616a;">rm</span><span> /tmp/theme.zip
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">wget</span><span style="color: #D1F1A9;"> https://files.phpmyadmin.net/themes/boodark-nord/1.1.0/boodark-nord-1.1.0.zip</span><span> -O</span><span style="color: #D1F1A9;"> /tmp/theme.zip</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cd</span><span style="color: #D1F1A9;"> /usr/share/phpmyadmin/themes/</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># If needed: sudo apt-get install unzip -y</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">unzip</span><span style="color: #D1F1A9;"> /tmp/theme.zip</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Should show boodark-nord with all the other themes</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">ls</span><span> -lah</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Cleanup</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">rm</span><span style="color: #D1F1A9;"> /tmp/theme.zip</span></span></code></pre>
 <p><img src="../phpMyAdmin_Debian_13_Home_BooDark_root.png" alt="phpMyAdmin on Debian 13 - Trixie | BooDark theme" title="phpMyAdmin on Debian 13 - Trixie | BooDark theme" /></p>
 <p><img src="../phpMyAdmin_Debian_13_table-list_BooDark.png" alt="phpMyAdmin on Debian 13 - Trixie | BooDark theme on the table list page" title="phpMyAdmin on Debian 13 - Trixie | BooDark theme on the table list page" /></p>
 <h3 id="themes-included-in-phpmyadmin">Themes included in phpMyAdmin</h3>
@@ -293,7 +288,7 @@ Find one that is compatible with phpMyAdmin 5.2.x</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

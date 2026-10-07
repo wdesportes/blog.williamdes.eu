@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Report for September 2025</title>
+        <title>Williamdes&#39;s blog - Report for September 2025</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -43,8 +43,6 @@
 
 
 
-    
-    
 
     
     
@@ -54,6 +52,10 @@
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -104,6 +106,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -154,7 +159,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -191,43 +196,43 @@ I disabled a cron for the <code>ircbot</code> that is not used anymore.
 And did some configuration work on "DMARC mitigation" for all the phpMyAdmin lists.</p>
 <h3 id="on-motranslator">On motranslator</h3>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/4ac3205cabaf1c4f0525c2a49cbd5fe585c87320">4ac3205cab - Improve the exception when the APCu extension is not enabled or installed</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/8f162cb8fda6822fb470d854711b8457c434c583">8f162cb8fd - Add permissions to GitHub workflows token</a> and <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/973e7745c0d349fe68b48e9ba41c89511fa41f12">973e7745c0 - Delete old stale bot config</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/4ac3205cabaf1c4f0525c2a49cbd5fe585c87320">4ac3205cab - Improve the exception when the APCu extension is not enabled or installed</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/8f162cb8fda6822fb470d854711b8457c434c583">8f162cb8fd - Add permissions to GitHub workflows token</a> and <a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/motranslator/commit/973e7745c0d349fe68b48e9ba41c89511fa41f12">973e7745c0 - Delete old stale bot config</a></li>
 </ul>
 <h3 id="debian-packaging">Debian packaging</h3>
 <p>I did some cleaning up and uploaded motranslator as <code>5.4.0-2</code>.</p>
 <p>And for <code>phpmyadmin</code> I sent <code>4:5.2.2-really+dfsg-2</code> to unstable after updating a source file to fix <code>CVE-2025-3573</code> and fixing tests for PHPUnit 12.</p>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/73bcccae78b408898c6f706cd6127b8595281daa">73bcccae78 - CVE-2025-3573 - Update jquery.validate.js to 1.21.0 (in sync with 5.2.2)</a></li>
-<li><a rel="noopener" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/85505ecbb3dad2a07862b3872c8cda264faeeab8">85505ecbb3 - Update tests to run on phpunit 12</a></li>
+<li><a rel="noopener external" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/73bcccae78b408898c6f706cd6127b8595281daa">73bcccae78 - CVE-2025-3573 - Update jquery.validate.js to 1.21.0 (in sync with 5.2.2)</a></li>
+<li><a rel="noopener external" target="_blank" href="https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/85505ecbb3dad2a07862b3872c8cda264faeeab8">85505ecbb3 - Update tests to run on phpunit 12</a></li>
 </ul>
 <h2 id="second-week-37">Second week (37)</h2>
 <ul>
-<li>I fixed the example on the README of <code>twig-i18n-extension</code>: <a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/twig-i18n-extension/commit/5bb71fdb700c47521a6aaf398d36293504d33474">5bb71fdb70 - Fix the example</a>.</li>
+<li>I fixed the example on the README of <code>twig-i18n-extension</code>: <a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/twig-i18n-extension/commit/5bb71fdb700c47521a6aaf398d36293504d33474">5bb71fdb70 - Fix the example</a>.</li>
 </ul>
 <p>I merged some pull-requests:</p>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/e73dbd251cd3e61a5224d67d2990a7e5ed7f9cb1">e73dbd251c - Merge #19612 - Fix #19611 - restore text operators order</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/ae27e63d8ee866bac4fee5821cbafc08de618ddb">ae27e63d8e - Merge #19621 - Fix #19109 - Do not enforce character encoding when checking roles</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/5df6629ff3a46a8befdebd3f9e9a3114ea4eb864">5df6629ff3 - Merge #19089 - Fix #18472 - responsive table edit-box in rtl mode</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/b78182d8acee95c4192cc1be191933f6a9dea26e">b78182d8ac - Merge #19088 - Fix #18437 - SQL editor's alignment in rtl</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/e903b739a7ca998313b520c2eaf665132c103819">e903b739a7 - Merge #19860 - Fix #19859 - Fix deprecated null array offset</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/03961f50df26fda0aaedb35a265474c41891187e">03961f50df - Merge #19861 - Rename PHPMyAdmin to phpMyAdmin</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/e73dbd251cd3e61a5224d67d2990a7e5ed7f9cb1">e73dbd251c - Merge #19612 - Fix #19611 - restore text operators order</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/ae27e63d8ee866bac4fee5821cbafc08de618ddb">ae27e63d8e - Merge #19621 - Fix #19109 - Do not enforce character encoding when checking roles</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/5df6629ff3a46a8befdebd3f9e9a3114ea4eb864">5df6629ff3 - Merge #19089 - Fix #18472 - responsive table edit-box in rtl mode</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/b78182d8acee95c4192cc1be191933f6a9dea26e">b78182d8ac - Merge #19088 - Fix #18437 - SQL editor's alignment in rtl</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/e903b739a7ca998313b520c2eaf665132c103819">e903b739a7 - Merge #19860 - Fix #19859 - Fix deprecated null array offset</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/03961f50df26fda0aaedb35a265474c41891187e">03961f50df - Merge #19861 - Rename PHPMyAdmin to phpMyAdmin</a></li>
 </ul>
 <p>And spent some time on fixing Scrutinizer builds, and enabling QA to have builds too:</p>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/5781a2a1497ef7be3d0d4eef568df9c42fee9e76">5781a2a149 - Adjust php compilation options on Scrutinizer to have all PHP extensions needed</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/4c9519c2bc5e1005ffaa1bd2cedbe248c1b9d98d">4c9519c2bc - Force composer 2 and fix PHP 7.2 compilation</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/b0fa42e042a64aaa0bed7732eb90d482ed70937a">b0fa42e042 - Update Scrutinizer to Ubuntu jammy</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/c0feb46b8eee302dede3af997a7e9d67679a6bb5">c0feb46b8e - Use NodeJS 20 at Scrutinizer (they use nvm) and use Ubuntu Noble for a newer glibc</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/1337a605104e9e13cd4a68eb6729a0320f80de63">1337a60510 - Use NodeJS 23 for Scrutinizer only</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/5781a2a1497ef7be3d0d4eef568df9c42fee9e76">5781a2a149 - Adjust php compilation options on Scrutinizer to have all PHP extensions needed</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/4c9519c2bc5e1005ffaa1bd2cedbe248c1b9d98d">4c9519c2bc - Force composer 2 and fix PHP 7.2 compilation</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/b0fa42e042a64aaa0bed7732eb90d482ed70937a">b0fa42e042 - Update Scrutinizer to Ubuntu jammy</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/c0feb46b8eee302dede3af997a7e9d67679a6bb5">c0feb46b8e - Use NodeJS 20 at Scrutinizer (they use nvm) and use Ubuntu Noble for a newer glibc</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/1337a605104e9e13cd4a68eb6729a0320f80de63">1337a60510 - Use NodeJS 23 for Scrutinizer only</a></li>
 </ul>
 <h2 id="third-week-38">Third week (38)</h2>
 <p>I wrote some documentation updates:</p>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/1c77941bb231361c34c0c7fb08bc03e321a1efcd">1c77941bb2 - Improve the upload progress FAQ</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/51b2069f07add54914efb3cc81ede6104632dfdf">51b2069f07 - Ref #19594 - Better document required PHP extensions</a></li>
-<li><a rel="noopener" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/d713b89050903e78d733c6c2b84a53715f5c82b8">d713b89050 - Fix #19594 - Document new required extensions</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/1c77941bb231361c34c0c7fb08bc03e321a1efcd">1c77941bb2 - Improve the upload progress FAQ</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/51b2069f07add54914efb3cc81ede6104632dfdf">51b2069f07 - Ref #19594 - Better document required PHP extensions</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/commit/d713b89050903e78d733c6c2b84a53715f5c82b8">d713b89050 - Fix #19594 - Document new required extensions</a></li>
 </ul>
 <h2 id="fourth-week-39">Fourth week (39)</h2>
 <p><strong>Nothing to report</strong></p>
@@ -248,7 +253,7 @@ And did some configuration work on "DMARC mitigation" for all the phpMyAdmin lis
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

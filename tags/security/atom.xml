@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title>Williamdes&#x27;s blog - security</title>
+    <title>Williamdes&#39;s blog - security</title>
     <link rel="self" type="application/atom+xml" href="https://blog.williamdes.eu/tags/security/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://blog.williamdes.eu"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
@@ -12,17 +12,13 @@
         <updated>2025-01-26T14:08:00+00:01</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/encrypt-an-existing-debian-system-with-luks/</id>
         
-        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Encrypt an existing Debian system with LUKS&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -31,17 +27,13 @@
         <updated>2023-01-01T14:40:00+00:04</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/"/>
         <id>https://blog.williamdes.eu/Infrastructure/tutorials/install-crowdsec-and-bouncer-on-pfsense/</id>
         
-        <summary type="html">&lt;p&gt;Protect pfSense from bad actors&#x2F;IPs using &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.crowdsec.net&#x2F;&quot;&gt;CrowdSec&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Protect pfSense from bad actors/IPs using &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://www.crowdsec.net/&quot;&gt;CrowdSec&lt;/a&gt;.&lt;/p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -50,17 +42,13 @@
         <updated>2023-10-15T12:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/"/>
         <id>https://blog.williamdes.eu/OpenSource/stories/moving-to-bitwarden-self-hosted-rust-from-lastpass/</id>
         
-        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.lastpass.com&#x2F;&quot;&gt;LastPass&lt;&#x2F;a&gt; to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;bitwarden.com&#x2F;&quot;&gt;Bitwarden&lt;&#x2F;a&gt; after 7 years using LastPass.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Here is a story about how I moved out from &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://www.lastpass.com/&quot;&gt;LastPass&lt;/a&gt; to &lt;a rel=&quot;noopener external&quot; target=&quot;_blank&quot; href=&quot;https://bitwarden.com/&quot;&gt;Bitwarden&lt;/a&gt; after 7 years using LastPass.&lt;/p&gt;</summary>
         
     </entry>
 </feed>

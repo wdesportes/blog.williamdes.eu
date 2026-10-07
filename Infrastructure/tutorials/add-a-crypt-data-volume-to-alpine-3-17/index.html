@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Add a crypt data volume to Alpine 3.17</title>
+        <title>Williamdes&#39;s blog - Add a crypt data volume to Alpine 3.17</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -43,14 +43,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -93,6 +95,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -143,7 +148,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -177,54 +182,43 @@
 <h3 id="creating-partitions">Creating partitions</h3>
 <p>You can even skip this step and use all the disk at once.
 Just rename <code>sdb1</code> to <code>sdb</code> in other commands &amp; scripts.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">fdisk</span><span> /dev/sdb
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">fdisk</span><span style="color: #D1F1A9;"> /dev/sdb</span></span></code></pre>
 <p>Enter the keyboard sequence:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># p
-</span><span style="color:#65737e;"># n
-</span><span style="color:#65737e;"># p
-</span><span style="color:#65737e;"># 1
-</span><span style="color:#65737e;"># ENTER
-</span><span style="color:#65737e;"># ENTER
-</span><span style="color:#65737e;"># p
-</span><span style="color:#65737e;"># w
-</span></code></pre>
-<h3 id="creating-luks-setup">Creating LUKS setup</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">apk</span><span> add</span><span style="color:#bf616a;"> --update</span><span> cryptsetup lsblk
-</span></code></pre>
-<h3 id="creating-the-luks-lvm-ext4-partition">Creating the LUKS/LVM/EXT4 partition</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;"># p</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># n</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># p</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># 1</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># ENTER</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># ENTER</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># p</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># w</span></span></code></pre><h3 id="creating-luks-setup">Creating LUKS setup</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">apk</span><span style="color: #D1F1A9;"> add</span><span> --update</span><span style="color: #D1F1A9;"> cryptsetup lsblk</span></span></code></pre><h3 id="creating-the-luks-lvm-ext4-partition">Creating the LUKS/LVM/EXT4 partition</h3>
 <p>Make the LUKS drive:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cryptsetup</span><span> benchmark</span><span style="color:#bf616a;"> --cipher</span><span>=aes-xts-plain64
-</span><span style="color:#65737e;"># Source: https://wiki.archlinux.org/title/Dm-crypt/Device_encryption#Encryption_options_with_dm-crypt
-</span><span style="color:#65737e;"># Use --pbkdf=pbkdf2 for Grub to be able to unlock at boot time
-</span><span style="color:#bf616a;">cryptsetup</span><span> luksFormat</span><span style="color:#bf616a;"> --cipher</span><span>=aes-xts-plain64</span><span style="color:#bf616a;"> --key-size</span><span>=512</span><span style="color:#bf616a;"> --hash</span><span>=sha512</span><span style="color:#bf616a;"> --pbkdf</span><span>=pbkdf2 /dev/sdx1
-</span><span style="color:#bf616a;">cryptsetup</span><span> luksDump /dev/sdx1
-</span><span style="color:#bf616a;">cryptsetup</span><span> luksOpen /dev/sdx1 enc_storage
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> benchmark</span><span> --cipher=aes-xts-plain64</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Source: https://wiki.archlinux.org/title/Dm-crypt/Device_encryption#Encryption_options_with_dm-crypt</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Use --pbkdf=pbkdf2 for Grub to be able to unlock at boot time</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> luksFormat</span><span> --cipher=aes-xts-plain64 --key-size=512 --hash=sha512 --pbkdf=pbkdf2</span><span style="color: #D1F1A9;"> /dev/sdx1</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> luksDump /dev/sdx1</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> luksOpen /dev/sdx1 enc_storage</span></span></code></pre>
 <p>Create LVM and ext4 into it:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkfs.ext4</span><span> /dev/mapper/enc_storage
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">mkfs.ext4</span><span style="color: #D1F1A9;"> /dev/mapper/enc_storage</span></span></code></pre>
 <p>Mount it:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir</span><span> /mnt/storage
-</span><span style="color:#bf616a;">lsblk
-</span><span style="color:#96b5b4;">echo </span><span style="color:#bf616a;">-e </span><span>&quot;</span><span style="color:#a3be8c;">/dev/mapper/enc_storage\t/mnt/storage\text4\tdefaults\t0\t0\n</span><span>&quot; &gt;&gt; /etc/fstab
-</span><span style="color:#bf616a;">mount -a
-</span><span style="color:#bf616a;">lsblk
-</span><span style="color:#bf616a;">df -h
-</span></code></pre>
-<h4 id="helper-script">Helper script</h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">mkdir</span><span style="color: #D1F1A9;"> /mnt/storage</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">lsblk</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">echo</span><span> -e</span><span style="color: #D1F1A9;"> &quot;/dev/mapper/enc_storage\t/mnt/storage\text4\tdefaults\t0\t0\n&quot;</span><span style="color: #99FFFF;"> &gt;&gt;</span><span style="color: #D1F1A9;"> /etc/fstab</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span> -a</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">lsblk</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">df</span><span> -h</span></span></code></pre><h4 id="helper-script">Helper script</h4>
 <p>I often put this in <code>~/open.sh</code> to help unlocking the system when I have forgot the commands.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/bin/sh -exu
-</span><span>
-</span><span style="color:#bf616a;">cryptsetup</span><span> luksOpen /dev/sdb1 enc_storage
-</span><span style="color:#bf616a;">mount -a -v
-</span><span style="color:#65737e;">#echo &#39;Starting docker&#39;
-</span><span style="color:#65737e;">#rc-service docker start
-</span><span style="color:#65737e;">#echo &#39;Waiting 4sec for Docker to start&#39;
-</span><span style="color:#65737e;">#sleep 4
-</span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">Done !</span><span>&#39;
-</span></code></pre>
-<h4 id="or-crypttab">Or <code>crypttab</code></h4>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;">#!/bin/sh -exu</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">cryptsetup</span><span style="color: #D1F1A9;"> luksOpen /dev/sdb1 enc_storage</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">mount</span><span> -a -v</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#echo &#39;Starting docker&#39;</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#rc-service docker start</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#echo &#39;Waiting 4sec for Docker to start&#39;</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#sleep 4</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">echo</span><span style="color: #D1F1A9;"> &#39;Done !&#39;</span></span></code></pre><h4 id="or-crypttab">Or <code>crypttab</code></h4>
 <p>See: https://manpages.ubuntu.com/manpages/focal/en/man5/crypttab.5.html - <code>initramfs</code> "This option is specific to the Debian crypttab format. It's not supported by systemd." - <code>luks</code> "Force LUKS mode" - <code>discard</code> "Allow using of discards (TRIM) requests for device"</p>
 <p>Use <code>lsblk -o uuid,mountpoint,path | grep -F "/dev/sdb1"</code>
 Add <code>enc_storage UUID=xxx-xxx-xx-xx-xxxx none luks,discard,initramfs</code> to <code>/etc/crypttab</code>
@@ -247,7 +241,7 @@ And <code>update-initramfs -c -k $(uname -r)</code></p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

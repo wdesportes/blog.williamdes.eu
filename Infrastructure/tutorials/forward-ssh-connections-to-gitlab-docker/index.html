@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Forward SSH connections to GitLab running with Docker</title>
+        <title>Williamdes&#39;s blog - Forward SSH connections to GitLab running with Docker</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -48,14 +48,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -98,6 +100,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -150,7 +155,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -185,104 +190,92 @@
 <h2 id="creating-the-git-user-on-the-host-system">Creating the <code>git</code> user on the host system</h2>
 <p>Ensure you have access to <code>docker ps</code> or add yourself to the <code>docker</code> group: <code>sudo usermod -aG docker $USER &amp;&amp; newgrp docker</code>.</p>
 <p>Then create the <code>git</code> user:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> useradd</span><span style="color:#bf616a;"> --uid </span><span>$(</span><span style="color:#bf616a;">docker</span><span> exec gitlab id git</span><span style="color:#bf616a;"> -u</span><span>)</span><span style="color:#bf616a;"> --gid </span><span>$(</span><span style="color:#bf616a;">docker</span><span> exec gitlab id git</span><span style="color:#bf616a;"> -g</span><span>)</span><span style="color:#bf616a;"> --home-dir</span><span> /opt/gitlab/data</span><span style="color:#bf616a;"> --no-create-home</span><span> git
-</span></code></pre>
-<h2 id="creating-the-scripts">Creating the scripts</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span style="color: #D1F1A9;"> useradd</span><span> --uid $(</span><span style="color: #BBDAFF;">docker</span><span style="color: #D1F1A9;"> exec gitlab id git</span><span> -u) --gid $(</span><span style="color: #BBDAFF;">docker</span><span style="color: #D1F1A9;"> exec gitlab id git</span><span> -g) --home-dir</span><span style="color: #D1F1A9;"> /opt/gitlab/data</span><span> --no-create-home</span><span style="color: #D1F1A9;"> git</span></span></code></pre><h2 id="creating-the-scripts">Creating the scripts</h2>
 <p>Create the directory structure on the host system:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir -p</span><span> /opt/gitlab/embedded/service/gitlab-shell/bin
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">mkdir</span><span> -p</span><span style="color: #D1F1A9;"> /opt/gitlab/embedded/service/gitlab-shell/bin</span></span></code></pre>
 <p>Create 3 scripts:</p>
 <ul>
 <li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell</code>:</li>
 </ul>
 <p>This script wraps the GitLab shell access.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env sh
-</span><span>
-</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-eu
-</span><span>
-</span><span style="color:#bf616a;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span> gitlab-shell &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;">#!/usr/bin/env sh</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">set</span><span> -eu</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span style="color: #D1F1A9;"> gitlab-shell &quot;</span><span style="color: #FFC58F;">$@</span><span style="color: #D1F1A9;">&quot;</span></span></code></pre>
 <ul>
 <li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check</code>:</li>
 </ul>
 <p>This script manages asking to GitLab if a key is authorized to access the SSH server.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env sh
-</span><span>
-</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-eu
-</span><span>
-</span><span style="color:#bf616a;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span> gitlab-shell-authorized-keys-check &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;">#!/usr/bin/env sh</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">set</span><span> -eu</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</span><span style="color: #D1F1A9;"> gitlab-shell-authorized-keys-check &quot;</span><span style="color: #FFC58F;">$@</span><span style="color: #D1F1A9;">&quot;</span></span></code></pre>
 <ul>
 <li><code>/opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</code>:</li>
 </ul>
 <p>This script does all the magic of communicating with the GitLab container.</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env bash
-</span><span>
-</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-e
-</span><span>
-</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[[ </span><span>&quot;$</span><span style="color:#bf616a;">1</span><span>&quot; == &quot;</span><span style="color:#a3be8c;">gitlab-shell-authorized-keys-check</span><span>&quot; </span><span style="color:#96b5b4;">]]</span><span>; </span><span style="color:#b48ead;">then
-</span><span>  </span><span style="color:#bf616a;">SCRIPT</span><span>=&quot;$</span><span style="color:#bf616a;">1</span><span style="color:#a3be8c;"> git</span><span>&quot;
-</span><span>  </span><span style="color:#96b5b4;">shift
-</span><span style="color:#b48ead;">elif </span><span style="color:#96b5b4;">[[ </span><span>&quot;$</span><span style="color:#bf616a;">1</span><span>&quot; == &quot;</span><span style="color:#a3be8c;">gitlab-shell</span><span>&quot; </span><span style="color:#96b5b4;">]]</span><span>; </span><span style="color:#b48ead;">then
-</span><span>  </span><span style="color:#bf616a;">SCRIPT</span><span>=&quot;$</span><span style="color:#bf616a;">1</span><span>&quot;
-</span><span>  </span><span style="color:#96b5b4;">shift
-</span><span style="color:#b48ead;">else
-</span><span>  </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">&#39;</span><span>$</span><span style="color:#bf616a;">1</span><span style="color:#a3be8c;">&#39; unknown. Aborting.</span><span>&quot;
-</span><span>  </span><span style="color:#96b5b4;">exit</span><span> 1
-</span><span style="color:#b48ead;">fi
-</span><span>
-</span><span style="color:#96b5b4;">exec</span><span> docker exec -i \
-</span><span>    --env SSH_CONNECTION=&quot;$</span><span style="color:#bf616a;">SSH_CONNECTION</span><span>&quot; \
-</span><span>    --env SSH_CLIENT=&quot;$</span><span style="color:#bf616a;">SSH_CLIENT</span><span>&quot; \
-</span><span>    --env SSH_TTY=&quot;$</span><span style="color:#bf616a;">SSH_TTY</span><span>&quot; \
-</span><span>    --env GIT_SSH=&quot;$</span><span style="color:#bf616a;">GIT_SSH</span><span>&quot; \
-</span><span>    --env SSH_ORIGINAL_COMMAND=&quot;$</span><span style="color:#bf616a;">SSH_ORIGINAL_COMMAND</span><span>&quot; \
-</span><span>    gitlab \
-</span><span>    /opt/gitlab/embedded/service/gitlab-shell/bin/${</span><span style="color:#bf616a;">SCRIPT</span><span>} &quot;$</span><span style="color:#bf616a;">@</span><span>&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #7285B7;">#!/usr/bin/env bash</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">set</span><span> -e</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">if</span><span> [[</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FFC58F;">$1</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #99FFFF;"> ==</span><span style="color: #D1F1A9;"> &quot;gitlab-shell-authorized-keys-check&quot;</span><span> ]];</span><span style="color: #EBBBFF;"> then</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">  SCRIPT</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;">$1</span><span style="color: #D1F1A9;"> git&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  shift</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">elif</span><span> [[</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FFC58F;">$1</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #99FFFF;"> ==</span><span style="color: #D1F1A9;"> &quot;gitlab-shell&quot;</span><span> ]];</span><span style="color: #EBBBFF;"> then</span></span>
+<span class="giallo-l"><span style="color: #FF9DA4;">  SCRIPT</span><span style="color: #99FFFF;">=</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;">$1</span><span style="color: #D1F1A9;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  shift</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">else</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  echo</span><span style="color: #D1F1A9;"> &quot;&#39;</span><span style="color: #FFC58F;">$1</span><span style="color: #D1F1A9;">&#39; unknown. Aborting.&quot;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  exit</span><span style="color: #FFC58F;"> 1</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">fi</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">exec</span><span style="color: #D1F1A9;"> docker exec</span><span> -i</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span>    --env</span><span style="color: #D1F1A9;"> SSH_CONNECTION=&quot;</span><span style="color: #FF9DA4;">$SSH_CONNECTION</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span>    --env</span><span style="color: #D1F1A9;"> SSH_CLIENT=&quot;</span><span style="color: #FF9DA4;">$SSH_CLIENT</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span>    --env</span><span style="color: #D1F1A9;"> SSH_TTY=&quot;</span><span style="color: #FF9DA4;">$SSH_TTY</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span>    --env</span><span style="color: #D1F1A9;"> GIT_SSH=&quot;</span><span style="color: #FF9DA4;">$GIT_SSH</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span>    --env</span><span style="color: #D1F1A9;"> SSH_ORIGINAL_COMMAND=&quot;</span><span style="color: #FF9DA4;">$SSH_ORIGINAL_COMMAND</span><span style="color: #D1F1A9;">&quot;</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">    gitlab</span><span style="color: #FFC58F;"> \</span></span>
+<span class="giallo-l"><span style="color: #D1F1A9;">    /opt/gitlab/embedded/service/gitlab-shell/bin/</span><span>${</span><span style="color: #FF9DA4;">SCRIPT</span><span>}</span><span style="color: #D1F1A9;"> &quot;</span><span style="color: #FFC58F;">$@</span><span style="color: #D1F1A9;">&quot;</span></span></code></pre>
 <ul>
 <li>Ensure <code>gitlab-shell</code> script is owned by <code>git</code>: <code>sudo chown git:git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell</code></li>
 <li>Make all 3 scripts executable: <code>sudo chmod +x /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec</code></li>
 </ul>
 <h3 id="check-the-scripts">Check the scripts</h3>
 <p>I created the following checks:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo -u</span><span> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell
-</span><span style="color:#65737e;"># Only SSH allowed
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span> -u</span><span style="color: #D1F1A9;"> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Only SSH allowed</span></span></code></pre>
 <p>and</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo -u</span><span> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell-authorized-keys-check
-</span><span style="color:#65737e;"># Insufficient arguments. 1. Usage
-</span><span style="color:#65737e;">#	gitlab-shell-authorized-keys-check &lt;expected-username&gt; &lt;actual-username&gt; &lt;key&gt;
-</span></code></pre>
-<h2 id="adjust-the-ssh-server-config">Adjust the ssh server config</h2>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">sudo</span><span> -u</span><span style="color: #D1F1A9;"> git /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-docker-exec gitlab-shell-authorized-keys-check</span></span>
+<span class="giallo-l"><span style="color: #7285B7;"># Insufficient arguments. 1. Usage</span></span>
+<span class="giallo-l"><span style="color: #7285B7;">#	gitlab-shell-authorized-keys-check &lt;expected-username&gt; &lt;actual-username&gt; &lt;key&gt;</span></span></code></pre><h2 id="adjust-the-ssh-server-config">Adjust the ssh server config</h2>
 <p>Finally in <code>/etc/ssh/sshd_config</code> you will need to add:</p>
-<pre data-lang="ssh" style="background-color:#2b303b;color:#c0c5ce;" class="language-ssh "><code class="language-ssh" data-lang="ssh"><span>Match User git
-</span><span>    PermitEmptyPasswords no
-</span><span>    PasswordAuthentication no
-</span><span>    AuthorizedKeysCommand /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check %u %k
-</span><span>    AuthorizedKeysCommandUser git
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>Match User git</span></span>
+<span class="giallo-l"><span>    PermitEmptyPasswords no</span></span>
+<span class="giallo-l"><span>    PasswordAuthentication no</span></span>
+<span class="giallo-l"><span>    AuthorizedKeysCommand /opt/gitlab/embedded/service/gitlab-shell/bin/gitlab-shell-authorized-keys-check %u %k</span></span>
+<span class="giallo-l"><span>    AuthorizedKeysCommandUser git</span></span></code></pre>
 <p>And then <code>sudo service sshd restart</code></p>
 <h2 id="testing-the-ssh-connection">Testing the ssh connection</h2>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> git@instanceHostName
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">ssh</span><span style="color: #D1F1A9;"> git@instanceHostName</span></span></code></pre>
 <p>Example:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> git@10.10.10.1
-</span><span style="color:#bf616a;">PTY</span><span> allocation request failed on channel 0
-</span><span style="color:#bf616a;">Welcome</span><span> to GitLab, @williamdes!
-</span><span style="color:#bf616a;">Connection</span><span> to 10.10.10.1 closed.
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">ssh</span><span style="color: #D1F1A9;"> git@10.10.10.1</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">PTY</span><span style="color: #D1F1A9;"> allocation request failed on channel</span><span style="color: #FFC58F;"> 0</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Welcome</span><span style="color: #D1F1A9;"> to GitLab, @williamdes!</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">Connection</span><span style="color: #D1F1A9;"> to</span><span style="color: #FFC58F;"> 10.10.10.1</span><span style="color: #D1F1A9;"> closed.</span></span></code></pre>
 <p>You can use <code>ssh git@instanceHostName -vv</code> to debug further.
 Be sure to add your SSH public key on your GitLab profile (SSH keys).
 You can check your agent has it loaded by using the command <code>ssh-add -L</code>.
 Bonus: it will display the public key to add on your GitLab account.</p>
 <h2 id="some-references">Some references</h2>
 <ul>
-<li><a rel="noopener" target="_blank" href="https://github.com/sameersbn/docker-gitlab/issues/1517#issuecomment-1481697589">Matthias Baur's solutions</a></li>
-<li><a rel="noopener" target="_blank" href="https://blog.xiaket.org/2017/exposing.ssh.port.in.dockerized.gitlab-ce.html">A blog post from xiaket.org (untested)</a></li>
-<li><a rel="noopener" target="_blank" href="https://gitlab.com/gitlab-org/gitlab/-/blob/v18.2.0-ee/doc/administration/operations/fast_ssh_key_lookup.md">GitLab documentation about fast SSH key lookup</a></li>
-<li><a rel="noopener" target="_blank" href="https://docs.gitlab.com/administration/operations/ssh_certificates/">GitLab documentation about <code>AuthorizedPrincipalsCommand</code></a></li>
-<li><a rel="noopener" target="_blank" href="https://docs.gitea.com/installation/install-with-docker#ssh-container-passthrough">Gitea SSH container passthrough</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/sameersbn/docker-gitlab/issues/1517#issuecomment-1481697589">Matthias Baur's solutions</a></li>
+<li><a rel="noopener external" target="_blank" href="https://blog.xiaket.org/2017/exposing.ssh.port.in.dockerized.gitlab-ce.html">A blog post from xiaket.org (untested)</a></li>
+<li><a rel="noopener external" target="_blank" href="https://gitlab.com/gitlab-org/gitlab/-/blob/v18.2.0-ee/doc/administration/operations/fast_ssh_key_lookup.md">GitLab documentation about fast SSH key lookup</a></li>
+<li><a rel="noopener external" target="_blank" href="https://docs.gitlab.com/administration/operations/ssh_certificates/">GitLab documentation about <code>AuthorizedPrincipalsCommand</code></a></li>
+<li><a rel="noopener external" target="_blank" href="https://docs.gitea.com/installation/install-with-docker#ssh-container-passthrough">Gitea SSH container passthrough</a></li>
 </ul>
 </div>
     <footer class="post-footer">
@@ -303,7 +296,7 @@ Bonus: it will display the public key to add on your GitLab account.</p>
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>

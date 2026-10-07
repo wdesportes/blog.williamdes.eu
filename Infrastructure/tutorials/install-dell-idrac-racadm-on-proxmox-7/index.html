@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Williamdes&#x27;s blog - Install racadm for iDRAC on Proxmox 7&#x2F;8</title>
+        <title>Williamdes&#39;s blog - Install racadm for iDRAC on Proxmox 7/8</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,7 +12,7 @@
 
         <!-- Standard meta tags -->
         <meta name="author" content="William Desportes">
-        <meta name="description" content="Install iDRAC racadm tool on Proxmox 7&#x2F;8">
+        <meta name="description" content="Install iDRAC racadm tool on Proxmox 7/8">
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -22,9 +22,9 @@
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Williamdes's blog">
         
-        <meta property="og:title" content="Install racadm for iDRAC on Proxmox 7&#x2F;8">
+        <meta property="og:title" content="Install racadm for iDRAC on Proxmox 7/8">
         <meta property="og:url" content="https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7">
-        <meta property="og:description" content="Install iDRAC racadm tool on Proxmox 7&#x2F;8">
+        <meta property="og:description" content="Install iDRAC racadm tool on Proxmox 7/8">
         
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2023-05-25T14:10:00+00:02">
@@ -43,14 +43,16 @@
 
 
 
-    
-    
 
     
     
 
     
     
+
+    
+    
+
 
 <script type="application/ld+json">
     {
@@ -93,6 +95,9 @@
         ]
     }
 </script>
+
+
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -100,8 +105,8 @@
     
     
     "url": "https://blog.williamdes.eu/Infrastructure/tutorials/install-dell-idrac-racadm-on-proxmox-7/",
-    "headline": "Install racadm for iDRAC on Proxmox 7&#x2F;8",
-    "alternativeHeadline": "Install racadm for iDRAC on Proxmox 7&#x2F;8",
+    "headline": "Install racadm for iDRAC on Proxmox 7/8",
+    "alternativeHeadline": "Install racadm for iDRAC on Proxmox 7/8",
     "dateCreated": "2023-05-25T14:10:00+0002",
     "datePublished": "2023-05-25T14:10:00+0002",
     "dateModified": "2023-07-06T16:07:00+0002",
@@ -143,7 +148,7 @@
         <header class="header">
             <nav class="nav">
                 
-                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></p>
+                <p class="logo"><a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></p>
                 
                 <ul class="menu">
                     
@@ -155,7 +160,7 @@
             
 <article class="post-single">
     <header class="post-header">
-        <h1 class="post-title">Install racadm for iDRAC on Proxmox 7&#x2F;8</h1>
+        <h1 class="post-title">Install racadm for iDRAC on Proxmox 7/8</h1>
         
         <div class="post-meta">
             Author: <a class="post-author" href="https://williamdes.eu">
@@ -173,51 +178,39 @@
     <div class="post-content"><p>Install iDRAC racadm tool on Proxmox 7/8</p>
 <span id="continue-reading"></span>
 <p>This is how to setup iDRAC's racadm tool on Proxmox 7/8. And iDRAC Service Module(iSM).</p>
-<p>This article is inspired by <a rel="noopener" target="_blank" href="https://linux.dell.com/repo/community/openmanage/">DELL's manual</a> and this <a rel="noopener" target="_blank" href="https://www.ceremade.dauphine.fr/doc/fr/blog/installer-dell-oms">blog post</a>.</p>
+<p>This article is inspired by <a rel="noopener external" target="_blank" href="https://linux.dell.com/repo/community/openmanage/">DELL's manual</a> and this <a rel="noopener external" target="_blank" href="https://www.ceremade.dauphine.fr/doc/fr/blog/installer-dell-oms">blog post</a>.</p>
 <h2 id="install">Install</h2>
 <h3 id="fetch-the-gpg-key">Fetch the GPG key</h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl -fsSL</span><span> https://linux.dell.com/repo/pgp_pubkeys/0x1285491434D8786F.asc | </span><span style="color:#bf616a;">gpg --dearmor -o</span><span> /etc/apt/trusted.gpg.d/dell-apt-key.gpg
-</span></code></pre>
-<h3 id="add-sources-file">Add sources file</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">curl</span><span> -fsSL</span><span style="color: #D1F1A9;"> https://linux.dell.com/repo/pgp_pubkeys/0x1285491434D8786F.asc</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> gpg</span><span> --dearmor -o</span><span style="color: #D1F1A9;"> /etc/apt/trusted.gpg.d/dell-apt-key.gpg</span></span></code></pre><h3 id="add-sources-file">Add sources file</h3>
 <p>Create a file at <code>/etc/apt/sources.list.d/linux.dell.com.sources.list</code> and put the following contents:</p>
-<pre data-lang="deb" style="background-color:#2b303b;color:#c0c5ce;" class="language-deb "><code class="language-deb" data-lang="deb"><span>deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/11000/jammy jammy main
-</span><span># For Proxmox 7
-</span><span>#deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/10300/focal focal main
-</span><span># If you want iDRAC Service Module(iSM)
-</span><span>deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/iSM/5100/bullseye bullseye main
-</span></code></pre>
-<p>The <code>10300</code> (<code>v10.3.0.0</code>) part is the OMSA version found on the matrix available on <a rel="noopener" target="_blank" href="https://linux.dell.com/repo/community/openmanage/">DELL's page</a>.</p>
-<p>If you use the <code>jammy</code> release on a Debian 11 it will throw <code>uses unknown compression for member 'control.tar.zst', giving up</code> at install time. This is explained <a rel="noopener" target="_blank" href="https://unix.stackexchange.com/a/669008/155610">on stackoverflow (stackexchange)</a>.</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/11000/jammy jammy main</span></span>
+<span class="giallo-l"><span># For Proxmox 7</span></span>
+<span class="giallo-l"><span>#deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/10300/focal focal main</span></span>
+<span class="giallo-l"><span># If you want iDRAC Service Module(iSM)</span></span>
+<span class="giallo-l"><span>deb [signed-by=/etc/apt/trusted.gpg.d/dell-apt-key.gpg] http://linux.dell.com/repo/community/openmanage/iSM/5100/bullseye bullseye main</span></span></code></pre>
+<p>The <code>10300</code> (<code>v10.3.0.0</code>) part is the OMSA version found on the matrix available on <a rel="noopener external" target="_blank" href="https://linux.dell.com/repo/community/openmanage/">DELL's page</a>.</p>
+<p>If you use the <code>jammy</code> release on a Debian 11 it will throw <code>uses unknown compression for member 'control.tar.zst', giving up</code> at install time. This is explained <a rel="noopener external" target="_blank" href="https://unix.stackexchange.com/a/669008/155610">on stackoverflow (stackexchange)</a>.</p>
 <h3 id="install-it">Install it</h3>
-<pre data-lang="apt" style="background-color:#2b303b;color:#c0c5ce;" class="language-apt "><code class="language-apt" data-lang="apt"><span>apt-get install srvadmin-idracadm8
-</span><span># If you want iDRAC Service Module(iSM)
-</span><span>apt-get install dcism
-</span></code></pre>
-<h3 id="try-racadm">Try <code>racadm</code></h3>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">racadm</span><span> getsysinfo
-</span></code></pre>
-<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>RAC Information:
-</span><span>RAC Date/Time           = Thu May 25 12:25:11 2023
-</span><span>
-</span><span>Firmware Version        = 2.84.84.84
-</span><span>Firmware Build          = 02
-</span><span>Last Firmware Update    = 05/23/2023 11:30:51
-</span><span>[...]
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>apt-get install srvadmin-idracadm8</span></span>
+<span class="giallo-l"><span># If you want iDRAC Service Module(iSM)</span></span>
+<span class="giallo-l"><span>apt-get install dcism</span></span></code></pre><h3 id="try-racadm">Try <code>racadm</code></h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">racadm</span><span style="color: #D1F1A9;"> getsysinfo</span></span></code></pre><pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>RAC Information:</span></span>
+<span class="giallo-l"><span>RAC Date/Time           = Thu May 25 12:25:11 2023</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>Firmware Version        = 2.84.84.84</span></span>
+<span class="giallo-l"><span>Firmware Build          = 02</span></span>
+<span class="giallo-l"><span>Last Firmware Update    = 05/23/2023 11:30:51</span></span>
+<span class="giallo-l"><span>[...]</span></span></code></pre>
 <p>With <code>dcism</code> and a reboot:</p>
-<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>Host Name               = proxmox.local
-</span><span>OS Name                 = Debian GNU/Linux 12 (bookworm)
-</span><span>OS Version              = 12 (bookworm) Kernel 6.2.16-3-pve (x86_64)
-</span></code></pre>
-<h3 id="on-proxmox-8">On Proxmox 8</h3>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>Host Name               = proxmox.local</span></span>
+<span class="giallo-l"><span>OS Name                 = Debian GNU/Linux 12 (bookworm)</span></span>
+<span class="giallo-l"><span>OS Version              = 12 (bookworm) Kernel 6.2.16-3-pve (x86_64)</span></span></code></pre><h3 id="on-proxmox-8">On Proxmox 8</h3>
 <p>I added back <code>deb http://ftp.debian.org/debian bullseye main</code> to the <code>/etc/apt/sources.list</code> file and ran: <code>apt install libssl1.1</code>.
 Because the binary <code>/opt/dell/srvadmin/iSM/bin/Invoke-iSMPKIHelper</code> needs it (<code>ldd /opt/dell/srvadmin/iSM/bin/Invoke-iSMPKIHelper</code>).</p>
 <p>And after added a file <code>/etc/apt/preferences.d/bullseye</code> with the contents:</p>
-<pre data-lang="rfc822" style="background-color:#2b303b;color:#c0c5ce;" class="language-rfc822 "><code class="language-rfc822" data-lang="rfc822"><span>Package: *
-</span><span>Pin: release n=bullseye
-</span><span>Pin-Priority: -1
-</span></code></pre>
-</div>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>Package: *</span></span>
+<span class="giallo-l"><span>Pin: release n=bullseye</span></span>
+<span class="giallo-l"><span>Pin-Priority: -1</span></span></code></pre></div>
     <footer class="post-footer">
         
         <ul class="post-tags">
@@ -234,7 +227,7 @@ Because the binary <code>/opt/dell/srvadmin/iSM/bin/Invoke-iSMPKIHelper</code> n
         </main>
 
         <footer class="footer">
-            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#x27;s blog</a></span>
+            <span>&copy; 2021-2026 <a href="https://blog.williamdes.eu">Williamdes&#39;s blog</a></span>
             <span>&middot;</span>
             <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a></span>
             <span>&middot;</span>
