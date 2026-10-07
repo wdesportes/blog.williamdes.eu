@@ -1,0 +1,5090 @@
+%PDF-1.3
+%Л­Ро
+1 0 obj
+<</Type/Pages/Count 3/Kids[7 0 R 8 0 R 9 0 R]>>
+endobj
+2 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
+endobj
+3 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Courier/Encoding/WinAnsiEncoding>>
+endobj
+4 0 obj
+<</F5 2 0 R/F9 3 0 R>>
+endobj
+5 0 obj
+<<>>
+endobj
+6 0 obj
+<<>>
+endobj
+7 0 obj
+<</Type/Page/MediaBox[0 0 595 842]/TrimBox[0 0 595 842]/CropBox[0 0 595 842]/Parent 1 0 R/Resources 10 0 R/Contents 11 0 R/Annots[<</Type/Annot/Subtype/Link/Rect[78.53697 384.92676 381.38855 392.92676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/3d0e40a9fb1fe14795b7499cc870c9e9da021780)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 373.22675 395.18933 381.22675]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/0055ec0054dcf73b8b198d01f12a97d9d469b70c)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 361.52673 363.5995 369.52673]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/2f4a40d2082b04a8c53d35e19f21ffc85749c279)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 349.82672 263.55652 357.82672]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/a34bb65806b56a1e5d3c0e92045c3c86dbad9119)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 338.1267 221.29088 346.1267]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/1cb42fd2cc1d5ab3373484cdc5156135ea1e9ef8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 326.4267 247.09166 334.4267]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/885da3d701012af39f167a1286a66ee3e1760dc8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 314.72668 377.37292 322.72668]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/20f708999a53af5016ed1f437ae7071bc365b3d8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 303.02667 274.20496 311.02667]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/ca0510b0c657a0cfb315344cb53760ccfb7bf722)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 291.32666 259.5409 299.32666]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/66df368053676cf0eed3a9e5b68e0363888ec541)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 279.62665 231.95103 287.62665]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/9cf2981078e662398b7d8c91c8464ab765437655)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 267.92664 251.53307 275.92664]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/2c33c5d13d25935f1147c18ccfbcc9a0e85b1c7a)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 256.22662 358.2401 264.22662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/0fdf541cb648cebadc4fd1bcb52c17017c9f5e80)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 244.52661 308.00964 252.52661]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/8c2ccd642a318d421209816605ed46524d6ac5af)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 232.8266 307.13074 240.8266]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/933e5be2ef7b176a643db999b5f58b9eadd093ce)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 221.12659 419.18152 229.12659]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/333493be35b7427ebe4295d81f632ef78984b869)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 209.42657 331.33386 217.42657]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/2b45d9c284140b4b949151b86fca513390b47ad1)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 179.62653 263.11902 187.62653]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/4265b512e6a0089db8bf57215c150a2b91ec6802)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 149.82648 421.412 157.82648]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/d6ca244a186efea43d2c8fc970f7600b399beee6)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 138.12646 373.38464 146.12646]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/86db8ab58c660301275937e438ba2ab297b68770)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 126.42645 299.09167 134.42645]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/7c502c3b40e3921767f905804e262c3068cc7dee)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 114.72644 315.57605 122.72644]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/a46e3f55caa9c75a0705753649346569e2e528eb)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 103.02643 271.12683 111.02643]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/e45432629620a9176ca1b9020eacbf451b2bd0c8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 91.326416 257.75964 99.326416]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[257.75964 91.326416 372.9784 99.326416]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[372.9784 91.326416 384.537 99.326416]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[384.537 91.326416 499.75574 99.326416]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[499.75574 91.326416 501.9784 99.326416]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 80.1264 124.34947 88.1264]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[124.34947 80.1264 138.75182 88.1264]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[138.75182 80.1264 184.56041 88.1264]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/6f66b76c5df54febd95747f0341a2a487ed15ae7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 68.42639 285.76746 76.42639]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/ba3cfc7eb4b0e2d7e938a63ae7e55f298f82f42a)>>/Border[0 0 0]/C[]/H/I>>]>>
+endobj
+8 0 obj
+<</Type/Page/MediaBox[0 0 595 842]/TrimBox[0 0 595 842]/CropBox[0 0 595 842]/Parent 1 0 R/Resources 12 0 R/Contents 13 0 R/Annots[<</Type/Annot/Subtype/Link/Rect[78.53697 56.72638 396.06042 64.72638]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/1b0b27fc2b077a7501b4e8c26b4afd135f1ff1ea)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 769.3268 363.15417 777.3268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/f3363a3f4340c323408fe4c6f348e3c08e8fa5ae)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 757.6268 414.2909 765.6268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/41a223641f44f0c7ee8e10fa08a0b0df52a2fd8e)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 745.92676 387.1659 753.92676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/61c5aed763851ea44232e967f5ab6531549f0e57)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 734.2268 249.27916 742.2268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/ef79edfdac5f0122d650c461866b331bb35a7999)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 722.5268 443.95105 730.5268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/94a9d2f27231dd96153edbd0f3535ef8d6d5ac3b)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 710.8268 368.93152 718.8268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/a59be33d71ad4ea6db2744932e5da24d93de40ba)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 699.1268 331.99792 707.1268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/7985b04f2d291f7694564a076651ec7061b67709)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 687.42676 186.54869 695.42676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/1e3d6b5c0c4818bef7f28f11242d9bff25142c40)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 675.7268 267.53308 683.7268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/13d1c90d44f394d42e35600bd096ce19666fd749)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 664.0268 296.01355 672.0268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/63f642dd025545da1cd16c89cf40c7bf987b56eb)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 652.3268 315.57605 660.3268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/8b2a2c41dcf36c5f589a70cd115936e1c1b07f18)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 640.62683 478.77527 648.62683]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/bd24c09baf05eb1235e3ef07fe16e824010f3398)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 628.9268 311.5526 636.9268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/cda01ff436cbffb975a499b3f013fb6693642780)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 617.2268 337.3651 625.2268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/bf7e0c3d852afb9db608a8d7e35d30575581bbd9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 605.5268 361.3573 613.5268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/5a8ddf18c22b5fbc220e3cd561b474a4a0d7f0e5)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 593.8268 247.54088 601.8268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/8ae46b07fab516786c054d4aead943884f4b05b9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 564.02686 367.14636 572.02686]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/commit/4246b6d9a46db27827f3b1b6d2844bee8d28ee48)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 513.8268 290.6698 521.8268]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/1dee4751920bd3154b0efaceda1b49f6badc8b46)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 502.1268 204.82213 510.1268]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/9ef6d2c91f7ed21ce2d855884cd3cdd345b07e70)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 490.4268 375.58386 498.4268]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/de6bbc71dd8062701757a6bc446e452901052ca6)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 478.72678 352.01355 486.72678]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/449779eedca126e50f50a23a832f376f4fc9753d)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 467.02676 410.31824 475.02676]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/2262bf3f865c70d5919aa9a71c6950f8941320e2)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 455.32675 251.95494 463.32675]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/0a4bcd804ac35cf5730094be5e5eb84b8a0e4891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 443.62674 363.58777 451.62674]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/d86688eb321c83c5b8a8acb805c5872e8c7d91eb)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 431.92673 230.86119 439.92673]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/e8bd19bd16ab74517fddee9bf010a263d03385e1)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 420.2267 240.40416 428.2267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/37e7cddfc9817d5003e9bb4897ebb1473f03b295)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 408.5267 204.38072 416.5267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/6dcd444a193500fb49805e12f3907350066d88e8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[204.38072 408.5267 348.40417 416.5267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/6dcd444a193500fb49805e12f3907350066d88e8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[348.40417 408.5267 359.52136 416.5267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/6dcd444a193500fb49805e12f3907350066d88e8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[359.52136 408.5267 436.33386 416.5267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/6dcd444a193500fb49805e12f3907350066d88e8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 396.8267 255.07213 404.8267]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/d0c93441893f81ddb98a552c7d7291eac4481c27)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 385.12668 418.75183 393.12668]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/e35a7c8ef7716b045d39fc98d07d33fb39aee4f4)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 373.42667 232.8651 381.42667]/A<</S/URI/URI(https://github.com/phpmyadmin/website/commit/5dd00305e74b03947ea33c2249e9c2c3af5cdf7d)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 323.22668 380.4823 331.22668]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/78225ea5cd271d0b21e88b912f4f1c3262d47886)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 311.52667 396.50183 319.52667]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/c4e095418aca8acfb130abf6c66da4170f96003e)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 299.82666 314.2401 307.82666]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/e9063651b9b8a35070a2d525a34484e0678013ec)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 288.12665 240.85338 296.12665]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/f81b04ee4008e6e08b340551f3d1ae7818183ace)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 276.42664 275.52917 284.42664]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/158de5b7bb238976d74d4afea9e47c452691af1d)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 264.72662 287.5409 272.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/shapefile/commit/e2feec1918acbc785c33f4a6b4de1770f292d9f9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 214.52655 145.25963 222.52655]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/64bb41398af50f296fe4a030d6f34f4018ffc317)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 202.82654 389.7909 210.82654]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/572a07c826cb52f9b8ea7d5377516610c17172d6)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 191.12653 211.95103 199.12653]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/816dd331f632f1fd9bf52a86710d24ca9faa292b)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 161.32648 214.63853 169.32648]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/06f43a2c574bcefd5a2a845f5a79127ee93125c9)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 111.1264 238.88072 119.1264]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/3eea1f1ca28a758c1d9d503d9ea0a52cc4689904)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 99.42639 219.96275 107.42639]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/d46f111cc6d7ec6396db3e03b1b33f9f84858113)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 87.72638 145.25963 95.72638]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/d97d65b15694707faa3f50a594c88ebcc6ba6f4f)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 76.02637 218.1815 84.02637]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/304732db657427cb84ca187fddb15ab5f3f25f60)>>/Border[0 0 0]/C[]/H/I>>]>>
+endobj
+9 0 obj
+<</Type/Page/MediaBox[0 0 595 842]/TrimBox[0 0 595 842]/CropBox[0 0 595 842]/Parent 1 0 R/Resources 14 0 R/Contents 15 0 R/Annots[<</Type/Annot/Subtype/Link/Rect[78.53697 64.326355 229.28697 72.326355]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/7b6dfcfd997733ccaf48f0a878346dfec6a4ebf7)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 769.3268 238.88072 777.3268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/7da3bece6fad89d20d3b5f662bb1821b6873a297)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 757.6268 211.50182 765.6268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/7818c84b8f8cdbfcd3e15fa6cd3cc3a3ca7c5232)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 745.92676 247.52916 753.92676]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/e0edcee6ca7bd9c5b8caaff3c363281ff22a1e5e)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 734.2268 145.25963 742.2268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/52aa81580a17663426b2e0d6ad35ec034324336c)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 722.5268 331.2909 730.5268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/0c62c92540c387132ce0614936862cca211a01e1)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 710.8268 253.98228 718.8268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/5b490762e160a232334ed651fa8decded76bed9d)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 699.1268 142.13463 707.1268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/56cea7fc28e0b8fa1e74975b3a543df893cf54c8)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 687.42676 327.7362 695.42676]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/2aafb8664f4d5e45a0f9785d0882752a05ed9a60)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 675.7268 253.53307 683.7268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/23c3e2a107e903255e155c2c4187df730b7761a2)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 664.0268 366.24792 672.0268]/A<</S/URI/URI(https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/ce96ad75c1f5474c0ffdb9788a8905268003c814)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 590.62683 299.5409 598.62683]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/16901)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 578.9268 271.5448 586.9268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20195)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 567.2268 256.8651 575.2268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/15116)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 555.5268 426.3651 563.5268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20140)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 543.8268 242.6151 551.8268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19330)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 532.1268 248.84947 540.1268]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/18292)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 520.42676 318.63464 528.42676]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20174)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 508.72675 385.01746 516.72675]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20139)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 497.02673 419.22058 505.02673]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20142)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 485.32672 378.3651 493.32672]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20141)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 455.5267 296.88074 463.5267]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20235)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 443.8267 209.27916 451.8267]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/17451)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 414.02667 313.33777 422.02667]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20182)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 402.32666 275.53308 410.32666]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20121)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 390.62665 529.27136 398.62665]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20153)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 379.42664 123.44713 387.42664]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20153)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 367.72662 154.13853 375.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[154.13853 367.72662 269.3573 375.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[269.3573 367.72662 271.57996 375.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[271.57996 367.72662 386.7987 375.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[386.7987 367.72662 513.9315 375.72662]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/19891)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 356.0266 347.95886 364.0266]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20171)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 344.3266 356.9276 352.3266]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20102)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 332.6266 266.63855 340.6266]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20134)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 320.92657 197.26353 328.92657]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20247)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 309.22656 403.1776 317.22656]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20245)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 279.4265 237.9315 287.4265]/A<</S/URI/URI(https://github.com/phpmyadmin/phpmyadmin/issues/20181)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 229.22644 284.4198 237.22644]/A<</S/URI/URI(https://github.com/phpmyadmin/docker/issues/467)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 179.02637 223.96275 187.02637]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/196)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 167.32635 226.63072 175.32635]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/188)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 155.62634 266.1776 163.62634]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/176)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 143.92633 315.03308 151.92633]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/189)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 132.22632 180.369 140.22632]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/135)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 120.526306 138.119 128.5263]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/190)>>/Border[0 0 0]/C[]/H/I>><</Type/Annot/Subtype/Link/Rect[78.53697 108.826294 271.1073 116.826294]/A<</S/URI/URI(https://github.com/phpmyadmin/website/issues/191)>>/Border[0 0 0]/C[]/H/I>>]>>
+endobj
+10 0 obj
+<</Font 4 0 R/XObject 5 0 R/ExtGState 6 0 R>>
+endobj
+11 0 obj
+<</Length 19379>>stream
+q
+BT
+182.86584 761.62683 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Consulting Services for phpMyAdmin) Tj
+ET
+Q
+q
+BT
+64.063 740.42676 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+(Report - March 2026) Tj
+ET
+Q
+q
+BT
+64.063 720.02686 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+(Overview) Tj
+ET
+Q
+q
+BT
+64.063 705.82684 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(In March I merged and reviewed a lot of contributions, did some issues triage, kept up with the Debian packaging of our ) Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+(dependencies, and reworked the website.) Tj
+ET
+Q
+q
+BT
+64.063 673.22687 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<4669727374207765656B2028313029> Tj
+ET
+Q
+q
+BT
+64.063 659.02686 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I merged contributions after reviewing them. I also did some issues triage. I updated the psalm and phpstan baselines, and cleaned ) Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+<7570207468652072656C656173652070726F6365737320287468652072656C65617365207363726970742C20746865206C697374206F662066696C6573206578636C756465642066726F6D20612074617262616C6C2C20616E642072656D6F76696E67206C6566746F7665722076656E646F72206465762066696C6573292E204920616C736F20> Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+(adjusted the GIS test and the coding standard.) Tj
+ET
+Q
+q
+BT
+64.063 621.4269 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(On the packaging side, I uploaded tcpdf 6.11.0 and 6.11.2 to unstable, and bumped the copyright years for mariadb-mysql-kbs.) Tj
+ET
+Q
+q
+BT
+64.063 600.0269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<5365636F6E64207765656B2028313129> Tj
+ET
+Q
+q
+BT
+64.063 585.8269 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(A quieter week. I added a SQL button to the database list.) Tj
+ET
+Q
+q
+BT
+64.063 564.4269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<5468697264207765656B2028313229> Tj
+ET
+Q
+q
+BT
+64.063 550.22687 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I merged contributions after reviewing them. I also did some issues triage. I fixed several XML import problems and refactored how ) Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+(the default storage engine is retrieved, refactored the File class, and did the QA_5_2 backports along with a PHPStan update.) Tj
+ET
+Q
+q
+BT
+64.063 523.82684 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+<4F6E2074686520776562736974652049207265776F726B6564207468652073706F6E736F727320286D6F766564207468656D20696E746F206120646174612066696C652C2068616E646C656420706C7572616C7320616E642072656C2061747472696275746573292C2064726F7070656420> Tj
+T*
+0 0 0 rg
+/F5 8 Tf
+(planet.phpmyadmin.net, improved the CDN error handling and updated the layout with colour modes and the removal of jQuery.) Tj
+ET
+Q
+q
+BT
+64.063 497.42682 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I also updated the CI PHP versions on shapefile.) Tj
+ET
+Q
+q
+BT
+64.063 476.0268 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<466F75727468207765656B2028313329> Tj
+ET
+Q
+q
+BT
+64.063 461.82684 Td
+11.2 TL
+0 0 0 rg
+0 0 0 rg
+/F5 8 Tf
+(I merged contributions after reviewing them. I also did some issues triage. And I sent mariadb-mysql-kbs 1.3.0-4 to unstable.) Tj
+ET
+Q
+q
+BT
+263.0275 438.4268 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Commit list) Tj
+ET
+Q
+q
+BT
+64.063 417.2268 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F7068706D7961646D696E202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 398.82675 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 10) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 387.32675 m
+66.063835 386.92877 l
+65.83839 386.59137 l
+65.500984 386.3659 l
+65.103 386.28674 l
+64.70501 386.3659 l
+64.36761 386.59137 l
+64.14216 386.92877 l
+64.062996 387.32675 l
+64.14216 387.72473 l
+64.36761 388.06213 l
+64.70501 388.2876 l
+65.103 388.36676 l
+65.500984 388.2876 l
+65.83839 388.06213 l
+66.063835 387.72473 l
+h
+f
+Q
+q
+BT
+78.53698 384.92682 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(3d0e40a9fb - Merge #20223 - Fix #17451 - fetchValue call with connection parameter) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 383.9668 m
+381.38855 383.9668 l
+S
+Q
+q
+0 0 0 rg
+66.143 375.62674 m
+66.063835 375.22876 l
+65.83839 374.89136 l
+65.500984 374.6659 l
+65.103 374.58673 l
+64.70501 374.6659 l
+64.36761 374.89136 l
+64.14216 375.22876 l
+64.062996 375.62674 l
+64.14216 376.02472 l
+64.36761 376.36212 l
+64.70501 376.5876 l
+65.103 376.66675 l
+65.500984 376.5876 l
+65.83839 376.36212 l
+66.063835 376.02472 l
+h
+f
+Q
+q
+BT
+78.53698 373.22675 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(0055ec0054 - Merge #20217 - Fix #19330 - Show original value instead of negative value) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 372.26678 m
+395.1894 372.26678 l
+S
+Q
+q
+0 0 0 rg
+66.143 363.92673 m
+66.063835 363.52875 l
+65.83839 363.19135 l
+65.500984 362.96588 l
+65.103 362.88672 l
+64.70501 362.96588 l
+64.36761 363.19135 l
+64.14216 363.52875 l
+64.062996 363.92673 l
+64.14216 364.3247 l
+64.36761 364.6621 l
+64.70501 364.88757 l
+65.103 364.96674 l
+65.500984 364.88757 l
+65.83839 364.6621 l
+66.063835 364.3247 l
+h
+f
+Q
+q
+BT
+78.53698 361.52676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2f4a40d208 - Merge #20216 - Fix #20140 - Fix data.responseJSON is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 360.56677 m
+363.59955 360.56677 l
+S
+Q
+q
+0 0 0 rg
+66.143 352.2267 m
+66.063835 351.82874 l
+65.83839 351.49133 l
+65.500984 351.26587 l
+65.103 351.1867 l
+64.70501 351.26587 l
+64.36761 351.49133 l
+64.14216 351.82874 l
+64.062996 352.2267 l
+64.14216 352.6247 l
+64.36761 352.9621 l
+64.70501 353.18756 l
+65.103 353.26672 l
+65.500984 353.18756 l
+65.83839 352.9621 l
+66.063835 352.6247 l
+h
+f
+Q
+q
+BT
+78.53698 349.82675 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(a34bb65806 - Update the gis test & coding standard) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 348.86676 m
+263.55655 348.86676 l
+S
+Q
+q
+0 0 0 rg
+66.143 340.5267 m
+66.063835 340.12872 l
+65.83839 339.79132 l
+65.500984 339.56586 l
+65.103 339.4867 l
+64.70501 339.56586 l
+64.36761 339.79132 l
+64.14216 340.12872 l
+64.062996 340.5267 l
+64.14216 340.92468 l
+64.36761 341.2621 l
+64.70501 341.48755 l
+65.103 341.5667 l
+65.500984 341.48755 l
+65.83839 341.2621 l
+66.063835 340.92468 l
+h
+f
+Q
+q
+BT
+78.53698 338.12674 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(1cb42fd2cc - Update the psalm baseline) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 337.16675 m
+221.29091 337.16675 l
+S
+Q
+q
+0 0 0 rg
+66.143 328.82672 m
+66.063835 328.4287 l
+65.83839 328.0913 l
+65.500984 327.8659 l
+65.103 327.78674 l
+64.70501 327.8659 l
+64.36761 328.0913 l
+64.14216 328.4287 l
+64.062996 328.82672 l
+64.14216 329.22473 l
+64.36761 329.56213 l
+64.70501 329.78754 l
+65.103 329.8667 l
+65.500984 329.78754 l
+65.83839 329.56213 l
+66.063835 329.22473 l
+h
+f
+Q
+q
+BT
+78.53698 326.42673 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(885da3d701 - Cleanup remove vendor dev files) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 325.4667 m
+247.09167 325.4667 l
+S
+Q
+q
+0 0 0 rg
+66.143 317.1267 m
+66.063835 316.7287 l
+65.83839 316.3913 l
+65.500984 316.1659 l
+65.103 316.08673 l
+64.70501 316.1659 l
+64.36761 316.3913 l
+64.14216 316.7287 l
+64.062996 317.1267 l
+64.14216 317.52472 l
+64.36761 317.86212 l
+64.70501 318.08752 l
+65.103 318.1667 l
+65.500984 318.08752 l
+65.83839 317.86212 l
+66.063835 317.52472 l
+h
+f
+Q
+q
+BT
+78.53698 314.7267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20f708999a - Merge #20215 - Fix #20174 - Bump tracekit version from 0.4.7 to 0.4.9) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 313.7667 m
+377.373 313.7667 l
+S
+Q
+q
+0 0 0 rg
+66.143 305.4267 m
+66.063835 305.0287 l
+65.83839 304.69128 l
+65.500984 304.46588 l
+65.103 304.38672 l
+64.70501 304.46588 l
+64.36761 304.69128 l
+64.14216 305.0287 l
+64.062996 305.4267 l
+64.14216 305.8247 l
+64.36761 306.1621 l
+64.70501 306.3875 l
+65.103 306.46667 l
+65.500984 306.3875 l
+65.83839 306.1621 l
+66.063835 305.8247 l
+h
+f
+Q
+q
+BT
+78.53698 303.0267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(ca0510b0c6 - Cleanup the list of vendor files to remove) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 302.06668 m
+274.205 302.06668 l
+S
+Q
+q
+0 0 0 rg
+66.143 293.72668 m
+66.063835 293.32867 l
+65.83839 292.99127 l
+65.500984 292.76587 l
+65.103 292.6867 l
+64.70501 292.76587 l
+64.36761 292.99127 l
+64.14216 293.32867 l
+64.062996 293.72668 l
+64.14216 294.1247 l
+64.36761 294.4621 l
+64.70501 294.6875 l
+65.103 294.76666 l
+65.500984 294.6875 l
+65.83839 294.4621 l
+66.063835 294.1247 l
+h
+f
+Q
+q
+BT
+78.53698 291.3267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(66df368053 - Exclude one dev file from the release) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 290.36664 m
+259.54092 290.36664 l
+S
+Q
+q
+0 0 0 rg
+66.143 282.02667 m
+66.063835 281.62866 l
+65.83839 281.29126 l
+65.500984 281.06586 l
+65.103 280.9867 l
+64.70501 281.06586 l
+64.36761 281.29126 l
+64.14216 281.62866 l
+64.062996 282.02667 l
+64.14216 282.42468 l
+64.36761 282.7621 l
+64.70501 282.9875 l
+65.103 283.06665 l
+65.500984 282.9875 l
+65.83839 282.7621 l
+66.063835 282.42468 l
+h
+f
+Q
+q
+BT
+78.53698 279.62668 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(9cf2981078 - Fix typos in create-release.sh) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 278.66666 m
+231.95107 278.66666 l
+S
+Q
+q
+0 0 0 rg
+66.143 270.32666 m
+66.063835 269.92865 l
+65.83839 269.59125 l
+65.500984 269.36584 l
+65.103 269.28668 l
+64.70501 269.36584 l
+64.36761 269.59125 l
+64.14216 269.92865 l
+64.062996 270.32666 l
+64.14216 270.72467 l
+64.36761 271.06207 l
+64.70501 271.28748 l
+65.103 271.36664 l
+65.500984 271.28748 l
+65.83839 271.06207 l
+66.063835 270.72467 l
+h
+f
+Q
+q
+BT
+78.53698 267.92667 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2c33c5d13d - Update the list of release excludes) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 266.96664 m
+251.5331 266.96664 l
+S
+Q
+q
+0 0 0 rg
+66.143 258.62665 m
+66.063835 258.22864 l
+65.83839 257.89124 l
+65.500984 257.66583 l
+65.103 257.58667 l
+64.70501 257.66583 l
+64.36761 257.89124 l
+64.14216 258.22864 l
+64.062996 258.62665 l
+64.14216 259.02466 l
+64.36761 259.36206 l
+64.70501 259.58746 l
+65.103 259.66663 l
+65.500984 259.58746 l
+65.83839 259.36206 l
+66.063835 259.02466 l
+h
+f
+Q
+q
+BT
+78.53698 256.22665 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(0fdf541cb6 - Merge #20199 - Fix #18303 - Fix indexDialogPreviewModal is null) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 255.26663 m
+358.24014 255.26663 l
+S
+Q
+q
+0 0 0 rg
+66.143 246.92664 m
+66.063835 246.52863 l
+65.83839 246.19122 l
+65.500984 245.96582 l
+65.103 245.88666 l
+64.70501 245.96582 l
+64.36761 246.19122 l
+64.14216 246.52863 l
+64.062996 246.92664 l
+64.14216 247.32465 l
+64.36761 247.66205 l
+64.70501 247.88745 l
+65.103 247.96661 l
+65.500984 247.88745 l
+65.83839 247.66205 l
+66.063835 247.32465 l
+h
+f
+Q
+q
+BT
+78.53698 244.52663 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(8c2ccd642a - Merge #20200 - Fix #20139 - Fix data is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 243.56662 m
+308.00964 243.56662 l
+S
+Q
+q
+0 0 0 rg
+66.143 235.22662 m
+66.063835 234.82861 l
+65.83839 234.49121 l
+65.500984 234.26581 l
+65.103 234.18665 l
+64.70501 234.26581 l
+64.36761 234.49121 l
+64.14216 234.82861 l
+64.062996 235.22662 l
+64.14216 235.62463 l
+64.36761 235.96204 l
+64.70501 236.18744 l
+65.103 236.2666 l
+65.500984 236.18744 l
+65.83839 235.96204 l
+66.063835 235.62463 l
+h
+f
+Q
+q
+BT
+78.53698 232.82661 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(933e5be2ef - Merge #20201 - Fix #20141 - Fix data is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 231.8666 m
+307.13074 231.8666 l
+S
+Q
+q
+0 0 0 rg
+66.143 223.52661 m
+66.063835 223.1286 l
+65.83839 222.7912 l
+65.500984 222.5658 l
+65.103 222.48663 l
+64.70501 222.5658 l
+64.36761 222.7912 l
+64.14216 223.1286 l
+64.062996 223.52661 l
+64.14216 223.92462 l
+64.36761 224.26202 l
+64.70501 224.48743 l
+65.103 224.56659 l
+65.500984 224.48743 l
+65.83839 224.26202 l
+66.063835 223.92462 l
+h
+f
+Q
+q
+BT
+78.53698 221.1266 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(333493be35 - Merge #20203 - Fix #20142 - Unregister all click events when the modal is hidden) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 220.16658 m
+419.18155 220.16658 l
+S
+Q
+q
+0 0 0 rg
+66.143 211.8266 m
+66.063835 211.42859 l
+65.83839 211.09119 l
+65.500984 210.86578 l
+65.103 210.78662 l
+64.70501 210.86578 l
+64.36761 211.09119 l
+64.14216 211.42859 l
+64.062996 211.8266 l
+64.14216 212.22461 l
+64.36761 212.56201 l
+64.70501 212.78741 l
+65.103 212.86658 l
+65.500984 212.78741 l
+65.83839 212.56201 l
+66.063835 212.22461 l
+h
+f
+Q
+q
+BT
+78.53698 209.4266 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2b45d9c284 - Merge #20209 - Don't show invalid Gis download options) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 208.46657 m
+331.3339 208.46657 l
+S
+Q
+q
+BT
+64.063 193.52657 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 11) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 182.02655 m
+66.063835 181.62854 l
+65.83839 181.29114 l
+65.500984 181.06573 l
+65.103 180.98657 l
+64.70501 181.06573 l
+64.36761 181.29114 l
+64.14216 181.62854 l
+64.062996 182.02655 l
+64.14216 182.42456 l
+64.36761 182.76196 l
+64.70501 182.98737 l
+65.103 183.06653 l
+65.500984 182.98737 l
+65.83839 182.76196 l
+66.063835 182.42456 l
+h
+f
+Q
+q
+BT
+78.53698 179.62654 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(4265b512e6 - Add a SQL button to the database list) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 178.66652 m
+263.11905 178.66652 l
+S
+Q
+q
+BT
+64.063 163.72652 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 152.2265 m
+66.063835 151.82849 l
+65.83839 151.49109 l
+65.500984 151.26569 l
+65.103 151.18652 l
+64.70501 151.26569 l
+64.36761 151.49109 l
+64.14216 151.82849 l
+64.062996 152.2265 l
+64.14216 152.62451 l
+64.36761 152.96191 l
+64.70501 153.18732 l
+65.103 153.26648 l
+65.500984 153.18732 l
+65.83839 152.96191 l
+66.063835 152.62451 l
+h
+f
+Q
+q
+BT
+78.53698 149.82649 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(d6ca244a18 - Merge #20214 - Fix #20134 - Undefined array key 0 when there are no statements) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 148.86647 m
+421.41202 148.86647 l
+S
+Q
+q
+0 0 0 rg
+66.143 140.52649 m
+66.063835 140.12848 l
+65.83839 139.79108 l
+65.500984 139.56567 l
+65.103 139.48651 l
+64.70501 139.56567 l
+64.36761 139.79108 l
+64.14216 140.12848 l
+64.062996 140.52649 l
+64.14216 140.9245 l
+64.36761 141.2619 l
+64.70501 141.4873 l
+65.103 141.56647 l
+65.500984 141.4873 l
+65.83839 141.2619 l
+66.063835 140.9245 l
+h
+f
+Q
+q
+BT
+78.53698 138.12648 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(86db8ab58c - Merge #20161 - Fix #20102 - Show grid edit hint for truncated values) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 137.16646 m
+373.38467 137.16646 l
+S
+Q
+q
+0 0 0 rg
+66.143 128.82648 m
+66.063835 128.42847 l
+65.83839 128.09106 l
+65.500984 127.86566 l
+65.103 127.7865 l
+64.70501 127.86566 l
+64.36761 128.09106 l
+64.14216 128.42847 l
+64.062996 128.82648 l
+64.14216 129.22449 l
+64.36761 129.56189 l
+64.70501 129.7873 l
+65.103 129.86646 l
+65.500984 129.7873 l
+65.83839 129.56189 l
+66.063835 129.22449 l
+h
+f
+Q
+q
+BT
+78.53698 126.42646 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(7c502c3b40 - Merge #20242 - Fix ImportXML existence check) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 125.466446 m
+299.0917 125.466446 l
+S
+Q
+q
+0 0 0 rg
+66.143 117.126465 m
+66.063835 116.728455 l
+65.83839 116.39105 l
+65.500984 116.16565 l
+65.103 116.08649 l
+64.70501 116.16565 l
+64.36761 116.39105 l
+64.14216 116.728455 l
+64.062996 117.126465 l
+64.14216 117.524475 l
+64.36761 117.86188 l
+64.70501 118.08728 l
+65.103 118.16644 l
+65.500984 118.08728 l
+65.83839 117.86188 l
+66.063835 117.524475 l
+h
+f
+Q
+q
+BT
+78.53698 114.726456 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(a46e3f55ca - Fix tests after #20227 - for the default storage engine) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 113.766426 m
+315.57608 113.766426 l
+S
+Q
+q
+0 0 0 rg
+66.143 105.42645 m
+66.063835 105.02844 l
+65.83839 104.69104 l
+65.500984 104.46564 l
+65.103 104.386475 l
+64.70501 104.46564 l
+64.36761 104.69104 l
+64.14216 105.02844 l
+64.062996 105.42645 l
+64.14216 105.82446 l
+64.36761 106.161865 l
+64.70501 106.38727 l
+65.103 106.46643 l
+65.500984 106.38727 l
+65.83839 106.161865 l
+66.063835 105.82446 l
+h
+f
+Q
+q
+BT
+78.53698 103.026436 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(e454326296 - Update the phpstan and psalm baseline) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 102.066414 m
+271.12686 102.066414 l
+S
+Q
+q
+0 0 0 rg
+66.143 93.72644 m
+66.063835 93.32843 l
+65.83839 92.99103 l
+65.500984 92.765625 l
+65.103 92.68646 l
+64.70501 92.765625 l
+64.36761 92.99103 l
+64.14216 93.32843 l
+64.062996 93.72644 l
+64.14216 94.12445 l
+64.36761 94.46185 l
+64.70501 94.687256 l
+65.103 94.76642 l
+65.500984 94.687256 l
+65.83839 94.46185 l
+66.063835 94.12445 l
+h
+f
+Q
+q
+BT
+78.53698 91.32642 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(6f66b76c5d - Merge #20105 - Fix #19891 - invalid ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+($cfg['Export']['format']) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+( or ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+($cfg['Import']['format']) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+( ) Tj
+T*
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(defaulting to ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+(sql) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+( in dropdown) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 90.3664 m
+257.75967 90.3664 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+257.75967 90.3664 m
+372.97845 90.3664 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+372.97845 90.3664 m
+384.53702 90.3664 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+384.53702 90.3664 m
+499.7558 90.3664 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+499.7558 90.3664 m
+501.97845 90.3664 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 79.16639 m
+124.34948 79.16639 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+124.34948 79.16639 m
+138.75183 79.16639 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+138.75183 79.16639 m
+184.56042 79.16639 l
+S
+Q
+q
+0 0 0 rg
+66.143 70.826416 m
+66.063835 70.428406 l
+65.83839 70.091 l
+65.500984 69.8656 l
+65.103 69.78644 l
+64.70501 69.8656 l
+64.36761 70.091 l
+64.14216 70.428406 l
+64.062996 70.826416 l
+64.14216 71.22443 l
+64.36761 71.56183 l
+64.70501 71.78723 l
+65.103 71.866394 l
+65.500984 71.78723 l
+65.83839 71.56183 l
+66.063835 71.22443 l
+h
+f
+Q
+q
+BT
+78.53698 68.42639 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(ba3cfc7eb4 - Merge #20154 - Fix gis export to pdf and svg) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 67.46637 m
+285.7675 67.46637 l
+S
+Q
+q
+0 0 0 rg
+66.143 59.126404 m
+66.063835 58.728394 l
+65.83839 58.39099 l
+65.500984 58.16559 l
+65.103 58.086426 l
+64.70501 58.16559 l
+64.36761 58.39099 l
+64.14216 58.728394 l
+64.062996 59.126404 l
+64.14216 59.524414 l
+64.36761 59.861816 l
+64.70501 60.08722 l
+65.103 60.16638 l
+65.500984 60.08722 l
+65.83839 59.861816 l
+66.063835 59.524414 l
+h
+f
+Q
+q
+BT
+78.53698 56.726383 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(1b0b27fc2b - Remove properties_num_columns from templates, not needed after #20227) Tj
+ET
+Q
+endstream 
+endobj
+12 0 obj
+<</Font 4 0 R/XObject 5 0 R/ExtGState 6 0 R>>
+endobj
+13 0 obj
+<</Length 28532>>stream
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 55.766365 m
+396.06046 55.766365 l
+S
+Q
+q
+0 0 0 rg
+66.143 771.7268 m
+66.063835 771.3288 l
+65.83839 770.9914 l
+65.500984 770.7659 l
+65.103 770.68677 l
+64.70501 770.7659 l
+64.36761 770.9914 l
+64.14216 771.3288 l
+64.062996 771.7268 l
+64.14216 772.12476 l
+64.36761 772.46216 l
+64.70501 772.6876 l
+65.103 772.7668 l
+65.500984 772.6876 l
+65.83839 772.46216 l
+66.063835 772.12476 l
+h
+f
+Q
+q
+BT
+78.53698 769.3269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(f3363a3f43 - Merge #20227 - Fix #20171 - Refactor default engine retrieval logic) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 768.3668 m
+363.1542 768.3668 l
+S
+Q
+q
+0 0 0 rg
+66.143 760.0268 m
+66.063835 759.6288 l
+65.83839 759.2914 l
+65.500984 759.0659 l
+65.103 758.98676 l
+64.70501 759.0659 l
+64.36761 759.2914 l
+64.14216 759.6288 l
+64.062996 760.0268 l
+64.14216 760.42474 l
+64.36761 760.76215 l
+64.70501 760.9876 l
+65.103 761.0668 l
+65.500984 760.9876 l
+65.83839 760.76215 l
+66.063835 760.42474 l
+h
+f
+Q
+q
+BT
+78.53698 757.6269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(41a223641f - Merge #20241 - Add required referrer when loading tiles from openstreetmap.org) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 756.6668 m
+414.29092 756.6668 l
+S
+Q
+q
+0 0 0 rg
+66.143 748.3268 m
+66.063835 747.9288 l
+65.83839 747.5914 l
+65.500984 747.36597 l
+65.103 747.2868 l
+64.70501 747.36597 l
+64.36761 747.5914 l
+64.14216 747.9288 l
+64.062996 748.3268 l
+64.14216 748.7248 l
+64.36761 749.0622 l
+64.70501 749.2876 l
+65.103 749.36676 l
+65.500984 749.2876 l
+65.83839 749.0622 l
+66.063835 748.7248 l
+h
+f
+Q
+q
+BT
+78.53698 745.92676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(61c5aed763 - Merge #20170 - Fix #20153: Handle missing database tag in XML import) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 744.9668 m
+387.16595 744.9668 l
+S
+Q
+q
+0 0 0 rg
+66.143 736.6268 m
+66.063835 736.2288 l
+65.83839 735.8914 l
+65.500984 735.66595 l
+65.103 735.5868 l
+64.70501 735.66595 l
+64.36761 735.8914 l
+64.14216 736.2288 l
+64.062996 736.6268 l
+64.14216 737.0248 l
+64.36761 737.3622 l
+64.70501 737.58765 l
+65.103 737.6668 l
+65.500984 737.58765 l
+65.83839 737.3622 l
+66.063835 737.0248 l
+h
+f
+Q
+q
+BT
+78.53698 734.22687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(ef79edfdac - Assert SQL queries for import XML) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 733.2668 m
+249.27919 733.2668 l
+S
+Q
+q
+0 0 0 rg
+66.143 724.92676 m
+66.063835 724.5288 l
+65.83839 724.1914 l
+65.500984 723.96594 l
+65.103 723.8868 l
+64.70501 723.96594 l
+64.36761 724.1914 l
+64.14216 724.5288 l
+64.062996 724.92676 l
+64.14216 725.32477 l
+64.36761 725.6622 l
+64.70501 725.88763 l
+65.103 725.9668 l
+65.500984 725.88763 l
+65.83839 725.6622 l
+66.063835 725.32477 l
+h
+f
+Q
+q
+BT
+78.53698 722.52686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<39346139643266323732202D204669782022496D706F7274586D6C3A3A646F496D706F727428293A204E6F6465206E6F206C6F6E6765722065786973747322207768656E20696D706F7274696E6720584D4C2077697468206E6F206461746162617365> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 721.56683 m
+443.95108 721.56683 l
+S
+Q
+q
+0 0 0 rg
+66.143 713.2268 m
+66.063835 712.8288 l
+65.83839 712.4914 l
+65.500984 712.2659 l
+65.103 712.18677 l
+64.70501 712.2659 l
+64.36761 712.4914 l
+64.14216 712.8288 l
+64.062996 713.2268 l
+64.14216 713.62476 l
+64.36761 713.96216 l
+64.70501 714.1876 l
+65.103 714.2668 l
+65.500984 714.1876 l
+65.83839 713.96216 l
+66.063835 713.62476 l
+h
+f
+Q
+q
+BT
+78.53698 710.82684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<61353962653333643731202D204261636B706F727420584D4C20746573747320666F72206E6F20646174616261736520282332303135332920616E6420696D70726F7665204749532074657374> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 709.8668 m
+368.93155 709.8668 l
+S
+Q
+q
+0 0 0 rg
+66.143 701.5268 m
+66.063835 701.1288 l
+65.83839 700.7914 l
+65.500984 700.5659 l
+65.103 700.4868 l
+64.70501 700.5659 l
+64.36761 700.7914 l
+64.14216 701.1288 l
+64.062996 701.5268 l
+64.14216 701.9248 l
+64.36761 702.2622 l
+64.70501 702.4876 l
+65.103 702.5668 l
+65.500984 702.4876 l
+65.83839 702.2622 l
+66.063835 701.9248 l
+h
+f
+Q
+q
+BT
+78.53698 699.12683 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<37393835623034663264202D2046697820584D4C20746573747320666F7220696D706F7274696E672047495320616E64206E6F20444220584D4C202823323031353329> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 698.1668 m
+331.99796 698.1668 l
+S
+Q
+q
+0 0 0 rg
+66.143 689.8268 m
+66.063835 689.4288 l
+65.83839 689.0914 l
+65.500984 688.86597 l
+65.103 688.7868 l
+64.70501 688.86597 l
+64.36761 689.0914 l
+64.14216 689.4288 l
+64.062996 689.8268 l
+64.14216 690.2248 l
+64.36761 690.5622 l
+64.70501 690.7876 l
+65.103 690.86676 l
+65.500984 690.7876 l
+65.83839 690.5622 l
+66.063835 690.2248 l
+h
+f
+Q
+q
+BT
+78.53698 687.4268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(1e3d6b5c0c - Merge 'QA_5_2') Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 686.46686 m
+186.54872 686.46686 l
+S
+Q
+q
+0 0 0 rg
+66.143 678.1268 m
+66.063835 677.72876 l
+65.83839 677.39136 l
+65.500984 677.16595 l
+65.103 677.0868 l
+64.70501 677.16595 l
+64.36761 677.39136 l
+64.14216 677.72876 l
+64.062996 678.1268 l
+64.14216 678.5248 l
+64.36761 678.8622 l
+64.70501 679.08765 l
+65.103 679.16675 l
+65.500984 679.08765 l
+65.83839 678.8622 l
+66.063835 678.5248 l
+h
+f
+Q
+q
+BT
+78.53698 675.72687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(13d1c90d44 - Merge #20185 - Refactor the File class) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 674.76685 m
+267.5331 674.76685 l
+S
+Q
+q
+0 0 0 rg
+66.143 666.42676 m
+66.063835 666.0288 l
+65.83839 665.6914 l
+65.500984 665.46594 l
+65.103 665.3868 l
+64.70501 665.46594 l
+64.36761 665.6914 l
+64.14216 666.0288 l
+64.062996 666.42676 l
+64.14216 666.82477 l
+64.36761 667.1622 l
+64.70501 667.38763 l
+65.103 667.4668 l
+65.500984 667.38763 l
+65.83839 667.1622 l
+66.063835 666.82477 l
+h
+f
+Q
+q
+BT
+78.53698 664.02686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(63f642dd02 - Merge #20126 - Fix #20121 - Find and Replace) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 663.06683 m
+296.01358 663.06683 l
+S
+Q
+q
+0 0 0 rg
+66.143 654.7268 m
+66.063835 654.3288 l
+65.83839 653.9914 l
+65.500984 653.766 l
+65.103 653.68677 l
+64.70501 653.766 l
+64.36761 653.9914 l
+64.14216 654.3288 l
+64.062996 654.7268 l
+64.14216 655.12476 l
+64.36761 655.46216 l
+64.70501 655.6876 l
+65.103 655.7668 l
+65.500984 655.6876 l
+65.83839 655.46216 l
+66.063835 655.12476 l
+h
+f
+Q
+q
+BT
+78.53698 652.32684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(8b2a2c41dc - Merge #20144 - Add sql highlighting for Show create) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 651.3669 m
+315.57608 651.3669 l
+S
+Q
+q
+0 0 0 rg
+66.143 643.0268 m
+66.063835 642.6288 l
+65.83839 642.2914 l
+65.500984 642.066 l
+65.103 641.9868 l
+64.70501 642.066 l
+64.36761 642.2914 l
+64.14216 642.6288 l
+64.062996 643.0268 l
+64.14216 643.4248 l
+64.36761 643.7622 l
+64.70501 643.9876 l
+65.103 644.0668 l
+65.500984 643.9876 l
+65.83839 643.7622 l
+66.063835 643.4248 l
+h
+f
+Q
+q
+BT
+78.53698 640.6269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(bd24c09baf - Merge #20184 - Improve the description of ShowDatabasesNavigationAsTree in the documentation) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 639.6669 m
+478.77533 639.6669 l
+S
+Q
+q
+0 0 0 rg
+66.143 631.3268 m
+66.063835 630.92883 l
+65.83839 630.59143 l
+65.500984 630.36597 l
+65.103 630.2868 l
+64.70501 630.36597 l
+64.36761 630.59143 l
+64.14216 630.92883 l
+64.062996 631.3268 l
+64.14216 631.7248 l
+64.36761 632.0622 l
+64.70501 632.2876 l
+65.103 632.3668 l
+65.500984 632.2876 l
+65.83839 632.0622 l
+66.063835 631.7248 l
+h
+f
+Q
+q
+BT
+78.53698 628.9269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(cda01ff436 - Merge #20188 - Fix: Text copying while editing a cell) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 627.96686 m
+311.55264 627.96686 l
+S
+Q
+q
+0 0 0 rg
+66.143 619.62683 m
+66.063835 619.2288 l
+65.83839 618.8914 l
+65.500984 618.66595 l
+65.103 618.5868 l
+64.70501 618.66595 l
+64.36761 618.8914 l
+64.14216 619.2288 l
+64.062996 619.62683 l
+64.14216 620.0248 l
+64.36761 620.3622 l
+64.70501 620.58765 l
+65.103 620.6668 l
+65.500984 620.58765 l
+65.83839 620.3622 l
+66.063835 620.0248 l
+h
+f
+Q
+q
+BT
+78.53698 617.22687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(bf7e0c3d85 - Merge #20213 - Improve design in structure snapshot page) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 616.26685 m
+337.36514 616.26685 l
+S
+Q
+q
+0 0 0 rg
+66.143 607.9268 m
+66.063835 607.5288 l
+65.83839 607.1914 l
+65.500984 606.96594 l
+65.103 606.88684 l
+64.70501 606.96594 l
+64.36761 607.1914 l
+64.14216 607.5288 l
+64.062996 607.9268 l
+64.14216 608.3248 l
+64.36761 608.66223 l
+64.70501 608.88763 l
+65.103 608.9668 l
+65.500984 608.88763 l
+65.83839 608.66223 l
+66.063835 608.3248 l
+h
+f
+Q
+q
+BT
+78.53698 605.52686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(5a8ddf18c2 - Merge #20237 - Gis ScaleData offsets in target coordinate system) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 604.56683 m
+361.35733 604.56683 l
+S
+Q
+q
+0 0 0 rg
+66.143 596.2268 m
+66.063835 595.8288 l
+65.83839 595.4914 l
+65.500984 595.266 l
+65.103 595.1868 l
+64.70501 595.266 l
+64.36761 595.4914 l
+64.14216 595.8288 l
+64.062996 596.2268 l
+64.14216 596.6248 l
+64.36761 596.9622 l
+64.70501 597.1876 l
+65.103 597.2668 l
+65.500984 597.1876 l
+65.83839 596.9622 l
+66.063835 596.6248 l
+h
+f
+Q
+q
+BT
+78.53698 593.82684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(8ae46b07fa - Merge #20239 - Update PHPStan) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 592.8669 m
+247.54091 592.8669 l
+S
+Q
+q
+BT
+64.063 577.9269 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 13) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 566.4268 m
+66.063835 566.0288 l
+65.83839 565.6914 l
+65.500984 565.46594 l
+65.103 565.38684 l
+64.70501 565.46594 l
+64.36761 565.6914 l
+64.14216 566.0288 l
+64.062996 566.4268 l
+64.14216 566.8248 l
+64.36761 567.16223 l
+64.70501 567.3877 l
+65.103 567.4668 l
+65.500984 567.3877 l
+65.83839 567.16223 l
+66.063835 566.8248 l
+h
+f
+Q
+q
+BT
+78.53698 564.0269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(4246b6d9a4 - Merge #20260 - Fix #20181 - allow selecting text fragments in cells) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 563.0669 m
+367.1464 563.0669 l
+S
+Q
+q
+BT
+64.063 546.1269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F77656273697465202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 527.72687 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 516.2268 m
+66.063835 515.82886 l
+65.83839 515.49146 l
+65.500984 515.266 l
+65.103 515.18677 l
+64.70501 515.266 l
+64.36761 515.49146 l
+64.14216 515.82886 l
+64.062996 516.2268 l
+64.14216 516.62476 l
+64.36761 516.96216 l
+64.70501 517.1876 l
+65.103 517.26685 l
+65.500984 517.1876 l
+65.83839 516.96216 l
+66.063835 516.62476 l
+h
+f
+Q
+q
+BT
+78.53698 513.82684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(1dee475192 - Replace broken link for PAD in about website) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 512.8669 m
+290.6698 512.8669 l
+S
+Q
+q
+0 0 0 rg
+66.143 504.5268 m
+66.063835 504.1288 l
+65.83839 503.7914 l
+65.500984 503.56595 l
+65.103 503.4868 l
+64.70501 503.56595 l
+64.36761 503.7914 l
+64.14216 504.1288 l
+64.062996 504.5268 l
+64.14216 504.92477 l
+64.36761 505.26218 l
+64.70501 505.48764 l
+65.103 505.5668 l
+65.500984 505.48764 l
+65.83839 505.26218 l
+66.063835 504.92477 l
+h
+f
+Q
+q
+BT
+78.53698 502.12686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(9ef6d2c91f - Fix broken awards link) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 501.16684 m
+204.82214 501.16684 l
+S
+Q
+q
+0 0 0 rg
+66.143 492.82678 m
+66.063835 492.4288 l
+65.83839 492.0914 l
+65.500984 491.86594 l
+65.103 491.78677 l
+64.70501 491.86594 l
+64.36761 492.0914 l
+64.14216 492.4288 l
+64.062996 492.82678 l
+64.14216 493.22476 l
+64.36761 493.56216 l
+64.70501 493.78763 l
+65.103 493.8668 l
+65.500984 493.78763 l
+65.83839 493.56216 l
+66.063835 493.22476 l
+h
+f
+Q
+q
+BT
+78.53698 490.42685 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(de6bbc71dd - Merge #186 - Update layout: Color modes, jQuery removal, and more) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 489.46683 m
+375.5839 489.46683 l
+S
+Q
+q
+0 0 0 rg
+66.143 481.12677 m
+66.063835 480.7288 l
+65.83839 480.3914 l
+65.500984 480.16592 l
+65.103 480.08676 l
+64.70501 480.16592 l
+64.36761 480.3914 l
+64.14216 480.7288 l
+64.062996 481.12677 l
+64.14216 481.52475 l
+64.36761 481.86215 l
+64.70501 482.08762 l
+65.103 482.16678 l
+65.500984 482.08762 l
+65.83839 481.86215 l
+66.063835 481.52475 l
+h
+f
+Q
+q
+BT
+78.53698 478.72684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(449779eedc - Replace checksum by shasum for packages.json for composer) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 477.7668 m
+352.01358 477.7668 l
+S
+Q
+q
+0 0 0 rg
+66.143 469.42676 m
+66.063835 469.02878 l
+65.83839 468.69138 l
+65.500984 468.4659 l
+65.103 468.38675 l
+64.70501 468.4659 l
+64.36761 468.69138 l
+64.14216 469.02878 l
+64.062996 469.42676 l
+64.14216 469.82474 l
+64.36761 470.16214 l
+64.70501 470.3876 l
+65.103 470.46677 l
+65.500984 470.3876 l
+65.83839 470.16214 l
+66.063835 469.82474 l
+h
+f
+Q
+q
+BT
+78.53698 467.0268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2262bf3f86 - Remove rel quick-download and add the download attribute to download buttons) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 466.06683 m
+410.31824 466.06683 l
+S
+Q
+q
+0 0 0 rg
+66.143 457.72675 m
+66.063835 457.32877 l
+65.83839 456.99136 l
+65.500984 456.7659 l
+65.103 456.68674 l
+64.70501 456.7659 l
+64.36761 456.99136 l
+64.14216 457.32877 l
+64.062996 457.72675 l
+64.14216 458.12473 l
+64.36761 458.46213 l
+64.70501 458.6876 l
+65.103 458.76675 l
+65.500984 458.6876 l
+65.83839 458.46213 l
+66.063835 458.12473 l
+h
+f
+Q
+q
+BT
+78.53698 455.32678 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(0a4bcd804a - Remove css call for font-awesome) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 454.36682 m
+251.95496 454.36682 l
+S
+Q
+q
+0 0 0 rg
+66.143 446.02673 m
+66.063835 445.62875 l
+65.83839 445.29135 l
+65.500984 445.0659 l
+65.103 444.98672 l
+64.70501 445.0659 l
+64.36761 445.29135 l
+64.14216 445.62875 l
+64.062996 446.02673 l
+64.14216 446.4247 l
+64.36761 446.76212 l
+64.70501 446.98758 l
+65.103 447.06674 l
+65.500984 446.98758 l
+65.83839 446.76212 l
+66.063835 446.4247 l
+h
+f
+Q
+q
+BT
+78.53698 443.62677 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(d86688eb32 - Add back mising sponsor and implement skip from sponsors page) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 442.6668 m
+363.5878 442.6668 l
+S
+Q
+q
+0 0 0 rg
+66.143 434.32672 m
+66.063835 433.92874 l
+65.83839 433.59134 l
+65.500984 433.36588 l
+65.103 433.2867 l
+64.70501 433.36588 l
+64.36761 433.59134 l
+64.14216 433.92874 l
+64.062996 434.32672 l
+64.14216 434.7247 l
+64.36761 435.0621 l
+64.70501 435.28757 l
+65.103 435.36673 l
+65.500984 435.28757 l
+65.83839 435.0621 l
+66.063835 434.7247 l
+h
+f
+Q
+q
+BT
+78.53698 431.92676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(e8bd19bd16 - Handle rel= for sponsors too) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 430.96677 m
+230.8612 430.96677 l
+S
+Q
+q
+0 0 0 rg
+66.143 422.6267 m
+66.063835 422.22873 l
+65.83839 421.89133 l
+65.500984 421.66586 l
+65.103 421.5867 l
+64.70501 421.66586 l
+64.36761 421.89133 l
+64.14216 422.22873 l
+64.062996 422.6267 l
+64.14216 423.0247 l
+64.36761 423.3621 l
+64.70501 423.58755 l
+65.103 423.66672 l
+65.500984 423.58755 l
+65.83839 423.3621 l
+66.063835 423.0247 l
+h
+f
+Q
+q
+BT
+78.53698 420.22675 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(37e7cddfc9 - Handle plurals for Sponsor titles) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 419.26675 m
+240.40417 419.26675 l
+S
+Q
+q
+0 0 0 rg
+66.143 410.9267 m
+66.063835 410.52872 l
+65.83839 410.1913 l
+65.500984 409.96585 l
+65.103 409.8867 l
+64.70501 409.96585 l
+64.36761 410.1913 l
+64.14216 410.52872 l
+64.062996 410.9267 l
+64.14216 411.32468 l
+64.36761 411.66208 l
+64.70501 411.88754 l
+65.103 411.9667 l
+65.500984 411.88754 l
+65.83839 411.66208 l
+66.063835 411.32468 l
+h
+f
+Q
+q
+BT
+78.53698 408.52673 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(6dcd444a19 - Move sponsors from ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+(pmaweb/templates/sponsors.html) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+( to ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+(data/sponsors.py) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 407.56674 m
+204.38074 407.56674 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+204.38074 407.56674 m
+348.4042 407.56674 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+348.4042 407.56674 m
+359.5214 407.56674 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+359.5214 407.56674 m
+436.3339 407.56674 l
+S
+Q
+q
+0 0 0 rg
+66.143 399.22668 m
+66.063835 398.8287 l
+65.83839 398.4913 l
+65.500984 398.26584 l
+65.103 398.18668 l
+64.70501 398.26584 l
+64.36761 398.4913 l
+64.14216 398.8287 l
+64.062996 399.22668 l
+64.14216 399.62466 l
+64.36761 399.96207 l
+64.70501 400.18753 l
+65.103 400.2667 l
+65.500984 400.18753 l
+65.83839 399.96207 l
+66.063835 399.62466 l
+h
+f
+Q
+q
+BT
+78.53698 396.82672 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(d0c9344189 - Improve cdn to handle HTTP errors) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 395.86673 m
+255.07214 395.86673 l
+S
+Q
+q
+0 0 0 rg
+66.143 387.52667 m
+66.063835 387.1287 l
+65.83839 386.7913 l
+65.500984 386.56583 l
+65.103 386.48666 l
+64.70501 386.56583 l
+64.36761 386.7913 l
+64.14216 387.1287 l
+64.062996 387.52667 l
+64.14216 387.92465 l
+64.36761 388.26205 l
+64.70501 388.48752 l
+65.103 388.56668 l
+65.500984 388.48752 l
+65.83839 388.26205 l
+66.063835 387.92465 l
+h
+f
+Q
+q
+BT
+78.53698 385.12674 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(e35a7c8ef7 - Move fetch_planet into fetch_blog and import my blog posts into the planet section) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 384.16672 m
+418.75186 384.16672 l
+S
+Q
+q
+0 0 0 rg
+66.143 375.82666 m
+66.063835 375.42868 l
+65.83839 375.09128 l
+65.500984 374.8658 l
+65.103 374.78665 l
+64.70501 374.8658 l
+64.36761 375.09128 l
+64.14216 375.42868 l
+64.062996 375.82666 l
+64.14216 376.22464 l
+64.36761 376.56204 l
+64.70501 376.7875 l
+65.103 376.86667 l
+65.500984 376.7875 l
+65.83839 376.56204 l
+66.063835 376.22464 l
+h
+f
+Q
+q
+BT
+78.53698 373.42673 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(5dd00305e7 - Drop planet.phpmyadmin.net) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 372.4667 m
+232.86511 372.4667 l
+S
+Q
+q
+BT
+64.063 355.52667 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F736861706566696C65202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 337.12668 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 325.6267 m
+66.063835 325.2287 l
+65.83839 324.8913 l
+65.500984 324.6659 l
+65.103 324.58673 l
+64.70501 324.6659 l
+64.36761 324.8913 l
+64.14216 325.2287 l
+64.062996 325.6267 l
+64.14216 326.02472 l
+64.36761 326.36212 l
+64.70501 326.58752 l
+65.103 326.6667 l
+65.500984 326.58752 l
+65.83839 326.36212 l
+66.063835 326.02472 l
+h
+f
+Q
+q
+BT
+78.53698 323.2267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<37383232356561356364202D20536574205363727574696E697A657220746F2050485020382E322E323920287468657920646F206E6F742068617665202E33302920666F72207073616C6D20746F20696E7374616C6C> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 322.2667 m
+380.48233 322.2667 l
+S
+Q
+q
+0 0 0 rg
+66.143 313.9267 m
+66.063835 313.5287 l
+65.83839 313.19128 l
+65.500984 312.96588 l
+65.103 312.88672 l
+64.70501 312.96588 l
+64.36761 313.19128 l
+64.14216 313.5287 l
+64.062996 313.9267 l
+64.14216 314.3247 l
+64.36761 314.6621 l
+64.70501 314.8875 l
+65.103 314.96667 l
+65.500984 314.8875 l
+65.83839 314.6621 l
+66.063835 314.3247 l
+h
+f
+Q
+q
+BT
+78.53698 311.5267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(c4e095418a - Set Scrutinizer to PHP 8.2 and remove adding dbase as it breaks the install) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 310.56668 m
+396.50186 310.56668 l
+S
+Q
+q
+0 0 0 rg
+66.143 302.22668 m
+66.063835 301.82867 l
+65.83839 301.49127 l
+65.500984 301.26587 l
+65.103 301.1867 l
+64.70501 301.26587 l
+64.36761 301.49127 l
+64.14216 301.82867 l
+64.062996 302.22668 l
+64.14216 302.6247 l
+64.36761 302.9621 l
+64.70501 303.1875 l
+65.103 303.26666 l
+65.500984 303.1875 l
+65.83839 302.9621 l
+66.063835 302.6247 l
+h
+f
+Q
+q
+BT
+78.53698 299.8267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<65393036333635316239202D20536574205363727574696E697A657220746F2050485020382E322E323920287468657920646F206E6F742068617665202E333029> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 298.86667 m
+314.24014 298.86667 l
+S
+Q
+q
+0 0 0 rg
+66.143 290.52667 m
+66.063835 290.12866 l
+65.83839 289.79126 l
+65.500984 289.56586 l
+65.103 289.4867 l
+64.70501 289.56586 l
+64.36761 289.79126 l
+64.14216 290.12866 l
+64.062996 290.52667 l
+64.14216 290.92468 l
+64.36761 291.2621 l
+64.70501 291.4875 l
+65.103 291.56665 l
+65.500984 291.4875 l
+65.83839 291.2621 l
+66.063835 290.92468 l
+h
+f
+Q
+q
+BT
+78.53698 288.12668 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(f81b04ee40 - Bump Scrutinizer to PHP 8.2.30) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 287.16666 m
+240.85341 287.16666 l
+S
+Q
+q
+0 0 0 rg
+66.143 278.82666 m
+66.063835 278.42865 l
+65.83839 278.09125 l
+65.500984 277.86584 l
+65.103 277.78668 l
+64.70501 277.86584 l
+64.36761 278.09125 l
+64.14216 278.42865 l
+64.062996 278.82666 l
+64.14216 279.22467 l
+64.36761 279.56207 l
+64.70501 279.78748 l
+65.103 279.86664 l
+65.500984 279.78748 l
+65.83839 279.56207 l
+66.063835 279.22467 l
+h
+f
+Q
+q
+BT
+78.53698 276.42667 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(158de5b7bb - Update Scrutinizer comments to PHP 8.x) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 275.46664 m
+275.5292 275.46664 l
+S
+Q
+q
+0 0 0 rg
+66.143 267.12665 m
+66.063835 266.72864 l
+65.83839 266.39124 l
+65.500984 266.16583 l
+65.103 266.08667 l
+64.70501 266.16583 l
+64.36761 266.39124 l
+64.14216 266.72864 l
+64.062996 267.12665 l
+64.14216 267.52466 l
+64.36761 267.86206 l
+64.70501 268.08746 l
+65.103 268.16663 l
+65.500984 268.08746 l
+65.83839 267.86206 l
+66.063835 267.52466 l
+h
+f
+Q
+q
+BT
+78.53698 264.72662 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(e2feec1918 - Use Ubuntu bionic for PHP 7.2 on Scrutinizer) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 263.76663 m
+287.54092 263.76663 l
+S
+Q
+q
+BT
+64.063 246.82661 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2D7465616D2F6D6172696164622D6D7973716C2D6B627320284769744C616229> Tj
+ET
+Q
+q
+BT
+64.063 228.42659 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 10) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 216.92657 m
+66.063835 216.52856 l
+65.83839 216.19116 l
+65.500984 215.96576 l
+65.103 215.8866 l
+64.70501 215.96576 l
+64.36761 216.19116 l
+64.14216 216.52856 l
+64.062996 216.92657 l
+64.14216 217.32458 l
+64.36761 217.66199 l
+64.70501 217.88739 l
+65.103 217.96655 l
+65.500984 217.88739 l
+65.83839 217.66199 l
+66.063835 217.32458 l
+h
+f
+Q
+q
+BT
+78.53698 214.52657 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(64bb41398a - d/ch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 213.56654 m
+145.25963 213.56654 l
+S
+Q
+q
+0 0 0 rg
+66.143 205.22656 m
+66.063835 204.82855 l
+65.83839 204.49115 l
+65.500984 204.26575 l
+65.103 204.18658 l
+64.70501 204.26575 l
+64.36761 204.49115 l
+64.14216 204.82855 l
+64.062996 205.22656 l
+64.14216 205.62457 l
+64.36761 205.96198 l
+64.70501 206.18738 l
+65.103 206.26654 l
+65.500984 206.18738 l
+65.83839 205.96198 l
+66.063835 205.62457 l
+h
+f
+Q
+q
+BT
+78.53698 202.82657 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(572a07c826 - Use phpunit --do-not-cache-result --no-coverage --fail-on-empty-test-suite) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 201.86653 m
+389.79095 201.86653 l
+S
+Q
+q
+0 0 0 rg
+66.143 193.52655 m
+66.063835 193.12854 l
+65.83839 192.79114 l
+65.500984 192.56573 l
+65.103 192.48657 l
+64.70501 192.56573 l
+64.36761 192.79114 l
+64.14216 193.12854 l
+64.062996 193.52655 l
+64.14216 193.92456 l
+64.36761 194.26196 l
+64.70501 194.48737 l
+65.103 194.56653 l
+65.500984 194.48737 l
+65.83839 194.26196 l
+66.063835 193.92456 l
+h
+f
+Q
+q
+BT
+78.53698 191.12653 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(816dd331f6 - Bump d/copyright years) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 190.16653 m
+211.95105 190.16653 l
+S
+Q
+q
+BT
+64.063 175.22652 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 13) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 163.7265 m
+66.063835 163.32849 l
+65.83839 162.99109 l
+65.500984 162.76569 l
+65.103 162.68652 l
+64.70501 162.76569 l
+64.36761 162.99109 l
+64.14216 163.32849 l
+64.062996 163.7265 l
+64.14216 164.12451 l
+64.36761 164.46191 l
+64.70501 164.68732 l
+65.103 164.76648 l
+65.500984 164.68732 l
+65.83839 164.46191 l
+66.063835 164.12451 l
+h
+f
+Q
+q
+BT
+78.53698 161.32649 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(06f43a2c57 - Send 1.3.0-4 to unstable) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 160.36647 m
+214.63855 160.36647 l
+S
+Q
+q
+BT
+64.063 143.42647 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2D7465616D2F746370646620284769744C616229> Tj
+ET
+Q
+q
+BT
+64.063 125.026436 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 10) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 113.52643 m
+66.063835 113.12842 l
+65.83839 112.791016 l
+65.500984 112.56561 l
+65.103 112.48645 l
+64.70501 112.56561 l
+64.36761 112.791016 l
+64.14216 113.12842 l
+64.062996 113.52643 l
+64.14216 113.92444 l
+64.36761 114.26184 l
+64.70501 114.48724 l
+65.103 114.56641 l
+65.500984 114.48724 l
+65.83839 114.26184 l
+66.063835 113.92444 l
+h
+f
+Q
+q
+BT
+78.53698 111.12641 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(3eea1f1ca2 - Send 6.11.2+dfsg-2 to unstable) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 110.16639 m
+238.88074 110.16639 l
+S
+Q
+q
+0 0 0 rg
+66.143 101.826416 m
+66.063835 101.428406 l
+65.83839 101.091 l
+65.500984 100.8656 l
+65.103 100.78644 l
+64.70501 100.8656 l
+64.36761 101.091 l
+64.14216 101.428406 l
+64.062996 101.826416 l
+64.14216 102.22443 l
+64.36761 102.56183 l
+64.70501 102.78723 l
+65.103 102.866394 l
+65.500984 102.78723 l
+65.83839 102.56183 l
+66.063835 102.22443 l
+h
+f
+Q
+q
+BT
+78.53698 99.4264 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(d46f111cc6 - Also close the Debian bug) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 98.466385 m
+219.96277 98.466385 l
+S
+Q
+q
+0 0 0 rg
+66.143 90.1264 m
+66.063835 89.72839 l
+65.83839 89.39099 l
+65.500984 89.16559 l
+65.103 89.086426 l
+64.70501 89.16559 l
+64.36761 89.39099 l
+64.14216 89.72839 l
+64.062996 90.1264 l
+64.14216 90.524414 l
+64.36761 90.86182 l
+64.70501 91.08722 l
+65.103 91.16638 l
+65.500984 91.08722 l
+65.83839 90.86182 l
+66.063835 90.524414 l
+h
+f
+Q
+q
+BT
+78.53698 87.72639 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(d97d65b156 - d/ch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 86.766365 m
+145.25963 86.766365 l
+S
+Q
+q
+0 0 0 rg
+66.143 78.42639 m
+66.063835 78.02838 l
+65.83839 77.69098 l
+65.500984 77.465576 l
+65.103 77.38641 l
+64.70501 77.465576 l
+64.36761 77.69098 l
+64.14216 78.02838 l
+64.062996 78.42639 l
+64.14216 78.8244 l
+64.36761 79.161804 l
+64.70501 79.38721 l
+65.103 79.46637 l
+65.500984 79.38721 l
+65.83839 79.161804 l
+66.063835 78.8244 l
+h
+f
+Q
+q
+BT
+78.53698 76.026375 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(304732db65 - Refresh the armhf  patch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 75.06635 m
+218.18152 75.06635 l
+S
+Q
+q
+0 0 0 rg
+66.143 66.72638 m
+66.063835 66.32837 l
+65.83839 65.99097 l
+65.500984 65.765564 l
+65.103 65.6864 l
+64.70501 65.765564 l
+64.36761 65.99097 l
+64.14216 66.32837 l
+64.062996 66.72638 l
+64.14216 67.12439 l
+64.36761 67.46179 l
+64.70501 67.687195 l
+65.103 67.76636 l
+65.500984 67.687195 l
+65.83839 67.46179 l
+66.063835 67.12439 l
+h
+f
+Q
+q
+BT
+78.53698 64.326355 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(7b6dfcfd99 - Import the patch from Ubuntu) Tj
+ET
+Q
+endstream 
+endobj
+14 0 obj
+<</Font 4 0 R/XObject 5 0 R/ExtGState 6 0 R>>
+endobj
+15 0 obj
+<</Length 25765>>stream
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 63.366337 m
+229.28699 63.366337 l
+S
+Q
+q
+0 0 0 rg
+66.143 771.7268 m
+66.063835 771.3288 l
+65.83839 770.9914 l
+65.500984 770.7659 l
+65.103 770.68677 l
+64.70501 770.7659 l
+64.36761 770.9914 l
+64.14216 771.3288 l
+64.062996 771.7268 l
+64.14216 772.12476 l
+64.36761 772.46216 l
+64.70501 772.6876 l
+65.103 772.7668 l
+65.500984 772.6876 l
+65.83839 772.46216 l
+66.063835 772.12476 l
+h
+f
+Q
+q
+BT
+78.53698 769.3269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(7da3bece6f - Send 6.11.2+dfsg-1 to unstable) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 768.3668 m
+238.88074 768.3668 l
+S
+Q
+q
+0 0 0 rg
+66.143 760.0268 m
+66.063835 759.6288 l
+65.83839 759.2914 l
+65.500984 759.0659 l
+65.103 758.98676 l
+64.70501 759.0659 l
+64.36761 759.2914 l
+64.14216 759.6288 l
+64.062996 760.0268 l
+64.14216 760.42474 l
+64.36761 760.76215 l
+64.70501 760.9876 l
+65.103 761.0668 l
+65.500984 760.9876 l
+65.83839 760.76215 l
+66.063835 760.42474 l
+h
+f
+Q
+q
+BT
+78.53698 757.6269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(7818c84b8f - Bump d/copyright years) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 756.6668 m
+211.50183 756.6668 l
+S
+Q
+q
+0 0 0 rg
+66.143 748.3268 m
+66.063835 747.9288 l
+65.83839 747.5914 l
+65.500984 747.36597 l
+65.103 747.2868 l
+64.70501 747.36597 l
+64.36761 747.5914 l
+64.14216 747.9288 l
+64.062996 748.3268 l
+64.14216 748.7248 l
+64.36761 749.0622 l
+64.70501 749.2876 l
+65.103 749.36676 l
+65.500984 749.2876 l
+65.83839 749.0622 l
+66.063835 748.7248 l
+h
+f
+Q
+q
+BT
+78.53698 745.92676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(e0edcee6ca - Bump Standards-Version to 4.7.3) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 744.9668 m
+247.52917 744.9668 l
+S
+Q
+q
+0 0 0 rg
+66.143 736.6268 m
+66.063835 736.2288 l
+65.83839 735.8914 l
+65.500984 735.66595 l
+65.103 735.5868 l
+64.70501 735.66595 l
+64.36761 735.8914 l
+64.14216 736.2288 l
+64.062996 736.6268 l
+64.14216 737.0248 l
+64.36761 737.3622 l
+64.70501 737.58765 l
+65.103 737.6668 l
+65.500984 737.58765 l
+65.83839 737.3622 l
+66.063835 737.0248 l
+h
+f
+Q
+q
+BT
+78.53698 734.22687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(52aa81580a - d/ch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 733.2668 m
+145.25963 733.2668 l
+S
+Q
+q
+0 0 0 rg
+66.143 724.92676 m
+66.063835 724.5288 l
+65.83839 724.1914 l
+65.500984 723.96594 l
+65.103 723.8868 l
+64.70501 723.96594 l
+64.36761 724.1914 l
+64.14216 724.5288 l
+64.062996 724.92676 l
+64.14216 725.32477 l
+64.36761 725.6622 l
+64.70501 725.88763 l
+65.103 725.9668 l
+65.500984 725.88763 l
+65.83839 725.6622 l
+66.063835 725.32477 l
+h
+f
+Q
+q
+BT
+78.53698 722.52686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(0c62c92540 - Update upstream source from tag 'upstream/6.11.2+dfsg') Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 721.56683 m
+331.29092 721.56683 l
+S
+Q
+q
+0 0 0 rg
+66.143 713.2268 m
+66.063835 712.8288 l
+65.83839 712.4914 l
+65.500984 712.2659 l
+65.103 712.18677 l
+64.70501 712.2659 l
+64.36761 712.4914 l
+64.14216 712.8288 l
+64.062996 713.2268 l
+64.14216 713.62476 l
+64.36761 713.96216 l
+64.70501 714.1876 l
+65.103 714.2668 l
+65.500984 714.1876 l
+65.83839 713.96216 l
+66.063835 713.62476 l
+h
+f
+Q
+q
+BT
+78.53698 710.82684 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(5b490762e1 - New upstream version 6.11.2+dfsg) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 709.8668 m
+253.98232 709.8668 l
+S
+Q
+q
+0 0 0 rg
+66.143 701.5268 m
+66.063835 701.1288 l
+65.83839 700.7914 l
+65.500984 700.5659 l
+65.103 700.4868 l
+64.70501 700.5659 l
+64.36761 700.7914 l
+64.14216 701.1288 l
+64.062996 701.5268 l
+64.14216 701.9248 l
+64.36761 702.2622 l
+64.70501 702.4876 l
+65.103 702.5668 l
+65.500984 702.4876 l
+65.83839 702.2622 l
+66.063835 701.9248 l
+h
+f
+Q
+q
+BT
+78.53698 699.12683 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(56cea7fc28 - d/ch) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 698.1668 m
+142.13464 698.1668 l
+S
+Q
+q
+0 0 0 rg
+66.143 689.8268 m
+66.063835 689.4288 l
+65.83839 689.0914 l
+65.500984 688.86597 l
+65.103 688.7868 l
+64.70501 688.86597 l
+64.36761 689.0914 l
+64.14216 689.4288 l
+64.062996 689.8268 l
+64.14216 690.2248 l
+64.36761 690.5622 l
+64.70501 690.7876 l
+65.103 690.86676 l
+65.500984 690.7876 l
+65.83839 690.5622 l
+66.063835 690.2248 l
+h
+f
+Q
+q
+BT
+78.53698 687.4268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(2aafb8664f - Update upstream source from tag 'upstream/6.11.0+dfsg') Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 686.46686 m
+327.73624 686.46686 l
+S
+Q
+q
+0 0 0 rg
+66.143 678.1268 m
+66.063835 677.72876 l
+65.83839 677.39136 l
+65.500984 677.16595 l
+65.103 677.0868 l
+64.70501 677.16595 l
+64.36761 677.39136 l
+64.14216 677.72876 l
+64.062996 678.1268 l
+64.14216 678.5248 l
+64.36761 678.8622 l
+64.70501 679.08765 l
+65.103 679.16675 l
+65.500984 679.08765 l
+65.83839 678.8622 l
+66.063835 678.5248 l
+h
+f
+Q
+q
+BT
+78.53698 675.72687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(23c3e2a107 - New upstream version 6.11.0+dfsg) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 674.76685 m
+253.53308 674.76685 l
+S
+Q
+q
+0 0 0 rg
+66.143 666.42676 m
+66.063835 666.0288 l
+65.83839 665.6914 l
+65.500984 665.46594 l
+65.103 665.3868 l
+64.70501 665.46594 l
+64.36761 665.6914 l
+64.14216 666.0288 l
+64.062996 666.42676 l
+64.14216 666.82477 l
+64.36761 667.1622 l
+64.70501 667.38763 l
+65.103 667.4668 l
+65.500984 667.38763 l
+65.83839 667.1622 l
+66.063835 666.82477 l
+h
+f
+Q
+q
+BT
+78.53698 664.02686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<63653936616437356331202D20436F6D6D656E74206F75742046696C656E616D652D4D616E676C6520666F7220757363616E20746F20776F726B20285365653A20233131323934363429> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 663.06683 m
+366.248 663.06683 l
+S
+Q
+q
+BT
+249.77602 644.1269 Td
+19.6 TL
+0 0 0 rg
+0 0 0 rg
+/F5 14 Tf
+(Handled issues) Tj
+ET
+Q
+q
+BT
+64.063 622.9269 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F7068706D7961646D696E202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 604.52686 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 10) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 593.0268 m
+66.063835 592.6288 l
+65.83839 592.2914 l
+65.500984 592.066 l
+65.103 591.9868 l
+64.70501 592.066 l
+64.36761 592.2914 l
+64.14216 592.6288 l
+64.062996 593.0268 l
+64.14216 593.4248 l
+64.36761 593.7622 l
+64.70501 593.9877 l
+65.103 594.0668 l
+65.500984 593.9877 l
+65.83839 593.7622 l
+66.063835 593.4248 l
+h
+f
+Q
+q
+BT
+78.53698 590.6269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(16901 - Moving column to second place creates incorrect SQL) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 589.6669 m
+299.54092 589.6669 l
+S
+Q
+q
+0 0 0 rg
+66.143 581.3268 m
+66.063835 580.92883 l
+65.83839 580.59143 l
+65.500984 580.36597 l
+65.103 580.2868 l
+64.70501 580.36597 l
+64.36761 580.59143 l
+64.14216 580.92883 l
+64.062996 581.3268 l
+64.14216 581.7248 l
+64.36761 582.0622 l
+64.70501 582.28766 l
+65.103 582.3668 l
+65.500984 582.28766 l
+65.83839 582.0622 l
+66.063835 581.7248 l
+h
+f
+Q
+q
+BT
+78.53698 578.9269 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20195 - [Bug]: Error code: 200 when generating charts) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 577.9668 m
+271.54483 577.9668 l
+S
+Q
+q
+0 0 0 rg
+66.143 569.62683 m
+66.063835 569.2288 l
+65.83839 568.8914 l
+65.500984 568.66595 l
+65.103 568.5868 l
+64.70501 568.66595 l
+64.36761 568.8914 l
+64.14216 569.2288 l
+64.062996 569.62683 l
+64.14216 570.0248 l
+64.36761 570.3622 l
+64.70501 570.58765 l
+65.103 570.6668 l
+65.500984 570.58765 l
+65.83839 570.3622 l
+66.063835 570.0248 l
+h
+f
+Q
+q
+BT
+78.53698 567.22687 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(15116 - Notice Undefined index: sql_insert_syntax) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 566.2669 m
+256.86514 566.2669 l
+S
+Q
+q
+0 0 0 rg
+66.143 557.92676 m
+66.063835 557.5288 l
+65.83839 557.1914 l
+65.500984 556.96594 l
+65.103 556.8868 l
+64.70501 556.96594 l
+64.36761 557.1914 l
+64.14216 557.5288 l
+64.062996 557.92676 l
+64.14216 558.32477 l
+64.36761 558.6622 l
+64.70501 558.88763 l
+65.103 558.9668 l
+65.500984 558.88763 l
+65.83839 558.6622 l
+66.063835 558.32477 l
+h
+f
+Q
+q
+BT
+78.53698 555.52686 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20140 - [6.0]: Uncaught TypeError: can't access property "error", data.responseJSON is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 554.56683 m
+426.36517 554.56683 l
+S
+Q
+q
+0 0 0 rg
+66.143 546.2268 m
+66.063835 545.8288 l
+65.83839 545.4914 l
+65.500984 545.2659 l
+65.103 545.18677 l
+64.70501 545.2659 l
+64.36761 545.4914 l
+64.14216 545.8288 l
+64.062996 546.2268 l
+64.14216 546.62476 l
+64.36761 546.96216 l
+64.70501 547.1876 l
+65.103 547.2668 l
+65.500984 547.1876 l
+65.83839 546.96216 l
+66.063835 546.62476 l
+h
+f
+Q
+q
+BT
+78.53698 543.8268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(19330 - Negative System Monitor chart values) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 542.8669 m
+242.61511 542.8669 l
+S
+Q
+q
+0 0 0 rg
+66.143 534.52673 m
+66.063835 534.1288 l
+65.83839 533.7914 l
+65.500984 533.5659 l
+65.103 533.48676 l
+64.70501 533.5659 l
+64.36761 533.7914 l
+64.14216 534.1288 l
+64.062996 534.52673 l
+64.14216 534.92474 l
+64.36761 535.26215 l
+64.70501 535.4876 l
+65.103 535.5668 l
+65.500984 535.4876 l
+65.83839 535.26215 l
+66.063835 534.92474 l
+h
+f
+Q
+q
+BT
+78.53698 532.1268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(18292 - Input fields styling in pmahomme theme) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 531.1668 m
+248.84949 531.1668 l
+S
+Q
+q
+0 0 0 rg
+66.143 522.8268 m
+66.063835 522.4288 l
+65.83839 522.0914 l
+65.500984 521.8659 l
+65.103 521.78674 l
+64.70501 521.8659 l
+64.36761 522.0914 l
+64.14216 522.4288 l
+64.062996 522.8268 l
+64.14216 523.22473 l
+64.36761 523.56213 l
+64.70501 523.7876 l
+65.103 523.86676 l
+65.500984 523.7876 l
+65.83839 523.56213 l
+66.063835 523.22473 l
+h
+f
+Q
+q
+BT
+78.53698 520.4268 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<3230313734202D205B4275675D3A2043616E6E6F7420726561642070726F70657274696573206F6620756E646566696E6564202872656164696E6720276E616D652729> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 519.4668 m
+318.63467 519.4668 l
+S
+Q
+q
+0 0 0 rg
+66.143 511.12674 m
+66.063835 510.72876 l
+65.83839 510.39136 l
+65.500984 510.1659 l
+65.103 510.08673 l
+64.70501 510.1659 l
+64.36761 510.39136 l
+64.14216 510.72876 l
+64.062996 511.12674 l
+64.14216 511.52472 l
+64.36761 511.86212 l
+64.70501 512.0876 l
+65.103 512.16675 l
+65.500984 512.0876 l
+65.83839 511.86212 l
+66.063835 511.52472 l
+h
+f
+Q
+q
+BT
+78.53698 508.72678 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20139 - [Bug]: Uncaught TypeError: can't access property "success", data is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 507.76678 m
+385.01746 507.76678 l
+S
+Q
+q
+0 0 0 rg
+66.143 499.42673 m
+66.063835 499.02875 l
+65.83839 498.69135 l
+65.500984 498.46588 l
+65.103 498.38672 l
+64.70501 498.46588 l
+64.36761 498.69135 l
+64.14216 499.02875 l
+64.062996 499.42673 l
+64.14216 499.8247 l
+64.36761 500.1621 l
+64.70501 500.38757 l
+65.103 500.46674 l
+65.500984 500.38757 l
+65.83839 500.1621 l
+66.063835 499.8247 l
+h
+f
+Q
+q
+BT
+78.53698 497.02676 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<3230313432202D205B4275675D3A20556E63617567687420547970654572726F723A2063616E2774206163636573732070726F706572747920227472696D222C2024666F726D2E66696E64282E2E2E292E76616C282920697320756E646566696E6564> Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 496.06677 m
+419.22064 496.06677 l
+S
+Q
+q
+0 0 0 rg
+66.143 487.7267 m
+66.063835 487.32874 l
+65.83839 486.99133 l
+65.500984 486.76587 l
+65.103 486.6867 l
+64.70501 486.76587 l
+64.36761 486.99133 l
+64.14216 487.32874 l
+64.062996 487.7267 l
+64.14216 488.1247 l
+64.36761 488.4621 l
+64.70501 488.68756 l
+65.103 488.76672 l
+65.500984 488.68756 l
+65.83839 488.4621 l
+66.063835 488.1247 l
+h
+f
+Q
+q
+BT
+78.53698 485.32675 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20141 - [Bug]: Uncaught TypeError: can't access property "debug", data is undefined) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 484.36676 m
+378.36517 484.36676 l
+S
+Q
+q
+BT
+64.063 469.42673 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 11) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 457.9267 m
+66.063835 457.52872 l
+65.83839 457.1913 l
+65.500984 456.96585 l
+65.103 456.8867 l
+64.70501 456.96585 l
+64.36761 457.1913 l
+64.14216 457.52872 l
+64.062996 457.9267 l
+64.14216 458.32468 l
+64.36761 458.66208 l
+64.70501 458.88754 l
+65.103 458.9667 l
+65.500984 458.88754 l
+65.83839 458.66208 l
+66.063835 458.32468 l
+h
+f
+Q
+q
+BT
+78.53698 455.52673 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20235 - [Bug]: composer install of web-auth/webauthn-lib fails) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 454.56674 m
+296.88077 454.56674 l
+S
+Q
+q
+0 0 0 rg
+66.143 446.22668 m
+66.063835 445.8287 l
+65.83839 445.4913 l
+65.500984 445.26584 l
+65.103 445.18668 l
+64.70501 445.26584 l
+64.36761 445.4913 l
+64.14216 445.8287 l
+64.062996 446.22668 l
+64.14216 446.62466 l
+64.36761 446.96207 l
+64.70501 447.18753 l
+65.103 447.2667 l
+65.500984 447.18753 l
+65.83839 446.96207 l
+66.063835 446.62466 l
+h
+f
+Q
+q
+BT
+78.53698 443.82672 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(17451 - Rows count for table_uiprefs) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 442.86673 m
+209.27917 442.86673 l
+S
+Q
+q
+BT
+64.063 427.9267 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 416.42667 m
+66.063835 416.0287 l
+65.83839 415.69128 l
+65.500984 415.46582 l
+65.103 415.38666 l
+64.70501 415.46582 l
+64.36761 415.69128 l
+64.14216 416.0287 l
+64.062996 416.42667 l
+64.14216 416.82465 l
+64.36761 417.16205 l
+64.70501 417.3875 l
+65.103 417.46667 l
+65.500984 417.3875 l
+65.83839 417.16205 l
+66.063835 416.82465 l
+h
+f
+Q
+q
+BT
+78.53698 414.0267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20182 - ShowDatabasesNavigationAsTree is not well documented) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 413.06674 m
+313.3378 413.06674 l
+S
+Q
+q
+0 0 0 rg
+66.143 404.72665 m
+66.063835 404.32867 l
+65.83839 403.99127 l
+65.500984 403.7658 l
+65.103 403.68665 l
+64.70501 403.7658 l
+64.36761 403.99127 l
+64.14216 404.32867 l
+64.062996 404.72665 l
+64.14216 405.12463 l
+64.36761 405.46204 l
+64.70501 405.6875 l
+65.103 405.76666 l
+65.500984 405.6875 l
+65.83839 405.46204 l
+66.063835 405.12463 l
+h
+f
+Q
+q
+BT
+78.53698 402.3267 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20121 - [6.0]: Columns are missing on Find and replace) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 401.3667 m
+275.53308 401.3667 l
+S
+Q
+q
+0 0 0 rg
+66.143 393.02664 m
+66.063835 392.62866 l
+65.83839 392.29126 l
+65.500984 392.0658 l
+65.103 391.98663 l
+64.70501 392.0658 l
+64.36761 392.29126 l
+64.14216 392.62866 l
+64.062996 393.02664 l
+64.14216 393.42462 l
+64.36761 393.76202 l
+64.70501 393.9875 l
+65.103 394.06665 l
+65.500984 393.9875 l
+65.83839 393.76202 l
+66.063835 393.42462 l
+h
+f
+Q
+q
+BT
+78.53698 390.62668 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+<3230313533202D205B362E305D3A204572726F72457863657074696F6E3A20666F7265616368282920617267756D656E74206D757374206265206F6620747970652061727261797C6F626A6563742C206E756C6C20676976656E2C205B352E325D20496D706F7274586D6C3A3A646F496D706F727428293A204E6F6465206E6F20> Tj
+T*
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(longer exists) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 389.6667 m
+529.27136 389.6667 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 378.46667 m
+123.44714 378.46667 l
+S
+Q
+q
+0 0 0 rg
+66.143 370.12662 m
+66.063835 369.72864 l
+65.83839 369.39124 l
+65.500984 369.16577 l
+65.103 369.0866 l
+64.70501 369.16577 l
+64.36761 369.39124 l
+64.14216 369.72864 l
+64.062996 370.12662 l
+64.14216 370.5246 l
+64.36761 370.862 l
+64.70501 371.08746 l
+65.103 371.16663 l
+65.500984 371.08746 l
+65.83839 370.862 l
+66.063835 370.5246 l
+h
+f
+Q
+q
+BT
+78.53698 367.72668 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(19891 - [Bug]: When ) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+($cfg['Export']['format']) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(/) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F9 8 Tf
+($cfg['Import']['format']) Tj
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+( is invalid, 'sql' should be the default) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 366.76666 m
+154.13855 366.76666 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+154.13855 366.76666 m
+269.35733 366.76666 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+269.35733 366.76666 m
+271.58 366.76666 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+271.58 366.76666 m
+386.79874 366.76666 l
+S
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+386.79874 366.76666 m
+513.9316 366.76666 l
+S
+Q
+q
+0 0 0 rg
+66.143 358.4266 m
+66.063835 358.02863 l
+65.83839 357.69122 l
+65.500984 357.46576 l
+65.103 357.3866 l
+64.70501 357.46576 l
+64.36761 357.69122 l
+64.14216 358.02863 l
+64.062996 358.4266 l
+64.14216 358.8246 l
+64.36761 359.162 l
+64.70501 359.38745 l
+65.103 359.4666 l
+65.500984 359.38745 l
+65.83839 359.162 l
+66.063835 358.8246 l
+h
+f
+Q
+q
+BT
+78.53698 356.02664 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20171 - [Bug]: Unknown system variable 'storage_engine' since MariaDB 12) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 355.06665 m
+347.9589 355.06665 l
+S
+Q
+q
+0 0 0 rg
+66.143 346.7266 m
+66.063835 346.3286 l
+65.83839 345.9912 l
+65.500984 345.76575 l
+65.103 345.68658 l
+64.70501 345.76575 l
+64.36761 345.9912 l
+64.14216 346.3286 l
+64.062996 346.7266 l
+64.14216 347.12457 l
+64.36761 347.46198 l
+64.70501 347.68744 l
+65.103 347.7666 l
+65.500984 347.68744 l
+65.83839 347.46198 l
+66.063835 347.12457 l
+h
+f
+Q
+q
+BT
+78.53698 344.32663 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20102 - [Bug]: Press escape to cancel editing not showing for truncated values) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 343.36664 m
+356.92764 343.36664 l
+S
+Q
+q
+0 0 0 rg
+66.143 335.02658 m
+66.063835 334.6286 l
+65.83839 334.2912 l
+65.500984 334.06573 l
+65.103 333.98657 l
+64.70501 334.06573 l
+64.36761 334.2912 l
+64.14216 334.6286 l
+64.062996 335.02658 l
+64.14216 335.42456 l
+64.36761 335.76196 l
+64.70501 335.98743 l
+65.103 336.0666 l
+65.500984 335.98743 l
+65.83839 335.76196 l
+66.063835 335.42456 l
+h
+f
+Q
+q
+BT
+78.53698 332.62662 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20134 - [Bug]: ErrorException: Undefined array key 0) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 331.66663 m
+266.63858 331.66663 l
+S
+Q
+q
+0 0 0 rg
+66.143 323.3266 m
+66.063835 322.9286 l
+65.83839 322.5912 l
+65.500984 322.36578 l
+65.103 322.28662 l
+64.70501 322.36578 l
+64.36761 322.5912 l
+64.14216 322.9286 l
+64.062996 323.3266 l
+64.14216 323.7246 l
+64.36761 324.062 l
+64.70501 324.2874 l
+65.103 324.36658 l
+65.500984 324.2874 l
+65.83839 324.062 l
+66.063835 323.7246 l
+h
+f
+Q
+q
+BT
+78.53698 320.9266 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20247 - CI for QA_5_2 has errors) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 319.96658 m
+197.26355 319.96658 l
+S
+Q
+q
+0 0 0 rg
+66.143 311.6266 m
+66.063835 311.22858 l
+65.83839 310.89117 l
+65.500984 310.66577 l
+65.103 310.5866 l
+64.70501 310.66577 l
+64.36761 310.89117 l
+64.14216 311.22858 l
+64.062996 311.6266 l
+64.14216 312.0246 l
+64.36761 312.362 l
+64.70501 312.5874 l
+65.103 312.66656 l
+65.500984 312.5874 l
+65.83839 312.362 l
+66.063835 312.0246 l
+h
+f
+Q
+q
+BT
+78.53698 309.2266 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20245 - [Feat]: Add configurable pre-query hook SQL executed before user-initiated queries) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 308.26657 m
+403.17764 308.26657 l
+S
+Q
+q
+BT
+64.063 293.32657 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 13) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 281.82654 m
+66.063835 281.42853 l
+65.83839 281.09113 l
+65.500984 280.86572 l
+65.103 280.78656 l
+64.70501 280.86572 l
+64.36761 281.09113 l
+64.14216 281.42853 l
+64.062996 281.82654 l
+64.14216 282.22455 l
+64.36761 282.56195 l
+64.70501 282.78735 l
+65.103 282.86652 l
+65.500984 282.78735 l
+65.83839 282.56195 l
+66.063835 282.22455 l
+h
+f
+Q
+q
+BT
+78.53698 279.42654 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(20181 - [Bug]: Can't select text / column data) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 278.46652 m
+237.93152 278.46652 l
+S
+Q
+q
+BT
+64.063 261.52652 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F646F636B6572202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 243.1265 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 231.62646 m
+66.063835 231.22845 l
+65.83839 230.89105 l
+65.500984 230.66565 l
+65.103 230.58649 l
+64.70501 230.66565 l
+64.36761 230.89105 l
+64.14216 231.22845 l
+64.062996 231.62646 l
+64.14216 232.02448 l
+64.36761 232.36188 l
+64.70501 232.58728 l
+65.103 232.66644 l
+65.500984 232.58728 l
+65.83839 232.36188 l
+66.063835 232.02448 l
+h
+f
+Q
+q
+BT
+78.53698 229.22646 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(467 - Permission denied: access to / denied with overlayfs) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 228.26645 m
+284.41983 228.26645 l
+S
+Q
+q
+BT
+64.063 211.32643 Td
+16.8 TL
+0 0 0 rg
+0 0 0 rg
+/F5 12 Tf
+<7068706D7961646D696E2F77656273697465202847697448756229> Tj
+ET
+Q
+q
+BT
+64.063 192.9264 Td
+14 TL
+0 0 0 rg
+0 0 0 rg
+/F5 10 Tf
+(Week 12) Tj
+ET
+Q
+q
+0 0 0 rg
+66.143 181.42639 m
+66.063835 181.02838 l
+65.83839 180.69098 l
+65.500984 180.46558 l
+65.103 180.38641 l
+64.70501 180.46558 l
+64.36761 180.69098 l
+64.14216 181.02838 l
+64.062996 181.42639 l
+64.14216 181.8244 l
+64.36761 182.1618 l
+64.70501 182.3872 l
+65.103 182.46637 l
+65.500984 182.3872 l
+65.83839 182.1618 l
+66.063835 181.8244 l
+h
+f
+Q
+q
+BT
+78.53698 179.02638 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(196 - https://planet.phpmyadmin.net/ 404) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 178.06636 m
+223.96277 178.06636 l
+S
+Q
+q
+0 0 0 rg
+66.143 169.72638 m
+66.063835 169.32837 l
+65.83839 168.99097 l
+65.500984 168.76556 l
+65.103 168.6864 l
+64.70501 168.76556 l
+64.36761 168.99097 l
+64.14216 169.32837 l
+64.062996 169.72638 l
+64.14216 170.12439 l
+64.36761 170.46179 l
+64.70501 170.6872 l
+65.103 170.76636 l
+65.500984 170.6872 l
+65.83839 170.46179 l
+66.063835 170.12439 l
+h
+f
+Q
+q
+BT
+78.53698 167.32637 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(188 - Release notes not showing for 5.2.2) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 166.36635 m
+226.63074 166.36635 l
+S
+Q
+q
+0 0 0 rg
+66.143 158.02637 m
+66.063835 157.62836 l
+65.83839 157.29095 l
+65.500984 157.06555 l
+65.103 156.98639 l
+64.70501 157.06555 l
+64.36761 157.29095 l
+64.14216 157.62836 l
+64.062996 158.02637 l
+64.14216 158.42438 l
+64.36761 158.76178 l
+64.70501 158.98718 l
+65.103 159.06635 l
+65.500984 158.98718 l
+65.83839 158.76178 l
+66.063835 158.42438 l
+h
+f
+Q
+q
+BT
+78.53698 155.62636 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(176 - My attempt to refresh the phpMyAdmin website) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 154.66634 m
+266.17764 154.66634 l
+S
+Q
+q
+0 0 0 rg
+66.143 146.32635 m
+66.063835 145.92834 l
+65.83839 145.59094 l
+65.500984 145.36554 l
+65.103 145.28638 l
+64.70501 145.36554 l
+64.36761 145.59094 l
+64.14216 145.92834 l
+64.062996 146.32635 l
+64.14216 146.72437 l
+64.36761 147.06177 l
+64.70501 147.28717 l
+65.103 147.36633 l
+65.500984 147.28717 l
+65.83839 147.06177 l
+66.063835 146.72437 l
+h
+f
+Q
+q
+BT
+78.53698 143.92635 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(189 - TypeError: 'type' object is not subscriptable in files/models.py) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 142.96632 m
+315.0331 142.96632 l
+S
+Q
+q
+0 0 0 rg
+66.143 134.62634 m
+66.063835 134.22833 l
+65.83839 133.89093 l
+65.500984 133.66553 l
+65.103 133.58636 l
+64.70501 133.66553 l
+64.36761 133.89093 l
+64.14216 134.22833 l
+64.062996 134.62634 l
+64.14216 135.02435 l
+64.36761 135.36176 l
+64.70501 135.58716 l
+65.103 135.66632 l
+65.500984 135.58716 l
+65.83839 135.36176 l
+66.063835 135.02435 l
+h
+f
+Q
+q
+BT
+78.53698 132.22633 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(135 - Book cover gone crazy) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 131.26631 m
+180.36902 131.26631 l
+S
+Q
+q
+0 0 0 rg
+66.143 122.92633 m
+66.063835 122.52832 l
+65.83839 122.19092 l
+65.500984 121.965515 l
+65.103 121.88635 l
+64.70501 121.965515 l
+64.36761 122.19092 l
+64.14216 122.52832 l
+64.062996 122.92633 l
+64.14216 123.32434 l
+64.36761 123.66174 l
+64.70501 123.887146 l
+65.103 123.96631 l
+65.500984 123.887146 l
+65.83839 123.66174 l
+66.063835 123.32434 l
+h
+f
+Q
+q
+BT
+78.53698 120.52631 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(190 - Dark mode) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 119.5663 m
+138.11902 119.5663 l
+S
+Q
+q
+0 0 0 rg
+66.143 111.22632 m
+66.063835 110.82831 l
+65.83839 110.490906 l
+65.500984 110.2655 l
+65.103 110.18634 l
+64.70501 110.2655 l
+64.36761 110.490906 l
+64.14216 110.82831 l
+64.062996 111.22632 l
+64.14216 111.62433 l
+64.36761 111.96173 l
+64.70501 112.18713 l
+65.103 112.2663 l
+65.500984 112.18713 l
+65.83839 111.96173 l
+66.063835 111.62433 l
+h
+f
+Q
+q
+BT
+78.53698 108.82631 Td
+11.2 TL
+0 0 0 rg
+0.5019608 0.5019608 0.5019608 rg
+/F5 8 Tf
+(191 - Daily snapshots not generated since 2025-07-18) Tj
+ET
+Q
+q
+0.5019608 0.5019608 0.5019608 RG
+1 w
+[] 0 d
+78.53698 107.86628 m
+271.1073 107.86628 l
+S
+Q
+endstream 
+endobj
+16 0 obj
+<</Type/Outlines/Count 32/First 17 0 R/Last 48 0 R>>
+endobj
+17 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310030>/Dest[7 0 R/XYZ null null null]/Next 18 0 R>>
+endobj
+18 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310031>/Dest[7 0 R/XYZ null null null]/Prev 17 0 R/Next 19 0 R>>
+endobj
+19 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[7 0 R/XYZ null null null]/Prev 18 0 R/Next 20 0 R>>
+endobj
+20 0 obj
+<</Parent 16 0 R/Title<FEFF00200020004600690072007300740020007700650065006B00200028003100300029>/Dest[7 0 R/XYZ null null null]/Prev 19 0 R/Next 21 0 R>>
+endobj
+21 0 obj
+<</Parent 16 0 R/Title<FEFF002000200046006F00750072007400680020007700650065006B00200028003100330029>/Dest[7 0 R/XYZ null null null]/Prev 20 0 R/Next 22 0 R>>
+endobj
+22 0 obj
+<</Parent 16 0 R/Title<FEFF00200020004F0076006500720076006900650077>/Dest[7 0 R/XYZ null null null]/Prev 21 0 R/Next 23 0 R>>
+endobj
+23 0 obj
+<</Parent 16 0 R/Title<FEFF00200020005200650070006F007200740020002D0020004D006100720063006800200032003000320036>/Dest[7 0 R/XYZ null null null]/Prev 22 0 R/Next 24 0 R>>
+endobj
+24 0 obj
+<</Parent 16 0 R/Title<FEFF00200020005300650063006F006E00640020007700650065006B00200028003100310029>/Dest[7 0 R/XYZ null null null]/Prev 23 0 R/Next 25 0 R>>
+endobj
+25 0 obj
+<</Parent 16 0 R/Title<FEFF00200020005400680069007200640020007700650065006B00200028003100320029>/Dest[7 0 R/XYZ null null null]/Prev 24 0 R/Next 26 0 R>>
+endobj
+26 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F007000680070006D007900610064006D0069006E002000280047006900740048007500620029>/Dest[7 0 R/XYZ null null null]/Prev 25 0 R/Next 27 0 R>>
+endobj
+27 0 obj
+<</Parent 16 0 R/Title<FEFF0043006F006D006D006900740020006C006900730074>/Dest[7 0 R/XYZ null null null]/Prev 26 0 R/Next 28 0 R>>
+endobj
+28 0 obj
+<</Parent 16 0 R/Title<FEFF0043006F006E00730075006C00740069006E006700200053006500720076006900630065007300200066006F00720020007000680070004D007900410064006D0069006E>/Dest[7 0 R/XYZ null null null]/Prev 27 0 R/Next 29 0 R>>
+endobj
+29 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310030>/Dest[8 0 R/XYZ null null null]/Prev 28 0 R/Next 30 0 R>>
+endobj
+30 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310030>/Dest[8 0 R/XYZ null null null]/Prev 29 0 R/Next 31 0 R>>
+endobj
+31 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[8 0 R/XYZ null null null]/Prev 30 0 R/Next 32 0 R>>
+endobj
+32 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[8 0 R/XYZ null null null]/Prev 31 0 R/Next 33 0 R>>
+endobj
+33 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310033>/Dest[8 0 R/XYZ null null null]/Prev 32 0 R/Next 34 0 R>>
+endobj
+34 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310033>/Dest[8 0 R/XYZ null null null]/Prev 33 0 R/Next 35 0 R>>
+endobj
+35 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002D007400650061006D002F006D006100720069006100640062002D006D007900730071006C002D006B0062007300200028004700690074004C006100620029>/Dest[8 0 R/XYZ null null null]/Prev 34 0 R/Next 36 0 R>>
+endobj
+36 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002D007400650061006D002F0074006300700064006600200028004700690074004C006100620029>/Dest[8 0 R/XYZ null null null]/Prev 35 0 R/Next 37 0 R>>
+endobj
+37 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F0073006800610070006500660069006C0065002000280047006900740048007500620029>/Dest[8 0 R/XYZ null null null]/Prev 36 0 R/Next 38 0 R>>
+endobj
+38 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F0077006500620073006900740065002000280047006900740048007500620029>/Dest[8 0 R/XYZ null null null]/Prev 37 0 R/Next 39 0 R>>
+endobj
+39 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310030>/Dest[9 0 R/XYZ null null null]/Prev 38 0 R/Next 40 0 R>>
+endobj
+40 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310031>/Dest[9 0 R/XYZ null null null]/Prev 39 0 R/Next 41 0 R>>
+endobj
+41 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[9 0 R/XYZ null null null]/Prev 40 0 R/Next 42 0 R>>
+endobj
+42 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[9 0 R/XYZ null null null]/Prev 41 0 R/Next 43 0 R>>
+endobj
+43 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310032>/Dest[9 0 R/XYZ null null null]/Prev 42 0 R/Next 44 0 R>>
+endobj
+44 0 obj
+<</Parent 16 0 R/Title<FEFF0020002000200020005700650065006B002000310033>/Dest[9 0 R/XYZ null null null]/Prev 43 0 R/Next 45 0 R>>
+endobj
+45 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F0064006F0063006B00650072002000280047006900740048007500620029>/Dest[9 0 R/XYZ null null null]/Prev 44 0 R/Next 46 0 R>>
+endobj
+46 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F007000680070006D007900610064006D0069006E002000280047006900740048007500620029>/Dest[9 0 R/XYZ null null null]/Prev 45 0 R/Next 47 0 R>>
+endobj
+47 0 obj
+<</Parent 16 0 R/Title<FEFF00200020007000680070006D007900610064006D0069006E002F0077006500620073006900740065002000280047006900740048007500620029>/Dest[9 0 R/XYZ null null null]/Prev 46 0 R/Next 48 0 R>>
+endobj
+48 0 obj
+<</Parent 16 0 R/Title<FEFF00480061006E0064006C006500640020006900730073007500650073>/Dest[9 0 R/XYZ null null null]/Prev 47 0 R>>
+endobj
+49 0 obj
+<</Type/Catalog/PageLayout/OneColumn/PageMode(UseOutlines)/Pages 1 0 R/Outlines 16 0 R>>
+endobj
+50 0 obj
+<</Trapped/False/CreationDate(D:19700101000000+00'00')/ModDate(D:19700101000000+00'00')/GTS_PDFXVersion()/Title<FEFF006D00610072006B0064006F0077006E0032007000640066>/Author()/Creator<FEFF006D00610072006B0064006F0077006E0032007000640066>/Producer()/Subject()/Identifier()/Keywords()>>
+endobj
+xref
+0 51
+0000000000 65535 f 
+0000000015 00000 n 
+0000000078 00000 n 
+0000000166 00000 n 
+0000000252 00000 n 
+0000000290 00000 n 
+0000000310 00000 n 
+0000000330 00000 n 
+0000006684 00000 n 
+0000016477 00000 n 
+0000024639 00000 n 
+0000024701 00000 n 
+0000044132 00000 n 
+0000044194 00000 n 
+0000072778 00000 n 
+0000072840 00000 n 
+0000098657 00000 n 
+0000098726 00000 n 
+0000098860 00000 n 
+0000099006 00000 n 
+0000099152 00000 n 
+0000099322 00000 n 
+0000099496 00000 n 
+0000099638 00000 n 
+0000099824 00000 n 
+0000099998 00000 n 
+0000100168 00000 n 
+0000100398 00000 n 
+0000100544 00000 n 
+0000100782 00000 n 
+0000100928 00000 n 
+0000101074 00000 n 
+0000101220 00000 n 
+0000101366 00000 n 
+0000101512 00000 n 
+0000101658 00000 n 
+0000101936 00000 n 
+0000102166 00000 n 
+0000102392 00000 n 
+0000102610 00000 n 
+0000102756 00000 n 
+0000102902 00000 n 
+0000103048 00000 n 
+0000103194 00000 n 
+0000103340 00000 n 
+0000103486 00000 n 
+0000103700 00000 n 
+0000103930 00000 n 
+0000104148 00000 n 
+0000104294 00000 n 
+0000104399 00000 n 
+trailer
+<</Root 49 0 R/Info 50 0 R/ID[(BEIJCAJDBGIDBEJHDGHCECAABFABEJIG)(BEGHEBJIJHBGBEHEJAGHDDDHBEIBAFBD)]/Size 51>>
+startxref
+104699
+%%EOF
