@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {%- block jsonld %}
-{{ jsonld_macros::breadcrumb(path=["/404"], titles=["404"]) }}
+{{<jsonld_macros.breadcrumb path={["/404"]} titles={["404"]} config={config} />}}
 {% endblock jsonld -%}
 
 {% block body %}

@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block jsonld %}
-{{ jsonld_macros::breadcrumb(path=["/tags"], titles=["Tags"]) }}
+{{<jsonld_macros.breadcrumb path={["/tags"]} titles={["Tags"]} config={config} />}}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",

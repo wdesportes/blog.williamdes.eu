@@ -24,10 +24,6 @@ links = [
 ]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customized by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
 external_links_target_blank = true
@@ -37,3 +33,13 @@ external_links_no_follow = false
 
 # Whether to set rel="noreferrer" for all external links
 external_links_no_referrer = false
+
+# Syntax highlighting. Zola >= 0.22 moved these keys out of [markdown] (`highlight_code`
+# and `highlight_theme` no longer exist) and switched the engine from syntect to Giallo
+# (VSCode/TextMate themes), so a theme is now required and the old `base16-ocean-dark`
+# name is gone. We vendor VS Code's built-in "Tomorrow Night Blue" theme (MIT) as a
+# custom theme; its background is overridden by --hljs-bg in the site CSS, as before.
+[markdown.highlighting]
+style = "inline"
+theme = "Tomorrow Night Blue"
+extra_themes = ["highlight/tomorrow-night-blue.json"]

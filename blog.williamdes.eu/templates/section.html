@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block jsonld %}
-{{ jsonld_macros::breadcrumb_page(path=section.components, titles=section.components) }}
+{{<jsonld_macros.breadcrumb_page path={section.components} titles={section.components} config={config} />}}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -30,7 +30,7 @@
 <div class="posts">
     {% for page in section.pages %}
         <article class="post-entry">
-        {{ post_macros::page_in_list(page=page)}}
+        {{<post_macros.page_in_list page={page} />}}
         </article>
     {% endfor %}
 </div>

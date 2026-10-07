@@ -1,10 +1,7 @@
-{% import "post_macros.html" as post_macros %}
-{% import "jsonld_macros.html" as jsonld_macros %}
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% if page.title %}{{ config.title }} - {{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+        <title>{% if page?.title %}{{ config.title }} - {{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -14,8 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
         <!-- Standard meta tags -->
-        {% if page.extra.author %}<meta name="author" content="{{ page.extra.author }}">{% endif %}
-        {% if page.summary %}<meta name="description" content="{{ page.summary | markdown(inline=true) | striptags }}">{% endif %}
+        {% if page?.extra?.author %}<meta name="author" content="{{ page.extra.author }}">{% endif %}
+        {% if page?.summary %}<meta name="description" content="{{ page.summary | markdown(inline=true) | striptags }}">{% endif %}
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@wdesportes" />
@@ -53,7 +50,7 @@
 
 
         {%- block jsonld %}
-            {{ jsonld_macros::breadcrumb(path=[], titles=[]) }}
+            {{<jsonld_macros.breadcrumb path={[]} titles={[]} config={config} />}}
         {% endblock jsonld -%}
 
         <!-- Matomo -->
@@ -98,7 +95,7 @@
                 {% for page in paginator.pages %}
                     {% if not page.extra.retired %}
                         <article class="post-entry">
-                        {{ post_macros::page_in_list(page=page)}}
+                        {{<post_macros.page_in_list page={page} />}}
                         </article>
                     {% endif %}
                 {% endfor %}

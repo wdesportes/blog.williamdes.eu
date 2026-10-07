@@ -1,4 +1,4 @@
-{% macro breadcrumb(path, titles) %}
+{% component jsonld_macros.breadcrumb(path, titles, config) %}
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,13 +27,14 @@
     }
 </script>
 
-{%- endmacro %}
-{% macro breadcrumb_page(path, titles) %}
+{% endcomponent jsonld_macros.breadcrumb %}
+
+{% component jsonld_macros.breadcrumb_page(path, titles, config) %}
 {% set cur = "/" %}
 {% set path_bc = [] %}
 {% for elt in path %}
     {% set_global cur = cur ~ elt ~ "/" %}
-    {% set_global path_bc = path_bc | concat(with=cur) %}
+    {% set_global path_bc = [...path_bc, cur] %}
 {% endfor %}
-{{- jsonld_macros::breadcrumb(path=path_bc, titles=titles) -}}
-{%- endmacro %}
+{{<jsonld_macros.breadcrumb path={path_bc} titles={titles} config={config} />}}
+{% endcomponent jsonld_macros.breadcrumb_page %}

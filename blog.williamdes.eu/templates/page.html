@@ -1,17 +1,15 @@
 {% extends "index.html" %}
 
 {% block jsonld %}
-{{ jsonld_macros::breadcrumb_page(path=page.components, titles=page.components | slice(end=-1) | concat(with=page.title)) }}
+{% set titles_bc = [...page.components[:-1], page.title] %}
+{{<jsonld_macros.breadcrumb_page path={page.components} titles={titles_bc} config={config} />}}
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
     "@type": "BlogPosting",
     {% if page.extra.image %}"image": "{{ page.extra.image | safe }}",{% endif %}
     {% if page.extra.images -%}
-        {%- set images = [] -%}
-        {%- for image in page.extra.images -%}
-        {%- set_global images = images | concat(with=get_url(path=image)) -%}
-        {%- endfor -%}
+        {%- set images = [get_url(path=image) for image in page.extra.images] -%}
     "image": {{ images | json_encode(pretty=true) | safe }},{% endif %}
     "url": "{{ page.permalink | safe }}",
     "headline": "{{ page.title }}",

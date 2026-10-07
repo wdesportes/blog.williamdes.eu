@@ -457,6 +457,24 @@ img {
     border-radius: 0;
     white-space: pre-wrap;
 }
+/* Giallo syntax highlighting (Zola >= 0.22)
+   Giallo wraps each source line in a `.giallo-l` span; the minimal CSS below is
+   required for it to lay out correctly (and future-proofs `.giallo-ln` if line
+   numbers are ever enabled). See the Zola syntax highlighting docs. */
+.post-content pre.giallo .giallo-l {
+    display: inline-block;
+    min-height: 1lh;
+    width: 100%;
+}
+.post-content pre.giallo .giallo-ln {
+    display: inline-block;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0.4em;
+    min-width: 3ch;
+    text-align: right;
+    opacity: 0.8;
+}
 .post-content blockquote {
     margin: 0 0 0 calc(var(--gap) * -1);
     padding: 0 0 0 21px;

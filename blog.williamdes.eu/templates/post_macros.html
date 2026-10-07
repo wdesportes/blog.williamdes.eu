@@ -1,4 +1,4 @@
-{% macro page_in_list(page) %}
+{% component post_macros.page_in_list(page) %}
                     <header class="entry-header">
                         <h2>{{ page.title }}</h2>
                     </header>
@@ -9,4 +9,4 @@
                         <time datetime="{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%z") }}">{{ page.date | date(format="%B %e, %Y") }}</time>
                     </footer>
                     <a class="entry-link" href="{{ page.permalink }}"></a>
-{% endmacro page_in_list %}
+{% endcomponent post_macros.page_in_list %}
