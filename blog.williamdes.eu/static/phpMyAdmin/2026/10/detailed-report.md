@@ -65,6 +65,7 @@ snapshot pages of the website.
 - [e2624b5712 - docs: drop the Deleted User placeholder from the credits](https://github.com/phpmyadmin/phpmyadmin/commit/e2624b571219bd04d8e3897039588c8877f4ded5)
 - [3f1d573e47 - docs: credit Daniel Hinostroza, MD as a Spanish translator](https://github.com/phpmyadmin/phpmyadmin/commit/3f1d573e4731bbcb95f8d310a7f0c7ae85fbaa3c)
 
+- [221ef75197 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/221ef75197dd36f01c4a53140c495d265d083c4c)
 ### Week 44
 
 - [7e1292d3d8 - Fix the FAQ 3.10 wording about duplicate values](https://github.com/phpmyadmin/phpmyadmin/commit/7e1292d3d8643cbbf146c85ab2b137f1df9f656c)
@@ -101,6 +102,9 @@ snapshot pages of the website.
 - [03b6330edf - Remove the stale foreach.valueOverwrite baseline entry](https://github.com/phpmyadmin/motranslator/commit/03b6330edf749b448691f2a3c7a0a9b60b062496)
 - [5d62255480 - Fix the PHPStan analyse job by renaming the loop variable so that the parameter is not overwritten](https://github.com/phpmyadmin/motranslator/commit/5d622554809b4def1d4a517b62eea7daa4ab3ec5)
 
+- [3fd7eb15b6 - Merge branch '6.0.x'](https://github.com/phpmyadmin/motranslator/commit/3fd7eb15b61098a7a18015aeb8a3c76c76ab97b9)
+- [9bed787b3a - Merge branch '5.4.x' into 6.0.x](https://github.com/phpmyadmin/motranslator/commit/9bed787b3a30f1be4ce4138e408700f1800cb1ae)
+- [bb9900f3a0 - Merge branch '5.4.x'](https://github.com/phpmyadmin/motranslator/commit/bb9900f3a0c7954859dd16d2b8f91af889709a0d)
 ## phpmyadmin/error-reporting-server (GitHub)
 
 ### Week 44
@@ -174,6 +178,15 @@ snapshot pages of the website.
 - [3ebc258d04 - Remove now default Priority: optional](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/3ebc258d04df75f0ee10b427936f1639ae1f0e36)
 
 # Handled issues
+* [#20550 [Security]: PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongly encouraged to update immediately.](https://github.com/phpmyadmin/phpmyadmin/issues/20550)
+* [#19561 Outdated info and broken Links in bundled docs](https://github.com/phpmyadmin/phpmyadmin/issues/19561)
+* [#19588 more that one column](https://github.com/phpmyadmin/phpmyadmin/issues/19588)
+* [#18758 What is the use of $cfg['Servers'][$i]['compress']?](https://github.com/phpmyadmin/phpmyadmin/issues/18758)
+* [#470 [Security]: PHP CVE-2026-109618 & CVE-2026-109619](https://github.com/phpmyadmin/docker/issues/470)
+* [#469 [security] Update PHP base image to address critical PHP CVE-2026-109618 & CVE-2026-109619](https://github.com/phpmyadmin/docker/issues/469)
+* [#58 [6.x] Evaluation incorrect, returning false for 1](https://github.com/phpmyadmin/motranslator/issues/58)
+* [#66 PKSA-vq1j-sc3k-jzzk](https://github.com/phpmyadmin/motranslator/issues/66)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

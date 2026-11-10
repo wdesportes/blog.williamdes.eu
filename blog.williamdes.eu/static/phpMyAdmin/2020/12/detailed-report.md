@@ -65,6 +65,8 @@ I did make some changes to update the version and comply to the Debian policy.
 * [#309 Add PMA_QUERYHISTORYMAX config parameter](https://github.com/phpmyadmin/docker/pull/309)
 * [#314 Add the possibility to change max_execution_time](https://github.com/phpmyadmin/docker/pull/314)
 * [#305 add 'max_input_vars = 10000' to phpmyadmin_misc.ini](https://github.com/phpmyadmin/docker/pull/305)
+* [#16515 While using phpMyAdmin 5.0.4 with My SQL version 8.0.22 . In the exports section I am getting such errors](https://github.com/phpmyadmin/phpmyadmin/issues/16515)
+
 
 # Commit list
 
@@ -213,6 +215,10 @@ I did make some changes to update the version and comply to the Debian policy.
 - [e25f2ec999 - Fix a "PHP Fatal error:  Uncaught TypeError: ucfirst()"](https://github.com/phpmyadmin/phpmyadmin/commit/e25f2ec999ce84d1cb618950fffc9e89569342b4)
 - [dfce335134 - Some text code improvements](https://github.com/phpmyadmin/phpmyadmin/commit/dfce3351343f79633851465ea70d415f396df2fa)
 
+### Week 51
+
+- [b00292d5ca - Translated using Weblate (German)](https://github.com/phpmyadmin/phpmyadmin/commit/b00292d5ca4867e890f29c518fc5c19a5a348439)
+
 ## phpmyadmin/docker (GitHub)
 
 - [a66e868fd0 - Merge #317 - Fix #309 QueryHistoryMax is an int](https://github.com/phpmyadmin/docker/commit/a66e868fd007faae55bf8ccc30d143e59759de0b)
@@ -225,3 +231,48 @@ I did make some changes to update the version and comply to the Debian policy.
 - [7f5e91546b - Merge #305 - Add 'max_input_vars = 10000' to phpmyadmin_misc.ini](https://github.com/phpmyadmin/docker/commit/7f5e91546b93decc6ef63e19e7627bc6eeaa89b5)
 - [7e3ee4e83c - Merge #313 - Add GitHub CI](https://github.com/phpmyadmin/docker/commit/7e3ee4e83c64d9dfd029a5d20c40e3122885b06a)
 - [1465223b65 - Improve the README.md](https://github.com/phpmyadmin/docker/commit/1465223b65c0169ddf14658bf52ecc1fec15e463)
+
+
+## phpmyadmin/localized_docs (GitHub)
+
+### Week 52
+
+- [984fb4a0b3 - Translated using Weblate (Dutch)](https://github.com/phpmyadmin/localized_docs/commit/984fb4a0b3048bb75e17f94234128ee92bd27150)
+
+## phpmyadmin/twig-i18n-extension (GitHub)
+
+### Week 53
+
+- [aec9e489c6 - Allow php 8.0](https://github.com/phpmyadmin/twig-i18n-extension/commit/aec9e489c66930be87a67a7b511a01b3e61d1a57)
+
+## phpmyadmin-team/tcpdf (GitLab)
+
+### Week 50
+
+- [dc393e889b - Update d/changelog for 6.3.5+dfsg1-2](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/dc393e889bb85889820c44883956cebfd52ce971)
+- [88c7351394 - Set debian branch to debian/latest (DEP-14)](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/88c7351394015dfc9e8c30f4a0fa129da8e98e63)
+- [0363179b0a - Update Maintainer to add "Packaging" before "Team"](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/0363179b0ab6688d16b09f445379458a37864091)
+- [28afc3221e - Run "cme fix dpkg" to re-format the control file](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/28afc3221edda967cce0562a4319627243727d6e)
+- [c04ba3f1aa - Update Standards-Version to 4.5.1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/c04ba3f1aad4a991351ea15afde9f72515b019eb)
+
+## php-team/pear/google-recaptcha (GitLab)
+
+### Week 53
+
+- [fcf3f0b5be - Update d/changelog](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/fcf3f0b5be55446f9c01f7203990a7241625c39f)
+- [6bb024888d - Add test autoloader to d/clean](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/6bb024888d08a434263bda1edeff3cf2baf6b434)
+- [1d164fad38 - Add autoload generation](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/1d164fad38ee3a446ef9c9f8c6b3b63556c36ca9)
+- [b981f4f0c8 - Add d/examples and d/docs](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/b981f4f0c8597e0d9de044e89e53ed04047c4df3)
+- [d533d3ef9c - Update d/changelog](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/d533d3ef9cc37fd5a62a25ac2438e4899fd65d4f)
+- [f6271890b0 - Run "cme fix dpkg"](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/f6271890b08767b3cefea9097b85a0ba237fbd48)
+- [1b7e38c29c - Update d/copyright](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/1b7e38c29c52e42f992867e14418800cf51208cb)
+- [7ca5f2b087 - Add .phpunit.result.cache to d/clean](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/7ca5f2b087214458c1d48810c24ca51e174a24c5)
+- [0a827c586a - Fix a typo in a patch file](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/0a827c586a5c54eabc36a5c45706831d3229c454)
+- [1f2be57990 - Update d/changelog](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/1f2be57990692713129e2567df3aaf06dacee030)
+- [8d0196fad5 - Add myself to the uploaders](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/8d0196fad504e583d0b58ab9569b0142c6a7d7c1)
+- [0b21ef706b - Update Standards-Version to 4.5.1](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/0b21ef706b0a5f56b06fd6288b6c4ae8e2eca797)
+- [c704c7e0c4 - Run "cme fix dpkg"](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/c704c7e0c49b73428102d0c7eaa455aefcf05ce6)
+- [b301b1be5f - Update patch format](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/b301b1be5fa3e58e6e4f372a7992a2d6cd0696c2)
+- [b0d32a7e2f - Update d/changelog](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/b0d32a7e2f4c1c35c8be06a9d371807f4df73214)
+- [13672a5cae - Adapt to recent version of PHPUnit (9)](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/13672a5cae6c1468d1f8488b999353d8ffb5c9ea)
+- [6678b3e320 - Set debian branch to debian/latest (DEP-14)](https://salsa.debian.org/php-team/pear/google-recaptcha/-/commit/6678b3e320e571f5f7928973d253f64178500631)

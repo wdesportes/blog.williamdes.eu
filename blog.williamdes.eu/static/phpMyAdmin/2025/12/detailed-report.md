@@ -28,6 +28,20 @@ And did re-write a test for 6.0. And updated some documentations.
 
 ## phpmyadmin/phpmyadmin (GitHub)
 
+### Week 1
+
+- [5c8325853b - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/5c8325853b80db68a9e9a22f861e3f10c83d7d05)
+- [3dd3a7b997 - Merge #20006 - Fix tests after merge](https://github.com/phpmyadmin/phpmyadmin/commit/3dd3a7b997835f071a1035be544416cdd0b700e7)
+- [8f06a371cb - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/8f06a371cb3110a06a3b33f735f15328d67c6c16)
+- [1e66805318 - Bump docs year to 2026](https://github.com/phpmyadmin/phpmyadmin/commit/1e66805318f13051c982304d1284f791051e9a4a)
+- [93bfcec64c - Update a broken link, reported by LG6280 on Weblate](https://github.com/phpmyadmin/phpmyadmin/commit/93bfcec64c87c2455422f934e80eac230f43744a)
+- [c47e13192f - Remove a double space, reported by RickyLam11 on Weblate](https://github.com/phpmyadmin/phpmyadmin/commit/c47e13192fe00360d4f72e8c758535eb28bf19e8)
+- [f9a622cf0a - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/f9a622cf0a7ac89598e1ec7e89de6055c12c88b3)
+- [c16304a9f8 - Update doc links to https if possible](https://github.com/phpmyadmin/phpmyadmin/commit/c16304a9f8c5ee178e351f3f34b1d37259166aa7)
+- [bbfa40bd98 - Merge Weblate translations](https://github.com/phpmyadmin/phpmyadmin/commit/bbfa40bd981f448beedda42ff30f00018d329e0e)
+- [4efc69d083 - Fix a coding standard mistake](https://github.com/phpmyadmin/phpmyadmin/commit/4efc69d083c83903498d4324d1309b8843de234b)
+- [4da3aaaf7a - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/4da3aaaf7a4ce164bf02fb6766c9469da696e430)
+
 ### Week 49
 
 - [3e20f101f7 - Merge #19978 - Convert false links into buttons](https://github.com/phpmyadmin/phpmyadmin/commit/3e20f101f7052fdbd35e4452245850e51519d3d9)
@@ -110,6 +124,19 @@ And did re-write a test for 6.0. And updated some documentations.
 - [b2fb878dc7 - Fix d/watch](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/b2fb878dc776fa1e7b609220452b9480108d5142)
 
 # Handled issues
+* [#19118 Table comment field should be textarea](https://github.com/phpmyadmin/phpmyadmin/issues/19118)
+* [#19935 [6.0] On search in the tree, all tables show up](https://github.com/phpmyadmin/phpmyadmin/issues/19935)
+* [#19967 [Feat]: Request collations only when required (click on select)](https://github.com/phpmyadmin/phpmyadmin/issues/19967)
+* [#19941 ODS doesn't export column names by default](https://github.com/phpmyadmin/phpmyadmin/issues/19941)
+* [#19950 Tooltip doesn't disappear when searching on date type](https://github.com/phpmyadmin/phpmyadmin/issues/19950)
+* [#19855 [6.0]: Exporting table structure doesn't work](https://github.com/phpmyadmin/phpmyadmin/issues/19855)
+* [#19976 [Bug]: Bootstrap theme icons are not visible on bigger screens](https://github.com/phpmyadmin/phpmyadmin/issues/19976)
+* [#19900 [Bug]: Two-factor authentication disappears](https://github.com/phpmyadmin/phpmyadmin/issues/19900)
+* [#19339 json column not always with syntax highlighting](https://github.com/phpmyadmin/phpmyadmin/issues/19339)
+* [#19964 [Bug]: Error importing CSV with more decimals than the column](https://github.com/phpmyadmin/phpmyadmin/issues/19964)
+* [#19896 [Bug]: `$cfg['DefaultTabServer']` doesn't seem to work](https://github.com/phpmyadmin/phpmyadmin/issues/19896)
+* [#19367 Renaming a timestamp(6) column doesn't work: it quotes the value](https://github.com/phpmyadmin/phpmyadmin/issues/19367)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

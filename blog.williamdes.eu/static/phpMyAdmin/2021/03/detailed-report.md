@@ -125,6 +125,16 @@ Also did make bug fixes and removed a near to useless js lib.
 * [#186 Errors in log](https://github.com/phpmyadmin/error-reporting-server/issues/186)
 * [#185 Error when auto-reporting error](https://github.com/phpmyadmin/error-reporting-server/issues/185)
 * [#150 Undefined index: name](https://github.com/phpmyadmin/error-reporting-server/issues/150)
+* [#16764 Problem with table filter on multiserver setup server > 1](https://github.com/phpmyadmin/phpmyadmin/issues/16764)
+* [#16780 New event shows an empty row, reloading shows the row filled](https://github.com/phpmyadmin/phpmyadmin/issues/16780)
+* [#16765 New lines in text fields are doubled](https://github.com/phpmyadmin/phpmyadmin/issues/16765)
+* [#14358 Text input results in changing pages on mobile](https://github.com/phpmyadmin/phpmyadmin/issues/14358)
+* [#16756 Casing returns from the server when the processes are automatically refreshed](https://github.com/phpmyadmin/phpmyadmin/issues/16756)
+* [#15629 editing a date adds .00000 and breaks re-editing the date using the picker](https://github.com/phpmyadmin/phpmyadmin/issues/15629)
+* [#16770 Notice or warning, when clicking on Structure](https://github.com/phpmyadmin/phpmyadmin/issues/16770)
+* [#16724 Remove column from order by results in "No database selected" error](https://github.com/phpmyadmin/phpmyadmin/issues/16724)
+* [#16659 Column Drop arrow is not responsive](https://github.com/phpmyadmin/phpmyadmin/issues/16659)
+
 
 # Commit list
 
@@ -231,6 +241,93 @@ Also did make bug fixes and removed a near to useless js lib.
 - [1d429c5ed9 - Add a test for CreateAddField::getColumnCreationQuery](https://github.com/phpmyadmin/phpmyadmin/commit/1d429c5ed9b1b8dfb3ab4a5b5c4ac6390a70beed)
 - [c71c11e787 - Remove an exit by moving out the preview SQL code on table create add field](https://github.com/phpmyadmin/phpmyadmin/commit/c71c11e7872d0acf4c7477fbdbd567da1ee8e253)
 
+### Week 9
+
+- [7bd3ec6b35 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/7bd3ec6b3580aa8291674ab5245e2fbfd6f5e834)
+- [69e7436aef - Edit the test for #16708 to cover more code and have better assertions](https://github.com/phpmyadmin/phpmyadmin/commit/69e7436aefdb24e03d2f376f10e6c5eb837814db)
+- [161ad3a897 - Update psalm and psalm baseline](https://github.com/phpmyadmin/phpmyadmin/commit/161ad3a8970d8ab991772431fbbfb1963e5b4d2e)
+- [8311785a48 - Fix #16708 - Only consider the first where clause](https://github.com/phpmyadmin/phpmyadmin/commit/8311785a484d71ea11002a9deaed08cede69291e)
+- [13fdc3e099 - Add tests for #16708](https://github.com/phpmyadmin/phpmyadmin/commit/13fdc3e099d314b7c39665648f8c9cd0e07303bf)
+- [5a45a0d34b - Add methods to access and stub the Response class](https://github.com/phpmyadmin/phpmyadmin/commit/5a45a0d34b3a4f63490e1aecdc623996117470e8)
+- [f1ad006701 - Fix a failing test when using phpunit filter](https://github.com/phpmyadmin/phpmyadmin/commit/f1ad006701cc1ace29d2ac9a86ccf50a87efd42c)
+- [4d78b3e6f9 - Desactivate session functions for test suite in Sql.php](https://github.com/phpmyadmin/phpmyadmin/commit/4d78b3e6f9e1b1c255fbfe651853040c86d58bee)
+- [9a2ab515d3 - Bring fieldsMetadata testing to QA_5_1](https://github.com/phpmyadmin/phpmyadmin/commit/9a2ab515d34efda6ab7c1743dcb3d9678f49130c)
+- [b43c20191f - Add container builder loading methods to the asbtract test case](https://github.com/phpmyadmin/phpmyadmin/commit/b43c20191fa239e8ad5736191cb6d03b74c03eae)
+- [4aa629c6f4 - Move the container builder loading to the Core class](https://github.com/phpmyadmin/phpmyadmin/commit/4aa629c6f437a38fe527d29bf063555c2ac5c0c5)
+- [a00b0f8ce1 - Add ChangeLog entries for #16704 and #14026](https://github.com/phpmyadmin/phpmyadmin/commit/a00b0f8ce12b973fa712622ca7c9fb4a4f325348)
+- [aa9ce39c07 - Update po files](https://github.com/phpmyadmin/phpmyadmin/commit/aa9ce39c0704cf02be18672a3a0d1972b9fdf4de)
+- [4ade9fb205 - Merge #16632 - Fix #14026 - Fix error messages and conditions for MD5 and AES_* functions](https://github.com/phpmyadmin/phpmyadmin/commit/4ade9fb205c7125161834629ca6b5ceef3315b2f)
+- [92e602c9e7 - Merge #16617 - translation: mention the correct mysql setting in 'Opened_tables' explanation](https://github.com/phpmyadmin/phpmyadmin/commit/92e602c9e7b9ab9df3a9cf82c2fd7fe4477d259c)
+- [da26e013d1 - Add tests for #16704](https://github.com/phpmyadmin/phpmyadmin/commit/da26e013d1438d4da9284cdb7070dd021ed0f940)
+- [ea98ad3f14 - Fix #16704 - Add missing typecasts](https://github.com/phpmyadmin/phpmyadmin/commit/ea98ad3f14cee18795f646a81eeec9666fa8e2f6)
+- [7aabad9b7a - Move queries from Operations class to the Query\Generator class](https://github.com/phpmyadmin/phpmyadmin/commit/7aabad9b7a0723039be828137152cf97def3501d)
+- [c2518aa34b - Use early exit for setProxySettings in AbstractTestCase](https://github.com/phpmyadmin/phpmyadmin/commit/c2518aa34b9ec522f3404c086656cc8731f9d058)
+- [808a0826cb - Add a test class for PerformanceSchema](https://github.com/phpmyadmin/phpmyadmin/commit/808a0826cb8d8c958ee22e519145955626f45d11)
+- [dac6c44fc9 - Fix a coding standard mistake in the last CSS fix](https://github.com/phpmyadmin/phpmyadmin/commit/dac6c44fc9d08b16b90efed3bec00d88ef45cd22)
+- [819c9433d3 - Drop unused PMA_THEME_VERSION and PMA_THEME_GENERATION](https://github.com/phpmyadmin/phpmyadmin/commit/819c9433d35eaa2631e6cbabdadb32cdcf04855a)
+- [abdeb98b08 - Drop test constants PROXY_{URL,USER,PASS} in favor of existing ENV http_proxy](https://github.com/phpmyadmin/phpmyadmin/commit/abdeb98b08e1c40e6817b811f75859efe6778708)
+- [b5263d44c8 - Replace PMA_MAJOR_VERSION by Version::SERIES ](https://github.com/phpmyadmin/phpmyadmin/commit/b5263d44c8688dc8b693a9da9dc3faa6d609f17c)
+- [feb7c8b25a - Ref #16332 - Remove more ->at matcher calls](https://github.com/phpmyadmin/phpmyadmin/commit/feb7c8b25a38c522759ed9f71144f101b0a315a0)
+- [ad0ef8ba8e - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/ad0ef8ba8ee6920aaa93fa2e25b22dcb7f6fece3)
+- [a4ad49efd8 - Add a ChangeLog entry for 96eeddebd0](https://github.com/phpmyadmin/phpmyadmin/commit/a4ad49efd846aeeb317b98281151bf47fe30c8b2)
+- [96eeddebd0 - Merge #16715 - When exporting yaml quote strings even when they are numeric](https://github.com/phpmyadmin/phpmyadmin/commit/96eeddebd0ace8e41788e5b96d46eefbe849ada3)
+- [7943c8a497 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/7943c8a4974dc50bf7fb53e3b1572f274ccc9c9e)
+- [e00c957e06 - Add ChangeLog entries for #16677, #16698 and #16713](https://github.com/phpmyadmin/phpmyadmin/commit/e00c957e063ea2473adbe1de83775199f09c18a6)
+- [5880ed3ded - Merge #16714 - Add backward compatibility for DefaultTabServer, DefaultTabDatabase, DefaultTabTable, NavigationTreeDefaultTabTable and NavigationTreeDefaultTabTable2](https://github.com/phpmyadmin/phpmyadmin/commit/5880ed3ded1a1c6a6778a3399b90fc7267c3f2d5)
+- [3ad189b452 - Add tests for #16713 and #16698](https://github.com/phpmyadmin/phpmyadmin/commit/3ad189b452f98a7938b53cfd4b0c7b67b353156f)
+- [8da837aa3e - Fix #16713 - Add a default route as a navigation fallback](https://github.com/phpmyadmin/phpmyadmin/commit/8da837aa3ed8f2145cb9cc7398cbefff30eea620)
+- [5531ef22d8 - Merge #16690 - Fix #16677 - Font size of SQL query](https://github.com/phpmyadmin/phpmyadmin/commit/5531ef22d89d443c9e0587b22aba1508f34e1211)
+- [3a014525b0 - Ref #16677 - Prevent bootstrap from overriding the tree background](https://github.com/phpmyadmin/phpmyadmin/commit/3a014525b017650a4d54585962f2e7766530766c)
+- [dac7a81625 - Add a ChangeLog entry for #16659](https://github.com/phpmyadmin/phpmyadmin/commit/dac7a816251c2e239d2e97940c6d42c799f8b041)
+- [a4468f2d1e - Merge #16687 - Fix #16659 - Column Drop arrow is not responsive](https://github.com/phpmyadmin/phpmyadmin/commit/a4468f2d1e31abbb3c22dad19f89bbe8ba217179)
+- [cfcb5c902a - Fix #16552 - Migrate badge- classes to bg- classes ](https://github.com/phpmyadmin/phpmyadmin/commit/cfcb5c902ad8bacc88e52a6a692f8d9e436f561f)
+- [ecaf8d2f1e - Merge #16688 - Fix #16552 - checkbox background on pmahomme theme](https://github.com/phpmyadmin/phpmyadmin/commit/ecaf8d2f1ee02f2d073b0370779b2b1b67f4cdc0)
+- [735e7ca1d7 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/735e7ca1d7965f6026ee3bc58c2223624376ba52)
+- [328cdb6980 - Improve the CI workflow for optional extensions and some titles](https://github.com/phpmyadmin/phpmyadmin/commit/328cdb6980b62bad361c04416584b022a3dbf294)
+- [bbedca9460 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/bbedca9460eab339f8f454a1a3faaef99c5bbc78)
+- [82585a1989 - Remove lint before PHP setup on GitHub actions workflow](https://github.com/phpmyadmin/phpmyadmin/commit/82585a1989c8d005c0830608403be6419cff4904)
+- [9f3bd5bfb9 - Adjust extensions used on GitHub actions workflows](https://github.com/phpmyadmin/phpmyadmin/commit/9f3bd5bfb9e1858c388b6d704e897cccf52c2f04)
+- [81cf690f3d - Remove mock for 'addHTML' method that does not exist anymore in AuthenticationHttpTest](https://github.com/phpmyadmin/phpmyadmin/commit/81cf690f3d16a17deef43dc72d3efbf91f304cb2)
+- [76803f9422 - Replace deprecated ->setMethods by ->onlyMethods](https://github.com/phpmyadmin/phpmyadmin/commit/76803f9422c1e7de6f2e75ef6c882aa59dc35cf5)
+- [09736fc882 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/09736fc8828f153895f3ef2db9653dd2b82d9da8)
+- [92fd1d1f62 - Add a ChangeLog entry for 272e747e0c](https://github.com/phpmyadmin/phpmyadmin/commit/92fd1d1f62024db27bfa3eb8e073c23464fad1df)
+- [12936969dc - Add a ChangeLog entry for #16706](https://github.com/phpmyadmin/phpmyadmin/commit/12936969dcb1fe1e1d2e62925230435f95e1d765)
+- [272e747e0c - Merge #16710 - Fix type error when exporting triggers to ODF](https://github.com/phpmyadmin/phpmyadmin/commit/272e747e0c22699b250b7125be2cf6cafeae6e60)
+- [97f0b16938 - Fix #16706 - Error when visualizing nullable geometry column](https://github.com/phpmyadmin/phpmyadmin/commit/97f0b169389b1538191e1847266b114b6287757c)
+- [b5b62274f8 - Add a test for #16706](https://github.com/phpmyadmin/phpmyadmin/commit/b5b62274f859569c72c9aa2289188c608de1603f)
+- [29c31be315 - Ref #16694 - Cover currentUserHasUserPrivilege with new tests](https://github.com/phpmyadmin/phpmyadmin/commit/29c31be315c7b91efae03a5d0f603438a6cce70a)
+
+### Week 10
+
+- [0673bd8140 - Add a test for Providers\ServerVariables\VoidProvider](https://github.com/phpmyadmin/phpmyadmin/commit/0673bd81406c72a235998321cd8b25ec4f7e51a6)
+- [f9e00ac6e5 - Add a test for Template::getTwigEnvironment](https://github.com/phpmyadmin/phpmyadmin/commit/f9e00ac6e5bd8451b2e197ef2ea783a3a97db9b1)
+- [1cba4b2259 - Merge all Twig Environment building to one function and split out po replacements](https://github.com/phpmyadmin/phpmyadmin/commit/1cba4b2259b38c58ace4c2eeb58c68db471f3030)
+- [725372a20e - Fix a mistake in the cache warmup command](https://github.com/phpmyadmin/phpmyadmin/commit/725372a20ecd0798355d0e8e1ea0ce5f46a82d44)
+- [7539fdc3ba - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/7539fdc3baf4bb39b19ca597719a3b9d8bf1d4b1)
+
+### Week 12
+
+- [d53c1e72c2 - Translated using Weblate (Spanish)](https://github.com/phpmyadmin/phpmyadmin/commit/d53c1e72c28af54f23adda56cab76f7d30deaf62)
+
+### Week 13
+
+- [4bf427c2c0 - Fix "Connection" label always shown on table create, should be hidden like the input](https://github.com/phpmyadmin/phpmyadmin/commit/4bf427c2c065534526695f16f59af11414447457)
+- [176ff6a99c - Fix #16783 - Incorrect linkage from one table's value to another table (varchar FK)](https://github.com/phpmyadmin/phpmyadmin/commit/176ff6a99cff1ead1fb54a566ae35c05fac77a7b)
+- [c70552651f - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/c70552651f6455b45674fa2620d94b9d1c7ea3f2)
+- [86232c3b92 - Add a ChangeLog entry for #16780 and #16765](https://github.com/phpmyadmin/phpmyadmin/commit/86232c3b92054822bd5c0f17c6aac3e5864eeca0)
+- [74e1f2cdf9 - Merge #16782 - Fix #16780 New event shows an empty row](https://github.com/phpmyadmin/phpmyadmin/commit/74e1f2cdf96adb9071ffaf0ed0d462a8b3def9e0)
+- [4d2c311b59 - Fix some phpdoc blocks on Results class](https://github.com/phpmyadmin/phpmyadmin/commit/4d2c311b59d5ee3cc84277043b46218c47fca540)
+- [e462bd8ffc - Fix #16765 - Revert "55880451eb193f7e1bad90df365b67d54eded5a6"](https://github.com/phpmyadmin/phpmyadmin/commit/e462bd8ffc59d436a694e4c89a17dceb32313f87)
+- [676a9cea3d - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/676a9cea3d2e2a634391f9ff48a1cf10a7c1e3f5)
+- [2dd9797bcf - Add ChangeLog entries for a3e725a347, aa0c22959d, #15629](https://github.com/phpmyadmin/phpmyadmin/commit/2dd9797bcf13d89c2256fb35d61b6188966a8412)
+- [b6398cfe17 - Merge #16776 - Fix #15629 - datetime decimal displayed (.0000) after edit](https://github.com/phpmyadmin/phpmyadmin/commit/b6398cfe179bdc1f1f324488cc7927901a818103)
+- [a3e725a347 - Fix reported PHP notices on export save preview](https://github.com/phpmyadmin/phpmyadmin/commit/a3e725a347bc703b34a91084f02b6e67f01e6874)
+- [aa0c22959d - Fix PHP warnings on the server status data not set](https://github.com/phpmyadmin/phpmyadmin/commit/aa0c22959d2826308bc0eebfae15e1f1796b901d)
+- [b3eeb098a3 - Add ChangeLog entries for #16770, #16756, 4c99a7d8f8](https://github.com/phpmyadmin/phpmyadmin/commit/b3eeb098a393a5c1d96f55c7465c46e80b1c6f24)
+- [a7616feb1d - Fix #16756 - Casing returns from the server when the processes are automatically refreshed](https://github.com/phpmyadmin/phpmyadmin/commit/a7616feb1dabccfac6a580b2aba99e8ef77df737)
+- [1fa15c29fa - Fix #16770 - Notice or warning, when clicking on Structure](https://github.com/phpmyadmin/phpmyadmin/commit/1fa15c29fab70badc0d46c799e1ff34ff1c7fe73)
+- [4c99a7d8f8 - Split out git common dir detection to handle file_get_contents error cases](https://github.com/phpmyadmin/phpmyadmin/commit/4c99a7d8f88b52c1639e5694a3933431c3c99bde)
+
 ## phpmyadmin/website (GitHub)
 
 - [a021994f70 - Add html IDs on release names to allow to build URLs with anchors](https://github.com/phpmyadmin/website/commit/a021994f70d6bb46b7a927f87c7824aeee5ad22e)
@@ -305,3 +402,13 @@ Also did make bug fixes and removed a near to useless js lib.
 - [13cb5366bc - Simplify phpunit command call](https://github.com/phpmyadmin/error-reporting-server/commit/13cb5366bcfc70b6c01d14f93abcebefc542c47a)
 - [ce9d431b47 - Upgrade cakephp/plugin-installer](https://github.com/phpmyadmin/error-reporting-server/commit/ce9d431b47db69b101911aa0bad6431ef5827957)
 - [99d1283729 - Fix PHP 8.0 condition](https://github.com/phpmyadmin/error-reporting-server/commit/99d128372924f8087787c991f69f10a3312161d7)
+
+
+## phpmyadmin-team/tcpdf (GitLab)
+
+### Week 12
+
+- [4a769c9d86 - Revert "Update Maintainer to add "Packaging" before "Team""](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/4a769c9d86640f7410b558e18d5e1bbe8f322f02)
+- [001ad10e04 - Update d/changelog for 6.4.1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/001ad10e040863b59b8909e12b09a6d611eb4a4e)
+- [1c9f290ba2 - Update upstream source from tag 'upstream/6.4.1+dfsg1'](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/1c9f290ba23476140dc372d8ce2579091b161651)
+- [238825b9a5 - New upstream version 6.4.1+dfsg1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/238825b9a582ff87e9818949bebf14946d86ea31)

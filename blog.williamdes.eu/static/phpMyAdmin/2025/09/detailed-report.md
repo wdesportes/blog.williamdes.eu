@@ -82,11 +82,18 @@ I wrote some documentation updates:
 - [c0feb46b8e - Use NodeJS 20 at Scrutinizer (they use nvm) and use Ubuntu Noble for a newer glibc](https://github.com/phpmyadmin/phpmyadmin/commit/c0feb46b8eee302dede3af997a7e9d67679a6bb5)
 - [1337a60510 - Use NodeJS 23 for Scrutinizer only](https://github.com/phpmyadmin/phpmyadmin/commit/1337a605104e9e13cd4a68eb6729a0320f80de63)
 
+- [c4166cc761 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/c4166cc761f14ade0117f779b3c1e6a93d034c86)
+- [f72491a1c0 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/f72491a1c08b093c5ad36cb33d81314a46e8f6cd)
 ### Week 38
 
 - [1c77941bb2 - Improve the upload progress FAQ](https://github.com/phpmyadmin/phpmyadmin/commit/1c77941bb231361c34c0c7fb08bc03e321a1efcd)
 - [51b2069f07 - Ref #19594 - Better document required PHP extensions](https://github.com/phpmyadmin/phpmyadmin/commit/51b2069f07add54914efb3cc81ede6104632dfdf)
 - [d713b89050 - Fix #19594 - Document new required extensions](https://github.com/phpmyadmin/phpmyadmin/commit/d713b89050903e78d733c6c2b84a53715f5c82b8)
+
+### Week 39
+
+- [b25ec11a33 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/b25ec11a3359c12781848b7a7c41e57827b0cd17)
+- [da90b543c3 - Fix coding standard for new function use](https://github.com/phpmyadmin/phpmyadmin/commit/da90b543c31f7eccd3ef2446c091a5e1207cf241)
 
 ## phpmyadmin/motranslator (GitHub)
 
@@ -115,6 +122,7 @@ I wrote some documentation updates:
 - [73bcccae78 - CVE-2025-3573 - Update jquery.validate.js to 1.21.0 (in sync with 5.2.2)](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/73bcccae78b408898c6f706cd6127b8595281daa)
 - [85505ecbb3 - Update tests to run on phpunit 12](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/85505ecbb3dad2a07862b3872c8cda264faeeab8)
 
+- [1449c84c3a - Merge branch 'debian/trixie' into debian/latest](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/1449c84c3a7a65183e11722be3e89fe4fbe21fb7)
 ## phpmyadmin-team/motranslator (GitLab)
 
 ### Week 36
@@ -133,6 +141,16 @@ I wrote some documentation updates:
 - [7f420f5d56 - Mark as Multi-Arch: foreign](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/7f420f5d56e0df0910f0459486c39780f564da75)
 
 # Handled issues
+* [#19109 Root and users with proper grants can't create users.](https://github.com/phpmyadmin/phpmyadmin/issues/19109)
+* [#19785 [5.2] `Deprecated: Safe\mssql_connect()` on PHP 8.4](https://github.com/phpmyadmin/phpmyadmin/issues/19785)
+* [#18472 Wrong Edit Field position on RTL](https://github.com/phpmyadmin/phpmyadmin/issues/18472)
+* [#19859 [PHP 8.5]: ErrorException: Using null as an array offset is deprecated, use an empty string instead](https://github.com/phpmyadmin/phpmyadmin/issues/19859)
+* [#18437 Query not visible for RTL languages](https://github.com/phpmyadmin/phpmyadmin/issues/18437)
+* [#19639 #1366 Incorrect integer value even if entered value is integer](https://github.com/phpmyadmin/phpmyadmin/issues/19639)
+* [#19782 Contribution: WebStack Deployer – GUI for Managing LAMP Stacks with Docker on Windows](https://github.com/phpmyadmin/phpmyadmin/issues/19782)
+* [#19771 Default dark theme](https://github.com/phpmyadmin/phpmyadmin/issues/19771)
+* [#463 Docker image "Created" date](https://github.com/phpmyadmin/docker/issues/463)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

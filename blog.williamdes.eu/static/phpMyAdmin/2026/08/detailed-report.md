@@ -30,6 +30,9 @@ password-policy failure and asserted the root cause, imported a new upstream sna
 I also did some cleanup on motranslator (Standards-Version, and removing fields that are
 now the default).
 
+## Handled issues
+
+
 # Commit list
 
 ## phpmyadmin/phpmyadmin (GitHub)

@@ -73,11 +73,20 @@ I fixed the jest tests on Windows
 - [725a767cc5 - Merge #20398 - Fix #20395 - quote search term for inet4 fields](https://github.com/phpmyadmin/phpmyadmin/commit/725a767cc5994dae3f95b63f242e27cc01917ee5)
 - [3d2594b2d3 - Merge #20474 - Fix search of INET4 with = operator](https://github.com/phpmyadmin/phpmyadmin/commit/3d2594b2d384f87bf395896c95ccc90a6336a671)
 
+- [b9ac857229 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/b9ac8572290a85ad8e8cd90230b3ffcdd145e769)
+- [1178149419 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/11781494195b5125c2e7a5a64f19c39036bc3d9a)
 ### Week 40
 
 - [59cf0a622b - Merge #20500 - Fix jest tests on windows](https://github.com/phpmyadmin/phpmyadmin/commit/59cf0a622b0fe273712c6ddd57e838eedb5f9880)
 
 # Handled issues
+* [#19841 [Bug]: Processes list link to users table does not work](https://github.com/phpmyadmin/phpmyadmin/issues/19841)
+* [#20425 [Bug]: Creating or altering a VIEW buffers the view's entire result set into PHP memory, causing a fatal OOM / HTTP 500 after the VIEW was already created](https://github.com/phpmyadmin/phpmyadmin/issues/20425)
+* [#17112 Add Infection badge API key to GitHub secrets](https://github.com/phpmyadmin/phpmyadmin/issues/17112)
+* [#20159 [Bug]: Various JS errors related to empty user-agent](https://github.com/phpmyadmin/phpmyadmin/issues/20159)
+* [#20394 [Bug]: Mutation score](https://github.com/phpmyadmin/phpmyadmin/issues/20394)
+* [#20486 .](https://github.com/phpmyadmin/phpmyadmin/issues/20486)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

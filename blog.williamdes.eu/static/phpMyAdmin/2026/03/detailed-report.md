@@ -62,6 +62,7 @@ And I sent mariadb-mysql-kbs 1.3.0-4 to unstable.
 - [333493be35 - Merge #20203 - Fix #20142 - Unregister all click events when the modal is hidden](https://github.com/phpmyadmin/phpmyadmin/commit/333493be35b7427ebe4295d81f632ef78984b869)
 - [2b45d9c284 - Merge #20209 - Don't show invalid Gis download options](https://github.com/phpmyadmin/phpmyadmin/commit/2b45d9c284140b4b949151b86fca513390b47ad1)
 
+- [b3e2ac1ece - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/b3e2ac1ecea17891edce2714cb1c54a7d3cd6c5f)
 ### Week 11
 
 - [4265b512e6 - Add a SQL button to the database list](https://github.com/phpmyadmin/phpmyadmin/commit/4265b512e6a0089db8bf57215c150a2b91ec6802)
@@ -93,6 +94,10 @@ And I sent mariadb-mysql-kbs 1.3.0-4 to unstable.
 - [5a8ddf18c2 - Merge #20237 - Gis ScaleData offsets in target coordinate system](https://github.com/phpmyadmin/phpmyadmin/commit/5a8ddf18c22b5fbc220e3cd561b474a4a0d7f0e5)
 - [8ae46b07fa - Merge #20239 - Update PHPStan](https://github.com/phpmyadmin/phpmyadmin/commit/8ae46b07fab516786c054d4aead943884f4b05b9)
 
+- [8b88e6d2af - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/8b88e6d2af6c99e56368850f07879938534e22ed)
+- [0555e21157 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/0555e2115796dbef1aed15163f6ca4a51cafab27)
+- [23f6245775 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/23f6245775af94c5e06128bb05d784b2413bd59f)
+- [87caab9d95 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/87caab9d95181c75206d27cea27e32c72bea0f4d)
 ### Week 13
 
 - [4246b6d9a4 - Merge #20260 - Fix #20181 - allow selecting text fragments in cells](https://github.com/phpmyadmin/phpmyadmin/commit/4246b6d9a46db27827f3b1b6d2844bee8d28ee48)
@@ -158,7 +163,47 @@ And I sent mariadb-mysql-kbs 1.3.0-4 to unstable.
 - [23c3e2a107 - New upstream version 6.11.0+dfsg](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/23c3e2a107e903255e155c2c4187df730b7761a2)
 - [ce96ad75c1 - Comment out Filename-Mangle for uscan to work (See: #1129464)](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/ce96ad75c1f5474c0ffdb9788a8905268003c814)
 
+
+## alpine/aports (GitHub)
+
+### Week 10
+
+- [41afcaefd2 - community/horust: disable build on loongarch64](https://gitlab.alpinelinux.org/alpine/aports/-/commit/41afcaefd2594ac7d8cf0f2c5afc046bb4d61f33)
+- [0a4f7a3f21 - community/horust: upgrade to 0.1.13](https://gitlab.alpinelinux.org/alpine/aports/-/commit/0a4f7a3f21c38bcee19b8e0caa316e815317f4bf)
+
 # Handled issues
+* [#16901 Moving column to second place creates incorrect SQL](https://github.com/phpmyadmin/phpmyadmin/issues/16901)
+* [#20195 [Bug]: Error code: 200 when generating charts](https://github.com/phpmyadmin/phpmyadmin/issues/20195)
+* [#15116 Notice Undefined index: sql_insert_syntax](https://github.com/phpmyadmin/phpmyadmin/issues/15116)
+* [#20140 [6.0]: Uncaught TypeError: can't access property "error", data.responseJSON is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/20140)
+* [#19330 Negative System Monitor chart values](https://github.com/phpmyadmin/phpmyadmin/issues/19330)
+* [#18292 Input fields styling in pmahomme theme](https://github.com/phpmyadmin/phpmyadmin/issues/18292)
+* [#20235 [Bug]: composer install of web-auth/webauthn-lib fails](https://github.com/phpmyadmin/phpmyadmin/issues/20235)
+* [#17451 Rows count for table_uiprefs](https://github.com/phpmyadmin/phpmyadmin/issues/17451)
+* [#20182 ShowDatabasesNavigationAsTree is not well documented](https://github.com/phpmyadmin/phpmyadmin/issues/20182)
+* [#20121 [6.0]: Columns are missing on Find and replace](https://github.com/phpmyadmin/phpmyadmin/issues/20121)
+* [#20153 [6.0]: ErrorException: foreach() argument must be of type array|object, null given, [5.2] ImportXml::doImport(): Node no longer exists](https://github.com/phpmyadmin/phpmyadmin/issues/20153)
+* [#19891 [Bug]: When `$cfg['Export']['format']`/`$cfg['Import']['format']` is invalid, 'sql' should be the default](https://github.com/phpmyadmin/phpmyadmin/issues/19891)
+* [#20171 [Bug]: Unknown system variable 'storage_engine' since MariaDB 12](https://github.com/phpmyadmin/phpmyadmin/issues/20171)
+* [#20102 [Bug]: Press escape to cancel editing not showing for truncated values](https://github.com/phpmyadmin/phpmyadmin/issues/20102)
+* [#20134 [Bug]: ErrorException: Undefined array key 0](https://github.com/phpmyadmin/phpmyadmin/issues/20134)
+* [#20174 [Bug]: Cannot read properties of undefined (reading 'name')](https://github.com/phpmyadmin/phpmyadmin/issues/20174)
+* [#20247 CI for QA_5_2 has errors](https://github.com/phpmyadmin/phpmyadmin/issues/20247)
+* [#20245 [Feat]: Add configurable pre-query hook SQL executed before user-initiated queries](https://github.com/phpmyadmin/phpmyadmin/issues/20245)
+* [#20181 [Bug]: Can't select text / column data](https://github.com/phpmyadmin/phpmyadmin/issues/20181)
+* [#20139 [Bug]: Uncaught TypeError: can't access property "success", data is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/20139)
+* [#20142 [Bug]: Uncaught TypeError: can't access property "trim", $form.find(...).val() is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/20142)
+* [#20141 [Bug]: Uncaught TypeError: can't access property "debug", data is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/20141)
+* [#18303 Uncaught TypeError: can't access property "addEventListener", indexDialogPreviewModal is null](https://github.com/phpmyadmin/phpmyadmin/issues/18303)
+* [#467 Permission denied: access to / denied with overlayfs](https://github.com/phpmyadmin/docker/issues/467)
+* [#196 https://planet.phpmyadmin.net/ 404](https://github.com/phpmyadmin/website/issues/196)
+* [#188 Release notes not showing for 5.2.2](https://github.com/phpmyadmin/website/issues/188)
+* [#176 My attempt to refresh the phpMyAdmin website](https://github.com/phpmyadmin/website/issues/176)
+* [#189 TypeError: 'type' object is not subscriptable in files/models.py](https://github.com/phpmyadmin/website/issues/189)
+* [#135 Book cover gone crazy](https://github.com/phpmyadmin/website/issues/135)
+* [#190 Dark mode](https://github.com/phpmyadmin/website/issues/190)
+* [#191 Daily snapshots not generated since 2025-07-18](https://github.com/phpmyadmin/website/issues/191)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

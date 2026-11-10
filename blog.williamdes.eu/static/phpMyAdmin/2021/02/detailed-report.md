@@ -312,6 +312,77 @@ Pull-request management and issue triage.
 - [7d3a3cd74c - Add more type casts for #16634](https://github.com/phpmyadmin/phpmyadmin/commit/7d3a3cd74cdcffec5146df5c656ec47fa97ae70c)
 - [9d62b14cfb - Upgrade baselines](https://github.com/phpmyadmin/phpmyadmin/commit/9d62b14cfba51cd6c8ea9e5c71929f7c0f38f3bb)
 - [af1e90be51 - Merge #16634 - Fix #16575 - move timestamp column with default value](https://github.com/phpmyadmin/phpmyadmin/commit/af1e90be51590da18723861380176d93b67b90ca)
+### Week 5
+
+- [4b1fe4e329 - Update phpstan and phpstan baseline](https://github.com/phpmyadmin/phpmyadmin/commit/4b1fe4e329acc153ff6e7da36b75a2e1fb5d991f)
+- [2772adda5a - Fix a possible type bug found by phpstan](https://github.com/phpmyadmin/phpmyadmin/commit/2772adda5abe2526ba6f1c4a1ed74455d60c060e)
+- [7af961979a - Add a ChangeLog entry for d9c8a8e667](https://github.com/phpmyadmin/phpmyadmin/commit/7af961979a53ba15ab9048113925b12b9f057c27)
+- [d9c8a8e667 - Merge #16618 - Upgrade to shapefile 3](https://github.com/phpmyadmin/phpmyadmin/commit/d9c8a8e6674b43394ed4fa866a65fcde02763c00)
+- [af4bbcec9e - Update phpstan baseline after upgrade to shapefile 3](https://github.com/phpmyadmin/phpmyadmin/commit/af4bbcec9eaef4852c1427f92631a320ba6be105)
+- [4faf964166 - Upgrade to shapefile 3](https://github.com/phpmyadmin/phpmyadmin/commit/4faf9641667ff14bca396f242708a2a9724c04e7)
+- [ffbebaa8a2 - Merge #16619 - Allow back any motranslator 5 version](https://github.com/phpmyadmin/phpmyadmin/commit/ffbebaa8a27e646e90d658515e703da9fbb2596b)
+- [d4702f47e4 - Revert "Downgrade motranslator to 5.0"](https://github.com/phpmyadmin/phpmyadmin/commit/d4702f47e49d84b78844b874982c57ecf4ab28ed)
+- [54f09a8e9c - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/54f09a8e9c953058b78b6a176ccb26ee42fe068c)
+- [c340c67f82 - Add a ChangeLog entry for #16611](https://github.com/phpmyadmin/phpmyadmin/commit/c340c67f827628301de0b5b3cb09941490b2da11)
+- [58769aca52 - Merge #16613 - Fix #16611 - Renaming exported databases/tables/columns checkbox not working twice](https://github.com/phpmyadmin/phpmyadmin/commit/58769aca524a01a06a21879fe365aab6bc41a81a)
+- [725c2758fa - Fix a documentation setup typo](https://github.com/phpmyadmin/phpmyadmin/commit/725c2758fa07dd55146cd103074efef3bf3a0218)
+- [491c95f05e - Fix JS code typos](https://github.com/phpmyadmin/phpmyadmin/commit/491c95f05e8e279d79ffe4ba4de384399d209646)
+- [7be816e4a3 - Fix a typo on a HTML closing tag](https://github.com/phpmyadmin/phpmyadmin/commit/7be816e4a378b605dfbeecbee535835b83062d44)
+- [2cac456ce2 - Fix code comment typos](https://github.com/phpmyadmin/phpmyadmin/commit/2cac456ce204ce907a7b897dd8619a5fcc34c9b1)
+- [9a5da38c6c - Fix code comment typos](https://github.com/phpmyadmin/phpmyadmin/commit/9a5da38c6c9fc149b593b47c2d7e3fce11353b82)
+- [af946c5e53 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/af946c5e53a99b57625893f3cbe206cf4d2e8e69)
+- [48e8c3392e - Merge branch 'QA_5_0' into QA_5_1](https://github.com/phpmyadmin/phpmyadmin/commit/48e8c3392eff6b758e18b537391c6e9a5901fcd8)
+- [b746f1845c - Merge branch 'QA_4_9' into QA_5_0](https://github.com/phpmyadmin/phpmyadmin/commit/b746f1845cb8d1da3f147eff945018fe054868ed)
+- [501e88deca - Add a ChangeLog entry for #16609](https://github.com/phpmyadmin/phpmyadmin/commit/501e88deca8ffec725d3ce2759cbb2e6c15c555c)
+- [076651c1c4 - Fix #16609 - Remove CSS left-overs of #16277](https://github.com/phpmyadmin/phpmyadmin/commit/076651c1c474ab3c38857d81f3174b94f2ee2ed6)
+- [0741c61660 - Fix #16609 - Remove left-overs of #16277](https://github.com/phpmyadmin/phpmyadmin/commit/0741c616602141f2f2b5cf18641dd39d656adfac)
+
+### Week 6
+
+- [0fd2229477 - Translated using Weblate (German)](https://github.com/phpmyadmin/phpmyadmin/commit/0fd222947739fd85aeacd1820ae89fcae397d80e)
+- [c1a66adcc7 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/c1a66adcc7b5d3f1273f38c4f7ab898e0deeb4bf)
+- [88752d662b - Add a ChangeLog entry for #16641](https://github.com/phpmyadmin/phpmyadmin/commit/88752d662b1e9b76020471039ea0b00252afdade)
+- [c1e2f387e1 - Merge #16643 - Fix #16641 - query generation bug which allowing JSON to have length](https://github.com/phpmyadmin/phpmyadmin/commit/c1e2f387e17281a3f5b4d493c69812c297ef7588)
+- [c189098984 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/c1890989841b5a68f3749775dae180da5d51af51)
+- [f06b342137 - Merge #16642 - Fix #16055 - Disable cache when the file is not writable](https://github.com/phpmyadmin/phpmyadmin/commit/f06b342137e56034f557df675b2d992d4648a989)
+- [81cc352f0d - Disable cache when the file is not writable](https://github.com/phpmyadmin/phpmyadmin/commit/81cc352f0dc9fdd349339717c803e65fa25cf220)
+- [7ccd194bc6 - Merge branch 'QA_5_0' into QA_5_1](https://github.com/phpmyadmin/phpmyadmin/commit/7ccd194bc6810a0fea8d8bdf28bab9e4e63af878)
+- [4d4acee8a0 - Fix missing message on upload message request after failure creates a warning](https://github.com/phpmyadmin/phpmyadmin/commit/4d4acee8a01a0777e52b69413274993a9b02a631)
+- [9f5e09d0c2 - Fix go back URL after import not using the right separator](https://github.com/phpmyadmin/phpmyadmin/commit/9f5e09d0c20afd25e54808f879da85d75d269445)
+- [a5fe5c22ec - Merge #16631 - Fix Tab misaligned in settings](https://github.com/phpmyadmin/phpmyadmin/commit/a5fe5c22ec5316ab5c81c641877e7332cdc1e499)
+- [287d743eb7 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/287d743eb79c36198c3ca9a507079d253f6a5bcc)
+- [e3f968e295 - Add a ChangeLog entry for #15997](https://github.com/phpmyadmin/phpmyadmin/commit/e3f968e295b5b684429945357d179b87482b87b5)
+- [291aa900f2 - Merge #16438 - Fix #15997 - Auto Save Query database and table independent (fix SQL query auto save)](https://github.com/phpmyadmin/phpmyadmin/commit/291aa900f2b74ac8eab222277f955e12423716d7)
+- [fb53951a2d - Cover Util::handleDisableFKCheckInit and Util::handleDisableFKCheckCleanup](https://github.com/phpmyadmin/phpmyadmin/commit/fb53951a2d1290ebf73fc4593368060d19363a9d)
+- [471d104852 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/471d104852b09f3e21639153cf0262b7f5efa750)
+- [d9c4be4454 - Add a ChangeLog entry for #15389](https://github.com/phpmyadmin/phpmyadmin/commit/d9c4be4454cbcc81ae5c6388181137ebafbbee07)
+- [e71102a455 - Merge #16597 - Fix #15389 - reset current page indicator after deleting all rows to current page and not page 1](https://github.com/phpmyadmin/phpmyadmin/commit/e71102a4550b6c770293b418e56ea21cf180e30e)
+- [3b49d32f44 - Merge #16615 - Fix #16612 - Empty relation view table dropdown](https://github.com/phpmyadmin/phpmyadmin/commit/3b49d32f44355108ea40f31eaa5b226b8997d30f)
+- [c6ea0a3ed3 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/c6ea0a3ed3cff2f7a76e1070b2691f9753e767fd)
+- [620280e92b - Merge #16460 - Re-work the README file](https://github.com/phpmyadmin/phpmyadmin/commit/620280e92bc5efcf16a039f84301f6a4e469a128)
+- [5ee88bd3f8 - Export ignore useless .md files](https://github.com/phpmyadmin/phpmyadmin/commit/5ee88bd3f8fa9304ccf14e69419577d9bc831363)
+- [5ed688bdae - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/5ed688bdae5b5fa3f313b9f5aebf8f610551b8a4)
+- [fc5f1f2797 - Merge branch 'QA_5_0' into QA_5_1](https://github.com/phpmyadmin/phpmyadmin/commit/fc5f1f27973d05ea476d01a622e69e9ff0c31bae)
+- [b96185da15 - Merge #16628 - Finish dropping TravisCI and setup selenium CI](https://github.com/phpmyadmin/phpmyadmin/commit/b96185da157cf3a79b93ac5fed2c72d1c14b509d)
+- [fda5195be7 - Fix logs system and temp dir for tests](https://github.com/phpmyadmin/phpmyadmin/commit/fda5195be7dc84ad5c2a76d0899e11efed06766f)
+- [f4684ee691 - Adjust .gitattributes](https://github.com/phpmyadmin/phpmyadmin/commit/f4684ee691e55d2310398c4d92d4e9a473cf105d)
+- [2ff9de1215 - Fix server login and documentation](https://github.com/phpmyadmin/phpmyadmin/commit/2ff9de1215623d7b35807e5ef48e4bd544814217)
+- [299ff94a6a - Debug tests](https://github.com/phpmyadmin/phpmyadmin/commit/299ff94a6a6b36a2dfb8ff876862fb149500e9b4)
+- [dc2a2fd479 - Use a service for selenium server](https://github.com/phpmyadmin/phpmyadmin/commit/dc2a2fd479a31787513cdf9f34c9380906d74775)
+- [2dd0c07ea7 - Add the selenium workflow](https://github.com/phpmyadmin/phpmyadmin/commit/2dd0c07ea774e343fe7de106544683d178613010)
+- [c7f23eb9cd - Drop TravisCI](https://github.com/phpmyadmin/phpmyadmin/commit/c7f23eb9cd9dc963fef3af49c7a575804ae8c886)
+- [6fda5345d6 - Remove ignore platform requirements](https://github.com/phpmyadmin/phpmyadmin/commit/6fda5345d620e53737f6f079efea92d5a9aabcb2)
+- [bbf749c536 - Minor performance improvement and add a type check](https://github.com/phpmyadmin/phpmyadmin/commit/bbf749c536c363a6d5aa22cfad58b7d9a05e5fc9)
+- [f16757a9b6 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/f16757a9b6cc2b21840f2976f8604a5b854d1c13)
+
+### Week 7
+
+- [8aab2265a1 - Fix #14026 - Fix error messages and conditions for MD5 and AES_* functions](https://github.com/phpmyadmin/phpmyadmin/commit/8aab2265a1e4f46c5b21653f9be224f54d32734c)
+- [9754d165fc - Ref #16575 - Add tests to cover the DEFAULT timestamp support](https://github.com/phpmyadmin/phpmyadmin/commit/9754d165fceb971ea3d107412329fd19ab2d1dbe)
+- [1ab30fd2f0 - Add a ChangeLog entry for #15994](https://github.com/phpmyadmin/phpmyadmin/commit/1ab30fd2f0367efe5fc414ab901fb87fe3e0c22e)
+- [9316921a8a - Merge #16653 - Fix #15994 - Attribute bug when default current_timestamp used with on update current_timestamp](https://github.com/phpmyadmin/phpmyadmin/commit/9316921a8a7b3673dfa5b2b5439b8e48467a8a17)
+- [c3e2599e72 - Merge #16630 - Ref #13270 - remove some inline events](https://github.com/phpmyadmin/phpmyadmin/commit/c3e2599e7244f241de95e0e3df6e29bc12dc1045)
+
 ## phpmyadmin/docker (GitHub)
 
 - [e09f731a32 - Merge #324 - Add expose_php env back](https://github.com/phpmyadmin/docker/commit/e09f731a32c7e04824c6179076b2e11e17669cf3)
@@ -367,6 +438,13 @@ Pull-request management and issue triage.
 - [b62de46222 - Fix po files](https://github.com/phpmyadmin/localized_docs/commit/b62de4622283f018f076752ea71a2dc7957cd13a)
 - [e8691c44c2 - Add GitHub actions](https://github.com/phpmyadmin/localized_docs/commit/e8691c44c2e12b41b990c4df9651bb70919b6a8e)
 
+### Week 5
+
+- [6880b4f657 - Translated using Weblate (Japanese)](https://github.com/phpmyadmin/localized_docs/commit/6880b4f657c4d508d6214f540a2e94e56e5beecf)
+- [11e39173ee - Translated using Weblate (Ukrainian)](https://github.com/phpmyadmin/localized_docs/commit/11e39173ee1b1e32b325f057418a23f2be0f3d4e)
+- [6e8aa0371a - Translated using Weblate (German)](https://github.com/phpmyadmin/localized_docs/commit/6e8aa0371a931e713a91638e68bf89308c54808a)
+- [534efe2510 - Translated using Weblate (Portuguese (Brazil))](https://github.com/phpmyadmin/localized_docs/commit/534efe2510162ef5a9ca970cc2e62c22bf60ad33)
+
 ## phpmyadmin/twig-i18n-extension (GitHub)
 
 - [8d5898e035 - Release v4.0.0](https://github.com/phpmyadmin/twig-i18n-extension/commit/8d5898e03524487ec78db732516a5cecd33642b3)
@@ -395,3 +473,19 @@ Pull-request management and issue triage.
 - [5794ea5b74 - Add more test fixtures](https://github.com/phpmyadmin/twig-i18n-extension/commit/5794ea5b7495e03cd7ef4c9a3f350d92f112ca94)
 - [d9029e5124 - Add a test with fixtures for most of the use cases](https://github.com/phpmyadmin/twig-i18n-extension/commit/d9029e5124facca9a374d94e1e63cfdb1c5c2820)
 - [1578ed56a2 - Write tests for the domain feature](https://github.com/phpmyadmin/twig-i18n-extension/commit/1578ed56a2b437507f8b621fc98bcd45ece0691f)
+
+
+## phpmyadmin-team/phpmyadmin (GitLab)
+
+### Week 8
+
+- [553bb6f3cd - Update some Debian patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/553bb6f3cd0b9509694a65a0abb519bf18797c81)
+- [acba3acd58 - Remove some Debian patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/acba3acd58d04c906bd9095a7f3189a258f6c4f7)
+- [9d3b0eb363 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/9d3b0eb3636209983c235de07fa1dc011422dffc)
+- [286cb2d816 - Depend on php-nikic-fast-route](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/286cb2d81626755697b655d4d1fcfedb5ef1a1bf)
+- [edd50660ad - Remove .yml files from install - no more .yml files](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/edd50660ad65f55a8a500bcf974a6e63dce63450)
+- [4fe6335b3c - Drop dependency on php-symfony-yaml](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4fe6335b3c0ff8baa48366fe4c4058d8381fe994)
+- [4bebb3c803 - Update copyrights](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4bebb3c8030f6d90876826461d0799b9d6af4afb)
+- [26f01e78ce - Merge branch 'upstream' into debian/experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/26f01e78ce98512fc7d351e82bd1a0dfe48fe1b9)
+- [63d62d5ac6 - New upstream version 5.1.0+dfsg1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/63d62d5ac601306257e8e8ffc4c1b0bace651581)
+- [97abdfd6ea - Exclude js/vendor/zxcvbn.js.map from the bundle](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/97abdfd6ea2e154d262aeffeb3ddee077129322d)

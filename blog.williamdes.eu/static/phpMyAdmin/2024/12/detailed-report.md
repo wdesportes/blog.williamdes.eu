@@ -74,6 +74,8 @@ And did some issue management.
 - [f23d46e378 - Add --revision-info and document --daily on create-release.sh](https://github.com/phpmyadmin/phpmyadmin/commit/f23d46e37876173f5240945f2a65a36de48f0afc)
 - [0e7c4d6431 - Add --compressions option to create-release.sh and update example](https://github.com/phpmyadmin/phpmyadmin/commit/0e7c4d64314351bf2522437b7384a52080597314)
 
+- [8e721911f0 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/8e721911f0acb05de8e23437767d485e5429ed92)
+- [57a56f1aa7 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/57a56f1aa70d6bbd2558f03ac583166a40567e52)
 ## phpmyadmin/website (GitHub)
 
 ### Week 51
@@ -122,6 +124,7 @@ And did some issue management.
 - [1f6132ed66 - d/ch](https://salsa.debian.org/phpmyadmin-team/twig-i18n-extension/-/commit/1f6132ed66fc410856a34d2e26ec9cc5072300d2)
 - [56bf5af1a0 - Relax pkg-php-tools version restriction for unstable](https://salsa.debian.org/phpmyadmin-team/twig-i18n-extension/-/commit/56bf5af1a08334dd26063aced69f4002d471e4e8)
 
+- [1d7fec8f9c - Merge branch 'debian/latest' into 'debian/latest'](https://salsa.debian.org/phpmyadmin-team/twig-i18n-extension/-/commit/1d7fec8f9c877b348c6bca071f45d13be8e80a90)
 ## phpmyadmin-team/sql-parser (GitLab)
 
 ### Week 50
@@ -156,6 +159,23 @@ And did some issue management.
 - [bf08117a9d - New upstream version 6.8.0+dfsg](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/bf08117a9d508c748bd55cd35bd652a2b4ba07bc)
 
 # Handled issues
+* [#19289 phpmyadmin is not working anymore](https://github.com/phpmyadmin/phpmyadmin/issues/19289)
+* [#19418 Keeps shutting down MySQL services randomly](https://github.com/phpmyadmin/phpmyadmin/issues/19418)
+* [#19455 A link to the git commit should be added on the downloaded snapshots](https://github.com/phpmyadmin/phpmyadmin/issues/19455)
+* [#19473 The word navigator is written wrong in portuguese is 'nevegador' instead of 'navegador'](https://github.com/phpmyadmin/phpmyadmin/issues/19473)
+* [#19245 Duplicate message when a query has no results](https://github.com/phpmyadmin/phpmyadmin/issues/19245)
+* [#19477 Error Works on PHP 8.4.1](https://github.com/phpmyadmin/phpmyadmin/issues/19477)
+* [#19478 Design enhancement](https://github.com/phpmyadmin/phpmyadmin/issues/19478)
+* [#19278 Snapshots releases are unaccessible](https://github.com/phpmyadmin/phpmyadmin/issues/19278)
+* [#19344 Insert page doesn't report MySQL error](https://github.com/phpmyadmin/phpmyadmin/issues/19344)
+* [#19319 $cfg['ShowStats'] = false; isn't hiding "Status" tab](https://github.com/phpmyadmin/phpmyadmin/issues/19319)
+* [#19363 Wrong query when using backtick in table name](https://github.com/phpmyadmin/phpmyadmin/issues/19363)
+* [#19100 How to suppress the "configuration storage is not completely configured"-message?](https://github.com/phpmyadmin/phpmyadmin/issues/19100)
+* [#446 Export always download index.htm](https://github.com/phpmyadmin/docker/issues/446)
+* [#180 Daily Snapshots Cannot Be Downloaded](https://github.com/phpmyadmin/website/issues/180)
+* [#179 Demo server versions not updating to the latest commit](https://github.com/phpmyadmin/website/issues/179)
+* [#387 Syntax error with row_number alias](https://github.com/phpmyadmin/sql-parser/issues/387)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

@@ -75,6 +75,9 @@ A quieter week: I upgraded phpstan to 2.1.47.
 - [cea7654274 - Merge #20210 - Add a SQL button to the database list](https://github.com/phpmyadmin/phpmyadmin/commit/cea76542743e8aaac9836fa781368a49f017b34d)
 - [1e80398521 - Merge #20250 - Fix #20007 - Update create-release.sh with file to be excluded](https://github.com/phpmyadmin/phpmyadmin/commit/1e80398521e6892d4ebc2c0063ef979244665ba9)
 
+- [498a1a3353 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/498a1a3353254e878b16469b2cb895c19e7fcd44)
+- [be412170f7 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/be412170f7e320d28ca8dfe6b972f84cef247d37)
+- [aad16a108c - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/aad16a108c51205e292610e2d38d0a588f5279bd)
 ### Week 16
 
 - [ad78a577c0 - Merge #20283 - Upgrading phpstan/phpstan (2.1.41 => 2.1.47)](https://github.com/phpmyadmin/phpmyadmin/commit/ad78a577c088101f94a50bcd297ee5d4becf3e99)
@@ -104,12 +107,20 @@ A quieter week: I upgraded phpstan to 2.1.47.
 - [36d2ded4c9 - Merge #648 - Bump zumba/json-serializer version to ^3.2](https://github.com/phpmyadmin/sql-parser/commit/36d2ded4c916c38059975ccca1678ea240c4f70e)
 - [83886f689d - Update the Scrutinizer base image for PHP 7.2 to work](https://github.com/phpmyadmin/sql-parser/commit/83886f689db6a50a7f977c8a671276bf1806b210)
 
+- [e49cb36738 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/e49cb367381b61eb355984273643a61080f17c50)
+- [ebb943e1db - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/ebb943e1db28c76a7edcdcbdc507c9af972855f9)
+- [c77153ace0 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/c77153ace0591c852f06ac41fe84d82bfffe81c5)
+- [95fc9a8450 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/95fc9a845047fc2319a126fb8d5709b9f17374f9)
+- [ff34d9d084 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/ff34d9d084fa57e21a5330aa86f42b81110d1cb6)
+- [53c0ef8013 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/53c0ef8013efaf2d80fcef04d41014075d881622)
+- [2938e1f1e5 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/2938e1f1e551eceacd2cd8e74eb0d94fd5aec93d)
 ### Week 15
 
 - [2c63257412 - Merge Weblate](https://github.com/phpmyadmin/sql-parser/commit/2c632574127e57b9fcf69231807efb5fecda86ae)
 - [421432ce03 - Remove spaces from the new tests for 6.x](https://github.com/phpmyadmin/sql-parser/commit/421432ce038d0c89281a0d3b7a51b0d7fbed2061)
 - [4c45eac1c2 - Fix #609 - Attempt to read property "keyword" on null](https://github.com/phpmyadmin/sql-parser/commit/4c45eac1c2c743a3128df542f7bcf37339adb071)
 
+- [1c897fd596 - Merge branch '5.11.x'](https://github.com/phpmyadmin/sql-parser/commit/1c897fd596a131c97b60f376a03890eff89c06c6)
 ## phpmyadmin/motranslator (GitHub)
 
 ### Week 14
@@ -117,6 +128,8 @@ A quieter week: I upgraded phpstan to 2.1.47.
 - [b18bf67b7e - Update the base image for Scrutinizer and the PHP version for psalm](https://github.com/phpmyadmin/motranslator/commit/b18bf67b7e81ec973129407ad440b0290c56518f)
 - [0da4abeb1f - Bump GitHub actions](https://github.com/phpmyadmin/motranslator/commit/0da4abeb1fef0819af7e418e58a21ed874b46ef6)
 
+- [3bebdb35be - Merge branch '6.0.x'](https://github.com/phpmyadmin/motranslator/commit/3bebdb35bedbd565b621364c3d471f1f54120c95)
+- [6d1baed310 - Merge branch '6.0.x'](https://github.com/phpmyadmin/motranslator/commit/6d1baed310aff5b67c907061f730b98b92684f8b)
 ## phpmyadmin/shapefile (GitHub)
 
 ### Week 14
@@ -124,6 +137,33 @@ A quieter week: I upgraded phpstan to 2.1.47.
 - [04a5812fa2 - Bump GitHub actions](https://github.com/phpmyadmin/shapefile/commit/04a5812fa2893147777233710b556a229337dcc7)
 
 # Handled issues
+* [#19911 Demo sites aren't working correctly](https://github.com/phpmyadmin/phpmyadmin/issues/19911)
+* [#19924 phpMyAdmin's Demo Website is out of space](https://github.com/phpmyadmin/phpmyadmin/issues/19924)
+* [#18400 Confirm modal for show all rows isn't visible](https://github.com/phpmyadmin/phpmyadmin/issues/18400)
+* [#20041 [Bug]: Export raw query doesn't work due to missing db param in /table/export](https://github.com/phpmyadmin/phpmyadmin/issues/20041)
+* [#20064 [6.0]: Routines container fails to push downward during SQL editing](https://github.com/phpmyadmin/phpmyadmin/issues/20064)
+* [#18923 Elements aren't moving when editor is resized on Routines, Events, Triggers](https://github.com/phpmyadmin/phpmyadmin/issues/18923)
+* [#19338 'Please enter a valid length!' doesn't show up when changing existing column](https://github.com/phpmyadmin/phpmyadmin/issues/19338)
+* [#19912 [Feat]: Remove Suhosin support and warnings](https://github.com/phpmyadmin/phpmyadmin/issues/19912)
+* [#18557 Drag and drop difference between Firefox and Chromium browsers](https://github.com/phpmyadmin/phpmyadmin/issues/18557)
+* [#19842 [Bug]: Processes list should not link to non-users](https://github.com/phpmyadmin/phpmyadmin/issues/19842)
+* [#18204 Unknown system variable 'innodb_version' since MariaDB 10.10](https://github.com/phpmyadmin/phpmyadmin/issues/18204)
+* [#19381 Make empty values NULL when importing a CSV file](https://github.com/phpmyadmin/phpmyadmin/issues/19381)
+* [#20110 [6.0]: PHPUnit test fails because of missing locale folder on Windows](https://github.com/phpmyadmin/phpmyadmin/issues/20110)
+* [#19735 .](https://github.com/phpmyadmin/phpmyadmin/issues/19735)
+* [#20275 [6.0]: TOON export doesn't work on demo server](https://github.com/phpmyadmin/phpmyadmin/issues/20275)
+* [#17896 Cannot alter Time portion of timestamp directly via grid edit](https://github.com/phpmyadmin/phpmyadmin/issues/17896)
+* [#19640 Safari - Error in processing request](https://github.com/phpmyadmin/phpmyadmin/issues/19640)
+* [#19590 Marquee Selection to designer](https://github.com/phpmyadmin/phpmyadmin/issues/19590)
+* [#20270 .](https://github.com/phpmyadmin/phpmyadmin/issues/20270)
+* [#18941 Simulate `DELETE` in a large table with million of rows gives error 500](https://github.com/phpmyadmin/phpmyadmin/issues/18941)
+* [#20287 [Feat]: Change info order in tab title](https://github.com/phpmyadmin/phpmyadmin/issues/20287)
+* [#193 Demo server session_write_close(): Write failed: No space left on device (28)](https://github.com/phpmyadmin/website/issues/193)
+* [#192 phpMyAdmin on demo server not updated since 2024-12-18](https://github.com/phpmyadmin/website/issues/192)
+* [#630 Avoid back ticks on INSERT INTO columns with mode POSTGRESQL](https://github.com/phpmyadmin/sql-parser/issues/630)
+* [#609 [Query] Attempt to read property "keyword" on null](https://github.com/phpmyadmin/sql-parser/issues/609)
+* [#592 Error validating index with sort order](https://github.com/phpmyadmin/sql-parser/issues/592)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

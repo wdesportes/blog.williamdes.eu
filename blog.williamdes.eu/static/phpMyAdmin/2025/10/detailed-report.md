@@ -92,7 +92,26 @@ Debian is migrating to PSR/http-message v2, I made the patch in phpMyAdmin and i
 - [7f13e830dd - Allow PSR/http-message v2](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/7f13e830dd0a1b8b0b7d8edca2685a77fcdc5615)
 - [85b77e3f82 - Send 4:5.2.3+dfsg-1 to unstable](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/85b77e3f82b530ee4e56cc1812c0a1660a4115f1)
 
+
+## alpine/aports (GitHub)
+
+### Week 44
+
+- [d9c9bca480 - testing/horust: move to community](https://gitlab.alpinelinux.org/alpine/aports/-/commit/d9c9bca4806962af3a47a234435a8e0c1aa24b77)
+- [28b263ce6b - testing/horust: upgrade to 0.1.11](https://gitlab.alpinelinux.org/alpine/aports/-/commit/28b263ce6b165cba04111fe3830293421c863ab1)
+
 # Handled issues
+* [#19662 .](https://github.com/phpmyadmin/phpmyadmin/issues/19662)
+* [#19903 [Feat]: Import column headers from CSV file](https://github.com/phpmyadmin/phpmyadmin/issues/19903)
+* [#19888 [Feat]: Configuration directives should allow English values as well as localized values](https://github.com/phpmyadmin/phpmyadmin/issues/19888)
+* [#19880 .](https://github.com/phpmyadmin/phpmyadmin/issues/19880)
+* [#19594 Is the sodium extension required?](https://github.com/phpmyadmin/phpmyadmin/issues/19594)
+* [#19899 [Bug]: UploadDir seems to not work](https://github.com/phpmyadmin/phpmyadmin/issues/19899)
+* [#19906 [6.0] [IIS] `Declaration of PhpMyAdmin\Controllers\Config\GetConfigController::__invoke(PhpMyAdmin\Http\ServerRequest $request): void must be compatible with PhpMyAdmin\Controllers\InvocableController::__invoke(PhpMyAdmin\Http\ServerRequest $request)`](https://github.com/phpmyadmin/phpmyadmin/issues/19906)
+* [#437 Enable the uploadprogress PHP extension](https://github.com/phpmyadmin/docker/issues/437)
+* [#464 [PHP 8.2] MySQL 9.4 and vector columns results in error #2014, upgrade to PHP 8.3?](https://github.com/phpmyadmin/docker/issues/464)
+* [#465 `uploadprogress.tar.gz` not removed from image](https://github.com/phpmyadmin/docker/issues/465)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

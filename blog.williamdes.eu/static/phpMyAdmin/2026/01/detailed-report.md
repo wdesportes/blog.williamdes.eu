@@ -32,6 +32,10 @@ I merged some contributions.
 
 ## phpmyadmin/phpmyadmin (GitHub)
 
+### Week 1
+
+- [297cacc464 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/297cacc464a8298a02af7101d0cfee5c0a8c7581)
+
 ### Week 03
 
 - [de85bcb05c - Merge #19331 - Fix #17182 - FK Relationship View constraint name natural ordering](https://github.com/phpmyadmin/phpmyadmin/commit/de85bcb05cd6974e74abb52a1faf1752e58998c7)
@@ -58,6 +62,21 @@ I merged some contributions.
 - [2c37e98244 - Generate the CI matrix](https://github.com/phpmyadmin/localized_docs/commit/2c37e98244ee4b2aa062770f7b85e592b170e37e)
 - [ad255a9922 - Merge #35 - Update translation badge](https://github.com/phpmyadmin/localized_docs/commit/ad255a992222afb29af40241bb0969a6f74fa85a)
 
+- [9b70a87b04 - Translated using Weblate (English (United Kingdom))](https://github.com/phpmyadmin/localized_docs/commit/9b70a87b04132a8d6dd17f622ebba7ac67d6c59d)
+- [182045c8a2 - Translated using Weblate (Macedonian)](https://github.com/phpmyadmin/localized_docs/commit/182045c8a2f99951c9495c2bd7ae92a75d2b8a7b)
+- [ea8a973e4c - Translated using Weblate (Arabic)](https://github.com/phpmyadmin/localized_docs/commit/ea8a973e4c33447137853ef48af707e671dd2f4a)
+- [9c7fb6ddef - Translated using Weblate (French)](https://github.com/phpmyadmin/localized_docs/commit/9c7fb6ddef73fbaaa613f45a03c2f0553545d14c)
+- [cadaf14330 - Translated using Weblate (German)](https://github.com/phpmyadmin/localized_docs/commit/cadaf14330052be78beb72b7ff8ebcee9a8fead8)
+- [0fc1cd234b - Translated using Weblate (Italian)](https://github.com/phpmyadmin/localized_docs/commit/0fc1cd234b94a547486c89060ce4c47168f62506)
+- [c2275cd405 - Translated using Weblate (Estonian)](https://github.com/phpmyadmin/localized_docs/commit/c2275cd405fa0b9a9072412137af2631a54f00b6)
+- [7a7f1ad5ca - Translated using Weblate (English (United Kingdom))](https://github.com/phpmyadmin/localized_docs/commit/7a7f1ad5cae5e508599a15381014bf76ddc19740)
+- [ede3a7e05c - Translated using Weblate (Danish)](https://github.com/phpmyadmin/localized_docs/commit/ede3a7e05cf78116e6f2dfd0c8c4ff0842d66e67)
+- [ae1910b483 - Translated using Weblate (Armenian)](https://github.com/phpmyadmin/localized_docs/commit/ae1910b483f8eb6bd50d954c247af590b3dd4952)
+- [bb815ff3bd - Translated using Weblate (Ukrainian)](https://github.com/phpmyadmin/localized_docs/commit/bb815ff3bd70c3a8c000174fcdd0a4588e27818b)
+- [d2cadc2f4f - Translated using Weblate (Vietnamese)](https://github.com/phpmyadmin/localized_docs/commit/d2cadc2f4f4004aaa3c56f76ce862b67da72e870)
+- [9af0d9e80c - Translated using Weblate (Korean)](https://github.com/phpmyadmin/localized_docs/commit/9af0d9e80c0a57bbee474e9114641a2475b0b302)
+- [f74fd951ce - Translated using Weblate (Esperanto)](https://github.com/phpmyadmin/localized_docs/commit/f74fd951ce8a0fe2df5fc71d4230a4270734e680)
+- [3edb32eb24 - Translated using Weblate (Azerbaijani)](https://github.com/phpmyadmin/localized_docs/commit/3edb32eb247bb3ace955f34f7ccf5e895400fbec)
 ## phpmyadmin-team/mariadb-mysql-kbs (GitLab)
 
 ### Week 03
@@ -69,6 +88,12 @@ I merged some contributions.
 - [cdae66b0a3 - Drop now default Priority: optional](https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/cdae66b0a3ad3dafeb92d97cbdd958d3ce1b3c56)
 
 # Handled issues
+* [#18025 PHPMyAdmin sometimes not showing foreign-key related data in search or insert](https://github.com/phpmyadmin/phpmyadmin/issues/18025)
+* [#19909 [Feat]: Documentation - improve styling for generated HTML files](https://github.com/phpmyadmin/phpmyadmin/issues/19909)
+* [#17182 FK Relationship View constraint name natural ordering](https://github.com/phpmyadmin/phpmyadmin/issues/17182)
+* [#20024 [Bug]: CSV Import Corrupts JSON Data Format](https://github.com/phpmyadmin/phpmyadmin/issues/20024)
+* [#20045 .](https://github.com/phpmyadmin/phpmyadmin/issues/20045)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

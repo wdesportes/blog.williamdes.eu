@@ -42,6 +42,11 @@ I also worked on Debian packaging and server maintenance.
 - [296e6b62ce - Update phpstan and psalm baseline](https://github.com/phpmyadmin/phpmyadmin/commit/296e6b62cef88d925d646eabb03ea7cb12a6c14b)
 - [5e1ff822f3 - Merge #17860 - Fix #17793 - insert record - fix null not selected if nullable UUID & insert error](https://github.com/phpmyadmin/phpmyadmin/commit/5e1ff822f3492a42c3b638f185ba6108e83eb12c)
 
+- [05a9d92a22 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/05a9d92a228c446ef31ff8ef848174378f41deb9)
+- [56801fa996 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/56801fa9965f61b3bc53f29ffd2d1d85e886d679)
+- [5135b798a8 - Merge remote-tracking branch 'origin/master'](https://github.com/phpmyadmin/phpmyadmin/commit/5135b798a8df7f4b36f9202d8626700c420026e3)
+- [110b609e92 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/110b609e923f59c97d174684c10d71bd0aa27c7d)
+- [1ad235ca7d - Translated using Weblate (Macedonian)](https://github.com/phpmyadmin/phpmyadmin/commit/1ad235ca7d0c81c829e0479a8b2da6ebb521a385)
 ### Week 45
 
 - [663e7a0e67 - Add ChangeLog entries for 970dbd6d44 and 551509f345](https://github.com/phpmyadmin/phpmyadmin/commit/663e7a0e678a1330c9c406ccc8c26269aee6b01a)
@@ -50,6 +55,10 @@ I also worked on Debian packaging and server maintenance.
 - [ed00df955f - Fix #17705 - remove hiding the scroll bars because large and long SQL queries can not be scrolled](https://github.com/phpmyadmin/phpmyadmin/commit/ed00df955f79b3047cf1a906161b0de55f799903)
 - [970dbd6d44 - Fix Original theme login form label width](https://github.com/phpmyadmin/phpmyadmin/commit/970dbd6d446eb80a875e585d5ce31f971f6cd74c)
 
+- [686e59614b - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/686e59614bfe8b083c136d03c31571714f0aa319)
+- [e56633effc - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/e56633effccfe6fa2e3dad8b1153b37f30ddb294)
+- [df9e55c46b - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/df9e55c46b0e9a95b84e22431d5125303af9ad7d)
+- [a5f7b0d28d - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/a5f7b0d28d77b278500727a996715975533b9733)
 ### Week 46
 
 - [630f9bf00e - Ref #17478 - Fix PHP Undefined array key "auth_type" when server does not start at 0](https://github.com/phpmyadmin/phpmyadmin/commit/630f9bf00e863f56cb6d986d5e437aa1c85edabd)
@@ -85,6 +94,11 @@ I also worked on Debian packaging and server maintenance.
 - [1f2af424af - Fix #17892 - Closing index edit modal and reopening causes it to fire twice](https://github.com/phpmyadmin/phpmyadmin/commit/1f2af424afcf65c6217deaef49872147c135dc2e)
 - [f89cb7050a - Add sodium to the extension list on the main page](https://github.com/phpmyadmin/phpmyadmin/commit/f89cb7050afbe7f6d9b6077b3a918dc7d22c02e2)
 
+- [655c5e1541 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/655c5e1541bbe58424a8c5bddbfeb37091c19c1a)
+- [1df41153e4 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/1df41153e42cd7bcd9081618bb6300a5ca7a174c)
+- [a60437f04a - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/a60437f04a61e097325f8ae2b855fde02be3e1cb)
+- [5afd74a205 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/5afd74a2050aa772b738a4eaa94a8567ac458e99)
+- [c08b4a78f3 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/c08b4a78f3d76752efb3c62913c5ace3b635386a)
 ### Week 47
 
 - [a764f1bb2f - Update sql-parser commit hash (Fixed support for "NOT")](https://github.com/phpmyadmin/phpmyadmin/commit/a764f1bb2ff98e970c709a91a1c232fe64cec141)
@@ -102,6 +116,9 @@ I also worked on Debian packaging and server maintenance.
 - [1e1313825a - Update sql-parser commit hash (Added support for "NOT" and "ANALYSE" statements)](https://github.com/phpmyadmin/phpmyadmin/commit/1e1313825a6541a6562edd78aefdf015a0487ea0)
 - [883226c1f7 - Ref #17478 - Fix mistake in PHP operators](https://github.com/phpmyadmin/phpmyadmin/commit/883226c1f75727ec9672cb28755ba32357da4f36)
 
+- [e4b0e6bf81 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/e4b0e6bf81bf0dd033b5a38ab78b8ad7d6e2530b)
+- [b9c593c67d - Fix #17766 - Allow to open in a new tab copy and edit row actions](https://github.com/phpmyadmin/phpmyadmin/commit/b9c593c67d94fcc9903b6688dbc982f50e008998)
+- [1fb05ae4f8 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/1fb05ae4f8b4c17b84303d76fe9d0f89331388bc)
 ## phpmyadmin/docker (GitHub)
 
 ### Week 46
@@ -135,6 +152,8 @@ I also worked on Debian packaging and server maintenance.
 - [1913498f80 - Merge #386 - Fixed differentiating between analyze and explain statements](https://github.com/phpmyadmin/sql-parser/commit/1913498f8036eb60bd9be19f649d6cef43d5648b)
 - [f987fcd125 - Update psalm baseline](https://github.com/phpmyadmin/sql-parser/commit/f987fcd12579993a2c4f3d964ba1fede6fe893f4)
 
+- [73aca28371 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/73aca283710cefb4fd54dccc491f8b085b046218)
+- [ef46acd38a - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/ef46acd38a9735c32ec861402735dc107294f18e)
 ### Week 47
 
 - [a70dec025b - Merge #391 - Fix #374 - Adding NOT to the select options](https://github.com/phpmyadmin/sql-parser/commit/a70dec025bbcf9bddfc42117a29226b94694cf30)
@@ -146,6 +165,10 @@ I also worked on Debian packaging and server maintenance.
 - [f836c35128 - Add a CHANGELOG entry for #374](https://github.com/phpmyadmin/sql-parser/commit/f836c3512857d8637a64ee92d2152250435286c9)
 - [eabf67e8aa - Merge #388 - Fix #374 - Adding NOT to the select options](https://github.com/phpmyadmin/sql-parser/commit/eabf67e8aaf7f616e1fdc9a8fa480cf3a21fdcbb)
 
+- [983e88e637 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/983e88e637fba242c95acff1439e584a21a6c052)
+- [72912ca836 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/72912ca836e38c4d7ff3a77e5855e36cf4a76af6)
+- [51e48447d3 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/51e48447d3ef2c0cea171e799623f9c01698c6ad)
+- [8e3b0a4e32 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/8e3b0a4e32a4b4d91f922aadea26db1908e5040b)
 ## docker-library/docs (GitHub)
 
 ### Week 47
@@ -164,6 +187,7 @@ I also worked on Debian packaging and server maintenance.
 
 - [33802fc684 - Use the tags list page instead of the latest release page](https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/33802fc68422a58b848a51566e52ec31b90f4b3c)
 
+- [f23f92dda6 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/f23f92dda6821098358146f59207b8be393786eb)
 ## phpmyadmin-team/sql-parser (GitLab)
 
 ### Week 47
@@ -173,7 +197,52 @@ I also worked on Debian packaging and server maintenance.
 - [4b7d37a628 - Add depends on php-zumba-json-serializer](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/4b7d37a6286c17c2f17f6a4f932061d4ca775750)
 - [8fd396c0ed - Bump Standards-Version to 4.6.1](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/8fd396c0ed5674bc4027318398658db71b2fefdb)
 
+- [380c024e68 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/380c024e68038cf83ea88f9d840347e7c8251c78)
+- [1b598bbdd8 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/1b598bbdd8df3ee533d8830b0dda98de49d915c1)
+
+## phpmyadmin-team/phpmyadmin (GitLab)
+
+### Week 46
+
+- [4cdff27a4a - New upstream version 5.2.0+dfsg1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4cdff27a4a7bdcb88d5df514d49abdf06e41d1d4)
+
+## phpmyadmin-team/motranslator (GitLab)
+
+### Week 47
+
+- [760fafdd86 - Bump Standards-Version to 4.6.1](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/760fafdd86f2f8d38f934ccae1eeddab15e6f5dc)
+
 # Handled issues
+* [#17777 Uncaught TypeError: Cannot read properties of null (reading 'inline')](https://github.com/phpmyadmin/phpmyadmin/issues/17777)
+* [#17867 Blank screen to do with MySqli constants](https://github.com/phpmyadmin/phpmyadmin/issues/17867)
+* [#17636 Error text: OK (rejected) on home page only](https://github.com/phpmyadmin/phpmyadmin/issues/17636)
+* [#17899 Can't preview SQL for editing an index](https://github.com/phpmyadmin/phpmyadmin/issues/17899)
+* [#17898 PHPMyAdmin produces not output if mysqli is missing](https://github.com/phpmyadmin/phpmyadmin/issues/17898)
+* [#17907 Empty page when editing/inserting to some tables](https://github.com/phpmyadmin/phpmyadmin/issues/17907)
+* [#17770 2fa problem with phpMyAdmin on Synology](https://github.com/phpmyadmin/phpmyadmin/issues/17770)
+* [#17478 If the $cfg['Servers'] array did not start with 1 something unwanted seems to be happend](https://github.com/phpmyadmin/phpmyadmin/issues/17478)
+* [#17431 "Export SQL" generates invalid SQL if a view contains "order by desc"](https://github.com/phpmyadmin/phpmyadmin/issues/17431)
+* [#17705 Submit buttons not working properly in v5.1.3 with Chrome](https://github.com/phpmyadmin/phpmyadmin/issues/17705)
+* [#17892 Closing index edit modal and reopening causes it to fire twice](https://github.com/phpmyadmin/phpmyadmin/issues/17892)
+* [#17340 New Table -> VIRTUAL attribute is lost when adding new column](https://github.com/phpmyadmin/phpmyadmin/issues/17340)
+* [#17902 Error 500 if related table has longtext on the first column](https://github.com/phpmyadmin/phpmyadmin/issues/17902)
+* [#17446 Missing option for `STORED` virtual column](https://github.com/phpmyadmin/phpmyadmin/issues/17446)
+* [#17703 Datepicker appear on all fields, not just date](https://github.com/phpmyadmin/phpmyadmin/issues/17703)
+* [#17632 Login Page: Tab keypress to Text Fields](https://github.com/phpmyadmin/phpmyadmin/issues/17632)
+* [#17174 Uncaught SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data](https://github.com/phpmyadmin/phpmyadmin/issues/17174)
+* [#17598 Change password nav link is missing](https://github.com/phpmyadmin/phpmyadmin/issues/17598)
+* [#17353 Column dropped unintentionally](https://github.com/phpmyadmin/phpmyadmin/issues/17353)
+* [#17877 Add INDEX is not working](https://github.com/phpmyadmin/phpmyadmin/issues/17877)
+* [#17482 Default to "Full texts" when running ANALYZE](https://github.com/phpmyadmin/phpmyadmin/issues/17482)
+* [#17930 2FA setup not working after upgrade](https://github.com/phpmyadmin/phpmyadmin/issues/17930)
+* [#17177 Preview SQL when reordering columns doesn't work on move columns](https://github.com/phpmyadmin/phpmyadmin/issues/17177)
+* [#15887 Drop table errors ignored](https://github.com/phpmyadmin/phpmyadmin/issues/15887)
+* [#17933 Js are missing in 5.2.0 tarball](https://github.com/phpmyadmin/phpmyadmin/issues/17933)
+* [#17123 Error in processing request | Error text: error (rejected) | It seems that the connection to server has been lost.](https://github.com/phpmyadmin/phpmyadmin/issues/17123)
+* [#387 All fine with the first connection, then error all the time: Connection refused](https://github.com/phpmyadmin/docker/issues/387)
+* [#374 Lots of bogus errors in editor with perfectly valid query](https://github.com/phpmyadmin/sql-parser/issues/374)
+* [#164 ALTER TABLE .. PARTITION statement](https://github.com/phpmyadmin/sql-parser/issues/164)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 
