@@ -50,6 +50,16 @@ now the default).
 - [bacf8ea4ec - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/bacf8ea4ec1d78be39a51eda4e22756a0ae68b3c)
 - [e9204f6743 - Support psr/http-message v1.1 and v2 instead of requiring v2](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e9204f6743a1ac72b2878f976dcf56daf5bbcd64)
 - [bf060cfa36 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/bf060cfa36f06468d8265f4d63b4c6d9ed0bbc75)
+- [946c25c047 - dbconfig: do not abort the 4.5.0.1 upgrade on an already-applied migration](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/946c25c04728a3ea715a836ba5094a17d10ee794)
+- [51a60c1d23 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/51a60c1d236b08409aee9f99058a3762a79ac32f)
+- [e30752ca14 - Add DEP-8 test reproducing the dbconfig upgrade-script failure](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e30752ca1457640c960cb02cb4cc01963c72a41f)
+- [3b5138e87d - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3b5138e87df45a322a22c6cc6b37db9f05181afd)
+- [aa580b4e3d - Refresh patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/aa580b4e3d6b8b29a957ea659a615df368dc06eb)
+- [2017d75c4b - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2017d75c4b016f685aabb52202167381347f5fba)
+- [3c44dd6d2b - Update upstream source from tag 'upstream/5.2.4_git20260809.e0909b211b+dfsg'](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3c44dd6d2b25e311a400e2702d9eb2353308b701)
+- [d549de153a - New upstream version 5.2.4~git20260809.e0909b211b+dfsg](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d549de153ad9214e072895483ffc6852e83bb1ea)
+- [41f41c5317 - Add debian/watch.snapshot for importing 5.2 dev snapshots](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/41f41c5317d92060ee1df333796091fdb0b95f0f)
+- [b630873907 - Migrate debian/watch to version 5 format](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b6308739076cdc8afeadd2b369783ba6b63ab0d1)
 
 ### Week 33
 
@@ -74,4 +84,3 @@ now the default).
 - [90ed96e284 - Remove now default Priority: optional](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/90ed96e284eea3e98df6dd9b3469213f60452c0b)
 - [8e80a6745c - Remove now default Rules-Requires-Root: no](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/8e80a6745ca28a035ef3ede52f1dd0bf4454ec90)
 
-# Handled issues
