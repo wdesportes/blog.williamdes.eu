@@ -1,7 +1,7 @@
 +++
 title = "Report for August 2021"
 date = 2021-08-01T12:00:00Z
-updated = 2021-08-30T13:28:00+02:00
+updated = 2026-11-10T12:00:00Z
 category = "phpMyAdmin - reports"
 
 [extra]
