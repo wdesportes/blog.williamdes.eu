@@ -75,6 +75,10 @@ I wrote a test for the column compression option and improved the code.
 - [5606057cf5 - Bump Standards-Version to 4.6.1](https://salsa.debian.org/phpmyadmin-team/shapefile/-/commit/5606057cf53dab7156a43e6060b0fb3378ce4c1e)
 - [71cd6ff4f2 - Mark this package as "Multi-Arch: foreign"](https://salsa.debian.org/phpmyadmin-team/shapefile/-/commit/71cd6ff4f2ef8dc6eac9efdb0c54722d68f2e2e1)
 
+### Week 39
+
+- [c0d09a840d - Remove Felipe from Uploaders field on d/control](https://salsa.debian.org/phpmyadmin-team/shapefile/-/commit/c0d09a840d63680e31e7fafbdd8226ae63fda79d)
+
 ## phpmyadmin/phpmyadmin (GitHub)
 
 - [5d48e1006b - Merge #17657 - Supporting the column compression option on MariaDB](https://github.com/phpmyadmin/phpmyadmin/commit/5d48e1006bf2e81dad0ceb75d72ad89ef980e55b)
@@ -109,6 +113,24 @@ I wrote a test for the column compression option and improved the code.
 - [6230c197dd - Fix PHP warning on GIS visualization when there is only one GIS column](https://github.com/phpmyadmin/phpmyadmin/commit/6230c197dd9d78de0f0bcc7c508b74bd18070863)
 - [6764066c5e - Support snapshot builds for check release excludes](https://github.com/phpmyadmin/phpmyadmin/commit/6764066c5e6592a96420ffe330c192a0946f5834)
 
+### Week 35
+
+- [1896e42c1b - Translated using Weblate (Polish)](https://github.com/phpmyadmin/phpmyadmin/commit/1896e42c1bedb001de02bc5c790c3bfc8b3cdb3b)
+- [6c03575eba - Translated using Weblate (Polish)](https://github.com/phpmyadmin/phpmyadmin/commit/6c03575eba978bcba35f71fdc5940935f025cd88)
+- [c87db59362 - Translated using Weblate (Polish)](https://github.com/phpmyadmin/phpmyadmin/commit/c87db59362d894244ad26d27814ded5cfede838b)
+- [e711226048 - Translated using Weblate (Polish)](https://github.com/phpmyadmin/phpmyadmin/commit/e711226048aba5321b19f61ed11df0a7b740fb85)
+- [252c04fa37 - Translated using Weblate (Polish)](https://github.com/phpmyadmin/phpmyadmin/commit/252c04fa37ea3e57d267479acab32972cf869b83)
+
+### Week 36
+
+- [1c844571f5 - Translated using Weblate (Réunion Creole)](https://github.com/phpmyadmin/phpmyadmin/commit/1c844571f53d5fdac30eba63926089ff902379c5)
+
+### Week 37
+
+- [cccbf28c8b - Translated using Weblate (Réunion Creole)](https://github.com/phpmyadmin/phpmyadmin/commit/cccbf28c8b80067c758a1266562ae3eddbddc3ea)
+- [6112ef8743 - Translated using Weblate (Réunion Creole)](https://github.com/phpmyadmin/phpmyadmin/commit/6112ef874336514893708578097d004273201ad6)
+- [7f48ad680c - Translated using Weblate (Réunion Creole)](https://github.com/phpmyadmin/phpmyadmin/commit/7f48ad680ce20d6e7d6659466fd4e016c8399487)
+
 ## phpmyadmin/website (GitHub)
 
 - [ac45efb7df - Document 5.2](https://github.com/phpmyadmin/website/commit/ac45efb7dfe06d7476012a9bade88648dc767596)
@@ -120,3 +142,21 @@ I wrote a test for the column compression option and improved the code.
 - [d4cf63afe5 - Use composer scripts on GitHub workflows](https://github.com/phpmyadmin/sql-parser/commit/d4cf63afe529147617b1dcbe8e6698add342a57b)
 - [8fc323ebdc - Add composer scripts from the main repository](https://github.com/phpmyadmin/sql-parser/commit/8fc323ebdc12101a0ded28314e8f9f8b06f96ff1)
 - [6e34c69c98 - Update phpstan baseline](https://github.com/phpmyadmin/sql-parser/commit/6e34c69c9860b7236e2bffac5fddbfd458fcba56)
+
+### Week 36
+
+- [b631d18888 - Merge branch 'master' into 6.0.x](https://github.com/phpmyadmin/sql-parser/commit/b631d18888796f6f800148aaf435b606d6bb90ba)
+- [feb6a86fda - Merge #384 - Change error handling from throwing an exception to returning a boolean](https://github.com/phpmyadmin/sql-parser/commit/feb6a86fdabfb84df48058ba8a49659d32cbde93)
+
+
+## phpmyadmin-team/motranslator (GitLab)
+
+### Week 39
+
+- [a300207ed9 - Remove Felipe from Uploaders field on d/control](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/a300207ed99172c762789ca6d25b9bf487795edb)
+
+## phpmyadmin-team/sql-parser (GitLab)
+
+### Week 39
+
+- [c6ba171ad3 - Remove Felipe and Matthias from Uploaders field on d/control](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/c6ba171ad33f4d2ecaef1147c6d333854c17912e)

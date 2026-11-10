@@ -47,6 +47,7 @@ the patches that are now upstream.
 - [695688405a - Fix TransNode unwrap for sandbox + auto-escape (Twig 3.26+)](https://github.com/phpmyadmin/twig-i18n-extension/commit/695688405a014c6ff91616179cfa286729dd71f2)
 - [eb4ba0f136 - Revert "Disallow Twig >=3.26"](https://github.com/phpmyadmin/twig-i18n-extension/commit/eb4ba0f136fc29a66285768bc57637fdeaf0dd95)
 
+- [3e21dd906b - Merge branch '4.1.x'](https://github.com/phpmyadmin/twig-i18n-extension/commit/3e21dd906b271e10b43f1b8f4becc7c0c6d57181)
 ## phpmyadmin-team/twig-i18n-extension (GitLab)
 
 ### Week 31
@@ -65,7 +66,18 @@ the patches that are now upstream.
 - [72b207a468 - Filter dev files from the git-generated orig](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/72b207a46834ac65fe1f1f1d63a657c14a0246a5)
 - [0fc3e00d82 - Migrate d/watch to version 5](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/0fc3e00d82824c80741f640db3d4056fab39b603)
 
+
+## phpmyadmin-team/sql-parser (GitLab)
+
+### Week 28
+
+- [7c954f833f - Filter dev files from the git-generated orig](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/7c954f833fb228aefd27d8fe76025e9a2dd71bc7)
+- [bf5aec4c7c - Migrate d/watch to version 5](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/bf5aec4c7c25891a9dd54fa9162c7a369aeb1ddb)
+
 # Handled issues
+* [#20381 .](https://github.com/phpmyadmin/phpmyadmin/issues/20381)
+* [#18304 TypeError: json_decode(): Argument #1 ($json) must be of type string, null given](https://github.com/phpmyadmin/phpmyadmin/issues/18304)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

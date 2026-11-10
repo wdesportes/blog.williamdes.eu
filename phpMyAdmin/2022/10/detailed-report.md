@@ -33,6 +33,11 @@ And finally I wrote more bug fixes and changed js.cookie.js to the `.min.js` ver
 
 ## phpmyadmin/phpmyadmin (GitHub)
 
+### Week 40
+
+- [0cc774d929 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/0cc774d9293fc1e14fd5e7f1d7e595bedc578dcf)
+- [02f986ddf5 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/02f986ddf55047e19acf731bd826aabc93ee44fe)
+
 ### Week 41
 
 - [c92621d023 - Merge #17788 - Ref #12262 - Remove inline styles](https://github.com/phpmyadmin/phpmyadmin/commit/c92621d0239b3ccd1c359e6468be3c4d99b43715)
@@ -49,6 +54,11 @@ And finally I wrote more bug fixes and changed js.cookie.js to the `.min.js` ver
 - [581bae4bb0 - Add a ChangeLog entry for #17248](https://github.com/phpmyadmin/phpmyadmin/commit/581bae4bb0ca9336b97d1f1ec21de40eeaa8f6a9)
 - [44a349dd93 - Merge #17767 - Fix #17248 - Support UUID data type for MariaDB](https://github.com/phpmyadmin/phpmyadmin/commit/44a349dd9334b9cf55f0fee78b3839d96e33ebaf)
 
+- [12c94e9b70 - Merge remote-tracking branch 'origin/master'](https://github.com/phpmyadmin/phpmyadmin/commit/12c94e9b704f70d57d618ae2ff1b7d7720896443)
+- [007915bc0a - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/007915bc0a1531ee2b437ee3491275b201a2bb88)
+- [fbdca09dd0 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/fbdca09dd018e4e82ab1de8dda80ebdb76bd6dc3)
+- [3c0f662ea6 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/3c0f662ea6381adf9e85ce8cf5297c194cfb18bd)
+- [6da193304f - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/6da193304f78f6b356e67ee1ef1c859b513a3f16)
 ### Week 42
 
 - [df4e8d2221 - Fix broken createProfilingChart on monitor analyse query](https://github.com/phpmyadmin/phpmyadmin/commit/df4e8d22218d0d9612b327f73dcbcdff9858eff5)
@@ -97,6 +107,13 @@ And finally I wrote more bug fixes and changed js.cookie.js to the `.min.js` ver
 - [ce47abc300 - Add a ChangeLog entry for 3aa80636e7](https://github.com/phpmyadmin/phpmyadmin/commit/ce47abc300ba18901f50801a6d5daf48b8870c28)
 - [3aa80636e7 - Fix monitor filter queries only filtering the first row](https://github.com/phpmyadmin/phpmyadmin/commit/3aa80636e71601c1bc58843b20fa0cde56139702)
 
+- [2334d6bcca - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/2334d6bcca0a77414108d1203a6247fa4d5d9060)
+- [213ecacad8 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/213ecacad89c0cbdb64779bb16e6ddd14788ad31)
+- [484de699bb - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/484de699bb03bb08a53d997b6ee51f2e0bbaeb49)
+- [a09efb400f - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/a09efb400f982d5c38f63e66fecc50f122a61c7c)
+- [ea5a541f7b - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/ea5a541f7b9132cd27c0f626a4efb85d33c4ffb8)
+- [4ba2a88e73 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/4ba2a88e73b52956d5e9ff9d7da75f9f0f1e56d9)
+- [25c13d667b - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/25c13d667b215d6660b2f0977a40412e575b6433)
 ### Week 44
 
 - [bff74dc588 - Fix #17705 - CodeMirror query box has overflow preventing click](https://github.com/phpmyadmin/phpmyadmin/commit/bff74dc588895c58a409af222e9d8911f4620fd7)
@@ -110,7 +127,59 @@ And finally I wrote more bug fixes and changed js.cookie.js to the `.min.js` ver
 - [b033099d1e - Add a ChangeLog entry for #17842](https://github.com/phpmyadmin/phpmyadmin/commit/b033099d1ea7c85905b304f3d6c9ba50429545ce)
 - [00452af4dc - Merge #17845 - Fix #17842 - Change js.cookie.js to js.cookie.min.js](https://github.com/phpmyadmin/phpmyadmin/commit/00452af4dca33da17659af0280765668fdb0c8e6)
 
+- [75a5fbf6c0 - Translated using Weblate (Macedonian)](https://github.com/phpmyadmin/phpmyadmin/commit/75a5fbf6c0d2da5bea90d3e37c76be266e594a0e)
+- [d98569bf28 - Translated using Weblate (Macedonian)](https://github.com/phpmyadmin/phpmyadmin/commit/d98569bf287415ff550f121b0fe0f89bc7e2ccb2)
+- [79d447be16 - Merge branch 'QA_5_2'](https://github.com/phpmyadmin/phpmyadmin/commit/79d447be1693cdc00a9a0cee3fab1503dcf7666c)
+- [2eab183f5a - Merge branch 'Weblate/QA_5_2' into QA_5_2](https://github.com/phpmyadmin/phpmyadmin/commit/2eab183f5a1a28d99fba780d19f97b242688afb9)
+- [86b93afdfd - Replace '*' in query to count results](https://github.com/phpmyadmin/phpmyadmin/commit/86b93afdfd1a92aac6cd6d1873e5818b24b4c706)
+- [8a2fbda34a - Ref #17028 - Use statement build instead of replacing tokens](https://github.com/phpmyadmin/phpmyadmin/commit/8a2fbda34ae37cae622fa37f36fa31bb0c7d4fcf)
 # Handled issues
+* [#17748 5.2.0 fail to report that mysqli is missing](https://github.com/phpmyadmin/phpmyadmin/issues/17748)
+* [#17771 FROM](https://github.com/phpmyadmin/phpmyadmin/issues/17771)
+* [#17773 On demo server footer links aren't clickable](https://github.com/phpmyadmin/phpmyadmin/issues/17773)
+* [#17248 please support uuid data type](https://github.com/phpmyadmin/phpmyadmin/issues/17248)
+* [#17489 Error in reproducing the branch QA_5_1](https://github.com/phpmyadmin/phpmyadmin/issues/17489)
+* [#16951 Daily build failing](https://github.com/phpmyadmin/phpmyadmin/issues/16951)
+* [#16419 Errors in 5.0.4 when removing pragmarx folder](https://github.com/phpmyadmin/phpmyadmin/issues/16419)
+* [#16006 Hiding host in failed login attempts](https://github.com/phpmyadmin/phpmyadmin/issues/16006)
+* [#14368 Support DATABASE_URL env var for deployment on Heroku/Dokku](https://github.com/phpmyadmin/phpmyadmin/issues/14368)
+* [#14971 Ability to generate pre-coded HTML+PHP forms to insert data in database](https://github.com/phpmyadmin/phpmyadmin/issues/14971)
+* [#14355 Discussion: Introduction to Modern Javascript and Tools](https://github.com/phpmyadmin/phpmyadmin/issues/14355)
+* [#14018 Manual download of language](https://github.com/phpmyadmin/phpmyadmin/issues/14018)
+* [#12833 Remove lines to free up space](https://github.com/phpmyadmin/phpmyadmin/issues/12833)
+* [#17552 Connection Error](https://github.com/phpmyadmin/phpmyadmin/issues/17552)
+* [#17418 phMyAdmin 5.5.1 & Xamp 8.1.2 > deprecation notices !](https://github.com/phpmyadmin/phpmyadmin/issues/17418)
+* [#17317 In insert mode,I didnt see the complete list of possible values for a column, based on some foreign table](https://github.com/phpmyadmin/phpmyadmin/issues/17317)
+* [#17811 Symlink : autoload.php missing or not readable](https://github.com/phpmyadmin/phpmyadmin/issues/17811)
+* [#17175 Uncaught TypeError: can't access property "setValue", ConsoleInput.inputs.bookmark is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/17175)
+* [#17389 HTML disappears when exporting settings to browser's storage](https://github.com/phpmyadmin/phpmyadmin/issues/17389)
+* [#17179 Uncaught TypeError: can't access property "messages", $.validator is undefined](https://github.com/phpmyadmin/phpmyadmin/issues/17179)
+* [#17166 Warning: #1287 'X' is deprecated and will be removed in a future release. Please use ST_X instead](https://github.com/phpmyadmin/phpmyadmin/issues/17166)
+* [#17772 Wrong styles for add button from central columns on MariaDB](https://github.com/phpmyadmin/phpmyadmin/issues/17772)
+* [#17390 Create view modal doesn't show](https://github.com/phpmyadmin/phpmyadmin/issues/17390)
+* [#17534 Index separation border](https://github.com/phpmyadmin/phpmyadmin/issues/17534)
+* [#17434 Fatal error: Unsupported operand types in Results.php](https://github.com/phpmyadmin/phpmyadmin/issues/17434)
+* [#17832 Warning in ./libraries/classes/Dbal/DbiMysqli.php#198](https://github.com/phpmyadmin/phpmyadmin/issues/17832)
+* [#17611 Queries History - one click](https://github.com/phpmyadmin/phpmyadmin/issues/17611)
+* [#17481 "show all" -> browse output empty - not even a empty result](https://github.com/phpmyadmin/phpmyadmin/issues/17481)
+* [#17842 Use jquery.validate.min.js and js.cookie.min.js](https://github.com/phpmyadmin/phpmyadmin/issues/17842)
+* [#17669 The preview modal query index is below the modal I believe that just change the z-index and it should solve.](https://github.com/phpmyadmin/phpmyadmin/issues/17669)
+* [#17396 Warning: Unknown: POST Content-Length of 46248103 bytes exceeds the limit of 8388608 bytes in Unknown on line 0](https://github.com/phpmyadmin/phpmyadmin/issues/17396)
+* [#17136 Deprecation Notice when try create new table](https://github.com/phpmyadmin/phpmyadmin/issues/17136)
+* [#17483 phpMyAdmin ignore $cfg['Servers'][$i]['host'] in config.inc.php](https://github.com/phpmyadmin/phpmyadmin/issues/17483)
+* [#17710 phpMyAdmin - Configuring pmadb failed to access ](https://github.com/phpmyadmin/phpmyadmin/issues/17710)
+* [#17847 Uncaught TypeError: Cannot read properties of undefined (reading 'get')](https://github.com/phpmyadmin/phpmyadmin/issues/17847)
+* [#17642 unknown bug on chrome](https://github.com/phpmyadmin/phpmyadmin/issues/17642)
+* [#17843 Warning in ./libraries/classes/Dbal/DbiMysqli.php#209](https://github.com/phpmyadmin/phpmyadmin/issues/17843)
+* [#17281 Table links from SCHEMA_NAME have the old link from QA_4_9](https://github.com/phpmyadmin/phpmyadmin/issues/17281)
+* [#17848 my website not open](https://github.com/phpmyadmin/phpmyadmin/issues/17848)
+* [#17812 [UI] Broken styles on old confirm modal](https://github.com/phpmyadmin/phpmyadmin/issues/17812)
+* [#16042 Exported gzip file of database has first ~73 kB uncompressed and rest is gzip compressed](https://github.com/phpmyadmin/phpmyadmin/issues/16042)
+* [#17656 Replace table prefix not working for me](https://github.com/phpmyadmin/phpmyadmin/issues/17656)
+* [#17553 [Metro] Unreadable button links](https://github.com/phpmyadmin/phpmyadmin/issues/17553)
+* [#17588 Warning in .\libraries\classes\Display\Results.php#4403](https://github.com/phpmyadmin/phpmyadmin/issues/17588)
+* [#294 deploy to kubernetes issue](https://github.com/phpmyadmin/docker/issues/294)
+
 
 ## phpmyadmin/phpmyadmin (GitHub)
 

@@ -128,6 +128,68 @@ Merged PRs and improved jsdoc blocks.
 - [af8d8222d2 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/af8d8222d287e90be19186db5928cc846a6b069d)
 - [ba0a99b3da - Add more metadata for 32bit patch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/ba0a99b3dae5f2eb5de3e950254c37049dfee80d)
 
+### Week 22
+
+- [cdd0ebface - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/cdd0ebfaceb368b1c9494dde4c0879f3ff85b7d7)
+- [e1ee6a2949 - Fix failing ErrorTest::testSetFile and FileListingTest](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e1ee6a294930d75a86339a36e5e44e04ee969fb4)
+- [190346dd3a - Fix failing test OptionsTest](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/190346dd3a4615108e4918c8ecb2b64e21fd835a)
+- [df31a28180 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/df31a28180bede3dbcd9a32a52131622f9c976a6)
+- [3f602eb317 - Add back Public Domain license](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3f602eb317fd6abad065d836cbde51bafaf83743)
+- [a10960382e - Adjust phpunit autopkgtests for 32-bit tests](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/a10960382e0cb4b254516c3dd1bab90bee11fa65)
+- [d2463d1156 - Ignore very-long-line-length-in-source-file from js/dist](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d2463d1156d1c43853cf19e33066e47d25240371)
+- [8f9ad18742 - Remove unused d/licenses](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/8f9ad187427c1b117056863cb687329b11200365)
+- [130938604c - Ignore source-contains-prebuilt-javascript-object for js/src](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/130938604c32755a29ce83589510bff511648a1e)
+- [d45ca99e6a - Update d/copyright for openlayers](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d45ca99e6a520d917cf5e08ebe7f61d212c4433e)
+- [c27af281cb - Fix typo in changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c27af281cb4599b2ca1ed2ee30e77151403fb7d3)
+- [b3d0e5252e - Update d/changelog for experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b3d0e5252edf2ebbd9b78298b89a8f7ee1c7fa73)
+- [5e078186f7 - Add a rule to make the symlink into a folder](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/5e078186f71630a13c9a00c8629743096af87c17)
+- [a07e01ff46 - Run "wrap-and-sort"](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/a07e01ff460ae3cb7c1d73dd3343f5abd64354ab)
+- [f097e129bb - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/f097e129bbe296acb76a0574df5033c3f6ed527f)
+- [4ae92ed30a - Add a patch to fix test failure with mbstring](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4ae92ed30afccfd046aca22db466c1dd0931b598)
+- [154e6572a5 - Remove not usefull anymore delete of metro theme fonts](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/154e6572a5dbf4d7fa1a215c498976611158d81b)
+- [c32f61c123 - Do not delete openlayers js vendor folder](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c32f61c1239c4abbb488da797b4d08a105430c08)
+- [72f546191f - Build depends on php-cli for Makefile php commands to always work](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/72f546191fd621e2825cf609417a712a8ac5cb78)
+- [9583dc2098 - Adjust rules to set the Debian version suffix](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/9583dc2098d21038574efbb8f3cb5a72b4370334)
+- [73459fa823 - Remove Symfony/Component/Yaml from autoload](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/73459fa823d25c6dd8bfec2a5a1ca7c6a0954e32)
+- [6a473063cf - Only skip 32-bit tests on 32-bit platforms](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/6a473063cf7a81f9f11150878e27eb4f60a0d8ad)
+- [99cb5fac4c - Add FastRoute vendor to autoload](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/99cb5fac4cbc248f92958354afe8d6f2a57391a0)
+- [35758e936a - Update bootstrap patch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/35758e936a367d161bf9d4b4b700310b9215f0c4)
+- [b90c4e4eee - Refresh patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b90c4e4eeec6b3635c4af6e8d83a572b035da71d)
+- [18fb8c96cd - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/18fb8c96cdaffd467195d8f57f25ddafaaa3fd04)
+- [0f86e06ea0 - Drop depends on libjs-openlayers](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/0f86e06ea0b0a8d9bb0eac051b43aeafa9804fcd)
+- [d8c071ecf0 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d8c071ecf0f872f115569e14d85acc33c40e2a02)
+- [c255b61ef2 - Merge branch 'upstream' into debian/experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c255b61ef238d5d604818c4167765cfd803ad387)
+- [634760f05f - New upstream version 5.1.1+dfsg1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/634760f05f74313323322a1b120a6b60f26d3be6)
+- [44cc419c56 - Remove not needed patches on 5.1.1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/44cc419c5666cfc21260c57537f2c34466a0f061)
+- [1409a52287 - Merge branch 'debian/latest' into debian/experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/1409a52287ac8f96121744317c67d61cf4d08d1e)
+- [7e8747cfb8 - Remove jquery.event.drag-2.2.js removed in 5.1.1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/7e8747cfb8a300b9c6b5271ced315253a154264a)
+
+### Week 23
+
+- [e78a70089d - Add lintian source-contains-prebuilt-javascript-object on d/m-s/ol/*](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e78a70089dd33a3d161b46b3e822f4d21fb63534)
+- [940d451dc0 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/940d451dc0fe5d8d7ef45c2e0597ab3b1495b263)
+- [ea95952e25 - Add lintian override for source-is-missing on d/missing-sources/ol](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/ea95952e2523cfdf36b6c785ff1893973ebb1319)
+- [18f8d788ee - Add d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/18f8d788ee3d6a66f584e87a7192b7f42eb675fd)
+- [2f14680cc5 - Update d/clean after openlayers build](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2f14680cc576c29a8a92860cb62dfff79ddc7239)
+- [fc0b215db6 - Use webpack to build openlayers](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/fc0b215db68df3e3ac3ce1f638e3aee9331ba781)
+- [a2be15034a - Update copyright for openlayers, quickselect and rBush](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/a2be15034a945803162b761d12944bdd9ead7da8)
+- [4e1c0aa40c - Add rBush and quickselect dependencies](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4e1c0aa40c5b284ec0459b8fd9eceaa4c88999e9)
+- [95cf9f8637 - Disable MapboxVector in openlayers sources](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/95cf9f86372906b6e407512133c003bda53fe503)
+- [0ad857c61a - Add openlayers source files from 5.1.1 source tarball](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/0ad857c61a1f5fb4e27f63fe0f9882c65c568b15)
+- [3d1a73ca9f - Change node_modules config dir for openlayers to build from d/missing-sources](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3d1a73ca9f865dc431ca4daa3bac90839c7ae3f2)
+- [de7454ad84 - Add openlayers build from source patch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/de7454ad84729e4a6ac1f0bdaf3c93c5dfe93709)
+
+### Week 24
+
+- [55787dc90f - Set version -3 to experimental for release](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/55787dc90fd83c40b836ba0fda6a6e7221ed5568)
+- [f7557559a5 - update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/f7557559a593ae8fe2bde54eb22ef825cba7125a)
+- [6a57adf0f8 - Merge branch 'debian/latest' into debian/experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/6a57adf0f829aa40839ee5f1a7afa9f5324224eb)
+- [55748a54ed - Add d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/55748a54edb006eed5e1cdfa91ab88d6efc2a531)
+- [06967dedb0 - Set Debian Salsa CI to experimental](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/06967dedb0d0c6350aa2651469fc9928787bf834)
+- [1ed34bf95e - Update d/gbp.conf and d/control to experimental branch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/1ed34bf95e280b1964d6ca28cac26916761d1f97)
+- [b151735f1c - Allow PHP 8 to work by allowing symfony v5](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b151735f1c444bb7b7e544b5d215755f3b7e2704)
+- [d2eb718130 - Set version -2 to experimental for release](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d2eb718130b68aab25dd3e01a6f9cd94e0ce5f49)
+
 ## phpmyadmin-team/sql-parser (GitLab)
 
 - [c23928d0bd - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/c23928d0bd334338e2e226fb72141fadfdcb45bd)
@@ -236,6 +298,17 @@ Merged PRs and improved jsdoc blocks.
 - [febc302cdb - Improve tests for #16931](https://github.com/phpmyadmin/phpmyadmin/commit/febc302cdb22ee7803ff9db747167caf85639765)
 - [815ee5c7f9 - Improve DB testing capabilities by replacing the actual system by a filo system](https://github.com/phpmyadmin/phpmyadmin/commit/815ee5c7f9d81191e69e072b6197d6a4026614dc)
 - [f69ad50e27 - Add tests for #16931](https://github.com/phpmyadmin/phpmyadmin/commit/f69ad50e27ebeb65c944328dd5505ad853b8d0c6)
+
+### Week 24
+
+- [5ecc6ed979 - Translated using Weblate (Albanian)](https://github.com/phpmyadmin/phpmyadmin/commit/5ecc6ed97997a51d86e6991b2e25735f0135a6f9)
+- [3bfec68fd2 - Translated using Weblate (Indonesian)](https://github.com/phpmyadmin/phpmyadmin/commit/3bfec68fd2e6c9ba1f3827d1f35b55877bc8d5d5)
+- [962d3ceaac - Translated using Weblate (Albanian)](https://github.com/phpmyadmin/phpmyadmin/commit/962d3ceaac24a61a452f0090d3b5e5c7abc1f47f)
+- [e95adb040f - Translated using Weblate (Indonesian)](https://github.com/phpmyadmin/phpmyadmin/commit/e95adb040fb1706cd782ef6474603098dcaa4b75)
+
+### Week 26
+
+- [b68d858989 - Merge #16972 - Remove two symfony dev deps](https://github.com/phpmyadmin/phpmyadmin/commit/b68d858989f356abad85d4f3bbab509cdf10f60f)
 
 ## phpmyadmin/sql-parser (GitHub)
 

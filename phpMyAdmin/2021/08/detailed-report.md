@@ -235,6 +235,33 @@ Finally I wrote improvements to the sql-parser repository.
 - [6c2083e207 - Merge #17049 - Fix gis visualization save file](https://github.com/phpmyadmin/phpmyadmin/commit/6c2083e2075d943e704622aebdd87b2aa5a3e91e)
 - [2ad4d9d1a2 - Add a ChangeLog entry for 2a31bdd6b5](https://github.com/phpmyadmin/phpmyadmin/commit/2ad4d9d1a25ef376c2a8153376ff4328f3ac728e)
 
+### Week 31
+
+- [87c6181568 - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/87c618156882d0d9c2a3d8c3229ccb1c1960126f)
+- [ce9f1ecab0 - Update psalm to ^4.9.2](https://github.com/phpmyadmin/phpmyadmin/commit/ce9f1ecab018a6181afef7846505a626b43b068f)
+- [48c78e2f53 - Add a ChangeLog entry for #17054](https://github.com/phpmyadmin/phpmyadmin/commit/48c78e2f53d05a99b761c745ccd70b68d91fbc12)
+- [1671e32618 - Merge pull request #17058 from lrb2/fix-blowfish-secret](https://github.com/phpmyadmin/phpmyadmin/commit/1671e32618c027241ca10b33a450364107ecf078)
+
+### Week 32
+
+- [2a31bdd6b5 - Merge #17032 - Prevent default when scrolling in gis visualization](https://github.com/phpmyadmin/phpmyadmin/commit/2a31bdd6b58241c490d5f740f3971a68a46dcf55)
+- [dcaa069c86 - Add a ChangeLog entry for #17014](https://github.com/phpmyadmin/phpmyadmin/commit/dcaa069c866111ab3510dc6168cd17d6fe60894f)
+- [9249951f51 - Fix test after #17014](https://github.com/phpmyadmin/phpmyadmin/commit/9249951f51e74affb69e57430968fd21c54e25cf)
+- [d1afd1d5ac - Merge #17064 - Fix #17014 - column names in first row when importing from CSV where the first line contains column names](https://github.com/phpmyadmin/phpmyadmin/commit/d1afd1d5ac04f47d812f0673214adc757f3df7ee)
+- [0f05c686e4 - Add tests for #17014](https://github.com/phpmyadmin/phpmyadmin/commit/0f05c686e429787cd2df1587b540d9641c2edf26)
+- [41a791f973 - Add a ChangeLog entry for #15225](https://github.com/phpmyadmin/phpmyadmin/commit/41a791f9736ff998b504d3c35c6999d5fe4c2e4d)
+- [8800da212c - Merge #17067 - Fix #15225 - Command+click on macOS opens links in same tab](https://github.com/phpmyadmin/phpmyadmin/commit/8800da212c63a7c10e51a48c411d5270c02654fe)
+- [109994ff71 - Merge #17060 - Fix #17017 - creation of unpartitioned tables](https://github.com/phpmyadmin/phpmyadmin/commit/109994ff7116087f4f93767531ef21c11bb34811)
+- [e74ac3c93b - Merge branch 'QA_5_1'](https://github.com/phpmyadmin/phpmyadmin/commit/e74ac3c93b0c571367b633cb319caac3814f52b1)
+- [ce3176f1f1 - Add a ChangeLog entry for #14796](https://github.com/phpmyadmin/phpmyadmin/commit/ce3176f1f14ff58901746b02846d51bc6ad895ca)
+- [657ae9132f - Merge #17043 - Fix #14796 - Fixing the issue of hiding the structure options while exporting](https://github.com/phpmyadmin/phpmyadmin/commit/657ae9132f1936f19e986d5506bd2734e7dce333)
+- [13c30745f1 - Add a ChangeLog entry for e260a40d90](https://github.com/phpmyadmin/phpmyadmin/commit/13c30745f1bb3ff176f835156e658aa7f1b01573)
+- [e260a40d90 - Merge #17063 - Fix Metro theme text color for buttons in the browse table navigation bar](https://github.com/phpmyadmin/phpmyadmin/commit/e260a40d90ae36a721ca9206c63c60d15f1f4d39)
+- [2e2d198be7 - Add a ChangeLog entry for #16804](https://github.com/phpmyadmin/phpmyadmin/commit/2e2d198be7669e95b54bc7ab078644b62d457af4)
+- [7a281dfb77 - Merge #17061 - Fix #16804 - table CSS for number alignment](https://github.com/phpmyadmin/phpmyadmin/commit/7a281dfb77bcb35884dd7b4c677f5559d9dce18f)
+- [5686b15319 - Add a ChangeLog entry for #17019](https://github.com/phpmyadmin/phpmyadmin/commit/5686b15319d42340742faef67539d5c6b1c48850)
+- [336ffd9d98 - Merge #17066 - Fix #17019 - table tabs in header when the table has not yet been](https://github.com/phpmyadmin/phpmyadmin/commit/336ffd9d9835c0280dd90a5c6d09bcf06f561aa4)
+
 ## phpmyadmin/docker (GitHub)
 
 - [7c28533a32 - Fix #325 - Upgrade to PHP 8](https://github.com/phpmyadmin/docker/commit/7c28533a32a4a1bc4b932ac741e0334d7511e82e)
@@ -333,3 +360,28 @@ Finally I wrote improvements to the sql-parser repository.
 ## phpmyadmin/localized_docs (GitHub)
 
 - [3f37ad5233 - Translated using Weblate (French)](https://github.com/phpmyadmin/localized_docs/commit/3f37ad5233dc0c27012d25c833d8692d5d9766b5)
+
+
+## phpmyadmin-team/tcpdf (GitLab)
+
+### Week 33
+
+- [0ee0178418 - Send 6.4.2+dfsg1-1 to unstable](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/0ee017841855c2d3ce54b90052e0490b7044cf96)
+- [821b2c8917 - Update too long changelog entry](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/821b2c8917b2744471a517c624aa6c8eff5efa5e)
+- [c92b15cd3e - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/c92b15cd3e6d4f83b07ef1e6e9420604cb071788)
+- [cf53b4aba7 - Add a patch to update the composer example to the Debian example](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/cf53b4aba798d6a8a7cdf249a32815a8433473ec)
+- [10a92e1ef4 - Update tests to use the latest fix for test.sh](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/10a92e1ef47ff25ed5f9684abd5757b961038aea)
+- [c68220bddb - Add php-json and php-xml dependencies for tests](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/c68220bddbb305cd5b2db4bf871e264ff3f5fe2e)
+- [9ff19be6c8 - Fix failing tests](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/9ff19be6c82a31bcfd6bbefba5e2c70f16ff5dfb)
+- [685323e07d - Add php-bcmath to test dependencies](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/685323e07d49581f55f9ed1f6ab7636d974d183e)
+- [3d65298961 - Run "wrap-and-sort"](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/3d652989618ffcb23653fd946785a68a8f2f3586)
+- [0b8094cda9 - Add php-gd to test dependencies](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/0b8094cda96ddea75917a5ccc63f4dc6d980c20e)
+- [599322c36f - Remove -x as it prints output in stderr](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/599322c36f2e76af052f6fbf8d9795e62e1c3433)
+- [5bde1bad24 - Improve the autoload shell script](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/5bde1bad24c71d3b724d3aa3281be84ef44032c1)
+- [f5919274e9 - Improve the autoload test](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/f5919274e9f745972729e05bdca02cf0b6f93cd5)
+- [3e3b0c3ea3 - Copy test script from upstream and update d/copyright for debian/*](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/3e3b0c3ea30560e345b40fb50e627236b63986fd)
+- [1b14f7993c - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/1b14f7993cff58379b5d3ff092cba6bb10158a45)
+- [9d6fc062f4 - Bump Standards-Version to 4.6.0](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/9d6fc062f4afd394a8b28313d33dfc633625d629)
+- [d1b433a7da - Bump copyright year](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/d1b433a7dabf0f68a60d845336ef0f1e7020cb51)
+- [2e5694c5b1 - Merge tag 'upstream/6.4.2+dfsg1' into debian/latest](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/2e5694c5b119e5742764831fe47c846e6f956c2e)
+- [fb2667dcb1 - New upstream version 6.4.2+dfsg1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/fb2667dcb19fe68e8c15163bd46c49471dd0de90)
