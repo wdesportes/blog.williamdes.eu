@@ -49,7 +49,7 @@ Finally wrote and improved some documentation on the README of the Docker reposi
 
 ### Friday
 
-Today I merged a sql-parser PR. And started to work on the issue #335
+Today I merged a sql-parser PR. And started to work on the issue [#335](https://github.com/phpmyadmin/phpmyadmin/pull/335)
 
 ### Saturday
 
