@@ -25,8 +25,8 @@ contributions in phpMyAdmin, improved MariaDB compatibility, and did some issues
 
 I worked on sql-parser: I migrated the tests to PHPUnit attributes, added a native type
 hint, made the data providers static, and refreshed the phpstan and psalm baselines.
-I merged #631 (build the insert statement using the context's quote style), #636 (desc
-index lint error), #637 (formatter spacing for the JSON path operators) and #648 (bump
+I merged [#631](https://github.com/phpmyadmin/phpmyadmin/pull/631) (build the insert statement using the context's quote style), [#636](https://github.com/phpmyadmin/phpmyadmin/pull/636) (desc
+index lint error), [#637](https://github.com/phpmyadmin/phpmyadmin/pull/637) (formatter spacing for the JSON path operators) and [#648](https://github.com/phpmyadmin/phpmyadmin/pull/648) (bump
 zumba/json-serializer), then regenerated the test data.
 
 I also bumped the CI: ramsey/composer-install to v4, codecov-action to v6 using the token
@@ -40,22 +40,22 @@ bumped the GitHub actions. Same for shapefile.
 ## Second week (15)
 
 I merged contributions after reviewing them. This week's phpMyAdmin merges include: skipping
-the locale directory assertion when the folder is missing (#20268), reducing the
-simulate-query memory usage (#20238, #18941), skipping the user link for non-real users in
-the processes list (#20259, #19842), the drag & drop difference between Firefox and
-Chromium (#20189, #18557), removing the dead Suhosin warning (#20167, #19912), adding the
-missing length validation when changing a column type (#20267, #19338), fixing the sliding
-message container overlapping the page content (#20269, #20064), fixing the export for raw
-queries without a table reference (#20266, #20041), adding a SQL button to the database list
-(#20210), and updating create-release.sh with the files to exclude (#20250, #20007).
+the locale directory assertion when the folder is missing ([#20268](https://github.com/phpmyadmin/phpmyadmin/pull/20268)), reducing the
+simulate-query memory usage ([#20238](https://github.com/phpmyadmin/phpmyadmin/pull/20238), [#18941](https://github.com/phpmyadmin/phpmyadmin/issues/18941)), skipping the user link for non-real users in
+the processes list ([#20259](https://github.com/phpmyadmin/phpmyadmin/pull/20259), [#19842](https://github.com/phpmyadmin/phpmyadmin/issues/19842)), the drag & drop difference between Firefox and
+Chromium ([#20189](https://github.com/phpmyadmin/phpmyadmin/pull/20189), [#18557](https://github.com/phpmyadmin/phpmyadmin/issues/18557)), removing the dead Suhosin warning ([#20167](https://github.com/phpmyadmin/phpmyadmin/pull/20167), [#19912](https://github.com/phpmyadmin/phpmyadmin/issues/19912)), adding the
+missing length validation when changing a column type ([#20267](https://github.com/phpmyadmin/phpmyadmin/pull/20267), [#19338](https://github.com/phpmyadmin/phpmyadmin/issues/19338)), fixing the sliding
+message container overlapping the page content ([#20269](https://github.com/phpmyadmin/phpmyadmin/pull/20269), [#20064](https://github.com/phpmyadmin/phpmyadmin/issues/20064)), fixing the export for raw
+queries without a table reference ([#20266](https://github.com/phpmyadmin/phpmyadmin/pull/20266), [#20041](https://github.com/phpmyadmin/phpmyadmin/issues/20041)), adding a SQL button to the database list
+([#20210](https://github.com/phpmyadmin/phpmyadmin/pull/20210)), and updating create-release.sh with the files to exclude ([#20250](https://github.com/phpmyadmin/phpmyadmin/pull/20250), [#20007](https://github.com/phpmyadmin/phpmyadmin/issues/20007)).
 
-I also fixed the TOON export for the normal user (#20275), made the CSV import turn empty
-values into NULL (#19381), removed getInnodbPluginVersion() and refactored
-getInnodbFileFormat() for MariaDB compatibility (#18204), and improved the drag & drop to
+I also fixed the TOON export for the normal user ([#20275](https://github.com/phpmyadmin/phpmyadmin/issues/20275)), made the CSV import turn empty
+values into NULL ([#19381](https://github.com/phpmyadmin/phpmyadmin/issues/19381)), removed getInnodbPluginVersion() and refactored
+getInnodbFileFormat() for MariaDB compatibility ([#18204](https://github.com/phpmyadmin/phpmyadmin/issues/18204)), and improved the drag & drop to
 accept application/x-moz-file.
 
 For sql-parser I merged the Weblate translations, removed the extra spaces in the new 6.x
-tests, and fixed #609 (attempt to read property "keyword" on null).
+tests, and fixed [#609](https://github.com/phpmyadmin/phpmyadmin/pull/609) (attempt to read property "keyword" on null).
 
 I also did some issues triage, including the demo servers being out of disk space and not
 updated since December 2024.
