@@ -1,0 +1,69 @@
++++
+title = "Report for November 2024"
+date = 2024-11-01T12:00:00Z
+updated = 2026-11-10T12:00:00Z
+category = "phpMyAdmin - reports"
+
+[extra]
+author = "William Desportes"
+author_url = "https://williamdes.eu"
+co_authors = ["DeepSeek"]
+
+[taxonomies]
+tags = ["phpMyAdmin", "OSS-report"]
++++
+
+Here is my phpMyAdmin report for November 2024.
+
+<!-- more -->
+
+In November 2024 I worked on the JSON export and the documentation build on ReadTheDocs for the main repository, and on the Debian packaging of phpmyadmin.
+
+## First week (47)
+
+On the main repository I used application/json for the JSON export, and set up ReadTheDocs with the Read the Docs theme, the HTMLZIP build and a configuration file. On the Debian side I worked on the snapshot builds, the patches and the autoload, and uploaded a new 5.2.2 development version.
+
+- [833645f8d1 - Ref #19398 - Use application/json instead of text/plain for JSON export](https://github.com/phpmyadmin/phpmyadmin/commit/833645f8d16f6802ff207c7d84705c25d7b25c49)
+- [86896c7083 - Also publish ad HTMLZIP on ReadTheDocs and adjust the logic](https://github.com/phpmyadmin/phpmyadmin/commit/86896c70838a28b940f7ed9b9841cf3d718a1ea6)
+- [573e86661b - Install sphinx-rtd-theme for ReadTheDocs with pip](https://github.com/phpmyadmin/phpmyadmin/commit/573e86661bc988f2e9df9af1ff2f711562f61d7e)
+- [cef7b80696 - Add APT packages to ReadTheDocs](https://github.com/phpmyadmin/phpmyadmin/commit/cef7b806960127a47c2ab852749e0fdd95927bc9)
+- [32468f2fd7 - Use the ReadTheDocs theme on ReadTheDocs](https://github.com/phpmyadmin/phpmyadmin/commit/32468f2fd7f71b3ac20f2c88bee11b95fb7d2269)
+- [71fd0c6b8e - Set the version of Python to 3.12 for ReadTheDocs](https://github.com/phpmyadmin/phpmyadmin/commit/71fd0c6b8e04616b17d67bbf4d76e033d3badb36)
+- [9da5bc0431 - Add a ReadTheDocs config file](https://github.com/phpmyadmin/phpmyadmin/commit/9da5bc043162770a2edcea01fdbe7599d38d752c)
+- [b2c67d9333 - Bump the doc Copyright year](https://github.com/phpmyadmin/phpmyadmin/commit/b2c67d933308b469eca6b453887791f519c13c6a)
+- [8ac41b5686 - Adjust RoutingTest patch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/8ac41b56865901260ae5b7829ec1f96c50813d3d)
+- [e3b176a46c - Skip more write only tests](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e3b176a46c6c567c0d78859a97aa76f95ba208ff)
+- [db36689e57 - Drop the polyfill in autoload template](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/db36689e578099fbf33220cd2d81f0e6c03a16ca)
+- [4a7e7c2329 - Fixup subst](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/4a7e7c23296d4a25c767b995eda3866e7d5fbbe1)
+- [3c7e45cb64 - Escape + for the regex](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3c7e45cb6438faa52aeef02ba665919a593940ee)
+- [cf15b6b374 - Debug the failing build](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/cf15b6b3746ad50f25e64451d483de43a4ff353b)
+- [03f1ae007d - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/03f1ae007daa80d7690098c556bec43563e5ccd2)
+- [dcc94284b8 - Add a grep and comments](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/dcc94284b83f0f6221eea87f219cbd5b3fe7f8b0)
+- [918660211f - Escape $ in Makefile](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/918660211fccc02b9db87582bcfd57c4fce57663)
+- [faf5add319 - Adjust d/rules for snapshot versions](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/faf5add319993dc114c38f7c7f6b2e0aa55342f3)
+- [ca885b9edd - Refresh patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/ca885b9edd698f527d966ab56c4375ea9490636f)
+- [7f725beb23 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/7f725beb231de6807d5ea54c9248aaf383a87f6b)
+- [fa1f708f81 - Bump copyrights](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/fa1f708f8115763dfaace4966869e0543d5fee02)
+- [2b1df3208e - Update upstream source from tag 'upstream/5.2.2-dev+759fe912a'](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2b1df3208ec832373b2df654e1cbecb7db1d5fae)
+- [2e2b43c692 - New upstream version 5.2.2-dev+759fe912a](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2e2b43c692b1bee49fcd85061e0643988a7ae2d0)
+
+## Second week (48)
+
+I continued on the Debian packaging: I sent a 5.2.2 dev version to unstable, fixed the DEP-8 autoload with a file in debian/ instead of patches, and added a patch to skip a test.
+
+- [41c3aa8fb1 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/41c3aa8fb18c0e27eca3f5d79e69188ec63d2f80)
+- [63cc18503a - Update upstream source from tag 'upstream/5.2.2_dev+git61b4f6739d+dfsg'](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/63cc18503aecd525c67dc443992ba3a0218d983a)
+- [c5770286d8 - New upstream version 5.2.2~dev+git61b4f6739d+dfsg](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c5770286d8677f37f81d068d9c7479dcaab189ef)
+- [371ccad083 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/371ccad083f96d4f1cdeeead72273f50fd0c1d65)
+- [0669b2990c - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/0669b2990c1d03b9ca7219a7f13055429a8d68ce)
+- [2a75e6ffc2 - Update upstream source from tag 'upstream/5.2.2-dev+61b4f6739d+dfsg'](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2a75e6ffc209a4f55556026c54e864455a6a10a1)
+- [70e35442ea - New upstream version 5.2.2-dev+61b4f6739d+dfsg](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/70e35442ea377a9c9f3bb07c34dc6500cf227f84)
+- [5ef9729026 - Send 4:5.2.2-dev+759fe912a-1 to unstable](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/5ef9729026c7671590203f60fdee25cb4f54d3cc)
+- [f2026766d8 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/f2026766d8017fdf1755cb6112fad70cec9ae7f5)
+- [c398583636 - Fix is not defined](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/c3985836369b63ca67e6a254d64c262305581f06)
+- [8af8bf84c9 - Fixup DEP-8 autoload](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/8af8bf84c9a145d73d9750082d7dd8ef28932e28)
+- [31d54c649f - Use a debian/ file to override the phpunit autoload](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/31d54c649fdd70af236af475e32ee862baf33c24)
+- [79c4208c46 - Drop autoload patches](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/79c4208c46faf5918a111056a537cc8f15245c71)
+- [a8dc729697 - d/ch](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/a8dc729697e38931f2785331a11b8b845b76ff5a)
+- [b31a68f715 - Add a patch to skip testSetAjax](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b31a68f715f869fb212a628988078638f5151477)
+

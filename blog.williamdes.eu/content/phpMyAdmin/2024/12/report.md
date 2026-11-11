@@ -20,12 +20,12 @@ Like last year, this year has been crowded with tasks and goals. I miss the good
 
 ## First week (49)
 
-I merged the pull-request #19392 for PHP 8.4 support in `str_getcsv`.
+I merged the pull-request [#19392](https://github.com/phpmyadmin/phpmyadmin/pull/19392) for PHP 8.4 support in `str_getcsv`.
 And did some issue management.
 
 ## Second week (50)
 
-I merged the pull-request #19428 to fix column type extraction.
+I merged the pull-request [#19428](https://github.com/phpmyadmin/phpmyadmin/pull/19428) to fix column type extraction.
 And uploaded tcpdf and sql-parser 5.10.2 to Debian.
 
 ## Third week (51)
