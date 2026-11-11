@@ -33,3 +33,26 @@ In November I was not active on the project.
 ## Fourth week (48)
 
 I merged a PR and removed `roave/security-advisories` in [6f8e08653d](https://github.com/phpmyadmin/phpmyadmin/commit/6f8e08653daca495ca6d1e2dbb9032c1d0c242d0) because composer 2.9. has it built in now.
+
+# Commit list
+
+## phpmyadmin/phpmyadmin (GitHub)
+
+### Week 48
+
+- [63f5f7a908 - Merge #19969 - Fix JSON column support check for MariaDB](https://github.com/phpmyadmin/phpmyadmin/commit/63f5f7a908d325c007025a6d4a1238cd796a39fe)
+- [6f8e08653d - Remove roave/security-advisories, composer 2.9. has it built in now](https://github.com/phpmyadmin/phpmyadmin/commit/6f8e08653daca495ca6d1e2dbb9032c1d0c242d0)
+
+# Handled issues
+
+## phpmyadmin/phpmyadmin (GitHub)
+
+### Week 45
+
+- [#19918 - [Bug]: "You do not have the privileges to administrate the users!" despite using the "root" account...](https://github.com/phpmyadmin/phpmyadmin/issues/19918)
+- [#19803 - [Bug]: Importing allows importing without a file.](https://github.com/phpmyadmin/phpmyadmin/issues/19803)
+
+### Week 48
+
+- [#19971 - .](https://github.com/phpmyadmin/phpmyadmin/issues/19971)
+
