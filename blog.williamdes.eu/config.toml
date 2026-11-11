@@ -14,7 +14,7 @@ generate_feeds = true
 feed_filenames = ["atom.xml"]
 
 taxonomies = [
-    {name = "tags", feed = true, paginate_by = 5},
+    {name = "tags", feed = true, paginate_by = 25},
     {name = "phpMyAdmin", feed = true, paginate_by = 5},
 ]
 
