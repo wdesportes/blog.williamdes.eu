@@ -1,7 +1,7 @@
 +++
 title = "Monitoring an UPS using Zabbix and Apcupsd"
 date = 2024-05-07T16:59:00+00:02
-updated = 2024-05-07T16:59:00+00:02
+updated = 2026-11-13T00:00:00+00:02
 
 [extra]
 author = "William Desportes"
@@ -128,10 +128,79 @@ Import the template in "Data Collection" > "Templates".
 
 Then go to your "Host" and link the template in the "Templates" section.
 
+#### Set the nominal wattage (required)
+
+The template has one required host macro, `{$APC_NOM_WATTS}`. It has no default value on purpose: the watts item stays unsupported until you set it, rather than reporting a plausible but wrong number.
+
+It must be the **watt** rating from the UPS label, not the **VA** rating. A unit sold as "650" is usually 650 VA and 400 W; using 650 over-reports consumption by about 1.6×.
+
+Read it from the device when the driver reports it:
+
+```sh
+apcaccess | grep NOMPOWER
+```
+
+If your model reports it, the output is in watts:
+
+```
+NOMPOWER : 400 Watts
+```
+
+If it prints **nothing and exits 1**, the model does not report its rating at all. That is not a broken `apcaccess`: APC's USB HID models, the Ellipse PRO range included, expose 30 fields and `NOMPOWER` is not one of them. Confirm with:
+
+```sh
+apcaccess | cut -d: -f1 | tr -s ' '
+```
+
+If `NOMPOWER` is absent from that list, the rating cannot be read from the device and must come from the label or the datasheet.
+
+`NOMPOWER` is an apcupsd field, so this only concerns APC units — apcupsd drives APC hardware exclusively. Eaton, MGE and other brands are handled by [NUT](https://networkupstools.org/), where the equivalent value is `ups.realpower.nominal` and is equally absent on many models.
+
+##### Finding it from the UPS display
+
+If the label is out of reach, the display gives it back. `LOADPCT` is measured, so with the watt figure the LCD shows, the nominal is:
+
+```
+nominal ≈ LCD watts × 100 / LOADPCT
+```
+
+Sample `LOADPCT` over a few seconds before using it, it follows the real load. Without a delay every reading lands in the same second and you get one value repeated:
+
+```sh
+for i in 1 2 3 4 5; do
+  apcaccess | awk -F: '/^LOADPCT/{gsub(/ /,"",$2); print $2}'
+  sleep 2
+done
+```
+
+On an APC Ellipse PRO 650 the LCD showed 30 W at a steady 8 %: `30 × 100 / 8 = 375`, which is the 400 W rating of that unit — 650 is its VA rating.
+
+Then set it on the host: **Data collection → Hosts → your host → Macros → Inherited and host macros**, and add the macro below:
+
+| measured LCD load | steady `LOADPCT` | set `{$APC_NOM_WATTS}` |
+|---|---|---|
+| 30 W | 8 % | `400` |
+| 100 W | 25 % | `400` |
+| 150 W | 37 % | `400` |
+| 250 W | 62 % | `400` |
+
+The value is a property of the UPS, not of the load: pick the nominal whose multiplication reproduces the LCD figure, and every row above gives 400.
+
+Check the result against the UPS display. The watts item is `load% × nominal`, rounded by both the device and the LCD, so a few watts of difference is normal:
+
+```
+LOADPCT   : 7.0 Percent
+7 % × 400 = 28 W        (LCD shows 30 W)
+```
+
+If the item shows a number that is far off, the macro is the wrong rating — the load percentage itself is read directly from the device and is reliable.
+
 #### Latest data
 
 Note: some items do not exist on my UPS, they may exist on yours.
 Feel free to add some missing [keys](https://linux.die.net/man/8/apcaccess) and contact me to update the template.
+
+An item in the *Not supported* state is not a template bug: `apcupsd` returns only the fields your model exposes, and a dependent item whose JSONPath finds nothing stays unsupported. On an Ellipse PRO, `BATTV` is absent and mains voltage is reported as `OUTPUTV`, not `LINEV`. Disable the items your model does not provide.
 
 ![Latest data in Zabbix](../Zabbix-UPS-Apcupsd-latest-data.jpg "Latest data in Zabbix")
 
