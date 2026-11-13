@@ -380,8 +380,8 @@ zabbix_export:
               value: UPS
       macros:
         - macro: '{$APC_NOM_WATTS}'
-          value: '650'
-          description: 'nominal wattage of UPS, pulled from running apcaccess and using value of watts for NOMPOWER'
+          value: ''
+          description: 'Nominal WATT rating from the UPS label (not VA). Must be set per host: USB HID models report no NOMPOWER, and the watts item is unsupported while this is empty.'
         - macro: '{$APC_REM_CRIT}'
           value: '3'
           description: 'Minutes remaining on UPS power - critical'

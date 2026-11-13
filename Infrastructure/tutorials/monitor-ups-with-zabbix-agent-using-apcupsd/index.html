@@ -34,7 +34,7 @@
         <meta property="og:type" content="article">
         <meta name="publish_date" property="og:publish_date" content="2024-05-07T16:59:00+00:02">
         <meta property="article:published_time" content="2024-05-07T16:59:00">
-        <meta property="article:modified_time" content="2024-05-07T16:59:00">
+        <meta property="article:modified_time" content="2026-11-13T00:00:00">
         <meta property="article:author" content="https://williamdes.eu">
         <meta property="article:tags" content="infra-tutorial"><meta property="article:tags" content="Zabbix">
         
@@ -114,7 +114,7 @@
     "alternativeHeadline": "Monitoring an UPS using Zabbix and Apcupsd",
     "dateCreated": "2024-05-07T16:59:00+0002",
     "datePublished": "2024-05-07T16:59:00+0002",
-    "dateModified": "2024-05-07T16:59:00+0002",
+    "dateModified": "2026-11-13T00:00:00+0002",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     
@@ -175,9 +175,9 @@
             
             <br/>
             <span class="post-date">Published: <time datetime="2024-05-07T16:59:00+0002">May  7, 2024 16:59</time></span>
-            <span class="post-date"> and updated: <time datetime="2024-05-07T16:59:00+0002">May  7, 2024 16:59</time></span>
+            <span class="post-date"> and updated: <time datetime="2026-11-13T00:00:00+0002">November 13, 2026 00:00</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">1 min read</span>
+            <span class="post-reading-time">3 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Monitoring my Eaton Ellipse PRO 650 on Zabbix with Zabbix agent and Apcupsd.</p>
@@ -258,9 +258,42 @@
 <p>Download the template: <a href="../Zabbix-UPS-Apcupsd.yaml">Zabbix-UPS-Apcupsd.yaml</a></p>
 <p>Import the template in "Data Collection" &gt; "Templates".</p>
 <p>Then go to your "Host" and link the template in the "Templates" section.</p>
+<h4 id="set-the-nominal-wattage-required">Set the nominal wattage (required)</h4>
+<p>The template has one required host macro, <code>{$APC_NOM_WATTS}</code>. It has no default value on purpose: the watts item stays unsupported until you set it, rather than reporting a plausible but wrong number.</p>
+<p>It must be the <strong>watt</strong> rating from the UPS label, not the <strong>VA</strong> rating. A unit sold as "650" is usually 650 VA and 400 W; using 650 over-reports consumption by about 1.6×.</p>
+<p>Read it from the device when the driver reports it:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">apcaccess</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> grep</span><span style="color: #D1F1A9;"> NOMPOWER</span></span></code></pre>
+<p>If your model reports it, the output is in watts:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>NOMPOWER : 400 Watts</span></span></code></pre>
+<p>If it prints <strong>nothing and exits 1</strong>, the model does not report its rating at all. That is not a broken <code>apcaccess</code>: APC's USB HID models, the Ellipse PRO range included, expose 30 fields and <code>NOMPOWER</code> is not one of them. Confirm with:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #BBDAFF;">apcaccess</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> cut</span><span> -d: -f1</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> tr</span><span> -s</span><span style="color: #D1F1A9;"> &#39; &#39;</span></span></code></pre>
+<p>If <code>NOMPOWER</code> is absent from that list, the rating cannot be read from the device and must come from the label or the datasheet.</p>
+<p><code>NOMPOWER</code> is an apcupsd field, so this only concerns APC units — apcupsd drives APC hardware exclusively. Eaton, MGE and other brands are handled by <a rel="noopener external" target="_blank" href="https://networkupstools.org/">NUT</a>, where the equivalent value is <code>ups.realpower.nominal</code> and is equally absent on many models.</p>
+<h5 id="finding-it-from-the-ups-display">Finding it from the UPS display</h5>
+<p>If the label is out of reach, the display gives it back. <code>LOADPCT</code> is measured, so with the watt figure the LCD shows, the nominal is:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>nominal ≈ LCD watts × 100 / LOADPCT</span></span></code></pre>
+<p>Sample <code>LOADPCT</code> over a few seconds before using it, it follows the real load. Without a delay every reading lands in the same second and you get one value repeated:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #EBBBFF;">for</span><span style="color: #FF9DA4;"> i</span><span style="color: #EBBBFF;"> in</span><span style="color: #D1F1A9;"> 1 2 3 4 5</span><span>;</span><span style="color: #EBBBFF;"> do</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  apcaccess</span><span style="color: #99FFFF;"> |</span><span style="color: #BBDAFF;"> awk</span><span> -F:</span><span style="color: #D1F1A9;"> &#39;/^LOADPCT/{gsub(/ /,&quot;&quot;,$2); print $2}&#39;</span></span>
+<span class="giallo-l"><span style="color: #BBDAFF;">  sleep</span><span style="color: #FFC58F;"> 2</span></span>
+<span class="giallo-l"><span style="color: #EBBBFF;">done</span></span></code></pre>
+<p>On an APC Ellipse PRO 650 the LCD showed 30 W at a steady 8 %: <code>30 × 100 / 8 = 375</code>, which is the 400 W rating of that unit — 650 is its VA rating.</p>
+<p>Then set it on the host: <strong>Data collection → Hosts → your host → Macros → Inherited and host macros</strong>, and add the macro below:</p>
+<table><thead><tr><th>measured LCD load</th><th>steady <code>LOADPCT</code></th><th>set <code>{$APC_NOM_WATTS}</code></th></tr></thead><tbody>
+<tr><td>30 W</td><td>8 %</td><td><code>400</code></td></tr>
+<tr><td>100 W</td><td>25 %</td><td><code>400</code></td></tr>
+<tr><td>150 W</td><td>37 %</td><td><code>400</code></td></tr>
+<tr><td>250 W</td><td>62 %</td><td><code>400</code></td></tr>
+</tbody></table>
+<p>The value is a property of the UPS, not of the load: pick the nominal whose multiplication reproduces the LCD figure, and every row above gives 400.</p>
+<p>Check the result against the UPS display. The watts item is <code>load% × nominal</code>, rounded by both the device and the LCD, so a few watts of difference is normal:</p>
+<pre class="giallo" style="color: #FFFFFF; background-color: #002451;" ><code data-lang="plain"><span class="giallo-l"><span>LOADPCT   : 7.0 Percent</span></span>
+<span class="giallo-l"><span>7 % × 400 = 28 W        (LCD shows 30 W)</span></span></code></pre>
+<p>If the item shows a number that is far off, the macro is the wrong rating — the load percentage itself is read directly from the device and is reliable.</p>
 <h4 id="latest-data">Latest data</h4>
 <p>Note: some items do not exist on my UPS, they may exist on yours.
 Feel free to add some missing <a rel="noopener external" target="_blank" href="https://linux.die.net/man/8/apcaccess">keys</a> and contact me to update the template.</p>
+<p>An item in the <em>Not supported</em> state is not a template bug: <code>apcupsd</code> returns only the fields your model exposes, and a dependent item whose JSONPath finds nothing stays unsupported. On an Ellipse PRO, <code>BATTV</code> is absent and mains voltage is reported as <code>OUTPUTV</code>, not <code>LINEV</code>. Disable the items your model does not provide.</p>
 <p><img src="../Zabbix-UPS-Apcupsd-latest-data.jpg" alt="Latest data in Zabbix" title="Latest data in Zabbix" /></p>
 <h3 id="some-notes">Some notes</h3>
 <p>I was originally using <a rel="noopener external" target="_blank" href="https://github.com/cavazquez/zabbix_template_apcupsd">cavazquez's Zabbix template</a>.</p>
