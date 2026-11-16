@@ -1,7 +1,7 @@
 +++
 title = "Installing Android 17 on a Redmi Note 10 Pro"
 date = 2026-11-16T18:27:00+00:02
-updated = 2026-11-16T18:27:00+00:02
+updated = 2026-11-16T20:18:00+01:00
 
 [extra]
 author = "William Desportes"
@@ -131,3 +131,105 @@ Now all the data is removed, no need to "Format cache partition" as you can see 
 Click back arrow and hit "Reboot system now".
 
 Admire your new phone booting, enjoy !
+
+### Play Integrity
+
+Banking apps, Google Wallet and others refuse to work when the Google play integrity service does not say the phone is "secure".
+
+The fix is a JSON file describing the phone. And another file named keybox.
+
+#### The `pif.json` file
+
+Download [Redmi-Note-10-Pro-sweet-pif.json](../Redmi-Note-10-Pro-sweet-pif.json), it was generated from this exact phone, then run:
+
+```sh
+adb push Redmi-Note-10-Pro-sweet-pif.json /storage/emulated/0/
+```
+
+This did push the file to the internal storage root folder.
+
+Load this into Settings > System > Developper options > "Applications", Spoofing > Play integrity fix > Import configuration.
+
+#### The keybox file
+
+Check the verdicts with [Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck).
+
+On the freshly installed phone I only got `MEETS_BASIC_INTEGRITY`.
+
+#### Final checking
+
+On Android 13 and above, like here, Google made the DEVICE verdict as strict as the old STRONG one: a fingerprint alone is not enough anymore, you also need [TrickyStore](https://github.com/5ec1cff/TrickyStore) with a valid keybox.
+
+#### For another phone / Generate the `pif.json` file
+
+The file comes from [PIF-Config-Generator](https://github.com/Elcapitanoe/PIF-Config-Generator), run inside Docker so nothing is installed on your machine. 
+
+Save this as `gen-pif.sh` in your current folder:
+
+```sh
+#!/usr/bin/env bash
+# Generate a Play Integrity profile from the phone plugged on adb.
+# Runs inside python:3-trixie:  bash gen-pif.sh sweet
+set -euo pipefail
+
+# keep apt and mktemp out of /tmp, which Docker replaces with the user's directory
+export TMPDIR=/var/tmp
+
+CODENAME="${1:-}"
+[ -n "$CODENAME" ] || { echo "usage: bash gen-pif.sh <codename>   (e.g. sweet)" >&2; exit 1; }
+
+OUT_DIR="${OUT_DIR:-/tmp}"
+TARBALL="https://github.com/Elcapitanoe/PIF-Config-Generator/archive/refs/tags/v26.1115.tar.gz"
+WORK="$(mktemp -d)"
+trap 'rm -r "$WORK"' EXIT
+
+apt-get update -qq
+apt-get install -y -qq --no-install-recommends adb
+pip install -q --disable-pip-version-check --root-user-action=ignore "$TARBALL"
+
+echo ":: waiting for the phone"
+adb wait-for-device
+FOUND="$(adb shell getprop ro.product.device | tr -d '\r')"
+[ "$FOUND" = "$CODENAME" ] || { echo "ERROR: expected '$CODENAME', the phone says '$FOUND'" >&2; exit 1; }
+
+echo ":: reading the build properties"
+adb shell getprop | sed -E 's/^\[([^]]+)\]: \[([^]]*)\]$/\1=\2/' > "$WORK/system.prop"
+
+echo ":: building the profile"
+pif-gen build --file "$WORK/system.prop" --format legacy --output-dir "$WORK"
+
+# A custom ROM mixes its own system props with the stock vendor fingerprint, so
+# align everything with that fingerprint instead of keeping the ROM's values.
+PROFILE="$(python3 - "$WORK/system.prop" "$WORK/system.json" "$OUT_DIR" "$CODENAME" <<'PY'
+import json, os, re, sys
+props = dict(l.rstrip("\n").split("=", 1) for l in open(sys.argv[1]) if "=" in l)
+profile = json.load(open(sys.argv[2]))
+fingerprint = props["ro.vendor.build.fingerprint"]
+brand, product, device = fingerprint.split("/")[:3]
+profile.update(
+    BRAND=brand,
+    PRODUCT=product,
+    DEVICE=device.split(":")[0],
+    FINGERPRINT=fingerprint,
+    SECURITY_PATCH=props["ro.vendor.build.security_patch"],
+)
+model = props.get("ro.product.system.model") or props["ro.product.model"]
+name = re.sub(r"\W+", "-", f"{model}-{sys.argv[4]}-pif").strip("-")
+path = f"{sys.argv[3]}/{name}.json"
+json.dump(profile, open(path, "w"), indent=2)
+# the container runs as root, world-writable keeps the file usable on the host
+os.chmod(path, 0o777)
+print(os.path.basename(path))
+PY
+)"
+
+echo ":: done, the profile is in the folder you ran this from: $PROFILE"
+```
+
+In that same folder, open a terminal and run (phone plugged by USB and modal accepted):
+
+```sh
+docker run --rm --network host -v "$PWD:/tmp" -v "$PWD/gen-pif.sh:/gen-pif.sh:ro" python:3-trixie bash /gen-pif.sh sweet
+```
+
+Mounting the folder on `/tmp` is what brings the profile back next to the script, and `--network host` is what lets `adb` inside the container see the phone plugged on your USB port. The last line printed is the file name, for this phone `Redmi-Note-10-Pro-sweet-pif.json`, and it is in the folder you ran the command from, not in `/tmp` on your machine.
