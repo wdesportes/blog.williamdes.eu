@@ -183,7 +183,7 @@
             <span class="post-date">Published: <time datetime="2026-10-07T18:00:00+0001">October  7, 2026 18:00</time></span>
             <span class="post-date"> and updated: <time datetime="2026-11-10T12:00:00+0000">November 10, 2026 12:00</time></span>
             <span>&middot;</span>
-            <span class="post-reading-time">1 min read</span>
+            <span class="post-reading-time">2 min read</span>
         </div>
     </header>
     <div class="post-content"><p>Here is my phpMyAdmin report for August 2026.</p>
@@ -201,12 +201,31 @@ It can now take the version from the JSON itself, which lets <code>uscan</code> 
 snapshot under the version it really is — 5.2.4-dev+20260809.e0909b211b mangling to
 5.2.4~dev~git20260809.e0909b211b+dfsg, below the eventual 5.2.4 but above the
 shipped 5.2.3 — and the number follows the branch on its own.</p>
+<p>I reviewed these pull-requests:</p>
+<ul>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20408">#20408 - Update create-release.sh</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20406">#20406 - Fix PHPUnit deprecations</a></li>
+</ul>
 <h2 id="second-week-33">Second week (33)</h2>
 <p>I continued on the Debian package. I added a DEP-8 test reproducing the dbconfig-common
 password-policy failure and asserted the root cause, imported a new upstream snapshot
 (5.2.4~dev) and replaced the bundled jquery.validate.js with node-jquery-validation.</p>
 <p>I also did some cleanup on motranslator (Standards-Version, and removing fields that are
 now defaults).</p>
+<p>I reviewed these pull-requests:</p>
+<ul>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/shapefile/pull/48">#48 - Add support for PHPUnit 13</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20421">#20421 - Upgrade Yarn dependencies</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/twig-i18n-extension/pull/36">#36 - Bump phpmyadmin/coding-standard to version 5</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/shapefile/pull/47">#47 - Bump phpmyadmin/coding-standard to version 5</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/motranslator/pull/62">#62 - Bump phpmyadmin/coding-standard to version 5</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/sql-parser/pull/668">#668 - Bump phpmyadmin/coding-standard to version 5</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20419">#20419 - Bump phpmyadmin/coding-standard to version 5 </a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/coding-standard/pull/14">#14 - Bump doctrine/coding-standard to version 14</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20414">#20414 - Allow Node.js 22</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20378">#20378 - Fix MySQL documentation links</a></li>
+<li><a rel="noopener external" target="_blank" href="https://github.com/phpmyadmin/phpmyadmin/pull/20316">#20316 - Fix #20190 - Handle missing parser statement in getForeigners()</a></li>
+</ul>
 <h2 id="third-week-34">Third week (34)</h2>
 <p><strong>Nothing to report</strong></p>
 <h2 id="fourth-week-35">Fourth week (35)</h2>

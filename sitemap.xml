@@ -40,6 +40,10 @@
         <lastmod>2025-10-10T15:59:00+00:02</lastmod>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/Hardware/tutorials/redmi-note-10-pro-android-17/</loc>
+        <lastmod>2026-11-16T20:18:00+01:00</lastmod>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/Infrastructure/</loc>
     </url>
     <url>
@@ -921,6 +925,12 @@
         <loc>https://blog.williamdes.eu/tags/</loc>
     </url>
     <url>
+        <loc>https://blog.williamdes.eu/tags/android/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/android/page/1/</loc>
+    </url>
+    <url>
         <loc>https://blog.williamdes.eu/tags/debian-manual/</loc>
     </url>
     <url>
@@ -1105,6 +1115,12 @@
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/raspberrypi/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/redmi/</loc>
+    </url>
+    <url>
+        <loc>https://blog.williamdes.eu/tags/redmi/page/1/</loc>
     </url>
     <url>
         <loc>https://blog.williamdes.eu/tags/rust/</loc>
