@@ -19,7 +19,7 @@ Here is my phpMyAdmin report for September 2026.
 
 In September I merged and reviewed a set of contributions, worked on the CI and
 code-quality tooling, fixed a couple of search bugs, and did some issues triage.
-Two weeks, W38 and W39, had no activity.
+Two weeks, W38 and W39, were spent entirely on pull-request reviews.
 
 ## First week (36)
 
@@ -35,6 +35,10 @@ from the host when linking to user privileges in the processes list
 ReferenceError for CodeMirror
 ([#20471](https://github.com/phpmyadmin/phpmyadmin/pull/20471)) and updating the
 .gitignore ([#20472](https://github.com/phpmyadmin/phpmyadmin/pull/20472)).
+
+I reviewed these pull-requests:
+
+- [#20427 - Fix #18749 - Remove the X-XSS-Protection header](https://github.com/phpmyadmin/phpmyadmin/pull/20427)
 
 ## Second week (37)
 
@@ -55,16 +59,35 @@ I also fixed the INET4 search — quoting the search term for inet4 fields
 search with the = operator
 ([#20474](https://github.com/phpmyadmin/phpmyadmin/pull/20474)).
 
+I reviewed these pull-requests:
+
+- [#20479 - Refactoring of SysInfo](https://github.com/phpmyadmin/phpmyadmin/pull/20479)
+- [#20432 - Do not expose the phpMyAdmin version in asset URLs](https://github.com/phpmyadmin/phpmyadmin/pull/20432)
+
 ## Third week (38)
 
-**Nothing to report**
+I reviewed these pull-requests:
+
+- [#20449 - Fix #20442 - Replace Name with TABLE_NAME](https://github.com/phpmyadmin/phpmyadmin/pull/20449)
+- [#20423 - Fix db structure summary timestamp](https://github.com/phpmyadmin/phpmyadmin/pull/20423)
+- [#20368 - Use ignore-id instead of deprecated ignore in Composer](https://github.com/phpmyadmin/phpmyadmin/pull/20368)
 
 ## Fourth week (39)
 
-**Nothing to report**
+I reviewed these pull-requests:
+
+- [#20495 - Use randomizer where possible](https://github.com/phpmyadmin/phpmyadmin/pull/20495)
+- [#20494 - Use new in initializers](https://github.com/phpmyadmin/phpmyadmin/pull/20494)
+- [#19933 - Don't convert deprecations to exceptions](https://github.com/phpmyadmin/phpmyadmin/pull/19933)
 
 ## Fifth week (40)
 
-I fixed the jest tests on Windows
+I merged a pull-request that fixed the jest tests on Windows
 ([#20500](https://github.com/phpmyadmin/phpmyadmin/pull/20500)).
 
+I reviewed these pull-requests:
+
+- [#20498 - Allow google/recaptcha 2.x](https://github.com/phpmyadmin/phpmyadmin/pull/20498)
+- [#20496 - Fix Stryker link](https://github.com/phpmyadmin/phpmyadmin/pull/20496)
+- [#197 - Bump actions](https://github.com/phpmyadmin/website/pull/197)
+- [#13 - Replace apt with apt-get to fix warning](https://github.com/phpmyadmin/coding-standard/pull/13)

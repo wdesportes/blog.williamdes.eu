@@ -34,6 +34,11 @@ snapshot under the version it really is — 5.2.4-dev+20260809.e0909b211b mangli
 5.2.4~dev~git20260809.e0909b211b+dfsg, below the eventual 5.2.4 but above the
 shipped 5.2.3 — and the number follows the branch on its own.
 
+I reviewed these pull-requests:
+
+- [#20408 - Update create-release.sh](https://github.com/phpmyadmin/phpmyadmin/pull/20408)
+- [#20406 - Fix PHPUnit deprecations](https://github.com/phpmyadmin/phpmyadmin/pull/20406)
+
 ## Second week (33)
 
 I continued on the Debian package. I added a DEP-8 test reproducing the dbconfig-common
@@ -42,6 +47,20 @@ password-policy failure and asserted the root cause, imported a new upstream sna
 
 I also did some cleanup on motranslator (Standards-Version, and removing fields that are
 now defaults).
+
+I reviewed these pull-requests:
+
+- [#48 - Add support for PHPUnit 13](https://github.com/phpmyadmin/shapefile/pull/48)
+- [#20421 - Upgrade Yarn dependencies](https://github.com/phpmyadmin/phpmyadmin/pull/20421)
+- [#36 - Bump phpmyadmin/coding-standard to version 5](https://github.com/phpmyadmin/twig-i18n-extension/pull/36)
+- [#47 - Bump phpmyadmin/coding-standard to version 5](https://github.com/phpmyadmin/shapefile/pull/47)
+- [#62 - Bump phpmyadmin/coding-standard to version 5](https://github.com/phpmyadmin/motranslator/pull/62)
+- [#668 - Bump phpmyadmin/coding-standard to version 5](https://github.com/phpmyadmin/sql-parser/pull/668)
+- [#20419 - Bump phpmyadmin/coding-standard to version 5 ](https://github.com/phpmyadmin/phpmyadmin/pull/20419)
+- [#14 - Bump doctrine/coding-standard to version 14](https://github.com/phpmyadmin/coding-standard/pull/14)
+- [#20414 - Allow Node.js 22](https://github.com/phpmyadmin/phpmyadmin/pull/20414)
+- [#20378 - Fix MySQL documentation links](https://github.com/phpmyadmin/phpmyadmin/pull/20378)
+- [#20316 - Fix #20190 - Handle missing parser statement in getForeigners()](https://github.com/phpmyadmin/phpmyadmin/pull/20316)
 
 ## Third week (34)
 
