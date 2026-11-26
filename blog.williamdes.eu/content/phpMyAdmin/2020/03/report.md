@@ -266,6 +266,8 @@ I merged several fixes on the main repository: keyboard shortcuts firing while t
 
 My focus of the week was the route parsing cache and the cache warmup command: moving all the index.php code to the Routing class, a new cache directory, a warning and exit code 1 when the dependencies are not installed, and tests. I updated the release script for the cache warmup, and restricted twig to ^2.9 on the Debian side.
 
+I uploaded 4.9.5 to the Ubuntu PPA for bionic, eoan.
+
 - [40b6d0ebc2 - Add ChangeLog entries for #16005](https://github.com/phpmyadmin/phpmyadmin/commit/40b6d0ebc2addc5387e96cd954218e7e8a467c3d)
 - [94760f43e7 - Merge #16028 - Ref #16005 - Use caching to speed up route parsing](https://github.com/phpmyadmin/phpmyadmin/commit/94760f43e75db8e604236f34db11872487ece540)
 - [003163fb65 - Merge branch 'QA_5_0'](https://github.com/phpmyadmin/phpmyadmin/commit/003163fb6531ead1f70f7c094230088ad3a36d88)
@@ -301,7 +303,6 @@ My focus of the week was the route parsing cache and the cache warmup command: m
 - [d44643ee2f - Add a d/changelog entry for #954766 and for #952308](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d44643ee2fd0ea28ee367c6e6fdb8b8ad92eb927)
 - [3c558a8a4e - Add some restrictions for php-twig](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/3c558a8a4e439361a3fd15b385b8d76353ff850a)
 - [d1e9bb508a - Fix debian control file](https://salsa.debian.org/phpmyadmin-team/motranslator/-/commit/d1e9bb508a428b041a5aa9804f9a2ae66cd794bc)
-
 ## Sixth week (14)
 
 A quiet week: I updated the po files and finished the Debian changelog for 4.9.5+dfsg1-2, dropping the php-recode build dependency.

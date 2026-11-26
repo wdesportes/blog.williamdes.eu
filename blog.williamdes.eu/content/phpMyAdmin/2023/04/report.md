@@ -93,3 +93,7 @@ I fixed the lint route and the truncated contents of the functions and routines 
 - [87f1dfa610 - Add test cases for #330](https://github.com/phpmyadmin/sql-parser/commit/87f1dfa6101ab8d20a3a33e40375a06baea34cbb)
 - [cbfce2bc08 - Add GitHub linguist overrides](https://github.com/phpmyadmin/sql-parser/commit/cbfce2bc0809a13a36adbcc2f071057a3d1082dc)
 
+## Fourth week (17)
+
+I uploaded 5.2.1 to the Ubuntu PPA for focal.
+

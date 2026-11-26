@@ -127,6 +127,8 @@ I fixed the latitude and longitude swap for geometries in edit mode, with tests 
 
 I upgraded CodeMirror to 5.58.2, bootstrap and blueimp-md5, and added stickyfill to the sync script. On motranslator I improved the return type of `Loader::listLocales`. And I did another Debian upload of phpmyadmin, 4.9.7+dfsg2, excluding the built html documentation files.
 
+I uploaded 4.9.7 to the Ubuntu PPA for bionic.
+
 - [abac029565 - Add a ChangeLog entry for #16227](https://github.com/phpmyadmin/phpmyadmin/commit/abac02956553448887feb4e4862d0d728b1b9262)
 - [771aa54a42 - Upgrade bootstrap and blueimp-md5](https://github.com/phpmyadmin/phpmyadmin/commit/771aa54a42efccfdc1cd76f42bd05c5d2f34d718)
 - [1ef9bb1232 - #16277 - Add stickyfill.min.js to the sync script](https://github.com/phpmyadmin/phpmyadmin/commit/1ef9bb123263f9830fc5bb3cc04fd839eb1758f5)
@@ -142,4 +144,3 @@ I upgraded CodeMirror to 5.58.2, bootstrap and blueimp-md5, and added stickyfill
 - [b1313a8bf7 - Exclude and clean built html doc files](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/b1313a8bf74e119f6a1ae4598cbaf2f0b76347a4)
 - [6ab6065c47 - Make the selenium tests silent before running phpunit instead of removing them](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/6ab6065c4733d9547d1a89d482eaa7a7afc328c4)
 - [a19b4212a4 - Add d/clean file](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/a19b4212a41c4de0e8f10a24b20bcae2c4f51fff)
-

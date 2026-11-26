@@ -82,6 +82,7 @@ More Debian packaging: I marked twig-i18n-extension 3.0.0-3 for release and adde
 
 I marked phpmyadmin 4:5.1.4+dfsg1-1 for unstable and bumped actions/setup-node to v3.
 
+I uploaded 5.1.4 to the Ubuntu PPA for focal, impish, jammy.
+
 - [43a644e6b1 - Bump actions/setup-node to v3](https://github.com/phpmyadmin/phpmyadmin/commit/43a644e6b1c0754f5ddae25b8dfce29d21206582)
 - [2e93cbaa0f - Mark 4:5.1.4+dfsg1-1 for unstable](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/2e93cbaa0f705039fb0e16a38bb683239c9ed52d)
-

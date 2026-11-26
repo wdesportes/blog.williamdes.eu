@@ -121,6 +121,8 @@ A lot of the week went into the Windows test suite: CRLF issues, locale and some
 
 I fixed more issues on the main repository: the error box not being dismissed on tap and hold, the Designer radio button, the replication user password syntax on MySQL 8.0 and several missing CSS classes on buttons. I also continued on the Windows CI with the strftime issue for Japanese users, and started to rename CHANGES.md to CHANGELOG.md with a standard format. On motranslator I merged Symfony 5 support. And I uploaded twig-i18n-extension 2.0.0 and tcpdf 6.3.5 to Debian.
 
+I uploaded 4.9.4 to the Ubuntu PPA for bionic, eoan, focal.
+
 - [9e981f2f30 - Add ChangeLog entry for #12969 and fix typo on previous entry](https://github.com/phpmyadmin/phpmyadmin/commit/9e981f2f30d5e0f8f5ae240627c91b2d4f9d4dd5)
 - [aa4f18c05f - Merge #15865 - Fix #12969 - Tap and hold will not dismiss Error box](https://github.com/phpmyadmin/phpmyadmin/commit/aa4f18c05f16cc2b671ddbe8e24ed7be28a8f749)
 - [731ddfe339 - Add ChangeLog entry for #13371](https://github.com/phpmyadmin/phpmyadmin/commit/731ddfe339e9b47a2f96c5fff41de3f54b3259fb)
@@ -200,7 +202,6 @@ I fixed more issues on the main repository: the error box not being dismissed on
 - [a3c82eadd6 - Add d/changelog for 6.3.5+dfsg1-1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/a3c82eadd6355d21bca983f22e1e2889115d0ec7)
 - [bc8e28e0c7 - Update upstream source from tag 'upstream/6.3.5+dfsg1'](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/bc8e28e0c766ac55168523d708fc752222f2108f)
 - [a749ed0d41 - New upstream version 6.3.5+dfsg1](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/a749ed0d410ec3636db0a30079c72ba55407c183)
-
 ## Fourth week (9)
 
 I worked on making the selenium tests more stable: adding a scrollToElement function, collecting the chromedriver console logs, stopping the webdriver session when a test fails and marking the tests as passed on BrowserStack. And I merged fixes to stay on the structure page when editing indexes or adding a column, plus the "Empty" button not being disabled after a click. On the website I finished removing Google+, and I uploaded mariadb-mysql-kbs 1.2.10 to Debian.

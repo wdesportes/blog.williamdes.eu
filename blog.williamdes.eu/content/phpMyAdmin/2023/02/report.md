@@ -32,6 +32,8 @@ I merged [#420](https://github.com/phpmyadmin/phpmyadmin/pull/420) on sql-parser
 
 I merged [#17923](https://github.com/phpmyadmin/phpmyadmin/pull/17923) to allow opening the copy and edit row actions in a new tab ([#17766](https://github.com/phpmyadmin/phpmyadmin/issues/17766)), and [#17851](https://github.com/phpmyadmin/phpmyadmin/pull/17851) to re-build the query count management ([#17028](https://github.com/phpmyadmin/phpmyadmin/issues/17028) and [#17683](https://github.com/phpmyadmin/phpmyadmin/issues/17683)). On the website I officially declared support for PHP 8.1 and 8.2 on the 5.2 and 5.3 series, and on the Debian side I sent 4:5.2.1+dfsg-1 to unstable.
 
+I uploaded 5.2.1 to the Ubuntu PPA for jammy.
+
 - [e48fec0abf - Add ChangeLog entries for #17028, #17683, #17766](https://github.com/phpmyadmin/phpmyadmin/commit/e48fec0abfd7121732bc8848fda15f9b54d7ae23)
 - [9d92dafdcb - Merge #17923 - Fix #17766 - Allow to open in a new tab copy and edit row actions](https://github.com/phpmyadmin/phpmyadmin/commit/9d92dafdcbc1b32478ff5a0ca61d0b53775b263c)
 - [2443570ce6 - Merge #17851 - Fix #17028, #17683 - Re build query count management](https://github.com/phpmyadmin/phpmyadmin/commit/2443570ce6fef9d68b6f582f53afaaacd9a7e01d)
@@ -58,7 +60,6 @@ I merged [#17923](https://github.com/phpmyadmin/phpmyadmin/pull/17923) to allow 
 - [d901c6a06b - New upstream version 5.2.1+dfsg](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/d901c6a06ba261be38bea24042cbbcef3ba21986)
 - [0c34251941 - Move vendor symlink at test time and not build time](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/0c3425194173123e0740fe22221b0bd6ad193fe1)
 - [6eb2e0a683 - Revert "Drop Build-Depends on php-phpmyadmin-motranslator"](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/6eb2e0a6831657673decb041c0d81dfc6c236679)
-
 ## Third week (7)
 
 I worked on create-release.sh: the folder management, the kits building, the copy action and the snapshot version generation ([#18109](https://github.com/phpmyadmin/phpmyadmin/issues/18109)). I also added an autocomplete attribute to the password inputs used to change the password.

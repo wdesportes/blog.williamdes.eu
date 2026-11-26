@@ -26,7 +26,11 @@ I bumped actions/checkout to v3 and removed the non needed CI skip code on the w
 - [ac5e3c4cc5 - Bump actions/checkout to v3](https://github.com/phpmyadmin/phpmyadmin/commit/ac5e3c4cc58c5c6c11d0f23b6b013ac83e94e452)
 - [076a09917d - Remove non needed anymore ci skip code on workflows](https://github.com/phpmyadmin/phpmyadmin/commit/076a09917d1ea159e93b108a21e3c99e18ebe268)
 
-## Second week (17)
+## Second week (16)
+
+I uploaded 5.1.3 to the Ubuntu PPA for jammy.
+
+## Third week (17)
 
 On the Debian side I prepared motranslator 5.3.0 and did some cleaning on the shapefile package. I also removed openssl.cnf from the vendor bundles as it is not necessary.
 

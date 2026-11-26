@@ -25,3 +25,7 @@ I added back the branch in the Vcs-Git field of the mariadb-mysql-kbs Debian pac
 
 - [e16f508324 - Add back Vcs-Git -b](https://salsa.debian.org/phpmyadmin-team/mariadb-mysql-kbs/-/commit/e16f508324be471e4a195321ec3d9e498f9a985b)
 
+## Second week (12)
+
+I uploaded 5.2.2 to the Ubuntu PPA for jammy.
+

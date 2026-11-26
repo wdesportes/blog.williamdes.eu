@@ -55,6 +55,8 @@ I fixed the ODS import issues [#17298](https://github.com/phpmyadmin/phpmyadmin/
 
 I fixed [#17287](https://github.com/phpmyadmin/phpmyadmin/issues/17287), a PHP type error when sorting the database list, and added a test for it. I improved the documentation, including an example on how to connect to an Amazon RDS Aurora MySQL with SSL. On the Debian side I marked 4:5.1.3+dfsg1-1 for unstable.
 
+I uploaded 5.1.3 to the Ubuntu PPA for focal, impish.
+
 - [ac8a8311d3 - Document back an old configuration for hardware auth (feebee/swekey) that was removed](https://github.com/phpmyadmin/phpmyadmin/commit/ac8a8311d31884185d4f1168e597e3e818cd6f79)
 - [4a3c9f3891 - Add a ChangeLog entry for #17287](https://github.com/phpmyadmin/phpmyadmin/commit/4a3c9f3891a7dee6957c1ae2be05c1fe0447a6d0)
 - [c26c153a11 - Improve DbiDummy::addResult phpdoc](https://github.com/phpmyadmin/phpmyadmin/commit/c26c153a11e12207c5fe1ab85fedbd9eb98c7c63)
@@ -85,17 +87,17 @@ I fixed [#17287](https://github.com/phpmyadmin/phpmyadmin/issues/17287), a PHP t
 - [72b7bf6021 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/72b7bf6021eb54cd045de67b128e49770519d17d)
 - [90c60f9d00 - Update upstream source from tag 'upstream/5.1.3+dfsg1'](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/90c60f9d001cfcd23d16f9572ec4860ee48eaad4)
 - [80fb04dd3e - New upstream version 5.1.3+dfsg1](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/80fb04dd3e48cb35d03bd72e519a5f43fd894942)
-
 ## Third week (7)
 
 A quiet week, only French translation updates on phpmyadmin, sql-parser and localized_docs.
+
+I uploaded 5.1.3 to the Ubuntu PPA for focal.
 
 - [441e905636 - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/441e905636f997f0ee7ed347966de84344da720c)
 - [fc81c86a8e - Translated using Weblate (French)](https://github.com/phpmyadmin/phpmyadmin/commit/fc81c86a8e2cf7351c9dc473f148859c3eda1cac)
 - [94652f2b54 - Translated using Weblate (French)](https://github.com/phpmyadmin/sql-parser/commit/94652f2b5478ae154673926018e422f58e4dab17)
 - [c4e76301f6 - Translated using Weblate (French)](https://github.com/phpmyadmin/sql-parser/commit/c4e76301f606fcb503bd9b498fd8b03b8049ea72)
 - [5b7e50a95d - Translated using Weblate (French)](https://github.com/phpmyadmin/localized_docs/commit/5b7e50a95d1980cf11fb283c1141dce456fd63bb)
-
 ## Fourth week (8)
 
 On motranslator I merged #41 to add support for Symfony 6, and improved the test matrix to mark PHP 8.1 as a normal tested version. I also worked on Loader::getInstance.

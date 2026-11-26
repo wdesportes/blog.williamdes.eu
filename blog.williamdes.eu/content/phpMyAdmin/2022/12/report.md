@@ -81,6 +81,8 @@ I did a small change on the release script to pass --no-interaction and --dev to
 
 I fixed [#16988](https://github.com/phpmyadmin/phpmyadmin/issues/16988) and [#17944](https://github.com/phpmyadmin/phpmyadmin/issues/17944): the exports when no database is selected, and the creation of a view from the tree view button. I also merged [#393](https://github.com/phpmyadmin/phpmyadmin/pull/393), [#399](https://github.com/phpmyadmin/phpmyadmin/pull/399) and [#400](https://github.com/phpmyadmin/phpmyadmin/pull/400) on sql-parser, and marked phpmyadmin 4:5.1.4+dfsg1-2 for unstable.
 
+I uploaded 5.1.4 to the Ubuntu PPA for focal, jammy.
+
 - [9c4a90137d - Fix #16988 - export as CSV/JSON/SQL/... no database selected](https://github.com/phpmyadmin/phpmyadmin/commit/9c4a90137d8019286c1761804c6973e67d49f746)
 - [d258e4ed14 - Fix mistake in pull-request #15121 to fix #15064 - do not display the SQL, execute it !](https://github.com/phpmyadmin/phpmyadmin/commit/d258e4ed142ca69efd0f68e9018529cb11f9d2f9)
 - [12fe46b2df - Fix a typo in export files](https://github.com/phpmyadmin/phpmyadmin/commit/12fe46b2df9b508626037c8052f1945724f8f105)
@@ -113,7 +115,6 @@ I fixed [#16988](https://github.com/phpmyadmin/phpmyadmin/issues/16988) and [#17
 - [4e98f04ea1 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/4e98f04ea1ea1d1eef27268d820187f3d34e5f00)
 - [0762ffc985 - Add an override to pkg-php-tools autoloaders](https://salsa.debian.org/phpmyadmin-team/sql-parser/-/commit/0762ffc9854c50158e11d343b348d45bfa3b3ca2)
 - [c063282e3a - testing/horust: new aport](https://gitlab.alpinelinux.org/alpine/aports/-/commit/c063282e3a4a5a9281fa3e2dac12b1887fc221ca)
-
 ## Fourth week (51)
 
 I merged [#17975](https://github.com/phpmyadmin/phpmyadmin/pull/17975) to add support for more PSR-7 packages, with tests for all the supported implementations. On the website I marked 5.2 as current. On the Debian side I sent sql-parser 5.5.0-2, tcpdf 6.6.2+dfsg1-1 and google-recaptcha 1.2.4-5 to unstable.

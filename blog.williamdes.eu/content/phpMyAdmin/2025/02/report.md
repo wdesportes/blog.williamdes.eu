@@ -26,6 +26,8 @@ On the Debian packaging of tcpdf I sent 6.8.2+dfsg-1 to unstable, stopped instal
 
 This closed a long story. I had opened [issue #574](https://github.com/tecnickcom/TCPDF/issues/574) in December 2022 asking upstream to delete that import code, because it is unfinished and should not be used by anyone. Two years later the file was still shipped, so I opened [pull request #785](https://github.com/tecnickcom/TCPDF/pull/785) to remove it upstream, and decided to stop installing it in the Debian package whatever the outcome of that pull request.
 
+I uploaded 5.2.2 to the Ubuntu PPA for jammy, noble.
+
 - [e335bbdca5 - Translated using Weblate (Tamil)](https://salsa.debian.org/phpmyadmin-team/phpmyadmin/-/commit/e335bbdca526828451b56b48a931182f37891fda)
 - [6a5021181d - Send 6.8.2+dfsg-1 to unstable](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/6a5021181da3999ec8c8f48e654edf12df605b24)
 - [4a915e06d9 - Fixup the d/watch argument for pgpmode](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/4a915e06d99974df32fc559f66de31fdf97c2095)
@@ -34,4 +36,3 @@ This closed a long story. I had opened [issue #574](https://github.com/tecnickco
 - [57a7c0ea22 - Update upstream source from tag 'upstream/6.8.2+dfsg'](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/57a7c0ea22c67b088508f0e6f57b7cba893b5f81)
 - [5ede7e991f - New upstream version 6.8.2+dfsg](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/5ede7e991f890f18345ea28bf38bb41ea9643132)
 - [4b43e78453 - Switch to Git mode](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/4b43e784532c7ddf5b75342969fc7e24931f269f)
-

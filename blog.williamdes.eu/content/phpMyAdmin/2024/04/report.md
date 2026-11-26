@@ -47,6 +47,8 @@ On the Docker image I made the custom ini files writable in rootless mode, and m
 
 I prevented the upgrade to Twig 3.9.0 on the main repository and merged a fix for the export of triggers. On Debian I sent phpmyadmin, twig-i18n-extension and tcpdf updates to unstable, with patches for PHP 8.3 and Twig 3.9.0.
 
+I uploaded 5.2.1 to the Ubuntu PPA for jammy.
+
 - [add463dfe0 - Ref #19112, #19114 - Prevent upgrade to Twig 3.9.0](https://github.com/phpmyadmin/phpmyadmin/commit/add463dfe0852e400dfddc5c82b7f64ef961bc30)
 - [ec78dfd088 - Merge #19090 - Fix #18495 - exporting of triggers](https://github.com/phpmyadmin/phpmyadmin/commit/ec78dfd088b13a8ab84829f2bfc4115f69338305)
 - [99ce3b614d - Merge pull request #161 - 4.9: Change PHP Version in Supported Version to match other info](https://github.com/phpmyadmin/website/commit/99ce3b614da530bc9f8e42e64307a9d3c657dd4b)
@@ -84,7 +86,6 @@ I prevented the upgrade to Twig 3.9.0 on the main repository and merged a fix fo
 - [3f9b0b7099 - Update d/changelog](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/3f9b0b709901b46f460e87aa8bdad6be37b197e7)
 - [fdefe8f6af - Update upstream source from tag 'upstream/6.7.5+dfsg'](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/fdefe8f6afdedc33342dfdf8e4c3bd4a36b4552a)
 - [43a10f0b19 - New upstream version 6.7.5+dfsg](https://salsa.debian.org/phpmyadmin-team/tcpdf/-/commit/43a10f0b19768b28c92ac3062a62db2c42a4c395)
-
 ## Third week (17)
 
 I merged quite a bunch of pull-requests on the main repository: check constraints preserved during a column move, the SQL linter for multiple statements, the import of an exported view with a USE INDEX hint, virtual columns, and the copy to clipboard for the export as text.
